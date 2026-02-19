@@ -5,532 +5,553 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>株の買い場ナビ</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700;800&family=Syne:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #080c12;
-  --bg2: #0e1520;
-  --bg3: #141e2e;
-  --bg4: #1a2438;
-  --gold: #d4a843;
-  --gold2: #f0c860;
-  --gold-dim: rgba(212,168,67,0.12);
-  --gold-glow: rgba(212,168,67,0.3);
-  --green: #2ecc8e;
-  --green2: #45e8a8;
-  --green-dim: rgba(46,204,142,0.1);
-  --red: #e84c6a;
-  --red-dim: rgba(232,76,106,0.1);
-  --amber: #f0a030;
-  --amber-dim: rgba(240,160,48,0.1);
-  --blue: #4a9eff;
-  --text: #5a7090;
-  --text2: #8aa0b8;
-  --text3: #b8cce0;
-  --bright: #e8f2ff;
-  --border: rgba(255,255,255,0.05);
-  --border2: rgba(255,255,255,0.09);
-  --surface: rgba(255,255,255,0.025);
-  --surface2: rgba(255,255,255,0.05);
-  --pro: #7c5cfc;
-  --pro-dim: rgba(124,92,252,0.12);
+  /* SBI風カラー */
+  --bg: #f4f6f9;
+  --bg2: #ffffff;
+  --bg3: #eef1f6;
+  --navy: #003d7c;
+  --navy2: #00306a;
+  --navy-light: #e8eef7;
+  --orange: #e85520;
+  --orange2: #ff6a36;
+  --orange-light: #fff2ee;
+  --up: #cc0000;    /* 株価上昇 = 赤（日本式） */
+  --dn: #0055cc;    /* 株価下落 = 青（日本式） */
+  --green: #007a3d;
+  --green-light: #e6f4ed;
+  --amber: #b87800;
+  --amber-light: #fff8e6;
+  --text: #444;
+  --text2: #222;
+  --text-light: #777;
+  --border: #dde3ec;
+  --border2: #c8d0de;
+  --surface: #f9fafc;
+  --pro: #5240b8;
+  --pro-light: #f0eeff;
+  --tag-buy: #cc0000;
+  --tag-watch: #b87800;
+  --tag-hold: #666;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html,body{
-  background:var(--bg);color:var(--text2);
-  font-family:'Noto Sans JP',sans-serif;
+  background:var(--bg);color:var(--text);
+  font-family:'Noto Sans JP',sans-serif;font-size:14px;
   min-height:100%;overflow-x:hidden;overflow-y:auto;
   -webkit-overflow-scrolling:touch;
 }
 
-/* ===== TOP HEADER ===== */
+/* ===== TOP BAR ===== */
 .top-bar{
   position:sticky;top:0;z-index:200;
-  background:rgba(8,12,18,0.92);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-  padding:0 16px;
+  background:var(--navy);
+  border-bottom:3px solid var(--orange);
+  padding:0 14px;
   display:flex;align-items:center;justify-content:space-between;
-  height:52px;
+  height:50px;
 }
 .logo{
-  font-family:'Syne',sans-serif;font-weight:800;
-  font-size:15px;color:var(--bright);letter-spacing:-0.3px;
-  display:flex;align-items:center;gap:8px;
+  font-size:15px;font-weight:700;color:#fff;
+  display:flex;align-items:center;gap:8px;letter-spacing:0.3px;
 }
+.logo-sub{font-size:10px;color:rgba(255,255,255,0.6);font-weight:400;}
 .logo-badge{
-  background:var(--gold);color:var(--bg);
-  font-size:8px;font-weight:700;letter-spacing:1px;
-  padding:2px 6px;border-radius:3px;
+  background:var(--orange);color:#fff;
+  font-size:9px;font-weight:700;
+  padding:2px 7px;border-radius:2px;letter-spacing:0.5px;
 }
-.header-right{display:flex;align-items:center;gap:8px;}
+.header-right{display:flex;align-items:center;gap:6px;}
 .btn-pro{
   background:var(--pro);color:#fff;border:none;
-  border-radius:6px;padding:5px 12px;font-size:10px;
-  font-weight:700;letter-spacing:0.5px;cursor:pointer;
-  font-family:'Syne',sans-serif;transition:all 0.2s;
+  border-radius:3px;padding:5px 11px;font-size:11px;
+  font-weight:700;cursor:pointer;transition:all 0.2s;
+  font-family:'Noto Sans JP',sans-serif;
 }
-.btn-pro:hover{background:#9070ff;}
+.btn-pro:hover{background:#6450cc;}
 .icon-btn{
-  background:none;border:1px solid var(--border2);
-  border-radius:8px;width:34px;height:34px;
+  background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.25);
+  border-radius:3px;width:32px;height:32px;
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;color:var(--text2);font-size:14px;
+  cursor:pointer;color:#fff;font-size:14px;
   transition:all 0.2s;position:relative;
 }
-.icon-btn:hover{border-color:var(--gold);color:var(--gold);}
+.icon-btn:hover{background:rgba(255,255,255,0.25);}
 .icon-btn .badge-dot{
-  position:absolute;top:5px;right:5px;
-  width:6px;height:6px;border-radius:50%;
-  background:var(--gold);border:1px solid var(--bg);
+  position:absolute;top:4px;right:4px;
+  width:7px;height:7px;border-radius:50%;
+  background:var(--orange);border:1px solid var(--navy);
   display:none;
 }
 .icon-btn .badge-dot.show{display:block;}
 
-/* ===== MAIN SCROLL ===== */
-.main{padding:16px 16px 100px;max-width:480px;margin:0 auto;}
+/* ===== MAIN ===== */
+.main{padding:12px 12px 90px;max-width:480px;margin:0 auto;}
 
 /* ===== MARKET PULSE ===== */
 .pulse-bar{
-  display:flex;gap:6px;overflow-x:auto;
-  scrollbar-width:none;-ms-overflow-style:none;
-  padding-bottom:2px;margin-bottom:16px;
+  background:var(--navy);border-radius:4px;
+  display:flex;gap:0;overflow-x:auto;
+  scrollbar-width:none;margin-bottom:12px;
+  border:1px solid var(--navy2);
 }
 .pulse-bar::-webkit-scrollbar{display:none;}
 .pulse-chip{
-  flex-shrink:0;
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:20px;padding:5px 12px;
-  display:flex;align-items:center;gap:6px;
-  font-size:10px;white-space:nowrap;
+  flex-shrink:0;padding:7px 12px;
+  display:flex;flex-direction:column;align-items:center;gap:1px;
+  border-right:1px solid rgba(255,255,255,0.1);min-width:72px;
 }
-.pulse-chip .label{color:var(--text);}
-.pulse-chip .val{font-family:'Syne',sans-serif;font-size:11px;font-weight:600;}
-.pulse-chip .val.up{color:var(--green);}
-.pulse-chip .val.dn{color:var(--red);}
-.pulse-chip .val.neutral{color:var(--text3);}
+.pulse-chip .p-label{font-size:9px;color:rgba(255,255,255,0.5);white-space:nowrap;}
+.pulse-chip .p-val{font-size:12px;font-weight:700;white-space:nowrap;}
+.pulse-chip .p-val.up{color:#ff6060;}
+.pulse-chip .p-val.dn{color:#6ab0ff;}
+.pulse-chip .p-val.neutral{color:#ccc;}
+.pulse-chip .p-chg{font-size:9px;}
+.pulse-chip .p-chg.up{color:#ff8080;}
+.pulse-chip .p-chg.dn{color:#88bbff;}
+.pulse-chip .p-chg.neutral{color:#aaa;}
 
-/* ===== TODAY DIAGNOSIS ===== */
+/* ===== DIAGNOSIS ===== */
 .diagnosis{
   background:var(--bg2);border:1px solid var(--border);
-  border-radius:16px;padding:18px 18px 14px;margin-bottom:16px;
-  position:relative;overflow:hidden;
+  border-left:4px solid var(--orange);
+  border-radius:4px;padding:12px 14px;margin-bottom:12px;
 }
-.diagnosis::before{
-  content:'';position:absolute;top:0;right:0;
-  width:120px;height:120px;
-  background:radial-gradient(circle,rgba(212,168,67,0.08),transparent 70%);
-  pointer-events:none;
-}
-.diag-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;}
-.diag-label{font-size:9px;letter-spacing:2px;color:var(--gold);text-transform:uppercase;margin-bottom:5px;font-family:'Syne',sans-serif;}
-.diag-title{font-family:'Shippori Mincho B1',serif;font-size:17px;color:var(--bright);line-height:1.4;}
+.diag-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px;}
+.diag-date{font-size:10px;color:var(--text-light);margin-bottom:3px;}
+.diag-title{font-size:14px;font-weight:700;color:var(--text2);line-height:1.4;}
 .diag-status{
-  flex-shrink:0;padding:5px 10px;border-radius:20px;
-  font-size:10px;font-weight:700;font-family:'Syne',sans-serif;
-  letter-spacing:0.5px;
+  flex-shrink:0;padding:3px 8px;border-radius:2px;
+  font-size:10px;font-weight:700;white-space:nowrap;
+  border:1px solid;
 }
-.diag-status.buy{background:var(--green-dim);color:var(--green);border:1px solid rgba(46,204,142,0.2);}
-.diag-status.caution{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(240,160,48,0.2);}
-.diag-status.wait{background:rgba(90,112,144,0.15);color:var(--text2);border:1px solid var(--border2);}
-.diag-comment{font-size:11px;color:var(--text2);line-height:1.9;margin-bottom:12px;}
-.diag-comment strong{color:var(--bright);}
-.diag-chips{display:flex;gap:6px;flex-wrap:wrap;}
+.diag-status.buy{background:var(--green-light);color:var(--green);border-color:rgba(0,122,61,0.3);}
+.diag-status.caution{background:var(--amber-light);color:var(--amber);border-color:rgba(184,120,0,0.3);}
+.diag-status.wait{background:var(--bg3);color:var(--text-light);border-color:var(--border);}
+.diag-comment{font-size:12px;color:var(--text);line-height:1.8;margin-bottom:8px;}
+.diag-comment strong{color:var(--navy);font-weight:700;}
+.diag-chips{display:flex;gap:5px;flex-wrap:wrap;}
 .diag-chip{
-  background:var(--surface2);border-radius:6px;
-  padding:4px 9px;font-size:9px;color:var(--text2);
-  display:flex;align-items:center;gap:4px;
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:2px;padding:2px 8px;font-size:10px;color:var(--text-light);
+  display:flex;align-items:center;gap:3px;
 }
-.diag-chip.ok{color:var(--green);}
-.diag-chip.ng{color:var(--red);}
-.diag-chip.warn{color:var(--amber);}
+.diag-chip.ok{background:var(--green-light);color:var(--green);border-color:rgba(0,122,61,0.2);}
+.diag-chip.warn{background:var(--amber-light);color:var(--amber);border-color:rgba(184,120,0,0.2);}
 
 /* ===== MODE SELECTOR ===== */
-.mode-wrap{margin-bottom:16px;}
-.mode-label{font-size:9px;letter-spacing:2px;color:var(--text);text-transform:uppercase;margin-bottom:8px;font-family:'Syne',sans-serif;}
-.mode-tabs{display:flex;gap:6px;}
-.mode-tab{
-  flex:1;background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;padding:10px 8px;text-align:center;
-  cursor:pointer;transition:all 0.2s;
-}
-.mode-tab.active{background:var(--gold-dim);border-color:rgba(212,168,67,0.3);}
-.mode-tab-ico{font-size:18px;margin-bottom:3px;}
-.mode-tab-t{font-size:9px;color:var(--text2);line-height:1.4;font-weight:500;}
-.mode-tab.active .mode-tab-t{color:var(--gold);}
-
-/* ===== TOP5 RANKINGS ===== */
-.rankings{margin-bottom:20px;}
-.rank-section{margin-bottom:14px;}
-.rank-header{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:8px;
-}
-.rank-title{
-  font-family:'Syne',sans-serif;font-size:11px;font-weight:700;
-  color:var(--text3);letter-spacing:0.5px;
+.mode-wrap{margin-bottom:12px;}
+.section-label{
+  font-size:11px;color:var(--text-light);font-weight:700;
+  letter-spacing:0.5px;margin-bottom:6px;
   display:flex;align-items:center;gap:6px;
 }
-.rank-ico{font-size:14px;}
-.rank-more{font-size:10px;color:var(--text);cursor:pointer;transition:color 0.2s;}
-.rank-more:hover{color:var(--gold);}
-
-.rank-list{display:flex;flex-direction:column;gap:5px;}
-.rank-row{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:10px;padding:10px 12px;
-  display:flex;align-items:center;gap:10px;
+.section-label::before{content:'';display:block;width:3px;height:11px;background:var(--orange);border-radius:1px;}
+.mode-tabs{display:flex;gap:5px;}
+.mode-tab{
+  flex:1;background:var(--bg2);border:1px solid var(--border);
+  border-radius:4px;padding:8px 6px;text-align:center;
   cursor:pointer;transition:all 0.15s;
 }
-.rank-row:hover{border-color:var(--border2);background:var(--bg3);}
-.rank-num{
-  font-family:'Syne',sans-serif;font-size:13px;font-weight:700;
-  color:var(--text);width:18px;flex-shrink:0;
+.mode-tab:hover{border-color:var(--navy);background:var(--navy-light);}
+.mode-tab.active{background:var(--navy);border-color:var(--navy);}
+.mode-tab-ico{font-size:16px;margin-bottom:2px;}
+.mode-tab-t{font-size:9px;color:var(--text-light);line-height:1.3;font-weight:500;}
+.mode-tab.active .mode-tab-t{color:rgba(255,255,255,0.8);}
+
+/* ===== RANKINGS ===== */
+.rankings{margin-bottom:14px;}
+.rank-section{margin-bottom:10px;background:var(--bg2);border:1px solid var(--border);border-radius:4px;overflow:hidden;}
+.rank-header{
+  background:var(--navy);padding:7px 12px;
+  display:flex;align-items:center;justify-content:space-between;
 }
-.rank-num.top{color:var(--gold);}
+.rank-title{font-size:11px;font-weight:700;color:#fff;display:flex;align-items:center;gap:5px;}
+.rank-ico{font-size:13px;}
+.rank-more{font-size:10px;color:rgba(255,255,255,0.6);cursor:pointer;}
+.rank-more:hover{color:#fff;}
+.rank-list{display:flex;flex-direction:column;}
+.rank-row{
+  padding:9px 12px;display:flex;align-items:center;gap:8px;
+  cursor:pointer;transition:background 0.1s;
+  border-bottom:1px solid var(--border);
+}
+.rank-row:last-child{border-bottom:none;}
+.rank-row:hover{background:var(--navy-light);}
+.rank-num{
+  font-size:12px;font-weight:700;color:var(--text-light);
+  width:16px;flex-shrink:0;text-align:center;
+}
+.rank-num.top{color:var(--orange);}
 .rank-info{flex:1;min-width:0;}
-.rank-name{font-size:12px;color:var(--bright);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:1px;}
-.rank-meta{font-size:9px;color:var(--text);}
+.rank-name{font-size:12px;color:var(--text2);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.rank-meta{font-size:10px;color:var(--text-light);}
 .rank-right{text-align:right;flex-shrink:0;}
 .rank-score{
   display:inline-flex;align-items:center;justify-content:center;
-  width:36px;height:36px;border-radius:50%;
-  font-family:'Syne',sans-serif;font-size:12px;font-weight:700;
-  border:2px solid;
+  width:34px;height:34px;border-radius:50%;
+  font-size:11px;font-weight:700;border:2px solid;
 }
-.rank-score.hi{color:var(--green);border-color:rgba(46,204,142,0.3);background:var(--green-dim);}
-.rank-score.md{color:var(--gold);border-color:rgba(212,168,67,0.3);background:var(--gold-dim);}
-.rank-score.lo{color:var(--text);border-color:var(--border);background:var(--surface);}
-.rank-key{font-size:10px;color:var(--text2);margin-top:2px;}
+.rank-score.hi{color:var(--tag-buy);border-color:rgba(204,0,0,0.25);background:rgba(204,0,0,0.05);}
+.rank-score.md{color:var(--amber);border-color:rgba(184,120,0,0.25);background:var(--amber-light);}
+.rank-score.lo{color:var(--text-light);border-color:var(--border);background:var(--bg3);}
+.rank-key{font-size:10px;color:var(--text-light);margin-top:2px;}
 .rank-key.g{color:var(--green);}
-.rank-key.w{color:var(--gold);}
+.rank-key.w{color:var(--orange);}
+.rank-key.up{color:var(--up);}
 
-/* ===== PRO BLUR ===== */
-.pro-lock{
-  position:relative;
-  overflow:hidden;
-}
-.pro-lock .blur-row{
-  filter:blur(4px);pointer-events:none;user-select:none;
-}
+/* Pro Lock */
+.pro-lock{position:relative;overflow:hidden;}
+.pro-lock .blur-row{filter:blur(3px);pointer-events:none;user-select:none;}
 .pro-overlay{
   position:absolute;inset:0;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
-  background:linear-gradient(to bottom,transparent,rgba(8,12,18,0.9) 40%);
-  gap:8px;
+  background:linear-gradient(to bottom,rgba(244,246,249,0),rgba(244,246,249,0.95) 40%);
+  gap:6px;
 }
 .pro-lock-badge{
-  background:var(--pro);color:#fff;
-  border-radius:20px;padding:6px 16px;
-  font-size:11px;font-weight:700;letter-spacing:0.5px;
-  font-family:'Syne',sans-serif;cursor:pointer;
+  background:var(--pro);color:#fff;border-radius:3px;
+  padding:6px 14px;font-size:11px;font-weight:700;cursor:pointer;
   transition:all 0.2s;
 }
-.pro-lock-badge:hover{background:#9070ff;transform:scale(1.03);}
-.pro-lock-note{font-size:10px;color:var(--text);}
+.pro-lock-badge:hover{background:#6450cc;}
+.pro-lock-note{font-size:10px;color:var(--text-light);}
 
 /* ===== CARD VIEW ===== */
-.card-view-wrap{margin-bottom:20px;}
+.card-view-wrap{margin-bottom:14px;}
 .card-view-header{
-  display:flex;align-items:center;justify-content:space-between;
-  margin-bottom:10px;
+  display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;
 }
-.card-view-title{font-family:'Syne',sans-serif;font-size:11px;font-weight:700;color:var(--text3);letter-spacing:0.5px;}
-.card-nav{display:flex;align-items:center;gap:8px;}
-.card-counter{font-size:10px;color:var(--text);}
+.card-nav{display:flex;align-items:center;gap:6px;}
+.card-counter{font-size:11px;color:var(--text-light);}
 .card-arr{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:6px;width:28px;height:28px;
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:3px;width:26px;height:26px;
   display:flex;align-items:center;justify-content:center;
-  cursor:pointer;font-size:12px;color:var(--text2);
-  transition:all 0.2s;user-select:none;
+  cursor:pointer;font-size:11px;color:var(--text);
+  transition:all 0.15s;user-select:none;
 }
-.card-arr:hover{border-color:var(--gold);color:var(--gold);}
+.card-arr:hover{border-color:var(--navy);color:var(--navy);background:var(--navy-light);}
 .card-arr:disabled{opacity:0.3;cursor:not-allowed;}
 
 .stock-card-big{
   background:var(--bg2);border:1px solid var(--border);
-  border-radius:18px;padding:20px;
-  position:relative;overflow:hidden;
-  touch-action:pan-y;
-}
-.stock-card-big::after{
-  content:'';position:absolute;top:0;right:0;
-  width:150px;height:150px;
-  background:radial-gradient(circle,rgba(212,168,67,0.05),transparent 70%);
-  pointer-events:none;
+  border-radius:4px;padding:14px;
+  border-top:3px solid var(--navy);
 }
 
 /* OSHI-ME SCORE */
-.score-hero{
-  display:flex;align-items:center;gap:16px;margin-bottom:18px;
-}
-.score-ring{
-  position:relative;flex-shrink:0;
-  width:72px;height:72px;
-}
+.score-hero{display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--border);}
+.score-ring{position:relative;flex-shrink:0;width:68px;height:68px;}
 .score-ring svg{transform:rotate(-90deg);}
 .score-ring-val{
   position:absolute;inset:0;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
 }
-.score-ring-num{
-  font-family:'Syne',sans-serif;font-size:20px;font-weight:800;
-  line-height:1;
-}
-.score-ring-label{font-size:7px;letter-spacing:1px;color:var(--text);text-transform:uppercase;margin-top:1px;}
+.score-ring-num{font-size:20px;font-weight:700;line-height:1;}
+.score-ring-label{font-size:7px;letter-spacing:1px;color:var(--text-light);margin-top:1px;text-transform:uppercase;}
 .score-info{flex:1;}
 .score-zone{
-  display:inline-flex;align-items:center;gap:5px;
-  padding:4px 10px;border-radius:20px;font-size:9px;font-weight:700;
-  letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;
-  font-family:'Syne',sans-serif;
-}
-.score-zone.buy{background:var(--green-dim);color:var(--green);border:1px solid rgba(46,204,142,0.2);}
-.score-zone.watch{background:var(--gold-dim);color:var(--gold);border:1px solid rgba(212,168,67,0.2);}
-.score-zone.hold{background:var(--surface);color:var(--text);border:1px solid var(--border);}
-.score-name{font-family:'Shippori Mincho B1',serif;font-size:18px;color:var(--bright);margin-bottom:2px;}
-.score-code{font-size:10px;color:var(--text);letter-spacing:1px;}
-
-/* Comment */
-.ai-comment{
-  background:rgba(212,168,67,0.06);
-  border:1px solid rgba(212,168,67,0.12);
-  border-radius:10px;padding:11px 13px;
-  font-size:11px;color:var(--text2);line-height:1.8;
-  margin-bottom:14px;
-}
-.ai-comment strong{color:var(--bright);}
-.ai-tag{
   display:inline-flex;align-items:center;gap:4px;
-  font-size:8px;letter-spacing:1.5px;color:var(--gold);
-  text-transform:uppercase;margin-bottom:6px;
-  font-family:'Syne',sans-serif;
+  padding:3px 8px;border-radius:2px;font-size:9px;font-weight:700;
+  letter-spacing:0.5px;margin-bottom:5px;border:1px solid;
 }
+.score-zone.buy{background:rgba(204,0,0,0.06);color:var(--tag-buy);border-color:rgba(204,0,0,0.2);}
+.score-zone.watch{background:var(--amber-light);color:var(--amber);border-color:rgba(184,120,0,0.2);}
+.score-zone.hold{background:var(--bg3);color:var(--text-light);border-color:var(--border);}
+.score-name{font-size:17px;color:var(--text2);font-weight:700;margin-bottom:1px;}
+.score-code{font-size:10px;color:var(--text-light);}
 
-/* Metrics grid */
-.metrics-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);
-  gap:6px;margin-bottom:14px;
+/* AI Comment */
+.ai-comment{
+  background:var(--orange-light);border:1px solid rgba(232,85,32,0.15);
+  border-left:3px solid var(--orange);
+  border-radius:0 4px 4px 0;
+  padding:9px 11px;font-size:11px;color:var(--text);line-height:1.8;
+  margin-bottom:12px;
 }
-.metric{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:10px;padding:9px 8px;text-align:center;
+.ai-comment strong{color:var(--navy);font-weight:700;}
+.ai-tag{font-size:9px;color:var(--orange);font-weight:700;margin-bottom:3px;letter-spacing:0.5px;}
+
+/* Metrics table */
+.metrics-table{
+  width:100%;border-collapse:collapse;margin-bottom:12px;
+  font-size:11px;
 }
-.metric-l{font-size:8px;letter-spacing:0.5px;color:var(--text);margin-bottom:3px;}
-.metric-v{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--bright);}
-.metric-v.g{color:var(--green);}
-.metric-v.r{color:var(--red);}
-.metric-v.w{color:var(--gold);}
-.metric-hint{font-size:8px;color:var(--text);margin-top:1px;}
+.metrics-table th{
+  background:var(--navy);color:rgba(255,255,255,0.7);
+  padding:5px 8px;font-size:9px;font-weight:400;letter-spacing:0.5px;
+  text-align:center;
+}
+.metrics-table td{
+  padding:7px 8px;text-align:center;
+  border:1px solid var(--border);
+  color:var(--text);
+}
+.metrics-table td.val{font-size:13px;font-weight:700;color:var(--text2);}
+.metrics-table td.val.up{color:var(--up);}
+.metrics-table td.val.dn{color:var(--dn);}
+.metrics-table td.val.g{color:var(--green);}
+.metrics-table td.val.w{color:var(--orange);}
+.metrics-table td.hint{font-size:9px;color:var(--text-light);padding:3px 6px;}
+.metrics-table tr:nth-child(even) td{background:var(--surface);}
 
 /* Score breakdown */
 .breakdown{
   background:var(--bg3);border:1px solid var(--border);
-  border-radius:10px;padding:10px 12px;margin-bottom:14px;
+  border-radius:4px;padding:10px 12px;margin-bottom:12px;
 }
-.breakdown-title{font-size:8px;letter-spacing:1.5px;color:var(--text);text-transform:uppercase;margin-bottom:8px;font-family:'Syne',sans-serif;}
-.bd-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:5px;font-size:10px;}
+.breakdown-title{font-size:10px;color:var(--text-light);font-weight:700;margin-bottom:8px;letter-spacing:0.5px;}
+.bd-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:5px;font-size:11px;gap:6px;}
 .bd-row:last-child{margin-bottom:0;}
-.bd-l{color:var(--text2);}
-.bd-v{font-family:'Syne',sans-serif;font-weight:600;}
-.bd-v.pos{color:var(--green);}
-.bd-v.neg{color:var(--red);}
-.bd-bar{flex:1;height:3px;background:var(--bg);border-radius:2px;margin:0 8px;overflow:hidden;}
+.bd-l{color:var(--text);min-width:70px;}
+.bd-bar{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden;}
 .bd-fill{height:100%;border-radius:2px;}
+.bd-v{font-weight:700;width:30px;text-align:right;}
+.bd-v.pos{color:var(--up);}
+.bd-v.neg{color:var(--dn);}
 
-/* Actions */
-.card-actions{display:flex;gap:8px;}
+/* Card actions */
+.card-actions{display:flex;gap:6px;}
 .btn-fav{
-  flex:1;background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;padding:12px;
-  font-size:11px;color:var(--text2);cursor:pointer;
-  transition:all 0.2s;display:flex;align-items:center;justify-content:center;gap:6px;
+  flex:1;background:var(--bg2);border:1px solid var(--border);
+  border-radius:3px;padding:10px;
+  font-size:11px;color:var(--text);cursor:pointer;
+  transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:5px;
   font-family:'Noto Sans JP',sans-serif;
 }
-.btn-fav:hover{border-color:var(--gold);color:var(--gold);}
-.btn-fav.active{background:var(--gold-dim);border-color:rgba(212,168,67,0.3);color:var(--gold);}
+.btn-fav:hover{border-color:var(--orange);color:var(--orange);}
+.btn-fav.active{background:var(--orange-light);border-color:rgba(232,85,32,0.3);color:var(--orange);}
 .btn-detail{
-  flex:2;background:var(--gold);border:none;
-  border-radius:10px;padding:12px;
-  font-size:12px;font-weight:700;color:var(--bg);cursor:pointer;
-  transition:all 0.2s;font-family:'Syne',sans-serif;
+  flex:2;background:var(--navy);border:none;
+  border-radius:3px;padding:10px;
+  font-size:12px;font-weight:700;color:#fff;cursor:pointer;
+  transition:all 0.15s;font-family:'Noto Sans JP',sans-serif;
 }
-.btn-detail:hover{background:var(--gold2);}
-
-/* ===== SECTION TITLES ===== */
-.section-title{
-  font-family:'Syne',sans-serif;font-size:11px;font-weight:700;
-  color:var(--text3);letter-spacing:0.5px;
-  display:flex;align-items:center;gap:6px;
-  margin-bottom:8px;
-}
-.section-title::before{
-  content:'';display:block;width:3px;height:12px;
-  background:var(--gold);border-radius:2px;
-}
-
-/* ===== WATCHLIST ===== */
-.watchlist-section{margin-bottom:20px;}
-.watch-empty{
-  background:var(--surface);border:1px dashed var(--border2);
-  border-radius:12px;padding:20px;text-align:center;
-  font-size:11px;color:var(--text);
-}
-.watch-list{display:flex;flex-direction:column;gap:5px;}
-.watch-row{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:10px;padding:10px 12px;
-  display:flex;align-items:center;gap:10px;
-  cursor:pointer;transition:all 0.15s;
-}
-.watch-row:hover{background:var(--bg3);}
-.watch-name{flex:1;font-size:12px;color:var(--bright);font-weight:500;}
-.watch-score{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;}
-.watch-score.hi{color:var(--green);}
-.watch-score.md{color:var(--gold);}
-.watch-remove{background:none;border:none;color:var(--text);cursor:pointer;font-size:14px;padding:2px 4px;transition:color 0.2s;}
-.watch-remove:hover{color:var(--red);}
-
-/* ===== HISTORY ===== */
-.history-section{margin-bottom:20px;}
-.history-empty{font-size:11px;color:var(--text);text-align:center;padding:16px;}
-.hist-list{display:flex;flex-direction:column;gap:5px;}
-.hist-row{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:10px;padding:10px 14px;
-  display:flex;align-items:center;justify-content:space-between;
-  font-size:11px;cursor:pointer;transition:background 0.15s;
-}
-.hist-row:hover{background:var(--bg3);}
-.hist-date{color:var(--text);}
-.hist-info{color:var(--text3);}
-.hist-diff{font-size:10px;}
-.hist-diff.up{color:var(--green);}
-.hist-diff.dn{color:var(--red);}
+.btn-detail:hover{background:var(--navy2);}
 
 /* ===== EVENTS ===== */
-.events-section{margin-bottom:20px;}
-.event-list{display:flex;flex-direction:column;gap:6px;}
-.event-row{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:10px;padding:11px 14px;
-  display:flex;align-items:flex-start;gap:10px;
+.events-section{margin-bottom:14px;}
+.event-table{width:100%;border-collapse:collapse;background:var(--bg2);border:1px solid var(--border);border-radius:4px;overflow:hidden;font-size:11px;}
+.event-table th{background:var(--navy);color:rgba(255,255,255,0.7);padding:6px 10px;font-size:9px;font-weight:400;text-align:left;letter-spacing:0.5px;}
+.event-table td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:top;}
+.event-table tr:last-child td{border-bottom:none;}
+.event-table tr:nth-child(even) td{background:var(--surface);}
+.ev-ico{font-size:14px;margin-right:4px;}
+.ev-title{font-weight:500;color:var(--text2);margin-bottom:2px;}
+.ev-desc{font-size:10px;color:var(--text-light);line-height:1.6;}
+.ev-tag{
+  display:inline-block;padding:1px 5px;border-radius:2px;
+  font-size:9px;font-weight:700;margin-right:4px;
 }
-.event-ico{font-size:16px;flex-shrink:0;margin-top:1px;}
-.event-body{flex:1;}
-.event-title{font-size:12px;color:var(--bright);font-weight:500;margin-bottom:2px;}
-.event-desc{font-size:10px;color:var(--text);line-height:1.6;}
-.event-tag{
-  display:inline-block;padding:2px 7px;border-radius:4px;
-  font-size:9px;font-weight:600;margin-right:4px;
-  font-family:'Syne',sans-serif;
-}
-.event-tag.bull{background:var(--green-dim);color:var(--green);}
-.event-tag.bear{background:var(--red-dim);color:var(--red);}
-.event-tag.neutral{background:var(--surface2);color:var(--text2);}
+.ev-tag.bull{background:rgba(204,0,0,0.08);color:var(--up);}
+.ev-tag.bear{background:rgba(0,85,204,0.08);color:var(--dn);}
+.ev-tag.neutral{background:var(--bg3);color:var(--text-light);}
 
-/* ===== DISCLAIMER ===== */
-.disclaimer{
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;padding:12px 14px;
-  font-size:9px;color:var(--text);line-height:1.8;
-  margin-bottom:16px;
+/* Section title */
+.section-header{
+  background:var(--navy);border-radius:4px 4px 0 0;
+  padding:7px 12px;font-size:11px;font-weight:700;color:#fff;
+  display:flex;align-items:center;gap:5px;margin-bottom:0;
 }
+.section-header .ico{font-size:13px;}
+
+/* ===== WATCHLIST ===== */
+.watchlist-section{margin-bottom:14px;}
+.watch-empty{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:0 0 4px 4px;
+  padding:16px;text-align:center;
+  font-size:11px;color:var(--text-light);
+}
+.watch-list{background:var(--bg2);border:1px solid var(--border);border-top:none;border-radius:0 0 4px 4px;overflow:hidden;}
+.watch-row{
+  padding:9px 12px;display:flex;align-items:center;gap:8px;
+  cursor:pointer;transition:background 0.1s;border-bottom:1px solid var(--border);
+}
+.watch-row:last-child{border-bottom:none;}
+.watch-row:hover{background:var(--navy-light);}
+.watch-code{font-size:10px;color:var(--navy);font-weight:700;width:36px;}
+.watch-name{flex:1;font-size:12px;color:var(--text2);font-weight:500;}
+.watch-score{font-size:13px;font-weight:700;}
+.watch-score.hi{color:var(--tag-buy);}
+.watch-score.md{color:var(--amber);}
+.watch-remove{background:none;border:none;color:var(--text-light);cursor:pointer;font-size:13px;padding:2px 4px;transition:color 0.15s;}
+.watch-remove:hover{color:var(--up);}
+
+/* ===== HISTORY ===== */
+.history-section{margin-bottom:14px;}
+.hist-table{width:100%;border-collapse:collapse;background:var(--bg2);border:1px solid var(--border);border-top:none;border-radius:0 0 4px 4px;overflow:hidden;font-size:11px;}
+.hist-table th{background:var(--bg3);color:var(--text-light);padding:5px 10px;font-size:9px;font-weight:700;text-align:left;border-bottom:1px solid var(--border);}
+.hist-table td{padding:7px 10px;border-bottom:1px solid var(--border);color:var(--text);}
+.hist-table tr:last-child td{border-bottom:none;}
+.hist-table tr:hover td{background:var(--navy-light);}
+.hist-diff{font-size:10px;font-weight:700;}
+.hist-diff.up{color:var(--up);}
+.hist-diff.dn{color:var(--dn);}
+
+/* ===== QUIZ OVERLAY ===== */
+.quiz-overlay{
+  display:none;position:fixed;inset:0;z-index:300;
+  background:rgba(0,30,70,0.55);
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+  align-items:flex-end;justify-content:center;
+}
+.quiz-overlay.open{display:flex;}
+@media(min-width:480px){.quiz-overlay.open{align-items:center;}}
+.quiz-box{
+  background:var(--bg2);
+  border-radius:12px 12px 0 0;
+  width:100%;max-width:480px;
+  padding:20px 18px max(20px,env(safe-area-inset-bottom));
+  animation:slideUp 0.25s ease;
+  max-height:90vh;overflow-y:auto;
+}
+@media(min-width:480px){.quiz-box{border-radius:12px;max-height:80vh;}}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.quiz-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 16px;}
+@media(min-width:480px){.quiz-handle{display:none;}}
+
+.quiz-step{font-size:10px;color:var(--text-light);margin-bottom:6px;font-weight:700;}
+.quiz-bar{display:flex;gap:4px;margin-bottom:16px;}
+.quiz-seg{flex:1;height:3px;border-radius:2px;background:var(--border);transition:background 0.3s;}
+.quiz-seg.done{background:var(--navy);}
+.quiz-seg.active{background:var(--orange);}
+
+.quiz-q{font-size:15px;font-weight:700;color:var(--text2);margin-bottom:4px;line-height:1.5;}
+.quiz-hint{font-size:11px;color:var(--text-light);margin-bottom:14px;line-height:1.6;}
+
+/* おすすめ表示 */
+.quiz-recommend{
+  background:var(--navy-light);border:1px solid rgba(0,61,124,0.2);
+  border-left:3px solid var(--navy);
+  border-radius:0 4px 4px 0;
+  padding:8px 11px;margin-bottom:12px;font-size:11px;
+  display:flex;align-items:flex-start;gap:8px;
+}
+.quiz-rec-ico{font-size:16px;flex-shrink:0;}
+.quiz-rec-body{}
+.quiz-rec-label{font-size:9px;color:var(--navy);font-weight:700;letter-spacing:0.5px;margin-bottom:2px;}
+.quiz-rec-text{color:var(--navy);font-weight:500;font-size:12px;}
+.quiz-rec-reason{font-size:10px;color:var(--text-light);margin-top:2px;line-height:1.5;}
+
+.quiz-opts{display:flex;flex-direction:column;gap:6px;}
+.quiz-opt{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:4px;padding:11px 13px;cursor:pointer;
+  transition:all 0.15s;display:flex;align-items:center;gap:10px;
+  position:relative;
+}
+.quiz-opt:hover{border-color:var(--navy);background:var(--navy-light);}
+.quiz-opt.sel{border-color:var(--navy);background:var(--navy-light);}
+.quiz-opt.recommended{border-color:var(--orange);background:var(--orange-light);}
+.quiz-opt.recommended.sel{border-color:var(--orange);}
+.quiz-opt-ico{font-size:18px;flex-shrink:0;}
+.quiz-opt-t{font-size:12px;color:var(--text2);font-weight:700;margin-bottom:1px;}
+.quiz-opt-d{font-size:10px;color:var(--text-light);line-height:1.5;}
+.rec-badge{
+  position:absolute;top:-1px;right:-1px;
+  background:var(--orange);color:#fff;
+  font-size:9px;font-weight:700;padding:2px 7px;
+  border-radius:0 4px 0 4px;letter-spacing:0.3px;
+}
+.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:14px;}
+.btn-qback{
+  background:var(--bg2);border:1px solid var(--border);border-radius:3px;
+  padding:8px 14px;color:var(--text);font-size:12px;cursor:pointer;
+  font-family:'Noto Sans JP',sans-serif;transition:all 0.15s;
+}
+.btn-qback:hover{border-color:var(--navy);}
+.btn-qnext{
+  background:var(--navy);border:none;border-radius:3px;padding:8px 20px;
+  color:#fff;font-size:12px;font-weight:700;cursor:pointer;
+  font-family:'Noto Sans JP',sans-serif;transition:all 0.15s;
+}
+.btn-qnext:hover{background:var(--navy2);}
+.btn-qnext:disabled{opacity:0.4;cursor:not-allowed;}
 
 /* ===== BOTTOM NAV ===== */
 .bottom-nav{
   position:fixed;bottom:0;left:0;right:0;z-index:200;
-  background:rgba(8,12,18,0.95);backdrop-filter:blur(12px);
+  background:var(--bg2);
   border-top:1px solid var(--border);
   display:flex;align-items:center;justify-content:space-around;
-  padding:8px 0 max(8px,env(safe-area-inset-bottom));
+  padding:6px 0 max(6px,env(safe-area-inset-bottom));
   max-width:480px;margin:0 auto;
 }
 @media(min-width:480px){.bottom-nav{left:50%;transform:translateX(-50%);width:480px;}}
 .nav-item{
-  display:flex;flex-direction:column;align-items:center;gap:3px;
-  padding:4px 16px;cursor:pointer;transition:all 0.2s;
-  background:none;border:none;
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:4px 20px;cursor:pointer;background:none;border:none;
+  transition:all 0.15s;
 }
 .nav-ico{font-size:18px;line-height:1;}
-.nav-label{font-size:9px;color:var(--text);transition:color 0.2s;font-family:'Syne',sans-serif;letter-spacing:0.3px;}
-.nav-item.active .nav-label{color:var(--gold);}
-.nav-item.active .nav-ico{filter:drop-shadow(0 0 4px rgba(212,168,67,0.6));}
+.nav-label{font-size:9px;color:var(--text-light);transition:color 0.15s;}
+.nav-item.active .nav-label{color:var(--navy);font-weight:700;}
 
-/* ===== PANELS ===== */
+/* ===== SCAN BUTTON ===== */
+.scan-btn-wrap{margin-bottom:12px;}
+.btn-scan-big{
+  width:100%;background:var(--orange);color:#fff;border:none;
+  border-radius:4px;padding:13px;font-size:13px;font-weight:700;
+  cursor:pointer;transition:all 0.15s;
+  font-family:'Noto Sans JP',sans-serif;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+}
+.btn-scan-big:hover{background:var(--orange2);}
+
+/* ===== PANEL ===== */
 .panel{display:none;}
 .panel.active{display:block;}
 
 /* ===== MODAL ===== */
 .modal-bg{
   display:none;position:fixed;inset:0;z-index:400;
-  background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);
+  background:rgba(0,0,0,0.5);
 }
 .modal-bg.open{display:flex;align-items:flex-end;justify-content:center;}
 @media(min-width:480px){.modal-bg.open{align-items:center;}}
 .modal{
-  background:var(--bg2);border:1px solid var(--border2);
-  border-radius:20px 20px 0 0;
+  background:var(--bg2);border-radius:12px 12px 0 0;
   width:100%;max-width:480px;
-  max-height:88vh;overflow-y:auto;
-  padding:24px 20px max(24px,env(safe-area-inset-bottom));
+  max-height:85vh;overflow-y:auto;
+  padding:20px 18px max(20px,env(safe-area-inset-bottom));
   animation:slideUp 0.25s ease;
 }
-@media(min-width:480px){.modal{border-radius:20px;max-height:80vh;}}
-@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
-.modal-handle{
-  width:36px;height:4px;background:var(--border2);
-  border-radius:2px;margin:0 auto 20px;
-}
+@media(min-width:480px){.modal{border-radius:8px;max-height:75vh;}}
+.modal-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 16px;}
 @media(min-width:480px){.modal-handle{display:none;}}
-.modal-close{
-  float:right;background:none;border:none;
-  color:var(--text);font-size:18px;cursor:pointer;
-  margin-top:-4px;
-}
-
-/* Pro Modal */
-.pro-modal-title{
-  font-family:'Syne',sans-serif;font-size:20px;font-weight:800;
-  color:var(--bright);margin-bottom:6px;
-}
-.pro-modal-sub{font-size:12px;color:var(--text);margin-bottom:20px;line-height:1.6;}
-.pro-feature-list{display:flex;flex-direction:column;gap:8px;margin-bottom:24px;}
+.modal-close{float:right;background:none;border:none;color:var(--text-light);font-size:16px;cursor:pointer;}
+.pro-modal-title{font-size:18px;font-weight:700;color:var(--text2);margin-bottom:4px;}
+.pro-modal-sub{font-size:12px;color:var(--text-light);margin-bottom:16px;line-height:1.6;}
+.pro-feature-list{display:flex;flex-direction:column;gap:6px;margin-bottom:20px;}
 .pro-feat{
-  display:flex;align-items:center;gap:10px;
-  background:var(--surface);border:1px solid var(--border);
-  border-radius:10px;padding:11px 13px;font-size:12px;color:var(--text2);
+  display:flex;align-items:center;gap:8px;
+  background:var(--pro-light);border:1px solid rgba(82,64,184,0.15);
+  border-radius:3px;padding:9px 11px;font-size:11px;color:var(--text);
 }
 .pro-feat::before{content:'✓';color:var(--pro);font-weight:700;flex-shrink:0;}
-.pro-price{text-align:center;margin-bottom:16px;}
-.pro-price-val{font-family:'Syne',sans-serif;font-size:32px;font-weight:800;color:var(--bright);}
-.pro-price-note{font-size:11px;color:var(--text);margin-top:4px;}
+.pro-price{text-align:center;background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:12px;margin-bottom:14px;}
+.pro-price-val{font-size:28px;font-weight:700;color:var(--text2);}
+.pro-price-note{font-size:10px;color:var(--text-light);margin-top:2px;}
 .btn-buy-pro{
   width:100%;background:var(--pro);color:#fff;border:none;
-  border-radius:12px;padding:16px;
-  font-family:'Syne',sans-serif;font-size:14px;font-weight:700;
-  cursor:pointer;transition:all 0.2s;letter-spacing:0.5px;
+  border-radius:4px;padding:13px;font-size:13px;font-weight:700;
+  cursor:pointer;font-family:'Noto Sans JP',sans-serif;transition:all 0.15s;
 }
-.btn-buy-pro:hover{background:#9070ff;transform:translateY(-1px);}
-.btn-buy-note{font-size:10px;color:var(--text);text-align:center;margin-top:8px;}
+.btn-buy-pro:hover{background:#6450cc;}
+.btn-buy-note{font-size:10px;color:var(--text-light);text-align:center;margin-top:6px;}
 
 /* Loader */
-.loader{
-  display:flex;flex-direction:column;align-items:center;
-  padding:40px 20px;gap:12px;
-}
-.spin{
-  width:24px;height:24px;border:2px solid var(--border2);
-  border-top-color:var(--gold);border-radius:50%;
-  animation:spin 0.7s linear infinite;
-}
+.loader{display:flex;flex-direction:column;align-items:center;padding:30px;gap:10px;}
+.spin{width:20px;height:20px;border:2px solid var(--border);border-top-color:var(--navy);border-radius:50%;animation:spin 0.7s linear infinite;}
 @keyframes spin{to{transform:rotate(360deg)}}
-.loader-text{font-size:11px;color:var(--text);}
-
-/* Animations */
-@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
-.fadein{animation:fadeIn 0.3s ease both;}
+.loader-text{font-size:11px;color:var(--text-light);}
+.disclaimer{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:10px 12px;font-size:10px;color:var(--text-light);line-height:1.8;margin-bottom:12px;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
+.fadein{animation:fadeIn 0.25s ease both;}
 </style>
 </head>
 <body>
@@ -539,101 +560,114 @@ html,body{
 <div class="top-bar">
   <div class="logo">
     株の買い場ナビ
+    <span class="logo-sub">powered by OSHI-ME SCORE</span>
     <span class="logo-badge">FREE</span>
   </div>
   <div class="header-right">
-    <button class="btn-pro" onclick="openProModal()">Pro版 ✦</button>
+    <button class="btn-pro" onclick="openProModal()">Pro版 ▲</button>
     <button class="icon-btn" onclick="switchTab('watch')" id="watchBtn">
-      ★
-      <span class="badge-dot" id="watchDot"></span>
+      ★<span class="badge-dot" id="watchDot"></span>
     </button>
   </div>
 </div>
 
-<!-- MAIN SCROLL -->
+<!-- MAIN -->
 <div class="main">
 
-  <!-- PANEL: HOME -->
+  <!-- HOME PANEL -->
   <div class="panel active" id="panel-home">
 
-    <!-- Market Pulse -->
     <div class="pulse-bar" id="pulseBar"></div>
-
-    <!-- Today Diagnosis -->
     <div class="diagnosis fadein" id="diagBox"></div>
 
-    <!-- Mode Selector -->
+    <!-- Mode + Scan -->
     <div class="mode-wrap">
-      <div class="mode-label">スキャンモード</div>
+      <div class="section-label">スキャンモード</div>
       <div class="mode-tabs">
-        <div class="mode-tab active" onclick="setMode('dividend',this)">
+        <div class="mode-tab active" id="mode-dividend" onclick="setMode('dividend',this)">
           <div class="mode-tab-ico">💰</div>
           <div class="mode-tab-t">安定<br>高配当</div>
         </div>
-        <div class="mode-tab" onclick="setMode('value',this)">
+        <div class="mode-tab" id="mode-value" onclick="setMode('value',this)">
           <div class="mode-tab-ico">🛡️</div>
           <div class="mode-tab-t">割安<br>バリュー</div>
         </div>
-        <div class="mode-tab" onclick="setMode('rebound',this)">
+        <div class="mode-tab" id="mode-rebound" onclick="setMode('rebound',this)">
           <div class="mode-tab-ico">⚡</div>
           <div class="mode-tab-t">強押し目<br>リバウンド</div>
         </div>
       </div>
     </div>
 
-    <!-- Top Rankings -->
+    <div class="scan-btn-wrap">
+      <button class="btn-scan-big" onclick="openQuiz()">
+        🔍 質問に答えてスキャン
+      </button>
+    </div>
+
     <div class="rankings" id="rankings"></div>
 
-    <!-- Card View -->
     <div class="card-view-wrap">
       <div class="card-view-header">
-        <div class="card-view-title">📋 詳細カード</div>
+        <div class="section-label">詳細カード</div>
         <div class="card-nav">
-          <span class="card-counter" id="cardCounter">1 / —</span>
-          <button class="card-arr" id="cardPrev" onclick="cardMove(-1)">←</button>
-          <button class="card-arr" id="cardNext" onclick="cardMove(1)">→</button>
+          <span class="card-counter" id="cardCounter">—</span>
+          <button class="card-arr" id="cardPrev" onclick="cardMove(-1)">◀</button>
+          <button class="card-arr" id="cardNext" onclick="cardMove(1)">▶</button>
         </div>
       </div>
-      <div id="cardArea"><div class="loader"><div class="spin"></div><div class="loader-text">分析中...</div></div></div>
+      <div id="cardArea"><div class="loader"><div class="spin"></div><div class="loader-text">モードを選んでスキャンしてください</div></div></div>
     </div>
 
-    <!-- Events -->
     <div class="events-section">
-      <div class="section-title">今日の相場イベント</div>
-      <div class="event-list" id="eventList"></div>
+      <div class="section-header"><span class="ico">📰</span>今日の相場イベント</div>
+      <div id="eventTable"></div>
     </div>
 
-    <div class="disclaimer">
-      ⚠️ 本ツールはサンプルデータを使用しています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。
-    </div>
+    <div class="disclaimer">⚠️ 本ツールはサンプルデータを使用しています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
 
-  </div><!-- /panel-home -->
+  </div>
 
-  <!-- PANEL: WATCHLIST & HISTORY -->
+  <!-- WATCH PANEL -->
   <div class="panel" id="panel-watch">
     <div class="watchlist-section">
-      <div class="section-title">⭐ ウォッチリスト</div>
+      <div class="section-header"><span class="ico">⭐</span>ウォッチリスト</div>
       <div id="watchlistBody"></div>
     </div>
     <div class="history-section">
-      <div class="section-title">🕐 スキャン履歴（直近7日）</div>
+      <div class="section-header"><span class="ico">🕐</span>スキャン履歴</div>
       <div id="historyBody"></div>
     </div>
   </div>
 
-</div><!-- /main -->
+</div>
 
 <!-- BOTTOM NAV -->
 <nav class="bottom-nav">
   <button class="nav-item active" id="nav-home" onclick="switchTab('home')">
-    <span class="nav-ico">🏠</span>
-    <span class="nav-label">ホーム</span>
+    <span class="nav-ico">🏠</span><span class="nav-label">ホーム</span>
   </button>
   <button class="nav-item" id="nav-watch" onclick="switchTab('watch')">
-    <span class="nav-ico">⭐</span>
-    <span class="nav-label">ウォッチ</span>
+    <span class="nav-ico">⭐</span><span class="nav-label">ウォッチ</span>
   </button>
 </nav>
+
+<!-- QUIZ OVERLAY -->
+<div class="quiz-overlay" id="quizOverlay" onclick="closeQuizBg(event)">
+  <div class="quiz-box" id="quizBox">
+    <div class="quiz-handle"></div>
+    <div class="quiz-step" id="qzStep">STEP 1 / 3</div>
+    <div class="quiz-bar" id="qzBar"></div>
+    <div class="quiz-q" id="qzQ"></div>
+    <div class="quiz-hint" id="qzHint"></div>
+    <div id="qzRecommend"></div>
+    <div class="quiz-opts" id="qzOpts"></div>
+    <div class="quiz-nav">
+      <button class="btn-qback" id="qzBack" onclick="quizBack()">◀ 戻る</button>
+      <button class="btn-qnext" id="qzNext" onclick="quizNext()" disabled>次へ ▶</button>
+    </div>
+  </div>
+</div>
 
 <!-- PRO MODAL -->
 <div class="modal-bg" id="proModal" onclick="closeProModal(event)">
@@ -641,289 +675,229 @@ html,body{
     <div class="modal-handle"></div>
     <button class="modal-close" onclick="closeProModal()">✕</button>
     <div class="pro-modal-title">Pro版にアップグレード</div>
-    <div class="pro-modal-sub">より多くの銘柄と機能で、投資チャンスを逃さない。</div>
+    <div class="pro-modal-sub">無料版の制限を解除して、フル機能で投資判断をサポートします。</div>
     <div class="pro-feature-list">
-      <div class="pro-feat">スキャン銘柄数 10件 → <strong style="color:var(--bright)">100件以上</strong></div>
-      <div class="pro-feat">スキャン履歴を<strong style="color:var(--bright)">90日間</strong>保存</div>
-      <div class="pro-feat">お気に入り登録が<strong style="color:var(--bright)">無制限</strong></div>
-      <div class="pro-feat">前回との<strong style="color:var(--bright)">差分アラート</strong>表示</div>
-      <div class="pro-feat">OSHI-ME SCOREの<strong style="color:var(--bright)">詳細内訳</strong>すべて表示</div>
+      <div class="pro-feat">スキャン銘柄数 10件 → <strong>100件以上</strong></div>
+      <div class="pro-feat">スキャン履歴を<strong>90日間</strong>保存</div>
+      <div class="pro-feat">お気に入り登録が<strong>無制限</strong></div>
+      <div class="pro-feat">OSHI-ME SCOREの<strong>詳細内訳</strong>すべて表示</div>
+      <div class="pro-feat">前回スキャンとの<strong>差分アラート</strong></div>
     </div>
     <div class="pro-price">
       <div class="pro-price-val">¥980</div>
       <div class="pro-price-note">買い切り・一度購入で永久利用</div>
     </div>
-    <button class="btn-buy-pro">BOOTHで購入する →</button>
-    <div class="btn-buy-note">購入後、Pro版のHTMLファイルをダウンロードできます</div>
+    <button class="btn-buy-pro">BOOTHで購入する ▶</button>
+    <div class="btn-buy-note">購入後、Pro版HTMLファイルをダウンロードできます</div>
   </div>
 </div>
 
 <script>
 // ===== DATA =====
-const STOCKS = [
-  {code:'8306',name:'三菱UFJ',sector:'銀行',price:1423,ma25:1520,ma75:1580,rsi:32,dividend:3.8,pbr:0.7,per:9.2,vol_r:0.8},
+const STOCKS=[
+  {code:'8306',name:'三菱UFJフィナンシャル',sector:'銀行',price:1423,ma25:1520,ma75:1580,rsi:32,dividend:3.8,pbr:0.7,per:9.2,vol_r:0.8},
   {code:'9432',name:'NTT',sector:'通信',price:163,ma25:168,ma75:172,rsi:38,dividend:3.2,pbr:1.1,per:11.5,vol_r:0.9},
   {code:'8058',name:'三菱商事',sector:'商社',price:2890,ma25:3050,ma75:3200,rsi:29,dividend:4.1,pbr:0.9,per:8.7,vol_r:0.7},
-  {code:'4502',name:'武田薬品',sector:'医薬品',price:3820,ma25:3960,ma75:4050,rsi:41,dividend:5.6,pbr:1.3,per:15.2,vol_r:1.1},
+  {code:'4502',name:'武田薬品工業',sector:'医薬品',price:3820,ma25:3960,ma75:4050,rsi:41,dividend:5.6,pbr:1.3,per:15.2,vol_r:1.1},
   {code:'8001',name:'伊藤忠商事',sector:'商社',price:6780,ma25:7050,ma75:7200,rsi:33,dividend:3.5,pbr:1.8,per:12.3,vol_r:0.6},
   {code:'7203',name:'トヨタ自動車',sector:'自動車',price:2650,ma25:2720,ma75:2800,rsi:36,dividend:3.0,pbr:1.1,per:10.4,vol_r:0.9},
   {code:'8316',name:'三井住友FG',sector:'銀行',price:7100,ma25:7600,ma75:7800,rsi:28,dividend:4.2,pbr:0.8,per:9.0,vol_r:0.7},
-  {code:'2914',name:'JT',sector:'食品',price:3680,ma25:3780,ma75:3820,rsi:35,dividend:6.2,pbr:1.6,per:13.8,vol_r:0.8},
+  {code:'2914',name:'JT（日本たばこ産業）',sector:'食品',price:3680,ma25:3780,ma75:3820,rsi:35,dividend:6.2,pbr:1.6,per:13.8,vol_r:0.8},
   {code:'9020',name:'JR東日本',sector:'鉄道',price:8150,ma25:8300,ma75:8450,rsi:42,dividend:2.1,pbr:1.4,per:14.2,vol_r:0.9},
   {code:'8411',name:'みずほFG',sector:'銀行',price:2680,ma25:2850,ma75:2950,rsi:31,dividend:3.9,pbr:0.7,per:8.5,vol_r:0.8},
   {code:'9433',name:'KDDI',sector:'通信',price:4350,ma25:4500,ma75:4600,rsi:37,dividend:3.3,pbr:1.9,per:13.5,vol_r:1.0},
   {code:'5108',name:'ブリヂストン',sector:'ゴム',price:5100,ma25:5280,ma75:5350,rsi:40,dividend:3.8,pbr:1.2,per:11.8,vol_r:0.8},
 ];
-const FREE_LIMIT = 5;
-
-// ===== STATE =====
-let currentMode = 'dividend';
-let processed = [];
-let cardIndex = 0;
-let watchlist = JSON.parse(localStorage.getItem('knv_watch') || '[]');
-let scanHistory = JSON.parse(localStorage.getItem('knv_history') || '[]');
+const FREE_LIMIT=5;
+let currentMode='dividend';
+let processed=[];
+let cardIndex=0;
+let watchlist=[];
+let scanHistory=[];
+try{watchlist=JSON.parse(localStorage.getItem('knv_watch')||'[]');}catch(e){}
+try{scanHistory=JSON.parse(localStorage.getItem('knv_history')||'[]');}catch(e){}
 
 // ===== SCORING =====
-function dv(p,m){ return +((p-m)/m*100).toFixed(1); }
-
-function calcScore(s, mode) {
-  let score = 0, bd = [];
-  const d25 = dv(s.price, s.ma25);
-
-  // 配当
-  let dp = s.dividend>=5?30:s.dividend>=4.5?25:s.dividend>=4?20:s.dividend>=3.5?15:s.dividend>=3?10:s.dividend>=2.5?5:0;
-  if(mode==='dividend') dp = Math.min(dp*1.4,40);
-  if(dp>0) bd.push({l:'配当利回り',v:Math.round(dp),max:40,pos:true});
-  score += Math.round(dp);
-
-  // MA乖離
-  let mp = d25<=-8?28:d25<=-6?22:d25<=-4?12:d25<=-2?5:0;
-  if(mode==='rebound') mp = Math.min(mp*1.5,35);
-  if(mp>0) bd.push({l:'下落幅',v:Math.round(mp),max:35,pos:true});
-  score += Math.round(mp);
-
-  // RSI
-  let rp = s.rsi<=28?22:s.rsi<=32?16:s.rsi<=38?10:s.rsi<=42?5:0;
-  if(mode==='rebound') rp = Math.min(rp*1.3,25);
-  if(rp>0) bd.push({l:'売られすぎ度',v:Math.round(rp),max:25,pos:true});
-  score += Math.round(rp);
-
-  // PBR
-  let pp = s.pbr<=0.7?18:s.pbr<=0.9?13:s.pbr<=1.1?7:s.pbr<=1.5?3:0;
-  if(mode==='value') pp = Math.min(pp*1.6,25);
-  if(pp>0) bd.push({l:'PBR割安',v:Math.round(pp),max:25,pos:true});
-  score += Math.round(pp);
-
-  // PER
-  let erp = s.per<=9?12:s.per<=11?8:s.per<=13?5:s.per<=15?2:0;
-  if(mode==='value') erp = Math.min(erp*1.4,15);
-  if(erp>0) bd.push({l:'PER割安',v:Math.round(erp),max:15,pos:true});
-  score += Math.round(erp);
-
-  // ペナルティ
-  if(s.vol_r>=1.5){ score-=20; bd.push({l:'出来高急増',v:-20,max:20,pos:false}); }
-
-  return { score: Math.max(0,Math.min(score,100)), bd };
+function dv(p,m){return+((p-m)/m*100).toFixed(1);}
+function calcScore(s,mode){
+  let score=0,bd=[];
+  const d25=dv(s.price,s.ma25);
+  let dp=s.dividend>=5?30:s.dividend>=4.5?25:s.dividend>=4?20:s.dividend>=3.5?15:s.dividend>=3?10:s.dividend>=2.5?5:0;
+  if(mode==='dividend')dp=Math.min(Math.round(dp*1.4),40);
+  if(dp>0){bd.push({l:'配当利回り',v:dp,max:40,pos:true});score+=dp;}
+  let mp=d25<=-8?28:d25<=-6?22:d25<=-4?12:d25<=-2?5:0;
+  if(mode==='rebound')mp=Math.min(Math.round(mp*1.5),35);
+  if(mp>0){bd.push({l:'下落幅',v:mp,max:35,pos:true});score+=mp;}
+  let rp=s.rsi<=28?22:s.rsi<=32?16:s.rsi<=38?10:s.rsi<=42?5:0;
+  if(mode==='rebound')rp=Math.min(Math.round(rp*1.3),25);
+  if(rp>0){bd.push({l:'売られすぎ',v:rp,max:25,pos:true});score+=rp;}
+  let pp=s.pbr<=0.7?18:s.pbr<=0.9?13:s.pbr<=1.1?7:s.pbr<=1.5?3:0;
+  if(mode==='value')pp=Math.min(Math.round(pp*1.6),25);
+  if(pp>0){bd.push({l:'PBR割安',v:pp,max:25,pos:true});score+=pp;}
+  let ep=s.per<=9?12:s.per<=11?8:s.per<=13?5:s.per<=15?2:0;
+  if(mode==='value')ep=Math.min(Math.round(ep*1.4),15);
+  if(ep>0){bd.push({l:'PER割安',v:ep,max:15,pos:true});score+=ep;}
+  if(s.vol_r>=1.5){score-=20;bd.push({l:'出来高急増',v:-20,max:20,pos:false});}
+  return{score:Math.max(0,Math.min(score,100)),bd};
 }
-
-function getZone(sc) {
-  if(sc>=60) return {label:'買い圏',cls:'buy',color:'var(--green)'};
-  if(sc>=35) return {label:'注意圏',cls:'watch',color:'var(--gold)'};
-  return {label:'待機圏',cls:'hold',color:'var(--text)'};
+function getZone(sc){
+  if(sc>=60)return{label:'買い圏',cls:'buy',color:'var(--tag-buy)'};
+  if(sc>=35)return{label:'注意圏',cls:'watch',color:'var(--amber)'};
+  return{label:'待機圏',cls:'hold',color:'var(--text-light)'};
 }
-
-function generateComment(s, d25) {
-  const parts = [];
-  if(d25<=-6) parts.push(`25MAから<strong>${d25}%</strong>下落`);
-  else if(d25<=-3) parts.push(`25MAから<strong>${d25}%</strong>押し目`);
-  if(s.rsi<=30) parts.push(`RSI <strong>${s.rsi}</strong>で強い売られすぎ水準`);
-  else if(s.rsi<=38) parts.push(`RSI <strong>${s.rsi}</strong>で反転圏`);
-  if(s.dividend>=4.5) parts.push(`配当<strong>${s.dividend}%</strong>と高水準`);
-  else if(s.dividend>=3) parts.push(`配当<strong>${s.dividend}%</strong>で下値サポート`);
-  if(s.pbr<=0.8) parts.push(`PBR <strong>${s.pbr}倍</strong>の割安圏`);
-  return parts.join('。') + '。';
+function genComment(s,d25){
+  const p=[];
+  if(d25<=-6)p.push(`25MAから<strong>${d25}%</strong>下落`);
+  else if(d25<=-3)p.push(`25MAから<strong>${d25}%</strong>の押し目`);
+  if(s.rsi<=30)p.push(`RSI <strong>${s.rsi}</strong>で強い売られすぎ`);
+  else if(s.rsi<=38)p.push(`RSI <strong>${s.rsi}</strong>で反転圏`);
+  if(s.dividend>=4.5)p.push(`配当<strong>${s.dividend}%</strong>と高水準`);
+  else if(s.dividend>=3)p.push(`配当<strong>${s.dividend}%</strong>で下値サポート`);
+  if(s.pbr<=0.8)p.push(`PBR <strong>${s.pbr}倍</strong>の割安圏`);
+  return(p.join('。')+'。');
 }
 
 // ===== PROCESS =====
-function processStocks() {
-  const modeFilter = {
-    dividend: s => s.dividend >= 3.0,
-    value:    s => s.pbr <= 1.5 && s.per <= 15,
-    rebound:  s => dv(s.price,s.ma25) <= -3 && s.rsi <= 42,
+function processStocks(){
+  const f={dividend:s=>s.dividend>=3.0,value:s=>s.pbr<=1.5&&s.per<=15,rebound:s=>dv(s.price,s.ma25)<=-3&&s.rsi<=42};
+  processed=STOCKS.filter(f[currentMode]||(()=>true)).map(s=>{
+    const d25=dv(s.price,s.ma25),d75=dv(s.price,s.ma75);
+    const{score,bd}=calcScore(s,currentMode);
+    return{...s,d25,d75,score,bd,zone:getZone(score),comment:genComment(s,d25)};
+  }).sort((a,b)=>b.score-a.score);
+  // save history
+  const now=new Date();
+  const e={
+    date:`${now.getMonth()+1}/${now.getDate()} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`,
+    mode:currentMode,count:processed.length,
+    top:processed[0]?.name||'—',topScore:processed[0]?.score||0
   };
-  processed = STOCKS
-    .filter(modeFilter[currentMode] || (()=>true))
-    .map(s => {
-      const d25 = dv(s.price, s.ma25);
-      const d75 = dv(s.price, s.ma75);
-      const {score, bd} = calcScore(s, currentMode);
-      const zone = getZone(score);
-      const comment = generateComment(s, d25);
-      return {...s, d25, d75, score, bd, zone, comment};
-    })
-    .sort((a,b) => b.score - a.score);
-
-  // Save history
-  saveHistory();
+  scanHistory.unshift(e);scanHistory=scanHistory.slice(0,14);
+  try{localStorage.setItem('knv_history',JSON.stringify(scanHistory));}catch(err){}
 }
 
-function saveHistory() {
-  const now = new Date();
-  const entry = {
-    date: `${now.getMonth()+1}/${now.getDate()} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`,
-    mode: currentMode,
-    count: processed.length,
-    top: processed[0]?.name || '—',
-    topScore: processed[0]?.score || 0,
-  };
-  scanHistory.unshift(entry);
-  scanHistory = scanHistory.slice(0, 14);
-  localStorage.setItem('knv_history', JSON.stringify(scanHistory));
-}
-
-// ===== RENDER: PULSE =====
-function renderPulse() {
-  const chips = [
-    {label:'日経平均', val:'38,240', chg:'-312', dir:'dn'},
-    {label:'TOPIX', val:'2,718', chg:'-18', dir:'dn'},
-    {label:'ドル円', val:'149.82', chg:'+0.34', dir:'up'},
-    {label:'VIX', val:'18.4', chg:'+1.2', dir:'neutral'},
-    {label:'10年債', val:'1.08%', chg:'+0.02', dir:'neutral'},
+// ===== PULSE =====
+function renderPulse(){
+  const chips=[
+    {l:'日経平均',v:'38,240',c:'-312',d:'dn'},
+    {l:'TOPIX',v:'2,718',c:'-18',d:'dn'},
+    {l:'ドル円',v:'149.82',c:'+0.34',d:'up'},
+    {l:'VIX',v:'18.4',c:'+1.2',d:'neutral'},
+    {l:'10年債',v:'1.08%',c:'+0.02',d:'neutral'},
+    {l:'売買代金',v:'3.8兆',c:'-0.4兆',d:'dn'},
   ];
-  document.getElementById('pulseBar').innerHTML = chips.map(c=>`
+  document.getElementById('pulseBar').innerHTML=chips.map(c=>`
     <div class="pulse-chip">
-      <span class="label">${c.label}</span>
-      <span class="val ${c.dir}">${c.val} <span style="font-size:9px">${c.chg}</span></span>
+      <div class="p-label">${c.l}</div>
+      <div class="p-val ${c.d}">${c.v}</div>
+      <div class="p-chg ${c.d}">${c.c}</div>
     </div>`).join('');
 }
 
-// ===== RENDER: DIAGNOSIS =====
-function renderDiagnosis() {
-  const buyCount = processed.filter(s=>s.zone.cls==='buy').length;
-  const avgScore = processed.length ? Math.round(processed.reduce((a,s)=>a+s.score,0)/processed.length) : 0;
-  const status = buyCount>=4 ? {cls:'buy',label:'買いやすい日'} : buyCount>=2 ? {cls:'caution',label:'選別が必要な日'} : {cls:'wait',label:'様子見の日'};
-  const now = new Date();
+// ===== DIAGNOSIS =====
+function renderDiagnosis(){
+  const now=new Date();
   const days=['日','月','火','水','木','金','土'];
+  const buyN=processed.filter(s=>s.zone.cls==='buy').length;
+  const status=buyN>=4?{cls:'buy',label:'▲ 買いやすい日'}:buyN>=2?{cls:'caution',label:'◆ 選別が必要な日'}:{cls:'wait',label:'— 様子見の日'};
   const modeNames={dividend:'安定高配当',value:'割安バリュー',rebound:'強押し目'};
-
-  const comments = [
-    `日経平均が続落し、ウォッチリストの高配当銘柄で<strong>買い場が${buyCount}件</strong>発生しています。`,
-    `相場が平均より下がった水準で、<strong>配当利回り4%超の銘柄が${processed.filter(s=>s.dividend>=4).length}件</strong>スキャンに引っかかっています。`,
-    `売買代金が少ない静かな相場です。<strong>急騰・急落リスクが低い</strong>安定株を選ぶなら今日は動きやすい地合いです。`,
+  const comments=[
+    `日経平均が2日続落。ウォッチリストの高配当銘柄で<strong>買い場が${buyN}件</strong>発生しています。`,
+    `相場が25日平均線を割り込み、<strong>配当4%超の銘柄が${processed.filter(s=>s.dividend>=4).length}件</strong>条件に合致しています。`,
+    `売買代金が少ない静かな相場。急変リスクは低く、<strong>安定株を選びやすい地合い</strong>です。`,
   ];
-
-  document.getElementById('diagBox').innerHTML = `
+  document.getElementById('diagBox').innerHTML=`
     <div class="diag-top">
       <div>
-        <div class="diag-label">${now.getMonth()+1}月${now.getDate()}日（${days[now.getDay()]}）— ${modeNames[currentMode]}モード</div>
-        <div class="diag-title">今日の戦略：<br>${status.cls==='buy'?'積極的に拾う日':'慎重に選別する日'}</div>
+        <div class="diag-date">${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日（${days[now.getDay()]}）— ${modeNames[currentMode]}モード</div>
+        <div class="diag-title">今日の戦略：${status.cls==='buy'?'積極的に拾う日':'慎重に選別する日'}</div>
       </div>
       <div class="diag-status ${status.cls}">${status.label}</div>
     </div>
     <div class="diag-comment">${comments[Math.floor(Math.random()*comments.length)]}</div>
     <div class="diag-chips">
-      <div class="diag-chip ok">🟢 買い圏 ${processed.filter(s=>s.zone.cls==='buy').length}件</div>
-      <div class="diag-chip warn">🟡 注意圏 ${processed.filter(s=>s.zone.cls==='watch').length}件</div>
-      <div class="diag-chip">⚪ 待機圏 ${processed.filter(s=>s.zone.cls==='hold').length}件</div>
+      <div class="diag-chip ok">買い圏 ${processed.filter(s=>s.zone.cls==='buy').length}件</div>
+      <div class="diag-chip warn">注意圏 ${processed.filter(s=>s.zone.cls==='watch').length}件</div>
+      <div class="diag-chip">待機圏 ${processed.filter(s=>s.zone.cls==='hold').length}件</div>
     </div>`;
 }
 
-// ===== RENDER: RANKINGS =====
-function renderRankings() {
-  const top5div = processed.sort((a,b)=>b.dividend-a.dividend).slice(0,5);
-  const top5score = [...processed].sort((a,b)=>b.score-a.score).slice(0,5);
-  const top5dev = [...processed].sort((a,b)=>a.d25-b.d25).slice(0,5);
-  processed.sort((a,b)=>b.score-a.score); // restore
+// ===== RANKINGS =====
+function renderRankings(){
+  const top5div=[...processed].sort((a,b)=>b.dividend-a.dividend).slice(0,5);
+  const top5sc=[...processed].sort((a,b)=>b.score-a.score).slice(0,5);
+  const top5dev=[...processed].sort((a,b)=>a.d25-b.d25).slice(0,5);
 
-  function rowsHtml(list, keyFn, isFree) {
-    const freeList = isFree ? list.slice(0, FREE_LIMIT) : list;
-    const locked = isFree ? list.slice(FREE_LIMIT) : [];
-    let html = freeList.map((s,i)=>{
-      const sc = s.score>=60?'hi':s.score>=35?'md':'lo';
-      const {v,cls} = keyFn(s);
-      return `<div class="rank-row" onclick="jumpToCard('${s.code}')">
+  function rows(list,keyFn,doLock){
+    const free=doLock?list.slice(0,FREE_LIMIT):list;
+    const locked=doLock?list.slice(FREE_LIMIT):[];
+    let h=free.map((s,i)=>{
+      const sc=s.score>=60?'hi':s.score>=35?'md':'lo';
+      const{v,cls}=keyFn(s);
+      return`<div class="rank-row" onclick="jumpToCard('${s.code}')">
         <div class="rank-num ${i<3?'top':''}">${i+1}</div>
-        <div class="rank-info">
-          <div class="rank-name">${s.name}</div>
-          <div class="rank-meta">${s.code} · ${s.sector}</div>
-        </div>
-        <div class="rank-right">
-          <div class="rank-score ${sc}">${s.score}</div>
-          <div class="rank-key ${cls}">${v}</div>
-        </div>
+        <div class="rank-info"><div class="rank-name">${s.name}</div><div class="rank-meta">${s.code} · ${s.sector}</div></div>
+        <div class="rank-right"><div class="rank-score ${sc}">${s.score}</div><div class="rank-key ${cls}">${v}</div></div>
       </div>`;
     }).join('');
     if(locked.length>0){
-      html += `<div class="pro-lock">
-        ${locked.map(s=>`<div class="rank-row blur-row">
-          <div class="rank-num">?</div>
-          <div class="rank-info"><div class="rank-name">●●●●●</div><div class="rank-meta">●● · ●●</div></div>
-          <div class="rank-right"><div class="rank-score md">??</div><div class="rank-key">?.?%</div></div>
-        </div>`).join('')}
-        <div class="pro-overlay">
-          <div class="pro-lock-badge" onclick="openProModal()">✦ Pro版で全件表示</div>
-          <div class="pro-lock-note">残り${locked.length}件がロックされています</div>
-        </div>
-      </div>`;
+      h+=`<div class="pro-lock">${locked.map(s=>`<div class="rank-row blur-row">
+        <div class="rank-num">?</div>
+        <div class="rank-info"><div class="rank-name">●●●●●</div><div class="rank-meta">???? · ????</div></div>
+        <div class="rank-right"><div class="rank-score md">??</div><div class="rank-key">?</div></div>
+      </div>`).join('')}
+      <div class="pro-overlay">
+        <div class="pro-lock-badge" onclick="openProModal()">Pro版で全${list.length}件表示 ▶</div>
+        <div class="pro-lock-note">残り${locked.length}件がロックされています</div>
+      </div></div>`;
     }
-    return html;
+    return h;
   }
 
-  document.getElementById('rankings').innerHTML = `
+  document.getElementById('rankings').innerHTML=`
     <div class="rank-section">
-      <div class="rank-header">
-        <div class="rank-title"><span class="rank-ico">💰</span> 高配当 TOP5</div>
-      </div>
-      <div class="rank-list">${rowsHtml(top5div, s=>({v:s.dividend+'%',cls:'w'}), true)}</div>
+      <div class="rank-header"><div class="rank-title"><span class="rank-ico">💰</span>高配当ランキング TOP5</div></div>
+      <div class="rank-list">${rows(top5div,s=>({v:s.dividend+'%',cls:'w'}),true)}</div>
     </div>
     <div class="rank-section">
-      <div class="rank-header">
-        <div class="rank-title"><span class="rank-ico">🏆</span> 総合スコア TOP5</div>
-      </div>
-      <div class="rank-list">${rowsHtml(top5score, s=>({v:'score '+s.score,cls:'g'}), false)}</div>
+      <div class="rank-header"><div class="rank-title"><span class="rank-ico">🏆</span>総合スコア TOP5</div></div>
+      <div class="rank-list">${rows(top5sc,s=>({v:'score '+s.score,cls:'g'}),false)}</div>
     </div>
     <div class="rank-section">
-      <div class="rank-header">
-        <div class="rank-title"><span class="rank-ico">⚡</span> 強押し目 TOP5</div>
-      </div>
-      <div class="rank-list">${rowsHtml(top5dev, s=>({v:s.d25+'%',cls:'g'}), false)}</div>
+      <div class="rank-header"><div class="rank-title"><span class="rank-ico">⚡</span>押し目ランキング TOP5</div></div>
+      <div class="rank-list">${rows(top5dev,s=>({v:s.d25+'%',cls:'g'}),false)}</div>
     </div>`;
 }
 
-// ===== RENDER: CARD =====
-function renderCard() {
-  const list = processed;
-  if(!list.length){
+// ===== CARD =====
+function renderCard(){
+  if(!processed.length){
     document.getElementById('cardArea').innerHTML='<div class="loader"><div class="loader-text">条件に一致する銘柄がありません</div></div>';
     return;
   }
-  cardIndex = Math.max(0, Math.min(cardIndex, list.length-1));
-  const s = list[cardIndex];
-  document.getElementById('cardCounter').textContent = `${cardIndex+1} / ${list.length}`;
-  document.getElementById('cardPrev').disabled = cardIndex===0;
-  document.getElementById('cardNext').disabled = cardIndex===list.length-1;
-
-  const isFav = watchlist.includes(s.code);
-  const r = 30; const circ = 2*Math.PI*r;
-  const fill = circ - (s.score/100)*circ;
-  const col = s.score>=60?'var(--green)':s.score>=35?'var(--gold)':'var(--text)';
-
-  const bdHtml = s.bd.map(item=>`
+  cardIndex=Math.max(0,Math.min(cardIndex,processed.length-1));
+  const s=processed[cardIndex];
+  document.getElementById('cardCounter').textContent=`${cardIndex+1} / ${processed.length}`;
+  document.getElementById('cardPrev').disabled=cardIndex===0;
+  document.getElementById('cardNext').disabled=cardIndex===processed.length-1;
+  const isFav=watchlist.includes(s.code);
+  const r=28;const circ=2*Math.PI*r;const fill=circ-(s.score/100)*circ;
+  const col=s.score>=60?'var(--tag-buy)':s.score>=35?'var(--amber)':'var(--text-light)';
+  const bdHtml=s.bd.map(item=>`
     <div class="bd-row">
       <div class="bd-l">${item.l}</div>
-      <div class="bd-bar"><div class="bd-fill" style="width:${Math.abs(item.v)/item.max*100}%;background:${item.pos?'var(--green)':'var(--red)'}"></div></div>
-      <div class="bd-v ${item.pos?'pos':'neg'}">${item.v>0?'+':''}${item.v}</div>
+      <div class="bd-bar"><div class="bd-fill" style="width:${Math.min(Math.abs(item.v)/item.max*100,100)}%;background:${item.pos?'var(--green)':'var(--up)'}"></div></div>
+      <div class="bd-v ${item.pos?'pos':'neg'}">${item.v>0?'+':''}${item.v}点</div>
     </div>`).join('');
-
-  document.getElementById('cardArea').innerHTML = `
+  document.getElementById('cardArea').innerHTML=`
     <div class="stock-card-big fadein">
       <div class="score-hero">
         <div class="score-ring">
-          <svg width="72" height="72" viewBox="0 0 72 72">
-            <circle cx="36" cy="36" r="${r}" fill="none" stroke="var(--bg3)" stroke-width="5"/>
-            <circle cx="36" cy="36" r="${r}" fill="none" stroke="${col}" stroke-width="5"
-              stroke-dasharray="${circ}" stroke-dashoffset="${fill}"
-              stroke-linecap="round" style="transition:stroke-dashoffset 0.8s ease"/>
+          <svg width="68" height="68" viewBox="0 0 68 68">
+            <circle cx="34" cy="34" r="${r}" fill="none" stroke="${col}" stroke-opacity="0.15" stroke-width="5"/>
+            <circle cx="34" cy="34" r="${r}" fill="none" stroke="${col}" stroke-width="5"
+              stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${fill.toFixed(1)}"
+              stroke-linecap="round" style="transition:stroke-dashoffset 0.6s ease"/>
           </svg>
           <div class="score-ring-val">
             <div class="score-ring-num" style="color:${col}">${s.score}</div>
@@ -936,81 +910,54 @@ function renderCard() {
           <div class="score-code">${s.code} · ${s.sector}</div>
         </div>
       </div>
-
       <div class="ai-comment">
-        <div class="ai-tag">● AI分析</div>
+        <div class="ai-tag">▶ AI分析コメント</div>
         ${s.comment}
       </div>
-
-      <div class="metrics-grid">
-        <div class="metric">
-          <div class="metric-l">現在値</div>
-          <div class="metric-v">¥${s.price.toLocaleString()}</div>
-          <div class="metric-hint">&nbsp;</div>
-        </div>
-        <div class="metric">
-          <div class="metric-l">下落率</div>
-          <div class="metric-v ${s.d25<0?'g':'r'}">${s.d25>0?'+':''}${s.d25}%</div>
-          <div class="metric-hint">25日平均比</div>
-        </div>
-        <div class="metric">
-          <div class="metric-l">売られすぎ度</div>
-          <div class="metric-v ${s.rsi<=30?'g':s.rsi>=50?'r':''}">${s.rsi}</div>
-          <div class="metric-hint">30以下が目安</div>
-        </div>
-        <div class="metric">
-          <div class="metric-l">配当利回り</div>
-          <div class="metric-v w">${s.dividend}%</div>
-          <div class="metric-hint">3%以上が高配当</div>
-        </div>
-        <div class="metric">
-          <div class="metric-l">PBR</div>
-          <div class="metric-v ${s.pbr<=1?'g':''}">${s.pbr}倍</div>
-          <div class="metric-hint">1以下が割安</div>
-        </div>
-        <div class="metric">
-          <div class="metric-l">PER</div>
-          <div class="metric-v ${s.per<=13?'g':''}">${s.per}倍</div>
-          <div class="metric-hint">低いほど割安</div>
-        </div>
-      </div>
-
+      <table class="metrics-table">
+        <tr>
+          <th>現在値</th><th>25MA比</th><th>売られすぎ</th>
+          <th>配当</th><th>PBR</th><th>PER</th>
+        </tr>
+        <tr>
+          <td class="val">¥${s.price.toLocaleString()}</td>
+          <td class="val ${s.d25<0?'dn':'up'}">${s.d25>0?'+':''}${s.d25}%</td>
+          <td class="val ${s.rsi<=30?'dn':s.rsi>=50?'up':''}">${s.rsi}</td>
+          <td class="val w">${s.dividend}%</td>
+          <td class="val ${s.pbr<=1?'dn':''}">${s.pbr}倍</td>
+          <td class="val ${s.per<=13?'dn':''}">${s.per}倍</td>
+        </tr>
+        <tr>
+          <td class="hint">—</td>
+          <td class="hint">-5%以下が目安</td>
+          <td class="hint">30以下が目安</td>
+          <td class="hint">3%以上が高配当</td>
+          <td class="hint">1以下が割安</td>
+          <td class="hint">15以下が割安</td>
+        </tr>
+      </table>
       <div class="breakdown">
-        <div class="breakdown-title">OSHI-ME SCORE 内訳</div>
+        <div class="breakdown-title">OSHI-ME SCORE 内訳（100点満点）</div>
         ${bdHtml}
       </div>
-
       <div class="card-actions">
         <button class="btn-fav ${isFav?'active':''}" onclick="toggleFav('${s.code}')">
           ${isFav?'★ 登録済み':'☆ ウォッチ登録'}
         </button>
-        <button class="btn-detail" onclick="openProModal()">✦ Pro版で詳細を見る</button>
+        <button class="btn-detail" onclick="openProModal()">Pro版で詳細を見る ▶</button>
       </div>
     </div>`;
-
-  // Swipe
   setupSwipe();
 }
 
-function cardMove(dir) {
-  cardIndex = Math.max(0, Math.min(cardIndex + dir, processed.length-1));
-  renderCard();
-}
-
-function jumpToCard(code) {
-  const idx = processed.findIndex(s=>s.code===code);
-  if(idx>=0){ cardIndex=idx; renderCard(); document.getElementById('cardArea').scrollIntoView({behavior:'smooth',block:'nearest'}); }
-}
-
-// ===== SWIPE =====
-function setupSwipe() {
-  const el = document.querySelector('.stock-card-big');
-  if(!el) return;
+function cardMove(d){cardIndex=Math.max(0,Math.min(cardIndex+d,processed.length-1));renderCard();}
+function jumpToCard(code){const i=processed.findIndex(s=>s.code===code);if(i>=0){cardIndex=i;renderCard();document.getElementById('cardArea').scrollIntoView({behavior:'smooth',block:'nearest'});}}
+function setupSwipe(){
+  const el=document.querySelector('.stock-card-big');if(!el)return;
   let sx=0,sy=0;
   el.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
   el.addEventListener('touchend',e=>{
-    const dx=e.changedTouches[0].clientX-sx;
-    const dy=e.changedTouches[0].clientY-sy;
+    const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;
     if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>40){
       if(dx<0&&cardIndex<processed.length-1){cardIndex++;renderCard();}
       if(dx>0&&cardIndex>0){cardIndex--;renderCard();}
@@ -1019,126 +966,207 @@ function setupSwipe() {
 }
 
 // ===== EVENTS =====
-function renderEvents() {
-  const events = [
-    {ico:'📈',title:'日経平均 -0.81%',desc:'2日連続の下落。銀行・商社を中心に売られ、割安水準に近づいている銘柄が増加。',tag:{t:'bear',l:'下落'}},
-    {ico:'💴',title:'ドル円 149.82円（円安方向）',desc:'円安が続いており、輸出企業（自動車・商社など）の業績にプラス要因。',tag:{t:'bull',l:'追い風'}},
-    {ico:'📊',title:'東証 売買代金 3.8兆円',desc:'前日より少なめ。大口の売買が少ない静かな相場。急変リスクは低め。',tag:{t:'neutral',l:'中立'}},
-    {ico:'🇺🇸',title:'米国市場 NASDAQ 強含み',desc:'前日のNASDAQが上昇。今夜の米国市場が好調なら、明朝の日本株にプラスの可能性。',tag:{t:'bull',l:'追い風'}},
+function renderEvents(){
+  const evs=[
+    {ico:'📉',tag:{t:'bear',l:'下落'},title:'日経平均 −0.81%',desc:'2日連続の下落。銀行・商社中心に売られ、割安水準に近づく銘柄が増加。'},
+    {ico:'💴',tag:{t:'bull',l:'追い風'},title:'ドル円 149.82円（円安方向）',desc:'輸出企業（自動車・商社）の業績にプラス。'},
+    {ico:'📊',tag:{t:'neutral',l:'中立'},title:'東証 売買代金 3.8兆円',desc:'前日より少なめ。急変リスクは低い静かな相場。'},
+    {ico:'🇺🇸',tag:{t:'bull',l:'追い風'},title:'米NASDAQ 強含み',desc:'今夜の米国市場が好調なら、明朝の日本株にプラスの可能性。'},
   ];
-  document.getElementById('eventList').innerHTML = events.map(e=>`
-    <div class="event-row">
-      <div class="event-ico">${e.ico}</div>
-      <div class="event-body">
-        <div class="event-title">
-          <span class="event-tag ${e.tag.t}">${e.tag.l}</span>
-          ${e.title}
+  document.getElementById('eventTable').innerHTML=`
+    <table class="event-table" style="border-radius:0 0 4px 4px;border-top:none">
+      <tr><th>指標</th><th>状況</th></tr>
+      ${evs.map(e=>`<tr>
+        <td style="width:36px;text-align:center;font-size:16px;">${e.ico}</td>
+        <td>
+          <div class="ev-title"><span class="ev-tag ${e.tag.t}">${e.tag.l}</span>${e.title}</div>
+          <div class="ev-desc">${e.desc}</div>
+        </td>
+      </tr>`).join('')}
+    </table>`;
+}
+
+// ===== QUIZ =====
+const QUIZ=[
+  {
+    id:'goal',
+    q:'株をやる一番の目的は何ですか？',
+    hint:'あなたのゴールに合わせてスコアの重み付けが自動調整されます。',
+    recommend:{val:'dividend',reason:'今日の相場は軟調。高配当銘柄は下値が限定的で、初心者にも扱いやすい局面です。'},
+    opts:[
+      {ico:'💰',t:'毎年配当金をもらいたい',d:'銀行より高い利回りで、ゆっくり資産を増やしたい',v:'dividend',isRec:true},
+      {ico:'📈',t:'安く買って値上がり益を取りたい',d:'下がったタイミングで仕込み、戻ったら売りたい',v:'deviation',isRec:false},
+      {ico:'🛡️',t:'とにかく割安な優良株を買いたい',d:'リスクを抑えてバリュー投資で長期保有',v:'value',isRec:false},
+      {ico:'⚖️',t:'配当も値上がりもバランスよく',d:'どれかに偏らず、総合的に良い株を探したい',v:'balance',isRec:false},
+    ]
+  },
+  {
+    id:'market',
+    q:'今の相場をどう感じていますか？',
+    hint:'相場観によって条件の厳しさが微調整されます。直感でOKです。',
+    recommend:{val:'flat',reason:'今日の日経は−0.81%と小幅下落。大きな方向感は出ていないため「様子見」が安全な判断です。'},
+    opts:[
+      {ico:'😊',t:'まだ上がりそう、チャンスあり',d:'積極的に仕込んでいきたい',v:'bull',isRec:false},
+      {ico:'😰',t:'下がりそうで少し怖い',d:'慎重に。もう少し下がるのを待ちたい',v:'bear',isRec:false},
+      {ico:'😐',t:'どちらともいえない',d:'方向感なし。安定重視で様子見',v:'flat',isRec:true},
+      {ico:'🤖',t:'感覚より数字で決めたい',d:'相場観は無視。条件だけで判断する',v:'neutral',isRec:false},
+    ]
+  },
+  {
+    id:'horizon',
+    q:'どのくらい持ち続けるつもりですか？',
+    hint:'保有期間によって参照する移動平均線の基準が変わります。',
+    recommend:{val:'long',reason:'高配当安定株は長く持つほどメリットが出ます。配当を受け取りながら株価回復を待てるのが強みです。'},
+    opts:[
+      {ico:'⚡',t:'数日〜1週間（短期反発狙い）',d:'素早く利益確定。短期の値動きを取りたい',v:'short',isRec:false},
+      {ico:'📅',t:'数週間〜1ヶ月（スウィング）',d:'じっくり待って売り時を見極める',v:'mid',isRec:false},
+      {ico:'🌱',t:'数ヶ月以上（中長期保有）',d:'配当をもらいながらゆっくり育てる',v:'long',isRec:true},
+    ]
+  }
+];
+let qStep=0,qAnswers={};
+
+function openQuiz(){document.getElementById('quizOverlay').classList.add('open');qStep=0;qAnswers={};renderQuiz();}
+function closeQuizBg(e){if(e.target===document.getElementById('quizOverlay'))document.getElementById('quizOverlay').classList.remove('open');}
+
+function renderQuiz(){
+  const q=QUIZ[qStep];
+  document.getElementById('qzStep').textContent=`STEP ${qStep+1} / ${QUIZ.length}`;
+  document.getElementById('qzBar').innerHTML=QUIZ.map((_,i)=>`<div class="quiz-seg ${i<qStep?'done':i===qStep?'active':''}"></div>`).join('');
+  document.getElementById('qzQ').textContent=q.q;
+  document.getElementById('qzHint').textContent=q.hint;
+
+  // おすすめ表示
+  if(q.recommend){
+    document.getElementById('qzRecommend').innerHTML=`
+      <div class="quiz-recommend">
+        <div class="quiz-rec-ico">💡</div>
+        <div class="quiz-rec-body">
+          <div class="quiz-rec-label">今日のおすすめ</div>
+          <div class="quiz-rec-text">${q.opts.find(o=>o.v===q.recommend.val)?.t||''}</div>
+          <div class="quiz-rec-reason">${q.recommend.reason}</div>
         </div>
-        <div class="event-desc">${e.desc}</div>
+      </div>`;
+  } else {
+    document.getElementById('qzRecommend').innerHTML='';
+  }
+
+  const sel=qAnswers[q.id];
+  document.getElementById('qzOpts').innerHTML=q.opts.map(o=>`
+    <div class="quiz-opt ${sel===o.v?'sel':''} ${o.isRec?'recommended':''}" onclick="selectOpt('${o.v}',this)">
+      ${o.isRec?'<div class="rec-badge">★ おすすめ</div>':''}
+      <div class="quiz-opt-ico">${o.ico}</div>
+      <div>
+        <div class="quiz-opt-t">${o.t}</div>
+        <div class="quiz-opt-d">${o.d}</div>
       </div>
     </div>`).join('');
+  document.getElementById('qzBack').style.visibility=qStep===0?'hidden':'visible';
+  document.getElementById('qzNext').textContent=qStep===QUIZ.length-1?'スキャン開始 ▶':'次へ ▶';
+  document.getElementById('qzNext').disabled=!sel;
+}
+
+function selectOpt(val,el){
+  qAnswers[QUIZ[qStep].id]=val;
+  document.querySelectorAll('.quiz-opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  document.getElementById('qzNext').disabled=false;
+}
+function quizBack(){if(qStep>0){qStep--;renderQuiz();}}
+function quizNext(){
+  if(qStep<QUIZ.length-1){qStep++;renderQuiz();}
+  else{
+    document.getElementById('quizOverlay').classList.remove('open');
+    applyAnswers();run();
+  }
+}
+function applyAnswers(){
+  const{goal,market,horizon}=qAnswers;
+  const modeMap={dividend:'dividend',deviation:'rebound',value:'value',balance:'dividend'};
+  const m=modeMap[goal]||'dividend';
+  currentMode=m;
+  document.querySelectorAll('.mode-tab').forEach(t=>t.classList.remove('active'));
+  const el=document.getElementById('mode-'+m);
+  if(el)el.classList.add('active');
 }
 
 // ===== WATCHLIST =====
-function toggleFav(code) {
-  if(watchlist.includes(code)){
-    watchlist = watchlist.filter(c=>c!==code);
-  } else {
-    if(watchlist.length>=3){
-      openProModal();return;
-    }
-    watchlist.push(code);
-  }
-  localStorage.setItem('knv_watch', JSON.stringify(watchlist));
-  document.getElementById('watchDot').classList.toggle('show', watchlist.length>0);
-  renderCard();
-  renderWatchlist();
+function toggleFav(code){
+  if(watchlist.includes(code)){watchlist=watchlist.filter(c=>c!==code);}
+  else{if(watchlist.length>=3){openProModal();return;}watchlist.push(code);}
+  try{localStorage.setItem('knv_watch',JSON.stringify(watchlist));}catch(e){}
+  document.getElementById('watchDot').classList.toggle('show',watchlist.length>0);
+  renderCard();renderWatchlist();
 }
-
-function renderWatchlist() {
-  const el = document.getElementById('watchlistBody');
-  document.getElementById('watchDot').classList.toggle('show', watchlist.length>0);
+function renderWatchlist(){
+  document.getElementById('watchDot').classList.toggle('show',watchlist.length>0);
+  const el=document.getElementById('watchlistBody');
   if(!watchlist.length){
-    el.innerHTML='<div class="watch-empty">ウォッチ登録した銘柄がここに表示されます<br><span style="font-size:10px;color:var(--text);margin-top:4px;display:block">カードの「☆ ウォッチ登録」から追加できます（無料版は3件まで）</span></div>';
+    el.innerHTML='<div class="watch-empty">ウォッチ登録した銘柄がここに表示されます。<br>カードの「☆ ウォッチ登録」から追加できます（無料版は3件まで）。</div>';
     return;
   }
   el.innerHTML=`<div class="watch-list">${watchlist.map(code=>{
-    const s = STOCKS.find(x=>x.code===code);
-    if(!s)return'';
+    const s=STOCKS.find(x=>x.code===code);if(!s)return'';
     const d25=dv(s.price,s.ma25);
-    const {score}=calcScore(s,currentMode);
+    const{score}=calcScore(s,currentMode);
     const sc=score>=60?'hi':score>=35?'md':'lo';
-    return `<div class="watch-row" onclick="jumpToCard('${code}');switchTab('home')">
-      <div style="font-size:12px;color:var(--gold);">${code}</div>
+    return`<div class="watch-row" onclick="jumpToCard('${code}');switchTab('home')">
+      <div class="watch-code">${code}</div>
       <div class="watch-name">${s.name}</div>
       <div style="text-align:right">
         <div class="watch-score ${sc}">${score}点</div>
-        <div style="font-size:9px;color:${d25<0?'var(--green)':'var(--red)'}">${d25>0?'+':''}${d25}%</div>
+        <div style="font-size:10px;color:${d25<0?'var(--dn)':'var(--up)'}">${d25>0?'+':''}${d25}%</div>
       </div>
       <button class="watch-remove" onclick="event.stopPropagation();toggleFav('${code}')">✕</button>
     </div>`;
   }).join('')}</div>`;
 }
-
-// ===== HISTORY =====
-function renderHistory() {
-  const el = document.getElementById('historyBody');
+function renderHistory(){
+  const el=document.getElementById('historyBody');
+  const modeNames={dividend:'高配当',value:'バリュー',rebound:'押し目'};
   if(!scanHistory.length){
-    el.innerHTML='<div class="history-empty">スキャンを実行すると履歴が保存されます</div>';
+    el.innerHTML='<div style="background:var(--bg2);border:1px solid var(--border);border-top:none;border-radius:0 0 4px 4px;padding:14px;text-align:center;font-size:11px;color:var(--text-light)">スキャンを実行すると履歴が保存されます</div>';
     return;
   }
-  const modeNames={dividend:'高配当',value:'バリュー',rebound:'押し目'};
-  el.innerHTML=`<div class="hist-list">${scanHistory.slice(0,7).map((h,i)=>{
-    const prev = scanHistory[i+1];
-    const diff = prev ? h.topScore - prev.topScore : null;
-    return `<div class="hist-row">
-      <span class="hist-date">${h.date}</span>
-      <span class="hist-info">${modeNames[h.mode]||h.mode} · ${h.count}件</span>
-      <span>
-        <span style="font-size:10px;color:var(--text2)">${h.top}</span>
-        ${diff!==null?`<span class="hist-diff ${diff>0?'up':'dn'}"> ${diff>0?'+':''}${diff}</span>`:''}
-      </span>
-    </div>`;
-  }).join('')}</div>`;
-}
-
-// ===== MODE =====
-function setMode(mode, el) {
-  currentMode = mode;
-  document.querySelectorAll('.mode-tab').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
-  run();
+  el.innerHTML=`<table class="hist-table">
+    <tr><th>日時</th><th>モード</th><th>件数</th><th>1位銘柄</th></tr>
+    ${scanHistory.slice(0,7).map((h,i)=>{
+      const prev=scanHistory[i+1];
+      const diff=prev?h.topScore-prev.topScore:null;
+      return`<tr>
+        <td>${h.date}</td>
+        <td>${modeNames[h.mode]||h.mode}</td>
+        <td>${h.count}件</td>
+        <td>${h.top}${diff!==null?` <span class="hist-diff ${diff>0?'up':'dn'}">${diff>0?'+':''}${diff}</span>`:''}</td>
+      </tr>`;
+    }).join('')}
+  </table>`;
 }
 
 // ===== TABS =====
-function switchTab(tab) {
+function switchTab(tab){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
   document.getElementById('panel-'+tab).classList.add('active');
   document.getElementById('nav-'+tab).classList.add('active');
-  if(tab==='watch'){ renderWatchlist(); renderHistory(); }
+  if(tab==='watch'){renderWatchlist();renderHistory();}
 }
 
-// ===== PRO MODAL =====
-function openProModal(){ document.getElementById('proModal').classList.add('open'); }
-function closeProModal(e){
-  if(!e||e.target===document.getElementById('proModal'))
-    document.getElementById('proModal').classList.remove('open');
-}
+// ===== MODALS =====
+function openProModal(){document.getElementById('proModal').classList.add('open');}
+function closeProModal(e){if(!e||e.target===document.getElementById('proModal'))document.getElementById('proModal').classList.remove('open');}
 
 // ===== INIT =====
-function run() {
+function run(){
   processStocks();
   renderPulse();
   renderDiagnosis();
   renderRankings();
-  cardIndex = 0;
+  cardIndex=0;
   renderCard();
   renderEvents();
 }
-
-// Init watchlist dot
-document.getElementById('watchDot').classList.toggle('show', watchlist.length>0);
+document.getElementById('watchDot').classList.toggle('show',watchlist.length>0);
 run();
 </script>
 </body>
