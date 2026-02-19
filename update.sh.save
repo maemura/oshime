@@ -1,0 +1,80 @@
+#!/bin/bash
+# ============================================================
+#  株の買い場ナビ — データ更新スクリプト
+#  使い方: bash update.sh
+#  やること:
+#    1. fetch_stocks.py でリアルデータを取得
+#    2. stocks_data.json を GitHub フォルダにコピー
+#    3. GitHub に push → Vercel に自動反映
+# ============================================================
+
+# --- 色の設定 ---
+GREEN='\033[0;32m'
+ORANGE='\033[0;33 ~/Documents/GitHub/oshime/update.sh
+# --- フォルダパス（必要なら変更してください）
+OSHIME_DIR="$HOME/Documents/GitHub/oshime"
+OSHIME_DIR="$HOME/Library/CloudStorage/GoogleDrive-hide.maemura@gmail.com/マイドライブ/oshime"
+GITHUB_DIR="$HOME/Documents/GitHub/oshime"
+
+echo ""
+echo "================================================"
+echo "  株の買い場ナビ — データ更新スタート"
+echo "  $(date '+%Y/%m/%d %H:%M')"
+echo "================================================"
+echo ""
+
+# --- ステップ1: データ取得 ---
+echo "${ORANGE}[1/4] 株価データを取得します...${NC}"
+cd "$OSHIME_DIR" || { echo "${RED}❌ oshimeフォルダが見つかりません: $OSHIME_DIR${NC}"; exit 1; }
+
+python3 fetch_stocks.py
+if [ $? -ne 0 ]; then
+  echo "${RED}❌ データ取得でエラーが発生しました。${NC}"
+  exit 1
+fi
+echo "${GREEN}✓ データ取得完了${NC}"
+echo ""
+
+# --- ステップ2: JSONをGitHubフォルダにコピー ---
+echo "${ORANGE}[2/4] GitHubフォルダにコピーします...${NC}"
+cp "$OSHIME_DIR/stocks_data.json" "$GITHUB_DIR/stocks_data.json"
+if [ $? -ne 0 ]; then
+  echo "${RED}❌ コピーに失敗しました。GitHubフォルダを確認してください: $GITHUB_DIR${NC}"
+  exit 1
+fi
+echo "${GREEN}✓ コピー完了${NC}"
+echo ""
+
+# --- ステップ3: Gitにコミット ---
+echo "${ORANGE}[3/4] GitHubにコミットします...${NC}"
+cd "$GITHUB_DIR" || { echo "${RED}❌ GitHubフォルダが見つかりません: $GITHUB_DIR${NC}"; exit 1; }
+
+git add stocks_data.json
+TIMESTAMP=$(date '+%Y/%m/%d %H:%M')
+git commit -m "data update $TIMESTAMP"
+if [ $? -ne 0 ]; then
+  echo "${ORANGE}⚠ 変更なし（前回から株価が変わっていません）${NC}"
+  echo ""
+else
+  echo "${GREEN}✓ コミット完了${NC}"
+  echo ""
+fi
+
+# --- ステップ4: GitHubにpush ---
+echo "${ORANGE}[4/4] Vercelに反映します（push）...${NC}"
+git push
+if [ $? -ne 0 ]; then
+  echo "${RED}❌ pushに失敗しました。インターネット接続を確認してください。${NC}"
+  exit 1
+fi
+echo "${GREEN}✓ push完了${NC}"
+echo ""
+
+# --- 完了メッセージ ---
+echo "================================================"
+echo "${GREEN}  ✅ 更新完了！${NC}"
+echo "  $(date '+%Y/%m/%d %H:%M') に反映されました"
+echo ""
+echo "  アプリを確認: https://oshime.vercel.app/app.html"
+echo "================================================"
+echo ""
