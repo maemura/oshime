@@ -8,6 +8,29 @@
 <meta property="og:title" content="かぶのすけ — 今日の押し目候補を自動抽出">
 <meta property="og:description" content="地合い判定 × 高配当スキャン。毎朝8:30更新。">
 <meta property="og:type" content="website">
+<!-- ========================================
+  Google Analytics 4
+  TODO: G-XXXXXXXXXX を自分の測定IDに書き換えてください
+  取得方法: analytics.google.com → 管理 → データストリーム → 測定ID
+  ======================================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX', {
+    page_title: 'かぶのすけ',
+    send_page_view: true,
+  });
+
+  // かぶのすけ カスタムイベント送信ヘルパー
+  function gaEvent(name, params){
+    if(typeof gtag !== 'undefined'){
+      gtag('event', name, params || {});
+    }
+  }
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -1131,16 +1154,26 @@ function renderDiff(newBuy,newWatch,newTotal){
 }
 
 // ===== RANKINGS =====
+// 出来高ランキングデータ（stocks_data.jsonから読む。なければprocessedから算出）
+let volRankingData=[];
+
 function renderRankings(){
   const top5div=[...processed].sort((a,b)=>b.dividend-a.dividend).slice(0,5);
   const top5sc=[...processed].sort((a,b)=>b.score-a.score).slice(0,5);
   const top5dev=[...processed].sort((a,b)=>a.d25-b.d25).slice(0,5);
+  // 出来高ランキング: vol_ranking（実データ）またはprocessedのvol_r順
+  const top5vol=volRankingData.length
+    ? volRankingData.slice(0,5)
+    : [...processed].sort((a,b)=>(b.turnover_avg5||0)-(a.turnover_avg5||0)).slice(0,5);
 
-  function rows(list,keyFn){
+  function rows(list,keyFn,isVol){
     return list.map((s,i)=>{
       const sc=s.score>=60?'hi':s.score>=35?'md':'lo';
       const{v,cls}=keyFn(s);
-      return`<div class="rank-row" onclick="jumpToCard('${s.code}')">
+      const clickFn=isVol
+        ? `onclick="jumpToCard('${s.code}')" style="cursor:pointer"`
+        : `onclick="jumpToCard('${s.code}')"`;
+      return`<div class="rank-row" ${clickFn}>
         <div class="rank-num ${i<3?'top':''}">${i+1}</div>
         <div class="rank-info"><div class="rank-name">${s.name}</div><div class="rank-meta">${s.code} · ${s.sector}</div></div>
         <div class="rank-right"><div class="rank-score ${sc}">${s.score}</div><div class="rank-key ${cls}">${v}</div></div>
@@ -1148,9 +1181,22 @@ function renderRankings(){
     }).join('');
   }
 
+  // 出来高ランキング行（vol_rankingはprocessedに含まれないかもしれないのでjumpToCard対応）
+  function volRows(list){
+    return list.map((s,i)=>{
+      const sc=(s.score||0)>=60?'hi':(s.score||0)>=35?'md':'lo';
+      const tv=s.turnover_avg5?s.turnover_avg5+'億円':'—';
+      return`<div class="rank-row" onclick="jumpToCard('${s.code}')">
+        <div class="rank-num ${i<3?'top':''}">${i+1}</div>
+        <div class="rank-info"><div class="rank-name">${s.name}</div><div class="rank-meta">${s.code} · ${s.sector||''}</div></div>
+        <div class="rank-right"><div class="rank-score ${sc}">${s.score||'—'}</div><div class="rank-key w">${tv}</div></div>
+      </div>`;
+    }).join('');
+  }
+
   document.getElementById('rankings').innerHTML=`
     <div class="rank-block">
-      <div class="rank-head"><div class="rank-head-title">💰 高配当ランキング TOP5</div></div>
+      <div class="rank-head"><div class="rank-head-title">💰 高配当 TOP5</div></div>
       <div class="rank-rows">${rows(top5div,s=>({v:s.dividend+'%',cls:'w'}))}</div>
     </div>
     <div class="rank-block">
@@ -1158,8 +1204,12 @@ function renderRankings(){
       <div class="rank-rows">${rows(top5sc,s=>({v:'score '+s.score,cls:'g'}))}</div>
     </div>
     <div class="rank-block">
-      <div class="rank-head"><div class="rank-head-title">⚡ 押し目ランキング TOP5</div></div>
+      <div class="rank-head"><div class="rank-head-title">⚡ 押し目 TOP5</div></div>
       <div class="rank-rows">${rows(top5dev,s=>({v:s.d25+'%',cls:'g'}))}</div>
+    </div>
+    <div class="rank-block">
+      <div class="rank-head"><div class="rank-head-title">🔥 売買代金 TOP5（5日平均）</div><div style="font-size:10px;color:var(--text3)">流動性が高い銘柄</div></div>
+      <div class="rank-rows">${volRows(top5vol)}</div>
     </div>`;
 }
 
@@ -1342,7 +1392,20 @@ function renderCard(){
   setupSwipe();
 }
 
-function cardMove(d){cardIndex=Math.max(0,Math.min(cardIndex+d,processed.length-1));renderCard();}
+function cardMove(d){
+  cardIndex=Math.max(0,Math.min(cardIndex+d,processed.length-1));
+  renderCard();
+  // GA4: 銘柄カード閲覧
+  if(processed[cardIndex]){
+    gaEvent('stock_viewed', {
+      stock_code: processed[cardIndex].code,
+      stock_name: processed[cardIndex].name,
+      score: processed[cardIndex].score,
+      zone: processed[cardIndex].zone.cls,
+      rank: cardIndex+1,
+    });
+  }
+}
 function jumpToCard(code){const i=processed.findIndex(s=>s.code===code);if(i>=0){cardIndex=i;renderCard();document.getElementById('cardArea').scrollIntoView({behavior:'smooth',block:'nearest'});}}
 function setupSwipe(){
   const el=document.querySelector('.stock-card');if(!el)return;
@@ -1479,12 +1542,20 @@ function setMode(m,el){
   currentMode=m;
   document.querySelectorAll('.mode-tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
+  gaEvent('mode_changed', {mode: m});
 }
 
 // ===== WATCHLIST =====
 function toggleFav(code){
-  if(watchlist.includes(code)){watchlist=watchlist.filter(c=>c!==code);}
-  else{watchlist.push(code);}
+  const adding=!watchlist.includes(code);
+  if(adding){
+    watchlist.push(code);
+    const s=processed.find(x=>x.code===code);
+    gaEvent('watchlist_add',{stock_code:code,stock_name:s?s.name:'',score:s?s.score:0});
+  } else {
+    watchlist=watchlist.filter(c=>c!==code);
+    gaEvent('watchlist_remove',{stock_code:code});
+  }
   try{localStorage.setItem('kbs_watch',JSON.stringify(watchlist));}catch(e){}
   updateWatchCount();
   renderCard();renderWatchlist();
@@ -1542,6 +1613,7 @@ function switchTab(tab){
   const n=document.getElementById('nav-'+tab);if(n)n.classList.add('active');
   const p=document.getElementById('pc-'+tab);if(p)p.classList.add('active');
   if(tab==='watch'){renderWatchlist();renderHistory();}
+  gaEvent('tab_switched', {tab: tab});
 }
 
 // ===== DATA LOAD =====
@@ -1609,6 +1681,13 @@ function run(){
   cardIndex=0;
   renderCard();
   renderEvents();
+  // GA4: スキャン実行イベント
+  gaEvent('scan_executed', {
+    mode: currentMode,
+    buy_count: buyN,
+    total_count: processed.length,
+    data_source: dataSource,
+  });
 }
 
 async function init(){
