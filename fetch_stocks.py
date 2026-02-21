@@ -548,6 +548,12 @@ def fetch_one(ticker, _retry=0):
             + abs(range_pct) * 3,
         1)
 
+        # ── ボラティリティ＆自分比押し目度 ──
+        daily_ret = closes.pct_change().dropna()
+        volatility = round(float(daily_ret.iloc[-60:].std()) * 100, 3) if len(daily_ret) >= 20 else 2.0
+        d25_pct = (price - ma25) / ma25 * 100 if ma25 else 0
+        dip_zscore = round(d25_pct / volatility, 2) if volatility > 0 else 0
+
         return {
             "code":          ticker.replace(".T",""),
             "name":          name,
@@ -569,6 +575,8 @@ def fetch_one(ticker, _retry=0):
             "gap_pct":       gap_pct,         # 始値ギャップ%
             "trend_score":   trend_score,     # 注目度スコア
             "market_cap_b":  market_cap_b,    # 時価総額（億円）
+            "volatility":    volatility,      # 日次ボラティリティ%
+            "dip_zscore":    dip_zscore,       # 自分比押し目度（σ）
         }
     except Exception as e:
         err = str(e).lower()
@@ -631,7 +639,7 @@ def calc_score_stable(s):
 
     # 配当利回り (max 30pt) — 3%台でもしっかり加点
     score += (30 if div >= 5 else 25 if div >= 4.5 else 20 if div >= 4
-              else 16 if div >= 3.5 else 12 if div >= 3 else 6 if div >= 2.5 else 3 if div >= 2 else 0)
+              else 16 if div >= 3.5 else 12 if div >= 3 else 6 if div >= 2.5 else 0)
 
     # 時価総額ボーナス (max 15pt) — 大型安定株を優遇
     mc = s.get("market_cap_b", 0)
@@ -653,12 +661,50 @@ def calc_score_stable(s):
     score += (10 if pbr <= 0.7 else 7 if pbr <= 1.0 else 3 if pbr <= 1.5 else 0)
 
     # 安定株ボーナス (max 5pt) — 配当3%以上・黒字・大型の三拍子
-    if div >= 2 and s.get("per", 0) > 0 and mc >= 5000:
+    if div >= 3 and s.get("per", 0) > 0 and mc >= 1000:
         score += 5
 
     # 出来高急増ペナルティ
     if s.get("vol_r", 1) >= 1.5: score -= 15
     if s.get("vol_r", 1) >= 2.5: score -= 10
+
+    return max(0, min(score, 100))
+
+
+def calc_score_bluechip(s):
+    """安定高配当スコア：配当×時価総額×自分比押し目度"""
+    div = s.get("dividend", 0)
+    mc = s.get("market_cap_b", 0)
+    # 配当2%未満 or 時価総額500億未満 → 対象外
+    if div < 2 or mc < 500: return 0
+
+    score = 0
+
+    # 配当利回り (max 30pt)
+    score += (30 if div >= 5 else 25 if div >= 4.5 else 20 if div >= 4
+              else 16 if div >= 3.5 else 12 if div >= 3 else 7 if div >= 2.5
+              else 3 if div >= 2 else 0)
+
+    # 時価総額 (max 20pt)
+    score += (20 if mc >= 50000 else 17 if mc >= 10000 else 14 if mc >= 5000
+              else 10 if mc >= 1000 else 5 if mc >= 500 else 0)
+
+    # 自分比押し目度 = dip_zscore (max 25pt)
+    # zscoreはマイナスが深いほど「自分にしては安い」
+    z = s.get("dip_zscore", 0)
+    score += (25 if z <= -3.0 else 20 if z <= -2.0 else 15 if z <= -1.5
+              else 10 if z <= -1.0 else 5 if z <= -0.5 else 0)
+
+    # PBR (max 15pt)
+    pbr = s.get("pbr", 99)
+    score += (15 if pbr <= 0.7 else 11 if pbr <= 0.9 else 7 if pbr <= 1.2
+              else 3 if pbr <= 1.5 else 0)
+
+    # 安定株ボーナス (max 10pt) — 黒字+配当+大型
+    if s.get("per", 0) > 0 and div >= 2 and mc >= 5000:
+        score += 10
+    elif s.get("per", 0) > 0 and div >= 2 and mc >= 1000:
+        score += 5
 
     return max(0, min(score, 100))
 
@@ -775,7 +821,8 @@ def main():
         s["score_rebound"]  = calc_score(s,"rebound")
         s["score_stable"]   = calc_score_stable(s)
         s["score_growth"]   = calc_score_growth(s)
-        s["score"]          = s["score_stable"]
+        s["score_bluechip"] = calc_score_bluechip(s)
+        s["score"]          = s["score_bluechip"]
     results.sort(key=lambda x:-x["score"])
 
     prev_scores={}
@@ -850,7 +897,8 @@ def main():
     KEEP = {"code","name","sector","price","ma25","ma75","rsi","dividend",
             "pbr","per","vol_r","vol_ratio_1d","ret_1d","range_pct","trend_score",
             "score_dividend","score_value","score_rebound",
-            "score_stable","score_growth","score","prev_score","market_cap_b"}
+            "score_stable","score_growth","score_bluechip",
+            "score","prev_score","market_cap_b","volatility","dip_zscore"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
 
     output = {
