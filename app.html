@@ -3,58 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>かぶのすけ — 今日の高配当押し目を自動抽出</title>
-<meta name="description" content="日経の地合いを判定して、今日買いやすい高配当・割安株を自動スキャン。初心者でも買い場が一目でわかる無料ツール。">
-<meta property="og:title" content="かぶのすけ — 今日の押し目候補を自動抽出">
-<meta property="og:description" content="地合い判定 × 高配当スキャン。毎朝8:30更新。">
-<meta property="og:type" content="website">
-<!-- ========================================
-  Google Analytics 4
-  TODO: G-DWW0W11P5T を自分の測定IDに書き換えてください
-  取得方法: analytics.google.com → 管理 → データストリーム → 測定ID
-  ======================================== -->
+<title>かぶのすけ — 今日の押し目候補</title>
+<meta name="description" content="東証プライム全銘柄を毎朝自動スキャン。地合い判定×高配当×割安で今日の買い場を即表示。">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWW0W11P5T"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
+  window.dataLayer=window.dataLayer||[];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-DWW0W11P5T', {
-    page_title: 'かぶのすけ',
-    send_page_view: true,
-  });
-
-  // かぶのすけ カスタムイベント送信ヘルパー
-  function gaEvent(name, params){
-    if(typeof gtag !== 'undefined'){
-      gtag('event', name, params || {});
-    }
-  }
+  gtag('js',new Date());
+  gtag('config','G-DWW0W11P5T',{page_title:'かぶのすけ'});
+  function gaEvent(n,p){if(typeof gtag!=='undefined')gtag('event',n,p||{});}
 </script>
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0a2540;
-  --navy2:#0d3060;
-  --orange:#e8541e;
-  --orange2:#ff6b35;
-  --orange-lt:#fff3ee;
-  --up:#d0021b;
-  --dn:#0055cc;
-  --green:#00875a;
-  --green-lt:#e3fcef;
-  --amber:#946500;
-  --amber-lt:#fffae6;
-  --bg:#f0f4f8;
-  --bg2:#ffffff;
-  --bg3:#f7f9fc;
+  --navy:#0a2540; --navy2:#0d3060;
+  --orange:#e8541e; --orange2:#ff6b35; --orange-lt:#fff3ee;
+  --up:#d0021b; --dn:#0055cc;
+  --green:#00875a; --green-lt:#e3fcef;
+  --amber:#946500; --amber-lt:#fffae6;
+  --bg:#f0f4f8; --bg2:#ffffff; --bg3:#f7f9fc;
   --border:#e2e8f0;
-  --text:#2d3748;
-  --text2:#1a202c;
-  --text3:#718096;
-  --r:8px;
-  --r2:5px;
+  --text:#2d3748; --text2:#1a202c; --text3:#718096;
+  --r:8px; --r2:5px;
   --fn:'DM Mono','Outfit',monospace;
   --fh:'Outfit','Noto Sans JP',sans-serif;
   --fb:'Noto Sans JP',sans-serif;
@@ -63,690 +34,514 @@
 html{font-size:15px;}
 body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100vh;overflow-x:hidden;}
 
-/* ======= TOPBAR ======= */
+/* ── TOPBAR ── */
 .topbar{
-  position:sticky;top:0;z-index:200;
+  position:sticky;top:0;z-index:300;
   background:var(--navy);border-bottom:3px solid var(--orange);
   height:54px;display:flex;align-items:center;padding:0 20px;
 }
-.topbar-inner{width:100%;max-width:1280px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
-.logo{display:flex;align-items:center;gap:10px;}
-.logo-texts{}
-.logo-name{font-family:var(--fh);font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.3px;line-height:1.1;}
-.logo-tag{font-size:9px;color:rgba(255,255,255,0.45);font-family:var(--fh);letter-spacing:0.5px;}
+.topbar-inner{width:100%;max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+.logo-name{font-family:var(--fh);font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.3px;}
+.logo-tag{font-size:9px;color:rgba(255,255,255,0.4);font-family:var(--fh);margin-left:8px;}
 .topbar-right{display:flex;align-items:center;gap:8px;}
-.btn-watch{
+.btn-topbar{
   background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);
-  border-radius:var(--r2);padding:5px 12px;
-  font-family:var(--fh);font-size:11px;font-weight:700;color:#fff;cursor:pointer;
-  transition:all 0.15s;display:flex;align-items:center;gap:5px;position:relative;
+  border-radius:var(--r2);padding:5px 12px;color:#fff;cursor:pointer;
+  font-family:var(--fh);font-size:11px;font-weight:600;
+  display:flex;align-items:center;gap:5px;
 }
-.btn-watch:hover{background:rgba(255,255,255,0.2);}
+.btn-topbar:hover{background:rgba(255,255,255,0.18);}
 .watch-count{
   background:var(--orange);color:#fff;border-radius:10px;
   padding:1px 5px;font-size:9px;font-weight:700;display:none;
 }
 .watch-count.show{display:inline-block;}
 
-/* ======= PAGE LAYOUT ======= */
-.page{max-width:1280px;margin:0 auto;padding:20px 20px 100px;}
-@media(min-width:960px){
-  .page{display:grid;grid-template-columns:1fr 400px;gap:24px;align-items:start;}
-  .col-right{position:sticky;top:74px;}
-}
-@media(max-width:480px){.page{padding:14px 14px 90px;}}
+/* ── LAYOUT ── */
+.page{max-width:1300px;margin:0 auto;padding:20px 20px 100px;}
+@media(max-width:480px){.page{padding:12px 12px 90px;}}
 
-/* ======= HERO ======= */
+/* ── HERO (compact) ── */
 .hero{
   background:linear-gradient(135deg,var(--navy) 0%,#0e2f5a 100%);
-  border-radius:var(--r);padding:24px;margin-bottom:18px;
+  border-radius:var(--r);padding:20px 24px;margin-bottom:14px;
   position:relative;overflow:hidden;
 }
 .hero::before{
-  content:'';position:absolute;right:-50px;top:-50px;
-  width:220px;height:220px;border-radius:50%;
-  background:rgba(232,84,30,0.09);pointer-events:none;
+  content:'';position:absolute;right:-40px;top:-40px;
+  width:180px;height:180px;border-radius:50%;
+  background:rgba(232,84,30,0.08);pointer-events:none;
 }
-.hero::after{
-  content:'';position:absolute;left:-30px;bottom:-40px;
-  width:160px;height:160px;border-radius:50%;
-  background:rgba(255,255,255,0.03);pointer-events:none;
-}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.hero-left{}
 .hero-eyebrow{
-  display:inline-flex;align-items:center;gap:7px;
-  background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);
-  border-radius:20px;padding:4px 12px;
-  font-family:var(--fh);font-size:10px;color:rgba(255,255,255,0.55);
-  margin-bottom:16px;letter-spacing:0.3px;
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--fh);font-size:10px;color:rgba(255,255,255,0.5);
+  margin-bottom:8px;
 }
-.hero-dot{
-  width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0;
-  animation:blink 2s ease-in-out infinite;
-}
-.hero-title{
-  font-family:var(--fh);font-size:26px;font-weight:800;color:#fff;
-  line-height:1.25;margin-bottom:12px;letter-spacing:-0.5px;
-}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0;animation:blink 2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.hero-title{font-family:var(--fh);font-size:22px;font-weight:800;color:#fff;line-height:1.2;letter-spacing:-0.3px;}
 .hero-title span{color:var(--orange2);}
-@media(max-width:480px){.hero-title{font-size:21px;}}
-.hero-sub{
-  font-size:13px;color:rgba(255,255,255,0.6);line-height:1.85;margin-bottom:20px;
-}
-.hero-sub strong{color:rgba(255,255,255,0.9);font-weight:700;}
-.hero-stats{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;}
+@media(max-width:480px){.hero-title{font-size:18px;}}
+.hero-stats{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
 .hero-stat{
   background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);
-  border-radius:var(--r2);padding:10px 14px;flex:1;min-width:80px;
+  border-radius:var(--r2);padding:8px 14px;
 }
-.hero-stat-val{font-family:var(--fn);font-size:22px;color:#fff;line-height:1;margin-bottom:3px;}
+.hero-stat-val{font-family:var(--fn);font-size:20px;color:#fff;line-height:1;}
 .hero-stat-val.buy{color:var(--orange2);}
-.hero-stat-label{font-size:9px;color:rgba(255,255,255,0.45);font-family:var(--fh);}
-.hero-cta{
-  display:inline-flex;align-items:center;gap:6px;
-  background:var(--orange);color:#fff;border:none;border-radius:var(--r2);
-  padding:10px 18px;font-family:var(--fh);font-size:12px;font-weight:700;
-  cursor:pointer;transition:all 0.15s;letter-spacing:0.3px;
-}
-.hero-cta:hover{background:var(--orange2);}
+.hero-stat-label{font-size:9px;color:rgba(255,255,255,0.4);font-family:var(--fh);margin-top:2px;}
 
-/* ======= MARKET PULSE ======= */
+/* ── TRUST BAR ── */
+.trust-bar{
+  background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--amber);
+  border-radius:var(--r);padding:8px 14px;margin-bottom:12px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+}
+.trust-left{display:flex;align-items:center;gap:8px;}
+.trust-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;}
+.trust-text{font-size:11px;color:var(--text3);}
+.trust-text .hi{color:var(--green);font-weight:700;}
+.trust-text .warn{color:var(--amber);font-weight:700;}
+.trust-badges{display:flex;gap:6px;flex-wrap:wrap;}
+.tbadge{
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:4px;padding:2px 8px;font-size:10px;color:var(--text3);
+  font-family:var(--fh);
+}
+.tbadge.link{cursor:pointer;color:var(--navy);border-color:var(--navy);}
+.tbadge.link:hover{background:var(--navy);color:#fff;}
+
+/* ── MARKET PULSE ── */
 .pulse{
   background:var(--bg2);border:1px solid var(--border);
-  border-radius:var(--r);margin-bottom:16px;overflow:hidden;
+  border-radius:var(--r);margin-bottom:12px;overflow:hidden;
 }
 .pulse-row{display:flex;overflow-x:auto;scrollbar-width:none;}
 .pulse-row::-webkit-scrollbar{display:none;}
-.pc{flex-shrink:0;padding:10px 14px;border-right:1px solid var(--border);min-width:90px;text-align:center;}
+.pc{flex-shrink:0;padding:9px 14px;border-right:1px solid var(--border);min-width:88px;text-align:center;}
 .pc:last-child{border-right:none;}
-.pc-l{font-size:9px;color:var(--text3);font-family:var(--fh);letter-spacing:0.3px;margin-bottom:2px;}
+.pc-l{font-size:9px;color:var(--text3);font-family:var(--fh);margin-bottom:2px;}
 .pc-v{font-family:var(--fn);font-size:13px;color:var(--text2);}
-.pc-v.up{color:var(--up);}
-.pc-v.dn{color:var(--dn);}
+.pc-v.up{color:var(--up);}  .pc-v.dn{color:var(--dn);}
 .pc-c{font-family:var(--fn);font-size:10px;color:var(--text3);}
-.pc-c.up{color:var(--up);}
-.pc-c.dn{color:var(--dn);}
+.pc-c.up{color:var(--up);}  .pc-c.dn{color:var(--dn);}
 
-/* ======= STANCE BLOCK ======= */
+/* ── STANCE ── */
 .stance{
-  background:var(--bg2);border-radius:var(--r);padding:18px;margin-bottom:16px;
-  border:1px solid var(--border);border-left:4px solid var(--border);
+  background:var(--bg2);border:1px solid var(--border);border-left:4px solid var(--border);
+  border-radius:var(--r);padding:16px 18px;margin-bottom:14px;
 }
 .stance.bull{border-left-color:var(--up);}
 .stance.neutral{border-left-color:var(--amber);}
 .stance.bear{border-left-color:var(--dn);}
-.stance-head{margin-bottom:12px;}
-.stance-date{font-size:11px;color:var(--text3);font-family:var(--fh);margin-bottom:5px;}
-.stance-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;}
-.stance-title{font-family:var(--fh);font-size:17px;font-weight:800;color:var(--text2);letter-spacing:-0.2px;}
+.stance-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+.stance-title{font-family:var(--fh);font-size:16px;font-weight:800;color:var(--text2);}
+.stance-date{font-size:10px;color:var(--text3);font-family:var(--fh);margin-top:2px;}
 .stance-badge{
-  flex-shrink:0;padding:5px 12px;border-radius:20px;
-  font-family:var(--fh);font-size:11px;font-weight:700;border:1px solid;white-space:nowrap;
+  flex-shrink:0;padding:4px 12px;border-radius:20px;
+  font-family:var(--fh);font-size:11px;font-weight:700;border:1px solid;
 }
 .stance-badge.bull{background:rgba(208,2,27,0.07);color:var(--up);border-color:rgba(208,2,27,0.2);}
 .stance-badge.neutral{background:var(--amber-lt);color:var(--amber);border-color:rgba(148,101,0,0.2);}
 .stance-badge.bear{background:rgba(0,85,204,0.07);color:var(--dn);border-color:rgba(0,85,204,0.2);}
-.stance-reason{
-  font-size:13px;color:var(--text);line-height:1.9;margin-bottom:14px;
-}
+.stance-reason{font-size:12px;color:var(--text);line-height:1.85;margin-bottom:12px;}
 .stance-reason strong{color:var(--navy);font-weight:700;}
-/* Data chips — 数値根拠を並べる */
-.stance-data{display:flex;gap:8px;flex-wrap:wrap;}
+.stance-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
 .stance-chip{
-  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);
-  padding:8px 12px;flex:1;min-width:80px;text-align:center;
+  border:1px solid var(--border);border-radius:var(--r2);
+  padding:6px 10px;text-align:center;flex:1;min-width:70px;background:var(--bg3);
 }
 .stance-chip.buy{background:var(--green-lt);border-color:rgba(0,135,90,0.2);}
 .stance-chip.warn{background:var(--amber-lt);border-color:rgba(148,101,0,0.2);}
-.stance-chip.hold{background:var(--bg3);border-color:var(--border);}
-.stance-chip-val{
-  font-family:var(--fn);font-size:16px;line-height:1;margin-bottom:3px;
-}
-.stance-chip.buy .stance-chip-val{color:var(--up);}
-.stance-chip.warn .stance-chip-val{color:var(--amber);}
-.stance-chip.hold .stance-chip-val{color:var(--text3);}
-.stance-chip-label{font-family:var(--fh);font-size:9px;color:var(--text3);}
-/* 3軸スコアバー */
-.stance-axes{margin-bottom:14px;display:flex;flex-direction:column;gap:7px;}
-.axis-row{display:flex;align-items:center;gap:10px;font-size:12px;}
-.axis-name{color:var(--text);min-width:120px;font-size:11px;}
+.stance-chip-val{font-family:var(--fn);font-size:15px;color:var(--text2);}
+.stance-chip-label{font-size:9px;color:var(--text3);}
+.stance-axes{display:flex;flex-direction:column;gap:5px;margin-bottom:10px;}
+.axis-row{display:flex;align-items:center;gap:8px;font-size:11px;}
+.axis-name{min-width:110px;color:var(--text3);}
 .axis-bar{display:flex;gap:3px;}
-.axis-seg{width:28px;height:7px;border-radius:3px;background:var(--border);}
+.axis-seg{width:24px;height:6px;border-radius:3px;background:var(--border);}
 .axis-seg.on.hi{background:var(--up);}
 .axis-seg.on.mid{background:var(--amber);}
-.axis-seg.on.zero{background:var(--dn);}
-.axis-score{font-family:var(--fn);font-size:11px;color:var(--text3);width:30px;}
-.axis-total{font-family:var(--fh);font-size:11px;font-weight:700;color:var(--text2);padding-top:4px;border-top:1px solid var(--border);}
-.axis-total strong{color:var(--navy);}
-/* stance note */
-.stance-note{
-  margin-top:12px;padding:8px 12px;background:var(--bg3);border:1px solid var(--border);
-  border-radius:var(--r2);font-size:11px;color:var(--text3);line-height:1.7;
-}
+.axis-score{font-family:var(--fn);font-size:10px;color:var(--text3);}
+.axis-total{font-size:11px;font-weight:700;color:var(--text3);padding-top:4px;border-top:1px solid var(--border);}
+.stance-note{font-size:10px;color:var(--text3);background:var(--bg3);padding:6px 10px;border-radius:var(--r2);line-height:1.6;}
 
-/* ======= MODE & SCAN ======= */
-.mode-wrap{margin-bottom:14px;}
-.sec-label{
-  font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);
-  letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;
-}
-.mode-tabs{display:flex;gap:6px;}
-.mode-tab{
-  flex:1;background:var(--bg2);border:1.5px solid var(--border);
-  border-radius:var(--r);padding:10px 8px;text-align:center;cursor:pointer;
-  transition:all 0.15s;
-}
-.mode-tab:hover{border-color:var(--navy2);}
-.mode-tab.active{background:var(--navy);border-color:var(--navy);}
-.mode-ico{font-size:18px;margin-bottom:3px;}
-.mode-t{font-family:var(--fh);font-size:10px;font-weight:600;color:var(--text3);}
-.mode-tab.active .mode-t{color:rgba(255,255,255,0.85);}
-
-.btn-scan{
-  width:100%;background:var(--orange);color:#fff;border:none;
-  border-radius:var(--r);padding:14px;
-  font-family:var(--fh);font-size:14px;font-weight:700;cursor:pointer;
-  transition:all 0.15s;letter-spacing:0.3px;
-  display:flex;align-items:center;justify-content:center;gap:8px;
-  box-shadow:0 2px 8px rgba(232,84,30,0.35);margin-bottom:16px;
-}
-.btn-scan:hover{background:var(--orange2);}
-.btn-scan:active{transform:scale(0.99);}
-
-/* ======= SCAN ANIMATION ======= */
-.scan-anim{
-  display:none;background:var(--bg2);border:1px solid var(--border);
-  border-radius:var(--r);padding:20px;margin-bottom:16px;text-align:center;
-}
-.scan-anim.show{display:block;}
-.scan-anim-steps{display:flex;flex-direction:column;gap:8px;text-align:left;max-width:260px;margin:0 auto;}
-.scan-step{
-  display:flex;align-items:center;gap:10px;font-size:12px;color:var(--text3);
-  opacity:0;transition:opacity 0.3s;
-}
-.scan-step.done{color:var(--green);opacity:1;}
-.scan-step.active{color:var(--text2);opacity:1;}
-.scan-step-dot{width:8px;height:8px;border-radius:50%;background:var(--border);flex-shrink:0;}
-.scan-step.done .scan-step-dot{background:var(--green);}
-.scan-step.active .scan-step-dot{background:var(--orange);animation:blink 0.7s infinite;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:0.3}}
-
-/* ======= RANKINGS ======= */
-.rankings{margin-bottom:16px;}
-.rank-block{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:var(--r);overflow:hidden;margin-bottom:10px;
-}
-.rank-head{
-  background:var(--navy);padding:8px 14px;
-  display:flex;align-items:center;gap:6px;
-}
-.rank-head-title{font-family:var(--fh);font-size:12px;font-weight:700;color:#fff;}
-.rank-rows{}
-.rank-row{
-  padding:10px 14px;display:flex;align-items:center;gap:10px;
-  cursor:pointer;transition:background 0.1s;border-bottom:1px solid var(--border);
-}
-.rank-row:last-child{border-bottom:none;}
-.rank-row:hover{background:var(--bg3);}
-.rank-num{font-family:var(--fn);font-size:13px;color:var(--text3);width:18px;flex-shrink:0;text-align:center;}
-.rank-num.top{color:var(--orange);font-weight:700;}
-.rank-info{flex:1;min-width:0;}
-.rank-name{font-size:13px;color:var(--text2);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.rank-meta{font-size:10px;color:var(--text3);margin-top:1px;font-family:var(--fn);}
-.rank-right{text-align:right;flex-shrink:0;}
-.rank-score{
-  display:inline-flex;align-items:center;justify-content:center;
-  width:36px;height:36px;border-radius:50%;
-  font-family:var(--fn);font-size:12px;border:2px solid;
-}
-.rank-score.hi{color:var(--up);border-color:rgba(208,2,27,0.2);background:rgba(208,2,27,0.04);}
-.rank-score.md{color:var(--amber);border-color:rgba(148,101,0,0.2);background:var(--amber-lt);}
-.rank-score.lo{color:var(--text3);border-color:var(--border);background:var(--bg3);}
-.rank-key{font-size:10px;color:var(--text3);margin-top:2px;font-family:var(--fn);}
-.rank-key.w{color:var(--orange);}
-.rank-key.g{color:var(--green);}
-
-/* ======= EVENTS ======= */
-.events{margin-bottom:16px;}
-.sec-head{font-family:var(--fh);font-size:12px;font-weight:700;color:#fff;background:var(--navy);border-radius:var(--r) var(--r) 0 0;padding:9px 14px;display:flex;align-items:center;gap:6px;}
-.event-list{background:var(--bg2);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);overflow:hidden;}
-.event-row{display:flex;gap:12px;padding:11px 14px;border-bottom:1px solid var(--border);font-size:12px;}
-.event-row:last-child{border-bottom:none;}
-.ev-ico{font-size:18px;flex-shrink:0;padding-top:1px;}
-.ev-body{flex:1;}
-.ev-title{font-weight:600;color:var(--text2);margin-bottom:3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
-.ev-desc{font-size:11px;color:var(--text3);line-height:1.7;}
-.ev-tag{display:inline-flex;padding:1px 6px;border-radius:3px;font-family:var(--fh);font-size:9px;font-weight:700;flex-shrink:0;}
-.ev-tag.bull{background:rgba(208,2,27,0.07);color:var(--up);}
-.ev-tag.bear{background:rgba(0,85,204,0.07);color:var(--dn);}
-.ev-tag.neutral{background:var(--bg3);color:var(--text3);}
-
-/* ======= TRUST BAR ======= */
-.trust-bar{
-  background:var(--bg2);border:1px solid var(--border);
-  border-left:4px solid var(--green);border-radius:var(--r);
-  padding:10px 14px;margin-bottom:14px;
+/* ── SECTION HEADER ── */
+.sec-head{
   display:flex;align-items:center;justify-content:space-between;
-  gap:10px;flex-wrap:wrap;
+  margin-bottom:10px;
 }
-.trust-left{display:flex;align-items:center;gap:8px;}
-.trust-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;}
-.trust-text{font-size:12px;color:var(--text2);font-weight:500;}
-.trust-text .hi{color:var(--green);font-weight:700;}
-.trust-text .warn{color:var(--amber);font-weight:700;}
-.trust-badges{display:flex;gap:5px;flex-wrap:wrap;}
-.tbadge{background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:3px 8px;font-size:10px;color:var(--text3);}
-.tbadge.link{cursor:pointer;transition:all 0.15s;}
-.tbadge.link:hover{border-color:var(--navy);color:var(--navy);}
+.sec-head-title{font-family:var(--fh);font-size:13px;font-weight:700;color:var(--text2);}
+.sec-head-sub{font-size:10px;color:var(--text3);}
 
-/* ======= DIFF BAR ======= */
-.diff-bar{
+/* ── FILTER BAR ── */
+.filter-bar{
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
-  padding:8px 14px;margin-bottom:14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:11px;
+  padding:12px 14px;margin-bottom:12px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
 }
-.diff-label{color:var(--text3);}
-.diff-new{color:var(--green);font-weight:700;}
-.diff-gone{color:var(--text3);font-weight:700;}
-.diff-same{color:var(--text3);}
-.diff-sep{color:var(--border);}
-
-/* ======= DISCLAIMER ======= */
-.disclaimer{font-size:11px;color:var(--text3);line-height:1.8;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:10px 14px;margin-bottom:16px;}
-
-/* ======= BOTTOM NAV ======= */
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:200;background:var(--bg2);border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-around;padding:8px 0 max(8px,env(safe-area-inset-bottom));}
-@media(min-width:960px){.bottom-nav{display:none;}}
-.nav-item{display:flex;flex-direction:column;align-items:center;gap:2px;padding:4px 24px;cursor:pointer;background:none;border:none;transition:all 0.15s;}
-.nav-ico{font-size:20px;line-height:1;}
-.nav-label{font-family:var(--fh);font-size:9px;font-weight:600;color:var(--text3);letter-spacing:0.3px;}
-.nav-item.active .nav-label{color:var(--navy);}
-
-/* PC tabs */
-.pc-tabs{display:none;}
-@media(min-width:960px){
-  .pc-tabs{display:flex;gap:4px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:4px;margin-bottom:16px;}
-  .pc-tab{flex:1;background:none;border:none;border-radius:var(--r2);padding:8px 12px;font-family:var(--fh);font-size:12px;font-weight:600;color:var(--text3);cursor:pointer;transition:all 0.15s;}
-  .pc-tab.active{background:var(--navy);color:#fff;}
-  .pc-tab:hover:not(.active){background:var(--bg3);}
+.filter-label{font-family:var(--fh);font-size:11px;color:var(--text3);font-weight:600;}
+.filter-tabs{display:flex;gap:4px;flex-wrap:wrap;}
+.filter-tab{
+  border:1px solid var(--border);border-radius:4px;padding:4px 10px;
+  font-family:var(--fh);font-size:11px;font-weight:600;color:var(--text3);
+  cursor:pointer;background:var(--bg3);white-space:nowrap;
 }
+.filter-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.filter-sep{width:1px;height:20px;background:var(--border);}
+.filter-count{font-family:var(--fn);font-size:11px;color:var(--text3);margin-left:auto;}
 
-/* ======= PANELS ======= */
-.panel{display:none;}
-.panel.active{display:block;}
-
-/* ======= CARD AREA ======= */
-.card-wrap{}
-.card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
-.card-label{font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:1px;text-transform:uppercase;}
-.card-nav{display:flex;align-items:center;gap:8px;}
-.card-counter{font-family:var(--fn);font-size:12px;color:var(--text3);}
-.card-arr{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r2);width:28px;height:28px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:12px;color:var(--text);transition:all 0.15s;}
-.card-arr:hover{border-color:var(--navy);color:var(--navy);}
-.card-arr:disabled{opacity:0.3;cursor:not-allowed;}
-
-/* Stock Card */
-.stock-card{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);border-top:3px solid var(--navy);padding:16px;}
-.score-hero{display:flex;align-items:center;gap:14px;margin-bottom:14px;padding-bottom:14px;border-bottom:1px solid var(--border);}
-.score-ring{position:relative;flex-shrink:0;width:72px;height:72px;}
-.score-ring svg{transform:rotate(-90deg);}
-.score-ring-inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
-.score-ring-num{font-family:var(--fn);font-size:22px;line-height:1;}
-.score-ring-lbl{font-family:var(--fh);font-size:7px;letter-spacing:1.5px;color:var(--text3);margin-top:2px;}
-.score-info{flex:1;min-width:0;}
-.score-zone{display:inline-flex;align-items:center;padding:3px 9px;border-radius:20px;font-family:var(--fh);font-size:10px;font-weight:700;border:1px solid;margin-bottom:6px;}
-.score-zone.buy{background:rgba(208,2,27,0.06);color:var(--up);border-color:rgba(208,2,27,0.2);}
-.score-zone.watch{background:var(--amber-lt);color:var(--amber);border-color:rgba(148,101,0,0.2);}
-.score-zone.hold{background:var(--bg3);color:var(--text3);border-color:var(--border);}
-.score-name{font-family:var(--fh);font-size:18px;font-weight:700;color:var(--text2);margin-bottom:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.score-code{font-size:11px;color:var(--text3);font-family:var(--fn);}
-
-/* WHY BLOCK — 買い理由を大きく */
-.why-block{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:var(--r);padding:14px;margin-bottom:14px;
+/* ── STOCK TABLE ── */
+.stock-table-wrap{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--r);overflow:hidden;margin-bottom:14px;
 }
-.why-title{font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.8px;margin-bottom:10px;}
-.why-items{display:flex;flex-wrap:wrap;gap:8px;}
+.stock-table{width:100%;border-collapse:collapse;}
+.stock-table th{
+  background:var(--bg3);padding:8px 10px;
+  font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);
+  text-align:right;border-bottom:2px solid var(--border);
+  white-space:nowrap;cursor:pointer;user-select:none;
+}
+.stock-table th:first-child{text-align:left;}
+.stock-table th:hover{color:var(--navy);}
+.stock-table th.sort-asc::after{content:' ▲';}
+.stock-table th.sort-desc::after{content:' ▼';}
+.stock-table td{
+  padding:9px 10px;border-bottom:1px solid var(--border);
+  font-size:12px;text-align:right;color:var(--text);
+  vertical-align:middle;
+}
+.stock-table td:first-child{text-align:left;}
+.stock-table tr:last-child td{border-bottom:none;}
+.stock-table tr.tbl-row{cursor:pointer;transition:background 0.1s;}
+.stock-table tr.tbl-row:hover{background:var(--bg3);}
+.stock-table tr.tbl-row.expanded{background:#f0f7ff;}
+.tbl-rank{
+  font-family:var(--fn);font-size:11px;font-weight:700;
+  width:28px;text-align:center;
+}
+.tbl-rank.top{color:var(--orange);}
+.tbl-name{font-weight:600;color:var(--text2);font-size:12px;}
+.tbl-code{font-family:var(--fn);font-size:10px;color:var(--text3);}
+.tbl-zone{
+  display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;
+  font-family:var(--fh);font-size:10px;font-weight:700;white-space:nowrap;
+}
+.tbl-zone.buy{background:var(--green-lt);color:var(--green);}
+.tbl-zone.watch{background:var(--amber-lt);color:var(--amber);}
+.tbl-zone.hold{background:var(--bg3);color:var(--text3);}
+.tbl-score{font-family:var(--fn);font-size:13px;font-weight:700;}
+.tbl-score.hi{color:var(--up);}
+.tbl-score.md{color:var(--amber);}
+.tbl-score.lo{color:var(--text3);}
+.tbl-num{font-family:var(--fn);font-size:12px;}
+.tbl-num.dn{color:var(--up);}   /* 乖離マイナス=赤=買い場 */
+.tbl-num.up{color:var(--dn);}
+.tbl-prev{font-family:var(--fn);font-size:10px;}
+.tbl-prev.up{color:var(--up);}
+.tbl-prev.dn{color:var(--dn);}
+/* 展開詳細行 */
+.detail-row td{padding:0;background:#f0f7ff;}
+.detail-box{padding:14px 16px;border-top:1px solid #d0e4f7;}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:600px){.detail-grid{grid-template-columns:1fr;}}
+.detail-section-title{font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.5px;margin-bottom:8px;}
+.why-items{display:flex;flex-direction:column;gap:6px;}
 .why-item{
   background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r2);
-  padding:9px 12px;flex:1;min-width:110px;
-}
-
-
-/* Why block — 買い理由（強化版）*/
-.why-block{
-  background:var(--bg3);border:1px solid var(--border);
-  border-radius:var(--r);padding:14px;margin-bottom:14px;
-}
-.why-block.why-empty{padding:12px 14px;}
-.why-header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
-.why-title{font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.8px;}
-.why-strength{font-family:var(--fh);font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;}
-.why-strength.strong{background:rgba(208,2,27,0.08);color:var(--up);}
-.why-strength.mid{background:var(--amber-lt);color:var(--amber);}
-.why-strength.weak{background:var(--bg3);color:var(--text3);}
-.why-items{display:flex;flex-direction:column;gap:8px;}
-.why-item{
-  background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r2);
-  padding:10px 12px;position:relative;
+  padding:8px 12px;position:relative;
 }
 .why-item.strong{border-color:rgba(208,2,27,0.25);background:rgba(208,2,27,0.03);}
 .why-item.mid{border-color:rgba(148,101,0,0.25);background:var(--amber-lt);}
 .why-rank-badge{
-  position:absolute;top:10px;right:10px;
-  width:18px;height:18px;border-radius:50%;
-  font-family:var(--fh);font-size:9px;font-weight:700;
+  position:absolute;top:8px;right:8px;
+  width:16px;height:16px;border-radius:50%;
+  font-family:var(--fh);font-size:8px;font-weight:700;
   display:flex;align-items:center;justify-content:center;
 }
 .why-rank-badge.strong{background:rgba(208,2,27,0.1);color:var(--up);}
 .why-rank-badge.mid{background:rgba(148,101,0,0.1);color:var(--amber);}
-.why-val{font-family:var(--fn);font-size:20px;font-weight:500;color:var(--text2);line-height:1;margin-bottom:2px;}
+.why-val{font-family:var(--fn);font-size:18px;color:var(--text2);}
 .why-item.strong .why-val{color:var(--up);}
 .why-item.mid .why-val{color:var(--amber);}
-.why-label{font-size:10px;color:var(--text3);margin-bottom:3px;}
-.why-note-text{font-size:11px;font-weight:700;margin-bottom:4px;}
+.why-label{font-size:9px;color:var(--text3);}
+.why-note-text{font-size:11px;font-weight:700;margin-top:2px;}
 .why-item.strong .why-note-text{color:var(--up);}
 .why-item.mid .why-note-text{color:var(--amber);}
-.why-desc{font-size:11px;color:var(--text3);line-height:1.6;}
-/* スコアゾーン行 */
-.score-zone-row{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-bottom:6px;}
-/* 前日比変化バッジ */
+.why-desc{font-size:10px;color:var(--text3);line-height:1.6;margin-top:2px;}
+.score-breakdown{display:flex;flex-direction:column;gap:5px;}
+.bd-row{display:flex;align-items:center;gap:8px;}
+.bd-l{font-size:10px;color:var(--text3);min-width:70px;}
+.bd-bar{flex:1;height:5px;background:var(--border);border-radius:3px;overflow:hidden;}
+.bd-fill{height:100%;border-radius:3px;transition:width 0.4s ease;}
+.bd-v{font-family:var(--fn);font-size:10px;min-width:38px;text-align:right;}
+.bd-v.pos{color:var(--green);}  .bd-v.neg{color:var(--up);}
+.detail-fav-btn{
+  margin-top:12px;padding:7px 16px;border-radius:var(--r2);
+  font-family:var(--fh);font-size:11px;font-weight:700;cursor:pointer;
+  border:1.5px solid var(--border);background:var(--bg2);color:var(--text2);
+}
+.detail-fav-btn.active{background:var(--orange);color:#fff;border-color:var(--orange);}
+/* 変化バッジ */
 .change-badge{
-  display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;
+  display:inline-flex;align-items:center;padding:1px 6px;border-radius:3px;
   font-family:var(--fn);font-size:10px;font-weight:700;
 }
 .change-badge.up{background:rgba(208,2,27,0.07);color:var(--up);}
 .change-badge.dn{background:rgba(0,85,204,0.07);color:var(--dn);}
-.change-badge.flat{background:var(--bg3);color:var(--text3);}
-.change-badge.rank{background:rgba(232,84,30,0.08);color:var(--orange);}
 
-/* Metrics */
-.metrics{width:100%;border-collapse:collapse;margin-bottom:14px;font-size:12px;}
-.metrics th{background:var(--navy);color:rgba(255,255,255,0.65);padding:6px;font-family:var(--fh);font-size:9px;font-weight:600;letter-spacing:0.5px;text-align:center;}
-.metrics td{padding:8px 6px;text-align:center;border:1px solid var(--border);}
-.metrics td.val{font-family:var(--fn);font-size:14px;color:var(--text2);}
-.metrics td.val.up{color:var(--up);}
-.metrics td.val.dn{color:var(--dn);}
-.metrics td.val.w{color:var(--orange);}
-.metrics td.hint{font-size:9px;color:var(--text3);padding:3px 6px;background:var(--bg3);}
+/* ── TREND BADGES ── */
+.trend-badge{
+  display:inline-flex;align-items:center;
+  padding:1px 6px;border-radius:3px;
+  font-size:9px;font-weight:700;font-family:var(--fh);
+  white-space:nowrap;cursor:default;
+}
+.trend-badge.hot{background:rgba(208,2,27,0.1);color:var(--up);border:1px solid rgba(208,2,27,0.2);}
+.trend-badge.warm{background:rgba(148,101,0,0.08);color:var(--amber);border:1px solid rgba(148,101,0,0.15);}
 
-/* Breakdown */
-.breakdown{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);padding:12px 14px;margin-bottom:14px;}
-.breakdown-title{font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.5px;margin-bottom:10px;}
-.bd-row{display:flex;align-items:center;gap:8px;margin-bottom:7px;font-size:12px;}
-.bd-row:last-child{margin-bottom:0;}
-.bd-l{color:var(--text);min-width:72px;font-size:11px;}
-.bd-bar{flex:1;height:5px;background:var(--border);border-radius:3px;overflow:hidden;}
-.bd-fill{height:100%;border-radius:3px;transition:width 0.4s ease;}
-.bd-v{font-family:var(--fn);font-size:11px;width:36px;text-align:right;}
-.bd-v.pos{color:var(--up);}
-.bd-v.neg{color:var(--dn);}
+/* ── DANGER SECTION ── */
+.danger-section{
+  background:var(--bg2);border:1px solid var(--border);border-left:4px solid var(--up);
+  border-radius:var(--r);padding:14px 16px;margin-bottom:14px;
+}
+.danger-title{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--up);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
+.danger-rows{display:flex;flex-direction:column;gap:6px;}
+.danger-row{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);
+  padding:8px 12px;
+}
+.danger-name{font-size:12px;font-weight:600;color:var(--text2);}
+.danger-code{font-family:var(--fn);font-size:10px;color:var(--text3);}
+.danger-reason{font-size:10px;color:var(--up);font-weight:700;background:rgba(208,2,27,0.07);padding:2px 7px;border-radius:4px;}
 
-/* Card actions */
-.card-actions{display:flex;gap:8px;}
-.btn-fav{flex:1;background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r2);padding:10px;font-family:var(--fh);font-size:12px;color:var(--text);cursor:pointer;transition:all 0.15s;display:flex;align-items:center;justify-content:center;gap:5px;}
-.btn-fav:hover{border-color:var(--orange);color:var(--orange);}
-.btn-fav.active{background:var(--orange-lt);border-color:rgba(232,84,30,0.3);color:var(--orange);}
-
-/* ======= WATCHLIST ======= */
-.watch-empty{background:var(--bg2);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);padding:20px;text-align:center;font-size:12px;color:var(--text3);}
-.watch-list{background:var(--bg2);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);overflow:hidden;}
-.watch-row{padding:10px 14px;display:flex;align-items:center;gap:10px;cursor:pointer;transition:background 0.1s;border-bottom:1px solid var(--border);}
-.watch-row:last-child{border-bottom:none;}
+/* ── WATCHLIST / HISTORY ── */
+.watch-empty{padding:20px;text-align:center;font-size:12px;color:var(--text3);}
+.watch-list{display:flex;flex-direction:column;gap:6px;}
+.watch-row{
+  display:flex;align-items:center;gap:10px;padding:10px 14px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);cursor:pointer;
+}
 .watch-row:hover{background:var(--bg3);}
-.watch-code{font-family:var(--fn);font-size:11px;color:var(--navy);font-weight:500;width:38px;}
-.watch-name{flex:1;font-size:13px;color:var(--text2);}
-.watch-score{font-family:var(--fn);font-size:14px;}
-.watch-score.hi{color:var(--up);}
-.watch-score.md{color:var(--amber);}
-.watch-remove{background:none;border:none;color:var(--text3);cursor:pointer;font-size:14px;padding:2px 5px;transition:color 0.15s;}
-.watch-remove:hover{color:var(--up);}
-
-/* ======= HISTORY ======= */
-.hist-table{width:100%;border-collapse:collapse;background:var(--bg2);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);overflow:hidden;font-size:12px;}
-.hist-table th{background:var(--bg3);color:var(--text3);padding:7px 12px;font-family:var(--fh);font-size:9px;font-weight:700;text-align:left;border-bottom:1px solid var(--border);}
-.hist-table td{padding:8px 12px;border-bottom:1px solid var(--border);color:var(--text);font-family:var(--fn);font-size:11px;}
+.watch-code{font-family:var(--fn);font-size:11px;color:var(--text3);min-width:36px;}
+.watch-name{flex:1;font-size:12px;font-weight:600;color:var(--text2);}
+.watch-score{font-family:var(--fn);font-size:13px;font-weight:700;}
+.watch-score.hi{color:var(--up);} .watch-score.md{color:var(--amber);} .watch-score.lo{color:var(--text3);}
+.watch-remove{background:none;border:none;cursor:pointer;color:var(--text3);font-size:14px;padding:4px;}
+.hist-table{width:100%;border-collapse:collapse;font-size:11px;}
+.hist-table th{background:var(--bg3);padding:6px 10px;text-align:left;font-family:var(--fh);font-size:10px;color:var(--text3);border-bottom:1px solid var(--border);}
+.hist-table td{padding:7px 10px;border-bottom:1px solid var(--border);color:var(--text);}
 .hist-table tr:last-child td{border-bottom:none;}
-.hist-table tr:hover td{background:var(--bg3);}
 
-/* ======= QUIZ ======= */
-.quiz-overlay{display:none;position:fixed;inset:0;z-index:300;background:rgba(10,37,64,0.6);backdrop-filter:blur(2px);align-items:flex-end;justify-content:center;}
-.quiz-overlay.open{display:flex;}
-@media(min-width:640px){.quiz-overlay.open{align-items:center;}}
-.quiz-box{background:var(--bg2);border-radius:14px 14px 0 0;width:100%;max-width:520px;padding:20px 20px max(20px,env(safe-area-inset-bottom));animation:slideUp 0.25s ease;max-height:90vh;overflow-y:auto;}
-@media(min-width:640px){.quiz-box{border-radius:14px;max-height:80vh;}}
-@keyframes slideUp{from{transform:translateY(60px);opacity:0}to{transform:translateY(0);opacity:1}}
-.quiz-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 18px;}
-@media(min-width:640px){.quiz-handle{display:none;}}
-.quiz-step{font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.8px;margin-bottom:8px;}
-.quiz-bar{display:flex;gap:4px;margin-bottom:18px;}
-.quiz-seg{flex:1;height:3px;border-radius:2px;background:var(--border);transition:background 0.3s;}
-.quiz-seg.done{background:var(--navy);}
-.quiz-seg.active{background:var(--orange);}
-.quiz-q{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--text2);margin-bottom:5px;line-height:1.4;}
-.quiz-hint{font-size:12px;color:var(--text3);margin-bottom:14px;line-height:1.6;}
-.quiz-rec{background:rgba(10,37,64,0.05);border:1px solid rgba(10,37,64,0.12);border-left:3px solid var(--navy);border-radius:0 var(--r2) var(--r5) 0;padding:10px 13px;margin-bottom:14px;font-size:12px;display:flex;gap:9px;align-items:flex-start;}
-.quiz-rec-ico{font-size:17px;flex-shrink:0;}
-.quiz-rec-label{font-family:var(--fh);font-size:9px;color:var(--navy);font-weight:700;letter-spacing:0.5px;margin-bottom:2px;}
-.quiz-rec-text{color:var(--navy);font-weight:600;font-size:13px;margin-bottom:2px;}
-.quiz-rec-reason{font-size:11px;color:var(--text3);line-height:1.5;}
-.quiz-opts{display:flex;flex-direction:column;gap:7px;}
-.quiz-opt{background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r);padding:12px 14px;cursor:pointer;transition:all 0.15s;display:flex;align-items:center;gap:12px;position:relative;}
-.quiz-opt:hover{border-color:var(--navy2);}
-.quiz-opt.sel{border-color:var(--navy);background:var(--bg3);}
-.quiz-opt.recommended{border-color:var(--orange);background:var(--orange-lt);}
-.quiz-opt-ico{font-size:20px;flex-shrink:0;}
-.quiz-opt-t{font-family:var(--fh);font-size:13px;color:var(--text2);font-weight:700;margin-bottom:2px;}
-.quiz-opt-d{font-size:11px;color:var(--text3);line-height:1.5;}
-.rec-badge{position:absolute;top:-1px;right:-1px;background:var(--orange);color:#fff;font-family:var(--fh);font-size:9px;font-weight:700;padding:2px 8px;border-radius:0 var(--r) 0 var(--r2);}
-.quiz-nav{display:flex;justify-content:space-between;align-items:center;margin-top:16px;gap:8px;}
-.btn-qback{background:var(--bg3);border:1.5px solid var(--border);border-radius:var(--r2);padding:9px 16px;font-family:var(--fh);font-size:12px;font-weight:600;color:var(--text);cursor:pointer;transition:all 0.15s;}
-.btn-qback:hover{border-color:var(--navy);}
-.btn-qnext{flex:1;background:var(--navy);border:none;border-radius:var(--r2);padding:10px 20px;font-family:var(--fh);font-size:13px;font-weight:700;color:#fff;cursor:pointer;transition:all 0.15s;}
-.btn-qnext:hover{background:var(--navy2);}
-.btn-qnext:disabled{opacity:0.4;cursor:not-allowed;}
+/* ── SETTINGS PANEL ── */
+.settings-overlay{
+  position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.4);
+  display:none;align-items:flex-end;justify-content:center;
+}
+.settings-overlay.open{display:flex;}
+.settings-box{
+  background:var(--bg2);border-radius:16px 16px 0 0;
+  padding:20px;width:100%;max-width:600px;max-height:85vh;overflow-y:auto;
+}
+.settings-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 16px;}
+.settings-title{font-family:var(--fh);font-size:15px;font-weight:800;color:var(--text2);margin-bottom:16px;}
+.setting-row{margin-bottom:14px;}
+.setting-label{font-family:var(--fh);font-size:11px;font-weight:700;color:var(--text3);margin-bottom:6px;letter-spacing:0.5px;}
+.setting-opts{display:flex;gap:6px;flex-wrap:wrap;}
+.setting-opt{
+  border:1.5px solid var(--border);border-radius:var(--r2);padding:6px 12px;
+  font-family:var(--fh);font-size:11px;font-weight:600;color:var(--text);
+  cursor:pointer;background:var(--bg3);
+}
+.setting-opt.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.settings-save{
+  width:100%;padding:12px;margin-top:8px;
+  background:var(--orange);color:#fff;border:none;border-radius:var(--r);
+  font-family:var(--fh);font-size:13px;font-weight:700;cursor:pointer;
+}
+.settings-save:hover{background:var(--orange2);}
 
-/* ======= LOGIC MODAL ======= */
-.logic-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.5);}
-.logic-overlay.open{display:flex;align-items:flex-end;justify-content:center;}
-@media(min-width:640px){.logic-overlay.open{align-items:center;}}
-.logic-box{background:var(--bg2);border-radius:14px 14px 0 0;width:100%;max-width:480px;max-height:88vh;overflow-y:auto;padding:20px 20px max(20px,env(safe-area-inset-bottom));animation:slideUp 0.25s ease;}
-@media(min-width:640px){.logic-box{border-radius:14px;}}
+/* ── NAV TABS ── */
+.nav-tabs{
+  display:flex;background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--r);margin-bottom:14px;overflow:hidden;
+}
+.nav-tab{
+  flex:1;padding:10px;text-align:center;cursor:pointer;
+  font-family:var(--fh);font-size:11px;font-weight:700;color:var(--text3);
+  border-right:1px solid var(--border);position:relative;
+}
+.nav-tab:last-child{border-right:none;}
+.nav-tab.active{color:var(--navy);background:var(--navy);color:#fff;}
+
+/* ── BOTTOM NAV (mobile) ── */
+.bottom-nav{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:var(--bg2);border-top:1px solid var(--border);
+  padding:6px 0 8px;
+}
+@media(max-width:768px){.bottom-nav{display:flex;}}
+.nav-item{
+  flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;
+  background:none;border:none;cursor:pointer;color:var(--text3);padding:4px;
+}
+.nav-item.active{color:var(--navy);}
+.nav-ico{font-size:18px;}
+.nav-label{font-size:9px;font-family:var(--fh);font-weight:700;}
+
+/* ── PANELS ── */
+.panel{display:none;}
+.panel.active{display:block;}
+
+/* ── SKELETON ── */
+.skeleton{background:var(--border);border-radius:4px;animation:shimmer 1.5s infinite linear;background:linear-gradient(90deg,var(--border) 25%,#e8edf2 50%,var(--border) 75%);background-size:200% 100%;}
+@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+.skel-row{height:40px;margin-bottom:4px;border-radius:4px;}
+
+/* ── MISC ── */
+.fadein{animation:fi 0.3s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+.disclaimer{font-size:10px;color:var(--text3);text-align:center;padding:12px 0;line-height:1.8;}
+.sec-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:14px;}
+.empty-msg{text-align:center;padding:20px;font-size:12px;color:var(--text3);}
+
+/* ── LOGIC MODAL ── */
+.logic-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.4);display:none;align-items:flex-end;justify-content:center;}
+.logic-overlay.open{display:flex;}
+.logic-box{background:var(--bg2);border-radius:16px 16px 0 0;padding:20px;width:100%;max-width:600px;max-height:80vh;overflow-y:auto;}
 .modal-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 16px;}
-@media(min-width:640px){.modal-handle{display:none;}}
-.modal-close{float:right;background:none;border:none;color:var(--text3);font-size:17px;cursor:pointer;line-height:1;}
-.logic-title{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--text2);margin-bottom:4px;}
-.logic-sub{font-size:12px;color:var(--text3);margin-bottom:16px;line-height:1.6;}
+.logic-title{font-family:var(--fh);font-size:15px;font-weight:800;color:var(--text2);margin-bottom:6px;}
+.logic-sub{font-size:12px;color:var(--text3);margin-bottom:14px;line-height:1.7;}
 .logic-tbl{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px;}
-.logic-tbl th{background:var(--navy);color:rgba(255,255,255,0.7);padding:7px 10px;font-family:var(--fh);font-size:9px;font-weight:600;text-align:left;letter-spacing:0.5px;}
-.logic-tbl td{padding:9px 10px;border-bottom:1px solid var(--border);color:var(--text);}
-.logic-tbl td:first-child{font-weight:600;color:var(--text2);width:90px;}
-.logic-tbl td.pts{font-family:var(--fn);color:var(--navy);text-align:right;width:60px;}
-.logic-tbl tr:nth-child(even) td{background:var(--bg3);}
-.logic-note{background:var(--amber-lt);border:1px solid rgba(148,101,0,0.15);border-left:3px solid var(--amber);border-radius:0 var(--r2) var(--r2) 0;padding:10px 13px;font-size:11px;color:var(--text);line-height:1.8;margin-bottom:14px;}
-.logic-note strong{color:var(--amber);}
-.btn-logic-close{width:100%;background:var(--navy);color:#fff;border:none;border-radius:var(--r2);padding:12px;font-family:var(--fh);font-size:13px;font-weight:700;cursor:pointer;}
+.logic-tbl th{background:var(--bg3);padding:7px 10px;text-align:left;font-family:var(--fh);font-size:10px;color:var(--text3);border-bottom:1px solid var(--border);}
+.logic-tbl td{padding:7px 10px;border-bottom:1px solid var(--border);color:var(--text);}
+.logic-tbl .pts{text-align:right;font-family:var(--fn);font-weight:700;}
+.logic-note{background:var(--bg3);border-radius:var(--r2);padding:12px;font-size:11px;color:var(--text);line-height:1.9;margin-bottom:14px;}
+.btn-logic-close{width:100%;padding:10px;background:var(--navy);color:#fff;border:none;border-radius:var(--r);font-family:var(--fh);font-size:13px;font-weight:700;cursor:pointer;}
 
-/* ======= LOADER ======= */
-.loader{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px;gap:10px;}
-.spin{width:22px;height:22px;border:2px solid var(--border);border-top-color:var(--navy);border-radius:50%;animation:spin 0.7s linear infinite;}
-@keyframes spin{to{transform:rotate(360deg)}}
-.loader-text{font-size:12px;color:var(--text3);}
-.fadein{animation:fadeIn 0.2s ease both;}
-@keyframes fadeIn{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}
-
-/* ======= RESPONSIVE ======= */
 @media(max-width:480px){
-  .topbar{padding:0 14px;}
-  .logo-tag{display:none;}
-  .hero{padding:16px;}
-  .hero-stat-val{font-size:17px;}
-  .hero-stats{gap:6px;}
-  .metrics th{font-size:8px;padding:5px 3px;}
-  .metrics td.val{font-size:12px;}
-  .metrics td.hint{font-size:8px;}
-  .why-item{min-width:calc(50% - 4px);}
+  .stock-table th:nth-child(n+6),.stock-table td:nth-child(n+6){display:none;}
 }
 </style>
 </head>
 <body>
 
 <!-- TOPBAR -->
-<header class="topbar">
+<div class="topbar">
   <div class="topbar-inner">
-    <div class="logo">
-      <div class="logo-texts">
-        <div class="logo-name">かぶのすけ</div>
-        <div class="logo-tag">高配当・割安株の買い場を毎日スキャン</div>
-      </div>
+    <div>
+      <span class="logo-name">かぶのすけ</span>
+      <span class="logo-tag">高配当・割安株の買い場を毎日スキャン</span>
     </div>
     <div class="topbar-right">
-      <button class="btn-watch" onclick="switchTab('watch')">
-        ⭐ ウォッチ<span class="watch-count" id="watchCount">0</span>
+      <button class="btn-topbar" onclick="switchTab('watch')">
+        ⭐ ウォッチ <span class="watch-count" id="watchCount">0</span>
       </button>
+      <button class="btn-topbar" onclick="openSettings()">⚙ 設定</button>
     </div>
   </div>
-</header>
+</div>
 
 <div class="page">
 
-  <!-- LEFT COLUMN -->
-  <div class="col-left">
+  <!-- ══ HOME PANEL ══ -->
+  <div class="panel active" id="panel-home">
 
-    <div class="pc-tabs">
-      <button class="pc-tab active" id="pc-home" onclick="switchTab('home')">🏠 ホーム</button>
-      <button class="pc-tab" id="pc-watch" onclick="switchTab('watch')">⭐ ウォッチリスト</button>
-    </div>
-
-    <!-- HOME PANEL -->
-    <div class="panel active" id="panel-home">
-
-      <!-- HERO -->
-      <div class="hero">
-        <div class="hero-eyebrow" id="heroEyebrow">
-          <span class="hero-dot"></span>毎朝8:30・前場後12:30 自動更新
-        </div>
-        <div class="hero-title">今日の高配当押し目候補を<br><span>自動抽出</span></div>
-        <div class="hero-sub">日経の地合いも同時判定。東証プライム全銘柄を5指標でスコアリングして、<strong>初心者でも買い時が一目でわかる</strong>無料ツール。</div>
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="hero-stat-val buy" id="hsBuy">—</div>
-            <div class="hero-stat-label">買い圏の銘柄数</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-val" id="hsTop">—</div>
-            <div class="hero-stat-label">本日1位スコア</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-val" id="hsDiv">—</div>
-            <div class="hero-stat-label">最高配当利回り</div>
-          </div>
-        </div>
-        <button class="hero-cta" onclick="document.getElementById('stanceBox').scrollIntoView({behavior:'smooth'})">
-          今日の地合い判定を見る ↓
-        </button>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-eyebrow" id="heroEyebrow">
+        <span class="hero-dot"></span>毎朝8:30・前場後12:30 自動更新
       </div>
-
-      <!-- MARKET PULSE -->
-      <div class="pulse">
-        <div class="pulse-row" id="pulseBar"></div>
-      </div>
-
-      <!-- TRUST BAR -->
-      <div class="trust-bar" id="trustBanner">
-        <div class="trust-left">
-          <div class="trust-dot" id="trustDot"></div>
-          <div class="trust-text" id="trustText">データ確認中...</div>
-        </div>
-        <div class="trust-badges">
-          <span class="tbadge">yfinance / 東証</span>
-          <span class="tbadge">東証プライム全銘柄</span>
-          <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
+      <div class="hero-top">
+        <div class="hero-left">
+          <div class="hero-title">今日の<span>押し目候補</span>を即表示</div>
         </div>
       </div>
-
-      <!-- DIFF BAR -->
-      <div class="diff-bar" id="diffBar" style="display:none">
-        <span class="diff-label">前回との変化：</span>
-        <div id="diffItems" style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;"></div>
-      </div>
-
-      <!-- STANCE (地合い判定) -->
-      <div id="stanceBox"></div>
-
-      <!-- MODE & SCAN -->
-      <div class="mode-wrap">
-        <div class="sec-label">スキャンモード</div>
-        <div class="mode-tabs">
-          <div class="mode-tab active" id="mode-dividend" onclick="setMode('dividend',this)">
-            <div class="mode-ico">💰</div>
-            <div class="mode-t">安定高配当</div>
-          </div>
-          <div class="mode-tab" id="mode-value" onclick="setMode('value',this)">
-            <div class="mode-ico">🛡️</div>
-            <div class="mode-t">割安バリュー</div>
-          </div>
-          <div class="mode-tab" id="mode-rebound" onclick="setMode('rebound',this)">
-            <div class="mode-ico">⚡</div>
-            <div class="mode-t">強押し目</div>
-          </div>
-        </div>
-      </div>
-
-      <button class="btn-scan" id="scanBtn" onclick="startScan()">🔍 質問に答えてスキャン</button>
-
-      <!-- SCAN ANIMATION -->
-      <div class="scan-anim" id="scanAnim">
-        <div class="scan-anim-steps" id="scanSteps"></div>
-      </div>
-
-      <!-- RANKINGS -->
-      <div class="rankings" id="rankings"></div>
-
-      <!-- EVENTS -->
-      <div class="events">
-        <div class="sec-head">📰 今日の相場イベント</div>
-        <div class="event-list" id="eventList"></div>
-      </div>
-
-      <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
-
-    </div><!-- /panel-home -->
-
-    <!-- WATCH PANEL -->
-    <div class="panel" id="panel-watch">
-      <div style="margin-bottom:16px">
-        <div class="sec-head">⭐ ウォッチリスト</div>
-        <div id="watchlistBody"></div>
-      </div>
-      <div>
-        <div class="sec-head">🕐 スキャン履歴</div>
-        <div id="historyBody"></div>
+      <div class="hero-stats" id="heroStats">
+        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏の銘柄数</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
       </div>
     </div>
 
-  </div><!-- /col-left -->
+    <!-- TRUST BAR -->
+    <div class="trust-bar" id="trustBanner">
+      <div class="trust-left">
+        <div class="trust-dot" id="trustDot"></div>
+        <div class="trust-text" id="trustText">データ確認中...</div>
+      </div>
+      <div class="trust-badges">
+        <span class="tbadge" id="totalCountBadge">東証プライム</span>
+        <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
+      </div>
+    </div>
 
-  <!-- RIGHT COLUMN (sticky card) -->
-  <div class="col-right">
-    <div class="card-wrap">
-      <div class="card-header">
-        <div class="card-label">詳細カード</div>
-        <div class="card-nav">
-          <span class="card-counter" id="cardCounter">—</span>
-          <button class="card-arr" id="cardPrev" onclick="cardMove(-1)">◀</button>
-          <button class="card-arr" id="cardNext" onclick="cardMove(1)">▶</button>
-        </div>
+    <!-- MARKET PULSE -->
+    <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
+
+    <!-- STANCE -->
+    <div id="stanceBox"></div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar">
+      <span class="filter-label">モード：</span>
+      <div class="filter-tabs">
+        <div class="filter-tab active" id="mode-dividend" onclick="setMode('dividend',this)">💰 高配当</div>
+        <div class="filter-tab" id="mode-value" onclick="setMode('value',this)">🛡 バリュー</div>
+        <div class="filter-tab" id="mode-rebound" onclick="setMode('rebound',this)">⚡ 押し目</div>
       </div>
-      <div id="cardArea">
-        <div class="loader"><div class="spin"></div><div class="loader-text">スキャンするとここに結果が表示されます</div></div>
+      <div class="filter-sep"></div>
+      <span class="filter-label">表示：</span>
+      <div class="filter-tabs">
+        <div class="filter-tab active" id="disp-10" onclick="setDispCount(10,this)">TOP10</div>
+        <div class="filter-tab" id="disp-30" onclick="setDispCount(30,this)">TOP30</div>
+        <div class="filter-tab" id="disp-all" onclick="setDispCount(999,this)">全件</div>
       </div>
+      <div class="filter-count" id="filterCount"></div>
+    </div>
+
+    <!-- STOCK TABLE -->
+    <div class="stock-table-wrap" id="tableWrap">
+      <div style="padding:20px;text-align:center">
+        <div class="skel-row skeleton"></div>
+        <div class="skel-row skeleton"></div>
+        <div class="skel-row skeleton"></div>
+        <div style="font-size:11px;color:var(--text3);margin-top:8px">データ読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- DANGER SECTION -->
+    <div id="dangerSection"></div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
+
+  </div><!-- /panel-home -->
+
+  <!-- ══ WATCH PANEL ══ -->
+  <div class="panel" id="panel-watch">
+    <div class="sec-wrap">
+      <div class="sec-head">
+        <div class="sec-head-title">⭐ ウォッチリスト</div>
+      </div>
+      <div id="watchlistBody"></div>
+    </div>
+    <div class="sec-wrap">
+      <div class="sec-head">
+        <div class="sec-head-title">🕐 スキャン履歴</div>
+      </div>
+      <div id="historyBody"></div>
     </div>
   </div>
 
 </div><!-- /page -->
 
-<!-- MOBILE BOTTOM NAV -->
+<!-- BOTTOM NAV -->
 <nav class="bottom-nav">
   <button class="nav-item active" id="nav-home" onclick="switchTab('home')">
     <span class="nav-ico">🏠</span><span class="nav-label">ホーム</span>
@@ -756,20 +551,45 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   </button>
 </nav>
 
-<!-- QUIZ -->
-<div class="quiz-overlay" id="quizOverlay" onclick="closeQuizBg(event)">
-  <div class="quiz-box">
-    <div class="quiz-handle"></div>
-    <div class="quiz-step" id="qzStep">STEP 1 / 3</div>
-    <div class="quiz-bar" id="qzBar"></div>
-    <div class="quiz-q" id="qzQ"></div>
-    <div class="quiz-hint" id="qzHint"></div>
-    <div id="qzRecommend"></div>
-    <div class="quiz-opts" id="qzOpts"></div>
-    <div class="quiz-nav">
-      <button class="btn-qback" id="qzBack" onclick="quizBack()">◀ 戻る</button>
-      <button class="btn-qnext" id="qzNext" onclick="quizNext()" disabled>次へ ▶</button>
+<!-- SETTINGS PANEL -->
+<div class="settings-overlay" id="settingsOverlay" onclick="closeSettingsBg(event)">
+  <div class="settings-box">
+    <div class="settings-handle"></div>
+    <div class="settings-title">⚙ 表示設定</div>
+    <div class="setting-row">
+      <div class="setting-label">スキャンモード</div>
+      <div class="setting-opts" id="set-mode">
+        <div class="setting-opt active" data-val="dividend" onclick="selectSettingOpt(this,'mode')">💰 安定高配当</div>
+        <div class="setting-opt" data-val="value" onclick="selectSettingOpt(this,'mode')">🛡 割安バリュー</div>
+        <div class="setting-opt" data-val="rebound" onclick="selectSettingOpt(this,'mode')">⚡ 強押し目</div>
+      </div>
     </div>
+    <div class="setting-row">
+      <div class="setting-label">表示件数</div>
+      <div class="setting-opts" id="set-count">
+        <div class="setting-opt" data-val="10" onclick="selectSettingOpt(this,'count')">TOP 10</div>
+        <div class="setting-opt active" data-val="30" onclick="selectSettingOpt(this,'count')">TOP 30</div>
+        <div class="setting-opt" data-val="999" onclick="selectSettingOpt(this,'count')">全件表示</div>
+      </div>
+    </div>
+    <div class="setting-row">
+      <div class="setting-label">最低配当利回り</div>
+      <div class="setting-opts" id="set-mindiv">
+        <div class="setting-opt active" data-val="0" onclick="selectSettingOpt(this,'mindiv')">制限なし</div>
+        <div class="setting-opt" data-val="2" onclick="selectSettingOpt(this,'mindiv')">2%以上</div>
+        <div class="setting-opt" data-val="3" onclick="selectSettingOpt(this,'mindiv')">3%以上</div>
+        <div class="setting-opt" data-val="4" onclick="selectSettingOpt(this,'mindiv')">4%以上</div>
+      </div>
+    </div>
+    <div class="setting-row">
+      <div class="setting-label">ゾーンフィルター</div>
+      <div class="setting-opts" id="set-zone">
+        <div class="setting-opt active" data-val="all" onclick="selectSettingOpt(this,'zone')">全て</div>
+        <div class="setting-opt" data-val="buy" onclick="selectSettingOpt(this,'zone')">買い圏のみ</div>
+        <div class="setting-opt" data-val="buywatch" onclick="selectSettingOpt(this,'zone')">買い圏＋注意圏</div>
+      </div>
+    </div>
+    <button class="settings-save" onclick="saveSettings()">✓ 保存して適用</button>
   </div>
 </div>
 
@@ -777,35 +597,31 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 <div class="logic-overlay" id="logicModal" onclick="closeLogicModal(event)">
   <div class="logic-box">
     <div class="modal-handle"></div>
-    <button class="modal-close" onclick="closeLogicModal()">✕</button>
-    <div class="logic-title">かぶのすけ スコアロジック</div>
-    <div class="logic-sub">スコアは以下の5指標を100点満点で合計します。モードによって各指標の重みが変わります。</div>
+    <div class="logic-title">スコアロジック（100点満点）</div>
+    <div class="logic-sub">5指標を合計しモード別ボーナスを適用。高配当モードでは配当0.5%未満の銘柄は実質除外。</div>
     <table class="logic-tbl">
-      <tr><th>指標</th><th>条件</th><th style="text-align:right">基本点</th></tr>
-      <tr><td>配当利回り</td><td>5%以上/4.5%/4%/3.5%/3%/2.5%</td><td class="pts">最大30pt</td></tr>
-      <tr><td>25MA乖離</td><td>-8%以下/-6%/-4%/-2%</td><td class="pts">最大28pt</td></tr>
-      <tr><td>RSI</td><td>28以下/32/38/42</td><td class="pts">最大22pt</td></tr>
-      <tr><td>PBR</td><td>0.7倍以下/0.9/1.1/1.5</td><td class="pts">最大18pt</td></tr>
-      <tr><td>PER</td><td>9倍以下/11/13/15</td><td class="pts">最大12pt</td></tr>
-      <tr><td>⚠ ペナルティ</td><td>出来高が直近20日平均の1.5倍超</td><td class="pts" style="color:var(--up)">-20pt</td></tr>
+      <tr><th>指標</th><th>条件</th><th style="text-align:right">最大点</th></tr>
+      <tr><td>配当利回り</td><td>2.5%〜5%以上</td><td class="pts">30pt</td></tr>
+      <tr><td>25MA乖離</td><td>-2%〜-8%以下</td><td class="pts">28pt</td></tr>
+      <tr><td>RSI</td><td>42以下〜28以下</td><td class="pts">22pt</td></tr>
+      <tr><td>PBR</td><td>1.5倍以下〜0.7倍以下</td><td class="pts">18pt</td></tr>
+      <tr><td>PER</td><td>15倍以下〜9倍以下</td><td class="pts">12pt</td></tr>
+      <tr><td>⚠ペナルティ</td><td>出来高1.5倍超 / 配当なし投機株</td><td class="pts" style="color:var(--up)">-20〜-30pt</td></tr>
     </table>
     <div class="logic-note">
-      <strong>モード別ボーナス：</strong><br>
-      💰 安定高配当モード → 配当利回りの点数が最大1.4倍<br>
-      🛡️ 割安バリューモード → PBR・PERの点数が最大1.6倍<br>
-      ⚡ 強押し目モード → MA乖離・RSIの点数が最大1.5倍
-    </div>
-    <div style="font-size:11px;color:var(--text3);margin-bottom:16px;line-height:1.8">
-      データソース：Yahoo Finance (yfinance) 経由で東証上場銘柄の株価・財務データを取得。<br>
-      更新タイミング：毎朝8:30 / 前場引け後12:30 の1日2回自動更新。
+      💰 高配当モード → 配当点×1.4倍<br>
+      🛡 バリューモード → PBR・PER点×1.6倍<br>
+      ⚡ 押し目モード → MA乖離・RSI点×1.5倍
     </div>
     <button class="btn-logic-close" onclick="closeLogicModal()">閉じる</button>
   </div>
 </div>
 
 <script>
-// ===== DATA =====
-const STOCKS=[
+// ═══════════════════════════════════════
+// DATA & STATE
+// ═══════════════════════════════════════
+const SAMPLE_STOCKS=[
   {code:'8306',name:'三菱UFJフィナンシャル',sector:'銀行',price:1423,ma25:1520,ma75:1580,rsi:32,dividend:3.8,pbr:0.7,per:9.2,vol_r:0.8},
   {code:'9432',name:'NTT',sector:'通信',price:163,ma25:168,ma75:172,rsi:38,dividend:3.2,pbr:1.1,per:11.5,vol_r:0.9},
   {code:'8058',name:'三菱商事',sector:'商社',price:2890,ma25:3050,ma75:3200,rsi:29,dividend:4.1,pbr:0.9,per:8.7,vol_r:0.7},
@@ -814,163 +630,188 @@ const STOCKS=[
   {code:'7203',name:'トヨタ自動車',sector:'自動車',price:2650,ma25:2720,ma75:2800,rsi:36,dividend:3.0,pbr:1.1,per:10.4,vol_r:0.9},
   {code:'8316',name:'三井住友FG',sector:'銀行',price:7100,ma25:7600,ma75:7800,rsi:28,dividend:4.2,pbr:0.8,per:9.0,vol_r:0.7},
   {code:'2914',name:'JT（日本たばこ産業）',sector:'食品',price:3680,ma25:3780,ma75:3820,rsi:35,dividend:6.2,pbr:1.6,per:13.8,vol_r:0.8},
-  {code:'9020',name:'JR東日本',sector:'鉄道',price:8150,ma25:8300,ma75:8450,rsi:42,dividend:2.1,pbr:1.4,per:14.2,vol_r:0.9},
   {code:'8411',name:'みずほFG',sector:'銀行',price:2680,ma25:2850,ma75:2950,rsi:31,dividend:3.9,pbr:0.7,per:8.5,vol_r:0.8},
   {code:'9433',name:'KDDI',sector:'通信',price:4350,ma25:4500,ma75:4600,rsi:37,dividend:3.3,pbr:1.9,per:13.5,vol_r:1.0},
+  {code:'9503',name:'関西電力',sector:'電力',price:2140,ma25:2250,ma75:2300,rsi:33,dividend:3.5,pbr:0.9,per:10.1,vol_r:0.7},
   {code:'5108',name:'ブリヂストン',sector:'ゴム',price:5100,ma25:5280,ma75:5350,rsi:40,dividend:3.8,pbr:1.2,per:11.8,vol_r:0.8},
-  {code:'7267',name:'本田技研工業',sector:'自動車',price:1380,ma25:1480,ma75:1550,rsi:29,dividend:4.2,pbr:0.65,per:7.8,vol_r:0.9},
-  {code:'8766',name:'東京海上HD',sector:'保険',price:4820,ma25:5100,ma75:5200,rsi:34,dividend:3.1,pbr:1.8,per:12.1,vol_r:0.7},
-  {code:'6098',name:'リクルートHD',sector:'サービス',price:8900,ma25:9200,ma75:9500,rsi:38,dividend:1.2,pbr:4.2,per:28.5,vol_r:1.1},
-  {code:'4063',name:'信越化学工業',sector:'化学',price:4200,ma25:4450,ma75:4600,rsi:35,dividend:2.8,pbr:2.1,per:15.3,vol_r:0.8},
-  {code:'9984',name:'ソフトバンクG',sector:'通信',price:8750,ma25:9100,ma75:9400,rsi:40,dividend:0.8,pbr:1.3,per:18.2,vol_r:1.3},
-  {code:'6861',name:'キーエンス',sector:'電機',price:62000,ma25:64000,ma75:66000,rsi:36,dividend:0.6,pbr:5.8,per:32.1,vol_r:0.6},
-  {code:'7751',name:'キヤノン',sector:'電機',price:3850,ma25:4050,ma75:4150,rsi:33,dividend:3.5,pbr:1.4,per:13.8,vol_r:0.8},
-  {code:'8035',name:'東京エレクトロン',sector:'電機',price:18500,ma25:19800,ma75:20500,rsi:31,dividend:2.4,pbr:4.1,per:22.4,vol_r:0.9},
-  {code:'4661',name:'オリエンタルランド',sector:'レジャー',price:3200,ma25:3400,ma75:3600,rsi:35,dividend:0.4,pbr:6.2,per:45.0,vol_r:0.7},
-  {code:'9983',name:'ファーストリテイリング',sector:'小売',price:44000,ma25:46000,ma75:48000,rsi:37,dividend:1.1,pbr:8.5,per:35.2,vol_r:0.8},
-  {code:'6367',name:'ダイキン工業',sector:'機械',price:18200,ma25:19500,ma75:20200,rsi:34,dividend:1.2,pbr:3.8,per:24.5,vol_r:0.7},
-  {code:'3382',name:'セブン＆アイHD',sector:'小売',price:1890,ma25:2050,ma75:2150,rsi:36,dividend:3.2,pbr:1.1,per:14.8,vol_r:0.9},
-  {code:'8802',name:'三菱地所',sector:'不動産',price:1920,ma25:2050,ma75:2150,rsi:33,dividend:2.8,pbr:1.2,per:16.5,vol_r:0.8},
-  {code:'5401',name:'日本製鉄',sector:'鉄鋼',price:2850,ma25:3100,ma75:3250,rsi:30,dividend:4.8,pbr:0.75,per:8.2,vol_r:0.9},
 ];
 
-let currentMode='dividend';
+let STOCKS=[...SAMPLE_STOCKS];
 let processed=[];
-let cardIndex=0;
+let dataSource='sample';
+let currentMode='dividend';
+let dispCount=10;
+let sortKey='score'; let sortDir='desc';
+let expandedCode=null;
 let watchlist=[];
 let scanHistory=[];
-let lastScanCounts={buy:0,watch:0,total:0};
-let dataSource='sample';
-
-// 市場データ（stocks_data.json から取得、なければデフォルト値）
+let settings={mode:'dividend',count:10,mindiv:0,zone:'all'};
+let trendRankingData=[];
 let marketData={
-  nikkei_price:38240,
-  nikkei_ma25:38800,      // 日経25MA
-  nikkei_1d_chg:-0.81,    // 前日比%
-  nasdaq_1d_chg:-0.3,     // NASDAQ前日比%
-  vix:18.4,               // 恐怖指数
-  usdjpy:149.82,          // ドル円
-  us10y:4.28,             // 米10年債利回り
-  geo_risk:false,         // 地政学リスクフラグ
-  rate_cut_flag:false,    // 米利下げ期待フラグ
-  prev_buy_count:null,    // 前日の買い圏件数（nullなら前日データなし）
-  prev_top_score:null,    // 前日の1位スコア
+  nikkei_price:null,nikkei_ma25:null,nikkei_1d_chg:null,
+  nasdaq_1d_chg:null,vix:null,usdjpy:null,us10y:null,
+  geo_risk:false,rate_cut_flag:false,prev_buy_count:null,
 };
 
-try{watchlist=JSON.parse(localStorage.getItem('kbs_watch')||'[]');}catch(e){}
-try{scanHistory=JSON.parse(localStorage.getItem('kbs_history')||'[]');}catch(e){}
+// ─ localStorageから復元 ─
+try{
+  const sw=localStorage.getItem('kbs_watch');
+  if(sw)watchlist=JSON.parse(sw);
+  const sh=localStorage.getItem('kbs_history');
+  if(sh)scanHistory=JSON.parse(sh);
+  const ss=localStorage.getItem('kbs_settings');
+  if(ss){
+    settings=Object.assign(settings,JSON.parse(ss));
+    currentMode=settings.mode||'dividend';
+    dispCount=settings.count||10;
+    // フィルタータブを復元
+    document.querySelectorAll('.filter-tab[id^="mode-"]').forEach(t=>t.classList.remove('active'));
+    const mt=document.getElementById('mode-'+currentMode);
+    if(mt)mt.classList.add('active');
+    document.querySelectorAll('.filter-tab[id^="disp-"]').forEach(t=>t.classList.remove('active'));
+    const cnt=dispCount>=999?'all':String(dispCount);
+    const dt=document.getElementById('disp-'+cnt);
+    if(dt)dt.classList.add('active');
+  }
+}catch(e){}
 
-// ===== SCORING =====
-function dv(p,m){return+((p-m)/m*100).toFixed(1);}
+// ═══════════════════════════════════════
+// CALC
+// ═══════════════════════════════════════
+function dv(p,m){return m?Math.round((p-m)/m*1000)/10:0;}
+
 function calcScore(s,mode){
-  let score=0,bd=[];
   const d25=dv(s.price,s.ma25);
+  let score=0;
   let dp=s.dividend>=5?30:s.dividend>=4.5?25:s.dividend>=4?20:s.dividend>=3.5?15:s.dividend>=3?10:s.dividend>=2.5?5:0;
   if(mode==='dividend')dp=Math.min(Math.round(dp*1.4),40);
-  if(dp>0){bd.push({l:'配当利回り',v:dp,max:40,pos:true});score+=dp;}
+  score+=dp;
   let mp=d25<=-8?28:d25<=-6?22:d25<=-4?12:d25<=-2?5:0;
   if(mode==='rebound')mp=Math.min(Math.round(mp*1.5),35);
-  if(mp>0){bd.push({l:'下落幅',v:mp,max:35,pos:true});score+=mp;}
+  score+=mp;
   let rp=s.rsi<=28?22:s.rsi<=32?16:s.rsi<=38?10:s.rsi<=42?5:0;
   if(mode==='rebound')rp=Math.min(Math.round(rp*1.3),25);
-  if(rp>0){bd.push({l:'売られすぎ',v:rp,max:25,pos:true});score+=rp;}
+  score+=rp;
   let pp=s.pbr<=0.7?18:s.pbr<=0.9?13:s.pbr<=1.1?7:s.pbr<=1.5?3:0;
   if(mode==='value')pp=Math.min(Math.round(pp*1.6),25);
-  if(pp>0){bd.push({l:'PBR割安',v:pp,max:25,pos:true});score+=pp;}
+  score+=pp;
   let ep=s.per<=9?12:s.per<=11?8:s.per<=13?5:s.per<=15?2:0;
   if(mode==='value')ep=Math.min(Math.round(ep*1.4),15);
-  if(ep>0){bd.push({l:'PER割安',v:ep,max:15,pos:true});score+=ep;}
-  if(s.vol_r>=1.5){score-=20;bd.push({l:'出来高急増',v:-20,max:20,pos:false});}
-  return{score:Math.max(0,Math.min(score,100)),bd};
-}
-function getZone(sc){
-  if(sc>=60)return{label:'買い圏',cls:'buy'};
-  if(sc>=35)return{label:'注意圏',cls:'watch'};
-  return{label:'待機圏',cls:'hold'};
-}
-function genComment(s,d25){
-  const p=[];
-  if(d25<=-6)p.push(`25MAから<strong>${d25}%</strong>下落`);
-  else if(d25<=-3)p.push(`25MAから<strong>${d25}%</strong>の押し目`);
-  if(s.rsi<=30)p.push(`RSI <strong>${s.rsi}</strong>で強い売られすぎ`);
-  else if(s.rsi<=38)p.push(`RSI <strong>${s.rsi}</strong>で反転圏`);
-  if(s.dividend>=4.5)p.push(`配当<strong>${s.dividend}%</strong>と高水準`);
-  else if(s.dividend>=3)p.push(`配当<strong>${s.dividend}%</strong>で下値サポート`);
-  if(s.pbr<=0.8)p.push(`PBR <strong>${s.pbr}倍</strong>の割安圏`);
-  return(p.join('。')+'。');
+  score+=ep;
+  if(s.vol_r>=1.5)score-=20;
+  if(mode==='dividend'&&s.dividend<0.5)score=Math.min(score,10);
+  if(s.dividend<0.5&&s.pbr>8)score=Math.max(0,score-30);
+  return Math.max(0,Math.min(score,100));
 }
 
-// ===== PROCESS =====
+function getZone(sc){
+  return sc>=60?{label:'買い圏',cls:'buy'}:sc>=35?{label:'注意圏',cls:'watch'}:{label:'待機圏',cls:'hold'};
+}
+
+function buildReasons(s,d25){
+  const r=[];
+  if(d25<=-6)r.push({val:`${d25}%`,label:'25MA乖離',note:'強い押し目水準',desc:'-6%以下は過去の反発実績が高い水準',cls:'strong',rank:'A'});
+  else if(d25<=-3)r.push({val:`${d25}%`,label:'25MA乖離',note:'押し目水準',desc:'-3%以上の下落で反発候補に',cls:'mid',rank:'B'});
+  if(s.rsi<=30)r.push({val:String(s.rsi),label:'RSI',note:'強い売られすぎ',desc:'30以下は自律反発が期待できる水準',cls:'strong',rank:'A'});
+  else if(s.rsi<=38)r.push({val:String(s.rsi),label:'RSI',note:'売られすぎ圏内',desc:'38以下で売り過剰が和らぐタイミング',cls:'mid',rank:'B'});
+  if(s.dividend>=4.5)r.push({val:`${s.dividend}%`,label:'配当利回り',note:'高配当・下値サポート',desc:'4.5%超は配当が株価の下値を支える',cls:'strong',rank:'A'});
+  else if(s.dividend>=3)r.push({val:`${s.dividend}%`,label:'配当利回り',note:'インカム期待',desc:'3%以上で長期保有のリスク低減に効く',cls:'mid',rank:'B'});
+  if(s.pbr<=0.8)r.push({val:`${s.pbr}倍`,label:'PBR',note:'解散価値以下',desc:'1倍割れは理論上の下値が固い水準',cls:'strong',rank:'A'});
+  else if(s.pbr<=1.1)r.push({val:`${s.pbr}倍`,label:'PBR',note:'割安圏',desc:'1倍付近は機関投資家が注目する水準',cls:'mid',rank:'B'});
+  if(s.per<=10)r.push({val:`${s.per}倍`,label:'PER',note:'割安水準',desc:'10倍以下は日本株平均を大きく下回る',cls:'mid',rank:'B'});
+  return r;
+}
+
+function calcBreakdown(s,mode){
+  const d25=dv(s.price,s.ma25);
+  const bd=[];
+  let dp=s.dividend>=5?30:s.dividend>=4.5?25:s.dividend>=4?20:s.dividend>=3.5?15:s.dividend>=3?10:s.dividend>=2.5?5:0;
+  if(mode==='dividend')dp=Math.min(Math.round(dp*1.4),40);
+  if(dp>0)bd.push({l:'配当利回り',v:dp,max:40,pos:true});
+  let mp=d25<=-8?28:d25<=-6?22:d25<=-4?12:d25<=-2?5:0;
+  if(mode==='rebound')mp=Math.min(Math.round(mp*1.5),35);
+  if(mp>0)bd.push({l:'25MA乖離',v:mp,max:35,pos:true});
+  let rp=s.rsi<=28?22:s.rsi<=32?16:s.rsi<=38?10:s.rsi<=42?5:0;
+  if(mode==='rebound')rp=Math.min(Math.round(rp*1.3),25);
+  if(rp>0)bd.push({l:'RSI',v:rp,max:25,pos:true});
+  let pp=s.pbr<=0.7?18:s.pbr<=0.9?13:s.pbr<=1.1?7:s.pbr<=1.5?3:0;
+  if(mode==='value')pp=Math.min(Math.round(pp*1.6),25);
+  if(pp>0)bd.push({l:'PBR',v:pp,max:25,pos:true});
+  let ep=s.per<=9?12:s.per<=11?8:s.per<=13?5:s.per<=15?2:0;
+  if(mode==='value')ep=Math.min(Math.round(ep*1.4),15);
+  if(ep>0)bd.push({l:'PER',v:ep,max:15,pos:true});
+  if(s.vol_r>=1.5)bd.push({l:'出来高急増',v:-20,max:20,pos:false});
+  return bd;
+}
+
+// ═══════════════════════════════════════
+// PROCESS
+// ═══════════════════════════════════════
 function processStocks(){
-  const f={dividend:s=>s.dividend>=3.0,value:s=>s.pbr<=1.5&&s.per<=15,rebound:s=>dv(s.price,s.ma25)<=-3&&s.rsi<=42};
-  processed=STOCKS.filter(f[currentMode]||(()=>true)).map(s=>{
-    const d25=dv(s.price,s.ma25),d75=dv(s.price,s.ma75);
-    const{score,bd}=calcScore(s,currentMode);
-    return{...s,d25,d75,score,bd,zone:getZone(score),comment:genComment(s,d25)};
-  }).sort((a,b)=>b.score-a.score);
+  const minDiv=settings.mindiv||0;
+  const zoneFilter=settings.zone||'all';
+
+  let list=STOCKS.filter(s=>{
+    if(minDiv>0&&s.dividend<minDiv)return false;
+    return true;
+  });
+
+  processed=list.map(s=>{
+    const d25=dv(s.price,s.ma25);
+    const d75=dv(s.price,s.ma75);
+    const score=calcScore(s,currentMode);
+    const zone=getZone(score);
+    return{...s,d25,d75,score,zone};
+  });
+
+  if(zoneFilter==='buy')processed=processed.filter(s=>s.zone.cls==='buy');
+  else if(zoneFilter==='buywatch')processed=processed.filter(s=>s.zone.cls!=='hold');
+
+  // ソート
+  processed.sort((a,b)=>{
+    let av=a[sortKey]??0, bv=b[sortKey]??0;
+    if(sortKey==='d25'){av=a.d25;bv=b.d25;}
+    return sortDir==='asc'?av-bv:bv-av;
+  });
+
+  // 履歴記録
   const now=new Date();
   const e={
     date:`${now.getMonth()+1}/${now.getDate()} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`,
     mode:currentMode,count:processed.length,
     top:processed[0]?.name||'—',topScore:processed[0]?.score||0
   };
-  scanHistory.unshift(e);scanHistory=scanHistory.slice(0,14);
-  try{localStorage.setItem('kbs_history',JSON.stringify(scanHistory));}catch(err){}
+  scanHistory.unshift(e);
+  scanHistory=scanHistory.slice(0,14);
+  try{localStorage.setItem('kbs_history',JSON.stringify(scanHistory));}catch(e){}
 }
 
-// ===== SCAN WITH ANIMATION =====
-function startScan(){
-  document.getElementById('quizOverlay').classList.add('open');
-  qStep=0;qAnswers={};renderQuiz();
+// ═══════════════════════════════════════
+// RENDER: HERO STATS
+// ═══════════════════════════════════════
+function renderHeroStats(){
+  const buyN=processed.filter(s=>s.zone.cls==='buy').length;
+  const topScore=processed.length?processed[0].score:'—';
+  const maxDiv=processed.length?Math.max(...processed.map(s=>s.dividend)).toFixed(1)+'%':'—';
+  document.getElementById('hsBuy').textContent=buyN+'件';
+  document.getElementById('hsTop').textContent=topScore+'点';
+  document.getElementById('hsDiv').textContent=maxDiv;
+  document.getElementById('hsTotal').textContent=STOCKS.length+'銘柄';
 }
 
-function runWithAnimation(){
-  const btn=document.getElementById('scanBtn');
-  const anim=document.getElementById('scanAnim');
-  btn.disabled=true;
-  anim.classList.add('show');
-
-  const steps=[
-    {text:'地合いを分析中...'},
-    {text:'東証プライム全銘柄スキャン中...'},
-    {text:'押し目候補を抽出中...'},
-    {text:'スタンスを判定中...'},
-  ];
-
-  const el=document.getElementById('scanSteps');
-  el.innerHTML=steps.map((s,i)=>`
-    <div class="scan-step" id="ss${i}">
-      <div class="scan-step-dot"></div>
-      <span>${s.text}</span>
-    </div>`).join('');
-
-  let i=0;
-  function next(){
-    if(i>0)document.getElementById('ss'+(i-1)).className='scan-step done';
-    if(i<steps.length){
-      document.getElementById('ss'+i).className='scan-step active';
-      i++;
-      setTimeout(next,480);
-    } else {
-      setTimeout(()=>{
-        anim.classList.remove('show');
-        btn.disabled=false;
-        run();
-      },300);
-    }
-  }
-  next();
-}
-
-// ===== PULSE =====
+// ═══════════════════════════════════════
+// RENDER: MARKET PULSE
+// ═══════════════════════════════════════
 function renderPulse(){
+  const md=marketData;
+  const sign=v=>v>0?'+':'';
+  const dir=v=>v>0?'up':v<0?'dn':'neutral';
   const chips=[
-    {l:'日経平均',v:'38,240',c:'-312',d:'dn'},
-    {l:'TOPIX',v:'2,718',c:'-18',d:'dn'},
-    {l:'ドル円',v:'149.82',c:'+0.34',d:'up'},
-    {l:'VIX',v:'18.4',c:'+1.2',d:'neutral'},
-    {l:'10年債',v:'1.08%',c:'+0.02',d:'neutral'},
-    {l:'売買代金',v:'3.8兆',c:'-0.4兆',d:'dn'},
+    {l:'日経平均',v:md.nikkei_price?md.nikkei_price.toLocaleString():'—',c:md.nikkei_1d_chg!=null?sign(md.nikkei_1d_chg)+md.nikkei_1d_chg+'%':'—',d:dir(md.nikkei_1d_chg)},
+    {l:'NASDAQ',v:md.nasdaq_1d_chg!=null?sign(md.nasdaq_1d_chg)+md.nasdaq_1d_chg+'%':'—',c:'前日比',d:dir(md.nasdaq_1d_chg)},
+    {l:'ドル円',v:md.usdjpy||'—',c:'',d:'neutral'},
+    {l:'VIX',v:md.vix||'—',c:'',d:md.vix>25?'dn':md.vix<18?'up':'neutral'},
+    {l:'米10年債',v:md.us10y?md.us10y+'%':'—',c:'',d:'neutral'},
   ];
   document.getElementById('pulseBar').innerHTML=chips.map(c=>`
     <div class="pc">
@@ -980,619 +821,434 @@ function renderPulse(){
     </div>`).join('');
 }
 
-// ===== STANCE AUTO-JUDGEMENT: 3軸スコアリング =====
-// 軸① テクニカル: 日本市場の数字
-// 軸② マクロ: 米国・世界リスク
-// 軸③ スキャン: ツール固有データ（常に使用）
-// 各軸 0〜3点。合計 7点以上=強気、4〜6点=中立、3点以下=弱気
+// ═══════════════════════════════════════
+// RENDER: STANCE
+// ═══════════════════════════════════════
 function calcStanceScore(){
   const md=marketData;
-  const axes={};
-  const evidence=[];
-
-  // ── 軸① テクニカル (0〜3pt) ──
-  let t=0;
-  const nikkeiAboveMA=(md.nikkei_price&&md.nikkei_ma25)?(md.nikkei_price>=md.nikkei_ma25):null;
-  const nikkeiChg=md.nikkei_1d_chg||0;
-  if(nikkeiAboveMA===true) t++;
-  if(nikkeiAboveMA===false) t--;
-  if(nikkeiChg>-1) t++; else if(nikkeiChg<-1.5) t--;
-  if(md.vix<20) t++; else if(md.vix>25) t--;
-  if(md.usdjpy>=147) t++; // 円安=輸出株に追い風
-  else if(md.usdjpy<140) t--; // 急激な円高はリスク
-  axes.tech=Math.max(0,Math.min(t,3));
-  if(nikkeiChg<-1.5) evidence.push({label:'日経',val:nikkeiChg+'%',neg:true});
-  else if(nikkeiChg>0) evidence.push({label:'日経',val:'+'+nikkeiChg+'%',neg:false});
-  if(md.vix) evidence.push({label:'VIX',val:String(md.vix),neg:md.vix>22});
-  if(md.usdjpy) evidence.push({label:'ドル円',val:md.usdjpy+'円',neg:md.usdjpy<142});
-
-  // ── 軸② マクロ (0〜3pt) ──
-  let m=1; // デフォルト中立から
-  const nasdaqChg=md.nasdaq_1d_chg||0;
-  if(nasdaqChg>0.5) m++; else if(nasdaqChg<-1.5) m-=2;
-  else if(nasdaqChg<0) m--;
-  const us10y=md.us10y||4.2;
-  if(us10y>=3.5&&us10y<=4.5) m++; // 安定圏
-  else if(us10y>5.0) m--; // 高すぎる=株に重荷
-  if(md.geo_risk) m-=2; // 地政学リスクは大きくマイナス
-  if(md.rate_cut_flag) m++; // 利下げ期待はプラス
-  axes.macro=Math.max(0,Math.min(m,3));
-  if(nasdaqChg) evidence.push({label:'NASDAQ',val:(nasdaqChg>0?'+':'')+nasdaqChg+'%',neg:nasdaqChg<0});
-  if(md.geo_risk) evidence.push({label:'地政学',val:'リスクあり',neg:true});
-  if(us10y) evidence.push({label:'米10年債',val:us10y+'%',neg:us10y>5});
-
-  // ── 軸③ スキャン結果 (0〜3pt) ──
   const buyN=processed.filter(s=>s.zone.cls==='buy').length;
   const avgRsi=processed.length?(processed.reduce((a,s)=>a+s.rsi,0)/processed.length):50;
   const avgD25=processed.length?(processed.reduce((a,s)=>a+s.d25,0)/processed.length):0;
+  const highDiv=processed.filter(s=>s.dividend>=4).length;
+  let axes={tech:1,macro:1,scan:0};
+
+  // 軸①テクニカル
+  let t=1;
+  if(md.nikkei_price&&md.nikkei_ma25){
+    if(md.nikkei_price>=md.nikkei_ma25)t++;else t--;
+  }
+  if(md.nikkei_1d_chg!=null){
+    if(md.nikkei_1d_chg>-1)t++;else if(md.nikkei_1d_chg<-1.5)t--;
+  }
+  if(md.vix){if(md.vix<20)t++;else if(md.vix>25)t--;}
+  if(md.usdjpy){if(md.usdjpy>=147)t++;else if(md.usdjpy<140)t--;}
+  axes.tech=Math.max(0,Math.min(t,3));
+
+  // 軸②マクロ
+  let m=1;
+  if(md.nasdaq_1d_chg!=null){
+    if(md.nasdaq_1d_chg>0.5)m++;else if(md.nasdaq_1d_chg<-1.5)m-=2;else if(md.nasdaq_1d_chg<0)m--;
+  }
+  if(md.us10y){if(md.us10y>=3.5&&md.us10y<=4.5)m++;else if(md.us10y>5)m--;}
+  if(md.geo_risk)m-=2;
+  if(md.rate_cut_flag)m++;
+  axes.macro=Math.max(0,Math.min(m,3));
+
+  // 軸③スキャン
   let sc=0;
-  if(buyN>=5) sc+=2; else if(buyN>=3) sc+=1;
-  if(avgRsi<=35) sc++; else if(avgRsi<=42) sc+=0.5;
-  if(avgD25<=-4) sc++;
-  // 前日比で買い圏が増えていればプラス
-  if(md.prev_buy_count!==null&&buyN>md.prev_buy_count) sc++;
+  if(buyN>=5)sc+=2;else if(buyN>=3)sc+=1;
+  if(avgRsi<=35)sc++;else if(avgRsi<=42)sc+=0.5;
+  if(avgD25<=-4)sc++;
+  if(md.prev_buy_count!=null&&buyN>md.prev_buy_count)sc++;
   axes.scan=Math.max(0,Math.min(Math.round(sc),3));
-  evidence.push({label:'買い圏',val:buyN+'銘柄',neg:buyN<3});
-  evidence.push({label:'平均RSI',val:avgRsi.toFixed(1),neg:avgRsi>45});
-  evidence.push({label:'MA乖離',val:avgD25.toFixed(1)+'%',neg:avgD25>-2});
 
   const total=axes.tech+axes.macro+axes.scan;
-  return{total,axes,evidence,
-    buyN,watchN:processed.filter(s=>s.zone.cls==='watch').length,
-    avgRsi:avgRsi.toFixed(1),avgD25:avgD25.toFixed(1),
-    highDiv:processed.filter(s=>s.dividend>=4).length};
+  return{total,axes,buyN,watchN:processed.filter(s=>s.zone.cls==='watch').length,
+    avgRsi:avgRsi.toFixed(1),avgD25:avgD25.toFixed(1),highDiv};
 }
 
 function renderStance(){
-  const{total,axes,evidence,buyN,watchN,avgRsi,avgD25,highDiv}=calcStanceScore();
+  const{total,axes,buyN,watchN,avgRsi,avgD25,highDiv}=calcStanceScore();
   const now=new Date();
   const days=['日','月','火','水','木','金','土'];
-  const modeNames={dividend:'安定高配当',value:'割安バリュー',rebound:'強押し目'};
   const md=marketData;
-  const hasMacroData=(md.nikkei_price!==38240||dataSource==='real');
+  const hasMacro=dataSource==='real'&&md.nikkei_price;
 
   let stance,icon,label,title,reason;
   if(total>=7){
     stance='bull';icon='🟢';label='強気 — 積極的に仕込める日';
     title='今日は買いやすい地合い';
-    reason=hasMacroData
-      ?`3軸スコア<strong>${total}/9点</strong>で強気圏。日経${md.nikkei_1d_chg>0?'+':''}${md.nikkei_1d_chg}%・NASDAQ${md.nasdaq_1d_chg>0?'+':''}${md.nasdaq_1d_chg}%と外部環境も安定。スキャン対象の買い圏は<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>で売られすぎ水準。配当4%超が<strong>${highDiv}件</strong>。長期保有を前提に積極的に検討できる局面です。`
-      :`スキャン結果から自動判定。買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>、平均25MA乖離<strong>${avgD25}%</strong>。数値が揃っており積極的に検討できる局面です。実データ連携（update.sh）で日米マーケット情報も自動判定に加わります。`;
-  } else if(total>=4){
+    reason=hasMacro
+      ?`3軸スコア<strong>${total}/9点</strong>。日経${md.nikkei_1d_chg>0?'+':''}${md.nikkei_1d_chg}%・NASDAQ${md.nasdaq_1d_chg>0?'+':''}${md.nasdaq_1d_chg}%と外部環境も安定。買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>で積極的に検討できる局面。`
+      :`買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>、平均25MA乖離<strong>${avgD25}%</strong>。数値が揃っており積極的に検討できる局面です。`;
+  }else if(total>=4){
     stance='neutral';icon='🟡';label='中立 — 厳選して仕込む日';
     title='今日は銘柄を選ぶ日';
-    reason=hasMacroData
-      ?`3軸スコア<strong>${total}/9点</strong>で中立圏。買い圏は<strong>${buyN}銘柄</strong>と平均的。外部環境（NASDAQ${md.nasdaq_1d_chg>0?'+':''}${md.nasdaq_1d_chg}%）に大きな崩れはなく、スコア上位銘柄に絞れば十分な押し目水準が見えます。注意圏<strong>${watchN}件</strong>も含め慎重に選別を。`
-      :`スキャン結果から自動判定。買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>。全体的にはやや軟調ですが、スコア60点以上に絞れば買いやすい銘柄が存在します。`;
-  } else {
+    reason=hasMacro
+      ?`3軸スコア<strong>${total}/9点</strong>。買い圏<strong>${buyN}銘柄</strong>、注意圏<strong>${watchN}銘柄</strong>。スコア上位に絞れば仕込みやすい銘柄が存在します。`
+      :`買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>。スコア60点以上に絞って慎重に選別を。`;
+  }else{
     stance='bear';icon='🔴';label='弱気 — 様子見が無難な日';
     title='今日は無理して買わない日';
-    reason=hasMacroData
-      ?`3軸スコア<strong>${total}/9点</strong>で弱気圏。${md.nasdaq_1d_chg<-1?`NASDAQ${md.nasdaq_1d_chg}%と米国株が軟調。`:''}${md.geo_risk?'地政学リスクが浮上。':''}買い圏がわずか<strong>${buyN}銘柄</strong>で十分な押し目が形成されていません。現金を温存して次の下落局面を待つのが賢明です。`
-      :`スキャン結果から自動判定。買い圏が<strong>${buyN}銘柄</strong>と少なく、平均25MA乖離<strong>${avgD25}%</strong>と押し目が浅い。急いで仕込む必要はありません。`;
+    reason=hasMacro
+      ?`3軸スコア<strong>${total}/9点</strong>。${md.nasdaq_1d_chg<-1?`NASDAQ${md.nasdaq_1d_chg}%と米国株が軟調。`:''}買い圏<strong>${buyN}銘柄</strong>と少なく、十分な押し目が形成されていません。`
+      :`買い圏<strong>${buyN}銘柄</strong>、平均25MA乖離<strong>${avgD25}%</strong>と押し目が浅い。次の明確な下落局面を待つのが賢明です。`;
   }
 
-  // 軸スコアバー
-  const axisBar=(name,score,icon)=>`
+  const axisBar=(name,score,ico)=>`
     <div class="axis-row">
-      <div class="axis-name">${icon} ${name}</div>
+      <div class="axis-name">${ico} ${name}</div>
       <div class="axis-bar">
         ${[0,1,2].map(i=>`<div class="axis-seg ${i<score?'on':''} ${score===0?'zero':score>=2?'hi':'mid'}"></div>`).join('')}
       </div>
       <div class="axis-score">${score}/3</div>
     </div>`;
 
-  // 根拠チップ
   const chips=[
-    {label:'買い圏',val:buyN+'銘柄',cls:buyN>=5?'buy':buyN>=3?'warn':'hold'},
-    {label:'平均RSI',val:avgRsi,cls:parseFloat(avgRsi)<=35?'buy':parseFloat(avgRsi)<=45?'warn':'hold'},
-    {label:'MA乖離平均',val:avgD25+'%',cls:parseFloat(avgD25)<=-4?'buy':parseFloat(avgD25)<=-2?'warn':'hold'},
-    {label:'高配当4%超',val:highDiv+'件',cls:highDiv>=3?'buy':highDiv>=1?'warn':'hold'},
+    {label:'買い圏',val:buyN+'銘柄',cls:buyN>=5?'buy':buyN>=3?'warn':''},
+    {label:'平均RSI',val:avgRsi,cls:parseFloat(avgRsi)<=35?'buy':parseFloat(avgRsi)<=45?'warn':''},
+    {label:'MA乖離平均',val:avgD25+'%',cls:parseFloat(avgD25)<=-4?'buy':parseFloat(avgD25)<=-2?'warn':''},
+    {label:'高配当4%超',val:highDiv+'件',cls:highDiv>=3?'buy':highDiv>=1?'warn':''},
   ];
 
   document.getElementById('stanceBox').innerHTML=`
     <div class="stance ${stance} fadein">
       <div class="stance-head">
-        <div class="stance-date">${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日（${days[now.getDay()]}）· ${modeNames[currentMode]}モード</div>
-        <div class="stance-top">
+        <div>
           <div class="stance-title">${title}</div>
-          <div class="stance-badge ${stance}">${icon} ${label}</div>
+          <div class="stance-date">${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日（${days[now.getDay()]}）</div>
         </div>
+        <div class="stance-badge ${stance}">${icon} ${label}</div>
       </div>
       <div class="stance-reason">${reason}</div>
       <div class="stance-axes">
-        ${axisBar('テクニカル（日本市場）',axes.tech,'📊')}
-        ${axisBar('マクロ（米国・世界）',axes.macro,'🌏')}
+        ${axisBar('テクニカル',axes.tech,'📊')}
+        ${axisBar('マクロ',axes.macro,'🌏')}
         ${axisBar('スキャン結果',axes.scan,'🔍')}
-        <div class="axis-total">総合スコア <strong>${total}</strong> / 9点</div>
+        <div class="axis-total">総合スコア ${total} / 9点</div>
       </div>
-      <div class="stance-data">
-        ${chips.map(c=>`
-          <div class="stance-chip ${c.cls}">
-            <div class="stance-chip-val">${c.val}</div>
-            <div class="stance-chip-label">${c.label}</div>
-          </div>`).join('')}
+      <div class="stance-chips">
+        ${chips.map(c=>`<div class="stance-chip ${c.cls}"><div class="stance-chip-val">${c.val}</div><div class="stance-chip-label">${c.label}</div></div>`).join('')}
       </div>
-      ${!hasMacroData?'<div class="stance-note">💡 日米マーケットデータを連携すると、テクニカル・マクロ軸も自動判定されます（update.sh 設定後に有効）</div>':''}
     </div>`;
 }
 
-
-// ===== HERO STATS =====
-function renderHeroStats(){
-  const buyN=processed.filter(s=>s.zone.cls==='buy').length;
-  const topScore=processed.length?processed[0].score:'—';
-  const maxDiv=processed.length?Math.max(...processed.map(s=>s.dividend)).toFixed(1)+'%':'—';
-  document.getElementById('hsBuy').textContent=buyN+'件';
-  document.getElementById('hsTop').textContent=topScore+'点';
-  document.getElementById('hsDiv').textContent=maxDiv;
-  // eyebrow: real data indicator
-  const eyebrow=document.getElementById('heroEyebrow');
-  if(eyebrow&&dataSource==='real'){
-    eyebrow.innerHTML='<span class="hero-dot"></span>📡 実データ読込済み — 毎朝8:30・前場後12:30 自動更新';
-  }
+// ═══════════════════════════════════════
+// RENDER: TABLE
+// ═══════════════════════════════════════
+// ── 注目度バッジ生成 ──
+function trendBadge(s){
+  const vr = s.vol_ratio_1d;
+  const ret= s.ret_1d;
+  if(!vr || vr < 1.3) return '';
+  const tag = vr>=3.0 ? '🔥祭り' : vr>=2.0 ? '🔥流行り' : '📈注目';
+  const volTxt = `出来高${vr}x`;
+  const retTxt = ret!=null && ret!==0 ? ` / ${ret>0?'+':''}${ret}%` : '';
+  const cls = vr>=2.0 ? 'hot' : 'warm';
+  return \`<span class="trend-badge \${cls}" title="\${volTxt}\${retTxt}">\${tag}</span>\`;
 }
 
-// ===== DIFF BAR =====
-function renderDiff(newBuy,newWatch,newTotal){
-  const prev=lastScanCounts;
-  const el=document.getElementById('diffBar');
-  const items=document.getElementById('diffItems');
-  el.style.display='flex';
-  if(prev.total===0){
-    items.innerHTML='<span class="diff-same">初回スキャン完了</span>';
-    lastScanCounts={buy:newBuy,watch:newWatch,total:newTotal};
+function renderTable(){
+  const limit=dispCount;
+  const list=processed.slice(0,limit);
+  const total=processed.length;
+  document.getElementById('filterCount').textContent=`${total}銘柄中 ${list.length}件表示`;
+
+  if(!list.length){
+    document.getElementById('tableWrap').innerHTML='<div class="empty-msg">条件に一致する銘柄がありません</div>';
     return;
   }
-  const diffBuy=newBuy-prev.buy;
-  const diffTotal=newTotal-prev.total;
-  let h='';
-  if(diffTotal!==0) h+='<span class="'+(diffTotal>0?'diff-new':'diff-gone')+'">'+(diffTotal>0?'▲':'▼')+' 対象銘柄 '+(diffTotal>0?'+':'')+diffTotal+'件</span>';
-  if(diffBuy!==0) h+='<span class="diff-sep">|</span><span class="'+(diffBuy>0?'diff-new':'diff-gone')+'">'+(diffBuy>0?'▲':'▼')+' 買い圏 '+(diffBuy>0?'+':'')+diffBuy+'件</span>';
-  items.innerHTML=h||'<span class="diff-same">前回と変化なし</span>';
-  lastScanCounts={buy:newBuy,watch:newWatch,total:newTotal};
+
+  const thClick=(key,label)=>{
+    const isCurrent=sortKey===key;
+    const cls=isCurrent?(sortDir==='desc'?'sort-desc':'sort-asc'):'';
+    return`<th class="${cls}" onclick="setSort('${key}')">${label}</th>`;
+  };
+
+  const rows=list.map((s,i)=>{
+    const sc=s.score>=60?'hi':s.score>=35?'md':'lo';
+    const d25cls=s.d25<0?'dn':'up';
+    const isExpanded=expandedCode===s.code;
+    const prevBadge=s.prev_score!=null
+      ?`<span class="change-badge ${s.score>s.prev_score?'up':'dn'}">${s.score>s.prev_score?'▲':'▼'}${Math.abs(s.score-s.prev_score)}</span>`:'';
+
+    const detailRow=isExpanded?`
+      <tr class="detail-row" id="detail-${s.code}">
+        <td colspan="9">
+          ${buildDetailBox(s)}
+        </td>
+      </tr>`:'';
+
+    return`
+      <tr class="tbl-row ${isExpanded?'expanded':''}" onclick="toggleDetail('${s.code}')">
+        <td><span class="tbl-rank ${i<3?'top':''}">${i+1}</span></td>
+        <td>
+          <div class="tbl-name">${s.name}</div>
+          <div style="display:flex;align-items:center;gap:5px;margin-top:2px;flex-wrap:wrap">
+            <div class="tbl-code">${s.code}・${s.sector}</div>
+            ${prevBadge}
+            ${trendBadge(s)}
+          </div>
+        </td>
+        <td><span class="tbl-zone ${s.zone.cls}">${s.zone.label}</span></td>
+        <td><span class="tbl-score ${sc}">${s.score}</span></td>
+        <td class="tbl-num">${s.dividend}%</td>
+        <td class="tbl-num ${d25cls}">${s.d25>0?'+':''}${s.d25}%</td>
+        <td class="tbl-num ${s.rsi<=30?'dn':''}">${s.rsi}</td>
+        <td class="tbl-num">${s.pbr}</td>
+        <td class="tbl-num">${s.per||'—'}</td>
+      </tr>
+      ${detailRow}`;
+  }).join('');
+
+  document.getElementById('tableWrap').innerHTML=`
+    <table class="stock-table">
+      <thead>
+        <tr>
+          <th style="text-align:left;width:28px">#</th>
+          ${thClick('name','銘柄')}
+          <th>ゾーン</th>
+          ${thClick('score','スコア')}
+          ${thClick('dividend','配当%')}
+          ${thClick('d25','MA乖離')}
+          ${thClick('rsi','RSI')}
+          ${thClick('pbr','PBR')}
+          ${thClick('per','PER')}
+        </tr>
+      </thead>
+      <tbody>${rows}</tbody>
+    </table>`;
 }
 
-// ===== RANKINGS =====
-// 出来高ランキングデータ（stocks_data.jsonから読む。なければprocessedから算出）
-let volRankingData=[];
-
-function renderRankings(){
-  const top5div=[...processed].sort((a,b)=>b.dividend-a.dividend).slice(0,5);
-  const top5sc=[...processed].sort((a,b)=>b.score-a.score).slice(0,5);
-  const top5dev=[...processed].sort((a,b)=>a.d25-b.d25).slice(0,5);
-  // 出来高ランキング: vol_ranking（実データ）またはprocessedのvol_r順
-  const top5vol=volRankingData.length
-    ? volRankingData.slice(0,5)
-    : [...processed].sort((a,b)=>(b.turnover_avg5||0)-(a.turnover_avg5||0)).slice(0,5);
-
-  function rows(list,keyFn,isVol){
-    return list.map((s,i)=>{
-      const sc=s.score>=60?'hi':s.score>=35?'md':'lo';
-      const{v,cls}=keyFn(s);
-      const clickFn=isVol
-        ? `onclick="jumpToCard('${s.code}')" style="cursor:pointer"`
-        : `onclick="jumpToCard('${s.code}')"`;
-      return`<div class="rank-row" ${clickFn}>
-        <div class="rank-num ${i<3?'top':''}">${i+1}</div>
-        <div class="rank-info"><div class="rank-name">${s.name}</div><div class="rank-meta">${s.code} · ${s.sector}</div></div>
-        <div class="rank-right"><div class="rank-score ${sc}">${s.score}</div><div class="rank-key ${cls}">${v}</div></div>
-      </div>`;
-    }).join('');
-  }
-
-  // 出来高ランキング行（vol_rankingはprocessedに含まれないかもしれないのでjumpToCard対応）
-  function volRows(list){
-    return list.map((s,i)=>{
-      const sc=(s.score||0)>=60?'hi':(s.score||0)>=35?'md':'lo';
-      const tv=s.turnover_avg5?s.turnover_avg5+'億円':'—';
-      return`<div class="rank-row" onclick="jumpToCard('${s.code}')">
-        <div class="rank-num ${i<3?'top':''}">${i+1}</div>
-        <div class="rank-info"><div class="rank-name">${s.name}</div><div class="rank-meta">${s.code} · ${s.sector||''}</div></div>
-        <div class="rank-right"><div class="rank-score ${sc}">${s.score||'—'}</div><div class="rank-key w">${tv}</div></div>
-      </div>`;
-    }).join('');
-  }
-
-  document.getElementById('rankings').innerHTML=`
-    <div class="rank-block">
-      <div class="rank-head"><div class="rank-head-title">💰 高配当 TOP5</div></div>
-      <div class="rank-rows">${rows(top5div,s=>({v:s.dividend+'%',cls:'w'}))}</div>
-    </div>
-    <div class="rank-block">
-      <div class="rank-head"><div class="rank-head-title">🏆 総合スコア TOP5</div></div>
-      <div class="rank-rows">${rows(top5sc,s=>({v:'score '+s.score,cls:'g'}))}</div>
-    </div>
-    <div class="rank-block">
-      <div class="rank-head"><div class="rank-head-title">⚡ 押し目 TOP5</div></div>
-      <div class="rank-rows">${rows(top5dev,s=>({v:s.d25+'%',cls:'g'}))}</div>
-    </div>
-    <div class="rank-block">
-      <div class="rank-head"><div class="rank-head-title">🔥 売買代金 TOP5（5日平均）</div><div style="font-size:10px;color:var(--text3)">流動性が高い銘柄</div></div>
-      <div class="rank-rows">${volRows(top5vol)}</div>
-    </div>`;
-}
-
-// ===== CARD =====
-function renderCard(){
-  if(!processed.length){
-    document.getElementById('cardArea').innerHTML='<div class="loader"><div class="loader-text">条件に一致する銘柄がありません</div></div>';
-    return;
-  }
-  cardIndex=Math.max(0,Math.min(cardIndex,processed.length-1));
-  const s=processed[cardIndex];
-  document.getElementById('cardCounter').textContent=`${cardIndex+1} / ${processed.length}`;
-  document.getElementById('cardPrev').disabled=cardIndex===0;
-  document.getElementById('cardNext').disabled=cardIndex===processed.length-1;
-
+function buildDetailBox(s){
+  const d25=s.d25;
+  const reasons=buildReasons(s,d25);
+  const bd=calcBreakdown(s,currentMode);
   const isFav=watchlist.includes(s.code);
-  const r=28;const circ=2*Math.PI*r;const fill=circ-(s.score/100)*circ;
-  const col=s.score>=60?'var(--up)':s.score>=35?'var(--amber)':'var(--text3)';
 
-  // ③ 買い理由ブロック（強化版）
-  // 各指標に「なぜ重要か」のコンテキストを付加
-  const reasons=[];
-  if(s.d25<=-6){
-    reasons.push({
-      val:`${s.d25}%`,label:'25日移動平均からの乖離',
-      note:'強い押し目水準',desc:'過去の反発実績から-6%以下は買い圧力が集まりやすい水準',
-      cls:'strong',rank:'A'
-    });
-  } else if(s.d25<=-3){
-    reasons.push({
-      val:`${s.d25}%`,label:'25日移動平均からの乖離',
-      note:'押し目水準',desc:'-3%以上の下落で中期的な反発候補に入ってくる',
-      cls:'mid',rank:'B'
-    });
-  }
-  if(s.rsi<=30){
-    reasons.push({
-      val:String(s.rsi),label:'RSI（相対力指数）',
-      note:'強い売られすぎ',desc:'30以下は過去の反発率が高い。短期的な自律反発を期待できる水準',
-      cls:'strong',rank:'A'
-    });
-  } else if(s.rsi<=38){
-    reasons.push({
-      val:String(s.rsi),label:'RSI（相対力指数）',
-      note:'売られすぎ圏内',desc:'38以下は売り過剰が和らぐタイミング。中長期目線では仕込みやすい',
-      cls:'mid',rank:'B'
-    });
-  }
-  if(s.dividend>=4.5){
-    reasons.push({
-      val:`${s.dividend}%`,label:'配当利回り',
-      note:'高配当・下値サポート',desc:'4.5%超は定期預金の約10倍。配当が株価の下値を支える構造',
-      cls:'strong',rank:'A'
-    });
-  } else if(s.dividend>=3){
-    reasons.push({
-      val:`${s.dividend}%`,label:'配当利回り',
-      note:'インカム期待',desc:'3%以上で債券より有利。長期保有のリスク低減に効く',
-      cls:'mid',rank:'B'
-    });
-  }
-  if(s.pbr<=0.8){
-    reasons.push({
-      val:`${s.pbr}倍`,label:'PBR（株価純資産倍率）',
-      note:'解散価値以下',desc:'1倍割れは理論上「今すぐ解散しても株より多く戻る」水準。下値が固い',
-      cls:'strong',rank:'A'
-    });
-  } else if(s.pbr<=1.1){
-    reasons.push({
-      val:`${s.pbr}倍`,label:'PBR（株価純資産倍率）',
-      note:'割安圏',desc:'1倍付近は割安感があり機関投資家が注目する水準',
-      cls:'mid',rank:'B'
-    });
-  }
-  if(s.per<=10){
-    reasons.push({
-      val:`${s.per}倍`,label:'PER（株価収益率）',
-      note:'割安水準',desc:'10倍以下は日本株平均を大きく下回る。利益に対して株価が安い',
-      cls:'mid',rank:'B'
-    });
-  }
+  const whyHtml=reasons.length?reasons.map(w=>`
+    <div class="why-item ${w.cls}">
+      <div class="why-rank-badge ${w.cls}">${w.rank}</div>
+      <div class="why-val">${w.val}</div>
+      <div class="why-label">${w.label}</div>
+      <div class="why-note-text">${w.note}</div>
+      <div class="why-desc">${w.desc}</div>
+    </div>`).join('')
+    :'<div style="font-size:11px;color:var(--text3)">現時点で明確な買いシグナルはありません</div>';
 
-  // ⑦ 前日比変化（スキャン履歴と比較）
-  const prevEntry=scanHistory.length>1?scanHistory[1]:null;
-  const prevSameMode=prevEntry&&prevEntry.mode===currentMode;
-  const prevScore=s.prev_score||null; // stocks_data.jsonに前日スコアがあれば
-
-  const rankInAll=processed.findIndex(x=>x.code===s.code)+1;
-  const gradeA=reasons.filter(r=>r.rank==='A').length;
-
-  // サマリー強度判定
-  const strength=gradeA>=2?'strong':gradeA>=1?'mid':'weak';
-  const strengthLabel=strength==='strong'?'複数の強い買いシグナル':strength==='mid'?'押し目として候補圏内':'決め手に欠ける';
-
-  const reasonsHtml=reasons.length?`
-    <div class="why-block">
-      <div class="why-header">
-        <div class="why-title">この銘柄が選ばれた理由</div>
-        <div class="why-strength ${strength}">${strengthLabel}</div>
-      </div>
-      <div class="why-items">
-        ${reasons.map(w=>`
-          <div class="why-item ${w.cls}">
-            <div class="why-rank-badge ${w.cls}">${w.rank}</div>
-            <div class="why-val">${w.val}</div>
-            <div class="why-label">${w.label}</div>
-            <div class="why-note-text">${w.note}</div>
-            <div class="why-desc">${w.desc}</div>
-          </div>`).join('')}
-      </div>
-    </div>`:'<div class="why-block why-empty"><div class="why-title">買いシグナルなし</div><div style="font-size:11px;color:var(--text3);margin-top:4px">この銘柄は現時点で明確な押し目条件を満たしていません</div></div>';
-
-  // ⑦ 前日比変化バッジ
-  const changeBadge=prevScore!==null?`
-    <div class="change-badge ${s.score>prevScore?'up':s.score<prevScore?'dn':'flat'}">
-      ${s.score>prevScore?'▲':'▼'} 前日比 ${s.score>prevScore?'+':''}${s.score-prevScore}点
-    </div>`:rankInAll<=3?`<div class="change-badge rank">ランキング ${rankInAll}位</div>`:'';
-
-  const bdHtml=s.bd.map(item=>`
+  const bdHtml=bd.map(item=>`
     <div class="bd-row">
       <div class="bd-l">${item.l}</div>
       <div class="bd-bar"><div class="bd-fill" style="width:${Math.min(Math.abs(item.v)/item.max*100,100)}%;background:${item.pos?'var(--green)':'var(--up)'}"></div></div>
       <div class="bd-v ${item.pos?'pos':'neg'}">${item.v>0?'+':''}${item.v}点</div>
     </div>`).join('');
 
-  document.getElementById('cardArea').innerHTML=`
-    <div class="stock-card fadein">
-      <div class="score-hero">
-        <div class="score-ring">
-          <svg width="72" height="72" viewBox="0 0 72 72">
-            <circle cx="36" cy="36" r="${r}" fill="none" stroke="${col}" stroke-opacity="0.15" stroke-width="5"/>
-            <circle cx="36" cy="36" r="${r}" fill="none" stroke="${col}" stroke-width="5"
-              stroke-dasharray="${circ.toFixed(1)}" stroke-dashoffset="${fill.toFixed(1)}"
-              stroke-linecap="round" style="transition:stroke-dashoffset 0.6s ease"/>
-          </svg>
-          <div class="score-ring-inner">
-            <div class="score-ring-num" style="color:${col}">${s.score}</div>
-            <div class="score-ring-lbl">SCORE</div>
-          </div>
-        </div>
-        <div class="score-info">
-          <div class="score-zone-row">
-            <div class="score-zone ${s.zone.cls}">${s.zone.label}</div>
-            ${changeBadge}
-          </div>
-          <div class="score-name">${s.name}</div>
-          <div class="score-code">${s.code} · ${s.sector}</div>
-        </div>
+  return`<div class="detail-box fadein">
+    <div class="detail-grid">
+      <div>
+        <div class="detail-section-title">選ばれた理由</div>
+        <div class="why-items">${whyHtml}</div>
       </div>
-      ${reasonsHtml}
-      <table class="metrics">
-        <tr><th>現在値</th><th>25MA比</th><th>RSI</th><th>配当</th><th>PBR</th><th>PER</th></tr>
-        <tr>
-          <td class="val">¥${s.price.toLocaleString()}</td>
-          <td class="val ${s.d25<0?'dn':'up'}">${s.d25>0?'+':''}${s.d25}%</td>
-          <td class="val ${s.rsi<=30?'dn':s.rsi>=50?'up':''}">${s.rsi}</td>
-          <td class="val w">${s.dividend}%</td>
-          <td class="val ${s.pbr<=1?'dn':''}">${s.pbr}倍</td>
-          <td class="val ${s.per<=13?'dn':''}">${s.per}倍</td>
-        </tr>
-        <tr>
-          <td class="hint">—</td>
-          <td class="hint">-5%以下が目安</td>
-          <td class="hint">30以下が目安</td>
-          <td class="hint">3%以上が高配当</td>
-          <td class="hint">1以下が割安</td>
-          <td class="hint">15以下が割安</td>
-        </tr>
-      </table>
-      <div class="breakdown">
-        <div class="breakdown-title">スコア内訳（100点満点）</div>
-        ${bdHtml}
-      </div>
-      <div class="card-actions">
-        <button class="btn-fav ${isFav?'active':''}" onclick="toggleFav('${s.code}')">
-          ${isFav?'★ 登録済み':'☆ ウォッチ登録'}
+      <div>
+        <div class="detail-section-title">スコア内訳（${s.score}点）</div>
+        <div class="score-breakdown">${bdHtml}</div>
+        <table style="width:100%;border-collapse:collapse;font-size:11px;margin-top:12px">
+          <tr>
+            <th style="background:var(--bg3);padding:5px 8px;text-align:left;font-size:10px;color:var(--text3)">指標</th>
+            <th style="background:var(--bg3);padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">値</th>
+            <th style="background:var(--bg3);padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">目安</th>
+          </tr>
+          <tr><td style="padding:5px 8px;font-size:11px">現在値</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">¥${s.price.toLocaleString()}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">—</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">25MA乖離</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${s.d25<0?'var(--up)':'var(--dn)'}">${s.d25>0?'+':''}${s.d25}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">-5%以下が目安</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">RSI</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.rsi}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">30以下が強い</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">配当利回り</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.dividend}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">3%以上が高配当</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">PBR</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.pbr}倍</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">1倍以下が割安</td></tr>
+        </table>
+        <button class="detail-fav-btn ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav('${s.code}')">
+          ${isFav?'★ ウォッチ登録済み':'☆ ウォッチに追加'}
         </button>
       </div>
+    </div>
+  </div>`;
+}
+
+function toggleDetail(code){
+  expandedCode=expandedCode===code?null:code;
+  renderTable();
+  if(expandedCode){
+    gaEvent('open_stock_detail',{stock_code:code});
+  }
+}
+
+function setSort(key){
+  if(sortKey===key){sortDir=sortDir==='desc'?'asc':'desc';}
+  else{sortKey=key;sortDir='desc';}
+  processed.sort((a,b)=>{
+    let av=a[key]??0,bv=b[key]??0;
+    return sortDir==='asc'?av-bv:bv-av;
+  });
+  renderTable();
+  gaEvent('sort_table',{key,dir:sortDir});
+}
+
+// ═══════════════════════════════════════
+// RENDER: DANGER SECTION
+// ═══════════════════════════════════════
+function renderDanger(){
+  const dangers=STOCKS.map(s=>{
+    const reasons=[];
+    if(s.vol_r>=2.0)reasons.push(`出来高${s.vol_r}倍急増`);
+    else if(s.vol_r>=1.5)reasons.push(`出来高${s.vol_r}倍増`);
+    const d25=dv(s.price,s.ma25);
+    if(d25>=5)reasons.push(`25MA比+${d25}%（高値圏）`);
+    if(s.rsi>=70)reasons.push(`RSI ${s.rsi}（買われすぎ）`);
+    return{...s,d25,dangerReasons:reasons};
+  }).filter(s=>s.dangerReasons.length>0)
+    .sort((a,b)=>b.vol_r-a.vol_r)
+    .slice(0,5);
+
+  if(!dangers.length){
+    document.getElementById('dangerSection').innerHTML='';
+    return;
+  }
+
+  document.getElementById('dangerSection').innerHTML=`
+    <div class="danger-section fadein">
+      <div class="danger-title">⚠ 今日は避けたい銘柄（TOP${dangers.length}）</div>
+      <div class="danger-rows">
+        ${dangers.map(s=>`
+          <div class="danger-row">
+            <div>
+              <div class="danger-name">${s.name}</div>
+              <div class="danger-code">${s.code}・${s.sector}</div>
+            </div>
+            <div style="display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end">
+              ${s.dangerReasons.map(r=>`<span class="danger-reason">${r}</span>`).join('')}
+            </div>
+          </div>`).join('')}
+      </div>
+      <div style="font-size:10px;color:var(--text3);margin-top:8px">出来高急増・高値圏・RSI過熱を検知した銘柄。押し目買いの対象からは外すことを推奨します。</div>
     </div>`;
-  setupSwipe();
 }
 
-function cardMove(d){
-  cardIndex=Math.max(0,Math.min(cardIndex+d,processed.length-1));
-  renderCard();
-  // GA4: 銘柄カード閲覧
-  if(processed[cardIndex]){
-    gaEvent('stock_viewed', {
-      stock_code: processed[cardIndex].code,
-      stock_name: processed[cardIndex].name,
-      score: processed[cardIndex].score,
-      zone: processed[cardIndex].zone.cls,
-      rank: cardIndex+1,
-    });
-  }
-}
-function jumpToCard(code){const i=processed.findIndex(s=>s.code===code);if(i>=0){cardIndex=i;renderCard();document.getElementById('cardArea').scrollIntoView({behavior:'smooth',block:'nearest'});}}
-function setupSwipe(){
-  const el=document.querySelector('.stock-card');if(!el)return;
-  let sx=0,sy=0;
-  el.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;sy=e.touches[0].clientY;},{passive:true});
-  el.addEventListener('touchend',e=>{
-    const dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;
-    if(Math.abs(dx)>Math.abs(dy)&&Math.abs(dx)>40){
-      if(dx<0&&cardIndex<processed.length-1){cardIndex++;renderCard();}
-      if(dx>0&&cardIndex>0){cardIndex--;renderCard();}
-    }
-  },{passive:true});
-}
-
-// ===== EVENTS =====
-function renderEvents(){
-  const evs=[
-    {ico:'📉',tag:{t:'bear',l:'下落'},title:'日経平均 −0.81%',desc:'2日連続の下落。銀行・商社中心に売られ、割安水準に近づく銘柄が増加。'},
-    {ico:'💴',tag:{t:'bull',l:'追い風'},title:'ドル円 149.82円（円安方向）',desc:'輸出企業（自動車・商社）の業績にプラス。'},
-    {ico:'📊',tag:{t:'neutral',l:'中立'},title:'東証 売買代金 3.8兆円',desc:'前日より少なめ。急変リスクは低い静かな相場。'},
-    {ico:'🇺🇸',tag:{t:'bull',l:'追い風'},title:'米NASDAQ 強含み',desc:'今夜の米国市場が好調なら、明朝の日本株にプラスの可能性。'},
-  ];
-  document.getElementById('eventList').innerHTML=evs.map(e=>`
-    <div class="event-row">
-      <div class="ev-ico">${e.ico}</div>
-      <div class="ev-body">
-        <div class="ev-title"><span class="ev-tag ${e.tag.t}">${e.tag.l}</span>${e.title}</div>
-        <div class="ev-desc">${e.desc}</div>
-      </div>
-    </div>`).join('');
-}
-
-// ===== QUIZ =====
-const QUIZ=[
-  {
-    id:'goal',q:'株をやる一番の目的は何ですか？',
-    hint:'あなたのゴールに合わせてスコアの重み付けが自動調整されます。',
-    recommend:{val:'dividend',reason:'今日の相場は軟調。高配当銘柄は下値が限定的で、初心者にも扱いやすい局面です。'},
-    opts:[
-      {ico:'💰',t:'毎年配当金をもらいたい',d:'銀行より高い利回りで、ゆっくり資産を増やしたい',v:'dividend',isRec:true},
-      {ico:'📈',t:'安く買って値上がり益を取りたい',d:'下がったタイミングで仕込み、戻ったら売りたい',v:'deviation',isRec:false},
-      {ico:'🛡️',t:'とにかく割安な優良株を買いたい',d:'リスクを抑えてバリュー投資で長期保有',v:'value',isRec:false},
-      {ico:'⚖️',t:'配当も値上がりもバランスよく',d:'どれかに偏らず、総合的に良い株を探したい',v:'balance',isRec:false},
-    ]
-  },
-  {
-    id:'market',q:'今の相場をどう感じていますか？',
-    hint:'相場観によって条件の厳しさが微調整されます。直感でOKです。',
-    recommend:{val:'flat',reason:'今日の日経は−0.81%と小幅下落。大きな方向感は出ていないため「様子見」が安全な判断です。'},
-    opts:[
-      {ico:'😊',t:'まだ上がりそう、チャンスあり',d:'積極的に仕込んでいきたい',v:'bull',isRec:false},
-      {ico:'😰',t:'下がりそうで少し怖い',d:'慎重に。もう少し下がるのを待ちたい',v:'bear',isRec:false},
-      {ico:'😐',t:'どちらともいえない',d:'方向感なし。安定重視で様子見',v:'flat',isRec:true},
-      {ico:'🤖',t:'感覚より数字で決めたい',d:'相場観は無視。条件だけで判断する',v:'neutral',isRec:false},
-    ]
-  },
-  {
-    id:'horizon',q:'どのくらい持ち続けるつもりですか？',
-    hint:'保有期間によって参照する移動平均線の基準が変わります。',
-    recommend:{val:'long',reason:'高配当安定株は長く持つほどメリットが出ます。配当を受け取りながら株価回復を待てるのが強みです。'},
-    opts:[
-      {ico:'⚡',t:'数日〜1週間（短期反発狙い）',d:'素早く利益確定。短期の値動きを取りたい',v:'short',isRec:false},
-      {ico:'📅',t:'数週間〜1ヶ月（スウィング）',d:'じっくり待って売り時を見極める',v:'mid',isRec:false},
-      {ico:'🌱',t:'数ヶ月以上（中長期保有）',d:'配当をもらいながらゆっくり育てる',v:'long',isRec:true},
-    ]
-  }
-];
-let qStep=0,qAnswers={};
-
-function openQuiz(){document.getElementById('quizOverlay').classList.add('open');qStep=0;qAnswers={};renderQuiz();}
-function closeQuizBg(e){if(e.target===document.getElementById('quizOverlay'))document.getElementById('quizOverlay').classList.remove('open');}
-
-function renderQuiz(){
-  const q=QUIZ[qStep];
-  document.getElementById('qzStep').textContent=`STEP ${qStep+1} / ${QUIZ.length}`;
-  document.getElementById('qzBar').innerHTML=QUIZ.map((_,i)=>`<div class="quiz-seg ${i<qStep?'done':i===qStep?'active':''}"></div>`).join('');
-  document.getElementById('qzQ').textContent=q.q;
-  document.getElementById('qzHint').textContent=q.hint;
-  if(q.recommend){
-    document.getElementById('qzRecommend').innerHTML=`
-      <div class="quiz-rec">
-        <div class="quiz-rec-ico">💡</div>
-        <div>
-          <div class="quiz-rec-label">かぶのすけのおすすめ</div>
-          <div class="quiz-rec-text">${q.opts.find(o=>o.v===q.recommend.val)?.t||''}</div>
-          <div class="quiz-rec-reason">${q.recommend.reason}</div>
-        </div>
-      </div>`;
-  } else {
-    document.getElementById('qzRecommend').innerHTML='';
-  }
-  const sel=qAnswers[q.id];
-  document.getElementById('qzOpts').innerHTML=q.opts.map(o=>`
-    <div class="quiz-opt ${sel===o.v?'sel':''} ${o.isRec?'recommended':''}" onclick="selectOpt('${o.v}',this)">
-      ${o.isRec?'<div class="rec-badge">★ おすすめ</div>':''}
-      <div class="quiz-opt-ico">${o.ico}</div>
-      <div>
-        <div class="quiz-opt-t">${o.t}</div>
-        <div class="quiz-opt-d">${o.d}</div>
-      </div>
-    </div>`).join('');
-  document.getElementById('qzBack').style.visibility=qStep===0?'hidden':'visible';
-  document.getElementById('qzNext').textContent=qStep===QUIZ.length-1?'スキャン開始 ▶':'次へ ▶';
-  document.getElementById('qzNext').disabled=!sel;
-}
-
-function selectOpt(val,el){
-  qAnswers[QUIZ[qStep].id]=val;
-  document.querySelectorAll('.quiz-opt').forEach(o=>o.classList.remove('sel'));
-  el.classList.add('sel');
-  document.getElementById('qzNext').disabled=false;
-}
-function quizBack(){if(qStep>0){qStep--;renderQuiz();}}
-function quizNext(){
-  if(qStep<QUIZ.length-1){qStep++;renderQuiz();}
-  else{
-    document.getElementById('quizOverlay').classList.remove('open');
-    applyAnswers();
-    runWithAnimation();
-  }
-}
-function applyAnswers(){
-  const{goal}=qAnswers;
-  const modeMap={dividend:'dividend',deviation:'rebound',value:'value',balance:'dividend'};
-  const m=modeMap[goal]||'dividend';
-  currentMode=m;
-  document.querySelectorAll('.mode-tab').forEach(t=>t.classList.remove('active'));
-  const el=document.getElementById('mode-'+m);
-  if(el)el.classList.add('active');
-}
-
-// ===== MODE =====
+// ═══════════════════════════════════════
+// FILTER & MODE
+// ═══════════════════════════════════════
 function setMode(m,el){
   currentMode=m;
-  document.querySelectorAll('.mode-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.filter-tab[id^="mode-"]').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
-  gaEvent('mode_changed', {mode: m});
+  // 設定パネルも同期
+  document.querySelectorAll('#set-mode .setting-opt').forEach(o=>{
+    o.classList.toggle('active',o.dataset.val===m);
+  });
+  run();
+  gaEvent('mode_changed',{mode:m});
 }
 
-// ===== WATCHLIST =====
+function setDispCount(n,el){
+  dispCount=n;
+  document.querySelectorAll('.filter-tab[id^="disp-"]').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  renderTable();
+}
+
+// ═══════════════════════════════════════
+// SETTINGS
+// ═══════════════════════════════════════
+function openSettings(){
+  // 現在の設定を反映
+  document.querySelectorAll('#set-mode .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===settings.mode));
+  document.querySelectorAll('#set-count .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===String(settings.count)));
+  document.querySelectorAll('#set-mindiv .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===String(settings.mindiv)));
+  document.querySelectorAll('#set-zone .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===settings.zone));
+  document.getElementById('settingsOverlay').classList.add('open');
+  gaEvent('click_settings');
+}
+function closeSettingsBg(e){if(e.target===document.getElementById('settingsOverlay'))document.getElementById('settingsOverlay').classList.remove('open');}
+
+function selectSettingOpt(el,group){
+  document.querySelectorAll(`#set-${group} .setting-opt`).forEach(o=>o.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function saveSettings(){
+  settings.mode=document.querySelector('#set-mode .setting-opt.active')?.dataset.val||'dividend';
+  settings.count=parseInt(document.querySelector('#set-count .setting-opt.active')?.dataset.val||'30');
+  settings.mindiv=parseFloat(document.querySelector('#set-mindiv .setting-opt.active')?.dataset.val||'0');
+  settings.zone=document.querySelector('#set-zone .setting-opt.active')?.dataset.val||'all';
+  try{localStorage.setItem('kbs_settings',JSON.stringify(settings));}catch(e){}
+
+  currentMode=settings.mode;
+  dispCount=settings.count;
+
+  // フィルタータブ同期
+  document.querySelectorAll('.filter-tab[id^="mode-"]').forEach(t=>t.classList.remove('active'));
+  const mt=document.getElementById('mode-'+currentMode);if(mt)mt.classList.add('active');
+  document.querySelectorAll('.filter-tab[id^="disp-"]').forEach(t=>t.classList.remove('active'));
+  const cnt=dispCount>=999?'all':String(dispCount);
+  const dt=document.getElementById('disp-'+cnt);if(dt)dt.classList.add('active');
+
+  document.getElementById('settingsOverlay').classList.remove('open');
+  run();
+  gaEvent('change_filter',settings);
+}
+
+// ═══════════════════════════════════════
+// WATCHLIST
+// ═══════════════════════════════════════
 function toggleFav(code){
   const adding=!watchlist.includes(code);
   if(adding){
     watchlist.push(code);
     const s=processed.find(x=>x.code===code);
-    gaEvent('watchlist_add',{stock_code:code,stock_name:s?s.name:'',score:s?s.score:0});
-  } else {
+    gaEvent('watchlist_add',{stock_code:code,score:s?.score||0});
+  }else{
     watchlist=watchlist.filter(c=>c!==code);
     gaEvent('watchlist_remove',{stock_code:code});
   }
   try{localStorage.setItem('kbs_watch',JSON.stringify(watchlist));}catch(e){}
   updateWatchCount();
-  renderCard();renderWatchlist();
+  // 展開中の詳細を再描画
+  if(expandedCode)renderTable();
+  renderWatchlist();
 }
+
 function updateWatchCount(){
   const el=document.getElementById('watchCount');
   el.textContent=watchlist.length;
   el.classList.toggle('show',watchlist.length>0);
 }
+
 function renderWatchlist(){
   updateWatchCount();
   const el=document.getElementById('watchlistBody');
   if(!watchlist.length){
-    el.innerHTML='<div class="watch-empty">ウォッチ登録した銘柄がここに表示されます。<br>カードの「☆ ウォッチ登録」から追加できます。</div>';
+    el.innerHTML='<div class="watch-empty">ウォッチ登録した銘柄がここに表示されます。<br>銘柄行をクリックして詳細を開き「ウォッチに追加」から登録できます。</div>';
     return;
   }
   el.innerHTML=`<div class="watch-list">${watchlist.map(code=>{
     const s=STOCKS.find(x=>x.code===code);if(!s)return'';
-    const d25=dv(s.price,s.ma25);
-    const{score}=calcScore(s,currentMode);
+    const score=calcScore(s,currentMode);
     const sc=score>=60?'hi':score>=35?'md':'lo';
-    return`<div class="watch-row" onclick="jumpToCard('${code}');switchTab('home')">
+    const d25=dv(s.price,s.ma25);
+    return`<div class="watch-row" onclick="switchTab('home');setTimeout(()=>{expandedCode='${code}';run();},100)">
       <div class="watch-code">${code}</div>
       <div class="watch-name">${s.name}</div>
       <div style="text-align:right">
         <div class="watch-score ${sc}">${score}点</div>
-        <div style="font-size:10px">${d25>0?'+':''}${d25}%</div>
+        <div style="font-size:10px;color:var(--text3)">${d25>0?'+':''}${d25}%</div>
       </div>
       <button class="watch-remove" onclick="event.stopPropagation();toggleFav('${code}')">✕</button>
     </div>`;
   }).join('')}</div>`;
 }
+
 function renderHistory(){
   const el=document.getElementById('historyBody');
   const modeNames={dividend:'高配当',value:'バリュー',rebound:'押し目'};
   if(!scanHistory.length){
-    el.innerHTML='<div style="background:var(--bg2);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);padding:14px;text-align:center;font-size:12px;color:var(--text3)">スキャンを実行すると履歴が保存されます</div>';
+    el.innerHTML='<div class="watch-empty">スキャン履歴がここに表示されます</div>';
     return;
   }
   el.innerHTML=`<table class="hist-table">
@@ -1604,98 +1260,77 @@ function renderHistory(){
   </table>`;
 }
 
-// ===== TABS =====
+// ═══════════════════════════════════════
+// TABS
+// ═══════════════════════════════════════
 function switchTab(tab){
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
-  document.querySelectorAll('.pc-tab').forEach(n=>n.classList.remove('active'));
   document.getElementById('panel-'+tab).classList.add('active');
   const n=document.getElementById('nav-'+tab);if(n)n.classList.add('active');
-  const p=document.getElementById('pc-'+tab);if(p)p.classList.add('active');
   if(tab==='watch'){renderWatchlist();renderHistory();}
-  gaEvent('tab_switched', {tab: tab});
+  gaEvent('tab_switched',{tab});
 }
 
-// ===== DATA LOAD =====
+// ═══════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════
+function openLogicModal(){document.getElementById('logicModal').classList.add('open');}
+function closeLogicModal(e){if(!e||e.target===document.getElementById('logicModal'))document.getElementById('logicModal').classList.remove('open');}
+
+// ═══════════════════════════════════════
+// DATA LOAD
+// ═══════════════════════════════════════
 async function loadRealData(){
   try{
     const r=await fetch('stocks_data.json?t='+Date.now());
-    if(!r.ok)throw new Error();
+    if(!r.ok)throw new Error('fetch failed');
     const j=await r.json();
     if(j.stocks&&j.stocks.length>0){
-      STOCKS.splice(0,STOCKS.length,...j.stocks);
+      STOCKS=j.stocks;
       dataSource='real';
-      // 市場データを上書き（あるフィールドだけ）
+      // 市場データ
       const mFields=['nikkei_price','nikkei_ma25','nikkei_1d_chg','nasdaq_1d_chg',
-                     'vix','usdjpy','us10y','geo_risk','rate_cut_flag',
-                     'prev_buy_count','prev_top_score'];
-      mFields.forEach(k=>{ if(j[k]!==undefined) marketData[k]=j[k]; });
-      // Pulse バーも実データで更新
-      if(j.nikkei_price) updatePulseFromMarket(j);
+                     'vix','usdjpy','us10y','geo_risk','rate_cut_flag','prev_buy_count'];
+      mFields.forEach(k=>{if(j[k]!==undefined)marketData[k]=j[k];});
+      if(j.vol_ranking&&j.vol_ranking.length)volRankingData=j.vol_ranking;
+      if(j.trend_ranking&&j.trend_ranking.length)trendRankingData=j.trend_ranking;
+      // 信頼バー
       document.getElementById('trustText').innerHTML=`<span class="hi">${j.updated_at}</span> 更新 · ${j.total}銘柄スキャン済み`;
-      if(j.total){const tc=document.getElementById('totalCount');if(tc)tc.textContent=j.total+'銘柄';}
       document.getElementById('trustDot').style.background='var(--green)';
       document.getElementById('trustBanner').style.borderLeftColor='var(--green)';
-    } else throw new Error();
-  } catch{
+      document.getElementById('totalCountBadge').textContent=j.total+'銘柄';
+      document.getElementById('heroEyebrow').innerHTML='<span class="hero-dot"></span>📡 実データ読込済み — 毎朝8:30・前場後12:30 自動更新';
+    }else throw new Error('no stocks');
+  }catch{
     dataSource='sample';
+    STOCKS=[...SAMPLE_STOCKS];
     document.getElementById('trustText').innerHTML='<span class="warn">サンプルデータ表示中</span> — 実データは毎朝8:30更新';
     document.getElementById('trustDot').style.background='var(--amber)';
     document.getElementById('trustBanner').style.borderLeftColor='var(--amber)';
   }
 }
 
-function updatePulseFromMarket(j){
-  const sign=v=>v>0?'+':'';
-  const dir=v=>v>0?'up':v<0?'dn':'neutral';
-  const chips=[
-    {l:'日経平均',v:j.nikkei_price?.toLocaleString()||'—',c:sign(j.nikkei_1d_chg)+j.nikkei_1d_chg+'%',d:dir(j.nikkei_1d_chg)},
-    {l:'TOPIX',v:j.topix_price||'—',c:j.topix_1d_chg?sign(j.topix_1d_chg)+j.topix_1d_chg+'%':'—',d:dir(j.topix_1d_chg)},
-    {l:'ドル円',v:j.usdjpy||'—',c:j.usdjpy_chg?sign(j.usdjpy_chg)+j.usdjpy_chg:'—',d:dir(j.usdjpy_chg)},
-    {l:'VIX',v:j.vix||'—',c:j.vix_chg?sign(j.vix_chg)+j.vix_chg:'—',d:dir(-j.vix_chg)},
-    {l:'米NASDAQ',v:j.nasdaq_1d_chg?sign(j.nasdaq_1d_chg)+j.nasdaq_1d_chg+'%':'—',c:'前日比',d:dir(j.nasdaq_1d_chg)},
-    {l:'売買代金',v:j.trade_volume||'—',c:'',d:'neutral'},
-  ];
-  document.getElementById('pulseBar').innerHTML=chips.map(c=>`
-    <div class="pc">
-      <div class="pc-l">${c.l}</div>
-      <div class="pc-v ${c.d}">${c.v}</div>
-      <div class="pc-c ${c.d}">${c.c}</div>
-    </div>`).join('');
-}
-
-// ===== MODALS =====
-function openLogicModal(){document.getElementById('logicModal').classList.add('open');}
-function closeLogicModal(e){if(!e||e.target===document.getElementById('logicModal'))document.getElementById('logicModal').classList.remove('open');}
-
-// ===== RUN =====
+// ═══════════════════════════════════════
+// RUN
+// ═══════════════════════════════════════
 function run(){
   processStocks();
-  const buyN=processed.filter(s=>s.zone.cls==='buy').length;
-  const watchN=processed.filter(s=>s.zone.cls==='watch').length;
-  renderDiff(buyN,watchN,processed.length);
   renderHeroStats();
-  renderStance();
   renderPulse();
-  renderRankings();
-  cardIndex=0;
-  renderCard();
-  renderEvents();
-  // GA4: スキャン実行イベント
-  gaEvent('scan_executed', {
-    mode: currentMode,
-    buy_count: buyN,
-    total_count: processed.length,
-    data_source: dataSource,
-  });
+  renderStance();
+  renderTable();
+  renderDanger();
+  gaEvent('scan_executed',{mode:currentMode,buy_count:processed.filter(s=>s.zone.cls==='buy').length,data_source:dataSource});
 }
 
 async function init(){
+  updateWatchCount();
   await loadRealData();
   run();
+  gaEvent('view_app',{data_source:dataSource});
 }
 
-updateWatchCount();
 init();
 </script>
 </body>

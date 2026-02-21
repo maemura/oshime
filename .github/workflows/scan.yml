@@ -1,0 +1,50 @@
+name: かぶのすけ 自動スキャン
+
+on:
+  schedule:
+    # 毎朝 8:30 JST = UTC 23:30（前日）月〜金
+    - cron: '30 23 * * 0-4'
+    # 前場後 12:30 JST = UTC 3:30 月〜金
+    - cron: '30 3 * * 1-5'
+  workflow_dispatch:  # GitHubのUIから手動実行できるボタン
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90  # 最大90分（2,000銘柄で約40分）
+
+    permissions:
+      contents: write   # stocks_data.json をコミットするために必要
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: 依存パッケージをインストール
+        run: |
+          pip install yfinance pandas numpy requests xlrd openpyxl
+
+      - name: fetch_stocks.py を実行
+        run: python3 fetch_stocks.py
+        env:
+          TZ: Asia/Tokyo
+        # ※ fetch_stocks.py が stocks_data.json をカレントディレクトリに出力する前提
+
+      - name: stocks_data.json をコミット & プッシュ
+        run: |
+          git config user.name  "かぶのすけBot"
+          git config user.email "bot@kabunosuke.app"
+          git add stocks_data.json
+          # 変更がある場合だけコミット（変更なければスキップ）
+          if git diff --cached --quiet; then
+            echo "データに変更なし。スキップ。"
+          else
+            git commit -m "📊 自動更新 $(TZ=Asia/Tokyo date '+%Y/%m/%d %H:%M JST')"
+            git push
+          fi
