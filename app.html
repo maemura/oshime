@@ -225,6 +225,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 }
 .tbl-rank.top{color:var(--orange);}
 .tbl-name{font-weight:600;color:var(--text2);font-size:12px;}
+.tbl-name-link{font-weight:600;color:var(--text2);font-size:12px;text-decoration:none;display:block;}
+.tbl-name-link:hover{color:var(--navy);text-decoration:underline;}
 .tbl-code{font-family:var(--fn);font-size:10px;color:var(--text3);}
 .tbl-zone{
   display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;
@@ -280,11 +282,18 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .bd-v{font-family:var(--fn);font-size:10px;min-width:38px;text-align:right;}
 .bd-v.pos{color:var(--green);}  .bd-v.neg{color:var(--up);}
 .detail-fav-btn{
-  margin-top:12px;padding:7px 16px;border-radius:var(--r2);
+  padding:7px 16px;border-radius:var(--r2);
   font-family:var(--fh);font-size:11px;font-weight:700;cursor:pointer;
   border:1.5px solid var(--border);background:var(--bg2);color:var(--text2);
 }
 .detail-fav-btn.active{background:var(--orange);color:#fff;border-color:var(--orange);}
+.detail-link-btn{
+  padding:7px 14px;border-radius:var(--r2);
+  font-family:var(--fh);font-size:11px;font-weight:700;
+  border:1.5px solid var(--border);background:var(--bg3);color:var(--navy);
+  text-decoration:none;display:inline-flex;align-items:center;
+}
+.detail-link-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
 /* 変化バッジ */
 .change-badge{
   display:inline-flex;align-items:center;padding:1px 6px;border-radius:3px;
@@ -990,7 +999,7 @@ function renderTable(){
       <tr class="tbl-row ${isExpanded?'expanded':''}" onclick="toggleDetail('${s.code}')">
         <td><span class="tbl-rank ${i<3?'top':''}">${i+1}</span></td>
         <td>
-          <div class="tbl-name">${s.name}</div>
+          <a class="tbl-name-link" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation();gaEvent('click_yahoo',{code:s.code})">${s.name}</a>
           <div style="display:flex;align-items:center;gap:5px;margin-top:2px;flex-wrap:wrap">
             <div class="tbl-code">${s.code}・${s.sector}</div>
             ${prevBadge}
@@ -1073,9 +1082,13 @@ function buildDetailBox(s){
           <tr><td style="padding:5px 8px;font-size:11px">配当利回り</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.dividend}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">3%以上が高配当</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">PBR</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.pbr}倍</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">1倍以下が割安</td></tr>
         </table>
-        <button class="detail-fav-btn ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav('${s.code}')">
-          ${isFav?'★ ウォッチ登録済み':'☆ ウォッチに追加'}
-        </button>
+        <div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap">
+          <button class="detail-fav-btn ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav('${s.code}')">
+            ${isFav?'★ ウォッチ済み':'☆ ウォッチ追加'}
+          </button>
+          <a class="detail-link-btn" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation();gaEvent('click_yahoo',{code:'${s.code}'})">Yahoo株価 ↗</a>
+          <a class="detail-link-btn" href="https://kabutan.jp/stock/?code=${s.code}" target="_blank" rel="noopener" onclick="event.stopPropagation();gaEvent('click_kabutan',{code:'${s.code}'})">株探 ↗</a>
+        </div>
       </div>
     </div>
   </div>`;
