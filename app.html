@@ -952,7 +952,7 @@ function trendBadge(s){
   const volTxt = `出来高${vr}x`;
   const retTxt = ret!=null && ret!==0 ? ` / ${ret>0?'+':''}${ret}%` : '';
   const cls = vr>=2.0 ? 'hot' : 'warm';
-  return \`<span class="trend-badge \${cls}" title="\${volTxt}\${retTxt}">\${tag}</span>\`;
+  return '<span class="trend-badge '+cls+'" title="'+volTxt+retTxt+'">'+tag+'</span>';
 }
 
 function renderTable(){
