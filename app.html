@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>かぶのすけ — 今日の押し目候補</title>
-<meta name="description" content="東証プライム全銘柄を毎朝自動スキャン。地合い判定×高配当×割安で今日の買い場を即表示。">
+<title>かぶのすけ — 高配当株の買い場を毎日スキャン</title>
+<meta name="description" content="東証プライム1,600銘柄を毎朝自動スキャン。大型安定株の自分比押し目度・下落トレンドで今日の買い場を即表示。">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWW0W11P5T"></script>
 <script>
   window.dataLayer=window.dataLayer||[];
@@ -197,36 +197,43 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .top5-section{
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
   margin-bottom:14px;overflow:hidden;
+  border-left:4px solid var(--orange);
 }
 .top5-header{
   padding:14px 16px 10px;border-bottom:1px solid var(--border);
+  background:linear-gradient(135deg,var(--bg2),var(--bg3));
 }
 .top5-title{font-family:var(--fh);font-size:15px;font-weight:700;color:var(--text1);}
 .top5-sub{font-size:10px;color:var(--text3);margin-top:2px;}
 .top5-list{padding:0;}
 .top5-item{
-  display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);
-  cursor:pointer;transition:background .15s;
+  display:flex;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);
+  cursor:pointer;transition:background .15s;min-height:48px;
 }
 .top5-item:last-child{border-bottom:none;}
-.top5-item:hover{background:var(--bg3);}
+.top5-item:hover,.top5-item:active{background:var(--bg3);}
 .top5-rank{
-  font-family:var(--fn);font-size:18px;font-weight:700;color:var(--navy);
-  min-width:24px;padding-top:2px;
+  font-family:var(--fn);font-size:20px;font-weight:700;color:var(--navy);
+  min-width:28px;padding-top:2px;
 }
 .top5-rank.gold{color:#f59e0b;}
 .top5-info{flex:1;min-width:0;}
 .top5-name-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
-.top5-name{font-family:var(--fh);font-size:13px;font-weight:700;color:var(--text1);}
+.top5-name{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--text1);}
 .top5-score{
   font-family:var(--fn);font-size:11px;font-weight:700;padding:2px 8px;
   border-radius:4px;background:var(--navy);color:#fff;
 }
 .top5-score.hi{background:var(--green);}
-.top5-meta{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--fn);}
+.top5-meta{font-size:11px;color:var(--text2);margin-top:4px;font-family:var(--fn);line-height:1.6;}
 .top5-reason{
-  font-size:11px;color:var(--text3);margin-top:4px;line-height:1.5;
-  padding-left:12px;border-left:2px solid var(--border);
+  font-size:11px;color:var(--text3);margin-top:5px;line-height:1.6;
+  padding-left:12px;border-left:2px solid var(--orange);
+}
+@media(max-width:480px){
+  .top5-name{font-size:13px;}
+  .top5-meta{font-size:10px;}
+  .top5-reason{font-size:10px;}
 }
 
 /* ── SECTOR FILTER ── */
@@ -239,9 +246,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   display:flex;gap:6px;padding:2px 0;white-space:nowrap;
 }
 .sector-chip{
-  border:1px solid var(--border);border-radius:16px;padding:5px 12px;
-  font-family:var(--fh);font-size:11px;font-weight:600;color:var(--text3);
+  border:1px solid var(--border);border-radius:16px;padding:7px 14px;
+  font-family:var(--fh);font-size:12px;font-weight:600;color:var(--text3);
   cursor:pointer;background:var(--bg3);flex-shrink:0;transition:all .15s;
+  min-height:36px;display:flex;align-items:center;
 }
 .sector-chip.active{background:var(--navy);color:#fff;border-color:var(--navy);}
 .sector-chip .sector-count{font-weight:400;opacity:.7;margin-left:3px;}
@@ -366,7 +374,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .trend-badge.warm{background:rgba(148,101,0,0.08);color:var(--amber);border:1px solid rgba(148,101,0,0.15);}
 
 /* ── STYLE TABS ── */
-.style-tabs-wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;}
+.style-tabs-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px;}
 .style-tab{
   background:var(--bg2);border:2px solid var(--border);border-radius:var(--r);
   padding:14px 16px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all 0.15s;
@@ -378,7 +386,16 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .style-tab.active .style-tab-title{color:#fff;}
 .style-tab-desc{font-size:10px;color:var(--text3);margin-top:2px;}
 .style-tab.active .style-tab-desc{color:rgba(255,255,255,0.6);}
-@media(max-width:640px){.style-tabs-wrap{grid-template-columns:1fr;}.style-tab{padding:10px 12px;}}
+@media(max-width:768px){
+  .style-tabs-wrap{
+    display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;gap:8px;padding-bottom:4px;
+  }
+  .style-tabs-wrap::-webkit-scrollbar{display:none;}
+  .style-tab{min-width:160px;flex-shrink:0;padding:10px 12px;}
+  .style-tab-ico{font-size:20px;}
+  .style-tab-title{font-size:12px;}
+}
 
 /* ── TREND WARNING ── */
 .trend-warning{
@@ -508,7 +525,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .btn-logic-close{width:100%;padding:10px;background:var(--navy);color:#fff;border:none;border-radius:var(--r);font-family:var(--fh);font-size:13px;font-weight:700;cursor:pointer;}
 
 @media(max-width:600px){
-  .stock-table th:nth-child(n+7),.stock-table td:nth-child(n+7){display:none;}
+  .stock-table th:nth-child(n+8),.stock-table td:nth-child(n+8){display:none;}
 }
 @media(max-width:480px){
   .stock-table th:nth-child(n+6),.stock-table td:nth-child(n+6){display:none;}
@@ -522,7 +539,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   <div class="topbar-inner">
     <div>
       <span class="logo-name">かぶのすけ</span>
-      <span class="logo-tag">高配当・割安株の買い場を毎日スキャン</span>
+      <span class="logo-tag">高配当株の買い場を毎朝スキャン</span>
     </div>
     <div class="topbar-right">
       <button class="btn-topbar" onclick="switchTab('watch')">
@@ -541,11 +558,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <!-- HERO -->
     <div class="hero">
       <div class="hero-eyebrow" id="heroEyebrow">
-        <span class="hero-dot"></span>安定高配当 — 毎朝自動更新
+        <span class="hero-dot"></span>東証プライム1,600銘柄 — 毎朝7:30自動更新
       </div>
       <div class="hero-top">
         <div class="hero-left">
-          <div class="hero-title">今日の<span>押し目候補</span>を即表示</div>
+          <div class="hero-title">今日の<span>買い場</span>を即表示</div>
         </div>
       </div>
       <div class="hero-stats" id="heroStats">
@@ -684,14 +701,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <div class="settings-handle"></div>
     <div class="settings-title">⚙ 表示設定</div>
     <div class="setting-row">
-      <div class="setting-label">スキャンモード</div>
-      <div class="setting-opts" id="set-mode">
-        <div class="setting-opt active" data-val="dividend" onclick="selectSettingOpt(this,'mode')">💰 安定高配当</div>
-        <div class="setting-opt" data-val="value" onclick="selectSettingOpt(this,'mode')">🛡 割安バリュー</div>
-        <div class="setting-opt" data-val="rebound" onclick="selectSettingOpt(this,'mode')">⚡ 強押し目</div>
-      </div>
-    </div>
-    <div class="setting-row">
       <div class="setting-label">表示件数</div>
       <div class="setting-opts" id="set-count">
         <div class="setting-opt" data-val="10" onclick="selectSettingOpt(this,'count')">TOP 10</div>
@@ -725,19 +734,20 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   <div class="logic-box">
     <div class="modal-handle"></div>
     <div class="logic-title">スコアロジック（100点満点）</div>
-    <div class="logic-sub">押し目×高配当タブは6指標＋安定株ボーナスで評価。時価総額が大きい安定株ほど押し目で上位に表示されます。</div>
+    <div class="logic-sub">🏦 安定高配当タブは6指標＋安定株ボーナスで評価。配当×時価総額×自分比押し目度の総合評価です。</div>
     <table class="logic-tbl">
       <tr><th>指標</th><th>条件</th><th style="text-align:right">最大点</th></tr>
-      <tr><td>配当利回り</td><td>2.5%〜5%以上</td><td class="pts">30pt</td></tr>
-      <tr><td>時価総額</td><td>500億〜1兆円以上</td><td class="pts">15pt</td></tr>
-      <tr><td>25MA乖離</td><td>-1.5%〜-10%以下</td><td class="pts">22pt</td></tr>
-      <tr><td>RSI</td><td>43以下〜25以下</td><td class="pts">18pt</td></tr>
+      <tr><td>配当利回り</td><td>2%〜5%以上</td><td class="pts">25pt</td></tr>
+      <tr><td>時価総額</td><td>500億〜5兆円以上</td><td class="pts">15pt</td></tr>
+      <tr><td>自分比押し目度</td><td>-0.5σ〜-3σ以下</td><td class="pts">20pt</td></tr>
+      <tr><td>5日リターン</td><td>-0.5%〜-5%以下</td><td class="pts">15pt</td></tr>
+      <tr><td>10日リターン</td><td>-1%〜-8%以下</td><td class="pts">10pt</td></tr>
       <tr><td>PBR</td><td>1.5倍以下〜0.7倍以下</td><td class="pts">10pt</td></tr>
-      <tr><td>安定株ボーナス</td><td>配当3%+黒字+大型</td><td class="pts">5pt</td></tr>
-      <tr><td>⚠ペナルティ</td><td>出来高1.5倍超 / 小型株</td><td class="pts" style="color:var(--up)">-10〜-25pt</td></tr>
+      <tr><td>安定株ボーナス</td><td>黒字+配当2%+大型</td><td class="pts">5pt</td></tr>
     </table>
     <div class="logic-note">
-      🏦 押し目×高配当 → 配当+時価総額+押し目の複合評価<br>
+      🏦 安定高配当 → 配当×時価総額×自分比押し目度×下落トレンド<br>
+      📉 押し目×高配当 → MA乖離・RSI重視の暴落拾い<br>
       🌱 グロース押し目 → MA乖離・RSI重視・小型株OK<br>
       🔥 話題株 → 出来高急増・注目度スコア順
     </div>
@@ -1626,6 +1636,7 @@ function setDispCount(n,el){
 function openSettings(){
   // 現在の設定を反映
   document.querySelectorAll('#set-mode .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===settings.mode));
+  // set-mode removed from UI; keep for backward compat
   document.querySelectorAll('#set-count .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===String(settings.count)));
   document.querySelectorAll('#set-mindiv .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===String(settings.mindiv)));
   document.querySelectorAll('#set-zone .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===settings.zone));
@@ -1767,7 +1778,7 @@ async function loadRealData(){
       document.getElementById('trustDot').style.background='var(--green)';
       document.getElementById('trustBanner').style.borderLeftColor='var(--green)';
       document.getElementById('totalCountBadge').textContent=j.total+'銘柄';
-      document.getElementById('heroEyebrow').innerHTML='<span class="hero-dot"></span>📡 実データ読込済み — 押し目 × 高配当 — 毎朝8:30自動更新';
+      document.getElementById('heroEyebrow').innerHTML='<span class="hero-dot"></span>📡 実データ読込済み — 1,600銘柄スキャン — 毎朝7:30自動更新';
     }else throw new Error('no stocks');
   }catch{
     dataSource='sample';
