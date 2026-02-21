@@ -193,6 +193,42 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .filter-sep{width:1px;height:20px;background:var(--border);}
 .filter-count{font-family:var(--fn);font-size:11px;color:var(--text3);margin-left:auto;}
 
+/* ── TODAY'S TOP5 ── */
+.top5-section{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  margin-bottom:14px;overflow:hidden;
+}
+.top5-header{
+  padding:14px 16px 10px;border-bottom:1px solid var(--border);
+}
+.top5-title{font-family:var(--fh);font-size:15px;font-weight:700;color:var(--text1);}
+.top5-sub{font-size:10px;color:var(--text3);margin-top:2px;}
+.top5-list{padding:0;}
+.top5-item{
+  display:flex;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);
+  cursor:pointer;transition:background .15s;
+}
+.top5-item:last-child{border-bottom:none;}
+.top5-item:hover{background:var(--bg3);}
+.top5-rank{
+  font-family:var(--fn);font-size:18px;font-weight:700;color:var(--navy);
+  min-width:24px;padding-top:2px;
+}
+.top5-rank.gold{color:#f59e0b;}
+.top5-info{flex:1;min-width:0;}
+.top5-name-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+.top5-name{font-family:var(--fh);font-size:13px;font-weight:700;color:var(--text1);}
+.top5-score{
+  font-family:var(--fn);font-size:11px;font-weight:700;padding:2px 8px;
+  border-radius:4px;background:var(--navy);color:#fff;
+}
+.top5-score.hi{background:var(--green);}
+.top5-meta{font-size:11px;color:var(--text2);margin-top:3px;font-family:var(--fn);}
+.top5-reason{
+  font-size:11px;color:var(--text3);margin-top:4px;line-height:1.5;
+  padding-left:12px;border-left:2px solid var(--border);
+}
+
 /* ── SECTOR FILTER ── */
 .sector-filter-wrap{
   margin-bottom:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;
@@ -537,6 +573,15 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 
     <!-- STANCE -->
     <div id="stanceBox"></div>
+
+    <!-- TODAY'S TOP5 -->
+    <div class="top5-section" id="top5Section" style="display:none">
+      <div class="top5-header">
+        <div class="top5-title">🎯 今日の注目 TOP5</div>
+        <div class="top5-sub">全指標を総合評価・毎朝自動更新</div>
+      </div>
+      <div class="top5-list" id="top5List"></div>
+    </div>
 
     <!-- STYLE TABS -->
     <div class="style-tabs-wrap">
@@ -1417,6 +1462,73 @@ function renderDanger(){
 }
 
 // ═══════════════════════════════════════
+// TODAY'S TOP5
+// ═══════════════════════════════════════
+function genReason(s){
+  const parts=[];
+  const div=s.dividend||0;
+  const mc=s.market_cap_b||0;
+  const r5=s.ret5||0;
+  const r10=s.ret10||0;
+  const z=s.dip_zscore||0;
+  const pbr=s.pbr||99;
+  // 配当
+  if(div>=5) parts.push('超高配当'+div+'%');
+  else if(div>=4) parts.push('高配当'+div+'%');
+  else if(div>=3) parts.push('配当'+div+'%');
+  else if(div>=2) parts.push('配当'+div+'%の大型安定株');
+  // 下落トレンド
+  if(r5<=-5) parts.push('5日で'+r5.toFixed(1)+'%急落中');
+  else if(r5<=-2) parts.push('5日で'+r5.toFixed(1)+'%の下落トレンド');
+  if(r10<=-8) parts.push('10日で'+r10.toFixed(1)+'%の中期下落');
+  // 自分比
+  if(z<=-2) parts.push('自分比で異例の安値水準（'+z.toFixed(1)+'σ）');
+  else if(z<=-1) parts.push('自分比で押し目水準（'+z.toFixed(1)+'σ）');
+  // 割安
+  if(pbr<=0.7) parts.push('PBR'+pbr+'倍の超割安');
+  else if(pbr<=1.0) parts.push('PBR'+pbr+'倍で割安');
+  // 時価総額
+  if(mc>=10000) parts.push('時価総額'+(mc/10000).toFixed(1)+'兆の大型株');
+  else if(mc>=5000) parts.push('時価総額'+Math.round(mc)+'億の準大型');
+  // 結論
+  if(r5<=-3&&div>=3) return parts.join('。')+'。反発すれば配当と値上がり益の両取りが狙える局面。';
+  if(z<=-1.5&&mc>=5000) return parts.join('。')+'。大型安定株の珍しい押し目。長期保有向き。';
+  if(div>=5&&pbr<=1.0) return parts.join('。')+'。高配当＋割安の二重メリット。';
+  return parts.join('。')+'。';
+}
+function renderTop5(){
+  const sec=document.getElementById('top5Section');
+  if(!sec||!STOCKS.length) return;
+  // bluechipスコアでTOP5
+  const top=STOCKS.filter(s=>(s.dividend||0)>=2&&(s.market_cap_b||0)>=500)
+    .map(s=>({...s,bc:calcScoreBluechip(s)}))
+    .sort((a,b)=>b.bc-a.bc)
+    .slice(0,5);
+  if(!top.length){sec.style.display='none';return;}
+  sec.style.display='block';
+  document.getElementById('top5List').innerHTML=top.map((s,i)=>{
+    const scCls=s.bc>=60?'hi':'';
+    const rankCls=i===0?'gold':'';
+    const mcTxt=s.market_cap_b>=10000?((s.market_cap_b/10000).toFixed(1)+'兆'):(Math.round(s.market_cap_b)+'億');
+    const r5=s.ret5||0;
+    const r10=s.ret10||0;
+    return`<div class="top5-item" onclick="setStyleTab('bluechip',document.getElementById('tab-bluechip'));expandedCode='${s.code}';run();document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'})">
+      <div class="top5-rank ${rankCls}">${i+1}</div>
+      <div class="top5-info">
+        <div class="top5-name-row">
+          <span class="top5-name">${s.name}</span>
+          <span class="top5-score ${scCls}">${s.bc}pt</span>
+        </div>
+        <div class="top5-meta">
+          ${s.code} | 配当${s.dividend}% | 時価総額${mcTxt} | 5日${r5>0?'+':''}${r5.toFixed(1)}% | 10日${r10>0?'+':''}${r10.toFixed(1)}%
+        </div>
+        <div class="top5-reason">${genReason(s)}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════
 // SECTOR FILTER
 // ═══════════════════════════════════════
 const SECTOR_MAP={
@@ -1672,6 +1784,7 @@ async function loadRealData(){
 function run(){
   processStocks();
   if(currentStyleTab==='bluechip'||currentStyleTab==='stable') buildSectorChips();
+  renderTop5();
   renderHeroStats();
   renderPulse();
   // テーブルを最優先で描画
