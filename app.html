@@ -724,26 +724,57 @@ try{
 function dv(p,m){return m?Math.round((p-m)/m*1000)/10:0;}
 
 function calcScore(s,mode){
+  // stableタブ用スコア（ブラウザ計算フォールバック）
+  if(currentStyleTab==='stable') return calcScoreStable(s);
+  return calcScoreGrowth(s);
+}
+
+function calcScoreStable(s){
   const d25=dv(s.price,s.ma25);
   let score=0;
-  let dp=s.dividend>=5?30:s.dividend>=4.5?25:s.dividend>=4?20:s.dividend>=3.5?15:s.dividend>=3?10:s.dividend>=2.5?5:0;
-  if(mode==='dividend')dp=Math.min(Math.round(dp*1.4),40);
-  score+=dp;
-  let mp=d25<=-8?28:d25<=-6?22:d25<=-4?12:d25<=-2?5:0;
-  if(mode==='rebound')mp=Math.min(Math.round(mp*1.5),35);
-  score+=mp;
-  let rp=s.rsi<=28?22:s.rsi<=32?16:s.rsi<=38?10:s.rsi<=42?5:0;
-  if(mode==='rebound')rp=Math.min(Math.round(rp*1.3),25);
-  score+=rp;
-  let pp=s.pbr<=0.7?18:s.pbr<=0.9?13:s.pbr<=1.1?7:s.pbr<=1.5?3:0;
-  if(mode==='value')pp=Math.min(Math.round(pp*1.6),25);
-  score+=pp;
-  let ep=s.per<=9?12:s.per<=11?8:s.per<=13?5:s.per<=15?2:0;
-  if(mode==='value')ep=Math.min(Math.round(ep*1.4),15);
-  score+=ep;
-  if(s.vol_r>=1.5)score-=20;
-  if(mode==='dividend'&&s.dividend<0.5)score=Math.min(score,10);
-  if(s.dividend<0.5&&s.pbr>8)score=Math.max(0,score-30);
+  // 配当（最大40点・最重視）
+  const div=s.dividend||0;
+  score+=div>=5?40:div>=4.5?33:div>=4?26:div>=3.5?18:div>=3?10:0;
+  // 配当3%未満は実質除外
+  if(div<3) return 0;
+  // 売買代金ボーナス（大型株優遇・最大15点）
+  // turnover_avg5が大きい=大型株=安定
+  const to=s.turnover_avg5||0;
+  score+=to>=500?15:to>=100?10:to>=30?6:to>=10?3:0;
+  // PBR（最大18点）
+  const pbr=s.pbr||99;
+  score+=pbr<=0.7?18:pbr<=0.9?13:pbr<=1.1?7:pbr<=1.5?3:0;
+  // MA乖離（最大15点）
+  score+=d25<=-8?15:d25<=-5?11:d25<=-3?6:d25<=-1?2:0;
+  // RSI（最大12点）
+  const rsi=s.rsi||50;
+  score+=rsi<=30?12:rsi<=38?8:rsi<=45?4:0;
+  // PER（最大10点）
+  const per=s.per||99;
+  score+=per<=10?10:per<=13?6:per<=16?3:0;
+  // ペナルティ
+  if(s.vol_r>=1.5) score-=15;
+  return Math.max(0,Math.min(score,100));
+}
+
+function calcScoreGrowth(s){
+  const d25=dv(s.price,s.ma25);
+  let score=0;
+  // MA乖離（最大35点・最重視）
+  score+=d25<=-15?35:d25<=-10?28:d25<=-6?20:d25<=-3?10:d25<=-1?3:0;
+  // RSI（最大30点）
+  const rsi=s.rsi||50;
+  score+=rsi<=20?30:rsi<=28?22:rsi<=35?14:rsi<=42?7:0;
+  // PBR（最大15点）
+  const pbr=s.pbr||99;
+  score+=pbr<=0.8?15:pbr<=1.2?10:pbr<=2.0?5:0;
+  // 配当（最大10点・補助）
+  const div=s.dividend||0;
+  score+=div>=4?10:div>=2?6:div>=1?2:0;
+  // PER（最大10点）
+  const per=s.per||99;
+  score+=per<=10?10:per<=15?5:0;
+  if(s.vol_r>=2.0) score-=15;
   return Math.max(0,Math.min(score,100));
 }
 
