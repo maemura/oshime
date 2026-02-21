@@ -193,6 +193,23 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .filter-sep{width:1px;height:20px;background:var(--border);}
 .filter-count{font-family:var(--fn);font-size:11px;color:var(--text3);margin-left:auto;}
 
+/* ── SECTOR FILTER ── */
+.sector-filter-wrap{
+  margin-bottom:12px;overflow-x:auto;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.sector-filter-wrap::-webkit-scrollbar{display:none;}
+.sector-filter-scroll{
+  display:flex;gap:6px;padding:2px 0;white-space:nowrap;
+}
+.sector-chip{
+  border:1px solid var(--border);border-radius:16px;padding:5px 12px;
+  font-family:var(--fh);font-size:11px;font-weight:600;color:var(--text3);
+  cursor:pointer;background:var(--bg3);flex-shrink:0;transition:all .15s;
+}
+.sector-chip.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.sector-chip .sector-count{font-weight:400;opacity:.7;margin-left:3px;}
+
 /* ── STOCK TABLE ── */
 .stock-table-wrap{
   background:var(--bg2);border:1px solid var(--border);
@@ -565,6 +582,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
       <div id="styleNote" style="font-size:10px;color:var(--amber);margin-left:auto;"></div>
     </div>
 
+    <!-- SECTOR FILTER -->
+    <div class="sector-filter-wrap" id="sectorFilterWrap" style="display:none">
+      <div class="sector-filter-scroll" id="sectorFilterScroll"></div>
+    </div>
+
     <!-- STOCK TABLE -->
     <div class="stock-table-wrap" id="tableWrap">
       <div style="padding:20px;text-align:center">
@@ -702,6 +724,7 @@ let processed=[];
 let dataSource='sample';
 let currentMode='dividend';
 let currentStyleTab='bluechip'; // 'bluechip', 'stable', 'growth'
+let currentSector='all';
 let dispCount=10;
 let sortKey='score'; let sortDir='desc';
 let expandedCode=null;
@@ -750,19 +773,25 @@ function calcScoreBluechip(s){
   const mc=s.market_cap_b||0;
   if(div<2||mc<500) return 0;
   let score=0;
-  // 配当利回り (max 30pt)
-  score+=div>=5?30:div>=4.5?25:div>=4?20:div>=3.5?16:div>=3?12:div>=2.5?7:div>=2?3:0;
-  // 時価総額 (max 20pt)
-  score+=mc>=50000?20:mc>=10000?17:mc>=5000?14:mc>=1000?10:mc>=500?5:0;
-  // 自分比押し目度 (max 25pt)
+  // 配当利回り (max 25pt)
+  score+=div>=5?25:div>=4.5?21:div>=4?17:div>=3.5?13:div>=3?10:div>=2.5?6:div>=2?3:0;
+  // 時価総額 (max 15pt)
+  score+=mc>=50000?15:mc>=10000?13:mc>=5000?11:mc>=1000?8:mc>=500?4:0;
+  // 自分比押し目度 (max 20pt)
   const z=s.dip_zscore||0;
-  score+=z<=-3.0?25:z<=-2.0?20:z<=-1.5?15:z<=-1.0?10:z<=-0.5?5:0;
-  // PBR (max 15pt)
+  score+=z<=-3.0?20:z<=-2.0?16:z<=-1.5?12:z<=-1.0?8:z<=-0.5?4:0;
+  // 5日リターン (max 15pt)
+  const r5=s.ret5||0;
+  score+=r5<=-5?15:r5<=-3?11:r5<=-1.5?7:r5<=-0.5?3:0;
+  // 10日リターン (max 10pt)
+  const r10=s.ret10||0;
+  score+=r10<=-8?10:r10<=-5?7:r10<=-2?4:r10<=-1?2:0;
+  // PBR (max 10pt)
   const pbr=s.pbr||99;
-  score+=pbr<=0.7?15:pbr<=0.9?11:pbr<=1.2?7:pbr<=1.5?3:0;
-  // 安定株ボーナス (max 10pt)
-  if((s.per||0)>0&&div>=2&&mc>=5000) score+=10;
-  else if((s.per||0)>0&&div>=2&&mc>=1000) score+=5;
+  score+=pbr<=0.7?10:pbr<=0.9?7:pbr<=1.2?5:pbr<=1.5?2:0;
+  // 安定株ボーナス (max 5pt)
+  if((s.per||0)>0&&div>=2&&mc>=5000) score+=5;
+  else if((s.per||0)>0&&div>=2&&mc>=1000) score+=3;
   return Math.max(0,Math.min(score,100));
 }
 function calcScoreStable(s){
@@ -879,18 +908,24 @@ function calcBreakdownBluechip(s){
   const div=s.dividend||0;
   const mc=s.market_cap_b||0;
   const z=s.dip_zscore||0;
+  const r5=s.ret5||0;
+  const r10=s.ret10||0;
   const bd=[];
-  const dp=div>=5?30:div>=4.5?25:div>=4?20:div>=3.5?16:div>=3?12:div>=2.5?7:div>=2?3:0;
-  if(dp>0)bd.push({l:'配当利回り',v:dp,max:30,pos:true});
-  const mcp=mc>=50000?20:mc>=10000?17:mc>=5000?14:mc>=1000?10:mc>=500?5:0;
-  if(mcp>0)bd.push({l:'時価総額',v:mcp,max:20,pos:true});
-  const zp=z<=-3.0?25:z<=-2.0?20:z<=-1.5?15:z<=-1.0?10:z<=-0.5?5:0;
-  if(zp>0)bd.push({l:'自分比押し目度',v:zp,max:25,pos:true});
+  const dp=div>=5?25:div>=4.5?21:div>=4?17:div>=3.5?13:div>=3?10:div>=2.5?6:div>=2?3:0;
+  if(dp>0)bd.push({l:'配当利回り',v:dp,max:25,pos:true});
+  const mcp=mc>=50000?15:mc>=10000?13:mc>=5000?11:mc>=1000?8:mc>=500?4:0;
+  if(mcp>0)bd.push({l:'時価総額',v:mcp,max:15,pos:true});
+  const zp=z<=-3.0?20:z<=-2.0?16:z<=-1.5?12:z<=-1.0?8:z<=-0.5?4:0;
+  if(zp>0)bd.push({l:'自分比押し目度',v:zp,max:20,pos:true});
+  const r5p=r5<=-5?15:r5<=-3?11:r5<=-1.5?7:r5<=-0.5?3:0;
+  if(r5p>0)bd.push({l:'5日リターン',v:r5p,max:15,pos:true});
+  const r10p=r10<=-8?10:r10<=-5?7:r10<=-2?4:r10<=-1?2:0;
+  if(r10p>0)bd.push({l:'10日リターン',v:r10p,max:10,pos:true});
   const pbr=s.pbr||99;
-  const pp=pbr<=0.7?15:pbr<=0.9?11:pbr<=1.2?7:pbr<=1.5?3:0;
-  if(pp>0)bd.push({l:'PBR',v:pp,max:15,pos:true});
-  if((s.per||0)>0&&div>=2&&mc>=5000) bd.push({l:'安定株ボーナス',v:10,max:10,pos:true});
-  else if((s.per||0)>0&&div>=2&&mc>=1000) bd.push({l:'安定株ボーナス',v:5,max:10,pos:true});
+  const pp=pbr<=0.7?10:pbr<=0.9?7:pbr<=1.2?5:pbr<=1.5?2:0;
+  if(pp>0)bd.push({l:'PBR',v:pp,max:10,pos:true});
+  if((s.per||0)>0&&div>=2&&mc>=5000) bd.push({l:'安定株ボーナス',v:5,max:5,pos:true});
+  else if((s.per||0)>0&&div>=2&&mc>=1000) bd.push({l:'安定株ボーナス',v:3,max:5,pos:true});
   return bd;
 }
 
@@ -919,6 +954,11 @@ function processStocks(){
     }
     return true;
   });
+
+  // セクターフィルター
+  if(currentSector!=='all'){
+    list=list.filter(s=>sectorMap(s.sector)===currentSector);
+  }
 
   processed=list.map(s=>{
     const d25=dv(s.price,s.ma25);
@@ -1375,6 +1415,45 @@ function renderDanger(){
 }
 
 // ═══════════════════════════════════════
+// SECTOR FILTER
+// ═══════════════════════════════════════
+const SECTOR_MAP={
+  'Financials':'金融','Financial Services':'金融',
+  'Consumer Cyclical':'消費循環','Consumer Defensive':'生活必需',
+  'Industrials':'産業','Technology':'テック',
+  'Communication Services':'通信','Real Estate':'不動産',
+  'Basic Materials':'素材','Energy':'エネルギー',
+  'Healthcare':'医療','Utilities':'公益',
+};
+function sectorMap(s){return SECTOR_MAP[s]||s||'その他';}
+function buildSectorChips(){
+  const wrap=document.getElementById('sectorFilterScroll');
+  if(!wrap)return;
+  // 現在のタブに該当する銘柄のセクター集計
+  const counts={};
+  STOCKS.forEach(s=>{
+    if(currentStyleTab==='bluechip'&&((s.dividend||0)<2||(s.market_cap_b||0)<500))return;
+    if(currentStyleTab==='stable'&&((s.dividend||0)<2))return;
+    const sec=sectorMap(s.sector);
+    counts[sec]=(counts[sec]||0)+1;
+  });
+  const sorted=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
+  let html='<div class="sector-chip active" onclick="setSector(\'all\',this)">全セクター</div>';
+  sorted.forEach(([sec,cnt])=>{
+    const active=currentSector===sec?'active':'';
+    html+=`<div class="sector-chip ${active}" onclick="setSector('${sec}',this)">${sec}<span class="sector-count">${cnt}</span></div>`;
+  });
+  wrap.innerHTML=html;
+}
+function setSector(sec,el){
+  currentSector=sec;
+  document.querySelectorAll('.sector-chip').forEach(c=>c.classList.remove('active'));
+  if(el)el.classList.add('active');
+  run();
+  gaEvent('sector_filter',{sector:sec});
+}
+
+// ═══════════════════════════════════════
 // FILTER & MODE
 // ═══════════════════════════════════════
 function setMode(m,el){
@@ -1390,8 +1469,12 @@ function setMode(m,el){
 
 function setStyleTab(tab,el){
   currentStyleTab=tab;
+  currentSector='all'; // タブ切替時にリセット
   document.querySelectorAll('.style-tab').forEach(t=>t.classList.remove('active'));
   el.classList.add('active');
+  // セクターフィルター表示切替
+  document.getElementById('sectorFilterWrap').style.display=(tab==='bluechip'||tab==='stable')?'block':'none';
+  if(tab==='bluechip'||tab==='stable') buildSectorChips();
   const note=document.getElementById('styleNote');
   if(tab==='bluechip'){
     note.textContent='🏦 配当×時価総額×自分比押し目度で評価';
@@ -1586,6 +1669,7 @@ async function loadRealData(){
 // ═══════════════════════════════════════
 function run(){
   processStocks();
+  if(currentStyleTab==='bluechip'||currentStyleTab==='stable') buildSectorChips();
   renderHeroStats();
   renderPulse();
   // テーブルを最優先で描画
@@ -1601,6 +1685,7 @@ function run(){
 async function init(){
   updateWatchCount();
   await loadRealData();
+  document.getElementById('sectorFilterWrap').style.display='block';
   run();
   gaEvent('view_app',{data_source:dataSource});
 }
