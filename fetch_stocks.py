@@ -835,7 +835,7 @@ def main():
     buy_all   = [s for s in results if s["score"] >= 60]
     top200    = results[:200]
     # 大型高配当株: 時価総額1000億以上 & 配当3%以上 → 押し目タブの母集団として常に含める
-    large_div = [s for s in results if s.get("market_cap_b", 0) >= 1000 and s.get("dividend", 0) >= 3]
+    large_div = [s for s in results if (s.get("market_cap_b", 0) >= 1000 and s.get("dividend", 0) >= 3) or (s.get("market_cap_b", 0) >= 5000 and s.get("dividend", 0) >= 2)]
     print(f"  📦 大型高配当株（常時収録）: {len(large_div)}銘柄")
     # 和集合（重複なし・スコア順維持）
     seen = set()

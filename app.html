@@ -860,7 +860,7 @@ function processStocks(){
 
   let list=STOCKS.filter(s=>{
     if(currentStyleTab==='stable'){
-      const minD=minDiv>0?minDiv:3;
+      const minD=minDiv>0?minDiv:2;
       if((s.dividend||0)<minD) return false;
       // 大型・中型のみ（売買代金10億以上）
       if((s.turnover_avg5||0) < 10 && (s.turnover_avg5||0) > 0) return false;
