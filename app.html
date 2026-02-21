@@ -751,6 +751,11 @@ function processStocks(){
   const minDiv=settings.mindiv||0;
   const zoneFilter=settings.zone||'all';
 
+  // モード別スコアキー（JSONに計算済みで入っている）
+  const scoreKey = currentMode==='dividend'?'score_dividend'
+                 : currentMode==='value'   ?'score_value'
+                 :                          'score_rebound';
+
   let list=STOCKS.filter(s=>{
     if(minDiv>0&&s.dividend<minDiv)return false;
     return true;
@@ -758,10 +763,10 @@ function processStocks(){
 
   processed=list.map(s=>{
     const d25=dv(s.price,s.ma25);
-    const d75=dv(s.price,s.ma75);
-    const score=calcScore(s,currentMode);
+    // スコアはJSONから取得（再計算しない → 高速化）
+    const score = s[scoreKey] ?? s.score ?? calcScore(s,currentMode);
     const zone=getZone(score);
-    return{...s,d25,d75,score,zone};
+    return{...s,d25,score,zone};
   });
 
   if(zoneFilter==='buy')processed=processed.filter(s=>s.zone.cls==='buy');
@@ -774,16 +779,18 @@ function processStocks(){
     return sortDir==='asc'?av-bv:bv-av;
   });
 
-  // 履歴記録
-  const now=new Date();
-  const e={
-    date:`${now.getMonth()+1}/${now.getDate()} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`,
-    mode:currentMode,count:processed.length,
-    top:processed[0]?.name||'—',topScore:processed[0]?.score||0
-  };
-  scanHistory.unshift(e);
-  scanHistory=scanHistory.slice(0,14);
-  try{localStorage.setItem('kbs_history',JSON.stringify(scanHistory));}catch(e){}
+  // 履歴記録（非同期で後回し）
+  requestAnimationFrame(()=>{
+    const now=new Date();
+    const e={
+      date:`${now.getMonth()+1}/${now.getDate()} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`,
+      mode:currentMode,count:processed.length,
+      top:processed[0]?.name||'—',topScore:processed[0]?.score||0
+    };
+    scanHistory.unshift(e);
+    scanHistory=scanHistory.slice(0,14);
+    try{localStorage.setItem('kbs_history',JSON.stringify(scanHistory));}catch(e){}
+  });
 }
 
 // ═══════════════════════════════════════
@@ -1001,7 +1008,9 @@ function renderTable(){
       ${detailRow}`;
   }).join('');
 
-  document.getElementById('tableWrap').innerHTML=`
+  // DOMへの書き込みを1回にまとめる（reflow最小化）
+  const wrap = document.getElementById('tableWrap');
+  wrap.innerHTML=`
     <table class="stock-table">
       <thead>
         <tr>
@@ -1318,9 +1327,13 @@ function run(){
   processStocks();
   renderHeroStats();
   renderPulse();
-  renderStance();
+  // テーブルを最優先で描画
   renderTable();
-  renderDanger();
+  // スタンス・危険銘柄は少し遅らせてもOK（体感速度改善）
+  requestAnimationFrame(()=>{
+    renderStance();
+    renderDanger();
+  });
   gaEvent('scan_executed',{mode:currentMode,buy_count:processed.filter(s=>s.zone.cls==='buy').length,data_source:dataSource});
 }
 
