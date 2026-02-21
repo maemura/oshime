@@ -622,23 +622,44 @@ def fetch_market():
 
 
 def calc_score_stable(s):
-    """安定高配当スコア：時価総額大・配当重視"""
+    """安定高配当スコア：時価総額大・配当重視・大型安定株優遇"""
     d25 = (s["price"] - s["ma25"]) / s["ma25"] * 100 if s["ma25"] else 0
-    score = 0
     div = s.get("dividend", 0)
-    score += 40 if div >= 5 else 32 if div >= 4.5 else 25 if div >= 4 else 18 if div >= 3.5 else 10 if div >= 3 else 0
-    pbr = s.get("pbr", 99)
-    score += 20 if pbr <= 0.7 else 15 if pbr <= 0.9 else 8 if pbr <= 1.1 else 3 if pbr <= 1.5 else 0
-    score += 20 if d25 <= -8 else 14 if d25 <= -5 else 8 if d25 <= -3 else 3 if d25 <= -1 else 0
+    if div < 2: return 0  # 配当2%未満は対象外
+
+    score = 0
+
+    # 配当利回り (max 30pt) — 3%台でもしっかり加点
+    score += (30 if div >= 5 else 25 if div >= 4.5 else 20 if div >= 4
+              else 16 if div >= 3.5 else 12 if div >= 3 else 6 if div >= 2.5 else 0)
+
+    # 時価総額ボーナス (max 15pt) — 大型安定株を優遇
+    mc = s.get("market_cap_b", 0)
+    score += (15 if mc >= 10000 else 11 if mc >= 5000 else 7 if mc >= 1000
+              else 3 if mc >= 500 else 0)
+    # 小型ペナルティ
+    if 0 < mc < 300: score -= 10
+
+    # 25MA乖離 (max 22pt) — 大型株向けに-1.5%から加点
+    score += (22 if d25 <= -10 else 18 if d25 <= -7 else 14 if d25 <= -5
+              else 9 if d25 <= -3 else 4 if d25 <= -1.5 else 0)
+
+    # RSI (max 18pt)
     rsi = s.get("rsi", 50)
-    score += 15 if rsi <= 30 else 10 if rsi <= 38 else 5 if rsi <= 45 else 0
-    per = s.get("per", 99)
-    score += 10 if per <= 10 else 6 if per <= 13 else 3 if per <= 16 else 0
-    if s.get("vol_r", 1) >= 1.5: score -= 20
-    if div < 0.5: score = min(score, 5)
-    mc = s.get("market_cap_b", 9999)
-    if 0 < mc < 300: score -= 20
-    elif 0 < mc < 500: score -= 10
+    score += (18 if rsi <= 25 else 14 if rsi <= 30 else 9 if rsi <= 37 else 4 if rsi <= 43 else 0)
+
+    # PBR (max 10pt)
+    pbr = s.get("pbr", 99)
+    score += (10 if pbr <= 0.7 else 7 if pbr <= 1.0 else 3 if pbr <= 1.5 else 0)
+
+    # 安定株ボーナス (max 5pt) — 配当3%以上・黒字・大型の三拍子
+    if div >= 3 and s.get("per", 0) > 0 and mc >= 1000:
+        score += 5
+
+    # 出来高急増ペナルティ
+    if s.get("vol_r", 1) >= 1.5: score -= 15
+    if s.get("vol_r", 1) >= 2.5: score -= 10
+
     return max(0, min(score, 100))
 
 
