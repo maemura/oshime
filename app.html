@@ -1180,7 +1180,7 @@ function renderTable(){
 
     const detailRow=isExpanded?`
       <tr class="detail-row" id="detail-${s.code}">
-        <td colspan="9">
+        <td colspan="10">
           ${buildDetailBox(s)}
         </td>
       </tr>`:'';
@@ -1191,7 +1191,7 @@ function renderTable(){
         <td>
           <a class="tbl-name-link" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation();gaEvent('click_yahoo',{code:s.code})">${s.name}</a>
           <div style="display:flex;align-items:center;gap:5px;margin-top:2px;flex-wrap:wrap">
-            <div class="tbl-code">${s.code}・${s.sector}</div>
+            <div class="tbl-code">${s.code}・${sectorMap(s.sector)}</div>
             ${prevBadge}
             ${trendBadge(s)}
           </div>
@@ -1202,7 +1202,8 @@ function renderTable(){
         <td class="tbl-num ${d25cls}">${s.d25>0?'+':''}${s.d25}%</td>
         <td class="tbl-num ${s.rsi<=30?'dn':''}">${s.rsi}</td>
         <td class="tbl-num">${s.turnover_avg5?s.turnover_avg5+'億':'—'}</td>
-        <td style="font-size:10px;color:var(--text3);text-align:right;white-space:nowrap">${s.sector||'—'}</td>
+        <td class="tbl-num" style="white-space:nowrap">${s.market_cap_b>=10000?((s.market_cap_b/10000).toFixed(1)+'兆'):(s.market_cap_b?Math.round(s.market_cap_b)+'億':'—')}</td>
+        <td style="font-size:10px;color:var(--text3);text-align:right;white-space:nowrap">${sectorMap(s.sector)}</td>
       </tr>
       ${detailRow}`;
   }).join('');
@@ -1221,6 +1222,7 @@ function renderTable(){
           ${thClick('d25','MA乖離')}
           ${thClick('rsi','RSI')}
           ${thClick('turnover_avg5','売買代金')}
+          ${thClick('market_cap_b','時価総額')}
           <th>セクター</th>
         </tr>
       </thead>
