@@ -604,7 +604,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
           <span class="hero-dot"></span>毎朝8:30・前場後12:30 自動更新
         </div>
         <div class="hero-title">今日の高配当押し目候補を<br><span>自動抽出</span></div>
-        <div class="hero-sub">日経の地合いも同時判定。26銘柄を5指標でスコアリングして、<strong>初心者でも買い時が一目でわかる</strong>無料ツール。</div>
+        <div class="hero-sub">日経の地合いも同時判定。東証プライム全銘柄を5指標でスコアリングして、<strong>初心者でも買い時が一目でわかる</strong>無料ツール。</div>
         <div class="hero-stats">
           <div class="hero-stat">
             <div class="hero-stat-val buy" id="hsBuy">—</div>
@@ -637,7 +637,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
         </div>
         <div class="trust-badges">
           <span class="tbadge">yfinance / 東証</span>
-          <span class="tbadge">26銘柄対象</span>
+          <span class="tbadge">東証プライム全銘柄</span>
           <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
         </div>
       </div>
@@ -909,7 +909,7 @@ function runWithAnimation(){
 
   const steps=[
     {text:'地合いを分析中...'},
-    {text:'26銘柄のスコアを計算中...'},
+    {text:'東証プライム全銘柄スキャン中...'},
     {text:'押し目候補を抽出中...'},
     {text:'スタンスを判定中...'},
   ];
@@ -1034,7 +1034,7 @@ function renderStance(){
     title='今日は買いやすい地合い';
     reason=hasMacroData
       ?`3軸スコア<strong>${total}/9点</strong>で強気圏。日経${md.nikkei_1d_chg>0?'+':''}${md.nikkei_1d_chg}%・NASDAQ${md.nasdaq_1d_chg>0?'+':''}${md.nasdaq_1d_chg}%と外部環境も安定。スキャン対象の買い圏は<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>で売られすぎ水準。配当4%超が<strong>${highDiv}件</strong>。長期保有を前提に積極的に検討できる局面です。`
-      :`スキャン結果から自動判定。買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>、平均25MA乖離<strong>${avgD25}%</strong>。数値が揃っており積極的に検討できる局面です。実データ連携で日米マーケット情報も加わります。`;
+      :`スキャン結果から自動判定。買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>、平均25MA乖離<strong>${avgD25}%</strong>。数値が揃っており積極的に検討できる局面です。実データ連携（update.sh）で日米マーケット情報も自動判定に加わります。`;
   } else if(total>=4){
     stance='neutral';icon='🟡';label='中立 — 厳選して仕込む日';
     title='今日は銘柄を選ぶ日';
@@ -1560,7 +1560,8 @@ async function loadRealData(){
       mFields.forEach(k=>{ if(j[k]!==undefined) marketData[k]=j[k]; });
       // Pulse バーも実データで更新
       if(j.nikkei_price) updatePulseFromMarket(j);
-      document.getElementById('trustText').innerHTML=`<span class="hi">${j.updated_at}</span> 更新 · 実データ読込済み`;
+      document.getElementById('trustText').innerHTML=`<span class="hi">${j.updated_at}</span> 更新 · ${j.total}銘柄スキャン済み`;
+      if(j.total){const tc=document.getElementById('totalCount');if(tc)tc.textContent=j.total+'銘柄';}
       document.getElementById('trustDot').style.background='var(--green)';
       document.getElementById('trustBanner').style.borderLeftColor='var(--green)';
     } else throw new Error();
