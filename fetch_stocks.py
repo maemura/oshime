@@ -501,22 +501,61 @@ def fetch_one(ticker, _retry=0):
         sector   = info.get("sector") or info.get("industry") or "その他"
         # 出来高・売買代金（直近5日平均）
         vol_avg5      = round(float(hist["Volume"].iloc[-5:].mean()), 0)
-        turnover_avg5 = round(float((hist["Volume"] * hist["Close"]).iloc[-5:].mean() / 1e8), 2)  # 億円
+        turnover_avg5 = round(float((hist["Volume"] * hist["Close"]).iloc[-5:].mean() / 1e8), 2)
+
+        # ── 注目度指標（追加API不要・histから計算）──
+        # 昨日の出来高倍率（昨日1日 vs 過去20日平均）
+        vol_yesterday  = float(hist["Volume"].iloc[-1])
+        vol_mean20     = float(hist["Volume"].iloc[-20:].mean())
+        vol_ratio_1d   = round(vol_yesterday / vol_mean20, 2) if vol_mean20 > 0 else 1.0
+
+        # 前日比（昨日終値 vs 一昨日終値）
+        ret_1d = 0.0
+        if len(closes) >= 2:
+            ret_1d = round((float(closes.iloc[-1]) - float(closes.iloc[-2])) / float(closes.iloc[-2]) * 100, 2)
+
+        # 昨日の値幅率 (高値-安値)/終値 %
+        range_pct = 0.0
+        if "High" in hist.columns and "Low" in hist.columns:
+            h_yesterday = float(hist["High"].iloc[-1])
+            l_yesterday = float(hist["Low"].iloc[-1])
+            range_pct   = round((h_yesterday - l_yesterday) / price * 100, 2)
+
+        # 始値ギャップ（寄り付きギャップ率）
+        gap_pct = 0.0
+        if "Open" in hist.columns and len(closes) >= 2:
+            open_today  = float(hist["Open"].iloc[-1])
+            close_prev  = float(closes.iloc[-2])
+            gap_pct     = round((open_today - close_prev) / close_prev * 100, 2)
+
+        # trend_score: log(vol_ratio) * 60 + |ret_1d| * 4 + |range_pct| * 3
+        import math
+        trend_score = round(
+            math.log(max(vol_ratio_1d, 0.01)) * 60
+            + abs(ret_1d) * 4
+            + abs(range_pct) * 3,
+        1)
 
         return {
-            "code":         ticker.replace(".T",""),
-            "name":         name,
-            "sector":       sector,
-            "price":        price,
-            "ma25":         ma25,
-            "ma75":         ma75,
-            "rsi":          int(rsi),
-            "dividend":     dividend,
-            "pbr":          pbr,
-            "per":          per,
-            "vol_r":        vol_r,
-            "vol_avg5":     int(vol_avg5),      # 直近5日平均出来高（株数）
-            "turnover_avg5": turnover_avg5,     # 直近5日平均売買代金（億円）
+            "code":          ticker.replace(".T",""),
+            "name":          name,
+            "sector":        sector,
+            "price":         price,
+            "ma25":          ma25,
+            "ma75":          ma75,
+            "rsi":           int(rsi),
+            "dividend":      dividend,
+            "pbr":           pbr,
+            "per":           per,
+            "vol_r":         vol_r,
+            "vol_avg5":      int(vol_avg5),
+            "turnover_avg5": turnover_avg5,
+            # ── 注目度フィールド ──
+            "vol_ratio_1d":  vol_ratio_1d,   # 昨日出来高倍率（20日比）
+            "ret_1d":        ret_1d,          # 昨日前日比%
+            "range_pct":     range_pct,       # 昨日値幅%
+            "gap_pct":       gap_pct,         # 始値ギャップ%
+            "trend_score":   trend_score,     # 注目度スコア
         }
     except Exception as e:
         err = str(e).lower()
@@ -672,7 +711,7 @@ def main():
     prev_buy    = sum(1 for v in prev_scores.values() if v>=60) if prev_scores else None
     elapsed     = round(time.time()-start,1)
 
-    # 出来高ランキングTOP20（アプリのランキングタブ用）
+    # 出来高ランキングTOP20
     vol_ranking = sorted(
         [s for s in results if s.get("vol_avg5",0)>0],
         key=lambda x: -x.get("turnover_avg5", 0)
@@ -685,16 +724,57 @@ def main():
         for s in vol_ranking
     ]
 
+    # 注目度ランキングTOP20（trend_score順）
+    trend_ranking = sorted(
+        [s for s in results if s.get("trend_score") is not None],
+        key=lambda x: -x.get("trend_score", 0)
+    )[:20]
+    trend_ranking_data = [
+        {
+            "code":         s["code"],
+            "name":         s["name"],
+            "sector":       s["sector"],
+            "price":        s["price"],
+            "vol_ratio_1d": s.get("vol_ratio_1d", 1.0),
+            "ret_1d":       s.get("ret_1d", 0),
+            "range_pct":    s.get("range_pct", 0),
+            "gap_pct":      s.get("gap_pct", 0),
+            "trend_score":  s.get("trend_score", 0),
+            "score":        s["score"],
+            "dividend":     s["dividend"],
+        }
+        for s in trend_ranking
+    ]
+
+    # ── 配信用データを絞る（ファイルサイズ削減・高速化） ──
+    # スコア順TOP200 + 買い圏全件（どちらか多い方）
+    buy_all   = [s for s in results if s["score"] >= 60]
+    top200    = results[:200]
+    # 和集合（重複なし・スコア順維持）
+    seen = set()
+    stocks_out = []
+    for s in top200 + buy_all:
+        if s["code"] not in seen:
+            seen.add(s["code"])
+            stocks_out.append(s)
+    stocks_out.sort(key=lambda x: -x["score"])
+
+    # 各銘柄から不要フィールドを省いて軽量化
+    KEEP = {"code","name","sector","price","ma25","ma75","rsi","dividend",
+            "pbr","per","vol_r","vol_ratio_1d","ret_1d","range_pct","trend_score","score_dividend","score_value","score_rebound","score","prev_score"}
+    stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
+
     output = {
         "updated_at":      datetime.now().strftime("%Y/%m/%d %H:%M"),
-        "total":           len(results),
+        "total":           len(results),        # スキャン総数（表示用）
         "buy_count":       buy_count,
         "watch_count":     watch_count,
         "prev_buy_count":  prev_buy,
         "elapsed_sec":     elapsed,
         **market,
-        "vol_ranking":     vol_ranking_data,   # 出来高ランキングTOP20
-        "stocks":          results,
+        "vol_ranking":     vol_ranking_data,
+        "trend_ranking":   trend_ranking_data,
+        "stocks":          stocks_out,          # TOP200のみ配信
     }
     with open("stocks_data.json","w",encoding="utf-8") as f:
         json.dump(output,f,ensure_ascii=False,indent=2)
