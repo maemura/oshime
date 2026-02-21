@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026/02/22 05:10",
+  "updated_at": "2026/02/22 05:26",
   "total": 1560,
   "buy_count": 9,
-  "watch_count": 190,
-  "prev_buy_count": 26,
-  "elapsed_sec": 593.7,
+  "watch_count": 187,
+  "prev_buy_count": 9,
+  "elapsed_sec": 594.4,
   "nikkei_price": 56826.0,
   "nikkei_1d_chg": -1.12,
   "nikkei_ma25": 54810.0,
@@ -210,14 +210,14 @@
       "dividend": 0.62
     },
     {
-      "code": "7974",
-      "name": "任天堂",
-      "sector": "Communication Services",
-      "price": 8587.0,
-      "vol_avg5": 7777320,
-      "turnover_avg5": 663.43,
-      "score": 47,
-      "dividend": 2.11
+      "code": "6758",
+      "name": "ソニーグループ",
+      "sector": "Technology",
+      "price": 3336.0,
+      "vol_avg5": 19349700,
+      "turnover_avg5": 668.62,
+      "score": 0,
+      "dividend": 0.75
     }
   ],
   "trend_ranking": [
@@ -352,19 +352,6 @@
       "dividend": 1.25
     },
     {
-      "code": "8153",
-      "name": "モスフードサービス",
-      "sector": "Consumer Cyclical",
-      "price": 4235.0,
-      "vol_ratio_1d": 2.22,
-      "ret_1d": -2.42,
-      "range_pct": 2.36,
-      "gap_pct": -0.35,
-      "trend_score": 64.6,
-      "score": 0,
-      "dividend": 0.71
-    },
-    {
       "code": "7821",
       "name": "前田工繊",
       "sector": "Basic Materials",
@@ -480,6 +467,19 @@
       "trend_score": 42.0,
       "score": 0,
       "dividend": 0.45
+    },
+    {
+      "code": "8200",
+      "name": "リンガーハット",
+      "sector": "Consumer Cyclical",
+      "price": 2272.0,
+      "vol_ratio_1d": 1.69,
+      "ret_1d": -1.17,
+      "range_pct": 0.92,
+      "gap_pct": -0.3,
+      "trend_score": 38.9,
+      "score": 0,
+      "dividend": 0.57
     }
   ],
   "stocks": [
@@ -506,7 +506,7 @@
       "score_stable": 73,
       "score_growth": 75,
       "score": 73,
-      "prev_score": 75
+      "prev_score": 73
     },
     {
       "code": "7172",
@@ -531,7 +531,7 @@
       "score_stable": 73,
       "score_growth": 62,
       "score": 73,
-      "prev_score": 76
+      "prev_score": 73
     },
     {
       "code": "4676",
@@ -556,7 +556,7 @@
       "score_stable": 70,
       "score_growth": 68,
       "score": 70,
-      "prev_score": 78
+      "prev_score": 70
     },
     {
       "code": "7270",
@@ -581,7 +581,7 @@
       "score_stable": 70,
       "score_growth": 65,
       "score": 70,
-      "prev_score": 73
+      "prev_score": 70
     },
     {
       "code": "3092",
@@ -606,7 +606,7 @@
       "score_stable": 68,
       "score_growth": 48,
       "score": 68,
-      "prev_score": 53
+      "prev_score": 68
     },
     {
       "code": "6417",
@@ -631,7 +631,7 @@
       "score_stable": 68,
       "score_growth": 67,
       "score": 68,
-      "prev_score": 70
+      "prev_score": 68
     },
     {
       "code": "7267",
@@ -656,7 +656,7 @@
       "score_stable": 64,
       "score_growth": 40,
       "score": 64,
-      "prev_score": 66
+      "prev_score": 64
     },
     {
       "code": "2181",
@@ -681,7 +681,7 @@
       "score_stable": 62,
       "score_growth": 57,
       "score": 62,
-      "prev_score": 50
+      "prev_score": 62
     },
     {
       "code": "9759",
@@ -705,7 +705,8 @@
       "score_rebound": 70,
       "score_stable": 60,
       "score_growth": 56,
-      "score": 60
+      "score": 60,
+      "prev_score": 60
     },
     {
       "code": "3817",
@@ -730,7 +731,7 @@
       "score_stable": 59,
       "score_growth": 57,
       "score": 59,
-      "prev_score": 60
+      "prev_score": 59
     },
     {
       "code": "4776",
@@ -755,7 +756,7 @@
       "score_stable": 59,
       "score_growth": 42,
       "score": 59,
-      "prev_score": 52
+      "prev_score": 59
     },
     {
       "code": "4849",
@@ -780,7 +781,7 @@
       "score_stable": 59,
       "score_growth": 66,
       "score": 59,
-      "prev_score": 52
+      "prev_score": 59
     },
     {
       "code": "7347",
@@ -805,7 +806,7 @@
       "score_stable": 59,
       "score_growth": 59,
       "score": 59,
-      "prev_score": 70
+      "prev_score": 59
     },
     {
       "code": "9658",
@@ -830,7 +831,7 @@
       "score_stable": 59,
       "score_growth": 67,
       "score": 59,
-      "prev_score": 53
+      "prev_score": 59
     },
     {
       "code": "7537",
@@ -855,7 +856,7 @@
       "score_stable": 58,
       "score_growth": 54,
       "score": 58,
-      "prev_score": 70
+      "prev_score": 58
     },
     {
       "code": "8214",
@@ -905,7 +906,7 @@
       "score_stable": 57,
       "score_growth": 35,
       "score": 57,
-      "prev_score": 59
+      "prev_score": 57
     },
     {
       "code": "7059",
@@ -930,7 +931,7 @@
       "score_stable": 57,
       "score_growth": 44,
       "score": 57,
-      "prev_score": 54
+      "prev_score": 57
     },
     {
       "code": "3916",
@@ -980,7 +981,7 @@
       "score_stable": 56,
       "score_growth": 52,
       "score": 56,
-      "prev_score": 55
+      "prev_score": 56
     },
     {
       "code": "7864",
@@ -1005,7 +1006,7 @@
       "score_stable": 56,
       "score_growth": 76,
       "score": 56,
-      "prev_score": 53
+      "prev_score": 56
     },
     {
       "code": "9682",
@@ -1030,7 +1031,7 @@
       "score_stable": 56,
       "score_growth": 40,
       "score": 56,
-      "prev_score": 42
+      "prev_score": 56
     },
     {
       "code": "2767",
@@ -1080,7 +1081,7 @@
       "score_stable": 55,
       "score_growth": 54,
       "score": 55,
-      "prev_score": 66
+      "prev_score": 55
     },
     {
       "code": "6088",
@@ -1105,7 +1106,7 @@
       "score_stable": 55,
       "score_growth": 53,
       "score": 55,
-      "prev_score": 56
+      "prev_score": 55
     },
     {
       "code": "9744",
@@ -1130,7 +1131,7 @@
       "score_stable": 55,
       "score_growth": 27,
       "score": 55,
-      "prev_score": 53
+      "prev_score": 55
     },
     {
       "code": "2124",
@@ -1155,7 +1156,7 @@
       "score_stable": 53,
       "score_growth": 45,
       "score": 53,
-      "prev_score": 40
+      "prev_score": 53
     },
     {
       "code": "2371",
@@ -1180,7 +1181,7 @@
       "score_stable": 53,
       "score_growth": 71,
       "score": 53,
-      "prev_score": 35
+      "prev_score": 53
     },
     {
       "code": "2491",
@@ -1205,7 +1206,7 @@
       "score_stable": 53,
       "score_growth": 86,
       "score": 53,
-      "prev_score": 48
+      "prev_score": 53
     },
     {
       "code": "6718",
@@ -1230,7 +1231,7 @@
       "score_stable": 53,
       "score_growth": 42,
       "score": 53,
-      "prev_score": 63
+      "prev_score": 53
     },
     {
       "code": "8219",
@@ -1255,7 +1256,7 @@
       "score_stable": 53,
       "score_growth": 33,
       "score": 53,
-      "prev_score": 61
+      "prev_score": 53
     },
     {
       "code": "8892",
@@ -1280,7 +1281,7 @@
       "score_stable": 53,
       "score_growth": 49,
       "score": 53,
-      "prev_score": 56
+      "prev_score": 53
     },
     {
       "code": "3663",
@@ -1305,7 +1306,7 @@
       "score_stable": 52,
       "score_growth": 56,
       "score": 52,
-      "prev_score": 35
+      "prev_score": 52
     },
     {
       "code": "5938",
@@ -1330,7 +1331,7 @@
       "score_stable": 52,
       "score_growth": 28,
       "score": 52,
-      "prev_score": 50
+      "prev_score": 52
     },
     {
       "code": "6523",
@@ -1355,7 +1356,7 @@
       "score_stable": 52,
       "score_growth": 37,
       "score": 52,
-      "prev_score": 53
+      "prev_score": 52
     },
     {
       "code": "9107",
@@ -1380,32 +1381,7 @@
       "score_stable": 52,
       "score_growth": 30,
       "score": 52,
-      "prev_score": 57
-    },
-    {
-      "code": "9432",
-      "name": "ＮＴＴ",
-      "sector": "Communication Services",
-      "price": 151.0,
-      "ma25": 154.9,
-      "ma75": 155.2,
-      "rsi": 36,
-      "dividend": 3.51,
-      "pbr": 1.3,
-      "per": 12.0,
-      "vol_r": 0.81,
-      "vol_ratio_1d": 1.11,
-      "ret_1d": -0.98,
-      "range_pct": 1.13,
-      "trend_score": 13.6,
-      "market_cap_b": 123204.0,
-      "score_dividend": 44,
-      "score_value": 42,
-      "score_rebound": 44,
-      "score_stable": 52,
-      "score_growth": 26,
-      "score": 52,
-      "prev_score": 40
+      "prev_score": 52
     },
     {
       "code": "1899",
@@ -1430,7 +1406,7 @@
       "score_stable": 51,
       "score_growth": 53,
       "score": 51,
-      "prev_score": 63
+      "prev_score": 51
     },
     {
       "code": "2146",
@@ -1455,7 +1431,7 @@
       "score_stable": 51,
       "score_growth": 20,
       "score": 51,
-      "prev_score": 53
+      "prev_score": 51
     },
     {
       "code": "3245",
@@ -1480,7 +1456,7 @@
       "score_stable": 51,
       "score_growth": 42,
       "score": 51,
-      "prev_score": 68
+      "prev_score": 51
     },
     {
       "code": "3626",
@@ -1505,7 +1481,7 @@
       "score_stable": 51,
       "score_growth": 76,
       "score": 51,
-      "prev_score": 38
+      "prev_score": 51
     },
     {
       "code": "6419",
@@ -1530,7 +1506,7 @@
       "score_stable": 51,
       "score_growth": 45,
       "score": 51,
-      "prev_score": 75
+      "prev_score": 51
     },
     {
       "code": "6430",
@@ -1555,7 +1531,7 @@
       "score_stable": 51,
       "score_growth": 65,
       "score": 51,
-      "prev_score": 62
+      "prev_score": 51
     },
     {
       "code": "4765",
@@ -1605,7 +1581,7 @@
       "score_stable": 50,
       "score_growth": 58,
       "score": 50,
-      "prev_score": 51
+      "prev_score": 50
     },
     {
       "code": "3284",
@@ -1630,7 +1606,7 @@
       "score_stable": 49,
       "score_growth": 35,
       "score": 49,
-      "prev_score": 62
+      "prev_score": 49
     },
     {
       "code": "3696",
@@ -1655,7 +1631,7 @@
       "score_stable": 49,
       "score_growth": 71,
       "score": 49,
-      "prev_score": 46
+      "prev_score": 49
     },
     {
       "code": "8595",
@@ -1680,7 +1656,7 @@
       "score_stable": 49,
       "score_growth": 23,
       "score": 49,
-      "prev_score": 51
+      "prev_score": 49
     },
     {
       "code": "2733",
@@ -1705,7 +1681,7 @@
       "score_stable": 48,
       "score_growth": 31,
       "score": 48,
-      "prev_score": 52
+      "prev_score": 48
     },
     {
       "code": "3668",
@@ -1730,7 +1706,7 @@
       "score_stable": 48,
       "score_growth": 47,
       "score": 48,
-      "prev_score": 70
+      "prev_score": 48
     },
     {
       "code": "4792",
@@ -1780,7 +1756,7 @@
       "score_stable": 47,
       "score_growth": 25,
       "score": 47,
-      "prev_score": 62
+      "prev_score": 47
     },
     {
       "code": "3769",
@@ -1805,7 +1781,7 @@
       "score_stable": 47,
       "score_growth": 56,
       "score": 47,
-      "prev_score": 35
+      "prev_score": 47
     },
     {
       "code": "4331",
@@ -1830,7 +1806,7 @@
       "score_stable": 47,
       "score_growth": 77,
       "score": 47,
-      "prev_score": 65
+      "prev_score": 47
     },
     {
       "code": "4914",
@@ -1855,7 +1831,7 @@
       "score_stable": 47,
       "score_growth": 60,
       "score": 47,
-      "prev_score": 46
+      "prev_score": 47
     },
     {
       "code": "6412",
@@ -1880,7 +1856,7 @@
       "score_stable": 47,
       "score_growth": 28,
       "score": 47,
-      "prev_score": 51
+      "prev_score": 47
     },
     {
       "code": "6532",
@@ -1904,7 +1880,8 @@
       "score_rebound": 60,
       "score_stable": 47,
       "score_growth": 63,
-      "score": 47
+      "score": 47,
+      "prev_score": 47
     },
     {
       "code": "7974",
@@ -1929,7 +1906,7 @@
       "score_stable": 47,
       "score_growth": 40,
       "score": 47,
-      "prev_score": 35
+      "prev_score": 47
     },
     {
       "code": "8584",
@@ -1954,7 +1931,7 @@
       "score_stable": 47,
       "score_growth": 35,
       "score": 47,
-      "prev_score": 62
+      "prev_score": 47
     },
     {
       "code": "2501",
@@ -1979,7 +1956,7 @@
       "score_stable": 46,
       "score_growth": 10,
       "score": 46,
-      "prev_score": 40
+      "prev_score": 46
     },
     {
       "code": "3635",
@@ -2004,7 +1981,7 @@
       "score_stable": 46,
       "score_growth": 10,
       "score": 46,
-      "prev_score": 43
+      "prev_score": 46
     },
     {
       "code": "4674",
@@ -2029,7 +2006,7 @@
       "score_stable": 46,
       "score_growth": 50,
       "score": 46,
-      "prev_score": 45
+      "prev_score": 46
     },
     {
       "code": "4687",
@@ -2053,7 +2030,8 @@
       "score_rebound": 67,
       "score_stable": 46,
       "score_growth": 69,
-      "score": 46
+      "score": 46,
+      "prev_score": 46
     },
     {
       "code": "4839",
@@ -2078,7 +2056,7 @@
       "score_stable": 46,
       "score_growth": 63,
       "score": 46,
-      "prev_score": 39
+      "prev_score": 46
     },
     {
       "code": "5411",
@@ -2103,7 +2081,7 @@
       "score_stable": 46,
       "score_growth": 21,
       "score": 46,
-      "prev_score": 38
+      "prev_score": 46
     },
     {
       "code": "7148",
@@ -2128,7 +2106,7 @@
       "score_stable": 46,
       "score_growth": 23,
       "score": 46,
-      "prev_score": 53
+      "prev_score": 46
     },
     {
       "code": "7261",
@@ -2153,7 +2131,7 @@
       "score_stable": 46,
       "score_growth": 25,
       "score": 46,
-      "prev_score": 45
+      "prev_score": 46
     },
     {
       "code": "9064",
@@ -2178,7 +2156,7 @@
       "score_stable": 46,
       "score_growth": 40,
       "score": 46,
-      "prev_score": 37
+      "prev_score": 46
     },
     {
       "code": "9104",
@@ -2203,7 +2181,7 @@
       "score_stable": 46,
       "score_growth": 31,
       "score": 46,
-      "prev_score": 48
+      "prev_score": 46
     },
     {
       "code": "9889",
@@ -2228,7 +2206,7 @@
       "score_stable": 46,
       "score_growth": 40,
       "score": 46,
-      "prev_score": 48
+      "prev_score": 46
     },
     {
       "code": "2379",
@@ -2253,7 +2231,7 @@
       "score_stable": 45,
       "score_growth": 25,
       "score": 45,
-      "prev_score": 43
+      "prev_score": 45
     },
     {
       "code": "5036",
@@ -2278,7 +2256,7 @@
       "score_stable": 45,
       "score_growth": 61,
       "score": 45,
-      "prev_score": 38
+      "prev_score": 45
     },
     {
       "code": "8016",
@@ -2303,7 +2281,7 @@
       "score_stable": 45,
       "score_growth": 20,
       "score": 45,
-      "prev_score": 49
+      "prev_score": 45
     },
     {
       "code": "2982",
@@ -2328,7 +2306,7 @@
       "score_stable": 44,
       "score_growth": 57,
       "score": 44,
-      "prev_score": 49
+      "prev_score": 44
     },
     {
       "code": "3844",
@@ -2353,7 +2331,7 @@
       "score_stable": 44,
       "score_growth": 53,
       "score": 44,
-      "prev_score": 38
+      "prev_score": 44
     },
     {
       "code": "4023",
@@ -2378,7 +2356,7 @@
       "score_stable": 44,
       "score_growth": 20,
       "score": 44,
-      "prev_score": 40
+      "prev_score": 44
     },
     {
       "code": "4324",
@@ -2403,7 +2381,7 @@
       "score_stable": 44,
       "score_growth": 42,
       "score": 44,
-      "prev_score": 53
+      "prev_score": 44
     },
     {
       "code": "5076",
@@ -2428,7 +2406,7 @@
       "score_stable": 44,
       "score_growth": 20,
       "score": 44,
-      "prev_score": 38
+      "prev_score": 44
     },
     {
       "code": "7313",
@@ -2453,56 +2431,7 @@
       "score_stable": 44,
       "score_growth": 25,
       "score": 44,
-      "prev_score": 47
-    },
-    {
-      "code": "9434",
-      "name": "ソフトバンク",
-      "sector": "Communication Services",
-      "price": 210.0,
-      "ma25": 213.3,
-      "ma75": 217.0,
-      "rsi": 53,
-      "dividend": 4.1,
-      "pbr": 3.51,
-      "per": 18.7,
-      "vol_r": 0.84,
-      "vol_ratio_1d": 1.17,
-      "ret_1d": -1.59,
-      "range_pct": 1.43,
-      "trend_score": 20.1,
-      "market_cap_b": 100303.0,
-      "score_dividend": 28,
-      "score_value": 20,
-      "score_rebound": 20,
-      "score_stable": 44,
-      "score_growth": 13,
-      "score": 44
-    },
-    {
-      "code": "7240",
-      "name": "ＮＯＫ",
-      "sector": "Consumer Cyclical",
-      "price": 3237.0,
-      "ma25": 3112.9,
-      "ma75": 2869.3,
-      "rsi": 72,
-      "dividend": 4.02,
-      "pbr": 0.85,
-      "per": 17.6,
-      "vol_r": 0.89,
-      "vol_ratio_1d": 1.07,
-      "ret_1d": -1.28,
-      "range_pct": 1.64,
-      "trend_score": 14.1,
-      "market_cap_b": 5296.0,
-      "score_dividend": 41,
-      "score_value": 41,
-      "score_rebound": 33,
-      "score_stable": 43,
-      "score_growth": 20,
-      "score": 43,
-      "prev_score": 40
+      "prev_score": 44
     },
     {
       "code": "7272",
@@ -2552,7 +2481,7 @@
       "score_stable": 43,
       "score_growth": 58,
       "score": 43,
-      "prev_score": 45
+      "prev_score": 43
     },
     {
       "code": "8897",
@@ -2577,7 +2506,7 @@
       "score_stable": 43,
       "score_growth": 35,
       "score": 43,
-      "prev_score": 70
+      "prev_score": 43
     },
     {
       "code": "9101",
@@ -2627,7 +2556,7 @@
       "score_stable": 43,
       "score_growth": 50,
       "score": 43,
-      "prev_score": 45
+      "prev_score": 43
     },
     {
       "code": "1419",
@@ -2652,7 +2581,7 @@
       "score_stable": 42,
       "score_growth": 10,
       "score": 42,
-      "prev_score": 40
+      "prev_score": 42
     },
     {
       "code": "2327",
@@ -2676,7 +2605,8 @@
       "score_rebound": 48,
       "score_stable": 42,
       "score_growth": 48,
-      "score": 42
+      "score": 42,
+      "prev_score": 42
     },
     {
       "code": "4684",
@@ -2700,7 +2630,8 @@
       "score_rebound": 48,
       "score_stable": 42,
       "score_growth": 33,
-      "score": 42
+      "score": 42,
+      "prev_score": 42
     },
     {
       "code": "4819",
@@ -2725,30 +2656,30 @@
       "score_stable": 42,
       "score_growth": 66,
       "score": 42,
-      "prev_score": 38
+      "prev_score": 42
     },
     {
-      "code": "7259",
-      "name": "アイシン",
-      "sector": "Consumer Cyclical",
-      "price": 2682.0,
-      "ma25": 2853.0,
-      "ma75": 2860.0,
-      "rsi": 44,
-      "dividend": 2.61,
-      "pbr": 0.92,
-      "per": 12.1,
-      "vol_r": 0.96,
-      "vol_ratio_1d": 2.15,
-      "ret_1d": -8.67,
-      "range_pct": 6.36,
-      "trend_score": 99.7,
-      "market_cap_b": 19433.0,
-      "score_dividend": 31,
-      "score_value": 35,
-      "score_rebound": 35,
+      "code": "8628",
+      "name": "松井証券",
+      "sector": "Financial Services",
+      "price": 936.0,
+      "ma25": 916.8,
+      "ma75": 852.6,
+      "rsi": 61,
+      "dividend": 5.34,
+      "pbr": 3.11,
+      "per": 22.1,
+      "vol_r": 0.81,
+      "vol_ratio_1d": 0.73,
+      "ret_1d": -1.16,
+      "range_pct": 1.39,
+      "trend_score": -10.1,
+      "market_cap_b": 2411.0,
+      "score_dividend": 40,
+      "score_value": 30,
+      "score_rebound": 30,
       "score_stable": 42,
-      "score_growth": 31,
+      "score_growth": 10,
       "score": 42
     },
     {
@@ -2773,7 +2704,8 @@
       "score_rebound": 31,
       "score_stable": 42,
       "score_growth": 30,
-      "score": 42
+      "score": 42,
+      "prev_score": 42
     },
     {
       "code": "2154",
@@ -2823,7 +2755,7 @@
       "score_stable": 41,
       "score_growth": 13,
       "score": 41,
-      "prev_score": 40
+      "prev_score": 41
     },
     {
       "code": "5401",
@@ -2848,7 +2780,7 @@
       "score_stable": 41,
       "score_growth": 31,
       "score": 41,
-      "prev_score": 48
+      "prev_score": 41
     },
     {
       "code": "9739",
@@ -2873,7 +2805,7 @@
       "score_stable": 41,
       "score_growth": 45,
       "score": 41,
-      "prev_score": 40
+      "prev_score": 41
     },
     {
       "code": "1878",
@@ -2897,7 +2829,8 @@
       "score_rebound": 25,
       "score_stable": 40,
       "score_growth": 15,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "2914",
@@ -2921,7 +2854,8 @@
       "score_rebound": 20,
       "score_stable": 40,
       "score_growth": 10,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "3302",
@@ -2946,7 +2880,7 @@
       "score_stable": 40,
       "score_growth": 30,
       "score": 40,
-      "prev_score": 47
+      "prev_score": 40
     },
     {
       "code": "5192",
@@ -2970,7 +2904,8 @@
       "score_rebound": 28,
       "score_stable": 40,
       "score_growth": 20,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "5988",
@@ -2995,7 +2930,7 @@
       "score_stable": 40,
       "score_growth": 25,
       "score": 40,
-      "prev_score": 50
+      "prev_score": 40
     },
     {
       "code": "7278",
@@ -3019,7 +2954,8 @@
       "score_rebound": 28,
       "score_stable": 40,
       "score_growth": 20,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "7733",
@@ -3043,7 +2979,8 @@
       "score_rebound": 40,
       "score_stable": 40,
       "score_growth": 63,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "7989",
@@ -3068,7 +3005,7 @@
       "score_stable": 40,
       "score_growth": 20,
       "score": 40,
-      "prev_score": 48
+      "prev_score": 40
     },
     {
       "code": "8125",
@@ -3117,7 +3054,8 @@
       "score_rebound": 27,
       "score_stable": 39,
       "score_growth": 20,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "1928",
@@ -3141,7 +3079,8 @@
       "score_rebound": 23,
       "score_stable": 39,
       "score_growth": 16,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "2502",
@@ -3165,7 +3104,8 @@
       "score_rebound": 19,
       "score_stable": 39,
       "score_growth": 21,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "3836",
@@ -3190,7 +3130,7 @@
       "score_stable": 39,
       "score_growth": 68,
       "score": 39,
-      "prev_score": 38
+      "prev_score": 39
     },
     {
       "code": "3861",
@@ -3214,7 +3154,8 @@
       "score_rebound": 28,
       "score_stable": 39,
       "score_growth": 16,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "4044",
@@ -3239,7 +3180,7 @@
       "score_stable": 39,
       "score_growth": 20,
       "score": 39,
-      "prev_score": 40
+      "prev_score": 39
     },
     {
       "code": "4114",
@@ -3263,7 +3204,8 @@
       "score_rebound": 27,
       "score_stable": 39,
       "score_growth": 20,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "5201",
@@ -3287,7 +3229,8 @@
       "score_rebound": 23,
       "score_stable": 39,
       "score_growth": 16,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "5406",
@@ -3312,7 +3255,7 @@
       "score_stable": 39,
       "score_growth": 31,
       "score": 39,
-      "prev_score": 43
+      "prev_score": 39
     },
     {
       "code": "5445",
@@ -3337,7 +3280,7 @@
       "score_stable": 39,
       "score_growth": 33,
       "score": 39,
-      "prev_score": 60
+      "prev_score": 39
     },
     {
       "code": "5943",
@@ -3362,7 +3305,7 @@
       "score_stable": 39,
       "score_growth": 25,
       "score": 39,
-      "prev_score": 40
+      "prev_score": 39
     },
     {
       "code": "6209",
@@ -3387,7 +3330,7 @@
       "score_stable": 39,
       "score_growth": 35,
       "score": 39,
-      "prev_score": 50
+      "prev_score": 39
     },
     {
       "code": "6724",
@@ -3412,7 +3355,7 @@
       "score_stable": 39,
       "score_growth": 26,
       "score": 39,
-      "prev_score": 36
+      "prev_score": 39
     },
     {
       "code": "6869",
@@ -3436,7 +3379,8 @@
       "score_rebound": 53,
       "score_stable": 39,
       "score_growth": 38,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "8051",
@@ -3461,7 +3405,7 @@
       "score_stable": 39,
       "score_growth": 25,
       "score": 39,
-      "prev_score": 36
+      "prev_score": 39
     },
     {
       "code": "8084",
@@ -3486,7 +3430,7 @@
       "score_stable": 39,
       "score_growth": 33,
       "score": 39,
-      "prev_score": 49
+      "prev_score": 39
     },
     {
       "code": "8601",
@@ -3510,7 +3454,8 @@
       "score_rebound": 20,
       "score_stable": 39,
       "score_growth": 16,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "8604",
@@ -3534,7 +3479,8 @@
       "score_rebound": 23,
       "score_stable": 39,
       "score_growth": 21,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "8750",
@@ -3558,7 +3504,8 @@
       "score_rebound": 20,
       "score_stable": 39,
       "score_growth": 16,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "9474",
@@ -3583,7 +3530,7 @@
       "score_stable": 39,
       "score_growth": 37,
       "score": 39,
-      "prev_score": 41
+      "prev_score": 39
     },
     {
       "code": "9503",
@@ -3607,7 +3554,8 @@
       "score_rebound": 35,
       "score_stable": 39,
       "score_growth": 26,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "2461",
@@ -3631,7 +3579,8 @@
       "score_rebound": 41,
       "score_stable": 38,
       "score_growth": 32,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "3034",
@@ -3656,7 +3605,7 @@
       "score_stable": 38,
       "score_growth": 63,
       "score": 38,
-      "prev_score": 42
+      "prev_score": 38
     },
     {
       "code": "3151",
@@ -3681,7 +3630,7 @@
       "score_stable": 38,
       "score_growth": 35,
       "score": 38,
-      "prev_score": 62
+      "prev_score": 38
     },
     {
       "code": "4208",
@@ -3731,7 +3680,7 @@
       "score_stable": 38,
       "score_growth": 32,
       "score": 38,
-      "prev_score": 41
+      "prev_score": 38
     },
     {
       "code": "5440",
@@ -3756,7 +3705,31 @@
       "score_stable": 38,
       "score_growth": 31,
       "score": 38,
-      "prev_score": 48
+      "prev_score": 38
+    },
+    {
+      "code": "5889",
+      "name": "Ｊａｐａｎ　Ｅｙｅｗｅａｒ　Ｈｏｌｄｉｎｇｓ",
+      "sector": "Healthcare",
+      "price": 1916.0,
+      "ma25": 1975.9,
+      "ma75": 1957.9,
+      "rsi": 35,
+      "dividend": 4.38,
+      "pbr": 2.72,
+      "per": 11.6,
+      "vol_r": 0.77,
+      "vol_ratio_1d": 0.81,
+      "ret_1d": -0.52,
+      "range_pct": 1.51,
+      "trend_score": -6.0,
+      "market_cap_b": 462.0,
+      "score_dividend": 48,
+      "score_value": 42,
+      "score_rebound": 46,
+      "score_stable": 38,
+      "score_growth": 39,
+      "score": 38
     },
     {
       "code": "6737",
@@ -3781,7 +3754,7 @@
       "score_stable": 38,
       "score_growth": 25,
       "score": 38,
-      "prev_score": 52
+      "prev_score": 38
     },
     {
       "code": "9506",
@@ -3806,7 +3779,7 @@
       "score_stable": 38,
       "score_growth": 31,
       "score": 38,
-      "prev_score": 40
+      "prev_score": 38
     },
     {
       "code": "9699",
@@ -3831,7 +3804,7 @@
       "score_stable": 38,
       "score_growth": 38,
       "score": 38,
-      "prev_score": 39
+      "prev_score": 38
     },
     {
       "code": "4290",
@@ -3856,32 +3829,7 @@
       "score_stable": 37,
       "score_growth": 28,
       "score": 37,
-      "prev_score": 36
-    },
-    {
-      "code": "6379",
-      "name": "レイズネクスト",
-      "sector": "Industrials",
-      "price": 2578.0,
-      "ma25": 2564.8,
-      "ma75": 2387.5,
-      "rsi": 55,
-      "dividend": 4.58,
-      "pbr": 1.59,
-      "per": 13.0,
-      "vol_r": 1.25,
-      "vol_ratio_1d": 0.72,
-      "ret_1d": -0.19,
-      "range_pct": 1.63,
-      "trend_score": -14.1,
-      "market_cap_b": 1392.0,
-      "score_dividend": 40,
-      "score_value": 32,
-      "score_rebound": 30,
-      "score_stable": 37,
-      "score_growth": 20,
-      "score": 37,
-      "prev_score": 38
+      "prev_score": 37
     },
     {
       "code": "7956",
@@ -3905,7 +3853,8 @@
       "score_rebound": 25,
       "score_stable": 37,
       "score_growth": 10,
-      "score": 37
+      "score": 37,
+      "prev_score": 37
     },
     {
       "code": "8130",
@@ -3929,7 +3878,8 @@
       "score_rebound": 25,
       "score_stable": 37,
       "score_growth": 15,
-      "score": 37
+      "score": 37,
+      "prev_score": 37
     },
     {
       "code": "8515",
@@ -3954,7 +3904,7 @@
       "score_stable": 37,
       "score_growth": 60,
       "score": 37,
-      "prev_score": 48
+      "prev_score": 37
     },
     {
       "code": "1815",
@@ -3979,7 +3929,7 @@
       "score_stable": 36,
       "score_growth": 36,
       "score": 36,
-      "prev_score": 39
+      "prev_score": 36
     },
     {
       "code": "2130",
@@ -4003,7 +3953,8 @@
       "score_rebound": 65,
       "score_stable": 36,
       "score_growth": 64,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "2429",
@@ -4028,7 +3979,7 @@
       "score_stable": 36,
       "score_growth": 30,
       "score": 36,
-      "prev_score": 58
+      "prev_score": 36
     },
     {
       "code": "2475",
@@ -4053,7 +4004,7 @@
       "score_stable": 36,
       "score_growth": 31,
       "score": 36,
-      "prev_score": 35
+      "prev_score": 36
     },
     {
       "code": "3662",
@@ -4077,7 +4028,8 @@
       "score_rebound": 65,
       "score_stable": 36,
       "score_growth": 56,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "3762",
@@ -4101,7 +4053,8 @@
       "score_rebound": 61,
       "score_stable": 36,
       "score_growth": 40,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "3834",
@@ -4125,7 +4078,8 @@
       "score_rebound": 56,
       "score_stable": 36,
       "score_growth": 48,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "4768",
@@ -4149,7 +4103,8 @@
       "score_rebound": 18,
       "score_stable": 36,
       "score_growth": 9,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "5602",
@@ -4173,7 +4128,8 @@
       "score_rebound": 23,
       "score_stable": 36,
       "score_growth": 31,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "6200",
@@ -4198,7 +4154,7 @@
       "score_stable": 36,
       "score_growth": 32,
       "score": 36,
-      "prev_score": 41
+      "prev_score": 36
     },
     {
       "code": "6809",
@@ -4223,7 +4179,7 @@
       "score_stable": 36,
       "score_growth": 20,
       "score": 36,
-      "prev_score": 43
+      "prev_score": 36
     },
     {
       "code": "7476",
@@ -4247,7 +4203,8 @@
       "score_rebound": 51,
       "score_stable": 36,
       "score_growth": 33,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "7575",
@@ -4272,7 +4229,7 @@
       "score_stable": 36,
       "score_growth": 26,
       "score": 36,
-      "prev_score": 37
+      "prev_score": 36
     },
     {
       "code": "8056",
@@ -4296,7 +4253,8 @@
       "score_rebound": 61,
       "score_stable": 36,
       "score_growth": 45,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "8252",
@@ -4320,7 +4278,8 @@
       "score_rebound": 20,
       "score_stable": 36,
       "score_growth": 10,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "8706",
@@ -4345,31 +4304,7 @@
       "score_stable": 36,
       "score_growth": 25,
       "score": 36,
-      "prev_score": 51
-    },
-    {
-      "code": "9433",
-      "name": "ＫＤＤＩ",
-      "sector": "Communication Services",
-      "price": 2616.0,
-      "ma25": 2663.5,
-      "ma75": 2663.8,
-      "rsi": 51,
-      "dividend": 3.06,
-      "pbr": 2.01,
-      "per": 14.5,
-      "vol_r": 0.69,
-      "vol_ratio_1d": 0.91,
-      "ret_1d": -0.95,
-      "range_pct": 1.49,
-      "trend_score": 2.6,
-      "market_cap_b": 99593.0,
-      "score_dividend": 16,
-      "score_value": 13,
-      "score_rebound": 12,
-      "score_stable": 36,
-      "score_growth": 14,
-      "score": 36
+      "prev_score": 36
     },
     {
       "code": "1833",
@@ -4393,7 +4328,8 @@
       "score_rebound": 23,
       "score_stable": 35,
       "score_growth": 15,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "2109",
@@ -4417,7 +4353,8 @@
       "score_rebound": 22,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "3231",
@@ -4441,7 +4378,8 @@
       "score_rebound": 18,
       "score_stable": 35,
       "score_growth": 11,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "3291",
@@ -4465,7 +4403,8 @@
       "score_rebound": 25,
       "score_stable": 35,
       "score_growth": 26,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "3405",
@@ -4489,7 +4428,8 @@
       "score_rebound": 23,
       "score_stable": 35,
       "score_growth": 21,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "3925",
@@ -4513,7 +4453,8 @@
       "score_rebound": 62,
       "score_stable": 35,
       "score_growth": 50,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "4042",
@@ -4537,7 +4478,8 @@
       "score_rebound": 22,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "4045",
@@ -4561,7 +4503,8 @@
       "score_rebound": 22,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "4183",
@@ -4585,7 +4528,8 @@
       "score_rebound": 17,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "4249",
@@ -4610,7 +4554,7 @@
       "score_stable": 35,
       "score_growth": 35,
       "score": 35,
-      "prev_score": 52
+      "prev_score": 35
     },
     {
       "code": "4502",
@@ -4635,7 +4579,7 @@
       "score_stable": 35,
       "score_growth": 16,
       "score": 35,
-      "prev_score": 13
+      "prev_score": 35
     },
     {
       "code": "4521",
@@ -4659,7 +4603,8 @@
       "score_rebound": 23,
       "score_stable": 35,
       "score_growth": 20,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "4526",
@@ -4684,7 +4629,7 @@
       "score_stable": 35,
       "score_growth": 43,
       "score": 35,
-      "prev_score": 49
+      "prev_score": 35
     },
     {
       "code": "4528",
@@ -4708,7 +4653,8 @@
       "score_rebound": 13,
       "score_stable": 35,
       "score_growth": 11,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "4540",
@@ -4732,7 +4678,8 @@
       "score_rebound": 27,
       "score_stable": 35,
       "score_growth": 21,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "4544",
@@ -4756,7 +4703,8 @@
       "score_rebound": 18,
       "score_stable": 35,
       "score_growth": 14,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "4719",
@@ -4781,7 +4729,7 @@
       "score_stable": 35,
       "score_growth": 38,
       "score": 35,
-      "prev_score": 37
+      "prev_score": 35
     },
     {
       "code": "4763",
@@ -4805,7 +4753,8 @@
       "score_rebound": 47,
       "score_stable": 35,
       "score_growth": 40,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "4901",
@@ -4829,31 +4778,8 @@
       "score_rebound": 33,
       "score_stable": 35,
       "score_growth": 38,
-      "score": 35
-    },
-    {
-      "code": "4958",
-      "name": "長谷川香料",
-      "sector": "Basic Materials",
-      "price": 2850.0,
-      "ma25": 2862.1,
-      "ma75": 2806.4,
-      "rsi": 51,
-      "dividend": 3.51,
-      "pbr": 0.91,
-      "per": 16.9,
-      "vol_r": 0.54,
-      "vol_ratio_1d": 0.48,
-      "ret_1d": -1.49,
-      "range_pct": 1.23,
-      "trend_score": -34.4,
-      "market_cap_b": 1153.0,
-      "score_dividend": 28,
-      "score_value": 26,
-      "score_rebound": 22,
-      "score_stable": 35,
-      "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "5110",
@@ -4877,7 +4803,8 @@
       "score_rebound": 19,
       "score_stable": 35,
       "score_growth": 21,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "5351",
@@ -4901,7 +4828,8 @@
       "score_rebound": 27,
       "score_stable": 35,
       "score_growth": 21,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "5451",
@@ -4926,7 +4854,31 @@
       "score_stable": 35,
       "score_growth": 28,
       "score": 35,
-      "prev_score": 39
+      "prev_score": 35
+    },
+    {
+      "code": "5911",
+      "name": "横河ブリッジホールディングス",
+      "sector": "Industrials",
+      "price": 3200.0,
+      "ma25": 3164.6,
+      "ma75": 3019.6,
+      "rsi": 67,
+      "dividend": 3.75,
+      "pbr": 0.95,
+      "per": 10.5,
+      "vol_r": 1.15,
+      "vol_ratio_1d": 0.95,
+      "ret_1d": 0.31,
+      "range_pct": 1.41,
+      "trend_score": 2.4,
+      "market_cap_b": 1259.0,
+      "score_dividend": 36,
+      "score_value": 37,
+      "score_rebound": 30,
+      "score_stable": 35,
+      "score_growth": 21,
+      "score": 35
     },
     {
       "code": "6183",
@@ -4950,7 +4902,8 @@
       "score_rebound": 28,
       "score_stable": 35,
       "score_growth": 20,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "6448",
@@ -4974,7 +4927,8 @@
       "score_rebound": 27,
       "score_stable": 35,
       "score_growth": 24,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "6526",
@@ -4998,7 +4952,8 @@
       "score_rebound": 46,
       "score_stable": 35,
       "score_growth": 33,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "7184",
@@ -5022,7 +4977,8 @@
       "score_rebound": 28,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "7202",
@@ -5046,7 +5002,8 @@
       "score_rebound": 15,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "7226",
@@ -5070,7 +5027,8 @@
       "score_rebound": 23,
       "score_stable": 35,
       "score_growth": 15,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "7239",
@@ -5095,7 +5053,7 @@
       "score_stable": 35,
       "score_growth": 35,
       "score": 35,
-      "prev_score": 57
+      "prev_score": 35
     },
     {
       "code": "7296",
@@ -5119,7 +5077,8 @@
       "score_rebound": 30,
       "score_stable": 35,
       "score_growth": 21,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "7414",
@@ -5144,7 +5103,31 @@
       "score_stable": 35,
       "score_growth": 25,
       "score": 35,
-      "prev_score": 45
+      "prev_score": 35
+    },
+    {
+      "code": "7751",
+      "name": "キヤノン",
+      "sector": "Technology",
+      "price": 4685.0,
+      "ma25": 4731.0,
+      "ma75": 4601.1,
+      "rsi": 50,
+      "dividend": 3.42,
+      "pbr": 1.18,
+      "per": 12.8,
+      "vol_r": 0.76,
+      "vol_ratio_1d": 0.95,
+      "ret_1d": -0.47,
+      "range_pct": 1.32,
+      "trend_score": 2.8,
+      "market_cap_b": 41164.0,
+      "score_dividend": 22,
+      "score_value": 22,
+      "score_rebound": 18,
+      "score_stable": 35,
+      "score_growth": 21,
+      "score": 35
     },
     {
       "code": "8097",
@@ -5168,7 +5151,8 @@
       "score_rebound": 23,
       "score_stable": 35,
       "score_growth": 15,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "8309",
@@ -5192,7 +5176,8 @@
       "score_rebound": 18,
       "score_stable": 35,
       "score_growth": 21,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "8439",
@@ -5216,7 +5201,8 @@
       "score_rebound": 29,
       "score_stable": 35,
       "score_growth": 26,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "8511",
@@ -5240,7 +5226,8 @@
       "score_rebound": 23,
       "score_stable": 35,
       "score_growth": 15,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "8585",
@@ -5265,7 +5252,7 @@
       "score_stable": 35,
       "score_growth": 21,
       "score": 35,
-      "prev_score": 39
+      "prev_score": 35
     },
     {
       "code": "8591",
@@ -5289,7 +5276,8 @@
       "score_rebound": 18,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "8593",
@@ -5313,7 +5301,8 @@
       "score_rebound": 13,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "8795",
@@ -5337,7 +5326,8 @@
       "score_rebound": 13,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "9076",
@@ -5361,7 +5351,8 @@
       "score_rebound": 22,
       "score_stable": 35,
       "score_growth": 16,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "9201",
@@ -5385,7 +5376,8 @@
       "score_rebound": 25,
       "score_stable": 35,
       "score_growth": 21,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "3679",
@@ -5409,7 +5401,2720 @@
       "score_rebound": 67,
       "score_stable": 34,
       "score_growth": 50,
+      "score": 34,
+      "prev_score": 34
+    },
+    {
+      "code": "3771",
+      "name": "システムリサーチ",
+      "sector": "Technology",
+      "price": 1798.0,
+      "ma25": 1920.8,
+      "ma75": 1967.4,
+      "rsi": 28,
+      "dividend": 3.89,
+      "pbr": 2.36,
+      "per": 12.3,
+      "vol_r": 0.95,
+      "vol_ratio_1d": 0.83,
+      "ret_1d": -1.64,
+      "range_pct": 1.5,
+      "trend_score": -0.1,
+      "market_cap_b": 298.0,
+      "score_dividend": 70,
+      "score_value": 66,
+      "score_rebound": 78,
+      "score_stable": 34,
+      "score_growth": 53,
       "score": 34
+    },
+    {
+      "code": "3765",
+      "name": "ガンホー・オンライン・エンターテイメント",
+      "sector": "Communication Services",
+      "price": 2483.0,
+      "ma25": 2578.2,
+      "ma75": 2470.8,
+      "rsi": 35,
+      "dividend": 3.62,
+      "pbr": 1.1,
+      "per": 97.1,
+      "vol_r": 1.84,
+      "vol_ratio_1d": 1.5,
+      "ret_1d": 0.81,
+      "range_pct": 4.87,
+      "trend_score": 42.2,
+      "market_cap_b": 1349.0,
+      "score_dividend": 23,
+      "score_value": 21,
+      "score_rebound": 23,
+      "score_stable": 34,
+      "score_growth": 40,
+      "score": 34
+    },
+    {
+      "code": "3843",
+      "name": "フリービット",
+      "sector": "Communication Services",
+      "price": 1548.0,
+      "ma25": 1633.8,
+      "ma75": 1619.7,
+      "rsi": 30,
+      "dividend": 2.65,
+      "pbr": 4.23,
+      "per": 10.3,
+      "vol_r": 0.76,
+      "vol_ratio_1d": 0.66,
+      "ret_1d": -1.9,
+      "range_pct": 1.74,
+      "trend_score": -12.1,
+      "market_cap_b": 338.0,
+      "score_dividend": 43,
+      "score_value": 44,
+      "score_rebound": 52,
+      "score_stable": 34,
+      "score_growth": 35,
+      "score": 34
+    },
+    {
+      "code": "4118",
+      "name": "カネカ",
+      "sector": "Basic Materials",
+      "price": 5102.0,
+      "ma25": 4835.4,
+      "ma75": 4504.5,
+      "rsi": 80,
+      "dividend": 3.14,
+      "pbr": 0.64,
+      "per": 12.3,
+      "vol_r": 1.02,
+      "vol_ratio_1d": 0.66,
+      "ret_1d": -0.76,
+      "range_pct": 1.49,
+      "trend_score": -17.4,
+      "market_cap_b": 3101.0,
+      "score_dividend": 37,
+      "score_value": 42,
+      "score_rebound": 33,
+      "score_stable": 34,
+      "score_growth": 26,
+      "score": 34
+    },
+    {
+      "code": "7516",
+      "name": "コーナン商事",
+      "sector": "Consumer Cyclical",
+      "price": 4190.0,
+      "ma25": 3981.6,
+      "ma75": 3930.1,
+      "rsi": 79,
+      "dividend": 3.1,
+      "pbr": 0.69,
+      "per": 8.7,
+      "vol_r": 1.39,
+      "vol_ratio_1d": 1.44,
+      "ret_1d": -2.1,
+      "range_pct": 1.91,
+      "trend_score": 36.0,
+      "market_cap_b": 1184.0,
+      "score_dividend": 44,
+      "score_value": 50,
+      "score_rebound": 40,
+      "score_stable": 34,
+      "score_growth": 31,
+      "score": 34
+    },
+    {
+      "code": "8037",
+      "name": "カメイ",
+      "sector": "Energy",
+      "price": 3275.0,
+      "ma25": 3217.2,
+      "ma75": 3048.2,
+      "rsi": 67,
+      "dividend": 3.36,
+      "pbr": 0.61,
+      "per": 9.4,
+      "vol_r": 0.93,
+      "vol_ratio_1d": 0.98,
+      "ret_1d": -1.5,
+      "range_pct": 1.83,
+      "trend_score": 10.3,
+      "market_cap_b": 1002.0,
+      "score_dividend": 40,
+      "score_value": 46,
+      "score_rebound": 36,
+      "score_stable": 34,
+      "score_growth": 31,
+      "score": 34
+    },
+    {
+      "code": "2127",
+      "name": "日本Ｍ＆Ａセンターホールディングス",
+      "sector": "Financial Services",
+      "price": 695.6,
+      "ma25": 720.0,
+      "ma75": 726.4,
+      "rsi": 46,
+      "dividend": 3.31,
+      "pbr": 4.62,
+      "per": 17.5,
+      "vol_r": 0.88,
+      "vol_ratio_1d": 1.19,
+      "ret_1d": -1.25,
+      "range_pct": 2.54,
+      "trend_score": 23.1,
+      "market_cap_b": 2207.0,
+      "score_dividend": 19,
+      "score_value": 15,
+      "score_rebound": 18,
+      "score_stable": 33,
+      "score_growth": 16,
+      "score": 33
+    },
+    {
+      "code": "4088",
+      "name": "エア・ウォーター",
+      "sector": "Basic Materials",
+      "price": 2101.5,
+      "ma25": 2326.0,
+      "ma75": 2256.0,
+      "rsi": 36,
+      "dividend": 3.57,
+      "pbr": 1.08,
+      "per": 5.5,
+      "vol_r": 2.5,
+      "vol_ratio_1d": 0.97,
+      "ret_1d": -1.55,
+      "range_pct": 1.74,
+      "trend_score": 9.6,
+      "market_cap_b": 4817.0,
+      "score_dividend": 58,
+      "score_value": 59,
+      "score_rebound": 62,
+      "score_stable": 33,
+      "score_growth": 38,
+      "score": 33
+    },
+    {
+      "code": "3003",
+      "name": "ヒューリック",
+      "sector": "Real Estate",
+      "price": 2038.5,
+      "ma25": 1886.2,
+      "ma75": 1742.4,
+      "rsi": 76,
+      "dividend": 3.29,
+      "pbr": 1.69,
+      "per": 13.6,
+      "vol_r": 0.7,
+      "vol_ratio_1d": 0.66,
+      "ret_1d": -0.9,
+      "range_pct": 1.84,
+      "trend_score": -15.8,
+      "market_cap_b": 15479.0,
+      "score_dividend": 16,
+      "score_value": 13,
+      "score_rebound": 12,
+      "score_stable": 32,
+      "score_growth": 16,
+      "score": 32
+    },
+    {
+      "code": "3107",
+      "name": "ダイワボウホールディングス",
+      "sector": "Technology",
+      "price": 3027.0,
+      "ma25": 3092.8,
+      "ma75": 3022.2,
+      "rsi": 49,
+      "dividend": 3.63,
+      "pbr": 1.65,
+      "per": 8.8,
+      "vol_r": 0.98,
+      "vol_ratio_1d": 0.92,
+      "ret_1d": -1.46,
+      "range_pct": 1.55,
+      "trend_score": 5.5,
+      "market_cap_b": 2638.0,
+      "score_dividend": 38,
+      "score_value": 35,
+      "score_rebound": 35,
+      "score_stable": 32,
+      "score_growth": 24,
+      "score": 32
+    },
+    {
+      "code": "4503",
+      "name": "アステラス製薬",
+      "sector": "Healthcare",
+      "price": 2476.5,
+      "ma25": 2325.5,
+      "ma75": 2108.2,
+      "rsi": 72,
+      "dividend": 3.15,
+      "pbr": 2.52,
+      "per": 35.6,
+      "vol_r": 0.64,
+      "vol_ratio_1d": 0.8,
+      "ret_1d": -2.33,
+      "range_pct": 2.56,
+      "trend_score": 3.6,
+      "market_cap_b": 44364.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 32,
+      "score_growth": 6,
+      "score": 32
+    },
+    {
+      "code": "4523",
+      "name": "エーザイ",
+      "sector": "Healthcare",
+      "price": 5114.0,
+      "ma25": 4633.4,
+      "ma75": 4638.9,
+      "rsi": 87,
+      "dividend": 3.13,
+      "pbr": 1.62,
+      "per": 29.2,
+      "vol_r": 0.77,
+      "vol_ratio_1d": 0.86,
+      "ret_1d": 0.27,
+      "range_pct": 1.45,
+      "trend_score": -3.6,
+      "market_cap_b": 14416.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 32,
+      "score_growth": 11,
+      "score": 32
+    },
+    {
+      "code": "4613",
+      "name": "関西ペイント",
+      "sector": "Basic Materials",
+      "price": 2728.5,
+      "ma25": 2605.9,
+      "ma75": 2479.0,
+      "rsi": 76,
+      "dividend": 4.03,
+      "pbr": 1.68,
+      "per": 15.3,
+      "vol_r": 0.64,
+      "vol_ratio_1d": 0.55,
+      "ret_1d": -1.25,
+      "range_pct": 0.97,
+      "trend_score": -28.0,
+      "market_cap_b": 4804.0,
+      "score_dividend": 28,
+      "score_value": 20,
+      "score_rebound": 20,
+      "score_stable": 32,
+      "score_growth": 15,
+      "score": 32
+    },
+    {
+      "code": "6436",
+      "name": "アマノ",
+      "sector": "Technology",
+      "price": 4031.0,
+      "ma25": 4063.1,
+      "ma75": 4125.2,
+      "rsi": 60,
+      "dividend": 4.47,
+      "pbr": 2.17,
+      "per": 16.1,
+      "vol_r": 0.8,
+      "vol_ratio_1d": 1.07,
+      "ret_1d": -1.63,
+      "range_pct": 2.08,
+      "trend_score": 16.8,
+      "market_cap_b": 2861.0,
+      "score_dividend": 28,
+      "score_value": 20,
+      "score_rebound": 20,
+      "score_stable": 32,
+      "score_growth": 10,
+      "score": 32
+    },
+    {
+      "code": "6481",
+      "name": "ＴＨＫ",
+      "sector": "Industrials",
+      "price": 5055.0,
+      "ma25": 4664.3,
+      "ma75": 4196.8,
+      "rsi": 61,
+      "dividend": 3.64,
+      "pbr": 2.17,
+      "per": 56.2,
+      "vol_r": 1.0,
+      "vol_ratio_1d": 0.68,
+      "ret_1d": -0.84,
+      "range_pct": 2.08,
+      "trend_score": -13.5,
+      "market_cap_b": 5663.0,
+      "score_dividend": 21,
+      "score_value": 15,
+      "score_rebound": 15,
+      "score_stable": 32,
+      "score_growth": 6,
+      "score": 32
+    },
+    {
+      "code": "7944",
+      "name": "ローランド",
+      "sector": "Consumer Cyclical",
+      "price": 3980.0,
+      "ma25": 3874.6,
+      "ma75": 3616.4,
+      "rsi": 64,
+      "dividend": 4.27,
+      "pbr": 2.56,
+      "per": 48.8,
+      "vol_r": 1.13,
+      "vol_ratio_1d": 0.78,
+      "ret_1d": -1.24,
+      "range_pct": 2.14,
+      "trend_score": -3.5,
+      "market_cap_b": 1048.0,
+      "score_dividend": 28,
+      "score_value": 20,
+      "score_rebound": 20,
+      "score_stable": 32,
+      "score_growth": 10,
+      "score": 32
+    },
+    {
+      "code": "8766",
+      "name": "東京海上ホールディングス",
+      "sector": "Financial Services",
+      "price": 6475.0,
+      "ma25": 6009.6,
+      "ma75": 5844.7,
+      "rsi": 83,
+      "dividend": 3.26,
+      "pbr": 2.31,
+      "per": 11.8,
+      "vol_r": 1.04,
+      "vol_ratio_1d": 1.27,
+      "ret_1d": 0.84,
+      "range_pct": 2.81,
+      "trend_score": 26.1,
+      "market_cap_b": 121627.0,
+      "score_dividend": 19,
+      "score_value": 17,
+      "score_rebound": 15,
+      "score_stable": 32,
+      "score_growth": 11,
+      "score": 32
+    },
+    {
+      "code": "9143",
+      "name": "ＳＧホールディングス",
+      "sector": "Industrials",
+      "price": 1518.0,
+      "ma25": 1509.0,
+      "ma75": 1491.4,
+      "rsi": 53,
+      "dividend": 3.56,
+      "pbr": 1.71,
+      "per": 16.8,
+      "vol_r": 1.08,
+      "vol_ratio_1d": 1.49,
+      "ret_1d": -4.83,
+      "range_pct": 4.08,
+      "trend_score": 55.5,
+      "market_cap_b": 9058.0,
+      "score_dividend": 21,
+      "score_value": 15,
+      "score_rebound": 15,
+      "score_stable": 32,
+      "score_growth": 11,
+      "score": 32
+    },
+    {
+      "code": "9757",
+      "name": "船井総研ホールディングス",
+      "sector": "Industrials",
+      "price": 1134.0,
+      "ma25": 1136.0,
+      "ma75": 1150.8,
+      "rsi": 55,
+      "dividend": 4.23,
+      "pbr": 4.52,
+      "per": 16.3,
+      "vol_r": 1.19,
+      "vol_ratio_1d": 0.87,
+      "ret_1d": 0.09,
+      "range_pct": 0.97,
+      "trend_score": -5.1,
+      "market_cap_b": 1031.0,
+      "score_dividend": 28,
+      "score_value": 20,
+      "score_rebound": 20,
+      "score_stable": 32,
+      "score_growth": 10,
+      "score": 32
+    },
+    {
+      "code": "1870",
+      "name": "矢作建設工業",
+      "sector": "Industrials",
+      "price": 2472.0,
+      "ma25": 2412.6,
+      "ma75": 2311.8,
+      "rsi": 68,
+      "dividend": 3.64,
+      "pbr": 1.45,
+      "per": 10.2,
+      "vol_r": 0.86,
+      "vol_ratio_1d": 0.54,
+      "ret_1d": -0.52,
+      "range_pct": 2.14,
+      "trend_score": -28.5,
+      "market_cap_b": 1064.0,
+      "score_dividend": 32,
+      "score_value": 31,
+      "score_rebound": 26,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "2292",
+      "name": "Ｓ　Ｆｏｏｄｓ",
+      "sector": "Consumer Defensive",
+      "price": 3180.0,
+      "ma25": 3103.0,
+      "ma75": 2793.7,
+      "rsi": 76,
+      "dividend": 3.27,
+      "pbr": 0.8,
+      "per": 18.0,
+      "vol_r": 1.4,
+      "vol_ratio_1d": 2.58,
+      "ret_1d": 0.32,
+      "range_pct": 2.36,
+      "trend_score": 65.2,
+      "market_cap_b": 1007.0,
+      "score_dividend": 27,
+      "score_value": 31,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "2602",
+      "name": "日清オイリオグループ",
+      "sector": "Consumer Defensive",
+      "price": 5910.0,
+      "ma25": 5713.2,
+      "ma75": 5368.0,
+      "rsi": 75,
+      "dividend": 3.05,
+      "pbr": 0.89,
+      "per": 8.0,
+      "vol_r": 0.82,
+      "vol_ratio_1d": 1.09,
+      "ret_1d": -0.67,
+      "range_pct": 1.18,
+      "trend_score": 11.4,
+      "market_cap_b": 1819.0,
+      "score_dividend": 39,
+      "score_value": 46,
+      "score_rebound": 35,
+      "score_stable": 31,
+      "score_growth": 26,
+      "score": 31
+    },
+    {
+      "code": "3076",
+      "name": "あい　ホールディングス",
+      "sector": "Industrials",
+      "price": 2813.0,
+      "ma25": 2742.8,
+      "ma75": 2721.5,
+      "rsi": 66,
+      "dividend": 3.91,
+      "pbr": 1.32,
+      "per": 11.4,
+      "vol_r": 0.97,
+      "vol_ratio_1d": 0.69,
+      "ret_1d": -1.3,
+      "range_pct": 1.39,
+      "trend_score": -12.9,
+      "market_cap_b": 1499.0,
+      "score_dividend": 29,
+      "score_value": 27,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "3191",
+      "name": "ジョイフル本田",
+      "sector": "Consumer Cyclical",
+      "price": 2165.0,
+      "ma25": 2160.0,
+      "ma75": 2115.3,
+      "rsi": 57,
+      "dividend": 3.88,
+      "pbr": 1.03,
+      "per": 13.2,
+      "vol_r": 0.77,
+      "vol_ratio_1d": 0.76,
+      "ret_1d": -1.55,
+      "range_pct": 1.2,
+      "trend_score": -6.7,
+      "market_cap_b": 1305.0,
+      "score_dividend": 30,
+      "score_value": 29,
+      "score_rebound": 24,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "4095",
+      "name": "日本パーカライジング",
+      "sector": "Basic Materials",
+      "price": 1561.0,
+      "ma25": 1517.0,
+      "ma75": 1435.2,
+      "rsi": 75,
+      "dividend": 3.2,
+      "pbr": 0.88,
+      "per": 13.9,
+      "vol_r": 0.96,
+      "vol_ratio_1d": 1.33,
+      "ret_1d": 0.39,
+      "range_pct": 2.37,
+      "trend_score": 25.8,
+      "market_cap_b": 1693.0,
+      "score_dividend": 29,
+      "score_value": 34,
+      "score_rebound": 25,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "4189",
+      "name": "ＫＨネオケム",
+      "sector": "Basic Materials",
+      "price": 2987.0,
+      "ma25": 2724.6,
+      "ma75": 2529.6,
+      "rsi": 76,
+      "dividend": 3.68,
+      "pbr": 1.5,
+      "per": 13.9,
+      "vol_r": 0.65,
+      "vol_ratio_1d": 0.36,
+      "ret_1d": -2.07,
+      "range_pct": 0.97,
+      "trend_score": -50.1,
+      "market_cap_b": 1050.0,
+      "score_dividend": 26,
+      "score_value": 23,
+      "score_rebound": 20,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "4202",
+      "name": "ダイセル",
+      "sector": "Basic Materials",
+      "price": 1629.0,
+      "ma25": 1529.4,
+      "ma75": 1402.4,
+      "rsi": 81,
+      "dividend": 3.68,
+      "pbr": 1.1,
+      "per": 12.0,
+      "vol_r": 0.71,
+      "vol_ratio_1d": 0.94,
+      "ret_1d": -1.48,
+      "range_pct": 1.75,
+      "trend_score": 7.5,
+      "market_cap_b": 4199.0,
+      "score_dividend": 33,
+      "score_value": 33,
+      "score_rebound": 27,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "4205",
+      "name": "日本ゼオン",
+      "sector": "Basic Materials",
+      "price": 2032.0,
+      "ma25": 1956.1,
+      "ma75": 1816.8,
+      "rsi": 69,
+      "dividend": 3.54,
+      "pbr": 1.07,
+      "per": 11.1,
+      "vol_r": 0.81,
+      "vol_ratio_1d": 0.83,
+      "ret_1d": -1.48,
+      "range_pct": 1.3,
+      "trend_score": -1.4,
+      "market_cap_b": 3888.0,
+      "score_dividend": 33,
+      "score_value": 33,
+      "score_rebound": 27,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "4206",
+      "name": "アイカ工業",
+      "sector": "Industrials",
+      "price": 3833.0,
+      "ma25": 3676.8,
+      "ma75": 3552.4,
+      "rsi": 77,
+      "dividend": 3.6,
+      "pbr": 1.34,
+      "per": 14.9,
+      "vol_r": 0.84,
+      "vol_ratio_1d": 0.92,
+      "ret_1d": -1.47,
+      "range_pct": 1.54,
+      "trend_score": 5.5,
+      "market_cap_b": 2400.0,
+      "score_dividend": 26,
+      "score_value": 23,
+      "score_rebound": 20,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "4631",
+      "name": "ＤＩＣ",
+      "sector": "Basic Materials",
+      "price": 4314.0,
+      "ma25": 3948.2,
+      "ma75": 3729.3,
+      "rsi": 76,
+      "dividend": 3.25,
+      "pbr": 0.87,
+      "per": 12.6,
+      "vol_r": 1.31,
+      "vol_ratio_1d": 1.06,
+      "ret_1d": -0.87,
+      "range_pct": 3.25,
+      "trend_score": 16.7,
+      "market_cap_b": 4085.0,
+      "score_dividend": 32,
+      "score_value": 38,
+      "score_rebound": 28,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "4633",
+      "name": "サカタインクス",
+      "sector": "Basic Materials",
+      "price": 2701.0,
+      "ma25": 2469.1,
+      "ma75": 2346.9,
+      "rsi": 78,
+      "dividend": 3.7,
+      "pbr": 1.11,
+      "per": 11.5,
+      "vol_r": 1.02,
+      "vol_ratio_1d": 0.96,
+      "ret_1d": 0.93,
+      "range_pct": 2.67,
+      "trend_score": 9.3,
+      "market_cap_b": 1328.0,
+      "score_dividend": 29,
+      "score_value": 27,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "4665",
+      "name": "ダスキン",
+      "sector": "Industrials",
+      "price": 4227.0,
+      "ma25": 4314.1,
+      "ma75": 4180.1,
+      "rsi": 47,
+      "dividend": 3.08,
+      "pbr": 1.29,
+      "per": 20.8,
+      "vol_r": 0.91,
+      "vol_ratio_1d": 0.84,
+      "ret_1d": -0.77,
+      "range_pct": 0.8,
+      "trend_score": -5.0,
+      "market_cap_b": 1988.0,
+      "score_dividend": 22,
+      "score_value": 20,
+      "score_rebound": 21,
+      "score_stable": 31,
+      "score_growth": 14,
+      "score": 31
+    },
+    {
+      "code": "5021",
+      "name": "コスモエネルギーホールディングス",
+      "sector": "Energy",
+      "price": 4793.0,
+      "ma25": 4603.2,
+      "ma75": 4224.3,
+      "rsi": 57,
+      "dividend": 3.44,
+      "pbr": 1.33,
+      "per": 13.2,
+      "vol_r": 0.93,
+      "vol_ratio_1d": 0.88,
+      "ret_1d": -1.18,
+      "range_pct": 1.75,
+      "trend_score": 2.3,
+      "market_cap_b": 7866.0,
+      "score_dividend": 19,
+      "score_value": 18,
+      "score_rebound": 15,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "5186",
+      "name": "ニッタ",
+      "sector": "Industrials",
+      "price": 4440.0,
+      "ma25": 4243.2,
+      "ma75": 4159.7,
+      "rsi": 75,
+      "dividend": 3.27,
+      "pbr": 0.77,
+      "per": 10.4,
+      "vol_r": 0.81,
+      "vol_ratio_1d": 0.61,
+      "ret_1d": -0.56,
+      "range_pct": 1.35,
+      "trend_score": -23.4,
+      "market_cap_b": 1202.0,
+      "score_dividend": 35,
+      "score_value": 42,
+      "score_rebound": 31,
+      "score_stable": 31,
+      "score_growth": 26,
+      "score": 31
+    },
+    {
+      "code": "5444",
+      "name": "大和工業",
+      "sector": "Basic Materials",
+      "price": 12755.0,
+      "ma25": 12001.6,
+      "ma75": 10885.1,
+      "rsi": 67,
+      "dividend": 3.14,
+      "pbr": 1.44,
+      "per": 34.5,
+      "vol_r": 0.91,
+      "vol_ratio_1d": 0.97,
+      "ret_1d": 0.12,
+      "range_pct": 2.2,
+      "trend_score": 5.3,
+      "market_cap_b": 7670.0,
+      "score_dividend": 17,
+      "score_value": 15,
+      "score_rebound": 13,
+      "score_stable": 31,
+      "score_growth": 11,
+      "score": 31
+    },
+    {
+      "code": "5423",
+      "name": "東京製鐵",
+      "sector": "Basic Materials",
+      "price": 1581.0,
+      "ma25": 1573.3,
+      "ma75": 1484.2,
+      "rsi": 61,
+      "dividend": 3.16,
+      "pbr": 0.74,
+      "per": 10.4,
+      "vol_r": 0.71,
+      "vol_ratio_1d": 0.46,
+      "ret_1d": -1.25,
+      "range_pct": 0.95,
+      "trend_score": -38.7,
+      "market_cap_b": 1621.0,
+      "score_dividend": 35,
+      "score_value": 42,
+      "score_rebound": 31,
+      "score_stable": 31,
+      "score_growth": 26,
+      "score": 31
+    },
+    {
+      "code": "5930",
+      "name": "文化シヤッター",
+      "sector": "Industrials",
+      "price": 2056.0,
+      "ma25": 2060.0,
+      "ma75": 2056.1,
+      "rsi": 56,
+      "dividend": 3.6,
+      "pbr": 1.3,
+      "per": 10.7,
+      "vol_r": 0.82,
+      "vol_ratio_1d": 0.72,
+      "ret_1d": -1.3,
+      "range_pct": 1.17,
+      "trend_score": -11.0,
+      "market_cap_b": 1452.0,
+      "score_dividend": 32,
+      "score_value": 31,
+      "score_rebound": 26,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "6104",
+      "name": "芝浦機械",
+      "sector": "Industrials",
+      "price": 4510.0,
+      "ma25": 4309.8,
+      "ma75": 4301.9,
+      "rsi": 63,
+      "dividend": 3.1,
+      "pbr": 0.89,
+      "per": 18.5,
+      "vol_r": 1.18,
+      "vol_ratio_1d": 1.28,
+      "ret_1d": -0.55,
+      "range_pct": 2.11,
+      "trend_score": 23.3,
+      "market_cap_b": 1066.0,
+      "score_dividend": 27,
+      "score_value": 31,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "6141",
+      "name": "ＤＭＧ森精機",
+      "sector": "Industrials",
+      "price": 2967.5,
+      "ma25": 2892.4,
+      "ma75": 2725.5,
+      "rsi": 62,
+      "dividend": 3.54,
+      "pbr": 1.22,
+      "per": 88.5,
+      "vol_r": 0.91,
+      "vol_ratio_1d": 0.79,
+      "ret_1d": -1.35,
+      "range_pct": 2.36,
+      "trend_score": -1.7,
+      "market_cap_b": 4207.0,
+      "score_dividend": 24,
+      "score_value": 20,
+      "score_rebound": 18,
+      "score_stable": 31,
+      "score_growth": 11,
+      "score": 31
+    },
+    {
+      "code": "6486",
+      "name": "イーグル工業",
+      "sector": "Industrials",
+      "price": 3420.0,
+      "ma25": 3243.4,
+      "ma75": 2938.2,
+      "rsi": 74,
+      "dividend": 3.8,
+      "pbr": 1.24,
+      "per": 22.4,
+      "vol_r": 0.71,
+      "vol_ratio_1d": 0.75,
+      "ret_1d": -0.44,
+      "range_pct": 1.75,
+      "trend_score": -10.3,
+      "market_cap_b": 1551.0,
+      "score_dividend": 24,
+      "score_value": 20,
+      "score_rebound": 18,
+      "score_stable": 31,
+      "score_growth": 11,
+      "score": 31
+    },
+    {
+      "code": "6923",
+      "name": "スタンレー電気",
+      "sector": "Consumer Cyclical",
+      "price": 3186.0,
+      "ma25": 3121.2,
+      "ma75": 3097.1,
+      "rsi": 78,
+      "dividend": 3.2,
+      "pbr": 0.89,
+      "per": 15.6,
+      "vol_r": 0.75,
+      "vol_ratio_1d": 0.7,
+      "ret_1d": -1.33,
+      "range_pct": 2.64,
+      "trend_score": -8.2,
+      "market_cap_b": 3916.0,
+      "score_dividend": 27,
+      "score_value": 31,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "6995",
+      "name": "東海理化電機製作所",
+      "sector": "Consumer Cyclical",
+      "price": 3265.0,
+      "ma25": 3233.6,
+      "ma75": 3087.9,
+      "rsi": 61,
+      "dividend": 3.06,
+      "pbr": 0.81,
+      "per": 7.8,
+      "vol_r": 0.64,
+      "vol_ratio_1d": 0.7,
+      "ret_1d": -3.26,
+      "range_pct": 2.76,
+      "trend_score": -0.1,
+      "market_cap_b": 2779.0,
+      "score_dividend": 39,
+      "score_value": 46,
+      "score_rebound": 35,
+      "score_stable": 31,
+      "score_growth": 26,
+      "score": 31
+    },
+    {
+      "code": "7283",
+      "name": "愛三工業",
+      "sector": "Consumer Cyclical",
+      "price": 2230.0,
+      "ma25": 2223.1,
+      "ma75": 2188.8,
+      "rsi": 54,
+      "dividend": 3.45,
+      "pbr": 0.92,
+      "per": 10.4,
+      "vol_r": 0.69,
+      "vol_ratio_1d": 0.69,
+      "ret_1d": -1.72,
+      "range_pct": 1.48,
+      "trend_score": -10.9,
+      "market_cap_b": 1272.0,
+      "score_dividend": 29,
+      "score_value": 32,
+      "score_rebound": 25,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "7943",
+      "name": "ニチハ",
+      "sector": "Industrials",
+      "price": 3650.0,
+      "ma25": 3522.4,
+      "ma75": 3218.7,
+      "rsi": 70,
+      "dividend": 3.12,
+      "pbr": 1.0,
+      "per": 36.9,
+      "vol_r": 0.89,
+      "vol_ratio_1d": 0.74,
+      "ret_1d": 0.97,
+      "range_pct": 1.92,
+      "trend_score": -8.4,
+      "market_cap_b": 1212.0,
+      "score_dividend": 21,
+      "score_value": 21,
+      "score_rebound": 17,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "7981",
+      "name": "タカラスタンダード",
+      "sector": "Consumer Cyclical",
+      "price": 3000.0,
+      "ma25": 3017.1,
+      "ma75": 2846.5,
+      "rsi": 55,
+      "dividend": 3.33,
+      "pbr": 0.99,
+      "per": 14.2,
+      "vol_r": 0.64,
+      "vol_ratio_1d": 0.54,
+      "ret_1d": -1.32,
+      "range_pct": 0.9,
+      "trend_score": -29.0,
+      "market_cap_b": 1900.0,
+      "score_dividend": 23,
+      "score_value": 24,
+      "score_rebound": 19,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "7994",
+      "name": "オカムラ",
+      "sector": "Industrials",
+      "price": 2590.0,
+      "ma25": 2464.7,
+      "ma75": 2336.4,
+      "rsi": 79,
+      "dividend": 3.75,
+      "pbr": 1.28,
+      "per": 11.4,
+      "vol_r": 1.02,
+      "vol_ratio_1d": 1.21,
+      "ret_1d": -1.22,
+      "range_pct": 1.12,
+      "trend_score": 19.7,
+      "market_cap_b": 2452.0,
+      "score_dividend": 29,
+      "score_value": 27,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "8032",
+      "name": "日本紙パルプ商事",
+      "sector": "Basic Materials",
+      "price": 1088.0,
+      "ma25": 1024.3,
+      "ma75": 875.3,
+      "rsi": 76,
+      "dividend": 3.13,
+      "pbr": 0.96,
+      "per": 48.3,
+      "vol_r": 0.68,
+      "vol_ratio_1d": 0.67,
+      "ret_1d": -0.73,
+      "range_pct": 1.56,
+      "trend_score": -16.4,
+      "market_cap_b": 1275.0,
+      "score_dividend": 21,
+      "score_value": 21,
+      "score_rebound": 17,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "8059",
+      "name": "第一実業",
+      "sector": "Industrials",
+      "price": 3475.0,
+      "ma25": 3332.0,
+      "ma75": 3036.8,
+      "rsi": 71,
+      "dividend": 3.51,
+      "pbr": 1.27,
+      "per": 11.7,
+      "vol_r": 0.61,
+      "vol_ratio_1d": 0.63,
+      "ret_1d": -2.39,
+      "range_pct": 1.87,
+      "trend_score": -12.6,
+      "market_cap_b": 1110.0,
+      "score_dividend": 29,
+      "score_value": 27,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "8074",
+      "name": "ユアサ商事",
+      "sector": "Industrials",
+      "price": 6220.0,
+      "ma25": 5886.4,
+      "ma75": 5483.2,
+      "rsi": 75,
+      "dividend": 3.67,
+      "pbr": 1.14,
+      "per": 12.8,
+      "vol_r": 1.0,
+      "vol_ratio_1d": 0.84,
+      "ret_1d": -0.16,
+      "range_pct": 1.45,
+      "trend_score": -5.5,
+      "market_cap_b": 1308.0,
+      "score_dividend": 29,
+      "score_value": 27,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "8098",
+      "name": "稲畑産業",
+      "sector": "Basic Materials",
+      "price": 4210.0,
+      "ma25": 4018.4,
+      "ma75": 3768.0,
+      "rsi": 77,
+      "dividend": 3.04,
+      "pbr": 0.98,
+      "per": 11.3,
+      "vol_r": 1.34,
+      "vol_ratio_1d": 0.91,
+      "ret_1d": -1.75,
+      "range_pct": 1.9,
+      "trend_score": 7.0,
+      "market_cap_b": 2247.0,
+      "score_dividend": 26,
+      "score_value": 28,
+      "score_rebound": 22,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "8304",
+      "name": "あおぞら銀行",
+      "sector": "Financial Services",
+      "price": 2877.5,
+      "ma25": 2665.7,
+      "ma75": 2483.6,
+      "rsi": 82,
+      "dividend": 3.06,
+      "pbr": 0.84,
+      "per": 18.1,
+      "vol_r": 0.74,
+      "vol_ratio_1d": 0.96,
+      "ret_1d": -0.48,
+      "range_pct": 1.2,
+      "trend_score": 3.1,
+      "market_cap_b": 3982.0,
+      "score_dividend": 27,
+      "score_value": 31,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "8381",
+      "name": "山陰合同銀行",
+      "sector": "Financial Services",
+      "price": 1764.0,
+      "ma25": 1655.2,
+      "ma75": 1517.5,
+      "rsi": 68,
+      "dividend": 3.17,
+      "pbr": 0.82,
+      "per": 12.7,
+      "vol_r": 0.85,
+      "vol_ratio_1d": 0.55,
+      "ret_1d": -1.12,
+      "range_pct": 1.42,
+      "trend_score": -27.1,
+      "market_cap_b": 2678.0,
+      "score_dividend": 32,
+      "score_value": 38,
+      "score_rebound": 28,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "8410",
+      "name": "セブン銀行",
+      "sector": "Financial Services",
+      "price": 295.7,
+      "ma25": 299.1,
+      "ma75": 295.7,
+      "rsi": 48,
+      "dividend": 3.72,
+      "pbr": 1.26,
+      "per": 19.0,
+      "vol_r": 0.81,
+      "vol_ratio_1d": 0.76,
+      "ret_1d": -1.14,
+      "range_pct": 0.74,
+      "trend_score": -9.7,
+      "market_cap_b": 3469.0,
+      "score_dividend": 24,
+      "score_value": 20,
+      "score_rebound": 18,
+      "score_stable": 31,
+      "score_growth": 14,
+      "score": 31
+    },
+    {
+      "code": "8424",
+      "name": "芙蓉総合リース",
+      "sector": "Industrials",
+      "price": 4583.0,
+      "ma25": 4457.3,
+      "ma75": 4274.3,
+      "rsi": 71,
+      "dividend": 3.45,
+      "pbr": 0.87,
+      "per": 15.3,
+      "vol_r": 0.86,
+      "vol_ratio_1d": 0.88,
+      "ret_1d": -1.27,
+      "range_pct": 1.33,
+      "trend_score": 1.4,
+      "market_cap_b": 4133.0,
+      "score_dividend": 27,
+      "score_value": 31,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "8566",
+      "name": "リコーリース",
+      "sector": "Financial Services",
+      "price": 6160.0,
+      "ma25": 6080.8,
+      "ma75": 5865.7,
+      "rsi": 58,
+      "dividend": 3.08,
+      "pbr": 0.79,
+      "per": 13.9,
+      "vol_r": 0.73,
+      "vol_ratio_1d": 0.78,
+      "ret_1d": -1.75,
+      "range_pct": 1.3,
+      "trend_score": -4.0,
+      "market_cap_b": 1899.0,
+      "score_dividend": 29,
+      "score_value": 34,
+      "score_rebound": 25,
+      "score_stable": 31,
+      "score_growth": 26,
+      "score": 31
+    },
+    {
+      "code": "8609",
+      "name": "岡三証券グループ",
+      "sector": "Financial Services",
+      "price": 956.0,
+      "ma25": 905.6,
+      "ma75": 790.6,
+      "rsi": 67,
+      "dividend": 3.14,
+      "pbr": 0.87,
+      "per": 17.2,
+      "vol_r": 0.88,
+      "vol_ratio_1d": 0.95,
+      "ret_1d": -2.45,
+      "range_pct": 1.67,
+      "trend_score": 11.7,
+      "market_cap_b": 1913.0,
+      "score_dividend": 27,
+      "score_value": 31,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "8616",
+      "name": "東海東京フィナンシャル・ホールディングス",
+      "sector": "Financial Services",
+      "price": 773.0,
+      "ma25": 752.0,
+      "ma75": 685.2,
+      "rsi": 62,
+      "dividend": 3.88,
+      "pbr": 1.05,
+      "per": 15.6,
+      "vol_r": 0.85,
+      "vol_ratio_1d": 1.01,
+      "ret_1d": -2.15,
+      "range_pct": 1.81,
+      "trend_score": 14.6,
+      "market_cap_b": 1945.0,
+      "score_dividend": 28,
+      "score_value": 26,
+      "score_rebound": 22,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "8877",
+      "name": "エスリード",
+      "sector": "Real Estate",
+      "price": 7220.0,
+      "ma25": 7027.6,
+      "ma75": 6577.1,
+      "rsi": 66,
+      "dividend": 3.74,
+      "pbr": 1.42,
+      "per": 12.2,
+      "vol_r": 0.87,
+      "vol_ratio_1d": 0.71,
+      "ret_1d": -0.41,
+      "range_pct": 1.52,
+      "trend_score": -14.3,
+      "market_cap_b": 1114.0,
+      "score_dividend": 29,
+      "score_value": 27,
+      "score_rebound": 23,
+      "score_stable": 31,
+      "score_growth": 16,
+      "score": 31
+    },
+    {
+      "code": "9110",
+      "name": "ＮＳユナイテッド海運",
+      "sector": "Industrials",
+      "price": 7650.0,
+      "ma25": 7144.0,
+      "ma75": 6385.6,
+      "rsi": 77,
+      "dividend": 3.46,
+      "pbr": 1.0,
+      "per": 8.8,
+      "vol_r": 0.74,
+      "vol_ratio_1d": 0.71,
+      "ret_1d": -0.65,
+      "range_pct": 2.48,
+      "trend_score": -10.5,
+      "market_cap_b": 1803.0,
+      "score_dividend": 33,
+      "score_value": 36,
+      "score_rebound": 29,
+      "score_stable": 31,
+      "score_growth": 26,
+      "score": 31
+    },
+    {
+      "code": "9119",
+      "name": "飯野海運",
+      "sector": "Industrials",
+      "price": 1602.0,
+      "ma25": 1570.9,
+      "ma75": 1440.8,
+      "rsi": 54,
+      "dividend": 3.87,
+      "pbr": 1.11,
+      "per": 10.4,
+      "vol_r": 0.76,
+      "vol_ratio_1d": 0.7,
+      "ret_1d": -2.02,
+      "range_pct": 2.43,
+      "trend_score": -6.0,
+      "market_cap_b": 1695.0,
+      "score_dividend": 32,
+      "score_value": 31,
+      "score_rebound": 26,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "9364",
+      "name": "上組",
+      "sector": "Industrials",
+      "price": 5601.0,
+      "ma25": 5491.8,
+      "ma75": 5151.8,
+      "rsi": 63,
+      "dividend": 3.3,
+      "pbr": 1.44,
+      "per": 19.9,
+      "vol_r": 1.22,
+      "vol_ratio_1d": 1.11,
+      "ret_1d": -1.11,
+      "range_pct": 1.48,
+      "trend_score": 15.1,
+      "market_cap_b": 5569.0,
+      "score_dividend": 17,
+      "score_value": 15,
+      "score_rebound": 13,
+      "score_stable": 31,
+      "score_growth": 11,
+      "score": 31
+    },
+    {
+      "code": "9543",
+      "name": "静岡ガス",
+      "sector": "Utilities",
+      "price": 1459.0,
+      "ma25": 1282.2,
+      "ma75": 1205.1,
+      "rsi": 96,
+      "dividend": 3.02,
+      "pbr": 0.84,
+      "per": 10.9,
+      "vol_r": 1.29,
+      "vol_ratio_1d": 1.79,
+      "ret_1d": 1.74,
+      "range_pct": 3.08,
+      "trend_score": 51.1,
+      "market_cap_b": 1099.0,
+      "score_dividend": 35,
+      "score_value": 42,
+      "score_rebound": 31,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "9832",
+      "name": "オートバックスセブン",
+      "sector": "Consumer Cyclical",
+      "price": 1745.0,
+      "ma25": 1666.5,
+      "ma75": 1626.2,
+      "rsi": 75,
+      "dividend": 3.44,
+      "pbr": 1.0,
+      "per": 13.7,
+      "vol_r": 1.07,
+      "vol_ratio_1d": 2.44,
+      "ret_1d": 2.17,
+      "range_pct": 3.38,
+      "trend_score": 72.3,
+      "market_cap_b": 1370.0,
+      "score_dividend": 23,
+      "score_value": 24,
+      "score_rebound": 19,
+      "score_stable": 31,
+      "score_growth": 21,
+      "score": 31
+    },
+    {
+      "code": "8698",
+      "name": "マネックスグループ",
+      "sector": "Financial Services",
+      "price": 718.0,
+      "ma25": 715.1,
+      "ma75": 725.7,
+      "rsi": 54,
+      "dividend": 4.26,
+      "pbr": 1.46,
+      "per": 0.0,
+      "vol_r": 0.9,
+      "vol_ratio_1d": 0.78,
+      "ret_1d": -0.69,
+      "range_pct": 1.81,
+      "trend_score": -6.7,
+      "market_cap_b": 1805.0,
+      "score_dividend": 33,
+      "score_value": 40,
+      "score_rebound": 35,
+      "score_stable": 30,
+      "score_growth": 25,
+      "score": 30
+    },
+    {
+      "code": "1719",
+      "name": "安藤・間",
+      "sector": "Industrials",
+      "price": 2112.0,
+      "ma25": 2063.9,
+      "ma75": 1920.8,
+      "rsi": 66,
+      "dividend": 3.79,
+      "pbr": 1.77,
+      "per": 12.5,
+      "vol_r": 0.79,
+      "vol_ratio_1d": 0.76,
+      "ret_1d": -0.24,
+      "range_pct": 1.63,
+      "trend_score": -10.6,
+      "market_cap_b": 3311.0,
+      "score_dividend": 26,
+      "score_value": 22,
+      "score_rebound": 20,
+      "score_stable": 28,
+      "score_growth": 16,
+      "score": 28
+    },
+    {
+      "code": "1952",
+      "name": "新日本空調",
+      "sector": "Industrials",
+      "price": 3890.0,
+      "ma25": 3587.0,
+      "ma75": 3282.1,
+      "rsi": 72,
+      "dividend": 3.6,
+      "pbr": 2.31,
+      "per": 15.1,
+      "vol_r": 0.75,
+      "vol_ratio_1d": 0.63,
+      "ret_1d": 1.04,
+      "range_pct": 2.44,
+      "trend_score": -16.2,
+      "market_cap_b": 1767.0,
+      "score_dividend": 21,
+      "score_value": 15,
+      "score_rebound": 15,
+      "score_stable": 28,
+      "score_growth": 6,
+      "score": 28
+    },
+    {
+      "code": "1975",
+      "name": "朝日工業社",
+      "sector": "Industrials",
+      "price": 4575.0,
+      "ma25": 4006.2,
+      "ma75": 3551.4,
+      "rsi": 95,
+      "dividend": 3.72,
+      "pbr": 2.62,
+      "per": 16.6,
+      "vol_r": 0.99,
+      "vol_ratio_1d": 0.87,
+      "ret_1d": 0.0,
+      "range_pct": 4.04,
+      "trend_score": 3.8,
+      "market_cap_b": 1179.0,
+      "score_dividend": 21,
+      "score_value": 15,
+      "score_rebound": 15,
+      "score_stable": 28,
+      "score_growth": 6,
+      "score": 28
+    },
+    {
+      "code": "4021",
+      "name": "日産化学",
+      "sector": "Basic Materials",
+      "price": 6597.0,
+      "ma25": 5855.4,
+      "ma75": 5465.1,
+      "rsi": 76,
+      "dividend": 3.33,
+      "pbr": 3.67,
+      "per": 19.8,
+      "vol_r": 0.85,
+      "vol_ratio_1d": 1.23,
+      "ret_1d": -2.66,
+      "range_pct": 3.62,
+      "trend_score": 33.9,
+      "market_cap_b": 8852.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 28,
+      "score_growth": 6,
+      "score": 28
+    },
+    {
+      "code": "4666",
+      "name": "パーク２４",
+      "sector": "Industrials",
+      "price": 2145.0,
+      "ma25": 2205.4,
+      "ma75": 2020.7,
+      "rsi": 48,
+      "dividend": 3.03,
+      "pbr": 3.73,
+      "per": 25.1,
+      "vol_r": 0.76,
+      "vol_ratio_1d": 0.82,
+      "ret_1d": -1.97,
+      "range_pct": 1.47,
+      "trend_score": 0.4,
+      "market_cap_b": 3661.0,
+      "score_dividend": 19,
+      "score_value": 15,
+      "score_rebound": 18,
+      "score_stable": 28,
+      "score_growth": 9,
+      "score": 28
+    },
+    {
+      "code": "4927",
+      "name": "ポーラ・オルビスホールディングス",
+      "sector": "Consumer Defensive",
+      "price": 1357.5,
+      "ma25": 1370.0,
+      "ma75": 1325.1,
+      "rsi": 52,
+      "dividend": 3.83,
+      "pbr": 1.84,
+      "per": 31.7,
+      "vol_r": 1.06,
+      "vol_ratio_1d": 0.81,
+      "ret_1d": 0.18,
+      "range_pct": 1.25,
+      "trend_score": -8.2,
+      "market_cap_b": 3004.0,
+      "score_dividend": 21,
+      "score_value": 15,
+      "score_rebound": 15,
+      "score_stable": 28,
+      "score_growth": 11,
+      "score": 28
+    },
+    {
+      "code": "5929",
+      "name": "三和ホールディングス",
+      "sector": "Industrials",
+      "price": 3969.0,
+      "ma25": 3912.8,
+      "ma75": 4011.0,
+      "rsi": 79,
+      "dividend": 3.12,
+      "pbr": 2.66,
+      "per": 14.2,
+      "vol_r": 0.85,
+      "vol_ratio_1d": 0.84,
+      "ret_1d": -1.22,
+      "range_pct": 1.46,
+      "trend_score": -1.2,
+      "market_cap_b": 8366.0,
+      "score_dividend": 16,
+      "score_value": 13,
+      "score_rebound": 12,
+      "score_stable": 28,
+      "score_growth": 11,
+      "score": 28
+    },
+    {
+      "code": "7164",
+      "name": "全国保証",
+      "sector": "Financial Services",
+      "price": 3166.0,
+      "ma25": 3126.0,
+      "ma75": 3126.0,
+      "rsi": 67,
+      "dividend": 3.63,
+      "pbr": 1.82,
+      "per": 13.5,
+      "vol_r": 0.86,
+      "vol_ratio_1d": 0.77,
+      "ret_1d": -1.25,
+      "range_pct": 0.79,
+      "trend_score": -8.3,
+      "market_cap_b": 4206.0,
+      "score_dividend": 23,
+      "score_value": 18,
+      "score_rebound": 17,
+      "score_stable": 28,
+      "score_growth": 16,
+      "score": 28
+    },
+    {
+      "code": "7740",
+      "name": "タムロン",
+      "sector": "Consumer Cyclical",
+      "price": 1025.0,
+      "ma25": 1037.5,
+      "ma75": 1028.8,
+      "rsi": 49,
+      "dividend": 3.61,
+      "pbr": 1.92,
+      "per": 14.1,
+      "vol_r": 1.06,
+      "vol_ratio_1d": 0.86,
+      "ret_1d": -1.06,
+      "range_pct": 1.27,
+      "trend_score": -1.0,
+      "market_cap_b": 1653.0,
+      "score_dividend": 23,
+      "score_value": 18,
+      "score_rebound": 17,
+      "score_stable": 28,
+      "score_growth": 19,
+      "score": 28
+    },
+    {
+      "code": "1820",
+      "name": "西松建設",
+      "sector": "Industrials",
+      "price": 6612.0,
+      "ma25": 6124.7,
+      "ma75": 5794.1,
+      "rsi": 80,
+      "dividend": 3.33,
+      "pbr": 1.43,
+      "per": 14.5,
+      "vol_r": 1.14,
+      "vol_ratio_1d": 0.97,
+      "ret_1d": -1.03,
+      "range_pct": 1.47,
+      "trend_score": 6.7,
+      "market_cap_b": 2611.0,
+      "score_dividend": 19,
+      "score_value": 18,
+      "score_rebound": 15,
+      "score_stable": 27,
+      "score_growth": 16,
+      "score": 27
+    },
+    {
+      "code": "1860",
+      "name": "戸田建設",
+      "sector": "Industrials",
+      "price": 1528.5,
+      "ma25": 1443.4,
+      "ma75": 1284.5,
+      "rsi": 76,
+      "dividend": 3.27,
+      "pbr": 1.22,
+      "per": 14.9,
+      "vol_r": 1.13,
+      "vol_ratio_1d": 0.9,
+      "ret_1d": -0.88,
+      "range_pct": 1.44,
+      "trend_score": 1.5,
+      "market_cap_b": 4589.0,
+      "score_dividend": 19,
+      "score_value": 18,
+      "score_rebound": 15,
+      "score_stable": 27,
+      "score_growth": 16,
+      "score": 27
+    },
+    {
+      "code": "25935",
+      "name": "伊藤園第１種優先株式",
+      "sector": "Consumer Defensive",
+      "price": 1819.0,
+      "ma25": 1822.9,
+      "ma75": 1813.4,
+      "rsi": 57,
+      "dividend": 3.3,
+      "pbr": 1.14,
+      "per": 14.8,
+      "vol_r": 0.89,
+      "vol_ratio_1d": 0.91,
+      "ret_1d": 0.06,
+      "range_pct": 0.16,
+      "trend_score": -4.9,
+      "market_cap_b": 3055.0,
+      "score_dividend": 19,
+      "score_value": 18,
+      "score_rebound": 15,
+      "score_stable": 27,
+      "score_growth": 21,
+      "score": 27
+    },
+    {
+      "code": "2815",
+      "name": "アリアケジャパン",
+      "sector": "Consumer Defensive",
+      "price": 6000.0,
+      "ma25": 5713.6,
+      "ma75": 5447.2,
+      "rsi": 86,
+      "dividend": 3.0,
+      "pbr": 1.48,
+      "per": 18.7,
+      "vol_r": 0.64,
+      "vol_ratio_1d": 0.79,
+      "ret_1d": -0.5,
+      "range_pct": 2.33,
+      "trend_score": -5.2,
+      "market_cap_b": 1911.0,
+      "score_dividend": 17,
+      "score_value": 15,
+      "score_rebound": 13,
+      "score_stable": 27,
+      "score_growth": 11,
+      "score": 27
+    },
+    {
+      "code": "3002",
+      "name": "グンゼ",
+      "sector": "Consumer Cyclical",
+      "price": 4635.0,
+      "ma25": 4558.0,
+      "ma75": 4283.7,
+      "rsi": 65,
+      "dividend": 3.17,
+      "pbr": 1.33,
+      "per": 57.5,
+      "vol_r": 0.86,
+      "vol_ratio_1d": 0.75,
+      "ret_1d": -0.86,
+      "range_pct": 1.08,
+      "trend_score": -10.6,
+      "market_cap_b": 1470.0,
+      "score_dividend": 17,
+      "score_value": 15,
+      "score_rebound": 13,
+      "score_stable": 27,
+      "score_growth": 11,
+      "score": 27
+    },
+    {
+      "code": "3201",
+      "name": "日本毛織",
+      "sector": "Consumer Cyclical",
+      "price": 2008.0,
+      "ma25": 1938.0,
+      "ma75": 1799.4,
+      "rsi": 75,
+      "dividend": 3.19,
+      "pbr": 1.02,
+      "per": 15.2,
+      "vol_r": 1.01,
+      "vol_ratio_1d": 1.85,
+      "ret_1d": -0.2,
+      "range_pct": 1.39,
+      "trend_score": 41.9,
+      "market_cap_b": 1345.0,
+      "score_dividend": 21,
+      "score_value": 21,
+      "score_rebound": 17,
+      "score_stable": 27,
+      "score_growth": 16,
+      "score": 27
+    },
+    {
+      "code": "4041",
+      "name": "日本曹達",
+      "sector": "Basic Materials",
+      "price": 4115.0,
+      "ma25": 3824.0,
+      "ma75": 3640.4,
+      "rsi": 80,
+      "dividend": 3.4,
+      "pbr": 1.12,
+      "per": 14.6,
+      "vol_r": 1.16,
+      "vol_ratio_1d": 0.87,
+      "ret_1d": -1.56,
+      "range_pct": 1.58,
+      "trend_score": 2.6,
+      "market_cap_b": 2206.0,
+      "score_dividend": 19,
+      "score_value": 18,
+      "score_rebound": 15,
+      "score_stable": 27,
+      "score_growth": 21,
+      "score": 27
+    },
+    {
+      "code": "4272",
+      "name": "日本化薬",
+      "sector": "Basic Materials",
+      "price": 1925.0,
+      "ma25": 1835.8,
+      "ma75": 1681.1,
+      "rsi": 78,
+      "dividend": 3.12,
+      "pbr": 1.06,
+      "per": 13.2,
+      "vol_r": 0.9,
+      "vol_ratio_1d": 0.87,
+      "ret_1d": -1.26,
+      "range_pct": 1.82,
+      "trend_score": 2.1,
+      "market_cap_b": 2877.0,
+      "score_dividend": 23,
+      "score_value": 24,
+      "score_rebound": 19,
+      "score_stable": 27,
+      "score_growth": 21,
+      "score": 27
+    },
+    {
+      "code": "6592",
+      "name": "マブチモーター",
+      "sector": "Consumer Cyclical",
+      "price": 1765.0,
+      "ma25": 1541.7,
+      "ma75": 1427.4,
+      "rsi": 96,
+      "dividend": 3.17,
+      "pbr": 1.3,
+      "per": 16.7,
+      "vol_r": 1.32,
+      "vol_ratio_1d": 1.05,
+      "ret_1d": -0.23,
+      "range_pct": 1.47,
+      "trend_score": 8.3,
+      "market_cap_b": 2046.0,
+      "score_dividend": 17,
+      "score_value": 15,
+      "score_rebound": 13,
+      "score_stable": 27,
+      "score_growth": 11,
+      "score": 27
+    },
+    {
+      "code": "6651",
+      "name": "日東工業",
+      "sector": "Industrials",
+      "price": 4550.0,
+      "ma25": 4280.8,
+      "ma75": 4048.0,
+      "rsi": 75,
+      "dividend": 3.08,
+      "pbr": 1.47,
+      "per": 16.8,
+      "vol_r": 0.9,
+      "vol_ratio_1d": 1.1,
+      "ret_1d": 0.44,
+      "range_pct": 1.98,
+      "trend_score": 13.4,
+      "market_cap_b": 1726.0,
+      "score_dividend": 17,
+      "score_value": 15,
+      "score_rebound": 13,
+      "score_stable": 27,
+      "score_growth": 11,
+      "score": 27
+    },
+    {
+      "code": "7458",
+      "name": "第一興商",
+      "sector": "Consumer Cyclical",
+      "price": 1666.5,
+      "ma25": 1688.6,
+      "ma75": 1658.4,
+      "rsi": 48,
+      "dividend": 3.42,
+      "pbr": 1.45,
+      "per": 11.8,
+      "vol_r": 1.22,
+      "vol_ratio_1d": 1.71,
+      "ret_1d": -0.92,
+      "range_pct": 1.56,
+      "trend_score": 40.5,
+      "market_cap_b": 1723.0,
+      "score_dividend": 22,
+      "score_value": 22,
+      "score_rebound": 18,
+      "score_stable": 27,
+      "score_growth": 19,
+      "score": 27
+    },
+    {
+      "code": "7718",
+      "name": "スター精密",
+      "sector": "Industrials",
+      "price": 2198.0,
+      "ma25": 2197.8,
+      "ma75": 2142.1,
+      "rsi": 56,
+      "dividend": 3.18,
+      "pbr": 1.02,
+      "per": 26.4,
+      "vol_r": 0.24,
+      "vol_ratio_1d": 0.14,
+      "ret_1d": 0.0,
+      "range_pct": 0.14,
+      "trend_score": -117.5,
+      "market_cap_b": 1052.0,
+      "score_dividend": 21,
+      "score_value": 21,
+      "score_rebound": 17,
+      "score_stable": 27,
+      "score_growth": 16,
+      "score": 27
+    },
+    {
+      "code": "7744",
+      "name": "ノーリツ鋼機",
+      "sector": "Technology",
+      "price": 2183.0,
+      "ma25": 2164.0,
+      "ma75": 1906.9,
+      "rsi": 48,
+      "dividend": 3.44,
+      "pbr": 1.03,
+      "per": 15.3,
+      "vol_r": 1.39,
+      "vol_ratio_1d": 1.01,
+      "ret_1d": 0.65,
+      "range_pct": 1.79,
+      "trend_score": 8.6,
+      "market_cap_b": 2314.0,
+      "score_dividend": 21,
+      "score_value": 21,
+      "score_rebound": 17,
+      "score_stable": 27,
+      "score_growth": 16,
+      "score": 27
+    },
+    {
+      "code": "8014",
+      "name": "蝶理",
+      "sector": "Industrials",
+      "price": 4500.0,
+      "ma25": 4272.6,
+      "ma75": 4097.5,
+      "rsi": 77,
+      "dividend": 3.2,
+      "pbr": 1.15,
+      "per": 11.4,
+      "vol_r": 0.87,
+      "vol_ratio_1d": 0.98,
+      "ret_1d": -0.44,
+      "range_pct": 2.22,
+      "trend_score": 7.2,
+      "market_cap_b": 1109.0,
+      "score_dividend": 22,
+      "score_value": 22,
+      "score_rebound": 18,
+      "score_stable": 27,
+      "score_growth": 21,
+      "score": 27
+    },
+    {
+      "code": "8129",
+      "name": "東邦ホールディングス",
+      "sector": "Healthcare",
+      "price": 4644.0,
+      "ma25": 4702.8,
+      "ma75": 4709.6,
+      "rsi": 51,
+      "dividend": 3.23,
+      "pbr": 1.12,
+      "per": 15.4,
+      "vol_r": 0.88,
+      "vol_ratio_1d": 0.94,
+      "ret_1d": -3.25,
+      "range_pct": 2.8,
+      "trend_score": 17.7,
+      "market_cap_b": 3005.0,
+      "score_dividend": 17,
+      "score_value": 15,
+      "score_rebound": 13,
+      "score_stable": 27,
+      "score_growth": 19,
+      "score": 27
+    },
+    {
+      "code": "8133",
+      "name": "伊藤忠エネクス",
+      "sector": "Energy",
+      "price": 1963.0,
+      "ma25": 1974.3,
+      "ma75": 1900.9,
+      "rsi": 61,
+      "dividend": 3.16,
+      "pbr": 1.25,
+      "per": 13.7,
+      "vol_r": 0.71,
+      "vol_ratio_1d": 0.84,
+      "ret_1d": -0.56,
+      "range_pct": 1.02,
+      "trend_score": -5.2,
+      "market_cap_b": 2217.0,
+      "score_dividend": 19,
+      "score_value": 18,
+      "score_rebound": 15,
+      "score_stable": 27,
+      "score_growth": 16,
+      "score": 27
+    },
+    {
+      "code": "8425",
+      "name": "みずほリース",
+      "sector": "Financial Services",
+      "price": 1509.0,
+      "ma25": 1464.8,
+      "ma75": 1390.9,
+      "rsi": 65,
+      "dividend": 3.31,
+      "pbr": 1.02,
+      "per": 9.3,
+      "vol_r": 0.96,
+      "vol_ratio_1d": 0.77,
+      "ret_1d": -2.14,
+      "range_pct": 2.25,
+      "trend_score": -0.4,
+      "market_cap_b": 4228.0,
+      "score_dividend": 29,
+      "score_value": 32,
+      "score_rebound": 25,
+      "score_stable": 27,
+      "score_growth": 26,
+      "score": 27
+    },
+    {
+      "code": "8803",
+      "name": "平和不動産",
+      "sector": "Real Estate",
+      "price": 2506.0,
+      "ma25": 2355.0,
+      "ma75": 2282.1,
+      "rsi": 90,
+      "dividend": 3.11,
+      "pbr": 1.34,
+      "per": 16.0,
+      "vol_r": 0.81,
+      "vol_ratio_1d": 0.7,
+      "ret_1d": -0.28,
+      "range_pct": 1.16,
+      "trend_score": -16.8,
+      "market_cap_b": 1682.0,
+      "score_dividend": 17,
+      "score_value": 15,
+      "score_rebound": 13,
+      "score_stable": 27,
+      "score_growth": 11,
+      "score": 27
+    },
+    {
+      "code": "9025",
+      "name": "鴻池運輸",
+      "sector": "Industrials",
+      "price": 3535.0,
+      "ma25": 3394.8,
+      "ma75": 3231.3,
+      "rsi": 69,
+      "dividend": 3.11,
+      "pbr": 1.23,
+      "per": 15.1,
+      "vol_r": 1.04,
+      "vol_ratio_1d": 0.89,
+      "ret_1d": -2.35,
+      "range_pct": 1.7,
+      "trend_score": 7.5,
+      "market_cap_b": 1877.0,
+      "score_dividend": 17,
+      "score_value": 15,
+      "score_rebound": 13,
+      "score_stable": 27,
+      "score_growth": 11,
+      "score": 27
+    },
+    {
+      "code": "9039",
+      "name": "サカイ引越センター",
+      "sector": "Industrials",
+      "price": 2895.0,
+      "ma25": 2936.2,
+      "ma75": 2873.1,
+      "rsi": 47,
+      "dividend": 3.39,
+      "pbr": 1.22,
+      "per": 13.8,
+      "vol_r": 0.8,
+      "vol_ratio_1d": 0.84,
+      "ret_1d": -0.86,
+      "range_pct": 0.62,
+      "trend_score": -5.2,
+      "market_cap_b": 1167.0,
+      "score_dividend": 19,
+      "score_value": 18,
+      "score_rebound": 15,
+      "score_stable": 27,
+      "score_growth": 19,
+      "score": 27
+    },
+    {
+      "code": "9882",
+      "name": "イエローハット",
+      "sector": "Consumer Cyclical",
+      "price": 1717.0,
+      "ma25": 1675.1,
+      "ma75": 1633.7,
+      "rsi": 56,
+      "dividend": 3.38,
+      "pbr": 1.19,
+      "per": 13.3,
+      "vol_r": 0.9,
+      "vol_ratio_1d": 0.91,
+      "ret_1d": -0.12,
+      "range_pct": 1.63,
+      "trend_score": -0.3,
+      "market_cap_b": 1470.0,
+      "score_dividend": 19,
+      "score_value": 18,
+      "score_rebound": 15,
+      "score_stable": 27,
+      "score_growth": 21,
+      "score": 27
+    },
+    {
+      "code": "3401",
+      "name": "帝人",
+      "sector": "Industrials",
+      "price": 1642.5,
+      "ma25": 1554.6,
+      "ma75": 1391.7,
+      "rsi": 72,
+      "dividend": 3.04,
+      "pbr": 0.82,
+      "per": 0.0,
+      "vol_r": 0.9,
+      "vol_ratio_1d": 1.17,
+      "ret_1d": -3.3,
+      "range_pct": 3.44,
+      "trend_score": 32.9,
+      "market_cap_b": 3168.0,
+      "score_dividend": 29,
+      "score_value": 46,
+      "score_rebound": 35,
+      "score_stable": 26,
+      "score_growth": 26,
+      "score": 26
+    },
+    {
+      "code": "4061",
+      "name": "デンカ",
+      "sector": "Basic Materials",
+      "price": 3264.0,
+      "ma25": 3083.4,
+      "ma75": 2768.8,
+      "rsi": 67,
+      "dividend": 3.06,
+      "pbr": 0.95,
+      "per": 0.0,
+      "vol_r": 0.82,
+      "vol_ratio_1d": 0.72,
+      "ret_1d": -0.21,
+      "range_pct": 2.39,
+      "trend_score": -11.7,
+      "market_cap_b": 2814.0,
+      "score_dividend": 23,
+      "score_value": 36,
+      "score_rebound": 29,
+      "score_stable": 26,
+      "score_growth": 26,
+      "score": 26
+    },
+    {
+      "code": "4704",
+      "name": "トレンドマイクロ",
+      "sector": "Technology",
+      "price": 5688.0,
+      "ma25": 5966.3,
+      "ma75": 6815.7,
+      "rsi": 42,
+      "dividend": 3.25,
+      "pbr": 5.69,
+      "per": 24.4,
+      "vol_r": 1.54,
+      "vol_ratio_1d": 1.85,
+      "ret_1d": -2.47,
+      "range_pct": 4.22,
+      "trend_score": 59.5,
+      "market_cap_b": 7433.0,
+      "score_dividend": 11,
+      "score_value": 7,
+      "score_rebound": 14,
+      "score_stable": 26,
+      "score_growth": 23,
+      "score": 26
+    },
+    {
+      "code": "1414",
+      "name": "ショーボンドホールディングス",
+      "sector": "Industrials",
+      "price": 1406.0,
+      "ma25": 1426.7,
+      "ma75": 1319.0,
+      "rsi": 52,
+      "dividend": 3.24,
+      "pbr": 2.73,
+      "per": 19.5,
+      "vol_r": 0.88,
+      "vol_ratio_1d": 1.04,
+      "ret_1d": -1.61,
+      "range_pct": 1.81,
+      "trend_score": 14.2,
+      "market_cap_b": 2855.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 24,
+      "score_growth": 9,
+      "score": 24
+    },
+    {
+      "code": "1871",
+      "name": "ピーエス・コンストラクション",
+      "sector": "Industrials",
+      "price": 3365.0,
+      "ma25": 3213.2,
+      "ma75": 2742.1,
+      "rsi": 70,
+      "dividend": 3.03,
+      "pbr": 2.51,
+      "per": 17.8,
+      "vol_r": 0.81,
+      "vol_ratio_1d": 0.92,
+      "ret_1d": -1.03,
+      "range_pct": 2.97,
+      "trend_score": 8.0,
+      "market_cap_b": 1575.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 24,
+      "score_growth": 6,
+      "score": 24
+    },
+    {
+      "code": "2685",
+      "name": "アンドエスティＨＤ",
+      "sector": "Consumer Cyclical",
+      "price": 2963.0,
+      "ma25": 2889.4,
+      "ma75": 2843.2,
+      "rsi": 75,
+      "dividend": 3.04,
+      "pbr": 1.67,
+      "per": 15.8,
+      "vol_r": 1.25,
+      "vol_ratio_1d": 1.63,
+      "ret_1d": -1.4,
+      "range_pct": 1.25,
+      "trend_score": 38.7,
+      "market_cap_b": 1367.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 24,
+      "score_growth": 11,
+      "score": 24
+    },
+    {
+      "code": "3167",
+      "name": "ＴＯＫＡＩホールディングス",
+      "sector": "Industrials",
+      "price": 1205.0,
+      "ma25": 1170.5,
+      "ma75": 1097.5,
+      "rsi": 71,
+      "dividend": 3.15,
+      "pbr": 1.6,
+      "per": 15.1,
+      "vol_r": 0.81,
+      "vol_ratio_1d": 0.75,
+      "ret_1d": -1.07,
+      "range_pct": 1.08,
+      "trend_score": -9.7,
+      "market_cap_b": 1559.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 24,
+      "score_growth": 11,
+      "score": 24
+    },
+    {
+      "code": "5108",
+      "name": "ブリヂストン",
+      "sector": "Consumer Cyclical",
+      "price": 3620.0,
+      "ma25": 3591.6,
+      "ma75": 3539.1,
+      "rsi": 58,
+      "dividend": 3.59,
+      "pbr": 1.26,
+      "per": 14.6,
+      "vol_r": 1.6,
+      "vol_ratio_1d": 0.79,
+      "ret_1d": -2.24,
+      "range_pct": 1.93,
+      "trend_score": 0.6,
+      "market_cap_b": 46211.0,
+      "score_dividend": 6,
+      "score_value": 3,
+      "score_rebound": 0,
+      "score_stable": 24,
+      "score_growth": 16,
+      "score": 24
+    },
+    {
+      "code": "6703",
+      "name": "沖電気工業",
+      "sector": "Technology",
+      "price": 3070.0,
+      "ma25": 2382.0,
+      "ma75": 2082.7,
+      "rsi": 85,
+      "dividend": 3.09,
+      "pbr": 1.74,
+      "per": 24.9,
+      "vol_r": 1.03,
+      "vol_ratio_1d": 1.12,
+      "ret_1d": 3.61,
+      "range_pct": 6.12,
+      "trend_score": 39.6,
+      "market_cap_b": 2663.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 24,
+      "score_growth": 11,
+      "score": 24
+    },
+    {
+      "code": "7552",
+      "name": "ハピネット",
+      "sector": "Consumer Cyclical",
+      "price": 2880.0,
+      "ma25": 2815.5,
+      "ma75": 2967.3,
+      "rsi": 57,
+      "dividend": 3.21,
+      "pbr": 2.06,
+      "per": 14.2,
+      "vol_r": 1.05,
+      "vol_ratio_1d": 0.84,
+      "ret_1d": -1.2,
+      "range_pct": 1.7,
+      "trend_score": -0.6,
+      "market_cap_b": 1265.0,
+      "score_dividend": 16,
+      "score_value": 13,
+      "score_rebound": 12,
+      "score_stable": 24,
+      "score_growth": 11,
+      "score": 24
+    },
+    {
+      "code": "8061",
+      "name": "西華産業",
+      "sector": "Industrials",
+      "price": 2862.0,
+      "ma25": 2510.4,
+      "ma75": 2400.9,
+      "rsi": 89,
+      "dividend": 3.14,
+      "pbr": 2.08,
+      "per": 13.3,
+      "vol_r": 1.15,
+      "vol_ratio_1d": 0.65,
+      "ret_1d": 0.6,
+      "range_pct": 2.45,
+      "trend_score": -16.1,
+      "market_cap_b": 1029.0,
+      "score_dividend": 16,
+      "score_value": 13,
+      "score_rebound": 12,
+      "score_stable": 24,
+      "score_growth": 11,
+      "score": 24
+    },
+    {
+      "code": "8174",
+      "name": "日本瓦斯",
+      "sector": "Utilities",
+      "price": 3028.0,
+      "ma25": 2966.2,
+      "ma75": 2971.7,
+      "rsi": 58,
+      "dividend": 3.4,
+      "pbr": 5.25,
+      "per": 24.9,
+      "vol_r": 0.59,
+      "vol_ratio_1d": 0.47,
+      "ret_1d": -1.69,
+      "range_pct": 2.11,
+      "trend_score": -32.2,
+      "market_cap_b": 3251.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 24,
+      "score_growth": 6,
+      "score": 24
+    },
+    {
+      "code": "8923",
+      "name": "トーセイ",
+      "sector": "Real Estate",
+      "price": 1632.0,
+      "ma25": 1629.8,
+      "ma75": 1652.4,
+      "rsi": 60,
+      "dividend": 3.37,
+      "pbr": 1.54,
+      "per": 10.7,
+      "vol_r": 0.59,
+      "vol_ratio_1d": 0.49,
+      "ret_1d": -1.39,
+      "range_pct": 1.41,
+      "trend_score": -33.0,
+      "market_cap_b": 1583.0,
+      "score_dividend": 22,
+      "score_value": 21,
+      "score_rebound": 18,
+      "score_stable": 24,
+      "score_growth": 16,
+      "score": 24
+    },
+    {
+      "code": "9989",
+      "name": "サンドラッグ",
+      "sector": "Healthcare",
+      "price": 4160.0,
+      "ma25": 4186.1,
+      "ma75": 4248.5,
+      "rsi": 55,
+      "dividend": 3.17,
+      "pbr": 1.75,
+      "per": 15.3,
+      "vol_r": 0.94,
+      "vol_ratio_1d": 1.11,
+      "ret_1d": 0.36,
+      "range_pct": 1.32,
+      "trend_score": 11.7,
+      "market_cap_b": 4866.0,
+      "score_dividend": 14,
+      "score_value": 10,
+      "score_rebound": 10,
+      "score_stable": 24,
+      "score_growth": 11,
+      "score": 24
+    },
+    {
+      "code": "2659",
+      "name": "サンエー",
+      "sector": "Consumer Cyclical",
+      "price": 3095.0,
+      "ma25": 3021.3,
+      "ma75": 2917.9,
+      "rsi": 92,
+      "dividend": 3.23,
+      "pbr": 1.24,
+      "per": 16.8,
+      "vol_r": 1.59,
+      "vol_ratio_1d": 2.42,
+      "ret_1d": 0.16,
+      "range_pct": 1.78,
+      "trend_score": 59.0,
+      "market_cap_b": 1914.0,
+      "score_dividend": 0,
+      "score_value": 0,
+      "score_rebound": 0,
+      "score_stable": 12,
+      "score_growth": 11,
+      "score": 12
+    },
+    {
+      "code": "3612",
+      "name": "ワールド",
+      "sector": "Consumer Cyclical",
+      "price": 3300.0,
+      "ma25": 3144.8,
+      "ma75": 3024.2,
+      "rsi": 73,
+      "dividend": 3.3,
+      "pbr": 1.3,
+      "per": 9.4,
+      "vol_r": 1.58,
+      "vol_ratio_1d": 2.12,
+      "ret_1d": -0.9,
+      "range_pct": 1.67,
+      "trend_score": 53.7,
+      "market_cap_b": 1201.0,
+      "score_dividend": 5,
+      "score_value": 6,
+      "score_rebound": 1,
+      "score_stable": 12,
+      "score_growth": 21,
+      "score": 12
+    },
+    {
+      "code": "4028",
+      "name": "石原産業",
+      "sector": "Basic Materials",
+      "price": 3950.0,
+      "ma25": 3133.2,
+      "ma75": 2842.4,
+      "rsi": 89,
+      "dividend": 3.04,
+      "pbr": 1.25,
+      "per": 11.3,
+      "vol_r": 1.62,
+      "vol_ratio_1d": 1.06,
+      "ret_1d": 2.07,
+      "range_pct": 2.53,
+      "trend_score": 19.4,
+      "market_cap_b": 1511.0,
+      "score_dividend": 2,
+      "score_value": 2,
+      "score_rebound": 0,
+      "score_stable": 12,
+      "score_growth": 16,
+      "score": 12
+    },
+    {
+      "code": "3465",
+      "name": "ケイアイスター不動産",
+      "sector": "Real Estate",
+      "price": 8140.0,
+      "ma25": 6805.2,
+      "ma75": 6284.7,
+      "rsi": 89,
+      "dividend": 3.19,
+      "pbr": 1.85,
+      "per": 10.9,
+      "vol_r": 1.85,
+      "vol_ratio_1d": 1.16,
+      "ret_1d": -1.57,
+      "range_pct": 2.58,
+      "trend_score": 22.9,
+      "market_cap_b": 1263.0,
+      "score_dividend": 2,
+      "score_value": 1,
+      "score_rebound": 0,
+      "score_stable": 9,
+      "score_growth": 16,
+      "score": 9
+    },
+    {
+      "code": "6013",
+      "name": "タクマ",
+      "sector": "Industrials",
+      "price": 2897.0,
+      "ma25": 2623.2,
+      "ma75": 2515.9,
+      "rsi": 81,
+      "dividend": 3.0,
+      "pbr": 1.97,
+      "per": 21.9,
+      "vol_r": 1.59,
+      "vol_ratio_1d": 1.07,
+      "ret_1d": 0.24,
+      "range_pct": 2.14,
+      "trend_score": 11.4,
+      "market_cap_b": 2170.0,
+      "score_dividend": 0,
+      "score_value": 0,
+      "score_rebound": 0,
+      "score_stable": 9,
+      "score_growth": 11,
+      "score": 9
     }
   ]
 }
