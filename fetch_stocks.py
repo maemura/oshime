@@ -418,41 +418,50 @@ FALLBACK_CODES = [
 
 def get_prime_tickers():
     """
-    JPX公式の銘柄一覧ExcelからプライムのティッカーをDF取得。
-    失敗時はFALLBACK_CODESにフォールバック。
+    JPX公式ExcelからプライムのティッカーリストとJP名辞書を取得。
+    戻り値: (tickers, jp_names) jp_names={code: 日本語名}
+    失敗時はFALLBACK_CODESにフォールバック、jp_names={}
     """
     try:
         print("📥 JPX公式サイトから東証プライム銘柄一覧を取得中...")
         url = "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls"
         r = req.get(url, timeout=30)
         r.raise_for_status()
-        # .xls は xlrd が必要、.xlsx は openpyxl が必要
         try:
             df = pd.read_excel(io.BytesIO(r.content), header=0, engine="xlrd")
         except Exception:
             df = pd.read_excel(io.BytesIO(r.content), header=0, engine="openpyxl")
-        # 列名を確認して市場区分を絞り込む
-        # JPXのExcelは "市場・商品区分" 列に "プライム（内国株式）" 等が入る
-        mkt_col = [c for c in df.columns if "市場" in str(c)]
+        mkt_col  = [c for c in df.columns if "市場" in str(c)]
         code_col = [c for c in df.columns if "コード" in str(c)]
+        name_col = [c for c in df.columns if "銘柄名" in str(c) or "名称" in str(c)]
         if not mkt_col or not code_col:
             raise ValueError("列名が想定外")
         df_prime = df[df[mkt_col[0]].astype(str).str.contains("プライム", na=False)]
         raw_codes = df_prime[code_col[0]].dropna().tolist()
-        # 数字4桁 or 英数字混在（例: 167A）どちらも対応
+
+        # 日本語名辞書を構築
+        jp_names = {}
+        if name_col:
+            for _, row in df_prime.iterrows():
+                c_str = str(row[code_col[0]]).strip().replace(".0","")
+                n_str = str(row[name_col[0]]).strip()
+                if c_str and n_str and n_str != "nan":
+                    jp_names[c_str] = n_str
+            print(f"  JP名辞書: {len(jp_names)}件")
+
         tickers = []
         for c in raw_codes:
-            c_str = str(c).strip().replace(".0","")  # float→str変換時の .0 を除去
+            c_str = str(c).strip().replace(".0","")
             if c_str:
                 tickers.append(f"{c_str}.T")
         print(f"✓ JPX公式データから {len(tickers)} 銘柄取得（東証プライム）")
-        return tickers
+        return tickers, jp_names
     except Exception as e:
         print(f"⚠ JPX取得失敗（{e}）→ フォールバックリストを使用")
         codes = sorted(set(FALLBACK_CODES))
         tickers = [f"{c}.T" for c in codes]
         print(f"  フォールバック: {len(tickers)} 銘柄")
-        return tickers
+        return tickers, {}
 
 
 def calc_rsi(prices, period=14):
@@ -499,6 +508,9 @@ def fetch_one(ticker, _retry=0):
             # 英語名しかない場合はshortNameを使う（後でJP名辞書で上書き）
             name = short_name or long_name or ticker.replace(".T","")
         sector   = info.get("sector") or info.get("industry") or "その他"
+        # 時価総額（億円）
+        mc_raw   = info.get("marketCap") or 0
+        market_cap_b = round(mc_raw / 1e8, 0) if mc_raw else 0  # 億円
         # 出来高・売買代金（直近5日平均）
         vol_avg5      = round(float(hist["Volume"].iloc[-5:].mean()), 0)
         turnover_avg5 = round(float((hist["Volume"] * hist["Close"]).iloc[-5:].mean() / 1e8), 2)
@@ -556,6 +568,7 @@ def fetch_one(ticker, _retry=0):
             "range_pct":     range_pct,       # 昨日値幅%
             "gap_pct":       gap_pct,         # 始値ギャップ%
             "trend_score":   trend_score,     # 注目度スコア
+            "market_cap_b":  market_cap_b,    # 時価総額（億円）
         }
     except Exception as e:
         err = str(e).lower()
@@ -606,6 +619,44 @@ def fetch_market():
     market["geo_risk"]      = False
     market["rate_cut_flag"] = False
     return market
+
+
+def calc_score_stable(s):
+    """安定高配当スコア：時価総額大・配当重視"""
+    d25 = (s["price"] - s["ma25"]) / s["ma25"] * 100 if s["ma25"] else 0
+    score = 0
+    div = s.get("dividend", 0)
+    score += 40 if div >= 5 else 32 if div >= 4.5 else 25 if div >= 4 else 18 if div >= 3.5 else 10 if div >= 3 else 0
+    pbr = s.get("pbr", 99)
+    score += 20 if pbr <= 0.7 else 15 if pbr <= 0.9 else 8 if pbr <= 1.1 else 3 if pbr <= 1.5 else 0
+    score += 20 if d25 <= -8 else 14 if d25 <= -5 else 8 if d25 <= -3 else 3 if d25 <= -1 else 0
+    rsi = s.get("rsi", 50)
+    score += 15 if rsi <= 30 else 10 if rsi <= 38 else 5 if rsi <= 45 else 0
+    per = s.get("per", 99)
+    score += 10 if per <= 10 else 6 if per <= 13 else 3 if per <= 16 else 0
+    if s.get("vol_r", 1) >= 1.5: score -= 20
+    if div < 0.5: score = min(score, 5)
+    mc = s.get("market_cap_b", 9999)
+    if 0 < mc < 300: score -= 20
+    elif 0 < mc < 500: score -= 10
+    return max(0, min(score, 100))
+
+
+def calc_score_growth(s):
+    """成長押し目スコア：MA乖離・RSI重視・小型OK"""
+    d25 = (s["price"] - s["ma25"]) / s["ma25"] * 100 if s["ma25"] else 0
+    score = 0
+    score += 35 if d25 <= -15 else 28 if d25 <= -10 else 20 if d25 <= -6 else 10 if d25 <= -3 else 3 if d25 <= -1 else 0
+    rsi = s.get("rsi", 50)
+    score += 30 if rsi <= 20 else 22 if rsi <= 28 else 14 if rsi <= 35 else 7 if rsi <= 42 else 0
+    pbr = s.get("pbr", 99)
+    score += 15 if pbr <= 0.8 else 10 if pbr <= 1.2 else 5 if pbr <= 2.0 else 0
+    div = s.get("dividend", 0)
+    score += 10 if div >= 4 else 6 if div >= 2 else 2 if div >= 1 else 0
+    per = s.get("per", 99)
+    score += 10 if per <= 10 else 5 if per <= 15 else 0
+    if s.get("vol_r", 1) >= 2.0: score -= 15
+    return max(0, min(score, 100))
 
 
 def calc_score(s, mode="dividend"):
@@ -663,7 +714,7 @@ def main():
     print("="*58)
 
     market  = fetch_market()
-    tickers = get_prime_tickers()
+    tickers, jp_names = get_prime_tickers()
     total   = len(tickers)
     print(f"  対象: {total}銘柄（JPX公式または内部リスト）")
 
@@ -687,11 +738,23 @@ def main():
         print("\n❌ 1件も取得できませんでした")
         sys.exit(1)
 
+    # JPX日本語名で上書き（yfinanceの英語名を日本語化）
+    if jp_names:
+        overwritten = 0
+        for s in results:
+            jp = jp_names.get(s["code"])
+            if jp:
+                s["name"] = jp
+                overwritten += 1
+        print(f"  📝 日本語名に上書き: {overwritten}件")
+
     for s in results:
         s["score_dividend"] = calc_score(s,"dividend")
         s["score_value"]    = calc_score(s,"value")
         s["score_rebound"]  = calc_score(s,"rebound")
-        s["score"]          = s["score_dividend"]
+        s["score_stable"]   = calc_score_stable(s)
+        s["score_growth"]   = calc_score_growth(s)
+        s["score"]          = s["score_stable"]
     results.sort(key=lambda x:-x["score"])
 
     prev_scores={}
@@ -761,7 +824,9 @@ def main():
 
     # 各銘柄から不要フィールドを省いて軽量化
     KEEP = {"code","name","sector","price","ma25","ma75","rsi","dividend",
-            "pbr","per","vol_r","vol_ratio_1d","ret_1d","range_pct","trend_score","score_dividend","score_value","score_rebound","score","prev_score"}
+            "pbr","per","vol_r","vol_ratio_1d","ret_1d","range_pct","trend_score",
+            "score_dividend","score_value","score_rebound",
+            "score_stable","score_growth","score","prev_score","market_cap_b"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
 
     output = {

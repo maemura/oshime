@@ -312,6 +312,27 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .trend-badge.hot{background:rgba(208,2,27,0.1);color:var(--up);border:1px solid rgba(208,2,27,0.2);}
 .trend-badge.warm{background:rgba(148,101,0,0.08);color:var(--amber);border:1px solid rgba(148,101,0,0.15);}
 
+/* ── STYLE TABS ── */
+.style-tabs-wrap{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;
+}
+.style-tab{
+  background:var(--bg2);border:2px solid var(--border);border-radius:var(--r);
+  padding:14px 16px;cursor:pointer;display:flex;align-items:center;gap:12px;
+  transition:all 0.15s;
+}
+.style-tab:hover{border-color:var(--navy);background:var(--bg3);}
+.style-tab.active{border-color:var(--navy);background:var(--navy);}
+.style-tab-ico{font-size:24px;flex-shrink:0;}
+.style-tab-title{font-family:var(--fh);font-size:13px;font-weight:800;color:var(--text2);}
+.style-tab.active .style-tab-title{color:#fff;}
+.style-tab-desc{font-size:10px;color:var(--text3);margin-top:2px;}
+.style-tab.active .style-tab-desc{color:rgba(255,255,255,0.6);}
+@media(max-width:480px){
+  .style-tabs-wrap{grid-template-columns:1fr;}
+  .style-tab{padding:10px 12px;}
+}
+
 /* ── DANGER SECTION ── */
 .danger-section{
   background:var(--bg2);border:1px solid var(--border);border-left:4px solid var(--up);
@@ -496,15 +517,26 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <!-- STANCE -->
     <div id="stanceBox"></div>
 
+    <!-- STYLE TABS -->
+    <div class="style-tabs-wrap">
+      <div class="style-tab active" id="tab-stable" onclick="setStyleTab('stable',this)">
+        <div class="style-tab-ico">🏦</div>
+        <div class="style-tab-body">
+          <div class="style-tab-title">安定高配当</div>
+          <div class="style-tab-desc">時価総額大・配当3%以上・割安重視</div>
+        </div>
+      </div>
+      <div class="style-tab" id="tab-growth" onclick="setStyleTab('growth',this)">
+        <div class="style-tab-ico">🚀</div>
+        <div class="style-tab-body">
+          <div class="style-tab-title">成長押し目</div>
+          <div class="style-tab-desc">MA乖離・RSI急落・小型成長株OK</div>
+        </div>
+      </div>
+    </div>
+
     <!-- FILTER BAR -->
     <div class="filter-bar">
-      <span class="filter-label">モード：</span>
-      <div class="filter-tabs">
-        <div class="filter-tab active" id="mode-dividend" onclick="setMode('dividend',this)">💰 高配当</div>
-        <div class="filter-tab" id="mode-value" onclick="setMode('value',this)">🛡 バリュー</div>
-        <div class="filter-tab" id="mode-rebound" onclick="setMode('rebound',this)">⚡ 押し目</div>
-      </div>
-      <div class="filter-sep"></div>
       <span class="filter-label">表示：</span>
       <div class="filter-tabs">
         <div class="filter-tab active" id="disp-10" onclick="setDispCount(10,this)">TOP10</div>
@@ -512,6 +544,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
         <div class="filter-tab" id="disp-all" onclick="setDispCount(999,this)">全件</div>
       </div>
       <div class="filter-count" id="filterCount"></div>
+      <div id="styleNote" style="font-size:10px;color:var(--text3);margin-left:auto;"></div>
     </div>
 
     <!-- STOCK TABLE -->
@@ -649,6 +682,7 @@ let STOCKS=[...SAMPLE_STOCKS];
 let processed=[];
 let dataSource='sample';
 let currentMode='dividend';
+let currentStyleTab='stable'; // 'stable' or 'growth'
 let dispCount=10;
 let sortKey='score'; let sortDir='desc';
 let expandedCode=null;
@@ -760,13 +794,17 @@ function processStocks(){
   const minDiv=settings.mindiv||0;
   const zoneFilter=settings.zone||'all';
 
-  // モード別スコアキー（JSONに計算済みで入っている）
-  const scoreKey = currentMode==='dividend'?'score_dividend'
-                 : currentMode==='value'   ?'score_value'
-                 :                          'score_rebound';
+  // スタイルタブに応じてスコアキーを切り替え
+  const scoreKey = currentStyleTab==='stable' ? 'score_stable' : 'score_growth';
 
   let list=STOCKS.filter(s=>{
-    if(minDiv>0&&s.dividend<minDiv)return false;
+    if(currentStyleTab==='stable'){
+      // 安定高配当：配当3%以上を優先（設定で変更可）
+      const minD = minDiv > 0 ? minDiv : 3;
+      if(s.dividend < minD) return false;
+    } else {
+      if(minDiv>0&&s.dividend<minDiv)return false;
+    }
     return true;
   });
 
@@ -1159,13 +1197,28 @@ function renderDanger(){
 function setMode(m,el){
   currentMode=m;
   document.querySelectorAll('.filter-tab[id^="mode-"]').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
-  // 設定パネルも同期
+  if(el)el.classList.add('active');
   document.querySelectorAll('#set-mode .setting-opt').forEach(o=>{
     o.classList.toggle('active',o.dataset.val===m);
   });
   run();
   gaEvent('mode_changed',{mode:m});
+}
+
+function setStyleTab(tab,el){
+  currentStyleTab=tab;
+  document.querySelectorAll('.style-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  // スタイルに応じてnoteを更新
+  const note=document.getElementById('styleNote');
+  if(tab==='stable'){
+    note.textContent='配当3%以上・時価総額大を優先表示';
+  } else {
+    note.textContent='⚠ 値動きの大きい小型株も含まれます';
+    note.style.color='var(--amber)';
+  }
+  run();
+  gaEvent('style_tab_changed',{tab});
 }
 
 function setDispCount(n,el){
