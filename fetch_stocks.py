@@ -831,13 +831,16 @@ def main():
     ]
 
     # ── 配信用データを絞る（ファイルサイズ削減・高速化） ──
-    # スコア順TOP200 + 買い圏全件（どちらか多い方）
+    # スコア順TOP200 + 買い圏全件 + 大型高配当株（常に含める）
     buy_all   = [s for s in results if s["score"] >= 60]
     top200    = results[:200]
+    # 大型高配当株: 時価総額1000億以上 & 配当3%以上 → 押し目タブの母集団として常に含める
+    large_div = [s for s in results if s.get("market_cap_b", 0) >= 1000 and s.get("dividend", 0) >= 3]
+    print(f"  📦 大型高配当株（常時収録）: {len(large_div)}銘柄")
     # 和集合（重複なし・スコア順維持）
     seen = set()
     stocks_out = []
-    for s in top200 + buy_all:
+    for s in top200 + buy_all + large_div:
         if s["code"] not in seen:
             seen.add(s["code"])
             stocks_out.append(s)
@@ -860,7 +863,7 @@ def main():
         **market,
         "vol_ranking":     vol_ranking_data,
         "trend_ranking":   trend_ranking_data,
-        "stocks":          stocks_out,          # TOP200のみ配信
+        "stocks":          stocks_out,          # TOP200+大型高配当を配信
     }
     with open("stocks_data.json","w",encoding="utf-8") as f:
         json.dump(output,f,ensure_ascii=False,indent=2)
