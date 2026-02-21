@@ -631,7 +631,7 @@ def calc_score_stable(s):
 
     # 配当利回り (max 30pt) — 3%台でもしっかり加点
     score += (30 if div >= 5 else 25 if div >= 4.5 else 20 if div >= 4
-              else 16 if div >= 3.5 else 12 if div >= 3 else 6 if div >= 2.5 else 0)
+              else 16 if div >= 3.5 else 12 if div >= 3 else 6 if div >= 2.5 else 3 if div >= 2 else 0)
 
     # 時価総額ボーナス (max 15pt) — 大型安定株を優遇
     mc = s.get("market_cap_b", 0)
@@ -653,7 +653,7 @@ def calc_score_stable(s):
     score += (10 if pbr <= 0.7 else 7 if pbr <= 1.0 else 3 if pbr <= 1.5 else 0)
 
     # 安定株ボーナス (max 5pt) — 配当3%以上・黒字・大型の三拍子
-    if div >= 3 and s.get("per", 0) > 0 and mc >= 1000:
+    if div >= 2 and s.get("per", 0) > 0 and mc >= 5000:
         score += 5
 
     # 出来高急増ペナルティ
