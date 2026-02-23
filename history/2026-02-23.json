@@ -1,32 +1,17 @@
 {
   "date": "2026-02-23",
-  "updated_at": "2026/02/23 12:04",
+  "updated_at": "2026/02/23 12:23",
   "market": {
     "nikkei_price": 56826.0,
     "nikkei_ma25": 54810.0,
     "nikkei_1d_chg": -1.12,
     "nasdaq_1d_chg": 0.9,
     "vix": 19.1,
-    "usdjpy": 154.22
+    "usdjpy": 154.38
   },
-  "total_scanned": 1568,
-  "buy_count": 24,
+  "total_scanned": 1563,
+  "buy_count": 22,
   "top5": [
-    {
-      "code": "2124",
-      "name": "ジェイエイシーリクルートメント",
-      "score": 79,
-      "dividend": 4.34,
-      "market_cap_b": 1388.0,
-      "ret5": -10.06,
-      "ret10": -13.52,
-      "dip_zscore": -6.4,
-      "ret5_vs_sector": -11.41,
-      "sector": "Industrials",
-      "sector_ret5": 1.35,
-      "div_growth_years": 14,
-      "price": 876.0
-    },
     {
       "code": "2181",
       "name": "パーソルホールディングス",
@@ -36,16 +21,46 @@
       "ret5": -7.32,
       "ret10": -11.32,
       "dip_zscore": -7.08,
-      "ret5_vs_sector": -8.67,
+      "ret5_vs_sector": -8.6,
       "sector": "Industrials",
-      "sector_ret5": 1.35,
+      "sector_ret5": 1.28,
       "div_growth_years": 0,
       "price": 240.5
     },
     {
+      "code": "4088",
+      "name": "エア・ウォーター",
+      "score": 78,
+      "dividend": 3.57,
+      "market_cap_b": 4817.0,
+      "ret5": -14.69,
+      "ret10": -12.67,
+      "dip_zscore": -4.08,
+      "ret5_vs_sector": -16.6,
+      "sector": "Basic Materials",
+      "sector_ret5": 1.91,
+      "div_growth_years": 0,
+      "price": 2101.5
+    },
+    {
+      "code": "2124",
+      "name": "ジェイエイシーリクルートメント",
+      "score": 75,
+      "dividend": 4.34,
+      "market_cap_b": 1388.0,
+      "ret5": -10.06,
+      "ret10": -13.52,
+      "dip_zscore": -6.4,
+      "ret5_vs_sector": -11.34,
+      "sector": "Industrials",
+      "sector_ret5": 1.28,
+      "div_growth_years": 14,
+      "price": 876.0
+    },
+    {
       "code": "3382",
       "name": "セブン＆アイ・ホールディングス",
-      "score": 78,
+      "score": 74,
       "dividend": 2.28,
       "market_cap_b": 51124.0,
       "ret5": -7.75,
@@ -58,81 +73,22 @@
       "price": 2191.0
     },
     {
-      "code": "4088",
-      "name": "エア・ウォーター",
-      "score": 78,
-      "dividend": 3.57,
-      "market_cap_b": 4817.0,
-      "ret5": -14.69,
-      "ret10": -12.67,
-      "dip_zscore": -4.08,
-      "ret5_vs_sector": -16.63,
-      "sector": "Basic Materials",
-      "sector_ret5": 1.94,
-      "div_growth_years": 0,
-      "price": 2101.5
-    },
-    {
       "code": "4914",
       "name": "高砂香料工業",
-      "score": 78,
+      "score": 74,
       "dividend": 3.75,
       "market_cap_b": 1350.0,
       "ret5": -7.3,
       "ret10": -8.88,
       "dip_zscore": -4.64,
-      "ret5_vs_sector": -9.24,
+      "ret5_vs_sector": -9.21,
       "sector": "Basic Materials",
-      "sector_ret5": 1.94,
+      "sector_ret5": 1.91,
       "div_growth_years": 0,
       "price": 1385.0
     }
   ],
   "top5_momentum": [
-    {
-      "code": "268A",
-      "name": "リガク・ホールディングス",
-      "score_momentum": 84,
-      "ret20": 34.97,
-      "ret60": 99.4,
-      "roe": 13.4,
-      "vol_trend": 2.62,
-      "sector_ret5": 1.54,
-      "price": 1783.0
-    },
-    {
-      "code": "3465",
-      "name": "ケイアイスター不動産",
-      "score_momentum": 82,
-      "ret20": 23.71,
-      "ret60": 48.0,
-      "roe": 21.4,
-      "vol_trend": 1.85,
-      "sector_ret5": 0.99,
-      "price": 8140.0
-    },
-    {
-      "code": "3482",
-      "name": "ロードスターキャピタル",
-      "score_momentum": 78,
-      "ret20": 15.4,
-      "ret60": 30.74,
-      "roe": 27.2,
-      "vol_trend": 1.85,
-      "sector_ret5": 0.99,
-      "price": 3560.0
-    },
-    {
-      "code": "5101",
-      "name": "横浜ゴム",
-      "score_momentum": 77,
-      "ret20": 27.28,
-      "ret60": 39.24,
-      "roe": 11.0,
-      "vol_trend": 2.37,
-      "sector_ret5": 0.21,
-      "price": 7982.0
-    },
     {
       "code": "4973",
       "name": "日本高純度化学",
@@ -141,45 +97,86 @@
       "ret60": 72.27,
       "roe": 10.9,
       "vol_trend": 1.14,
-      "sector_ret5": 1.94,
+      "sector_ret5": 1.91,
       "price": 5280.0
+    },
+    {
+      "code": "6140",
+      "name": "旭ダイヤモンド工業",
+      "score_momentum": 76,
+      "ret20": 28.73,
+      "ret60": 42.84,
+      "roe": 0.0,
+      "vol_trend": 3.0,
+      "sector_ret5": 1.28,
+      "price": 1147.0
+    },
+    {
+      "code": "3465",
+      "name": "ケイアイスター不動産",
+      "score_momentum": 74,
+      "ret20": 23.71,
+      "ret60": 48.0,
+      "roe": 21.4,
+      "vol_trend": 1.85,
+      "sector_ret5": 1.05,
+      "price": 8140.0
+    },
+    {
+      "code": "6653",
+      "name": "正興電機製作所",
+      "score_momentum": 72,
+      "ret20": 11.51,
+      "ret60": 15.26,
+      "roe": 12.0,
+      "vol_trend": 1.37,
+      "sector_ret5": 1.68,
+      "price": 2547.0
+    },
+    {
+      "code": "7972",
+      "name": "イトーキ",
+      "score_momentum": 71,
+      "ret20": 25.05,
+      "ret60": 44.47,
+      "roe": 17.7,
+      "vol_trend": 1.82,
+      "sector_ret5": 0.21,
+      "price": 3205.0
     }
   ],
   "top50_codes": [
-    "2124",
     "2181",
-    "3382",
     "4088",
+    "2124",
+    "3382",
     "4914",
-    "7259",
     "6526",
-    "3962",
-    "2767",
     "7270",
     "6005",
+    "7259",
     "3284",
     "3302",
-    "7172",
-    "4784",
+    "2767",
     "7267",
-    "8515",
+    "7864",
+    "3836",
     "4432",
+    "7172",
     "9142",
     "5108",
     "8411",
-    "2918",
+    "4674",
     "4719",
-    "8473",
     "4403",
+    "5943",
     "2501",
-    "3836",
+    "2918",
+    "4784",
     "4848",
-    "5741",
-    "6465",
     "3626",
     "3769",
     "4956",
-    "8053",
     "8219",
     "4097",
     "4676",
@@ -187,37 +184,26 @@
     "7921",
     "2678",
     "4290",
-    "4674",
     "5844",
     "8084",
-    "2170",
-    "7733",
+    "3962",
     "7868",
     "9759",
     "3765",
-    "7744"
+    "5741",
+    "7744",
+    "9413",
+    "8892",
+    "7181",
+    "8031"
   ],
   "top50_scores": [
-    {
-      "code": "2124",
-      "score": 79,
-      "price": 876.0,
-      "dividend": 4.34,
-      "ret5": -10.06
-    },
     {
       "code": "2181",
       "score": 78,
       "price": 240.5,
       "dividend": 4.57,
       "ret5": -7.32
-    },
-    {
-      "code": "3382",
-      "score": 78,
-      "price": 2191.0,
-      "dividend": 2.28,
-      "ret5": -7.75
     },
     {
       "code": "4088",
@@ -227,18 +213,25 @@
       "ret5": -14.69
     },
     {
+      "code": "2124",
+      "score": 75,
+      "price": 876.0,
+      "dividend": 4.34,
+      "ret5": -10.06
+    },
+    {
+      "code": "3382",
+      "score": 74,
+      "price": 2191.0,
+      "dividend": 2.28,
+      "ret5": -7.75
+    },
+    {
       "code": "4914",
-      "score": 78,
+      "score": 74,
       "price": 1385.0,
       "dividend": 3.75,
       "ret5": -7.3
-    },
-    {
-      "code": "7259",
-      "score": 77,
-      "price": 2682.0,
-      "dividend": 2.61,
-      "ret5": -8.13
     },
     {
       "code": "6526",
@@ -246,20 +239,6 @@
       "price": 1946.5,
       "dividend": 2.57,
       "ret5": -6.98
-    },
-    {
-      "code": "3962",
-      "score": 72,
-      "price": 939.0,
-      "dividend": 2.45,
-      "ret5": -6.1
-    },
-    {
-      "code": "2767",
-      "score": 71,
-      "price": 1526.0,
-      "dividend": 3.28,
-      "ret5": -6.21
     },
     {
       "code": "7270",
@@ -276,6 +255,13 @@
       "ret5": -4.31
     },
     {
+      "code": "7259",
+      "score": 69,
+      "price": 2682.0,
+      "dividend": 2.61,
+      "ret5": -8.13
+    },
+    {
       "code": "3284",
       "score": 68,
       "price": 1294.0,
@@ -290,18 +276,11 @@
       "ret5": -8.96
     },
     {
-      "code": "7172",
-      "score": 68,
-      "price": 1963.0,
-      "dividend": 5.5,
-      "ret5": -4.1
-    },
-    {
-      "code": "4784",
+      "code": "2767",
       "score": 67,
-      "price": 724.0,
-      "dividend": 2.04,
-      "ret5": -9.95
+      "price": 1526.0,
+      "dividend": 3.28,
+      "ret5": -6.21
     },
     {
       "code": "7267",
@@ -311,11 +290,18 @@
       "ret5": -3.62
     },
     {
-      "code": "8515",
+      "code": "7864",
       "score": 65,
-      "price": 503.0,
-      "dividend": 2.39,
-      "ret5": -4.37
+      "price": 2785.0,
+      "dividend": 2.55,
+      "ret5": -3.8
+    },
+    {
+      "code": "3836",
+      "score": 64,
+      "price": 1384.0,
+      "dividend": 2.31,
+      "ret5": -3.35
     },
     {
       "code": "4432",
@@ -323,6 +309,13 @@
       "price": 2697.0,
       "dividend": 5.41,
       "ret5": -4.63
+    },
+    {
+      "code": "7172",
+      "score": 64,
+      "price": 1963.0,
+      "dividend": 5.5,
+      "ret5": -4.1
     },
     {
       "code": "9142",
@@ -346,11 +339,11 @@
       "ret5": -6.59
     },
     {
-      "code": "2918",
-      "score": 62,
-      "price": 3450.0,
-      "dividend": 3.48,
-      "ret5": -8.61
+      "code": "4674",
+      "score": 61,
+      "price": 1535.0,
+      "dividend": 3.78,
+      "ret5": -3.34
     },
     {
       "code": "4719",
@@ -360,18 +353,18 @@
       "ret5": -4.06
     },
     {
-      "code": "8473",
-      "score": 61,
-      "price": 3355.0,
-      "dividend": 2.68,
-      "ret5": -3.84
-    },
-    {
       "code": "4403",
       "score": 59,
       "price": 2970.0,
       "dividend": 2.36,
       "ret5": -4.32
+    },
+    {
+      "code": "5943",
+      "score": 59,
+      "price": 2345.0,
+      "dividend": 4.01,
+      "ret5": -6.57
     },
     {
       "code": "2501",
@@ -381,11 +374,18 @@
       "ret5": -7.76
     },
     {
-      "code": "3836",
+      "code": "2918",
       "score": 58,
-      "price": 1384.0,
-      "dividend": 2.31,
-      "ret5": -3.35
+      "price": 3450.0,
+      "dividend": 3.48,
+      "ret5": -8.61
+    },
+    {
+      "code": "4784",
+      "score": 58,
+      "price": 724.0,
+      "dividend": 2.04,
+      "ret5": -9.95
     },
     {
       "code": "4848",
@@ -393,20 +393,6 @@
       "price": 1635.0,
       "dividend": 3.91,
       "ret5": -4.22
-    },
-    {
-      "code": "5741",
-      "score": 58,
-      "price": 2480.0,
-      "dividend": 2.02,
-      "ret5": -7.81
-    },
-    {
-      "code": "6465",
-      "score": 58,
-      "price": 5290.0,
-      "dividend": 2.17,
-      "ret5": -5.55
     },
     {
       "code": "3626",
@@ -428,13 +414,6 @@
       "price": 1343.0,
       "dividend": 2.83,
       "ret5": -5.16
-    },
-    {
-      "code": "8053",
-      "score": 57,
-      "price": 6382.0,
-      "dividend": 2.19,
-      "ret5": -3.7
     },
     {
       "code": "8219",
@@ -486,13 +465,6 @@
       "ret5": -3.6
     },
     {
-      "code": "4674",
-      "score": 55,
-      "price": 1535.0,
-      "dividend": 3.78,
-      "ret5": -3.34
-    },
-    {
       "code": "5844",
       "score": 55,
       "price": 3698.0,
@@ -507,18 +479,11 @@
       "ret5": -3.14
     },
     {
-      "code": "2170",
+      "code": "3962",
       "score": 54,
-      "price": 516.0,
-      "dividend": 3.18,
-      "ret5": -8.19
-    },
-    {
-      "code": "7733",
-      "score": 54,
-      "price": 1480.0,
-      "dividend": 2.03,
-      "ret5": -20.11
+      "price": 939.0,
+      "dividend": 2.45,
+      "ret5": -6.1
     },
     {
       "code": "7868",
@@ -542,24 +507,59 @@
       "ret5": -4.06
     },
     {
+      "code": "5741",
+      "score": 53,
+      "price": 2480.0,
+      "dividend": 2.02,
+      "ret5": -7.81
+    },
+    {
       "code": "7744",
       "score": 53,
       "price": 2183.0,
       "dividend": 3.44,
       "ret5": -4.42
+    },
+    {
+      "code": "9413",
+      "score": 53,
+      "price": 4375.0,
+      "dividend": 2.29,
+      "ret5": -3.53
+    },
+    {
+      "code": "8892",
+      "score": 52,
+      "price": 1127.0,
+      "dividend": 4.26,
+      "ret5": -2.84
+    },
+    {
+      "code": "7181",
+      "score": 51,
+      "price": 4959.0,
+      "dividend": 2.5,
+      "ret5": -3.16
+    },
+    {
+      "code": "8031",
+      "score": 51,
+      "price": 5505.0,
+      "dividend": 2.18,
+      "ret5": -3.27
     }
   ],
   "sector_ret5_avg": {
     "Consumer Defensive": -0.79,
-    "Industrials": 1.35,
+    "Industrials": 1.28,
     "Consumer Cyclical": 0.21,
-    "Basic Materials": 1.94,
+    "Basic Materials": 1.91,
     "Energy": 2.15,
     "Utilities": 2.87,
-    "Technology": 1.54,
-    "Real Estate": 0.99,
-    "Communication Services": -1.15,
-    "Financial Services": 0.05,
+    "Technology": 1.68,
+    "Real Estate": 1.05,
+    "Communication Services": -1.13,
+    "Financial Services": 0.04,
     "Healthcare": NaN,
     "その他": 0.17
   }
