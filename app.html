@@ -72,10 +72,10 @@ a{color:var(--blue-m);text-decoration:none;}
 .t5-body{background:var(--card);border-radius:0 0 var(--r) var(--r);box-shadow:var(--sh);}
 .t5-item{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;}
 .t5-item:last-child{border-bottom:none;}.t5-item:active{background:var(--blue-l);}
-.t5-rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fn);font-size:13px;font-weight:800;background:var(--bg);color:var(--text2);flex-shrink:0;}
-.t5-rank.gold{background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff;}
-.t5-rank.silver{background:linear-gradient(135deg,#94A3B8,#64748B);color:#fff;}
-.t5-rank.bronze{background:linear-gradient(135deg,#D97706,#A16207);color:#fff;}
+.t5-rank{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fn);font-size:13px;font-weight:800;background:var(--bg);color:var(--text2);flex-shrink:0;}
+.t5-rank.gold{background:linear-gradient(135deg,#FEF3C7,#FDE68A);font-size:18px;border:2px solid #F59E0B;}
+.t5-rank.silver{background:linear-gradient(135deg,#F1F5F9,#E2E8F0);font-size:16px;border:2px solid #94A3B8;}
+.t5-rank.bronze{background:linear-gradient(135deg,#FEF3C7,#FDE68A);font-size:16px;border:2px solid #D97706;opacity:0.85;}
 .t5-info{flex:1;min-width:0;}
 .t5-nm{font-size:14px;font-weight:700;line-height:1.4;}
 .t5-meta{font-family:var(--fn);font-size:11px;color:var(--text3);margin-top:1px;}
@@ -652,7 +652,7 @@ function renderTop10(){
     const rankBadge=getRankBadge(s.code,tab);
     const volBadge=getVolBadge(s);
     html+=`<div class="t5-item${i===0?' first-place':''}" onclick="toggleExpand('${s.code}')" style="${isOpen?'background:var(--blue-l)':''}">
-      <div class="t5-rank${i===0?' gold':i===1?' silver':i===2?' bronze':''}">${i+1}</div>
+      <div class="t5-rank${i===0?' gold':i===1?' silver':i===2?' bronze':''}">${i===0?'👑':i===1?'🥈':i===2?'🥉':i+1}</div>
       <div class="t5-info">
         <div class="t5-nm">${s.name} ${rankBadge}</div>
         <div class="t5-meta">${s.code} · ${sMap(s.sector,s.code)} · ${divBadge} ${volBadge}</div>
