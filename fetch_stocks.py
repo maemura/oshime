@@ -10,8 +10,33 @@
 取得失敗時はハードコードリストにフォールバック。
 """
 
-import json, sys, time, os, io
+import json, sys, time, os, io, shutil
 from datetime import datetime
+
+# ── 連続増配・累進配当銘柄リスト（公開情報ベース）──
+# 増配年数はおおよそ。スコアでボーナス加点に使用。
+DIVIDEND_GROWERS = {
+    # 10年以上連続増配
+    "4452": 15, "8566": 26, "9433": 23, "8591": 26, "4732": 14,
+    "9432": 14, "8316": 14, "8593": 15, "7466": 14, "2914": 21,
+    "9434": 10, "8001": 11, "8053": 11, "8058": 10, "8031": 12,
+    "4502": 12, "8766": 13, "8309": 11, "6098": 11, "2124": 14,
+    "9783": 14, "4967": 12, "7164": 11, "2413": 13, "9142": 12,
+    "6301": 14, "7974": 12, "8795": 11, "1925": 12, "2802": 13,
+    "6869": 11, "4684": 14, "7741": 10, "4543": 13, "6367": 12,
+    "9020": 10, "6902": 11, "7269": 10, "4063": 10, "6273": 12,
+    "4519": 10, "8697": 10, "6645": 12, "9436": 10, "3659": 11,
+    "1928": 10, "2503": 10, "9303": 10, "7272": 10,
+    # 5〜9年連続増配
+    "8306": 7, "8411": 7, "7267": 6, "7203": 6, "5108": 6,
+    "6752": 5, "6758": 5, "4661": 8, "4689": 5, "6501": 6,
+    "6503": 5, "7751": 7, "9984": 5, "6861": 8, "4307": 7,
+    "2801": 6, "8750": 8, "9843": 5, "8354": 6, "1605": 7,
+    "5401": 5, "3405": 5, "5020": 6, "5019": 6, "2502": 7,
+    "7201": 5, "9613": 5, "3382": 5, "8801": 6, "8802": 6,
+    "4901": 6, "3088": 5, "2768": 5, "6954": 6, "3099": 5,
+    "8252": 5, "9101": 5, "9104": 5, "9107": 5,
+}
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # ── ライブラリチェック ──
@@ -678,41 +703,62 @@ def calc_score_stable(s):
 
 
 def calc_score_bluechip(s):
-    """安定高配当スコア：配当×時価総額×自分比押し目度×短期トレンド"""
+    """安定高配当スコア v3：配当×銘柄質×押し目度×セクター差分"""
     div = s.get("dividend", 0)
     mc = s.get("market_cap_b", 0)
     if div < 2 or mc < 500: return 0
 
     score = 0
 
-    # 配当利回り (max 25pt)
-    score += (25 if div >= 5 else 21 if div >= 4.5 else 17 if div >= 4
-              else 13 if div >= 3.5 else 10 if div >= 3 else 6 if div >= 2.5
-              else 3 if div >= 2 else 0)
+    # ── 銘柄の質（変わらない）──
 
-    # 時価総額 (max 15pt)
-    score += (15 if mc >= 50000 else 13 if mc >= 10000 else 11 if mc >= 5000
-              else 8 if mc >= 1000 else 4 if mc >= 500 else 0)
+    # 配当利回り (max 20pt)
+    score += (20 if div >= 5 else 17 if div >= 4.5 else 14 if div >= 4
+              else 11 if div >= 3.5 else 8 if div >= 3 else 5 if div >= 2.5
+              else 2 if div >= 2 else 0)
 
-    # 自分比押し目度 = dip_zscore (max 20pt)
+    # 時価総額 (max 10pt)
+    score += (10 if mc >= 50000 else 9 if mc >= 10000 else 8 if mc >= 5000
+              else 6 if mc >= 1000 else 3 if mc >= 500 else 0)
+
+    # 増配ボーナス (max 10pt)
+    dgy = s.get("div_growth_years", 0)
+    score += (10 if dgy >= 15 else 7 if dgy >= 10 else 5 if dgy >= 7
+              else 3 if dgy >= 5 else 0)
+
+    # ── 今の割安度（毎日変わる）──
+
+    # 自分比押し目度 = dip_zscore (max 15pt)
     z = s.get("dip_zscore", 0)
-    score += (20 if z <= -3.0 else 16 if z <= -2.0 else 12 if z <= -1.5
-              else 8 if z <= -1.0 else 4 if z <= -0.5 else 0)
+    score += (15 if z <= -3.0 else 12 if z <= -2.0 else 9 if z <= -1.5
+              else 6 if z <= -1.0 else 3 if z <= -0.5 else 0)
 
-    # 5日リターン (max 15pt) — 短期ダウントレンド
-    r5 = s.get("ret5", 0)
-    score += (15 if r5 <= -5 else 11 if r5 <= -3 else 7 if r5 <= -1.5
-              else 3 if r5 <= -0.5 else 0)
-
-    # 10日リターン (max 10pt) — 中期ダウントレンド
-    r10 = s.get("ret10", 0)
-    score += (10 if r10 <= -8 else 7 if r10 <= -5 else 4 if r10 <= -2
-              else 2 if r10 <= -1 else 0)
-
-    # PBR (max 10pt)
+    # PBR (max 5pt)
     pbr = s.get("pbr", 99)
-    score += (10 if pbr <= 0.7 else 7 if pbr <= 0.9 else 5 if pbr <= 1.2
-              else 2 if pbr <= 1.5 else 0)
+    score += (5 if pbr <= 0.7 else 4 if pbr <= 0.9 else 3 if pbr <= 1.2
+              else 1 if pbr <= 1.5 else 0)
+
+    # ── タイミング（毎日変わる）──
+
+    # 個別 vs セクター差分 (max 20pt) ← 最重要
+    # マイナス = 個別だけ下がっている = 反発チャンス
+    diff5 = s.get("ret5_vs_sector", 0)
+    score += (20 if diff5 <= -5 else 15 if diff5 <= -3 else 10 if diff5 <= -1.5
+              else 5 if diff5 <= -0.5 else 0)
+    # セクターも下がっている場合はペナルティ（まだ下がるリスク）
+    sec_r5 = s.get("sector_ret5", 0)
+    if sec_r5 <= -3:
+        score -= 5  # セクター全体が弱い → 慎重に
+
+    # 個別下落トレンド (max 10pt) — セクター差分と補完
+    r5 = s.get("ret5", 0)
+    score += (10 if r5 <= -5 else 7 if r5 <= -3 else 4 if r5 <= -1.5
+              else 1 if r5 <= -0.5 else 0)
+
+    # 10日リターン (max 5pt)
+    r10 = s.get("ret10", 0)
+    score += (5 if r10 <= -8 else 3 if r10 <= -5 else 2 if r10 <= -2
+              else 1 if r10 <= -1 else 0)
 
     # 安定株ボーナス (max 5pt)
     if s.get("per", 0) > 0 and div >= 2 and mc >= 5000:
@@ -829,6 +875,35 @@ def main():
                 overwritten += 1
         print(f"  📝 日本語名に上書き: {overwritten}件")
 
+    # ── セクター別 平均リターン計算 ──
+    from collections import defaultdict
+    sector_ret5_sum  = defaultdict(lambda: [0, 0])  # [合計, 件数]
+    sector_ret10_sum = defaultdict(lambda: [0, 0])
+    for s in results:
+        sec = s.get("sector", "その他")
+        r5  = s.get("ret5", 0)
+        r10 = s.get("ret10", 0)
+        if r5 != 0:
+            sector_ret5_sum[sec][0] += r5
+            sector_ret5_sum[sec][1] += 1
+        if r10 != 0:
+            sector_ret10_sum[sec][0] += r10
+            sector_ret10_sum[sec][1] += 1
+    sector_ret5_avg  = {k: round(v[0]/v[1], 2) if v[1] > 0 else 0 for k, v in sector_ret5_sum.items()}
+    sector_ret10_avg = {k: round(v[0]/v[1], 2) if v[1] > 0 else 0 for k, v in sector_ret10_sum.items()}
+    print(f"  📊 セクター別ret5平均: {len(sector_ret5_avg)}セクター計算済み")
+
+    # ── 各銘柄にセクター差分・増配フラグを付与 ──
+    for s in results:
+        sec = s.get("sector", "その他")
+        s["sector_ret5"]  = sector_ret5_avg.get(sec, 0)
+        s["sector_ret10"] = sector_ret10_avg.get(sec, 0)
+        # 個別ret - セクター平均 = 差分（マイナスなら個別だけ下がっている）
+        s["ret5_vs_sector"]  = round(s.get("ret5", 0) - s["sector_ret5"], 2)
+        s["ret10_vs_sector"] = round(s.get("ret10", 0) - s["sector_ret10"], 2)
+        # 増配フラグ
+        s["div_growth_years"] = DIVIDEND_GROWERS.get(s["code"], 0)
+
     for s in results:
         s["score_dividend"] = calc_score(s,"dividend")
         s["score_value"]    = calc_score(s,"value")
@@ -912,7 +987,8 @@ def main():
             "pbr","per","vol_r","vol_ratio_1d","ret_1d","range_pct","trend_score",
             "score_dividend","score_value","score_rebound",
             "score_stable","score_growth","score_bluechip",
-            "score","prev_score","market_cap_b","volatility","dip_zscore","ret5","ret10"}
+            "score","prev_score","market_cap_b","volatility","dip_zscore","ret5","ret10",
+            "sector_ret5","sector_ret10","ret5_vs_sector","ret10_vs_sector","div_growth_years"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
 
     output = {
@@ -941,6 +1017,39 @@ def main():
         for i,s in enumerate(results[:3],1):
             print(f"    {i}位: {s['name']}（{s['code']}）{s['score']}点 配当{s['dividend']}%")
     print(f"\n  📁 stocks_data.json 保存完了")
+
+    # ── 履歴保存（日次スナップショット）──
+    today_str = datetime.now().strftime("%Y-%m-%d")
+    history_dir = "history"
+    os.makedirs(history_dir, exist_ok=True)
+    # TOP50 + 各指標値を記録（検証用）
+    top50 = results[:50]
+    history_entry = {
+        "date": today_str,
+        "updated_at": output["updated_at"],
+        "market": {k: output.get(k) for k in ["nikkei_price","nikkei_ma25","nikkei_1d_chg","nasdaq_1d_chg","vix","usdjpy"]},
+        "total_scanned": len(results),
+        "buy_count": buy_count,
+        "top5": [
+            {"code": s["code"], "name": s.get("name",""), "score": s["score"],
+             "dividend": s.get("dividend",0), "market_cap_b": s.get("market_cap_b",0),
+             "ret5": s.get("ret5",0), "ret10": s.get("ret10",0),
+             "dip_zscore": s.get("dip_zscore",0), "ret5_vs_sector": s.get("ret5_vs_sector",0),
+             "sector": s.get("sector",""), "sector_ret5": s.get("sector_ret5",0),
+             "div_growth_years": s.get("div_growth_years",0), "price": s["price"]}
+            for s in top50[:5]
+        ],
+        "top50_codes": [s["code"] for s in top50],
+        "top50_scores": [{"code":s["code"],"score":s["score"],"price":s["price"],
+                          "dividend":s.get("dividend",0),"ret5":s.get("ret5",0)}
+                         for s in top50],
+        "sector_ret5_avg": sector_ret5_avg,
+    }
+    hist_path = os.path.join(history_dir, f"{today_str}.json")
+    with open(hist_path, "w", encoding="utf-8") as f:
+        json.dump(history_entry, f, ensure_ascii=False, indent=2)
+    print(f"  📜 履歴保存: {hist_path}")
+
     print("="*58)
 
 if __name__=="__main__":

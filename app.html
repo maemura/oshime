@@ -608,41 +608,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <div class="top5-section" id="top5Section" style="display:none">
       <div class="top5-header">
         <div class="top5-title">🎯 今日の注目 TOP5</div>
-        <div class="top5-sub">全指標を総合評価・毎朝自動更新</div>
+        <div class="top5-sub">銘柄の質×割安度×タイミングで総合評価・毎朝自動更新</div>
       </div>
       <div class="top5-list" id="top5List"></div>
-    </div>
-
-    <!-- STYLE TABS -->
-    <div class="style-tabs-wrap">
-      <div class="style-tab active" id="tab-bluechip" onclick="setStyleTab('bluechip',this)">
-        <div class="style-tab-ico">🏦</div>
-        <div class="style-tab-body">
-          <div class="style-tab-title">安定高配当</div>
-          <div class="style-tab-desc">大型優良株・自分比で今日安い銘柄</div>
-        </div>
-      </div>
-      <div class="style-tab" id="tab-stable" onclick="setStyleTab('stable',this)">
-        <div class="style-tab-ico">📉</div>
-        <div class="style-tab-body">
-          <div class="style-tab-title">押し目×高配当</div>
-          <div class="style-tab-desc">MA乖離・RSI重視の暴落拾い</div>
-        </div>
-      </div>
-      <div class="style-tab" id="tab-growth" onclick="setStyleTab('growth',this)">
-        <div class="style-tab-ico">🌱</div>
-        <div class="style-tab-body">
-          <div class="style-tab-title">グロース押し目</div>
-          <div class="style-tab-desc">小型・新興株・売られすぎ水準</div>
-        </div>
-      </div>
-      <div class="style-tab" id="tab-trend" onclick="setStyleTab('trend',this)">
-        <div class="style-tab-ico">🔥</div>
-        <div class="style-tab-body">
-          <div class="style-tab-title">話題株</div>
-          <div class="style-tab-desc">出来高急増・今日熱い銘柄</div>
-        </div>
-      </div>
     </div>
 
     <!-- FILTER BAR -->
@@ -654,11 +622,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
         <div class="filter-tab" id="disp-all" onclick="setDispCount(999,this)">全件</div>
       </div>
       <div class="filter-count" id="filterCount"></div>
-      <div id="styleNote" style="font-size:10px;color:var(--amber);margin-left:auto;"></div>
+      <div id="styleNote" style="font-size:10px;color:var(--green);margin-left:auto;">🏦 配当×時価総額×増配×セクター差分で評価</div>
     </div>
 
     <!-- SECTOR FILTER -->
-    <div class="sector-filter-wrap" id="sectorFilterWrap" style="display:none">
+    <div class="sector-filter-wrap" id="sectorFilterWrap">
       <div class="sector-filter-scroll" id="sectorFilterScroll"></div>
     </div>
 
@@ -746,23 +714,26 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 <div class="logic-overlay" id="logicModal" onclick="closeLogicModal(event)">
   <div class="logic-box">
     <div class="modal-handle"></div>
-    <div class="logic-title">スコアロジック（100点満点）</div>
-    <div class="logic-sub">🏦 安定高配当タブは6指標＋安定株ボーナスで評価。配当×時価総額×自分比押し目度の総合評価です。</div>
+    <div class="logic-title">スコアロジック v3（100点満点）</div>
+    <div class="logic-sub">銘柄の質×今の割安度×タイミングの3軸で評価。セクター差分で「個別だけ下がっている」銘柄を優先的に検出します。</div>
     <table class="logic-tbl">
       <tr><th>指標</th><th>条件</th><th style="text-align:right">最大点</th></tr>
-      <tr><td>配当利回り</td><td>2%〜5%以上</td><td class="pts">25pt</td></tr>
-      <tr><td>時価総額</td><td>500億〜5兆円以上</td><td class="pts">15pt</td></tr>
-      <tr><td>自分比押し目度</td><td>-0.5σ〜-3σ以下</td><td class="pts">20pt</td></tr>
-      <tr><td>5日リターン</td><td>-0.5%〜-5%以下</td><td class="pts">15pt</td></tr>
-      <tr><td>10日リターン</td><td>-1%〜-8%以下</td><td class="pts">10pt</td></tr>
-      <tr><td>PBR</td><td>1.5倍以下〜0.7倍以下</td><td class="pts">10pt</td></tr>
+      <tr><td>配当利回り</td><td>2%〜5%以上</td><td class="pts">20pt</td></tr>
+      <tr><td>時価総額</td><td>500億〜5兆円以上</td><td class="pts">10pt</td></tr>
+      <tr><td>連続増配</td><td>5年〜15年以上</td><td class="pts">10pt</td></tr>
+      <tr><td>自分比押し目度</td><td>-0.5σ〜-3σ以下</td><td class="pts">15pt</td></tr>
+      <tr><td>個別vsセクター差分</td><td>-0.5%〜-5%以下</td><td class="pts">20pt</td></tr>
+      <tr><td>個別5日下落</td><td>-0.5%〜-5%以下</td><td class="pts">10pt</td></tr>
+      <tr><td>10日リターン</td><td>-1%〜-8%以下</td><td class="pts">5pt</td></tr>
+      <tr><td>PBR</td><td>1.5倍以下〜0.7倍以下</td><td class="pts">5pt</td></tr>
       <tr><td>安定株ボーナス</td><td>黒字+配当2%+大型</td><td class="pts">5pt</td></tr>
+      <tr><td>⚠セクター下落</td><td>セクター全体-3%以下</td><td class="pts">-5pt</td></tr>
     </table>
     <div class="logic-note">
-      🏦 安定高配当 → 配当×時価総額×自分比押し目度×下落トレンド<br>
-      📉 押し目×高配当 → MA乖離・RSI重視の暴落拾い<br>
-      🌱 グロース押し目 → MA乖離・RSI重視・小型株OK<br>
-      🔥 話題株 → 出来高急増・注目度スコア順
+      📊 銘柄の質: 配当+時価総額+連続増配（40pt）<br>
+      📉 割安度: 自分比σ+PBR（20pt）<br>
+      ⏱ タイミング: セクター差分+個別下落+10日リターン（40pt）<br>
+      ⚠ セクター全体が弱い時は慎重にペナルティ
     </div>
     <button class="btn-logic-close" onclick="closeLogicModal()">閉じる</button>
   </div>
@@ -834,29 +805,37 @@ try{
 function dv(p,m){return m?Math.round((p-m)/m*1000)/10:0;}
 
 function calcScore(s){
-  return currentStyleTab==='bluechip' ? calcScoreBluechip(s) : currentStyleTab==='stable' ? calcScoreStable(s) : calcScoreGrowth(s);
+  return calcScoreBluechip(s);
 }
 function calcScoreBluechip(s){
   const div=s.dividend||0;
   const mc=s.market_cap_b||0;
   if(div<2||mc<500) return 0;
   let score=0;
-  // 配当利回り (max 25pt)
-  score+=div>=5?25:div>=4.5?21:div>=4?17:div>=3.5?13:div>=3?10:div>=2.5?6:div>=2?3:0;
-  // 時価総額 (max 15pt)
-  score+=mc>=50000?15:mc>=10000?13:mc>=5000?11:mc>=1000?8:mc>=500?4:0;
-  // 自分比押し目度 (max 20pt)
+  // 配当利回り (max 20pt)
+  score+=div>=5?20:div>=4.5?17:div>=4?14:div>=3.5?11:div>=3?8:div>=2.5?5:div>=2?2:0;
+  // 時価総額 (max 10pt)
+  score+=mc>=50000?10:mc>=10000?9:mc>=5000?8:mc>=1000?6:mc>=500?3:0;
+  // 増配ボーナス (max 10pt)
+  const dgy=s.div_growth_years||0;
+  score+=dgy>=15?10:dgy>=10?7:dgy>=7?5:dgy>=5?3:0;
+  // 自分比押し目度 (max 15pt)
   const z=s.dip_zscore||0;
-  score+=z<=-3.0?20:z<=-2.0?16:z<=-1.5?12:z<=-1.0?8:z<=-0.5?4:0;
-  // 5日リターン (max 15pt)
-  const r5=s.ret5||0;
-  score+=r5<=-5?15:r5<=-3?11:r5<=-1.5?7:r5<=-0.5?3:0;
-  // 10日リターン (max 10pt)
-  const r10=s.ret10||0;
-  score+=r10<=-8?10:r10<=-5?7:r10<=-2?4:r10<=-1?2:0;
-  // PBR (max 10pt)
+  score+=z<=-3.0?15:z<=-2.0?12:z<=-1.5?9:z<=-1.0?6:z<=-0.5?3:0;
+  // PBR (max 5pt)
   const pbr=s.pbr||99;
-  score+=pbr<=0.7?10:pbr<=0.9?7:pbr<=1.2?5:pbr<=1.5?2:0;
+  score+=pbr<=0.7?5:pbr<=0.9?4:pbr<=1.2?3:pbr<=1.5?1:0;
+  // 個別vsセクター差分 (max 20pt)
+  const diff5=s.ret5_vs_sector||0;
+  score+=diff5<=-5?20:diff5<=-3?15:diff5<=-1.5?10:diff5<=-0.5?5:0;
+  const secR5=s.sector_ret5||0;
+  if(secR5<=-3) score-=5;
+  // 個別下落 (max 10pt)
+  const r5=s.ret5||0;
+  score+=r5<=-5?10:r5<=-3?7:r5<=-1.5?4:r5<=-0.5?1:0;
+  // 10日リターン (max 5pt)
+  const r10=s.ret10||0;
+  score+=r10<=-8?5:r10<=-5?3:r10<=-2?2:r10<=-1?1:0;
   // 安定株ボーナス (max 5pt)
   if((s.per||0)>0&&div>=2&&mc>=5000) score+=5;
   else if((s.per||0)>0&&div>=2&&mc>=1000) score+=3;
@@ -927,8 +906,7 @@ function buildReasons(s,d25){
 
 function calcBreakdown(s,mode){
   // タブに応じて専用ブレークダウン
-  if(currentStyleTab==='bluechip') return calcBreakdownBluechip(s);
-  if(currentStyleTab==='stable') return calcBreakdownStable(s);
+  return calcBreakdownBluechip(s);
   const d25=dv(s.price,s.ma25);
   const bd=[];
   let dp=s.dividend>=5?30:s.dividend>=4.5?25:s.dividend>=4?20:s.dividend>=3.5?15:s.dividend>=3?10:s.dividend>=2.5?5:0;
@@ -978,20 +956,28 @@ function calcBreakdownBluechip(s){
   const z=s.dip_zscore||0;
   const r5=s.ret5||0;
   const r10=s.ret10||0;
+  const diff5=s.ret5_vs_sector||0;
+  const dgy=s.div_growth_years||0;
   const bd=[];
-  const dp=div>=5?25:div>=4.5?21:div>=4?17:div>=3.5?13:div>=3?10:div>=2.5?6:div>=2?3:0;
-  if(dp>0)bd.push({l:'配当利回り',v:dp,max:25,pos:true});
-  const mcp=mc>=50000?15:mc>=10000?13:mc>=5000?11:mc>=1000?8:mc>=500?4:0;
-  if(mcp>0)bd.push({l:'時価総額',v:mcp,max:15,pos:true});
-  const zp=z<=-3.0?20:z<=-2.0?16:z<=-1.5?12:z<=-1.0?8:z<=-0.5?4:0;
-  if(zp>0)bd.push({l:'自分比押し目度',v:zp,max:20,pos:true});
-  const r5p=r5<=-5?15:r5<=-3?11:r5<=-1.5?7:r5<=-0.5?3:0;
-  if(r5p>0)bd.push({l:'5日リターン',v:r5p,max:15,pos:true});
-  const r10p=r10<=-8?10:r10<=-5?7:r10<=-2?4:r10<=-1?2:0;
-  if(r10p>0)bd.push({l:'10日リターン',v:r10p,max:10,pos:true});
+  const dp=div>=5?20:div>=4.5?17:div>=4?14:div>=3.5?11:div>=3?8:div>=2.5?5:div>=2?2:0;
+  if(dp>0)bd.push({l:'配当利回り',v:dp,max:20,pos:true});
+  const mcp=mc>=50000?10:mc>=10000?9:mc>=5000?8:mc>=1000?6:mc>=500?3:0;
+  if(mcp>0)bd.push({l:'時価総額',v:mcp,max:10,pos:true});
+  const dgp=dgy>=15?10:dgy>=10?7:dgy>=7?5:dgy>=5?3:0;
+  if(dgp>0)bd.push({l:'連続増配('+dgy+'年)',v:dgp,max:10,pos:true});
+  const zp=z<=-3.0?15:z<=-2.0?12:z<=-1.5?9:z<=-1.0?6:z<=-0.5?3:0;
+  if(zp>0)bd.push({l:'自分比押し目度',v:zp,max:15,pos:true});
+  const d5p=diff5<=-5?20:diff5<=-3?15:diff5<=-1.5?10:diff5<=-0.5?5:0;
+  if(d5p>0)bd.push({l:'個別vsセクター差分',v:d5p,max:20,pos:true});
+  const secR5=s.sector_ret5||0;
+  if(secR5<=-3)bd.push({l:'セクター下落ペナルティ',v:-5,max:5,pos:false});
+  const r5p=r5<=-5?10:r5<=-3?7:r5<=-1.5?4:r5<=-0.5?1:0;
+  if(r5p>0)bd.push({l:'個別5日下落',v:r5p,max:10,pos:true});
+  const r10p=r10<=-8?5:r10<=-5?3:r10<=-2?2:r10<=-1?1:0;
+  if(r10p>0)bd.push({l:'10日リターン',v:r10p,max:5,pos:true});
   const pbr=s.pbr||99;
-  const pp=pbr<=0.7?10:pbr<=0.9?7:pbr<=1.2?5:pbr<=1.5?2:0;
-  if(pp>0)bd.push({l:'PBR',v:pp,max:10,pos:true});
+  const pp=pbr<=0.7?5:pbr<=0.9?4:pbr<=1.2?3:pbr<=1.5?1:0;
+  if(pp>0)bd.push({l:'PBR',v:pp,max:5,pos:true});
   if((s.per||0)>0&&div>=2&&mc>=5000) bd.push({l:'安定株ボーナス',v:5,max:5,pos:true});
   else if((s.per||0)>0&&div>=2&&mc>=1000) bd.push({l:'安定株ボーナス',v:3,max:5,pos:true});
   return bd;
@@ -1004,22 +990,11 @@ function processStocks(){
   const minDiv=settings.mindiv||0;
   const zoneFilter=settings.zone||'all';
 
-  // スタイルタブに応じてスコアキーを切り替え
-  const scoreKey = currentStyleTab==='bluechip' ? 'score_bluechip' : currentStyleTab==='stable' ? 'score_stable' : 'score_growth';
-
+  // 安定高配当のみ：配当2%+時価総額500億以上
   let list=STOCKS.filter(s=>{
-    if(currentStyleTab==='bluechip'){
-      if((s.dividend||0)<2) return false;
-      if((s.market_cap_b||0)<500) return false;
-    } else if(currentStyleTab==='stable'){
-      const minD=minDiv>0?minDiv:2;
-      if((s.dividend||0)<minD) return false;
-      if((s.turnover_avg5||0) < 10 && (s.turnover_avg5||0) > 0) return false;
-    } else if(currentStyleTab==='growth'){
-      if(minDiv>0&&(s.dividend||0)<minDiv) return false;
-      // 小型株のみ（売買代金20億未満 or データなし）
-      if((s.turnover_avg5||0) >= 20) return false;
-    }
+    if((s.dividend||0)<2) return false;
+    if((s.market_cap_b||0)<500) return false;
+    if(minDiv>0&&(s.dividend||0)<minDiv) return false;
     return true;
   });
 
@@ -1030,8 +1005,7 @@ function processStocks(){
 
   processed=list.map(s=>{
     const d25=dv(s.price,s.ma25);
-    // スコアはJSONから取得（再計算しない → 高速化）
-    const score = calcScore(s); // currentStyleTabに応じてStable/Growthを自動切替
+    const score = calcScoreBluechip(s);
     const zone=getZone(score);
     return{...s,d25,score,zone};
   });
@@ -1495,28 +1469,31 @@ function genReason(s){
   const r10=s.ret10||0;
   const z=s.dip_zscore||0;
   const pbr=s.pbr||99;
-  // 配当
+  const diff5=s.ret5_vs_sector||0;
+  const dgy=s.div_growth_years||0;
+  // 配当+増配
   if(div>=5) parts.push('超高配当'+div+'%');
   else if(div>=4) parts.push('高配当'+div+'%');
   else if(div>=3) parts.push('配当'+div+'%');
   else if(div>=2) parts.push('配当'+div+'%の大型安定株');
+  if(dgy>=10) parts.push(dgy+'年連続増配');
+  else if(dgy>=5) parts.push(dgy+'年連続増配中');
+  // セクター差分（最重要）
+  if(diff5<=-3) parts.push('セクター内で突出して売られている（差分'+diff5.toFixed(1)+'%）');
+  else if(diff5<=-1) parts.push('同セクター比で個別に弱い');
   // 下落トレンド
   if(r5<=-5) parts.push('5日で'+r5.toFixed(1)+'%急落中');
-  else if(r5<=-2) parts.push('5日で'+r5.toFixed(1)+'%の下落トレンド');
-  if(r10<=-8) parts.push('10日で'+r10.toFixed(1)+'%の中期下落');
+  else if(r5<=-2) parts.push('5日で'+r5.toFixed(1)+'%下落');
   // 自分比
-  if(z<=-2) parts.push('自分比で異例の安値水準（'+z.toFixed(1)+'σ）');
-  else if(z<=-1) parts.push('自分比で押し目水準（'+z.toFixed(1)+'σ）');
+  if(z<=-2) parts.push('自分比で異例の安値（'+z.toFixed(1)+'σ）');
+  else if(z<=-1) parts.push('自分比で押し目水準');
   // 割安
-  if(pbr<=0.7) parts.push('PBR'+pbr+'倍の超割安');
-  else if(pbr<=1.0) parts.push('PBR'+pbr+'倍で割安');
-  // 時価総額
-  if(mc>=10000) parts.push('時価総額'+(mc/10000).toFixed(1)+'兆の大型株');
-  else if(mc>=5000) parts.push('時価総額'+Math.round(mc)+'億の準大型');
+  if(pbr<=0.7) parts.push('PBR'+pbr+'倍で超割安');
   // 結論
-  if(r5<=-3&&div>=3) return parts.join('。')+'。反発すれば配当と値上がり益の両取りが狙える局面。';
-  if(z<=-1.5&&mc>=5000) return parts.join('。')+'。大型安定株の珍しい押し目。長期保有向き。';
-  if(div>=5&&pbr<=1.0) return parts.join('。')+'。高配当＋割安の二重メリット。';
+  if(diff5<=-3&&div>=3) return parts.join('。')+'。個別要因での下落は反発しやすい。狙い目。';
+  if(r5<=-3&&div>=3) return parts.join('。')+'。反発すれば配当と値上がり益の両取りが狙える。';
+  if(z<=-1.5&&mc>=5000) return parts.join('。')+'。大型安定株の珍しい押し目。';
+  if(dgy>=10&&div>=3) return parts.join('。')+'。増配銘柄の押し目は長期投資家に好機。';
   return parts.join('。')+'。';
 }
 function renderTop5(){
@@ -1535,7 +1512,7 @@ function renderTop5(){
     const mcTxt=s.market_cap_b>=10000?((s.market_cap_b/10000).toFixed(1)+'兆'):(Math.round(s.market_cap_b)+'億');
     const r5=s.ret5||0;
     const r10=s.ret10||0;
-    return`<div class="top5-item" onclick="setStyleTab('bluechip',document.getElementById('tab-bluechip'));expandedCode='${s.code}';run();document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'})">
+    return`<div class="top5-item" onclick="expandedCode='${s.code}';run();document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'})">
       <div class="top5-rank ${rankCls}">${i+1}</div>
       <div class="top5-info">
         <div class="top5-name-row">
@@ -1543,7 +1520,7 @@ function renderTop5(){
           <span class="top5-score ${scCls}">${s.bc}pt</span>
         </div>
         <div class="top5-meta">
-          ${s.code} | 配当${s.dividend}% | 時価総額${mcTxt} | 5日${r5>0?'+':''}${r5.toFixed(1)}% | 10日${r10>0?'+':''}${r10.toFixed(1)}%
+          ${s.code} | 配当${s.dividend}%${s.div_growth_years>=5?' ('+s.div_growth_years+'年増配)':''} | 時価総額${mcTxt} | vs業種${(s.ret5_vs_sector||0)>0?'+':''}${(s.ret5_vs_sector||0).toFixed(1)}%
         </div>
         <div class="top5-reason">${genReason(s)}</div>
       </div>
@@ -1569,8 +1546,7 @@ function buildSectorChips(){
   // 現在のタブに該当する銘柄のセクター集計
   const counts={};
   STOCKS.forEach(s=>{
-    if(currentStyleTab==='bluechip'&&((s.dividend||0)<2||(s.market_cap_b||0)<500))return;
-    if(currentStyleTab==='stable'&&((s.dividend||0)<2))return;
+    if((s.dividend||0)<2||(s.market_cap_b||0)<500)return;
     const sec=sectorMap(s.sector);
     counts[sec]=(counts[sec]||0)+1;
   });
@@ -1605,35 +1581,9 @@ function setMode(m,el){
 }
 
 function setStyleTab(tab,el){
-  currentStyleTab=tab;
-  currentSector='all'; // タブ切替時にリセット
-  document.querySelectorAll('.style-tab').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
-  // セクターフィルター表示切替
-  document.getElementById('sectorFilterWrap').style.display=(tab==='bluechip'||tab==='stable')?'block':'none';
-  if(tab==='bluechip'||tab==='stable') buildSectorChips();
-  const note=document.getElementById('styleNote');
-  if(tab==='bluechip'){
-    note.textContent='🏦 配当×時価総額×自分比押し目度で評価';
-    note.style.color='var(--green)';
-  } else if(tab==='stable'){
-    note.textContent='📉 MA乖離・RSI重視の暴落拾い';
-    note.style.color='var(--amber)';
-  } else if(tab==='growth'){
-    note.textContent='⚠ 値動きの大きい小型株も含まれます';
-    note.style.color='var(--amber)';
-  } else if(tab==='trend'){
-    note.textContent='⚠ 短期投機向け・損失リスク高・参考情報として利用';
-    note.style.color='var(--up)';
-  } else {
-    note.textContent='';
-  }
-  if(tab==='trend'){
-    renderTrendTab();
-  } else {
-    run();
-  }
-  gaEvent('style_tab_changed',{tab});
+  // タブ統合済み — bluechipのみ
+  currentStyleTab='bluechip';
+  run();
 }
 
 function setDispCount(n,el){
@@ -1807,7 +1757,7 @@ async function loadRealData(){
 // ═══════════════════════════════════════
 function run(){
   processStocks();
-  if(currentStyleTab==='bluechip'||currentStyleTab==='stable') buildSectorChips();
+  buildSectorChips();
   renderTop5();
   renderHeroStats();
   renderPulse();

@@ -4,17 +4,17 @@ on:
   schedule:
     # 毎朝 7:30 JST = UTC 22:30（前日）月〜金
     - cron: '30 22 * * 0-4'
-    # 大引け後 16:00 JST = UTC 7:00 月〜金
+    # 後場後 16:00 JST = UTC 7:00 月〜金
     - cron: '0 7 * * 1-5'
-  workflow_dispatch:
+  workflow_dispatch:  # GitHubのUIから手動実行できるボタン
 
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 90  # 最大90分（2,000銘柄で約40分）
 
     permissions:
-      contents: write
+      contents: write   # stocks_data.json をコミットするために必要
 
     steps:
       - name: リポジトリをチェックアウト
@@ -34,12 +34,15 @@ jobs:
         run: python3 fetch_stocks.py
         env:
           TZ: Asia/Tokyo
+        # ※ fetch_stocks.py が stocks_data.json + history/*.json を出力する前提
 
-      - name: stocks_data.json をコミット & プッシュ
+      - name: stocks_data.json + 履歴をコミット & プッシュ
         run: |
           git config user.name  "かぶのすけBot"
           git config user.email "bot@kabunosuke.app"
           git add stocks_data.json
+          git add history/ || true
+          # 変更がある場合だけコミット（変更なければスキップ）
           if git diff --cached --quiet; then
             echo "データに変更なし。スキップ。"
           else
