@@ -35,12 +35,15 @@
 body{font-family:var(--f);background:var(--bg);color:var(--text);max-width:960px;margin:0 auto;padding-bottom:72px;-webkit-font-smoothing:antialiased;line-height:1.6;}
 a{color:var(--blue-m);text-decoration:none;}
 
-/* TICKER */
-.ticker{background:var(--navy-bar);padding:8px 16px;display:flex;justify-content:space-between;position:sticky;top:0;z-index:100;}
+/* LOGO + TICKER */
+.logo-bar{background:var(--navy-bar);padding:8px 16px;display:flex;align-items:center;position:sticky;top:0;z-index:100;}
+.logo{font-family:var(--fn);font-size:16px;font-weight:800;color:#fff;letter-spacing:-0.03em;flex-shrink:0;}
+.logo span{color:#4ADE80;}
+.ticker{display:flex;flex:1;margin-left:16px;}
 .ticker-item{text-align:center;flex:1;}
-.ticker-lbl{font-size:10px;color:rgba(255,255,255,0.55);font-weight:500;}
-.ticker-val{font-family:var(--fn);font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1.3;}
-.ticker-chg{font-family:var(--fn);font-size:11px;font-weight:700;}
+.ticker-lbl{font-size:9px;color:rgba(255,255,255,0.5);font-weight:500;}
+.ticker-val{font-family:var(--fn);font-size:14px;font-weight:800;color:#fff;letter-spacing:-0.03em;line-height:1.3;}
+.ticker-chg{font-family:var(--fn);font-size:10px;font-weight:700;}
 .ticker-chg.up{color:#4ADE80;}.ticker-chg.dn{color:#F87171;}
 
 /* HERO */
@@ -71,13 +74,28 @@ a{color:var(--blue-m);text-decoration:none;}
 .t5-nm{font-size:14px;font-weight:700;line-height:1.4;}
 .t5-meta{font-family:var(--fn);font-size:11px;color:var(--text3);margin-top:1px;}
 .t5-spark{flex-shrink:0;width:80px;height:36px;}
-.t5-right{text-align:right;flex-shrink:0;min-width:50px;}
+.t5-right{text-align:right;flex-shrink:0;min-width:56px;}
 .t5-sc{font-family:var(--fn);font-size:20px;font-weight:800;line-height:1.2;}
 .t5-sc span{font-size:11px;font-weight:500;color:var(--text3);}
-.t5-type{font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;display:inline-block;margin-top:3px;}
+.t5-gauge{width:48px;height:4px;background:var(--border);border-radius:2px;margin:4px 0 3px auto;overflow:hidden;}
+.t5-gauge-fill{height:100%;border-radius:2px;}
+.t5-type{font-size:9px;font-weight:700;padding:2px 7px;border-radius:10px;display:inline-block;}
 .t5-type.dip{background:var(--green-bg);color:var(--green);}
 .t5-type.mom{background:var(--blue-l);color:var(--blue);}
 .t5-reason{font-size:11px;color:var(--text2);margin-top:3px;line-height:1.5;}
+/* 配当バッジ */
+.div-badge{display:inline-flex;align-items:center;gap:2px;padding:2px 8px;border-radius:10px;font-family:var(--fn);font-size:11px;font-weight:800;background:var(--green-bg);color:var(--green);border:1px solid rgba(5,150,105,0.15);}
+/* PC 2カラムグリッド */
+@media(min-width:700px){
+  .t5-grid{display:grid;grid-template-columns:1fr 1fr;}
+  .t5-grid .t5-item{border-right:1px solid var(--border);}
+  .t5-grid .t5-item:nth-child(2n){border-right:none;}
+  .t5-grid .t5-expand{grid-column:1/-1;}
+  .t5-spark{width:120px;height:44px;}
+  .t5-sc{font-size:22px;}
+  .t5-nm{font-size:14px;}
+  .div-badge{font-size:12px;padding:3px 10px;}
+}
 
 /* SHARE */
 .share{margin:10px 12px;display:flex;gap:8px;}
@@ -194,14 +212,14 @@ a{color:var(--blue-m);text-decoration:none;}
   .ticker-val{font-size:15px;}.hero-hl{font-size:18px;}
   .hero-stat b{font-size:18px;}
 }
-@media(min-width:600px){.d-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:600px){.d-grid{grid-template-columns:1fr 1fr;}.d-chart-box{height:150px;}}
 
 /* ANIMATION */
 .fadein{animation:fadein .3s ease;}
 @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
 /* ── DETAIL EXPAND (TOP10内アコーディオン) ── */
-.t5-expand{background:var(--bg);padding:16px;border-top:1px solid var(--border);animation:fadein .25s ease;}
+.t5-expand{background:var(--bg);padding:16px;border-top:1px solid var(--border);border-left:4px solid var(--blue);animation:fadein .25s ease;}
 .d-grid{display:grid;grid-template-columns:1fr;gap:14px;}
 .d-sec-ttl{font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:5px;}
 .d-chart-box{background:#FAFBFC;border-radius:10px;padding:10px 8px 6px;border:1px solid var(--border);}
@@ -244,8 +262,11 @@ a{color:var(--blue-m);text-decoration:none;}
 </head>
 <body>
 
-<!-- TICKER -->
-<div class="ticker" id="tickerBar"></div>
+<!-- LOGO + TICKER -->
+<div class="logo-bar">
+  <div class="logo">かぶの<span>すけ</span></div>
+  <div class="ticker" id="tickerBar"></div>
+</div>
 
 <!-- HERO CONCLUSION -->
 <div class="hero" id="heroBox"></div>
@@ -534,10 +555,10 @@ function renderHero(){
     <span class="stance ${stanceClass}">${stanceText}</span>
     <div class="hero-chips">${topSecs.map(s=>`<span class="hero-chip">${s}</span>`).join('')}</div>
     <div class="hero-stats">
-      <div class="hero-stat"><b>${buyN}</b><small>買いゾーン</small></div>
+      <div class="hero-stat"><b>${buyN}</b><small>銘柄が買い時</small></div>
       <div class="hero-stat"><b>${topSc}</b><small>最高スコア</small></div>
       <div class="hero-stat"><b>${maxDiv}</b><small>最高配当</small></div>
-      <div class="hero-stat"><b>${all.length}</b><small>対象銘柄</small></div>
+      <div class="hero-stat"><b>${all.length}</b><small>スキャン数</small></div>
     </div>`;
 }
 
@@ -567,32 +588,35 @@ function renderTop10(){
   const tab=settings.top5tab;
   const items=processed.filter(s=>tab==='dip'?s.trend_type==='dip':s.trend_type==='momentum').slice(0,10);
   if(!items.length){body.innerHTML='<div style="padding:24px;text-align:center;color:var(--text3);font-size:13px">該当する銘柄がありません</div>';return;}
-  let html='';
+  let html='<div class="t5-grid">';
   items.forEach((s,i)=>{
     const hasSpark=s.closes_60d&&s.closes_60d.length>10;
     const isOpen=expandedCode===s.code;
+    const divBadge=(s.dividend||0)>=2?`<span class="div-badge">💰 ${(s.dividend||0).toFixed(1)}%</span>`:`配当${(s.dividend||0).toFixed(1)}%`;
+    const gaugeColor=s.score>=60?'var(--green)':s.score>=40?'var(--amber)':'var(--red)';
     html+=`<div class="t5-item" onclick="toggleExpand('${s.code}')" style="${isOpen?'background:var(--blue-l)':''}">
       <div class="t5-rank${i===0?' gold':''}">${i+1}</div>
       <div class="t5-info">
         <div class="t5-nm">${s.name}</div>
-        <div class="t5-meta">${s.code} · ${sMap(s.sector,s.code)} · 配当${(s.dividend||0).toFixed(1)}%</div>
+        <div class="t5-meta">${s.code} · ${sMap(s.sector,s.code)} · ${divBadge}</div>
         <div class="t5-reason">${genReason(s)}</div>
       </div>
-      ${hasSpark?`<svg class="t5-spark" viewBox="0 0 80 36" data-spark="${s.code}"></svg>`:''}
+      ${hasSpark?`<svg class="t5-spark" viewBox="0 0 120 44" data-spark="${s.code}"></svg>`:''}
       <div class="t5-right">
         <div class="t5-sc">${s.score}<span>pt</span></div>
+        <div class="t5-gauge"><div class="t5-gauge-fill" style="width:${s.score}%;background:${gaugeColor}"></div></div>
         <div class="t5-type ${s.trend_type==='dip'?'dip':'mom'}">${TREND_LABEL[s.trend_type]||s.trend_type}</div>
       </div>
     </div>`;
-    // ── 展開エリア ──
     if(isOpen) html+=buildExpand(s);
   });
+  html+='</div>';
   body.innerHTML=html;
   // Draw sparklines
   items.forEach(s=>{
     if(s.closes_60d&&s.closes_60d.length>10){
       const el=body.querySelector(`[data-spark="${s.code}"]`);
-      if(el)drawSpark(el,s.closes_60d,80,36);
+      if(el)drawSpark(el,s.closes_60d,120,44);
     }
   });
   // Draw detail chart
