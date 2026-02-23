@@ -859,15 +859,26 @@ const JP_TO_EN={"金融":"Financial Services","素材":"Basic Materials","エネ
   "産業":"Industrials","不動産":"Real Estate","消費（景気敏感）":"Consumer Cyclical",
   "消費（安定）":"Consumer Defensive","医薬・ヘルスケア":"Healthcare",
   "テック":"Technology","通信・メディア":"Communication Services","電力・ガス":"Utilities"};
+// スコアキー→マッチすべきキーワード群
+const SEC_KEYWORDS={"金融":["Financial Services","メガバンク","地銀","証券","保険","リース","銀行","金融"],
+  "素材":["Basic Materials","素材","鉄鋼","化学","ゴム","ガラス","紙"],
+  "エネルギー":["Energy","エネルギー","石油","鉱業"],
+  "産業":["Industrials","産業","商社","総合商社","建設","重工","機械","海運","陸運","倉庫","自動車","輸送"],
+  "不動産":["Real Estate","不動産","住宅","REIT"],
+  "消費（景気敏感）":["Consumer Cyclical","消費","小売","アパレル","百貨店","外食"],
+  "消費（安定）":["Consumer Defensive","消費","食品","飲料","日用品","たばこ"],
+  "医薬・ヘルスケア":["Healthcare","医薬","ヘルスケア","製薬","バイオ"],
+  "テック":["Technology","テック","IT","SaaS","半導体","ゲーム","電機","精密"],
+  "通信・メディア":["Communication Services","通信","メディア","放送","広告","キャリア"],
+  "電力・ガス":["Utilities","電力","ガス","公益"]};
 
 function showSectorStocks(secName){
-  // 該当セクターの銘柄をフィルタリング
-  const enName=JP_TO_EN[secName]||secName;
+  const keywords=SEC_KEYWORDS[secName]||[secName];
   const matches=processed.filter(s=>{
     const sSec=s.sector||'';
     const sDisp=sMap(sSec,s.code);
-    // 英語名マッチ or 日本語名部分マッチ
-    return sSec===enName||sSec===secName||sDisp.includes(secName.replace('（景気敏感）','').replace('（安定）',''));
+    // 英語セクター名でマッチ OR 表示名にキーワード含む
+    return keywords.some(kw=>sSec===kw||sDisp.includes(kw));
   }).sort((a,b)=>b.score-a.score).slice(0,15);
 
   // モーダル表示
