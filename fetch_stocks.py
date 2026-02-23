@@ -1003,6 +1003,17 @@ def main():
         "trend_ranking":   trend_ranking_data,
         "stocks":          stocks_out,          # TOP200+大型高配当を配信
     }
+    # NaN対策: numpy/pandasのNaN → None → 0
+    import math
+    def sanitize(obj):
+        if isinstance(obj, dict):
+            return {k: sanitize(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [sanitize(v) for v in obj]
+        if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
+            return 0
+        return obj
+    output = sanitize(output)
     with open("stocks_data.json","w",encoding="utf-8") as f:
         json.dump(output,f,ensure_ascii=False,indent=2)
 
