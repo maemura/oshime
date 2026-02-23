@@ -251,7 +251,7 @@ a{color:var(--blue-m);text-decoration:none;}
     <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">📈 上昇中 TOP10</div>
   </div>
   <div id="t5Subtitle" style="padding:8px 16px;font-size:11px;color:var(--text3);background:var(--card);border-bottom:1px solid var(--border);line-height:1.5">
-    <span id="t5SubText">📉 値下がりした今が買い時の株。サポートラインに近づいた割安銘柄です</span>
+    <span id="t5SubText">📉 値下がりした今が買い時の株。75日平均（買いライン）に近づいた割安銘柄です</span>
     <div style="margin-top:4px;font-size:10px;color:var(--blue)">👇 気になる銘柄をタップして詳細を見てみよう</div>
   </div>
   <div class="t5-body" id="top5Body"></div>
@@ -587,10 +587,10 @@ function genReason(s){
     else if(s.ret120>5)parts.push(`半年で安定的に上昇`);
   }else{
     if(s.ma75_dev!==undefined){
-      if(s.ma75_dev>=0&&s.ma75_dev<=3)parts.push(`サポートに接近中、<strong>買いのチャンス</strong>`);
+      if(s.ma75_dev>=0&&s.ma75_dev<=3)parts.push(`75日平均に接近中、<strong>買いのチャンス</strong>`);
       else if(s.ma75_dev>3&&s.ma75_dev<=8)parts.push(`上昇トレンド継続中`);
       else if(s.ma75_dev>8)parts.push(`高値圏で推移`);
-      else parts.push(`サポートを下回り注意`);
+      else parts.push(`75日平均を下回り注意`);
     }
     if(s.ret120>10)parts.push(`半年で<strong>+${s.ret120.toFixed(0)}%成長</strong>`);
     else if(s.ret120>5)parts.push(`半年で安定上昇`);
@@ -782,8 +782,8 @@ function buildExpand(s){
   let signal='';
   if(s.trend_type==='dip'){
     signal=`長期では上昇トレンド。短期的に調整中で<strong>買いやすい価格帯に接近中</strong>。`;
-    if(s.ma75_dev<=3)signal+=`<br>サポートライン（緑線 ¥${(s.ma75||0).toLocaleString()}）まであと${(s.ma75_dev||0).toFixed(1)}%。ここまで下がれば絶好のチャンス。`;
-    else signal+=`<br>サポートラインまでまだ距離あり（${(s.ma75_dev||0).toFixed(1)}%）。もう少し下がるのを待つ手も。`;
+    if(s.ma75_dev<=3)signal+=`<br>75日平均（買いライン ¥${(s.ma75||0).toLocaleString()}）まであと${(s.ma75_dev||0).toFixed(1)}%。ここまで下がれば絶好のチャンス。`;
+    else signal+=`<br>75日平均（買いライン）までまだ距離あり（${(s.ma75_dev||0).toFixed(1)}%）。もう少し下がるのを待つ手も。`;
   }else if(s.trend_type==='momentum'){
     signal=`短期・長期ともに上昇中。<strong>勢いに乗っている状態</strong>。高値掴みに注意しつつ、流れに乗るタイミング。`;
   }else{
@@ -802,23 +802,23 @@ function buildExpand(s){
         <svg class="d-chart-svg" viewBox="0 0 400 160" overflow="hidden" data-dchart="${s.code}"></svg>
       </div>
       <div style="display:flex;gap:14px;padding:10px 0 2px;flex-wrap:wrap;font-size:11px">
-        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#1A1A1A"></div>株価 <b>¥${(s.price||0).toLocaleString()}</b></div>
-        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#F59E0B"></div>短期の目安 <b style="color:#F59E0B">¥${(s.ma25||0).toLocaleString()}</b></div>
-        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#059669"></div>サポート <b style="color:#059669">¥${(s.ma75||0).toLocaleString()}</b></div>
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#1A1A1A"></div>今の株価 <b>¥${(s.price||0).toLocaleString()}</b></div>
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#F59E0B"></div>25日平均 <b style="color:#F59E0B">¥${(s.ma25||0).toLocaleString()}</b></div>
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#059669"></div>75日平均 <b style="color:#059669">¥${(s.ma75||0).toLocaleString()}</b></div>
       </div>
-      <div style="font-size:10px;color:var(--text3);font-style:italic;padding:0 0 6px">🟢 サポート = ここまで下がれば反発しやすい「買いライン」</div>
+      <div style="font-size:10px;color:var(--text3);padding:0 0 6px;line-height:1.6">🟠 25日平均より安い → 短期的に割安 ／ 🟢 75日平均に近い → 反発しやすい「買いライン」</div>
       `:`<div style="padding:16px;text-align:center;background:var(--card);border-radius:8px;border:1px solid var(--border)">
-        <div style="font-size:12px;color:var(--text)">株価 ¥${(s.price||0).toLocaleString()} / 短期の目安 ¥${(s.ma25||0).toLocaleString()} / サポート ¥${(s.ma75||0).toLocaleString()}</div>
+        <div style="font-size:12px;color:var(--text)">今の株価 ¥${(s.price||0).toLocaleString()} / 25日平均 ¥${(s.ma25||0).toLocaleString()} / 75日平均 ¥${(s.ma75||0).toLocaleString()}</div>
       </div>`}
       <div class="d-ma">
-        <div style="font-size:10px;font-weight:700;color:var(--text2);margin-bottom:6px">📏 現在の位置</div>
+        <div style="font-size:10px;font-weight:700;color:var(--text2);margin-bottom:6px">📏 今の株価の位置</div>
         <div class="d-ma-row">
-          <div class="d-ma-lbl">短期の目安との差</div>
+          <div class="d-ma-lbl">25日平均との差</div>
           <div class="d-ma-bar"><div class="d-ma-ctr"></div><div class="d-ma-dot" style="left:${ma25pct}%;background:${ma25col}"></div></div>
           <div class="d-ma-val ${(s.ma25_dev||0)>=0?'up':'dn'}">${(s.ma25_dev||0)>=0?'+':''}${(s.ma25_dev||0).toFixed(1)}%</div>
         </div>
         <div class="d-ma-row">
-          <div class="d-ma-lbl">サポートとの差</div>
+          <div class="d-ma-lbl">75日平均との差</div>
           <div class="d-ma-bar"><div class="d-ma-ctr"></div><div class="d-ma-dot" style="left:${ma75pct}%;background:${ma75col}"></div></div>
           <div class="d-ma-val ${(s.ma75_dev||0)>=0?'up':'dn'}">${(s.ma75_dev||0)>=0?'+':''}${(s.ma75_dev||0).toFixed(1)}%</div>
           ${ma75tag}
@@ -843,7 +843,7 @@ function buildExpand(s){
         <summary style="cursor:pointer;font-weight:600;color:var(--text2)">📚 もっと詳しく見る</summary>
         <div style="padding:8px 0">
           ${(s.vol_ratio_1d||1)>=1.5?`<div style="margin-bottom:6px"><span class="vol-badge high">📊 出来高: いつもの${(s.vol_ratio_1d||1).toFixed(1)}倍${(s.vol_ratio_1d||1)>=3?' （注目度が非常に高い）':(s.vol_ratio_1d||1)>=2?' （注目度が高い）':''}</span></div>`:''}
-          <div style="line-height:1.6">📐 <strong>サポートライン</strong> = 75日平均株価。ここまで下がると反発しやすい「下値の壁」</div>
+          <div style="line-height:1.6">📐 <strong>75日平均</strong> = 過去75日間の平均株価。ここまで下がると反発しやすい「買いライン」</div>
         </div>
       </details>
       <div class="d-btns">
@@ -861,7 +861,7 @@ function setTop5Tab(tab){
   document.getElementById('t5TabDip').classList.toggle('active',tab==='dip');
   document.getElementById('t5TabMom').classList.toggle('active',tab==='mom');
   document.getElementById('t5SubText').textContent=tab==='dip'
-    ?'📉 値下がりした今が買い時の株。サポートラインに近づいた割安銘柄です'
+    ?'📉 値下がりした今が買い時の株。75日平均（買いライン）に近づいた割安銘柄です'
     :'📈 勢いよく上がっている株。流れに乗って利益を狙う銘柄です';
   renderTop10();
   document.getElementById('top5Section').scrollIntoView({behavior:'smooth',block:'start'});
@@ -878,7 +878,7 @@ function renderDanger(){
         ${s.rsi>=75?`<span class="danger-badge">過熱 RSI${s.rsi}</span>`:''}
         ${(s.ret_1d||0)<=-3?`<span class="danger-badge">前日${s.ret_1d.toFixed(1)}%</span>`:''}
         ${(s.ma75_dev||0)<-5?`<span class="danger-badge">下落トレンド</span>`:''}
-        ${s.trend_type==='falling'?'<span class="danger-badge">サポート割れ</span>':''}
+        ${s.trend_type==='falling'?'<span class="danger-badge">75日平均割れ</span>':''}
       </div>
     </div>`).join('')}</div>`;
 }
