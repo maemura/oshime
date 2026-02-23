@@ -189,7 +189,7 @@ a{color:var(--blue-m);text-decoration:none;}
 .d-grid{display:grid;grid-template-columns:1fr;gap:14px;}
 .d-sec-ttl{font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:5px;}
 .d-chart-box{background:#FAFBFC;border-radius:10px;padding:10px 8px 6px;border:1px solid var(--border);overflow:hidden;}
-.d-chart-svg{width:100%;height:auto;display:block;overflow:hidden;aspect-ratio:400/150;}
+.d-chart-svg{width:100%;height:auto;display:block;overflow:hidden;aspect-ratio:400/160;}
 .d-legend{display:flex;gap:10px;padding:6px 0 2px;flex-wrap:wrap;}
 .d-leg{display:flex;align-items:center;gap:3px;font-size:10px;color:var(--text2);}
 .d-leg-ln{width:12px;height:2px;border-radius:1px;}
@@ -394,36 +394,67 @@ function drawSpark(el,closes,w,h){
 }
 function drawDetailChart(el,closes,ma25v,ma75v){
   if(!closes||!closes.length||!el)return;
-  const W=400,H=150,P=6;
+  const W=400,H=160,P=6,PR=45; // PR=右側のY軸ラベル用余白
   const ma25calc=calcMA(closes,25);
   const allVals=[...closes,...ma25calc.filter(v=>v!==null)];
   if(ma75v&&ma75v>0)allVals.push(ma75v);
   if(ma25v&&ma25v>0)allVals.push(ma25v);
   let mn=Math.min(...allVals),mx=Math.max(...allVals);
   const range=mx-mn||1;
-  mn-=range*0.06;mx+=range*0.04;
+  mn-=range*0.06;mx+=range*0.06;
   const rng=mx-mn||1;
-  const pp=toPath(closes,W,H,P,mn,mx);
-  const lastX=P+((closes.length-1)/(closes.length-1))*(W-2*P);
+
+  // グリッド間隔を自動計算（きりのいい数字）
+  function niceStep(r){
+    const raw=r/4; // 4本くらいのグリッド
+    const mag=Math.pow(10,Math.floor(Math.log10(raw)));
+    const norm=raw/mag;
+    if(norm<=1.5)return mag;
+    if(norm<=3.5)return 2.5*mag;
+    if(norm<=7.5)return 5*mag;
+    return 10*mag;
+  }
+  const step=niceStep(rng);
+  const gridStart=Math.ceil(mn/step)*step;
+
+  // グリッド線+Y軸ラベル
+  let gridLines='';
+  for(let v=gridStart;v<=mx;v+=step){
+    const y=P+(1-(v-mn)/rng)*(H-2*P);
+    if(y<P+2||y>H-P-10)continue;
+    gridLines+=`<line x1="${P}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#E2E8F0" stroke-width="0.8"/>`;
+    // 金額ラベル（右側）
+    let label;
+    if(v>=10000)label=`¥${(v/1000).toFixed(v%1000===0?0:1)}k`;
+    else label=`¥${Math.round(v).toLocaleString()}`;
+    gridLines+=`<text x="${W-PR+4}" y="${y+3}" font-size="8" fill="#94A3B8" font-family="sans-serif">${label}</text>`;
+  }
+
+  const CW=W-PR; // チャート描画幅
+  const pp=toPath(closes,CW,H,P,mn,mx);
+  const lastX=P+((closes.length-1)/(closes.length-1))*(CW-2*P);
   const lastY=P+(1-(closes[closes.length-1]-mn)/rng)*(H-2*P);
   const id='dg_'+Math.random().toString(36).substr(2,6);
+
   // MA75 — 細い実線（控えめ）
   let ma75line='';
   if(ma75v&&ma75v>0){
     let y75=P+(1-(ma75v-mn)/rng)*(H-2*P);
     y75=Math.max(P+2,Math.min(H-P-2,y75));
-    ma75line=`<line x1="${P}" y1="${y75}" x2="${W-P}" y2="${y75}" stroke="#059669" stroke-width="1.2" opacity="0.5"/>`;
+    ma75line=`<line x1="${P}" y1="${y75}" x2="${CW-P}" y2="${y75}" stroke="#059669" stroke-width="1.2" opacity="0.5"/>`;
   }
   // MA25曲線
-  const ma25path=toPath(ma25calc,W,H,P,mn,mx);
+  const ma25path=toPath(ma25calc,CW,H,P,mn,mx);
+  el.setAttribute('viewBox',`0 0 ${W} ${H}`);
   el.innerHTML=`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B6AC9" stop-opacity="0.10"/><stop offset="100%" stop-color="#1B6AC9" stop-opacity="0.01"/></linearGradient></defs>`+
+    gridLines+
     `<path d="${pp} L${lastX},${H-P} L${P},${H-P} Z" fill="url(#${id})"/>`+
     ma75line+
     `<path d="${ma25path}" fill="none" stroke="#F59E0B" stroke-width="1.2" opacity="0.6"/>`+
     `<path d="${pp}" fill="none" stroke="#1A1A1A" stroke-width="2.2"/>`+
     `<circle cx="${lastX}" cy="${lastY}" r="4" fill="#DC2626" stroke="#fff" stroke-width="2"/>`+
     `<text x="${P}" y="${H-1}" font-size="9" fill="#B0B8C4" font-family="sans-serif">60日前</text>`+
-    `<text x="${W-P}" y="${H-1}" font-size="9" fill="#B0B8C4" text-anchor="end" font-family="sans-serif">今日</text>`;
+    `<text x="${CW-P}" y="${H-1}" font-size="9" fill="#B0B8C4" text-anchor="end" font-family="sans-serif">今日</text>`;
 }
 
 // ═══════════════════════════════════════
@@ -749,7 +780,7 @@ function buildExpand(s){
     <div>
       <div class="d-sec-ttl">📊 値動きチャート（60日）</div>
       ${hasSpark?`<div class="d-chart-box">
-        <svg class="d-chart-svg" viewBox="0 0 400 150" overflow="hidden" data-dchart="${s.code}"></svg>
+        <svg class="d-chart-svg" viewBox="0 0 400 160" overflow="hidden" data-dchart="${s.code}"></svg>
       </div>
       <div style="display:flex;gap:14px;padding:10px 0 2px;flex-wrap:wrap;font-size:11px">
         <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#1A1A1A"></div>株価 <b>¥${(s.price||0).toLocaleString()}</b></div>
