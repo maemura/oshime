@@ -404,18 +404,18 @@ function drawDetailChart(el,closes,ma25v,ma75v){
     let y75=P+(1-(ma75v-mn)/rng)*(H-2*P);
     // SVG範囲内に確実に収める
     y75=Math.max(P+14,Math.min(H-P-4,y75));
-    ma75line=`<rect x="${P}" y="${y75-2}" width="${W-2*P}" height="4" fill="#059669" opacity="0.12" rx="2"/>`;
-    ma75line+=`<line x1="${P}" y1="${y75}" x2="${W-P}" y2="${y75}" stroke="#059669" stroke-width="2.5" stroke-dasharray="8,4"/>`;
-    ma75line+=`<text x="${P+4}" y="${y75+14}" font-size="9" fill="#059669" font-weight="700" font-family="sans-serif">サポート ¥${Math.round(ma75v).toLocaleString()}</text>`;
+    ma75line=`<rect x="${P}" y="${y75-3}" width="${W-2*P}" height="6" fill="#059669" opacity="0.15" rx="3"/>`;
+    ma75line+=`<line x1="${P}" y1="${y75}" x2="${W-P}" y2="${y75}" stroke="#059669" stroke-width="3" stroke-dasharray="10,5"/>`;
+    ma75line+=`<text x="${P+4}" y="${y75+14}" font-size="10" fill="#059669" font-weight="700" font-family="sans-serif">サポート ¥${Math.round(ma75v).toLocaleString()}</text>`;
   }
   // MA25曲線
   const ma25path=toPath(ma25calc,W,H,P,mn,mx);
   el.innerHTML=`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B6AC9" stop-opacity="0.12"/><stop offset="100%" stop-color="#1B6AC9" stop-opacity="0.01"/></linearGradient></defs>`+
     `<path d="${pp} L${lastX},${H-P} L${P},${H-P} Z" fill="url(#${id})"/>`+
-    ma75line+
     `<path d="${ma25path}" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity="0.7"/>`+
     `<path d="${pp}" fill="none" stroke="#1A1A1A" stroke-width="2"/>`+
     `<circle cx="${lastX}" cy="${lastY}" r="4" fill="#DC2626" stroke="#fff" stroke-width="2"/>`+
+    ma75line+
     `<text x="${P}" y="${H-1}" font-size="9" fill="#8E99A8" font-family="sans-serif">60日前</text>`+
     `<text x="${W-P}" y="${H-1}" font-size="9" fill="#8E99A8" text-anchor="end" font-family="sans-serif">今日</text>`;
 }
