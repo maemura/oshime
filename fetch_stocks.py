@@ -1031,7 +1031,9 @@ def main():
     KEEP = {"code","name","sector","price","ma25","ma75","rsi","dividend",
             "pbr","per","vol_r","vol_ratio_1d","ret_1d","range_pct","trend_score",
             "score_dividend","score_value","score_rebound",
-            "score_stable","score_growth","score","prev_score","market_cap_b"}
+            "score_stable","score_growth","score","prev_score","market_cap_b",
+            "trend_type","ma75_dev","ma25_dev","roe","closes_60d",
+            "ret120","ret20","ret60"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
 
     output = {

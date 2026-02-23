@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026/02/23 22:06",
-  "total": 1568,
-  "buy_count": 26,
-  "watch_count": 191,
-  "prev_buy_count": 406,
-  "elapsed_sec": 539.2,
+  "updated_at": "2026/02/23 22:26",
+  "total": 1560,
+  "buy_count": 25,
+  "watch_count": 192,
+  "prev_buy_count": 26,
+  "elapsed_sec": 604.0,
   "nikkei_price": 56826.0,
   "nikkei_1d_chg": -1.12,
   "nikkei_ma25": 54810.0,
@@ -15,11 +15,11 @@
   "dow_1d_chg": 0.47,
   "sp500_1d_chg": 0.69,
   "nasdaq_1d_chg": 0.9,
-  "vix": 20.4,
-  "vix_chg": 6.97,
-  "usdjpy": 154.95,
-  "usdjpy_chg": -0.21,
-  "usdjpy_5d_chg": 1.34,
+  "vix": 20.6,
+  "vix_chg": 7.75,
+  "usdjpy": 154.8,
+  "usdjpy_chg": -0.36,
+  "usdjpy_5d_chg": 1.19,
   "us10y": 4.09,
   "topix_price": 4001.0,
   "topix_1d_chg": -1.11,
@@ -36,12 +36,12 @@
     {
       "key": "usdjpy",
       "val": 0,
-      "text": "為替安定（5日で+1.34円）"
+      "text": "為替安定（5日で+1.19円）"
     },
     {
       "key": "vix",
       "val": 0,
-      "text": "VIX 20.4 通常"
+      "text": "VIX 20.6 通常"
     },
     {
       "key": "nk5d",
@@ -265,58 +265,6 @@
   ],
   "trend_ranking": [
     {
-      "code": "4506",
-      "name": "住友ファーマ",
-      "sector": "Healthcare",
-      "price": 2475.5,
-      "vol_ratio_1d": 4.18,
-      "ret_1d": -15.6,
-      "range_pct": 27.73,
-      "gap_pct": 5.11,
-      "trend_score": 231.4,
-      "score": 0,
-      "dividend": 0.0
-    },
-    {
-      "code": "4549",
-      "name": "栄研化学",
-      "sector": "Healthcare",
-      "price": 3050.0,
-      "vol_ratio_1d": 5.99,
-      "ret_1d": 19.8,
-      "range_pct": 7.31,
-      "gap_pct": 19.8,
-      "trend_score": 208.5,
-      "score": 0,
-      "dividend": 1.9
-    },
-    {
-      "code": "9278",
-      "name": "ブックオフグループホールディングス",
-      "sector": "Consumer Cyclical",
-      "price": 1878.0,
-      "vol_ratio_1d": 9.2,
-      "ret_1d": -10.57,
-      "range_pct": 11.02,
-      "gap_pct": -3.0,
-      "trend_score": 208.5,
-      "score": 0,
-      "dividend": 1.6
-    },
-    {
-      "code": "268A",
-      "name": "リガク・ホールディングス",
-      "sector": "Technology",
-      "price": 1783.0,
-      "vol_ratio_1d": 4.27,
-      "ret_1d": 8.72,
-      "range_pct": 9.37,
-      "gap_pct": 1.16,
-      "trend_score": 150.1,
-      "score": 0,
-      "dividend": 1.07
-    },
-    {
       "code": "8103",
       "name": "明和産業",
       "sector": "Industrials",
@@ -343,136 +291,6 @@
       "dividend": 2.07
     },
     {
-      "code": "3962",
-      "name": "チェンジホールディングス",
-      "sector": "Technology",
-      "price": 939.0,
-      "vol_ratio_1d": 3.83,
-      "ret_1d": -5.72,
-      "range_pct": 6.39,
-      "gap_pct": -0.7,
-      "trend_score": 122.6,
-      "score": 28,
-      "dividend": 2.45
-    },
-    {
-      "code": "6333",
-      "name": "帝国電機製作所",
-      "sector": "Industrials",
-      "price": 3160.0,
-      "vol_ratio_1d": 3.93,
-      "ret_1d": -0.47,
-      "range_pct": 9.02,
-      "gap_pct": 1.42,
-      "trend_score": 111.1,
-      "score": 0,
-      "dividend": 3.48
-    },
-    {
-      "code": "5101",
-      "name": "横浜ゴム",
-      "sector": "Consumer Cyclical",
-      "price": 7982.0,
-      "vol_ratio_1d": 3.66,
-      "ret_1d": 4.2,
-      "range_pct": 4.55,
-      "gap_pct": 1.36,
-      "trend_score": 108.3,
-      "score": 0,
-      "dividend": 2.76
-    },
-    {
-      "code": "4530",
-      "name": "久光製薬",
-      "sector": "Healthcare",
-      "price": 6031.0,
-      "vol_ratio_1d": 3.99,
-      "ret_1d": -3.43,
-      "range_pct": 3.37,
-      "gap_pct": -1.6,
-      "trend_score": 106.9,
-      "score": 23,
-      "dividend": 1.46
-    },
-    {
-      "code": "4880",
-      "name": "セルソース",
-      "sector": "Healthcare",
-      "price": 402.0,
-      "vol_ratio_1d": 3.6,
-      "ret_1d": 0.25,
-      "range_pct": 9.2,
-      "gap_pct": 3.99,
-      "trend_score": 105.5,
-      "score": 0,
-      "dividend": 1.24
-    },
-    {
-      "code": "7259",
-      "name": "アイシン",
-      "sector": "Consumer Cyclical",
-      "price": 2682.0,
-      "vol_ratio_1d": 2.15,
-      "ret_1d": -8.67,
-      "range_pct": 6.36,
-      "gap_pct": -4.26,
-      "trend_score": 99.7,
-      "score": 33,
-      "dividend": 2.61
-    },
-    {
-      "code": "6140",
-      "name": "旭ダイヤモンド工業",
-      "sector": "Industrials",
-      "price": 1147.0,
-      "vol_ratio_1d": 2.77,
-      "ret_1d": -0.52,
-      "range_pct": 12.03,
-      "gap_pct": -4.51,
-      "trend_score": 99.3,
-      "score": 0,
-      "dividend": 2.62
-    },
-    {
-      "code": "7600",
-      "name": "日本エム・ディ・エム",
-      "sector": "Healthcare",
-      "price": 569.0,
-      "vol_ratio_1d": 3.44,
-      "ret_1d": -1.04,
-      "range_pct": 6.85,
-      "gap_pct": 0.17,
-      "trend_score": 98.8,
-      "score": 0,
-      "dividend": 2.99
-    },
-    {
-      "code": "4446",
-      "name": "Ｌｉｎｋ－Ｕグループ",
-      "sector": "Technology",
-      "price": 1274.0,
-      "vol_ratio_1d": 1.78,
-      "ret_1d": -6.6,
-      "range_pct": 10.44,
-      "gap_pct": -3.23,
-      "trend_score": 92.3,
-      "score": 0,
-      "dividend": 0.0
-    },
-    {
-      "code": "8227",
-      "name": "しまむら",
-      "sector": "Consumer Cyclical",
-      "price": 3537.0,
-      "vol_ratio_1d": 3.01,
-      "ret_1d": -2.51,
-      "range_pct": 4.72,
-      "gap_pct": -1.76,
-      "trend_score": 90.3,
-      "score": 18,
-      "dividend": 1.93
-    },
-    {
       "code": "4180",
       "name": "Ａｐｐｉｅｒ　Ｇｒｏｕｐ",
       "sector": "Technology",
@@ -486,43 +304,225 @@
       "dividend": 0.33
     },
     {
-      "code": "9229",
-      "name": "サンウェルズ",
-      "sector": "Healthcare",
-      "price": 274.0,
-      "vol_ratio_1d": 2.05,
-      "ret_1d": -4.2,
-      "range_pct": 7.3,
-      "gap_pct": -1.75,
-      "trend_score": 81.8,
-      "score": 0,
+      "code": "3994",
+      "name": "マネーフォワード",
+      "sector": "Technology",
+      "price": 3052.0,
+      "vol_ratio_1d": 1.44,
+      "ret_1d": -7.54,
+      "range_pct": 9.17,
+      "gap_pct": -0.09,
+      "trend_score": 79.5,
+      "score": 5,
       "dividend": 0.0
     },
     {
-      "code": "6787",
-      "name": "メイコー",
-      "sector": "Technology",
-      "price": 21510.0,
-      "vol_ratio_1d": 1.28,
-      "ret_1d": 8.42,
-      "range_pct": 10.97,
-      "gap_pct": -1.36,
-      "trend_score": 81.4,
-      "score": 0,
-      "dividend": 0.53
+      "code": "9987",
+      "name": "スズケン",
+      "sector": "Healthcare",
+      "price": 6278.0,
+      "vol_ratio_1d": 2.29,
+      "ret_1d": -2.64,
+      "range_pct": 2.91,
+      "gap_pct": -0.33,
+      "trend_score": 69.0,
+      "score": 11,
+      "dividend": 1.59
     },
     {
-      "code": "3549",
-      "name": "クスリのアオキホールディングス",
+      "code": "9552",
+      "name": "クオンツ総研ホールディングス",
+      "sector": "Financial Services",
+      "price": 783.0,
+      "vol_ratio_1d": 1.69,
+      "ret_1d": 4.4,
+      "range_pct": 6.0,
+      "gap_pct": 1.33,
+      "trend_score": 67.1,
+      "score": 5,
+      "dividend": 0.64
+    },
+    {
+      "code": "4480",
+      "name": "メドレー",
       "sector": "Healthcare",
-      "price": 4021.0,
-      "vol_ratio_1d": 2.6,
-      "ret_1d": 0.07,
-      "range_pct": 7.71,
-      "gap_pct": -0.45,
-      "trend_score": 80.7,
-      "score": 0,
-      "dividend": 0.4
+      "price": 2045.0,
+      "vol_ratio_1d": 1.79,
+      "ret_1d": -3.03,
+      "range_pct": 6.26,
+      "gap_pct": -1.38,
+      "trend_score": 65.8,
+      "score": 5,
+      "dividend": 0.0
+    },
+    {
+      "code": "6315",
+      "name": "ＴＯＷＡ",
+      "sector": "Technology",
+      "price": 2909.0,
+      "vol_ratio_1d": 1.44,
+      "ret_1d": 4.15,
+      "range_pct": 9.11,
+      "gap_pct": -0.86,
+      "trend_score": 65.8,
+      "score": 3,
+      "dividend": 0.69
+    },
+    {
+      "code": "8153",
+      "name": "モスフードサービス",
+      "sector": "Consumer Cyclical",
+      "price": 4235.0,
+      "vol_ratio_1d": 2.22,
+      "ret_1d": -2.42,
+      "range_pct": 2.36,
+      "gap_pct": -0.35,
+      "trend_score": 64.6,
+      "score": 3,
+      "dividend": 0.71
+    },
+    {
+      "code": "4384",
+      "name": "ラクスル",
+      "sector": "Industrials",
+      "price": 1899.0,
+      "vol_ratio_1d": 2.69,
+      "ret_1d": -0.58,
+      "range_pct": 0.42,
+      "gap_pct": -0.26,
+      "trend_score": 63.0,
+      "score": 5,
+      "dividend": 0.16
+    },
+    {
+      "code": "9974",
+      "name": "ベルク",
+      "sector": "Consumer Defensive",
+      "price": 7730.0,
+      "vol_ratio_1d": 2.5,
+      "ret_1d": -0.64,
+      "range_pct": 1.29,
+      "gap_pct": -0.13,
+      "trend_score": 61.4,
+      "score": 9,
+      "dividend": 1.6
+    },
+    {
+      "code": "7821",
+      "name": "前田工繊",
+      "sector": "Basic Materials",
+      "price": 2118.0,
+      "vol_ratio_1d": 2.1,
+      "ret_1d": 1.83,
+      "range_pct": 3.16,
+      "gap_pct": 0.96,
+      "trend_score": 61.3,
+      "score": 3,
+      "dividend": 1.32
+    },
+    {
+      "code": "4704",
+      "name": "トレンドマイクロ",
+      "sector": "Technology",
+      "price": 5688.0,
+      "vol_ratio_1d": 1.85,
+      "ret_1d": -2.47,
+      "range_pct": 4.22,
+      "gap_pct": -3.21,
+      "trend_score": 59.5,
+      "score": 3,
+      "dividend": 3.25
+    },
+    {
+      "code": "9519",
+      "name": "レノバ",
+      "sector": "Utilities",
+      "price": 721.0,
+      "vol_ratio_1d": 1.42,
+      "ret_1d": -6.49,
+      "range_pct": 3.47,
+      "gap_pct": -3.37,
+      "trend_score": 57.4,
+      "score": 5,
+      "dividend": 0.0
+    },
+    {
+      "code": "2170",
+      "name": "リンクアンドモチベーション",
+      "sector": "Industrials",
+      "price": 516.0,
+      "vol_ratio_1d": 1.56,
+      "ret_1d": -5.32,
+      "range_pct": 3.1,
+      "gap_pct": -2.94,
+      "trend_score": 57.3,
+      "score": 10,
+      "dividend": 3.18
+    },
+    {
+      "code": "7637",
+      "name": "白銅",
+      "sector": "Industrials",
+      "price": 2664.0,
+      "vol_ratio_1d": 1.72,
+      "ret_1d": 2.74,
+      "range_pct": 4.17,
+      "gap_pct": -0.35,
+      "trend_score": 56.0,
+      "score": 11,
+      "dividend": 3.9
+    },
+    {
+      "code": "3612",
+      "name": "ワールド",
+      "sector": "Consumer Cyclical",
+      "price": 3300.0,
+      "vol_ratio_1d": 2.12,
+      "ret_1d": -0.9,
+      "range_pct": 1.67,
+      "gap_pct": 0.0,
+      "trend_score": 53.7,
+      "score": 3,
+      "dividend": 3.3
+    },
+    {
+      "code": "3923",
+      "name": "ラクス",
+      "sector": "Technology",
+      "price": 766.1,
+      "vol_ratio_1d": 1.43,
+      "ret_1d": -5.68,
+      "range_pct": 3.04,
+      "gap_pct": -5.2,
+      "trend_score": 53.3,
+      "score": 5,
+      "dividend": 0.44
+    },
+    {
+      "code": "6740",
+      "name": "ジャパンディスプレイ",
+      "sector": "Technology",
+      "price": 23.0,
+      "vol_ratio_1d": 1.11,
+      "ret_1d": -4.17,
+      "range_pct": 8.7,
+      "gap_pct": -4.17,
+      "trend_score": 49.0,
+      "score": 5,
+      "dividend": 0.0
+    },
+    {
+      "code": "6254",
+      "name": "野村マイクロ・サイエンス",
+      "sector": "Industrials",
+      "price": 3465.0,
+      "vol_ratio_1d": 1.25,
+      "ret_1d": 2.97,
+      "range_pct": 7.79,
+      "gap_pct": -3.12,
+      "trend_score": 48.6,
+      "score": 6,
+      "dividend": 2.89
     }
   ],
   "stocks": [
@@ -549,7 +549,7 @@
       "score_stable": 78,
       "score_growth": 68,
       "score": 78,
-      "prev_score": 4
+      "prev_score": 78
     },
     {
       "code": "7172",
@@ -574,7 +574,7 @@
       "score_stable": 76,
       "score_growth": 62,
       "score": 76,
-      "prev_score": 0
+      "prev_score": 76
     },
     {
       "code": "4432",
@@ -598,7 +598,8 @@
       "score_rebound": 90,
       "score_stable": 75,
       "score_growth": 75,
-      "score": 75
+      "score": 75,
+      "prev_score": 75
     },
     {
       "code": "6419",
@@ -622,7 +623,8 @@
       "score_rebound": 76,
       "score_stable": 75,
       "score_growth": 45,
-      "score": 75
+      "score": 75,
+      "prev_score": 75
     },
     {
       "code": "7270",
@@ -647,7 +649,7 @@
       "score_stable": 73,
       "score_growth": 65,
       "score": 73,
-      "prev_score": 2
+      "prev_score": 73
     },
     {
       "code": "3668",
@@ -671,7 +673,8 @@
       "score_rebound": 74,
       "score_stable": 70,
       "score_growth": 47,
-      "score": 70
+      "score": 70,
+      "prev_score": 70
     },
     {
       "code": "6417",
@@ -696,7 +699,7 @@
       "score_stable": 70,
       "score_growth": 67,
       "score": 70,
-      "prev_score": 0
+      "prev_score": 70
     },
     {
       "code": "7347",
@@ -720,7 +723,8 @@
       "score_rebound": 99,
       "score_stable": 70,
       "score_growth": 59,
-      "score": 70
+      "score": 70,
+      "prev_score": 70
     },
     {
       "code": "7537",
@@ -744,7 +748,8 @@
       "score_rebound": 85,
       "score_stable": 70,
       "score_growth": 54,
-      "score": 70
+      "score": 70,
+      "prev_score": 70
     },
     {
       "code": "8897",
@@ -768,7 +773,8 @@
       "score_rebound": 60,
       "score_stable": 70,
       "score_growth": 35,
-      "score": 70
+      "score": 70,
+      "prev_score": 70
     },
     {
       "code": "3245",
@@ -792,7 +798,8 @@
       "score_rebound": 63,
       "score_stable": 68,
       "score_growth": 42,
-      "score": 68
+      "score": 68,
+      "prev_score": 68
     },
     {
       "code": "4725",
@@ -816,7 +823,8 @@
       "score_rebound": 76,
       "score_stable": 66,
       "score_growth": 54,
-      "score": 66
+      "score": 66,
+      "prev_score": 66
     },
     {
       "code": "7267",
@@ -841,7 +849,7 @@
       "score_stable": 66,
       "score_growth": 40,
       "score": 66,
-      "prev_score": 25
+      "prev_score": 66
     },
     {
       "code": "4331",
@@ -865,7 +873,8 @@
       "score_rebound": 100,
       "score_stable": 65,
       "score_growth": 77,
-      "score": 65
+      "score": 65,
+      "prev_score": 65
     },
     {
       "code": "1899",
@@ -889,7 +898,8 @@
       "score_rebound": 80,
       "score_stable": 63,
       "score_growth": 53,
-      "score": 63
+      "score": 63,
+      "prev_score": 63
     },
     {
       "code": "6718",
@@ -913,7 +923,8 @@
       "score_rebound": 69,
       "score_stable": 63,
       "score_growth": 42,
-      "score": 63
+      "score": 63,
+      "prev_score": 63
     },
     {
       "code": "3151",
@@ -938,7 +949,7 @@
       "score_stable": 62,
       "score_growth": 35,
       "score": 62,
-      "prev_score": 60
+      "prev_score": 62
     },
     {
       "code": "3284",
@@ -962,7 +973,8 @@
       "score_rebound": 49,
       "score_stable": 62,
       "score_growth": 35,
-      "score": 62
+      "score": 62,
+      "prev_score": 62
     },
     {
       "code": "368A",
@@ -986,7 +998,8 @@
       "score_rebound": 50,
       "score_stable": 62,
       "score_growth": 25,
-      "score": 62
+      "score": 62,
+      "prev_score": 62
     },
     {
       "code": "6430",
@@ -1010,7 +1023,8 @@
       "score_rebound": 94,
       "score_stable": 62,
       "score_growth": 65,
-      "score": 62
+      "score": 62,
+      "prev_score": 62
     },
     {
       "code": "8584",
@@ -1035,7 +1049,7 @@
       "score_stable": 62,
       "score_growth": 35,
       "score": 62,
-      "prev_score": 56
+      "prev_score": 62
     },
     {
       "code": "8219",
@@ -1084,7 +1098,8 @@
       "score_rebound": 80,
       "score_stable": 60,
       "score_growth": 57,
-      "score": 60
+      "score": 60,
+      "prev_score": 60
     },
     {
       "code": "4902",
@@ -1108,32 +1123,8 @@
       "score_rebound": 86,
       "score_stable": 60,
       "score_growth": 61,
-      "score": 60
-    },
-    {
-      "code": "5445",
-      "name": "東京鐵鋼",
-      "sector": "Basic Materials",
-      "price": 6270.0,
-      "ma25": 6396.8,
-      "ma75": 6012.5,
-      "rsi": 55,
-      "dividend": 4.78,
-      "pbr": 0.86,
-      "per": 5.3,
-      "vol_r": 0.97,
-      "vol_ratio_1d": 0.9,
-      "ret_1d": -0.63,
-      "range_pct": 0.96,
-      "trend_score": -0.9,
-      "market_cap_b": 529.0,
-      "score_dividend": 60,
-      "score_value": 61,
-      "score_rebound": 50,
-      "score_stable": 60,
-      "score_growth": 33,
       "score": 60,
-      "prev_score": 62
+      "prev_score": 60
     },
     {
       "code": "9409",
@@ -1157,7 +1148,8 @@
       "score_rebound": 82,
       "score_stable": 60,
       "score_growth": 61,
-      "score": 60
+      "score": 60,
+      "prev_score": 60
     },
     {
       "code": "2121",
@@ -1182,7 +1174,7 @@
       "score_stable": 59,
       "score_growth": 35,
       "score": 59,
-      "prev_score": 1
+      "prev_score": 59
     },
     {
       "code": "2429",
@@ -1206,7 +1198,8 @@
       "score_rebound": 49,
       "score_stable": 58,
       "score_growth": 30,
-      "score": 58
+      "score": 58,
+      "prev_score": 58
     },
     {
       "code": "8214",
@@ -1231,7 +1224,7 @@
       "score_stable": 58,
       "score_growth": 44,
       "score": 58,
-      "prev_score": 70
+      "prev_score": 58
     },
     {
       "code": "7239",
@@ -1256,7 +1249,7 @@
       "score_stable": 57,
       "score_growth": 35,
       "score": 57,
-      "prev_score": 60
+      "prev_score": 57
     },
     {
       "code": "9107",
@@ -1281,7 +1274,7 @@
       "score_stable": 57,
       "score_growth": 30,
       "score": 57,
-      "prev_score": 67
+      "prev_score": 57
     },
     {
       "code": "3916",
@@ -1305,7 +1298,8 @@
       "score_rebound": 95,
       "score_stable": 56,
       "score_growth": 91,
-      "score": 56
+      "score": 56,
+      "prev_score": 56
     },
     {
       "code": "6088",
@@ -1329,7 +1323,8 @@
       "score_rebound": 73,
       "score_stable": 56,
       "score_growth": 53,
-      "score": 56
+      "score": 56,
+      "prev_score": 56
     },
     {
       "code": "8892",
@@ -1354,7 +1349,7 @@
       "score_stable": 56,
       "score_growth": 49,
       "score": 56,
-      "prev_score": 71
+      "prev_score": 56
     },
     {
       "code": "2767",
@@ -1378,7 +1373,8 @@
       "score_rebound": 82,
       "score_stable": 55,
       "score_growth": 71,
-      "score": 55
+      "score": 55,
+      "prev_score": 55
     },
     {
       "code": "3963",
@@ -1402,6 +1398,31 @@
       "score_rebound": 86,
       "score_stable": 55,
       "score_growth": 52,
+      "score": 55,
+      "prev_score": 55
+    },
+    {
+      "code": "5949",
+      "name": "ユニプレス",
+      "sector": "Consumer Cyclical",
+      "price": 1471.0,
+      "ma25": 1409.4,
+      "ma75": 1290.6,
+      "rsi": 70,
+      "dividend": 4.08,
+      "pbr": 0.49,
+      "per": 0.0,
+      "vol_r": 1.16,
+      "vol_ratio_1d": 1.8,
+      "ret_1d": -0.2,
+      "range_pct": 1.63,
+      "trend_score": 41.0,
+      "market_cap_b": 656.0,
+      "score_dividend": 48,
+      "score_value": 60,
+      "score_rebound": 50,
+      "score_stable": 55,
+      "score_growth": 35,
       "score": 55
     },
     {
@@ -1426,7 +1447,8 @@
       "score_rebound": 50,
       "score_stable": 55,
       "score_growth": 35,
-      "score": 55
+      "score": 55,
+      "prev_score": 55
     },
     {
       "code": "7059",
@@ -1450,7 +1472,8 @@
       "score_rebound": 76,
       "score_stable": 54,
       "score_growth": 44,
-      "score": 54
+      "score": 54,
+      "prev_score": 54
     },
     {
       "code": "2146",
@@ -1475,7 +1498,7 @@
       "score_stable": 53,
       "score_growth": 20,
       "score": 53,
-      "prev_score": 67
+      "prev_score": 53
     },
     {
       "code": "3092",
@@ -1500,7 +1523,7 @@
       "score_stable": 53,
       "score_growth": 48,
       "score": 53,
-      "prev_score": 0
+      "prev_score": 53
     },
     {
       "code": "4324",
@@ -1525,7 +1548,7 @@
       "score_stable": 53,
       "score_growth": 42,
       "score": 53,
-      "prev_score": 19
+      "prev_score": 53
     },
     {
       "code": "6523",
@@ -1550,7 +1573,7 @@
       "score_stable": 53,
       "score_growth": 37,
       "score": 53,
-      "prev_score": 30
+      "prev_score": 53
     },
     {
       "code": "7148",
@@ -1575,7 +1598,7 @@
       "score_stable": 53,
       "score_growth": 23,
       "score": 53,
-      "prev_score": 2
+      "prev_score": 53
     },
     {
       "code": "7864",
@@ -1599,7 +1622,8 @@
       "score_rebound": 80,
       "score_stable": 53,
       "score_growth": 76,
-      "score": 53
+      "score": 53,
+      "prev_score": 53
     },
     {
       "code": "9404",
@@ -1623,7 +1647,8 @@
       "score_rebound": 75,
       "score_stable": 53,
       "score_growth": 72,
-      "score": 53
+      "score": 53,
+      "prev_score": 53
     },
     {
       "code": "9658",
@@ -1647,7 +1672,8 @@
       "score_rebound": 86,
       "score_stable": 53,
       "score_growth": 67,
-      "score": 53
+      "score": 53,
+      "prev_score": 53
     },
     {
       "code": "9744",
@@ -1672,7 +1698,7 @@
       "score_stable": 53,
       "score_growth": 27,
       "score": 53,
-      "prev_score": 32
+      "prev_score": 53
     },
     {
       "code": "2733",
@@ -1697,7 +1723,7 @@
       "score_stable": 52,
       "score_growth": 31,
       "score": 52,
-      "prev_score": 21
+      "prev_score": 52
     },
     {
       "code": "4249",
@@ -1721,7 +1747,8 @@
       "score_rebound": 55,
       "score_stable": 52,
       "score_growth": 35,
-      "score": 52
+      "score": 52,
+      "prev_score": 52
     },
     {
       "code": "4776",
@@ -1746,7 +1773,7 @@
       "score_stable": 52,
       "score_growth": 42,
       "score": 52,
-      "prev_score": 0
+      "prev_score": 52
     },
     {
       "code": "4849",
@@ -1770,7 +1797,8 @@
       "score_rebound": 83,
       "score_stable": 52,
       "score_growth": 66,
-      "score": 52
+      "score": 52,
+      "prev_score": 52
     },
     {
       "code": "6737",
@@ -1794,7 +1822,8 @@
       "score_rebound": 43,
       "score_stable": 52,
       "score_growth": 25,
-      "score": 52
+      "score": 52,
+      "prev_score": 52
     },
     {
       "code": "6412",
@@ -1819,7 +1848,7 @@
       "score_stable": 51,
       "score_growth": 28,
       "score": 51,
-      "prev_score": 19
+      "prev_score": 51
     },
     {
       "code": "8595",
@@ -1844,7 +1873,7 @@
       "score_stable": 51,
       "score_growth": 23,
       "score": 51,
-      "prev_score": 50
+      "prev_score": 51
     },
     {
       "code": "8706",
@@ -1868,7 +1897,8 @@
       "score_rebound": 39,
       "score_stable": 51,
       "score_growth": 25,
-      "score": 51
+      "score": 51,
+      "prev_score": 51
     },
     {
       "code": "9692",
@@ -1892,7 +1922,8 @@
       "score_rebound": 75,
       "score_stable": 51,
       "score_growth": 58,
-      "score": 51
+      "score": 51,
+      "prev_score": 51
     },
     {
       "code": "2181",
@@ -1917,7 +1948,7 @@
       "score_stable": 50,
       "score_growth": 57,
       "score": 50,
-      "prev_score": 0
+      "prev_score": 50
     },
     {
       "code": "4246",
@@ -1942,7 +1973,7 @@
       "score_stable": 50,
       "score_growth": 35,
       "score": 50,
-      "prev_score": 61
+      "prev_score": 50
     },
     {
       "code": "4765",
@@ -1966,7 +1997,8 @@
       "score_rebound": 58,
       "score_stable": 50,
       "score_growth": 35,
-      "score": 50
+      "score": 50,
+      "prev_score": 50
     },
     {
       "code": "5480",
@@ -1991,7 +2023,31 @@
       "score_stable": 50,
       "score_growth": 35,
       "score": 50,
-      "prev_score": 61
+      "prev_score": 50
+    },
+    {
+      "code": "5938",
+      "name": "ＬＩＸＩＬ",
+      "sector": "Industrials",
+      "price": 1825.0,
+      "ma25": 1854.3,
+      "ma75": 1841.0,
+      "rsi": 59,
+      "dividend": 4.93,
+      "pbr": 0.79,
+      "per": 56.2,
+      "vol_r": 0.8,
+      "vol_ratio_1d": 1.09,
+      "ret_1d": -1.56,
+      "range_pct": 1.42,
+      "trend_score": 15.7,
+      "market_cap_b": 5246.0,
+      "score_dividend": 48,
+      "score_value": 46,
+      "score_rebound": 38,
+      "score_stable": 50,
+      "score_growth": 28,
+      "score": 50
     },
     {
       "code": "5988",
@@ -2015,7 +2071,8 @@
       "score_rebound": 48,
       "score_stable": 50,
       "score_growth": 25,
-      "score": 50
+      "score": 50,
+      "prev_score": 50
     },
     {
       "code": "6209",
@@ -2040,7 +2097,7 @@
       "score_stable": 50,
       "score_growth": 35,
       "score": 50,
-      "prev_score": 59
+      "prev_score": 50
     },
     {
       "code": "6464",
@@ -2064,7 +2121,8 @@
       "score_rebound": 60,
       "score_stable": 50,
       "score_growth": 35,
-      "score": 50
+      "score": 50,
+      "prev_score": 50
     },
     {
       "code": "2982",
@@ -2088,7 +2146,8 @@
       "score_rebound": 83,
       "score_stable": 49,
       "score_growth": 57,
-      "score": 49
+      "score": 49,
+      "prev_score": 49
     },
     {
       "code": "4526",
@@ -2113,7 +2172,7 @@
       "score_stable": 49,
       "score_growth": 43,
       "score": 49,
-      "prev_score": 70
+      "prev_score": 49
     },
     {
       "code": "6340",
@@ -2137,7 +2196,8 @@
       "score_rebound": 41,
       "score_stable": 49,
       "score_growth": 28,
-      "score": 49
+      "score": 49,
+      "prev_score": 49
     },
     {
       "code": "8016",
@@ -2162,7 +2222,7 @@
       "score_stable": 49,
       "score_growth": 20,
       "score": 49,
-      "prev_score": 61
+      "prev_score": 49
     },
     {
       "code": "8084",
@@ -2187,7 +2247,7 @@
       "score_stable": 49,
       "score_growth": 33,
       "score": 49,
-      "prev_score": 72
+      "prev_score": 49
     },
     {
       "code": "2491",
@@ -2211,7 +2271,8 @@
       "score_rebound": 88,
       "score_stable": 48,
       "score_growth": 86,
-      "score": 48
+      "score": 48,
+      "prev_score": 48
     },
     {
       "code": "3608",
@@ -2235,7 +2296,8 @@
       "score_rebound": 45,
       "score_stable": 48,
       "score_growth": 31,
-      "score": 48
+      "score": 48,
+      "prev_score": 48
     },
     {
       "code": "3946",
@@ -2259,7 +2321,8 @@
       "score_rebound": 45,
       "score_stable": 48,
       "score_growth": 31,
-      "score": 48
+      "score": 48,
+      "prev_score": 48
     },
     {
       "code": "4792",
@@ -2283,7 +2346,8 @@
       "score_rebound": 56,
       "score_stable": 48,
       "score_growth": 44,
-      "score": 48
+      "score": 48,
+      "prev_score": 48
     },
     {
       "code": "5401",
@@ -2308,7 +2372,7 @@
       "score_stable": 48,
       "score_growth": 31,
       "score": 48,
-      "prev_score": 53
+      "prev_score": 48
     },
     {
       "code": "5410",
@@ -2332,32 +2396,8 @@
       "score_rebound": 45,
       "score_stable": 48,
       "score_growth": 31,
-      "score": 48
-    },
-    {
-      "code": "5440",
-      "name": "共英製鋼",
-      "sector": "Basic Materials",
-      "price": 2565.0,
-      "ma25": 2569.9,
-      "ma75": 2435.6,
-      "rsi": 58,
-      "dividend": 3.51,
-      "pbr": 0.54,
-      "per": 10.0,
-      "vol_r": 0.78,
-      "vol_ratio_1d": 1.03,
-      "ret_1d": 0.04,
-      "range_pct": 1.25,
-      "trend_score": 5.7,
-      "market_cap_b": 1115.0,
-      "score_dividend": 47,
-      "score_value": 51,
-      "score_rebound": 41,
-      "score_stable": 48,
-      "score_growth": 31,
       "score": 48,
-      "prev_score": 56
+      "prev_score": 48
     },
     {
       "code": "5851",
@@ -2382,7 +2422,7 @@
       "score_stable": 48,
       "score_growth": 31,
       "score": 48,
-      "prev_score": 60
+      "prev_score": 48
     },
     {
       "code": "5989",
@@ -2406,7 +2446,8 @@
       "score_rebound": 58,
       "score_stable": 48,
       "score_growth": 38,
-      "score": 48
+      "score": 48,
+      "prev_score": 48
     },
     {
       "code": "6463",
@@ -2430,30 +2471,31 @@
       "score_rebound": 45,
       "score_stable": 48,
       "score_growth": 31,
-      "score": 48
+      "score": 48,
+      "prev_score": 48
     },
     {
-      "code": "8515",
-      "name": "アイフル",
-      "sector": "Financial Services",
-      "price": 503.0,
-      "ma25": 548.0,
-      "ma75": 529.1,
-      "rsi": 32,
-      "dividend": 2.39,
-      "pbr": 1.02,
-      "per": 8.6,
-      "vol_r": 1.0,
-      "vol_ratio_1d": 1.36,
-      "ret_1d": -3.64,
-      "range_pct": 2.78,
-      "trend_score": 41.3,
-      "market_cap_b": 2409.0,
-      "score_dividend": 63,
-      "score_value": 70,
-      "score_rebound": 75,
+      "code": "7989",
+      "name": "立川ブラインド工業",
+      "sector": "Consumer Cyclical",
+      "price": 2545.0,
+      "ma25": 2145.4,
+      "ma75": 1991.9,
+      "rsi": 87,
+      "dividend": 5.5,
+      "pbr": 0.91,
+      "per": 16.8,
+      "vol_r": 1.04,
+      "vol_ratio_1d": 1.11,
+      "ret_1d": 0.43,
+      "range_pct": 1.77,
+      "trend_score": 13.3,
+      "market_cap_b": 512.0,
+      "score_dividend": 47,
+      "score_value": 41,
+      "score_rebound": 37,
       "score_stable": 48,
-      "score_growth": 60,
+      "score_growth": 20,
       "score": 48
     },
     {
@@ -2479,7 +2521,7 @@
       "score_stable": 48,
       "score_growth": 31,
       "score": 48,
-      "prev_score": 65
+      "prev_score": 48
     },
     {
       "code": "9274",
@@ -2503,7 +2545,8 @@
       "score_rebound": 45,
       "score_stable": 48,
       "score_growth": 31,
-      "score": 48
+      "score": 48,
+      "prev_score": 48
     },
     {
       "code": "9889",
@@ -2527,7 +2570,8 @@
       "score_rebound": 63,
       "score_stable": 48,
       "score_growth": 40,
-      "score": 48
+      "score": 48,
+      "prev_score": 48
     },
     {
       "code": "3302",
@@ -2551,7 +2595,8 @@
       "score_rebound": 45,
       "score_stable": 47,
       "score_growth": 30,
-      "score": 47
+      "score": 47,
+      "prev_score": 47
     },
     {
       "code": "7313",
@@ -2576,7 +2621,7 @@
       "score_stable": 47,
       "score_growth": 25,
       "score": 47,
-      "prev_score": 54
+      "prev_score": 47
     },
     {
       "code": "8150",
@@ -2601,7 +2646,7 @@
       "score_stable": 47,
       "score_growth": 30,
       "score": 47,
-      "prev_score": 64
+      "prev_score": 47
     },
     {
       "code": "3657",
@@ -2625,7 +2670,8 @@
       "score_rebound": 49,
       "score_stable": 46,
       "score_growth": 33,
-      "score": 46
+      "score": 46,
+      "prev_score": 46
     },
     {
       "code": "3696",
@@ -2649,7 +2695,8 @@
       "score_rebound": 90,
       "score_stable": 46,
       "score_growth": 71,
-      "score": 46
+      "score": 46,
+      "prev_score": 46
     },
     {
       "code": "4078",
@@ -2674,7 +2721,7 @@
       "score_stable": 46,
       "score_growth": 30,
       "score": 46,
-      "prev_score": 63
+      "prev_score": 46
     },
     {
       "code": "4088",
@@ -2699,7 +2746,7 @@
       "score_stable": 46,
       "score_growth": 38,
       "score": 46,
-      "prev_score": 0
+      "prev_score": 46
     },
     {
       "code": "4914",
@@ -2724,7 +2771,7 @@
       "score_stable": 46,
       "score_growth": 60,
       "score": 46,
-      "prev_score": 0
+      "prev_score": 46
     },
     {
       "code": "6349",
@@ -2748,7 +2795,8 @@
       "score_rebound": 38,
       "score_stable": 46,
       "score_growth": 30,
-      "score": 46
+      "score": 46,
+      "prev_score": 46
     },
     {
       "code": "7593",
@@ -2772,7 +2820,8 @@
       "score_rebound": 38,
       "score_stable": 46,
       "score_growth": 25,
-      "score": 46
+      "score": 46,
+      "prev_score": 46
     },
     {
       "code": "4548",
@@ -2796,7 +2845,8 @@
       "score_rebound": 50,
       "score_stable": 45,
       "score_growth": 35,
-      "score": 45
+      "score": 45,
+      "prev_score": 45
     },
     {
       "code": "4674",
@@ -2820,7 +2870,8 @@
       "score_rebound": 63,
       "score_stable": 45,
       "score_growth": 50,
-      "score": 45
+      "score": 45,
+      "prev_score": 45
     },
     {
       "code": "7261",
@@ -2845,7 +2896,7 @@
       "score_stable": 45,
       "score_growth": 25,
       "score": 45,
-      "prev_score": 61
+      "prev_score": 45
     },
     {
       "code": "7414",
@@ -2869,7 +2920,8 @@
       "score_rebound": 43,
       "score_stable": 45,
       "score_growth": 25,
-      "score": 45
+      "score": 45,
+      "prev_score": 45
     },
     {
       "code": "7921",
@@ -2893,7 +2945,8 @@
       "score_rebound": 73,
       "score_stable": 45,
       "score_growth": 58,
-      "score": 45
+      "score": 45,
+      "prev_score": 45
     },
     {
       "code": "8881",
@@ -2917,7 +2970,8 @@
       "score_rebound": 46,
       "score_stable": 45,
       "score_growth": 35,
-      "score": 45
+      "score": 45,
+      "prev_score": 45
     },
     {
       "code": "9759",
@@ -2942,7 +2996,7 @@
       "score_stable": 45,
       "score_growth": 56,
       "score": 45,
-      "prev_score": 0
+      "prev_score": 45
     },
     {
       "code": "9928",
@@ -2966,7 +3020,8 @@
       "score_rebound": 72,
       "score_stable": 45,
       "score_growth": 50,
-      "score": 45
+      "score": 45,
+      "prev_score": 45
     },
     {
       "code": "6118",
@@ -2991,7 +3046,7 @@
       "score_stable": 44,
       "score_growth": 36,
       "score": 44,
-      "prev_score": 72
+      "prev_score": 44
     },
     {
       "code": "7231",
@@ -3016,7 +3071,7 @@
       "score_stable": 44,
       "score_growth": 26,
       "score": 44,
-      "prev_score": 60
+      "prev_score": 44
     },
     {
       "code": "1518",
@@ -3040,7 +3095,8 @@
       "score_rebound": 39,
       "score_stable": 43,
       "score_growth": 30,
-      "score": 43
+      "score": 43,
+      "prev_score": 43
     },
     {
       "code": "2379",
@@ -3065,7 +3121,7 @@
       "score_stable": 43,
       "score_growth": 25,
       "score": 43,
-      "prev_score": 9
+      "prev_score": 43
     },
     {
       "code": "3635",
@@ -3090,7 +3146,7 @@
       "score_stable": 43,
       "score_growth": 10,
       "score": 43,
-      "prev_score": 0
+      "prev_score": 43
     },
     {
       "code": "4221",
@@ -3114,7 +3170,8 @@
       "score_rebound": 35,
       "score_stable": 43,
       "score_growth": 25,
-      "score": 43
+      "score": 43,
+      "prev_score": 43
     },
     {
       "code": "5406",
@@ -3139,32 +3196,7 @@
       "score_stable": 43,
       "score_growth": 31,
       "score": 43,
-      "prev_score": 50
-    },
-    {
-      "code": "5461",
-      "name": "中部鋼鈑",
-      "sector": "Basic Materials",
-      "price": 2574.0,
-      "ma25": 2358.6,
-      "ma75": 2197.9,
-      "rsi": 69,
-      "dividend": 4.2,
-      "pbr": 0.94,
-      "per": 0.0,
-      "vol_r": 1.07,
-      "vol_ratio_1d": 1.25,
-      "ret_1d": -0.92,
-      "range_pct": 2.02,
-      "trend_score": 23.1,
-      "market_cap_b": 697.0,
-      "score_dividend": 37,
-      "score_value": 46,
-      "score_rebound": 39,
-      "score_stable": 43,
-      "score_growth": 30,
-      "score": 43,
-      "prev_score": 61
+      "prev_score": 43
     },
     {
       "code": "5541",
@@ -3188,7 +3220,8 @@
       "score_rebound": 40,
       "score_stable": 43,
       "score_growth": 26,
-      "score": 43
+      "score": 43,
+      "prev_score": 43
     },
     {
       "code": "6809",
@@ -3213,7 +3246,7 @@
       "score_stable": 43,
       "score_growth": 20,
       "score": 43,
-      "prev_score": 60
+      "prev_score": 43
     },
     {
       "code": "7128",
@@ -3237,7 +3270,8 @@
       "score_rebound": 33,
       "score_stable": 43,
       "score_growth": 28,
-      "score": 43
+      "score": 43,
+      "prev_score": 43
     },
     {
       "code": "7241",
@@ -3261,7 +3295,8 @@
       "score_rebound": 36,
       "score_stable": 43,
       "score_growth": 31,
-      "score": 43
+      "score": 43,
+      "prev_score": 43
     },
     {
       "code": "7272",
@@ -3286,7 +3321,31 @@
       "score_stable": 43,
       "score_growth": 30,
       "score": 43,
-      "prev_score": 58
+      "prev_score": 43
+    },
+    {
+      "code": "7990",
+      "name": "グローブライド",
+      "sector": "Consumer Cyclical",
+      "price": 2310.0,
+      "ma25": 2273.6,
+      "ma75": 2212.7,
+      "rsi": 71,
+      "dividend": 3.9,
+      "pbr": 0.82,
+      "per": 9.9,
+      "vol_r": 0.91,
+      "vol_ratio_1d": 0.85,
+      "ret_1d": -1.62,
+      "range_pct": 1.17,
+      "trend_score": 0.2,
+      "market_cap_b": 504.0,
+      "score_dividend": 42,
+      "score_value": 47,
+      "score_rebound": 36,
+      "score_stable": 43,
+      "score_growth": 26,
+      "score": 43
     },
     {
       "code": "8075",
@@ -3310,7 +3369,8 @@
       "score_rebound": 40,
       "score_stable": 43,
       "score_growth": 31,
-      "score": 43
+      "score": 43,
+      "prev_score": 43
     },
     {
       "code": "9101",
@@ -3335,7 +3395,7 @@
       "score_stable": 43,
       "score_growth": 31,
       "score": 43,
-      "prev_score": 44
+      "prev_score": 43
     },
     {
       "code": "9619",
@@ -3360,7 +3420,7 @@
       "score_stable": 43,
       "score_growth": 31,
       "score": 43,
-      "prev_score": 62
+      "prev_score": 43
     },
     {
       "code": "3034",
@@ -3384,7 +3444,8 @@
       "score_rebound": 69,
       "score_stable": 42,
       "score_growth": 63,
-      "score": 42
+      "score": 42,
+      "prev_score": 42
     },
     {
       "code": "4097",
@@ -3409,7 +3470,7 @@
       "score_stable": 42,
       "score_growth": 29,
       "score": 42,
-      "prev_score": 62
+      "prev_score": 42
     },
     {
       "code": "6293",
@@ -3433,7 +3494,8 @@
       "score_rebound": 55,
       "score_stable": 42,
       "score_growth": 35,
-      "score": 42
+      "score": 42,
+      "prev_score": 42
     },
     {
       "code": "9682",
@@ -3458,7 +3520,7 @@
       "score_stable": 42,
       "score_growth": 40,
       "score": 42,
-      "prev_score": 0
+      "prev_score": 42
     },
     {
       "code": "2154",
@@ -3483,7 +3545,7 @@
       "score_stable": 41,
       "score_growth": 18,
       "score": 41,
-      "prev_score": 64
+      "prev_score": 41
     },
     {
       "code": "4116",
@@ -3507,7 +3569,8 @@
       "score_rebound": 35,
       "score_stable": 41,
       "score_growth": 26,
-      "score": 41
+      "score": 41,
+      "prev_score": 41
     },
     {
       "code": "4709",
@@ -3531,7 +3594,8 @@
       "score_rebound": 44,
       "score_stable": 41,
       "score_growth": 32,
-      "score": 41
+      "score": 41,
+      "prev_score": 41
     },
     {
       "code": "6200",
@@ -3555,7 +3619,8 @@
       "score_rebound": 46,
       "score_stable": 41,
       "score_growth": 32,
-      "score": 41
+      "score": 41,
+      "prev_score": 41
     },
     {
       "code": "6817",
@@ -3579,7 +3644,8 @@
       "score_rebound": 43,
       "score_stable": 41,
       "score_growth": 30,
-      "score": 41
+      "score": 41,
+      "prev_score": 41
     },
     {
       "code": "8707",
@@ -3603,7 +3669,8 @@
       "score_rebound": 33,
       "score_stable": 41,
       "score_growth": 20,
-      "score": 41
+      "score": 41,
+      "prev_score": 41
     },
     {
       "code": "9474",
@@ -3627,7 +3694,8 @@
       "score_rebound": 44,
       "score_stable": 41,
       "score_growth": 37,
-      "score": 41
+      "score": 41,
+      "prev_score": 41
     },
     {
       "code": "1419",
@@ -3652,7 +3720,7 @@
       "score_stable": 40,
       "score_growth": 10,
       "score": 40,
-      "prev_score": 54
+      "prev_score": 40
     },
     {
       "code": "2124",
@@ -3677,7 +3745,7 @@
       "score_stable": 40,
       "score_growth": 45,
       "score": 40,
-      "prev_score": 0
+      "prev_score": 40
     },
     {
       "code": "2501",
@@ -3702,7 +3770,7 @@
       "score_stable": 40,
       "score_growth": 10,
       "score": 40,
-      "prev_score": 58
+      "prev_score": 40
     },
     {
       "code": "4023",
@@ -3727,7 +3795,7 @@
       "score_stable": 40,
       "score_growth": 20,
       "score": 40,
-      "prev_score": 64
+      "prev_score": 40
     },
     {
       "code": "4044",
@@ -3752,7 +3820,7 @@
       "score_stable": 40,
       "score_growth": 20,
       "score": 40,
-      "prev_score": 64
+      "prev_score": 40
     },
     {
       "code": "4689",
@@ -3776,7 +3844,8 @@
       "score_rebound": 42,
       "score_stable": 40,
       "score_growth": 34,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "4928",
@@ -3801,7 +3870,31 @@
       "score_stable": 40,
       "score_growth": 13,
       "score": 40,
-      "prev_score": 60
+      "prev_score": 40
+    },
+    {
+      "code": "5943",
+      "name": "ノーリツ",
+      "sector": "Industrials",
+      "price": 2345.0,
+      "ma25": 2187.2,
+      "ma75": 2016.6,
+      "rsi": 70,
+      "dividend": 4.01,
+      "pbr": 0.76,
+      "per": 31.9,
+      "vol_r": 1.06,
+      "vol_ratio_1d": 0.66,
+      "ret_1d": -2.05,
+      "range_pct": 1.62,
+      "trend_score": -11.9,
+      "market_cap_b": 1071.0,
+      "score_dividend": 41,
+      "score_value": 41,
+      "score_rebound": 33,
+      "score_stable": 40,
+      "score_growth": 25,
+      "score": 40
     },
     {
       "code": "7240",
@@ -3826,7 +3919,7 @@
       "score_stable": 40,
       "score_growth": 20,
       "score": 40,
-      "prev_score": 62
+      "prev_score": 40
     },
     {
       "code": "7467",
@@ -3851,7 +3944,7 @@
       "score_stable": 40,
       "score_growth": 30,
       "score": 40,
-      "prev_score": 60
+      "prev_score": 40
     },
     {
       "code": "7516",
@@ -3876,7 +3969,7 @@
       "score_stable": 40,
       "score_growth": 31,
       "score": 40,
-      "prev_score": 65
+      "prev_score": 40
     },
     {
       "code": "8037",
@@ -3901,7 +3994,7 @@
       "score_stable": 40,
       "score_growth": 31,
       "score": 40,
-      "prev_score": 56
+      "prev_score": 40
     },
     {
       "code": "8065",
@@ -3925,7 +4018,8 @@
       "score_rebound": 40,
       "score_stable": 40,
       "score_growth": 31,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "8125",
@@ -3950,7 +4044,7 @@
       "score_stable": 40,
       "score_growth": 20,
       "score": 40,
-      "prev_score": 62
+      "prev_score": 40
     },
     {
       "code": "8614",
@@ -3974,7 +4068,8 @@
       "score_rebound": 30,
       "score_stable": 40,
       "score_growth": 15,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "8628",
@@ -3999,7 +4094,7 @@
       "score_stable": 40,
       "score_growth": 10,
       "score": 40,
-      "prev_score": 58
+      "prev_score": 40
     },
     {
       "code": "9432",
@@ -4024,7 +4119,7 @@
       "score_stable": 40,
       "score_growth": 26,
       "score": 40,
-      "prev_score": 14
+      "prev_score": 40
     },
     {
       "code": "9506",
@@ -4049,7 +4144,7 @@
       "score_stable": 40,
       "score_growth": 31,
       "score": 40,
-      "prev_score": 55
+      "prev_score": 40
     },
     {
       "code": "9739",
@@ -4073,7 +4168,8 @@
       "score_rebound": 51,
       "score_stable": 40,
       "score_growth": 45,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "9997",
@@ -4097,7 +4193,8 @@
       "score_rebound": 36,
       "score_stable": 40,
       "score_growth": 31,
-      "score": 40
+      "score": 40,
+      "prev_score": 40
     },
     {
       "code": "1815",
@@ -4121,7 +4218,8 @@
       "score_rebound": 56,
       "score_stable": 39,
       "score_growth": 36,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "4839",
@@ -4145,7 +4243,8 @@
       "score_rebound": 76,
       "score_stable": 39,
       "score_growth": 63,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "5302",
@@ -4170,32 +4269,7 @@
       "score_stable": 39,
       "score_growth": 25,
       "score": 39,
-      "prev_score": 63
-    },
-    {
-      "code": "5451",
-      "name": "ヨドコウ",
-      "sector": "Basic Materials",
-      "price": 1406.0,
-      "ma25": 1420.3,
-      "ma75": 1352.5,
-      "rsi": 51,
-      "dividend": 4.27,
-      "pbr": 1.03,
-      "per": 14.8,
-      "vol_r": 0.82,
-      "vol_ratio_1d": 0.81,
-      "ret_1d": -1.13,
-      "range_pct": 1.28,
-      "trend_score": -4.3,
-      "market_cap_b": 2034.0,
-      "score_dividend": 37,
-      "score_value": 34,
-      "score_rebound": 29,
-      "score_stable": 39,
-      "score_growth": 28,
-      "score": 39,
-      "prev_score": 66
+      "prev_score": 39
     },
     {
       "code": "5889",
@@ -4219,7 +4293,8 @@
       "score_rebound": 46,
       "score_stable": 39,
       "score_growth": 39,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "8585",
@@ -4244,7 +4319,7 @@
       "score_stable": 39,
       "score_growth": 21,
       "score": 39,
-      "prev_score": 52
+      "prev_score": 39
     },
     {
       "code": "8793",
@@ -4268,7 +4343,8 @@
       "score_rebound": 33,
       "score_stable": 39,
       "score_growth": 26,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "9699",
@@ -4292,7 +4368,8 @@
       "score_rebound": 47,
       "score_stable": 39,
       "score_growth": 38,
-      "score": 39
+      "score": 39,
+      "prev_score": 39
     },
     {
       "code": "9991",
@@ -4317,7 +4394,7 @@
       "score_stable": 39,
       "score_growth": 21,
       "score": 39,
-      "prev_score": 64
+      "prev_score": 39
     },
     {
       "code": "2445",
@@ -4341,7 +4418,8 @@
       "score_rebound": 46,
       "score_stable": 38,
       "score_growth": 30,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "3626",
@@ -4366,7 +4444,7 @@
       "score_stable": 38,
       "score_growth": 76,
       "score": 38,
-      "prev_score": 0
+      "prev_score": 38
     },
     {
       "code": "3836",
@@ -4390,7 +4468,8 @@
       "score_rebound": 62,
       "score_stable": 38,
       "score_growth": 68,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "3844",
@@ -4414,7 +4493,8 @@
       "score_rebound": 72,
       "score_stable": 38,
       "score_growth": 53,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "4208",
@@ -4439,7 +4519,7 @@
       "score_stable": 38,
       "score_growth": 21,
       "score": 38,
-      "prev_score": 57
+      "prev_score": 38
     },
     {
       "code": "4611",
@@ -4463,7 +4543,8 @@
       "score_rebound": 45,
       "score_stable": 38,
       "score_growth": 31,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "4819",
@@ -4487,7 +4568,8 @@
       "score_rebound": 63,
       "score_stable": 38,
       "score_growth": 66,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "4845",
@@ -4511,7 +4593,8 @@
       "score_rebound": 61,
       "score_stable": 38,
       "score_growth": 35,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "5036",
@@ -4535,7 +4618,8 @@
       "score_rebound": 67,
       "score_stable": 38,
       "score_growth": 61,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "5076",
@@ -4560,7 +4644,7 @@
       "score_stable": 38,
       "score_growth": 20,
       "score": 38,
-      "prev_score": 68
+      "prev_score": 38
     },
     {
       "code": "5411",
@@ -4585,7 +4669,7 @@
       "score_stable": 38,
       "score_growth": 21,
       "score": 38,
-      "prev_score": 55
+      "prev_score": 38
     },
     {
       "code": "6339",
@@ -4609,7 +4693,8 @@
       "score_rebound": 33,
       "score_stable": 38,
       "score_growth": 21,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "6379",
@@ -4634,31 +4719,7 @@
       "score_stable": 38,
       "score_growth": 20,
       "score": 38,
-      "prev_score": 58
-    },
-    {
-      "code": "7613",
-      "name": "シークス",
-      "sector": "Technology",
-      "price": 1385.0,
-      "ma25": 1323.4,
-      "ma75": 1296.1,
-      "rsi": 68,
-      "dividend": 3.61,
-      "pbr": 0.63,
-      "per": 26.2,
-      "vol_r": 0.87,
-      "vol_ratio_1d": 0.52,
-      "ret_1d": 0.22,
-      "range_pct": 1.73,
-      "trend_score": -33.2,
-      "market_cap_b": 653.0,
-      "score_dividend": 39,
-      "score_value": 40,
-      "score_rebound": 33,
-      "score_stable": 38,
-      "score_growth": 21,
-      "score": 38
+      "prev_score": 38
     },
     {
       "code": "7915",
@@ -4682,7 +4743,8 @@
       "score_rebound": 33,
       "score_stable": 38,
       "score_growth": 21,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "8173",
@@ -4706,7 +4768,8 @@
       "score_rebound": 33,
       "score_stable": 38,
       "score_growth": 21,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "8344",
@@ -4731,7 +4794,7 @@
       "score_stable": 38,
       "score_growth": 21,
       "score": 38,
-      "prev_score": 64
+      "prev_score": 38
     },
     {
       "code": "8698",
@@ -4756,7 +4819,7 @@
       "score_stable": 38,
       "score_growth": 25,
       "score": 38,
-      "prev_score": 14
+      "prev_score": 38
     },
     {
       "code": "8860",
@@ -4781,7 +4844,7 @@
       "score_stable": 38,
       "score_growth": 31,
       "score": 38,
-      "prev_score": 61
+      "prev_score": 38
     },
     {
       "code": "9743",
@@ -4805,7 +4868,8 @@
       "score_rebound": 30,
       "score_stable": 38,
       "score_growth": 15,
-      "score": 38
+      "score": 38,
+      "prev_score": 38
     },
     {
       "code": "4719",
@@ -4829,7 +4893,8 @@
       "score_rebound": 44,
       "score_stable": 37,
       "score_growth": 38,
-      "score": 37
+      "score": 37,
+      "prev_score": 37
     },
     {
       "code": "5976",
@@ -4853,7 +4918,8 @@
       "score_rebound": 38,
       "score_stable": 37,
       "score_growth": 20,
-      "score": 37
+      "score": 37,
+      "prev_score": 37
     },
     {
       "code": "7575",
@@ -4878,7 +4944,7 @@
       "score_stable": 37,
       "score_growth": 26,
       "score": 37,
-      "prev_score": 4
+      "prev_score": 37
     },
     {
       "code": "8185",
@@ -4902,7 +4968,8 @@
       "score_rebound": 38,
       "score_stable": 37,
       "score_growth": 25,
-      "score": 37
+      "score": 37,
+      "prev_score": 37
     },
     {
       "code": "9064",
@@ -4927,7 +4994,7 @@
       "score_stable": 37,
       "score_growth": 40,
       "score": 37,
-      "prev_score": 0
+      "prev_score": 37
     },
     {
       "code": "2613",
@@ -4951,7 +5018,8 @@
       "score_rebound": 33,
       "score_stable": 36,
       "score_growth": 26,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "2681",
@@ -4975,7 +5043,8 @@
       "score_rebound": 36,
       "score_stable": 36,
       "score_growth": 39,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "4118",
@@ -5000,7 +5069,7 @@
       "score_stable": 36,
       "score_growth": 26,
       "score": 36,
-      "prev_score": 57
+      "prev_score": 36
     },
     {
       "code": "4290",
@@ -5024,7 +5093,8 @@
       "score_rebound": 46,
       "score_stable": 36,
       "score_growth": 28,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "4569",
@@ -5048,7 +5118,8 @@
       "score_rebound": 36,
       "score_stable": 36,
       "score_growth": 26,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "6724",
@@ -5073,7 +5144,7 @@
       "score_stable": 36,
       "score_growth": 26,
       "score": 36,
-      "prev_score": 62
+      "prev_score": 36
     },
     {
       "code": "7246",
@@ -5098,7 +5169,7 @@
       "score_stable": 36,
       "score_growth": 16,
       "score": 36,
-      "prev_score": 61
+      "prev_score": 36
     },
     {
       "code": "8051",
@@ -5123,7 +5194,7 @@
       "score_stable": 36,
       "score_growth": 25,
       "score": 36,
-      "prev_score": 58
+      "prev_score": 36
     },
     {
       "code": "9755",
@@ -5147,7 +5218,8 @@
       "score_rebound": 28,
       "score_stable": 36,
       "score_growth": 16,
-      "score": 36
+      "score": 36,
+      "prev_score": 36
     },
     {
       "code": "2317",
@@ -5171,7 +5243,8 @@
       "score_rebound": 56,
       "score_stable": 35,
       "score_growth": 36,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "2371",
@@ -5195,7 +5268,8 @@
       "score_rebound": 65,
       "score_stable": 35,
       "score_growth": 71,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "2413",
@@ -5219,7 +5293,8 @@
       "score_rebound": 60,
       "score_stable": 35,
       "score_growth": 60,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "2475",
@@ -5243,7 +5318,8 @@
       "score_rebound": 51,
       "score_stable": 35,
       "score_growth": 31,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "2602",
@@ -5268,7 +5344,7 @@
       "score_stable": 35,
       "score_growth": 26,
       "score": 35,
-      "prev_score": 61
+      "prev_score": 35
     },
     {
       "code": "3109",
@@ -5292,7 +5368,8 @@
       "score_rebound": 45,
       "score_stable": 35,
       "score_growth": 30,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "3232",
@@ -5317,7 +5394,7 @@
       "score_stable": 35,
       "score_growth": 26,
       "score": 35,
-      "prev_score": 60
+      "prev_score": 35
     },
     {
       "code": "3401",
@@ -5342,7 +5419,7 @@
       "score_stable": 35,
       "score_growth": 26,
       "score": 35,
-      "prev_score": 67
+      "prev_score": 35
     },
     {
       "code": "3663",
@@ -5366,7 +5443,8 @@
       "score_rebound": 70,
       "score_stable": 35,
       "score_growth": 56,
-      "score": 35
+      "score": 35,
+      "prev_score": 35
     },
     {
       "code": "3769",
@@ -5391,7 +5469,7 @@
       "score_stable": 35,
       "score_growth": 56,
       "score": 35,
-      "prev_score": 0
+      "prev_score": 35
     },
     {
       "code": "4307",
@@ -5415,6 +5493,31 @@
       "score_rebound": 60,
       "score_stable": 35,
       "score_growth": 59,
+      "score": 35,
+      "prev_score": 35
+    },
+    {
+      "code": "4680",
+      "name": "ラウンドワン",
+      "sector": "Consumer Cyclical",
+      "price": 988.3,
+      "ma25": 1075.6,
+      "ma75": 1068.9,
+      "rsi": 30,
+      "dividend": 1.82,
+      "pbr": 3.35,
+      "per": 16.8,
+      "vol_r": 1.19,
+      "vol_ratio_1d": 1.16,
+      "ret_1d": -3.77,
+      "range_pct": 3.39,
+      "trend_score": 34.2,
+      "market_cap_b": 2598.0,
+      "score_dividend": 44,
+      "score_value": 44,
+      "score_rebound": 56,
+      "score_stable": 35,
+      "score_growth": 36,
       "score": 35
     }
   ],
@@ -5462,6 +5565,6 @@
   ],
   "ai_summary": {
     "provider": "groq",
-    "text": "今日の相場には、米国株式市場の動向が影響しているようです。特に、エヌビディアとセールスフォースの決算発表やトランプ新関税の影響が市場に注目されています。さらに、ドル円の交換レートがやや下がっていることで、投資家の意欲に影響が出ているようです。日経平均株価は前日比で1.12%下がっています。今日は、市場の動向を見極めつつ、慎重な投資判断をすべきです。"
+    "text": "今日の相場は、トランプ関税の不透明感や高値圏でのトレンド転換の兆しが見られるため、下押し圧力が続いています。ニューヨークダウとS&P500の前日比も下落しています。また、ドル円はやや値を戻しているものの、下押し圧力は継続しています。来週のエヌビディアとセールスフォースの決算にも注目が集まっています。今日は買い気味を抑え、慎重な態度で市場を眺めることが良いです。"
   }
 }
