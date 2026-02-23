@@ -19322,7 +19322,7 @@
     },
     {
       "code": "1605",
-      "name": "INPEX CORPORATION",
+      "name": "INPEX",
       "sector": "Energy",
       "price": 3677.0,
       "ma25": 3465.2,
@@ -19409,7 +19409,7 @@
     },
     {
       "code": "7203",
-      "name": "TOYOTA MOTOR CORP",
+      "name": "トヨタ自動車",
       "sector": "Consumer Cyclical",
       "price": 3635.0,
       "ma25": 3624.4,
@@ -19496,7 +19496,7 @@
     },
     {
       "code": "8058",
-      "name": "MITSUBISHI CORP",
+      "name": "三菱商事",
       "sector": "Industrials",
       "price": 4991.0,
       "ma25": 4461.1,
@@ -19583,7 +19583,7 @@
     },
     {
       "code": "8031",
-      "name": "MITSUI & CO",
+      "name": "三井物産",
       "sector": "Industrials",
       "price": 5505.0,
       "ma25": 5255.2,
@@ -19670,7 +19670,7 @@
     },
     {
       "code": "8411",
-      "name": "MIZUHO FINANCIAL GROUP",
+      "name": "みずほFG",
       "sector": "Financial Services",
       "price": 7175.0,
       "ma25": 7021.9,
@@ -19757,7 +19757,7 @@
     },
     {
       "code": "8725",
-      "name": "MS&AD INS GP HLDGS",
+      "name": "MS&AD",
       "sector": "Financial Services",
       "price": 4320.0,
       "ma25": 4077.8,
@@ -19844,7 +19844,7 @@
     },
     {
       "code": "1928",
-      "name": "SEKISUI HOUSE",
+      "name": "積水ハウス",
       "sector": "Consumer Cyclical",
       "price": 3753.0,
       "ma25": 3581.1,
@@ -19931,7 +19931,7 @@
     },
     {
       "code": "9434",
-      "name": "SOFTBANK CORP.",
+      "name": "ソフトバンク",
       "sector": "Communication Services",
       "price": 210.0,
       "ma25": 213.3,
@@ -20018,7 +20018,7 @@
     },
     {
       "code": "6758",
-      "name": "SONY GROUP CORPORATION",
+      "name": "ソニーG",
       "sector": "Technology",
       "price": 3336.0,
       "ma25": 3531.0,
@@ -20192,7 +20192,7 @@
     },
     {
       "code": "4661",
-      "name": "ORIENTAL LAND CO",
+      "name": "OLC",
       "sector": "Consumer Cyclical",
       "price": 2710.5,
       "ma25": 2765.1,
@@ -20279,7 +20279,7 @@
     },
     {
       "code": "7974",
-      "name": "NINTENDO CO LTD",
+      "name": "任天堂",
       "sector": "Communication Services",
       "price": 8587.0,
       "ma25": 9459.1,
@@ -20366,7 +20366,7 @@
     },
     {
       "code": "9684",
-      "name": "SQUARE ENIX HOLDINGS CO.LTD.",
+      "name": "スクエニHD",
       "sector": "Communication Services",
       "price": 2514.0,
       "ma25": 2677.6,
@@ -20453,7 +20453,7 @@
     },
     {
       "code": "9508",
-      "name": "KYUSHU ELECTRIC POWER CO INC",
+      "name": "九州電力",
       "sector": "Utilities",
       "price": 1945.0,
       "ma25": 1793.5,
@@ -20540,7 +20540,7 @@
     },
     {
       "code": "6902",
-      "name": "DENSO CORP",
+      "name": "デンソー",
       "sector": "Consumer Cyclical",
       "price": 2215.0,
       "ma25": 2179.0,
@@ -20627,7 +20627,7 @@
     },
     {
       "code": "8593",
-      "name": "MITSUBISHI HC CAPITAL INC",
+      "name": "三菱HCキャピタル",
       "sector": "Financial Services",
       "price": 1503.5,
       "ma25": 1405.4,
@@ -20714,7 +20714,7 @@
     },
     {
       "code": "8306",
-      "name": "MITSUBISHI UFJ FINANCIAL GROUP ",
+      "name": "三菱UFJ",
       "sector": "Financial Services",
       "price": 2942.0,
       "ma25": 2894.8,
@@ -20801,7 +20801,7 @@
     },
     {
       "code": "8316",
-      "name": "SUMITOMO MITSUI FINANCIAL GROUP",
+      "name": "三井住友FG",
       "sector": "Financial Services",
       "price": 5963.0,
       "ma25": 5689.7,
@@ -20888,7 +20888,7 @@
     },
     {
       "code": "8001",
-      "name": "ITOCHU CORP",
+      "name": "伊藤忠",
       "sector": "Industrials",
       "price": 2192.5,
       "ma25": 2083.7,
@@ -20975,7 +20975,7 @@
     },
     {
       "code": "8002",
-      "name": "MARUBENI CORP",
+      "name": "丸紅",
       "sector": "Industrials",
       "price": 5710.0,
       "ma25": 5451.7,
@@ -21062,7 +21062,7 @@
     },
     {
       "code": "8053",
-      "name": "SUMITOMO CORP",
+      "name": "住友商事",
       "sector": "Industrials",
       "price": 6382.0,
       "ma25": 6329.5,
@@ -21149,7 +21149,7 @@
     },
     {
       "code": "8766",
-      "name": "TOKIO MARINE HOLDINGS INC",
+      "name": "東京海上",
       "sector": "Financial Services",
       "price": 6475.0,
       "ma25": 6009.6,
@@ -21236,7 +21236,7 @@
     },
     {
       "code": "8630",
-      "name": "SOMPO HOLDINGS INC",
+      "name": "SOMPO",
       "sector": "Financial Services",
       "price": 5904.0,
       "ma25": 5663.0,
@@ -21323,7 +21323,7 @@
     },
     {
       "code": "9501",
-      "name": "TOKYO ELEC POWER CO HLDGS INC",
+      "name": "東京電力",
       "sector": "Utilities",
       "price": 703.3,
       "ma25": 652.8,
@@ -21410,7 +21410,7 @@
     },
     {
       "code": "9503",
-      "name": "KANSAI ELECTRIC POWER CO INC",
+      "name": "関西電力",
       "sector": "Utilities",
       "price": 2682.0,
       "ma25": 2569.1,
@@ -21497,7 +21497,7 @@
     },
     {
       "code": "5019",
-      "name": "IDEMITSU KOSAN CO.LTD",
+      "name": "出光興産",
       "sector": "Energy",
       "price": 1416.5,
       "ma25": 1344.6,
@@ -21584,7 +21584,7 @@
     },
     {
       "code": "5020",
-      "name": "ENEOS HOLDINGS INC",
+      "name": "ENEOS",
       "sector": "Energy",
       "price": 1456.0,
       "ma25": 1334.6,
@@ -21671,7 +21671,7 @@
     },
     {
       "code": "8591",
-      "name": "ORIX CORPORATION",
+      "name": "オリックス",
       "sector": "Financial Services",
       "price": 5410.0,
       "ma25": 4985.5,
@@ -21758,7 +21758,7 @@
     },
     {
       "code": "9433",
-      "name": "KDDI CORPORATION",
+      "name": "KDDI",
       "sector": "Communication Services",
       "price": 2616.0,
       "ma25": 2663.5,
@@ -21845,7 +21845,7 @@
     },
     {
       "code": "8309",
-      "name": "SUMITOMO MITSUI TRUST GP INC",
+      "name": "三井住友トラスト",
       "sector": "Financial Services",
       "price": 5484.0,
       "ma25": 5293.3,
@@ -21932,7 +21932,7 @@
     },
     {
       "code": "1801",
-      "name": "TAISEI CORP",
+      "name": "大成建設",
       "sector": "Industrials",
       "price": 18795.0,
       "ma25": 16821.0,
@@ -22019,7 +22019,7 @@
     },
     {
       "code": "1802",
-      "name": "OBAYASHI CORP",
+      "name": "大林組",
       "sector": "Industrials",
       "price": 4153.0,
       "ma25": 3823.6,
@@ -22106,7 +22106,7 @@
     },
     {
       "code": "9531",
-      "name": "TOKYO GAS CO",
+      "name": "東京ガス",
       "sector": "Utilities",
       "price": 7575.0,
       "ma25": 7110.4,
@@ -22193,7 +22193,7 @@
     },
     {
       "code": "9532",
-      "name": "OSAKA GAS CO",
+      "name": "大阪ガス",
       "sector": "Utilities",
       "price": 6388.0,
       "ma25": 6096.5,
@@ -22280,7 +22280,7 @@
     },
     {
       "code": "9020",
-      "name": "EAST JAPAN RAILWAY CO",
+      "name": "JR東日本",
       "sector": "Industrials",
       "price": 3814.0,
       "ma25": 3872.6,
@@ -22367,7 +22367,7 @@
     },
     {
       "code": "9022",
-      "name": "CENTRAL JAPAN RAILWAY CO",
+      "name": "JR東海",
       "sector": "Industrials",
       "price": 4623.0,
       "ma25": 4468.3,
@@ -22454,7 +22454,7 @@
     },
     {
       "code": "4503",
-      "name": "ASTELLAS PHARMA",
+      "name": "アステラス製薬",
       "sector": "Healthcare",
       "price": 2476.5,
       "ma25": 2325.5,
@@ -22541,7 +22541,7 @@
     },
     {
       "code": "4502",
-      "name": "TAKEDA PHARMACEUTICAL CO LTD",
+      "name": "武田薬品",
       "sector": "Healthcare",
       "price": 5790.0,
       "ma25": 5369.0,
@@ -22628,7 +22628,7 @@
     },
     {
       "code": "8604",
-      "name": "NOMURA HOLDINGS INC.",
+      "name": "野村HD",
       "sector": "Financial Services",
       "price": 1404.5,
       "ma25": 1412.2,
@@ -22715,7 +22715,7 @@
     },
     {
       "code": "2914",
-      "name": "JAPAN TOBACCO INC",
+      "name": "JT",
       "sector": "Consumer Defensive",
       "price": 5893.0,
       "ma25": 5829.3,

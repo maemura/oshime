@@ -66,9 +66,10 @@ a{color:var(--blue-m);text-decoration:none;}
 
 /* TOP5 */
 .t5-sec{margin:10px 12px;}
-.t5-tabs{display:flex;background:var(--card);border-radius:var(--r) var(--r) 0 0;box-shadow:var(--sh);overflow:hidden;}
-.t5-tab{flex:1;padding:11px 0;text-align:center;font-size:13px;font-weight:700;cursor:pointer;border-bottom:3px solid transparent;color:var(--text3);transition:all .15s;background:var(--card);}
-.t5-tab.active{color:var(--blue);border-bottom-color:var(--blue);}
+.t5-tabs{display:flex;gap:8px;padding:12px 16px;background:var(--bg);}
+.t5-tab{flex:1;padding:12px 8px;text-align:center;font-size:14px;font-weight:700;cursor:pointer;border:2px solid var(--border);color:var(--text3);transition:all .2s;background:var(--card);border-radius:12px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+.t5-tab:active{transform:scale(.97);}
+.t5-tab.active{color:#fff;border-color:var(--blue);background:var(--blue);box-shadow:0 2px 8px rgba(59,130,246,.3);}
 .t5-body{background:var(--card);border-radius:0 0 var(--r) var(--r);box-shadow:var(--sh);}
 .t5-item{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;}
 .t5-item:last-child{border-bottom:none;}.t5-item:active{background:var(--blue-l);}
@@ -527,11 +528,23 @@ function getSectorBonus(sector,code){
     'Technology':'テック','Communication Services':'通信・メディア',
     'Utilities':'電力・ガス'
   };
+  // 表示名→スコアキーの補助マッチ
+  const DISP_TO_KEY={"メガバンク":"金融","地銀":"金融","証券":"金融","保険":"金融",
+    "リース":"金融","総合商社":"産業","商社":"産業","鉄鋼":"素材","化学":"素材",
+    "建設":"産業","電力":"電力・ガス","ガス":"電力・ガス","通信":"通信・メディア",
+    "海運":"産業","自動車":"産業","重工":"産業","機械":"産業","不動産":"不動産",
+    "住宅":"不動産","半導体":"テック","IT":"テック","SaaS":"テック","ゲーム":"テック",
+    "食品":"消費（安定）","医薬":"医薬・ヘルスケア","エネルギー":"エネルギー"};
   // まず直接マッチ
   if(sectorRankMap[sector])return sectorRankMap[sector];
   // 英語→日本語変換してマッチ
   const jpName=SECTOR_JP_MAP[sector];
   if(jpName&&sectorRankMap[jpName])return sectorRankMap[jpName];
+  // CODE_SECTORの表示名からマッチ
+  const dispName=sMap(sector,code);
+  for(const[kw,scKey]of Object.entries(DISP_TO_KEY)){
+    if(dispName.includes(kw)&&sectorRankMap[scKey])return sectorRankMap[scKey];
+  }
   // 部分一致
   for(const[key,bonus]of Object.entries(sectorRankMap)){
     if(key.includes(sector||'')||( sector||'').includes(key))return bonus;
