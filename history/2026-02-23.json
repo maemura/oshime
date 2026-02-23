@@ -1,13 +1,13 @@
 {
   "date": "2026-02-23",
-  "updated_at": "2026/02/23 11:18",
+  "updated_at": "2026/02/23 12:04",
   "market": {
     "nikkei_price": 56826.0,
     "nikkei_ma25": 54810.0,
     "nikkei_1d_chg": -1.12,
     "nasdaq_1d_chg": 0.9,
     "vix": 19.1,
-    "usdjpy": 154.17
+    "usdjpy": 154.22
   },
   "total_scanned": 1568,
   "buy_count": 24,
@@ -86,6 +86,63 @@
       "sector_ret5": 1.94,
       "div_growth_years": 0,
       "price": 1385.0
+    }
+  ],
+  "top5_momentum": [
+    {
+      "code": "268A",
+      "name": "リガク・ホールディングス",
+      "score_momentum": 84,
+      "ret20": 34.97,
+      "ret60": 99.4,
+      "roe": 13.4,
+      "vol_trend": 2.62,
+      "sector_ret5": 1.54,
+      "price": 1783.0
+    },
+    {
+      "code": "3465",
+      "name": "ケイアイスター不動産",
+      "score_momentum": 82,
+      "ret20": 23.71,
+      "ret60": 48.0,
+      "roe": 21.4,
+      "vol_trend": 1.85,
+      "sector_ret5": 0.99,
+      "price": 8140.0
+    },
+    {
+      "code": "3482",
+      "name": "ロードスターキャピタル",
+      "score_momentum": 78,
+      "ret20": 15.4,
+      "ret60": 30.74,
+      "roe": 27.2,
+      "vol_trend": 1.85,
+      "sector_ret5": 0.99,
+      "price": 3560.0
+    },
+    {
+      "code": "5101",
+      "name": "横浜ゴム",
+      "score_momentum": 77,
+      "ret20": 27.28,
+      "ret60": 39.24,
+      "roe": 11.0,
+      "vol_trend": 2.37,
+      "sector_ret5": 0.21,
+      "price": 7982.0
+    },
+    {
+      "code": "4973",
+      "name": "日本高純度化学",
+      "score_momentum": 77,
+      "ret20": 32.0,
+      "ret60": 72.27,
+      "roe": 10.9,
+      "vol_trend": 1.14,
+      "sector_ret5": 1.94,
+      "price": 5280.0
     }
   ],
   "top50_codes": [
@@ -495,12 +552,12 @@
   "sector_ret5_avg": {
     "Consumer Defensive": -0.79,
     "Industrials": 1.35,
-    "Consumer Cyclical": 0.22,
+    "Consumer Cyclical": 0.21,
     "Basic Materials": 1.94,
     "Energy": 2.15,
     "Utilities": 2.87,
     "Technology": 1.54,
-    "Real Estate": 0.98,
+    "Real Estate": 0.99,
     "Communication Services": -1.15,
     "Financial Services": 0.05,
     "Healthcare": NaN,

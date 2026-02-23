@@ -582,6 +582,22 @@ def fetch_one(ticker, _retry=0):
         # ── 短期・中期リターン ──
         ret5  = round((float(closes.iloc[-1]) / float(closes.iloc[-6]) - 1) * 100, 2) if len(closes) >= 6 else 0
         ret10 = round((float(closes.iloc[-1]) / float(closes.iloc[-11]) - 1) * 100, 2) if len(closes) >= 11 else 0
+        ret20 = round((float(closes.iloc[-1]) / float(closes.iloc[-21]) - 1) * 100, 2) if len(closes) >= 21 else 0
+        ret60 = round((float(closes.iloc[-1]) / float(closes.iloc[-61]) - 1) * 100, 2) if len(closes) >= 61 else 0
+
+        # ── 機関投資家指標（yfinance .infoから無料取得）──
+        roe = round(float(info.get("returnOnEquity", 0) or 0) * 100, 1)  # ROE %
+        profit_margin = round(float(info.get("profitMargins", 0) or 0) * 100, 1)  # 利益率 %
+        revenue_growth = round(float(info.get("revenueGrowth", 0) or 0) * 100, 1)  # 売上成長率 %
+        earnings_growth = round(float(info.get("earningsGrowth", 0) or 0) * 100, 1)  # 利益成長率 %
+
+        # ── 出来高トレンド ──
+        vol_trend = round(float(hist["Volume"].iloc[-5:].mean()) / float(hist["Volume"].iloc[-20:].mean()), 2) if vol_mean20 > 0 else 1.0
+
+        # ── 価格位置（52週高値/安値からの位置）──
+        high_52w = float(closes.max()) if len(closes) >= 60 else price
+        low_52w = float(closes.min()) if len(closes) >= 60 else price
+        price_position = round((price - low_52w) / (high_52w - low_52w) * 100, 1) if high_52w != low_52w else 50.0
 
         # ── 決算日情報 ──
         most_recent_q = info.get("mostRecentQuarter")  # timestamp
@@ -630,6 +646,15 @@ def fetch_one(ticker, _retry=0):
             "dip_zscore":    dip_zscore,
             "ret5":          ret5,
             "ret10":         ret10,
+            "ret20":         ret20,
+            "ret60":         ret60,
+            # ── 機関投資家指標 ──
+            "roe":              roe,
+            "profit_margin":    profit_margin,
+            "revenue_growth":   revenue_growth,
+            "earnings_growth":  earnings_growth,
+            "vol_trend":        vol_trend,
+            "price_position":   price_position,
             # ── 決算日 ──
             "earnings_date":          earnings_date,
             "days_since_earnings":    days_since_earnings,
@@ -799,6 +824,83 @@ def calc_score_bluechip(s):
     return max(0, min(score, 100))
 
 
+def calc_score_momentum(s):
+    """🚀 勢いスコア：モメンタム+クオリティ+出来高で上昇トレンド銘柄を検出
+    
+    機関投資家のクオンツモデルを簡易再現:
+      - モメンタム（上がっている株はさらに上がる）
+      - クオリティ（ROE・利益成長が高い）
+      - 出来高トレンド（機関の参入を検知）
+      - セクター強度（セクター全体が強い = 追い風）
+    """
+    mc = s.get("market_cap_b", 0)
+    if mc < 300: return 0  # 最低時価総額300億
+
+    score = 0
+
+    # ── モメンタム指標（max 40pt）── 最重要
+    # 20日モメンタム (max 20pt)
+    r20 = s.get("ret20", 0)
+    score += (20 if r20 >= 15 else 16 if r20 >= 10 else 12 if r20 >= 5
+              else 6 if r20 >= 2 else 0)
+
+    # 60日モメンタム (max 10pt)
+    r60 = s.get("ret60", 0)
+    score += (10 if r60 >= 25 else 8 if r60 >= 15 else 5 if r60 >= 8
+              else 2 if r60 >= 3 else 0)
+
+    # 5日モメンタム — 短期の勢い (max 10pt)
+    r5 = s.get("ret5", 0)
+    score += (10 if r5 >= 5 else 7 if r5 >= 3 else 4 if r5 >= 1
+              else 1 if r5 >= 0 else 0)
+
+    # ── クオリティ指標（max 25pt）──
+    # ROE (max 10pt)
+    roe = s.get("roe", 0)
+    score += (10 if roe >= 15 else 7 if roe >= 10 else 4 if roe >= 7
+              else 2 if roe >= 5 else 0)
+
+    # 利益成長率 (max 8pt)
+    eg = s.get("earnings_growth", 0)
+    score += (8 if eg >= 30 else 6 if eg >= 15 else 4 if eg >= 5
+              else 1 if eg >= 0 else 0)
+
+    # 売上成長率 (max 7pt)
+    rg = s.get("revenue_growth", 0)
+    score += (7 if rg >= 20 else 5 if rg >= 10 else 3 if rg >= 5
+              else 1 if rg >= 0 else 0)
+
+    # ── 出来高・需給（max 20pt）──
+    # 出来高トレンド — 機関参入の痕跡 (max 12pt)
+    vt = s.get("vol_trend", 1)
+    score += (12 if vt >= 2.5 else 9 if vt >= 1.8 else 6 if vt >= 1.3
+              else 3 if vt >= 1.1 else 0)
+
+    # 出来高倍率1日 (max 8pt)
+    vr1d = s.get("vol_ratio_1d", 1)
+    score += (8 if vr1d >= 3.0 else 6 if vr1d >= 2.0 else 4 if vr1d >= 1.5
+              else 1 if vr1d >= 1.1 else 0)
+
+    # ── セクター追い風（max 10pt）──
+    sec_r5 = s.get("sector_ret5", 0)
+    score += (10 if sec_r5 >= 3 else 7 if sec_r5 >= 1.5 else 4 if sec_r5 >= 0.5
+              else 0)
+
+    # ── 価格位置ペナルティ ──
+    # 52週高値圏すぎると過熱リスク
+    pp = s.get("price_position", 50)
+    if pp >= 98:
+        score -= 5  # 天井圏ペナルティ
+
+    # ── ボーナス ──
+    # 配当もあってモメンタムも強い = 最強
+    div = s.get("dividend", 0)
+    if div >= 2 and r20 >= 5:
+        score += 5
+
+    return max(0, min(score, 100))
+
+
 def calc_score_growth(s):
     """成長押し目スコア：MA乖離・RSI重視・小型OK"""
     d25 = (s["price"] - s["ma25"]) / s["ma25"] * 100 if s["ma25"] else 0
@@ -941,6 +1043,7 @@ def main():
         s["score_stable"]   = calc_score_stable(s)
         s["score_growth"]   = calc_score_growth(s)
         s["score_bluechip"] = calc_score_bluechip(s)
+        s["score_momentum"] = calc_score_momentum(s)
         s["score"]          = s["score_bluechip"]
     results.sort(key=lambda x:-x["score"])
 
@@ -1016,8 +1119,10 @@ def main():
     KEEP = {"code","name","sector","price","ma25","ma75","rsi","dividend",
             "pbr","per","vol_r","vol_ratio_1d","ret_1d","range_pct","trend_score",
             "score_dividend","score_value","score_rebound",
-            "score_stable","score_growth","score_bluechip",
+            "score_stable","score_growth","score_bluechip","score_momentum",
             "score","prev_score","market_cap_b","volatility","dip_zscore","ret5","ret10",
+            "ret20","ret60","roe","profit_margin","revenue_growth","earnings_growth",
+            "vol_trend","price_position",
             "sector_ret5","sector_ret10","ret5_vs_sector","ret10_vs_sector","div_growth_years",
             "earnings_date","days_since_earnings","days_to_next_earnings"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
@@ -1034,6 +1139,7 @@ def main():
         "trend_ranking":   trend_ranking_data,
         "stocks":          stocks_out,          # TOP200+大型高配当を配信
     }
+    # ── NaN/Inf防止（恒久対策）──
     import math as _math
     def sanitize(obj):
         if isinstance(obj, dict):
@@ -1065,6 +1171,8 @@ def main():
     os.makedirs(history_dir, exist_ok=True)
     # TOP50 + 各指標値を記録（検証用）
     top50 = results[:50]
+    # モメンタムTOP5（勢いスコア順）
+    momentum_sorted = sorted(results, key=lambda x: -x.get("score_momentum", 0))[:5]
     history_entry = {
         "date": today_str,
         "updated_at": output["updated_at"],
@@ -1079,6 +1187,13 @@ def main():
              "sector": s.get("sector",""), "sector_ret5": s.get("sector_ret5",0),
              "div_growth_years": s.get("div_growth_years",0), "price": s["price"]}
             for s in top50[:5]
+        ],
+        "top5_momentum": [
+            {"code": s["code"], "name": s.get("name",""), "score_momentum": s.get("score_momentum",0),
+             "ret20": s.get("ret20",0), "ret60": s.get("ret60",0), "roe": s.get("roe",0),
+             "vol_trend": s.get("vol_trend",1), "sector_ret5": s.get("sector_ret5",0),
+             "price": s["price"]}
+            for s in momentum_sorted
         ],
         "top50_codes": [s["code"] for s in top50],
         "top50_scores": [{"code":s["code"],"score":s["score"],"price":s["price"],

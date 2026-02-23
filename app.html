@@ -231,6 +231,13 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .earnings-badge.recent{background:#001a2d;color:#5bc0de;}
 
 /* ── TODAY'S TOP5 ── */
+/* ── TODAY'S TOP5 DUAL ── */
+.top5-dual{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;
+}
+@media(max-width:700px){
+  .top5-dual{grid-template-columns:1fr;}
+}
 .top5-section{
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
   margin-bottom:14px;overflow:hidden;
@@ -634,13 +641,22 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
       <div class="events-list" id="eventsList"></div>
     </div>
 
-    <!-- TODAY'S TOP5 -->
-    <div class="top5-section" id="top5Section" style="display:none">
-      <div class="top5-header">
-        <div class="top5-title">🎯 今日の注目 TOP5</div>
-        <div class="top5-sub">銘柄の質×割安度×タイミングで総合評価・毎朝自動更新</div>
+    <!-- TODAY'S TOP5 DUAL -->
+    <div class="top5-dual" id="top5Section" style="display:none">
+      <div class="top5-section" style="border-left:4px solid var(--green)">
+        <div class="top5-header">
+          <div class="top5-title">🛡 押し目 TOP5</div>
+          <div class="top5-sub">高配当×割安×タイミング — 下がった優良株を狙う</div>
+        </div>
+        <div class="top5-list" id="top5List"></div>
       </div>
-      <div class="top5-list" id="top5List"></div>
+      <div class="top5-section" style="border-left:4px solid #e040fb">
+        <div class="top5-header">
+          <div class="top5-title">🚀 勢い TOP5</div>
+          <div class="top5-sub">モメンタム×ROE×出来高 — 上昇トレンドに乗る</div>
+        </div>
+        <div class="top5-list" id="top5MomList"></div>
+      </div>
     </div>
 
     <!-- FILTER BAR -->
@@ -652,7 +668,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
         <div class="filter-tab" id="disp-all" onclick="setDispCount(999,this)">全件</div>
       </div>
       <div class="filter-count" id="filterCount"></div>
-      <div id="styleNote" style="font-size:10px;color:var(--green);margin-left:auto;">🔬 バックテスト最適化済み — タイミング重視</div>
+      <div id="styleNote" style="font-size:10px;color:var(--green);margin-left:auto;">🛡 押し目 + 🚀 勢い 2軸スコアで評価</div>
     </div>
 
     <!-- SECTOR FILTER -->
@@ -789,6 +805,7 @@ const SAMPLE_STOCKS=[
 
 let STOCKS=[...SAMPLE_STOCKS];
 let processed=[];
+let processedMomentum=[];
 let dataSource='sample';
 let currentMode='dividend';
 let currentStyleTab='bluechip'; // 'bluechip', 'stable', 'growth'
@@ -1010,6 +1027,70 @@ function calcBreakdownBluechip(s){
   return bd;
 }
 
+function calcScoreMomentum(s){
+  const mc=s.market_cap_b||0;
+  if(mc<300)return 0;
+  let score=0;
+  // モメンタム (max 40pt)
+  const r20=s.ret20||0;
+  score+=r20>=15?20:r20>=10?16:r20>=5?12:r20>=2?6:0;
+  const r60=s.ret60||0;
+  score+=r60>=25?10:r60>=15?8:r60>=8?5:r60>=3?2:0;
+  const r5=s.ret5||0;
+  score+=r5>=5?10:r5>=3?7:r5>=1?4:r5>=0?1:0;
+  // クオリティ (max 25pt)
+  const roe=s.roe||0;
+  score+=roe>=15?10:roe>=10?7:roe>=7?4:roe>=5?2:0;
+  const eg=s.earnings_growth||0;
+  score+=eg>=30?8:eg>=15?6:eg>=5?4:eg>=0?1:0;
+  const rg=s.revenue_growth||0;
+  score+=rg>=20?7:rg>=10?5:rg>=5?3:rg>=0?1:0;
+  // 出来高 (max 20pt)
+  const vt=s.vol_trend||1;
+  score+=vt>=2.5?12:vt>=1.8?9:vt>=1.3?6:vt>=1.1?3:0;
+  const vr=s.vol_ratio_1d||1;
+  score+=vr>=3?8:vr>=2?6:vr>=1.5?4:vr>=1.1?1:0;
+  // セクター追い風 (max 10pt)
+  const sr5=s.sector_ret5||0;
+  score+=sr5>=3?10:sr5>=1.5?7:sr5>=0.5?4:0;
+  // ペナルティ
+  const pp=s.price_position||50;
+  if(pp>=98)score-=5;
+  // ボーナス
+  const div=s.dividend||0;
+  if(div>=2&&r20>=5)score+=5;
+  return Math.max(0,Math.min(score,100));
+}
+
+function calcBreakdownMomentum(s){
+  const bd=[];
+  const r20=s.ret20||0;
+  const r20p=r20>=15?20:r20>=10?16:r20>=5?12:r20>=2?6:0;
+  if(r20p>0)bd.push({l:'20日モメンタム('+r20.toFixed(1)+'%)',v:r20p,max:20,pos:true});
+  const r60=s.ret60||0;
+  const r60p=r60>=25?10:r60>=15?8:r60>=8?5:r60>=3?2:0;
+  if(r60p>0)bd.push({l:'60日モメンタム('+r60.toFixed(1)+'%)',v:r60p,max:10,pos:true});
+  const r5=s.ret5||0;
+  const r5p=r5>=5?10:r5>=3?7:r5>=1?4:r5>=0?1:0;
+  if(r5p>0)bd.push({l:'5日モメンタム',v:r5p,max:10,pos:true});
+  const roe=s.roe||0;
+  const roep=roe>=15?10:roe>=10?7:roe>=7?4:roe>=5?2:0;
+  if(roep>0)bd.push({l:'ROE('+roe+'%)',v:roep,max:10,pos:true});
+  const eg=s.earnings_growth||0;
+  const egp=eg>=30?8:eg>=15?6:eg>=5?4:eg>=0?1:0;
+  if(egp>0)bd.push({l:'利益成長('+eg+'%)',v:egp,max:8,pos:true});
+  const rg=s.revenue_growth||0;
+  const rgp=rg>=20?7:rg>=10?5:rg>=5?3:rg>=0?1:0;
+  if(rgp>0)bd.push({l:'売上成長('+rg+'%)',v:rgp,max:7,pos:true});
+  const vt=s.vol_trend||1;
+  const vtp=vt>=2.5?12:vt>=1.8?9:vt>=1.3?6:vt>=1.1?3:0;
+  if(vtp>0)bd.push({l:'出来高トレンド(×'+vt+')',v:vtp,max:12,pos:true});
+  const sr5=s.sector_ret5||0;
+  const srp=sr5>=3?10:sr5>=1.5?7:sr5>=0.5?4:0;
+  if(srp>0)bd.push({l:'セクター追い風('+sr5.toFixed(1)+'%)',v:srp,max:10,pos:true});
+  return bd;
+}
+
 // ═══════════════════════════════════════
 // PROCESS
 // ═══════════════════════════════════════
@@ -1033,9 +1114,19 @@ function processStocks(){
   processed=list.map(s=>{
     const d25=dv(s.price,s.ma25);
     const score = calcScoreBluechip(s);
+    const scoreMom = s.score_momentum||calcScoreMomentum(s);
     const zone=getZone(score);
-    return{...s,d25,score,zone};
+    return{...s,d25,score,scoreMom,zone};
   });
+
+  // 🚀 勢いTOP5用（全銘柄、時価総額300億以上）
+  processedMomentum=STOCKS.filter(s=>(s.market_cap_b||0)>=300).map(s=>{
+    const d25=dv(s.price,s.ma25);
+    const scoreMom=s.score_momentum||calcScoreMomentum(s);
+    const score=calcScoreBluechip(s);
+    const zone=getZone(score);
+    return{...s,d25,score,scoreMom,zone};
+  }).sort((a,b)=>b.scoreMom-a.scoreMom);
 
   if(zoneFilter==='buy')processed=processed.filter(s=>s.zone.cls==='buy');
   else if(zoneFilter==='buywatch')processed=processed.filter(s=>s.zone.cls!=='hold');
@@ -1249,7 +1340,7 @@ function renderTable(){
 
     const detailRow=isExpanded?`
       <tr class="detail-row" id="detail-${s.code}">
-        <td colspan="10">
+        <td colspan="11">
           ${buildDetailBox(s)}
         </td>
       </tr>`:'';
@@ -1268,6 +1359,7 @@ function renderTable(){
         </td>
         <td><span class="tbl-zone ${s.zone.cls}">${s.zone.label}</span></td>
         <td><span class="tbl-score ${sc}">${s.score}</span></td>
+        <td><span class="tbl-score" style="color:${s.scoreMom>=50?'#e040fb':'var(--text3)'};font-size:${s.scoreMom>=50?'12px':'11px'}">${s.scoreMom||'—'}</span></td>
         <td class="tbl-num">${s.dividend}%</td>
         <td class="tbl-num ${d25cls}">${s.d25>0?'+':''}${s.d25}%</td>
         <td class="tbl-num ${s.rsi<=30?'dn':''}">${s.rsi}</td>
@@ -1287,7 +1379,8 @@ function renderTable(){
           <th style="text-align:left;width:28px">#</th>
           ${thClick('name','銘柄')}
           <th>ゾーン</th>
-          ${thClick('score','スコア')}
+          ${thClick('score','🛡押目')}
+          ${thClick('scoreMom','🚀勢い')}
           ${thClick('dividend','配当%')}
           ${thClick('d25','MA乖離')}
           ${thClick('rsi','RSI')}
@@ -1304,6 +1397,8 @@ function buildDetailBox(s){
   const d25=s.d25;
   const reasons=buildReasons(s,d25);
   const bd=calcBreakdown(s,currentMode);
+  const bdMom=calcBreakdownMomentum(s);
+  const momScore=s.scoreMom||calcScoreMomentum(s);
   const isFav=watchlist.includes(s.code);
 
   const whyHtml=reasons.length?reasons.map(w=>`
@@ -1323,6 +1418,15 @@ function buildDetailBox(s){
       <div class="bd-v ${item.pos?'pos':'neg'}">${item.v>0?'+':''}${item.v}点</div>
     </div>`).join('');
 
+  const bdMomHtml=bdMom.map(item=>`
+    <div class="bd-row">
+      <div class="bd-l">${item.l}</div>
+      <div class="bd-bar"><div class="bd-fill" style="width:${Math.min(Math.abs(item.v)/item.max*100,100)}%;background:#e040fb"></div></div>
+      <div class="bd-v pos" style="color:#e040fb">${item.v>0?'+':''}${item.v}点</div>
+    </div>`).join('');
+
+  const r20=s.ret20||0;const r60=s.ret60||0;
+
   return`<div class="detail-box fadein">
     <div class="detail-grid">
       <div>
@@ -1330,8 +1434,10 @@ function buildDetailBox(s){
         <div class="why-items">${whyHtml}</div>
       </div>
       <div>
-        <div class="detail-section-title">スコア内訳（${s.score}点）</div>
+        <div class="detail-section-title">🛡 押し目スコア内訳（${s.score}点）</div>
         <div class="score-breakdown">${bdHtml}</div>
+        <div class="detail-section-title" style="margin-top:12px">🚀 勢いスコア内訳（${momScore}点）</div>
+        <div class="score-breakdown">${bdMomHtml}</div>
         <table style="width:100%;border-collapse:collapse;font-size:11px;margin-top:12px">
           <tr>
             <th style="background:var(--bg3);padding:5px 8px;text-align:left;font-size:10px;color:var(--text3)">指標</th>
@@ -1340,8 +1446,10 @@ function buildDetailBox(s){
           </tr>
           <tr><td style="padding:5px 8px;font-size:11px">現在値</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">¥${s.price.toLocaleString()}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">—</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">時価総額</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.market_cap_b>=10000?Math.round(s.market_cap_b/10000*10)/10+'兆円':s.market_cap_b?s.market_cap_b+'億円':'—'}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">1兆円以上が大型</td></tr>
-          <tr><td style="padding:5px 8px;font-size:11px">25MA乖離</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${s.d25<0?'var(--up)':'var(--dn)'}">${s.d25>0?'+':''}${s.d25}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">-5%以下が目安</td></tr>
-          <tr><td style="padding:5px 8px;font-size:11px">RSI</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.rsi}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">30以下が強い</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">ROE</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${(s.roe||0)>=10?'var(--green)':'var(--text)'}">${s.roe||0}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">10%以上が優良</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">利益成長率</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${(s.earnings_growth||0)>0?'var(--green)':'var(--up)'}">${s.earnings_growth||0}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">+15%以上が高成長</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">20日リターン</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${r20>0?'var(--green)':'var(--up)'}">${r20>0?'+':''}${r20.toFixed(1)}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">+5%以上がトレンド</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">60日リターン</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${r60>0?'var(--green)':'var(--up)'}">${r60>0?'+':''}${r60.toFixed(1)}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">中期トレンド</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">配当利回り</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.dividend}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">3%以上が高配当</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">PBR</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.pbr}倍</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">1倍以下が割安</td></tr>
           ${s.days_to_next_earnings?`<tr><td style="padding:5px 8px;font-size:11px">📊 次回決算</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${s.days_to_next_earnings<=14?'var(--orange)':'var(--text)'}">約${s.days_to_next_earnings}日後</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">${s.days_to_next_earnings<=14?'⚠ 決算前注意':'推定値'}</td></tr>`:''}
@@ -1528,19 +1636,23 @@ function genReason(s){
 function renderTop5(){
   const sec=document.getElementById('top5Section');
   if(!sec||!STOCKS.length) return;
-  // bluechipスコアでTOP5
-  const top=STOCKS.filter(s=>(s.dividend||0)>=2&&(s.market_cap_b||0)>=500)
+  // 🛡 押し目TOP5
+  const topDip=STOCKS.filter(s=>(s.dividend||0)>=2&&(s.market_cap_b||0)>=500)
     .map(s=>({...s,bc:calcScoreBluechip(s)}))
     .sort((a,b)=>b.bc-a.bc)
     .slice(0,5);
-  if(!top.length){sec.style.display='none';return;}
-  sec.style.display='block';
-  document.getElementById('top5List').innerHTML=top.map((s,i)=>{
+  // 🚀 勢いTOP5
+  const topMom=STOCKS.filter(s=>(s.market_cap_b||0)>=300)
+    .map(s=>({...s,mc:calcScoreMomentum(s)}))
+    .sort((a,b)=>b.mc-a.mc)
+    .slice(0,5);
+  if(!topDip.length&&!topMom.length){sec.style.display='none';return;}
+  sec.style.display='grid';
+  // 押し目リスト
+  document.getElementById('top5List').innerHTML=topDip.map((s,i)=>{
     const scCls=s.bc>=60?'hi':'';
     const rankCls=i===0?'gold':'';
     const mcTxt=s.market_cap_b>=10000?((s.market_cap_b/10000).toFixed(1)+'兆'):(Math.round(s.market_cap_b)+'億');
-    const r5=s.ret5||0;
-    const r10=s.ret10||0;
     return`<div class="top5-item" onclick="expandedCode='${s.code}';run();document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'})">
       <div class="top5-rank ${rankCls}">${i+1}</div>
       <div class="top5-info">
@@ -1549,12 +1661,44 @@ function renderTop5(){
           <span class="top5-score ${scCls}">${s.bc}pt</span>
         </div>
         <div class="top5-meta">
-          ${s.code} | 配当${s.dividend}%${s.div_growth_years>=5?' ('+s.div_growth_years+'年増配)':''} | 時価総額${mcTxt} | vs業種${(s.ret5_vs_sector||0)>0?'+':''}${(s.ret5_vs_sector||0).toFixed(1)}%
+          ${s.code} | 配当${s.dividend}%${s.div_growth_years>=5?' ('+s.div_growth_years+'年増配)':''} | vs業種${(s.ret5_vs_sector||0)>0?'+':''}${(s.ret5_vs_sector||0).toFixed(1)}%
         </div>
         <div class="top5-reason">${genReason(s)}</div>
       </div>
     </div>`;
   }).join('');
+  // 勢いリスト
+  document.getElementById('top5MomList').innerHTML=topMom.map((s,i)=>{
+    const scCls=s.mc>=60?'hi':'';
+    const rankCls=i===0?'gold':'';
+    const r20=s.ret20||0;const r60=s.ret60||0;
+    return`<div class="top5-item" onclick="expandedCode='${s.code}';run();document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'})">
+      <div class="top5-rank ${rankCls}" style="background:${i===0?'#e040fb':'var(--bg3)'}">${i+1}</div>
+      <div class="top5-info">
+        <div class="top5-name-row">
+          <span class="top5-name">${s.name}</span>
+          <span class="top5-score ${scCls}" style="color:#e040fb">${s.mc}pt</span>
+        </div>
+        <div class="top5-meta">
+          ${s.code} | ROE${s.roe||0}% | 20日${r20>0?'+':''}${r20.toFixed(1)}% | 60日${r60>0?'+':''}${r60.toFixed(1)}% | 出来高×${(s.vol_trend||1).toFixed(1)}
+        </div>
+        <div class="top5-reason">${genReasonMomentum(s)}</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function genReasonMomentum(s){
+  const parts=[];
+  const r20=s.ret20||0;const r60=s.ret60||0;
+  if(r20>=10)parts.push('20日で+'+r20.toFixed(0)+'%の強い上昇トレンド');
+  else if(r20>=5)parts.push('20日で+'+r20.toFixed(0)+'%の上昇基調');
+  if((s.roe||0)>=10)parts.push('ROE'+s.roe+'%の高収益企業');
+  if((s.earnings_growth||0)>=15)parts.push('利益+'+s.earnings_growth+'%成長');
+  if((s.vol_trend||1)>=1.5)parts.push('出来高増加中（機関参入の可能性）');
+  if((s.sector_ret5||0)>=2)parts.push('セクター全体に追い風');
+  if((s.dividend||0)>=2&&r20>=5)parts.push('配当あり×モメンタム＝最強パターン');
+  return parts.slice(0,3).join('。')||'上昇トレンド銘柄';
 }
 
 // ═══════════════════════════════════════
