@@ -579,6 +579,17 @@ def fetch_one(ticker, _retry=0):
         d25_pct = (price - ma25) / ma25 * 100 if ma25 else 0
         dip_zscore = round(d25_pct / volatility, 2) if volatility > 0 else 0
 
+        # ── MA乖離率（%） ──
+        ma25_dev = round((price - ma25) / ma25 * 100, 2) if ma25 else 0
+        ma75_dev = round((price - ma75) / ma75 * 100, 2) if ma75 else 0
+
+        # ── チャート用 終値配列（60日分） ──
+        closes_60d = []
+        if len(closes) >= 60:
+            closes_60d = [round(float(c), 1) for c in closes.iloc[-60:].tolist()]
+        elif len(closes) >= 20:
+            closes_60d = [round(float(c), 1) for c in closes.tolist()]
+
         # ── 短期・中期リターン ──
         ret5  = round((float(closes.iloc[-1]) / float(closes.iloc[-6]) - 1) * 100, 2) if len(closes) >= 6 else 0
         ret10 = round((float(closes.iloc[-1]) / float(closes.iloc[-11]) - 1) * 100, 2) if len(closes) >= 11 else 0
@@ -661,6 +672,10 @@ def fetch_one(ticker, _retry=0):
             "earnings_date":          earnings_date,
             "days_since_earnings":    days_since_earnings,
             "days_to_next_earnings":  days_to_next_earnings,
+            # ── MA乖離率+チャート ──
+            "ma25_dev":       ma25_dev,
+            "ma75_dev":       ma75_dev,
+            "closes_60d":     closes_60d,
         }
     except Exception as e:
         err = str(e).lower()
@@ -939,18 +954,20 @@ def calc_score_momentum(s):
 
 
 def calc_score_trend(s):
-    """📈 時間加重トレンドスコア（統合版）
+    """📈 v7: MA75押し目スコア（クオリティ×タイミング戦略）
     
-    Fama-Frenchモメンタムファクターの簡易実装:
-      - 120日/60日/20日/5日リターンを時間加重
-      - 直近ほど配点が高い（5日=35pt, 20日=25pt, 60日=15pt, 120日=10pt）
-      - 一貫性ボーナス/ペナルティ（±10pt）
-      - 品質フィルター（時価総額300億以上）
+    コンセプト: 「大手で長期上昇中の銘柄をMA75（緑線）タッチで買う」
     
-    結果のパターン:
-      全期間プラス → 勢い銘柄（type: momentum）
-      長期プラス+短期マイナス → 押し目銘柄（type: dip）
-      全期間マイナス → 手を出すな（type: avoid）
+    配点:
+      MA75乖離率      25pt  ← 緑線にどれだけ近いか（押し目の質）
+      MA25乖離率      15pt  ← 短期調整の深さ
+      20日リターン     15pt  ← 直近の方向
+      120日リターン    10pt  ← 長期トレンド
+      60日リターン     10pt  ← 中期トレンド
+      持ってて安心     15pt  ← 安定性+配当+大型
+      一貫性          ±10pt ← トレンドの信頼性
+                     ─────
+                    max 100pt
     """
     mc = s.get("market_cap_b", 0)
     if mc < 300: return 0, "avoid"
@@ -959,96 +976,120 @@ def calc_score_trend(s):
     r120 = s.get("ret120", 0)
     r60  = s.get("ret60", 0)
     r20  = s.get("ret20", 0)
-    r5   = s.get("ret5", 0)
+    ma75_dev = s.get("ma75_dev", 0)
+    ma25_dev = s.get("ma25_dev", 0)
 
-    # ── 120日リターン (max 10pt) ──
+    # ── MA75乖離率 (max 25pt) — 最重要：緑線タッチ ──
+    # MA75の上にいて、かつ近いほど高スコア（押し目の最高ポイント）
+    if 0 <= ma75_dev <= 1:      score += 25   # タッチ寸前 = 最高の押し目
+    elif 0 <= ma75_dev <= 2:    score += 22
+    elif 0 <= ma75_dev <= 3:    score += 18
+    elif 0 <= ma75_dev <= 5:    score += 14
+    elif 0 <= ma75_dev <= 8:    score += 10
+    elif 0 <= ma75_dev <= 12:   score += 6
+    elif ma75_dev > 12:         score += 2    # 離れすぎ（勢いはあるが押し目ではない）
+    elif -2 <= ma75_dev < 0:    score += 15   # わずかに下抜け（反発期待）
+    elif -5 <= ma75_dev < -2:   score += 8    # 下抜け（要注意）
+    else:                       score += 0    # 大きく下抜け = 危険
+
+    # ── MA25乖離率 (max 15pt) — 短期調整の深さ ──
+    if -5 <= ma25_dev <= -3:    score += 15   # 良い押し目ゾーン
+    elif -8 <= ma25_dev < -5:   score += 12   # 深い押し目（やや危険も）
+    elif -3 <= ma25_dev <= -1:  score += 10   # 軽い調整
+    elif -1 < ma25_dev <= 0:    score += 6    # ほぼMA25上
+    elif 0 < ma25_dev <= 3:     score += 3    # MA25より上（勢い）
+    elif ma25_dev > 3:          score += 8    # 強い上昇トレンド（勢い銘柄用）
+    elif ma25_dev < -8:         score += 5    # 落ちすぎ（リバウンド期待だがリスク）
+
+    # ── 20日リターン (max 15pt) ──
+    if r20 >= 10:     score += 15
+    elif r20 >= 5:    score += 12
+    elif r20 >= 2:    score += 8
+    elif r20 >= 0:    score += 4
+    elif r20 >= -3:   score += 6   # 軽い押し目
+    elif r20 >= -5:   score += 10  # 良い押し目
+    elif r20 >= -8:   score += 8   # 深い押し目
+    else:             score += 3   # 落ちすぎ
+
+    # ── 120日リターン (max 10pt) — 長期トレンド ──
     if r120 >= 30:    score += 10
     elif r120 >= 15:  score += 8
-    elif r120 >= 5:   score += 5
-    elif r120 >= 0:   score += 2
+    elif r120 >= 5:   score += 6
+    elif r120 >= 0:   score += 3
     elif r120 >= -5:  score += 0
-    elif r120 >= -15: score -= 3
-    else:             score -= 5
+    else:             score -= 3
 
-    # ── 60日リターン (max 15pt) ──
-    if r60 >= 20:     score += 15
-    elif r60 >= 10:   score += 12
-    elif r60 >= 5:    score += 8
-    elif r60 >= 0:    score += 3
+    # ── 60日リターン (max 10pt) — 中期トレンド ──
+    if r60 >= 15:     score += 10
+    elif r60 >= 8:    score += 8
+    elif r60 >= 3:    score += 5
+    elif r60 >= 0:    score += 2
     elif r60 >= -5:   score += 0
-    elif r60 >= -10:  score -= 3
-    else:             score -= 5
+    else:             score -= 3
 
-    # ── 20日リターン (max 25pt) ──
-    if r20 >= 15:     score += 25
-    elif r20 >= 8:    score += 20
-    elif r20 >= 3:    score += 14
-    elif r20 >= 0:    score += 5
-    elif r20 >= -3:   score += 0
-    elif r20 >= -5:   score += 8   # 押し目チャンス加点
-    elif r20 >= -10:  score += 14  # より深い押し目
-    else:             score += 5   # 落ちすぎはリスク
+    # ── 持ってて安心スコア (max 15pt) ──
+    div = s.get("dividend", 0)
+    vol = s.get("volatility", 2)
+    roe = s.get("roe", 0)
+    pbr = s.get("pbr", 99)
 
-    # ── 5日リターン (max 35pt) — 最重要 ──
-    # 押し目（短期下落）にも勢い（短期上昇）にも加点する設計
-    if r5 <= -8:      score += 15  # 深い押し目（落ちすぎリスクあり）
-    elif r5 <= -5:    score += 30  # 最高の押し目ゾーン
-    elif r5 <= -3:    score += 25  # 良い押し目
-    elif r5 <= -1:    score += 15  # 軽い調整
-    elif r5 <= 1:     score += 5   # 横ばい
-    elif r5 <= 3:     score += 15  # 上昇中
-    elif r5 <= 5:     score += 25  # 強い上昇
-    elif r5 <= 8:     score += 30  # 急騰（勢い最高）
-    else:             score += 20  # 暴騰（過熱リスク）
+    # 配当の厚み (max 5pt)
+    if div >= 4:     score += 5
+    elif div >= 3:   score += 4
+    elif div >= 2.5: score += 3
+    elif div >= 2:   score += 2
+
+    # 安定上昇（低ボラ+長期プラス）(max 5pt)
+    if vol <= 1.5 and r120 >= 5:   score += 5
+    elif vol <= 2.0 and r120 >= 5: score += 4
+    elif vol <= 2.5 and r120 >= 0: score += 2
+
+    # 大型安心 (max 5pt)
+    if mc >= 10000:  score += 5   # 1兆以上
+    elif mc >= 5000: score += 4   # 5000億以上
+    elif mc >= 2000: score += 3
+    elif mc >= 1000: score += 2
+    elif mc >= 500:  score += 1
 
     # ── 一貫性ボーナス (±10pt) ──
-    periods = [r120, r60, r20]  # 5日は除外（短期の調整は許容）
+    periods = [r120, r60, r20]
     positive_count = sum(1 for r in periods if r > 0)
     if positive_count == 3:
-        score += 10  # 完璧なトレンド
+        score += 10
     elif positive_count == 2:
         score += 5
-    elif positive_count == 1:
-        score += 0
-    else:
-        score -= 5  # 全期間マイナス = 構造的弱さ
-
-    # ── 出来高トレンド加点 (max 5pt) ──
-    vt = s.get("vol_trend", 1)
-    if vt >= 2.0:   score += 5
-    elif vt >= 1.3:  score += 3
-    elif vt >= 1.1:  score += 1
+    elif positive_count == 0:
+        score -= 5
 
     # ── 急落/過熱ペナルティ ──
     vr1d = s.get("vol_ratio_1d", 1)
     ret_1d = s.get("ret_1d", 0)
-    # パニック売り
-    if vr1d >= 3.0 and ret_1d <= -3:
-        score -= 10
-    # 仕手的急騰
-    if vr1d >= 3.0 and ret_1d >= 5:
-        score -= 8
-    # RSI過熱
     rsi = s.get("rsi", 50)
+    if vr1d >= 3.0 and ret_1d <= -3:
+        score -= 10  # パニック売り
+    if vr1d >= 3.0 and ret_1d >= 5:
+        score -= 8   # 仕手的急騰
     if rsi >= 80:
-        score -= 5
+        score -= 5   # RSI過熱
 
     score = max(0, min(score, 100))
 
     # ── トレンドタイプ判定 ──
-    long_trend = r120 + r60  # 長期方向
-    short_signal = r5         # 短期方向
-
-    if positive_count >= 2 and short_signal <= -2:
-        trend_type = "dip"       # 🛡 長期上昇中の押し目
-    elif positive_count >= 2 and short_signal > 0:
-        trend_type = "momentum"  # 🚀 全面上昇トレンド
-    elif positive_count <= 1 and short_signal <= -2:
-        trend_type = "falling"   # ⚠ 落ちるナイフ
-    elif positive_count <= 1 and short_signal > 2:
-        trend_type = "bounce"    # 🔄 反発（持続性不明）
+    # MA75の上 + MA25の下 = 押し目
+    # MA75の上 + MA25の上 = 勢い
+    # MA75の下 = 危険 or 反発
+    if ma75_dev >= 0 and ma25_dev < 0 and positive_count >= 2:
+        trend_type = "dip"       # 🛡 MA75上でMA25下抜け = 最高の押し目
+    elif ma75_dev >= 0 and ma25_dev >= 0 and positive_count >= 2:
+        trend_type = "momentum"  # 🚀 両MA上 = 勢い
+    elif ma75_dev < 0 and ma25_dev < 0:
+        trend_type = "falling"   # ⚠ 両MA下 = 落ちるナイフ
+    elif ma75_dev < 0 and ma25_dev >= 0:
+        trend_type = "bounce"    # 🔄 MA75下だがMA25上 = 反発
+    elif ma75_dev >= 0 and positive_count <= 1:
+        trend_type = "neutral"   # 😐 MA75上だがトレンド不明
     else:
-        trend_type = "neutral"   # 😐 方向感なし
+        trend_type = "neutral"
 
     return score, trend_type
 
@@ -1279,7 +1320,8 @@ def main():
             "ret20","ret60","ret120","roe","profit_margin","revenue_growth","earnings_growth",
             "vol_trend","price_position","score_trend","trend_type",
             "sector_ret5","sector_ret10","ret5_vs_sector","ret10_vs_sector","div_growth_years",
-            "earnings_date","days_since_earnings","days_to_next_earnings"}
+            "earnings_date","days_since_earnings","days_to_next_earnings",
+            "ma25_dev","ma75_dev","closes_60d"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
 
     output = {
