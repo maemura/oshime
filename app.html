@@ -883,6 +883,13 @@ function calcScoreBluechip(s){
   // 安定株ボーナス (max 5pt)
   if((s.per||0)>0&&div>=2&&mc>=5000) score+=5;
   else if((s.per||0)>0&&div>=2&&mc>=1000) score+=3;
+  // 急落ペナルティ（落ちるナイフ回避）
+  const vr1d_b=s.vol_ratio_1d||1;
+  if(vr1d_b>=3)score-=10;else if(vr1d_b>=2.5)score-=5;
+  const ret1d_b=s.ret_1d||0;
+  if(ret1d_b<=-5)score-=8;else if(ret1d_b<=-3)score-=4;
+  const vol_b=s.volatility||2;
+  if(vol_b>=4)score-=5;
   return Math.max(0,Math.min(score,100));
 }
 function calcScoreStable(s){
@@ -1024,6 +1031,15 @@ function calcBreakdownBluechip(s){
   if(pp>0)bd.push({l:'PBR',v:pp,max:5,pos:true});
   if((s.per||0)>0&&div>=2&&mc>=5000) bd.push({l:'安定株ボーナス',v:5,max:5,pos:true});
   else if((s.per||0)>0&&div>=2&&mc>=1000) bd.push({l:'安定株ボーナス',v:3,max:5,pos:true});
+  // 急落ペナルティ
+  const vr1d_bd=s.vol_ratio_1d||1;
+  if(vr1d_bd>=3)bd.push({l:'出来高急増ペナルティ(×'+vr1d_bd.toFixed(1)+')',v:-10,max:10,pos:false});
+  else if(vr1d_bd>=2.5)bd.push({l:'出来高増ペナルティ(×'+vr1d_bd.toFixed(1)+')',v:-5,max:5,pos:false});
+  const ret1d_bd=s.ret_1d||0;
+  if(ret1d_bd<=-5)bd.push({l:'急落ペナルティ('+ret1d_bd.toFixed(1)+'%)',v:-8,max:8,pos:false});
+  else if(ret1d_bd<=-3)bd.push({l:'下落ペナルティ('+ret1d_bd.toFixed(1)+'%)',v:-4,max:4,pos:false});
+  const vol_bd=s.volatility||2;
+  if(vol_bd>=4)bd.push({l:'高ボラペナルティ('+vol_bd.toFixed(1)+'%)',v:-5,max:5,pos:false});
   return bd;
 }
 
@@ -1056,6 +1072,13 @@ function calcScoreMomentum(s){
   // ペナルティ
   const pp=s.price_position||50;
   if(pp>=98)score-=5;
+  // 過熱ペナルティ（高値掴み回避）
+  const rsi_m=s.rsi||50;
+  if(rsi_m>=80)score-=8;else if(rsi_m>=75)score-=4;
+  const vr_m=s.vol_ratio_1d||1;
+  if(vr_m>=3&&r5>=5)score-=5;
+  const ret1d_m=s.ret_1d||0;
+  if(ret1d_m>=7)score-=5;else if(ret1d_m>=5)score-=3;
   // ボーナス
   const div=s.dividend||0;
   if(div>=2&&r20>=5)score+=5;
@@ -1559,16 +1582,36 @@ function renderTrendTab(){
 }
 
 function renderDanger(){
+  // TOP5銘柄コードを収集（押し目+勢い両方）
+  const topDipCodes=new Set(
+    STOCKS.filter(s=>(s.dividend||0)>=2&&(s.market_cap_b||0)>=500)
+    .map(s=>({code:s.code,bc:calcScoreBluechip(s)}))
+    .sort((a,b)=>b.bc-a.bc).slice(0,5).map(s=>s.code)
+  );
+  const topMomCodes=new Set(
+    STOCKS.filter(s=>(s.market_cap_b||0)>=300)
+    .map(s=>({code:s.code,mc:calcScoreMomentum(s)}))
+    .sort((a,b)=>b.mc-a.mc).slice(0,5).map(s=>s.code)
+  );
+  const excludeCodes=new Set([...topDipCodes,...topMomCodes]);
+
   const dangers=STOCKS.map(s=>{
+    // TOP5に入っている銘柄は除外
+    if(excludeCodes.has(s.code))return null;
     const reasons=[];
-    if(s.vol_r>=2.0)reasons.push(`出来高${s.vol_r}倍急増`);
-    else if(s.vol_r>=1.5)reasons.push(`出来高${s.vol_r}倍増`);
+    // 条件を厳格化（複数条件が重なった銘柄のみ）
+    let dangerScore=0;
+    if(s.vol_r>=2.0){reasons.push(`出来高${s.vol_r}倍急増`);dangerScore+=2;}
+    else if(s.vol_r>=1.5){reasons.push(`出来高${s.vol_r}倍増`);dangerScore+=1;}
     const d25=dv(s.price,s.ma25);
-    if(d25>=5)reasons.push(`25MA比+${d25}%（高値圏）`);
-    if(s.rsi>=70)reasons.push(`RSI ${s.rsi}（買われすぎ）`);
-    return{...s,d25,dangerReasons:reasons};
-  }).filter(s=>s.dangerReasons.length>0)
-    .sort((a,b)=>b.vol_r-a.vol_r)
+    if(d25>=5){reasons.push(`25MA比+${d25}%（高値圏）`);dangerScore+=2;}
+    if(s.rsi>=70){reasons.push(`RSI ${s.rsi}（買われすぎ）`);dangerScore+=2;}
+    const ret1d=s.ret_1d||0;
+    if(ret1d<=-5){reasons.push(`前日${ret1d.toFixed(1)}%急落`);dangerScore+=2;}
+    if(dangerScore<2)return null; // 1つだけでは避けたいとは言わない
+    return{...s,d25,dangerReasons:reasons,dangerScore};
+  }).filter(s=>s!==null)
+    .sort((a,b)=>b.dangerScore-a.dangerScore)
     .slice(0,5);
 
   if(!dangers.length){
@@ -1591,7 +1634,7 @@ function renderDanger(){
             </div>
           </div>`).join('')}
       </div>
-      <div style="font-size:10px;color:var(--text3);margin-top:8px">出来高急増・高値圏・RSI過熱を検知した銘柄。押し目買いの対象からは外すことを推奨します。</div>
+      <div style="font-size:10px;color:var(--text3);margin-top:8px">複数の過熱・急落シグナルが重なった銘柄。押し目買い・勢い買いの対象からは外すことを推奨します。</div>
     </div>`;
 }
 

@@ -821,6 +821,24 @@ def calc_score_bluechip(s):
     elif s.get("per", 0) > 0 and div >= 2 and mc >= 1000:
         score += 3
 
+    # ── 急落ペナルティ（落ちるナイフ回避）──
+    # 出来高倍率3倍以上 = パニック売りの可能性
+    vr1d = s.get("vol_ratio_1d", 1)
+    if vr1d >= 3.0:
+        score -= 10
+    elif vr1d >= 2.5:
+        score -= 5
+    # 1日の下落が-5%超 = 悪材料の可能性
+    ret_1d = s.get("ret_1d", 0)
+    if ret_1d <= -5:
+        score -= 8
+    elif ret_1d <= -3:
+        score -= 4
+    # ボラティリティが通常の2倍以上 = 不安定
+    vol = s.get("volatility", 2)
+    if vol >= 4.0:  # 通常2%程度なので4%以上は異常
+        score -= 5
+
     return max(0, min(score, 100))
 
 
@@ -887,13 +905,30 @@ def calc_score_momentum(s):
               else 0)
 
     # ── 価格位置ペナルティ ──
-    # 52週高値圏すぎると過熱リスク
     pp = s.get("price_position", 50)
     if pp >= 98:
         score -= 5  # 天井圏ペナルティ
 
+    # ── 過熱ペナルティ（高値掴み回避）──
+    # RSI80以上 = 買われすぎ
+    rsi = s.get("rsi", 50)
+    if rsi >= 80:
+        score -= 8
+    elif rsi >= 75:
+        score -= 4
+    # 出来高倍率3倍以上 + 急騰 = 仕手的な動き
+    vr1d = s.get("vol_ratio_1d", 1)
+    r5 = s.get("ret5", 0)
+    if vr1d >= 3.0 and r5 >= 5:
+        score -= 5  # 急騰+出来高急増 = 過熱警戒
+    # 1日で+5%以上 = ギャップアップ後の反落リスク
+    ret_1d = s.get("ret_1d", 0)
+    if ret_1d >= 7:
+        score -= 5
+    elif ret_1d >= 5:
+        score -= 3
+
     # ── ボーナス ──
-    # 配当もあってモメンタムも強い = 最強
     div = s.get("dividend", 0)
     if div >= 2 and r20 >= 5:
         score += 5
