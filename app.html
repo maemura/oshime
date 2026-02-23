@@ -201,12 +201,7 @@ a{color:var(--blue-m);text-decoration:none;}
 .d-card{text-align:center;padding:10px 6px;background:var(--card);border-radius:8px;border:1px solid var(--border);}
 .d-card b{font-family:var(--fn);font-size:18px;font-weight:800;display:block;}
 .d-card small{font-size:9px;color:var(--text3);}
-/* 安心度 */
-.d-safe{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:8px;}
-.d-safe-item{text-align:center;padding:8px 4px;background:var(--card);border-radius:8px;border:1px solid var(--border);}
-.d-safe-stars{font-size:14px;letter-spacing:1px;display:block;line-height:1.3;}
-.d-safe-lbl{font-size:9px;color:var(--text3);display:block;margin-top:2px;}
-.d-safe-val{font-size:9px;font-family:var(--fn);font-weight:600;color:var(--text2);display:block;}
+/* (safety rating uses inline styles now) */
 .d-signal{background:var(--blue-l);border-radius:8px;padding:12px;margin-top:10px;border:1px solid rgba(27,106,201,0.12);}
 .d-signal b{font-size:10px;font-weight:700;color:var(--blue);display:block;margin-bottom:4px;}
 .d-signal p{font-size:11px;color:var(--text);line-height:1.7;margin:0;}
@@ -647,31 +642,64 @@ function toggleExpand(code){
   }
 }
 
+function calcPercentile(val, arr){
+  if(!arr.length)return 50;
+  const sorted=[...arr].sort((a,b)=>a-b);
+  let idx=sorted.findIndex(v=>v>=val);
+  if(idx<0)idx=sorted.length;
+  return Math.round((idx/sorted.length)*100);
+}
+
 function buildSafetyRating(s){
-  // 時価総額: ★★★=1兆+, ★★☆=3000億~1兆, ★☆☆=<3000億
+  // 全銘柄の値を集める
+  const allMcap=processed.map(x=>x.market_cap_b||0);
+  const allAvgVol=processed.map(x=>x.avg_volume||0);
+  const allVolR=processed.map(x=>x.vol_ratio_1d||1);
+
+  // パーセンタイル計算（上位○%）
+  const mcapPct=calcPercentile(s.market_cap_b||0, allMcap);
+  const volAvgPct=calcPercentile(s.avg_volume||0, allAvgVol);
+  const volRPct=calcPercentile(s.vol_ratio_1d||1, allVolR);
+
+  // 企業規模
   const mc=s.market_cap_b||0;
-  let mcStars,mcLbl,mcVal;
-  if(mc>=10000){mcStars='★★★';mcLbl='大型株';mcVal=`${(mc/10000).toFixed(1)}兆円`;}
-  else if(mc>=3000){mcStars='★★☆';mcLbl='中型株';mcVal=`${Math.round(mc/100)*100>9999?(mc/10000).toFixed(1)+'兆':Math.round(mc)}億円`;}
-  else{mcStars='★☆☆';mcLbl='小型株';mcVal=`${Math.round(mc)}億円`;}
-  // 流動性: 出来高比で簡易判定
+  let mcVal;
+  if(mc>=10000)mcVal=`${(mc/10000).toFixed(1)}兆円`;
+  else if(mc>=1000)mcVal=`${(mc/1000).toFixed(1)}千億円`;
+  else mcVal=`${Math.round(mc)}億円`;
+
+  // 平均出来高
+  const avgVol=s.avg_volume||0;
+  let volLabel;
+  if(avgVol>=1000000)volLabel=`平均${(avgVol/10000).toFixed(0)}万株/日`;
+  else if(avgVol>=10000)volLabel=`平均${(avgVol/10000).toFixed(1)}万株/日`;
+  else volLabel=`平均${avgVol.toLocaleString()}株/日`;
+
+  // 今日の出来高比
   const vr=s.vol_ratio_1d||1;
-  let lqStars,lqLbl;
-  if(mc>=10000||vr>=2){lqStars='★★★';lqLbl='売買しやすい';}
-  else if(mc>=3000||vr>=1.2){lqStars='★★☆';lqLbl='ふつう';}
-  else{lqStars='★☆☆';lqLbl='注意';}
-  // 今日の出来高
-  let volStars,volLbl;
-  if(vr>=2.5){volStars='★★★';volLbl='注目度が高い';}
-  else if(vr>=1.3){volStars='★★☆';volLbl='やや活発';}
-  else{volStars='★☆☆';volLbl='静か';}
-  return `<div class="d-safe">
-    <div class="d-safe-item"><span class="d-safe-stars">${mcStars}</span><span class="d-safe-lbl">🏢 企業規模</span><span class="d-safe-val">${mcVal}</span></div>
-    <div class="d-safe-item"><span class="d-safe-stars">${lqStars}</span><span class="d-safe-lbl">💧 売買のしやすさ</span><span class="d-safe-val">${lqLbl}</span></div>
-    <div class="d-safe-item"><span class="d-safe-stars">${volStars}</span><span class="d-safe-lbl">📊 今日の注目度</span><span class="d-safe-val">${volLbl}</span></div>
-  </div>
-  <div style="font-size:9px;color:var(--text3);margin:-2px 0 8px;line-height:1.5">
-    🛡 ★が多い＝初心者でも安心して持てる銘柄
+  const vrLabel=`いつもの${vr.toFixed(1)}倍`;
+
+  function bar(pct,label,icon,val,color){
+    const topPct=100-pct; // 上位○%に変換
+    const barColor=pct>=70?color:pct>=35?'var(--amber)':'var(--red)';
+    return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:11px">
+      <div style="min-width:110px;color:var(--text2);font-weight:500">${icon} ${label}</div>
+      <div style="flex:1;height:8px;background:var(--border-l);border-radius:4px;overflow:hidden;position:relative">
+        <div style="width:${pct}%;height:100%;background:${barColor};border-radius:4px;transition:width .3s"></div>
+      </div>
+      <div style="min-width:70px;text-align:right;font-family:var(--fn);font-size:10px;font-weight:700;color:${barColor}">上位${topPct}%</div>
+      <div style="min-width:80px;text-align:right;font-size:10px;color:var(--text3)">${val}</div>
+    </div>`;
+  }
+
+  return `<div style="margin-bottom:10px;padding:10px;background:var(--card);border-radius:8px;border:1px solid var(--border)">
+    <div style="font-size:10px;font-weight:700;color:var(--text2);margin-bottom:8px">🛡 この銘柄の安心度（全${processed.length}銘柄中）</div>
+    ${bar(mcapPct,'企業規模','🏢',mcVal,'var(--green)')}
+    ${bar(volAvgPct,'売買のしやすさ','💧',volLabel,'var(--blue-m)')}
+    ${bar(volRPct,'今日の注目度','📊',vrLabel,'var(--amber)')}
+    <div style="font-size:9px;color:var(--text3);margin-top:4px;line-height:1.5">
+      バーが長い＝全銘柄の中で上位。初心者は規模・売買しやすさが上位30%以内の銘柄がおすすめ
+    </div>
   </div>`;
 }
 
@@ -739,7 +767,7 @@ function buildExpand(s){
         <div class="d-card"><b>${(s.roe||0).toFixed(0)}%</b><small>ROE(稼ぐ力)</small></div>
       </div>
       <div style="font-size:9px;color:var(--text3);margin:-4px 0 8px;line-height:1.6">
-        💡 配当 <strong>3%↑優秀</strong> / PBR <strong>1倍↓割安</strong> / ROE <strong>10%↑稼ぐ力◎</strong>
+        💡 配当: 東証平均2.2%→<strong>3%↑なら優秀</strong> / PBR: <strong>1倍↓割安</strong> / ROE: <strong>10%↑稼ぐ力◎</strong>
       </div>
       ${buildSafetyRating(s)}
       <div style="margin-bottom:8px">${(s.vol_ratio_1d||1)>=1.5?`<span class="vol-badge high">📊 出来高: いつもの${(s.vol_ratio_1d||1).toFixed(1)}倍${(s.vol_ratio_1d||1)>=3?' （注目度が非常に高い）':(s.vol_ratio_1d||1)>=2?' （注目度が高い）':''}</span>`:`<span class="vol-badge normal">📊 出来高: 通常レベル</span>`}</div>

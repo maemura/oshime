@@ -710,6 +710,7 @@ def fetch_one(ticker, _retry=0):
             "turnover_avg5": turnover_avg5,
             # ── 注目度フィールド ──
             "vol_ratio_1d":  vol_ratio_1d,
+            "avg_volume":    int(vol_mean20) if vol_mean20 > 0 else 0,
             "ret_1d":        ret_1d,
             "range_pct":     range_pct,
             "gap_pct":       gap_pct,
@@ -1386,7 +1387,7 @@ def main():
             "vol_trend","price_position","score_trend","trend_type",
             "sector_ret5","sector_ret10","ret5_vs_sector","ret10_vs_sector","div_growth_years",
             "earnings_date","days_since_earnings","days_to_next_earnings",
-            "ma25_dev","ma75_dev","closes_60d"}
+            "ma25_dev","ma75_dev","closes_60d","avg_volume"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
 
     output = {
