@@ -74,6 +74,8 @@ a{color:var(--blue-m);text-decoration:none;}
 .t5-item:last-child{border-bottom:none;}.t5-item:active{background:var(--blue-l);}
 .t5-rank{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fn);font-size:13px;font-weight:800;background:var(--bg);color:var(--text2);flex-shrink:0;}
 .t5-rank.gold{background:linear-gradient(135deg,#F59E0B,#D97706);color:#fff;}
+.t5-rank.silver{background:linear-gradient(135deg,#94A3B8,#64748B);color:#fff;}
+.t5-rank.bronze{background:linear-gradient(135deg,#D97706,#A16207);color:#fff;}
 .t5-info{flex:1;min-width:0;}
 .t5-nm{font-size:14px;font-weight:700;line-height:1.4;}
 .t5-meta{font-family:var(--fn);font-size:11px;color:var(--text3);margin-top:1px;}
@@ -95,16 +97,18 @@ a{color:var(--blue-m);text-decoration:none;}
 .score-feel.ok{background:#E8ECF2;color:#64748B;}
 /* 配当バッジ */
 .div-badge{display:inline-flex;align-items:center;gap:2px;padding:2px 8px;border-radius:10px;font-family:var(--fn);font-size:11px;font-weight:800;background:var(--green-bg);color:var(--green);border:1px solid rgba(5,150,105,0.15);}
-/* PC 2カラムグリッド */
+/* PC: 1カラム横長カード+中央寄せ */
 @media(min-width:700px){
-  .t5-grid{display:grid;grid-template-columns:1fr 1fr;}
-  .t5-grid .t5-item{border-right:1px solid var(--border);}
-  .t5-grid .t5-item:nth-child(2n){border-right:none;}
-  .t5-grid .t5-expand{grid-column:1/-1;}
-  .t5-spark{width:120px;height:44px;}
-  .t5-sc{font-size:22px;}
-  .t5-nm{font-size:14px;}
+  .logo-bar,.hero,.t5-sec,.share,.danger,.footer{max-width:720px;margin-left:auto;margin-right:auto;}
+  .t5-grid{max-width:720px;margin:0 auto;}
+  .t5-item{padding:16px 20px;gap:16px;}
+  .t5-spark{width:140px;height:48px;}
+  .t5-sc{font-size:24px;}
+  .t5-nm{font-size:15px;}
+  .t5-rank{width:34px;height:34px;font-size:15px;}
+  .t5-reason{font-size:13px;}
   .div-badge{font-size:12px;padding:3px 10px;}
+  .t5-expand{grid-column:1/-1;}
 }
 
 /* SHARE */
@@ -235,7 +239,7 @@ a{color:var(--blue-m);text-decoration:none;}
   <div class="logo">かぶの<span>すけ</span></div>
   <div class="ticker" id="tickerBar"></div>
 </div>
-<div style="text-align:center;padding:6px 12px 0;font-size:11px;color:var(--text3)">AIが毎日500銘柄以上をスキャン → おすすめ株を自動で選定</div>
+<div style="text-align:center;padding:6px 12px 0;font-size:11px;color:var(--text3);max-width:720px;margin:0 auto">AIが毎日500銘柄以上をスキャン → おすすめ株を自動で選定</div>
 
 <!-- HERO CONCLUSION -->
 <div class="hero" id="heroBox"></div>
@@ -270,7 +274,7 @@ a{color:var(--blue-m);text-decoration:none;}
 </div>
 
 <!-- DANGER -->
-<div id="dangerSection"></div>
+<div id="dangerSection" style="max-width:720px;margin:0 auto"></div>
 
 <!-- AD #1 -->
 <div class="ad" id="adSlot1" onclick="gaEvent('ad_click',{slot:'top'})">
@@ -648,7 +652,7 @@ function renderTop10(){
     const rankBadge=getRankBadge(s.code,tab);
     const volBadge=getVolBadge(s);
     html+=`<div class="t5-item${i===0?' first-place':''}" onclick="toggleExpand('${s.code}')" style="${isOpen?'background:var(--blue-l)':''}">
-      <div class="t5-rank${i===0?' gold':''}">${i+1}</div>
+      <div class="t5-rank${i===0?' gold':i===1?' silver':i===2?' bronze':''}">${i+1}</div>
       <div class="t5-info">
         <div class="t5-nm">${s.name} ${rankBadge}</div>
         <div class="t5-meta">${s.code} · ${sMap(s.sector,s.code)} · ${divBadge} ${volBadge}</div>
