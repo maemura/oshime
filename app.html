@@ -269,6 +269,16 @@ a{color:var(--blue-m);text-decoration:none;}
 <!-- HERO CONCLUSION -->
 <div class="hero" id="heroBox"></div>
 
+<!-- SECTOR TREND -->
+<div class="t5-sec" id="sectorSection" style="display:none">
+  <div style="padding:16px;background:var(--card);border-bottom:1px solid var(--border)">
+    <div style="font-weight:700;font-size:15px;margin-bottom:8px">📈 セクタートレンド</div>
+    <div style="font-size:11px;color:var(--text3);margin-bottom:12px">配当×リターン×出来高から自動算出。毎日更新。</div>
+    <div id="sectorBars"></div>
+    <div id="sectorTheme" style="margin-top:12px;font-size:12px;color:var(--text2)"></div>
+  </div>
+</div>
+
 <!-- TOP10 -->
 <div class="t5-sec" id="top5Section" style="display:none">
   <div class="t5-tabs">
@@ -492,6 +502,23 @@ function drawDetailChart(el,closes,ma25v,ma75v){
 }
 
 // ═══════════════════════════════════════
+// SECTOR SCORE（動的セクタースコアリング）
+// ═══════════════════════════════════════
+let sectorScores={};  // JSONから読み込み
+function getSectorBonus(sector,code){
+  // CODE_SECTORで変換後のセクター名でも検索
+  const secName=sMap(sector,code);
+  // sectorScoresから該当セクターのスコアを取得
+  for(const[key,val]of Object.entries(sectorScores)){
+    if(secName.includes(key)||key.includes(sector||('' ))){
+      // スコア0-10を0-8点に変換（最大8点ボーナス）
+      return Math.round((val.score||0)*0.8);
+    }
+  }
+  return 0;  // 該当なし
+}
+
+// ═══════════════════════════════════════
 // SCORE (JS版 — Python側と同じロジック)
 // ═══════════════════════════════════════
 function calcScoreTrend(s){
@@ -554,16 +581,22 @@ function calcScoreTrend(s){
   else if(ma75d<0&&ma25d>=0)type='bounce';
 
   // ── 大型逆張りバリュー ──
-  // 大型高配当（時価総額3000億+配当2.5%+）が下落中 → ペナルティ免除＋ボーナス
+  // 大型高配当（時価総額3000億+配当2.5%+）が浅い下落中 → 逆張りチャンス
   const isLargeCap=mc>=3000&&div>=2.5;
-  if(type==='falling'&&isLargeCap){
+  const shallowDip=ma75d>=-8&&ma75d<=-2;  // -2%〜-8%の浅い下落のみ
+  const secBonus=getSectorBonus(s.sector,s.code);  // セクターボーナス
+
+  if(type==='falling'&&isLargeCap&&shallowDip){
     type='value_dip';  // 逆張りチャンス
-    sc+=8;  // ボーナス（fallingペナルティなし）
+    sc+=6+secBonus;    // ボーナス（セクター人気度で加減）
   } else if(type==='falling'){
-    sc=Math.max(0,sc-10);  // 小型株のfallingはペナルティ維持
+    sc=Math.max(0,sc-10);  // それ以外のfallingはペナルティ
   }
   // 大型bounce（75日割れだが反発気配）もボーナス
-  if(type==='bounce'&&isLargeCap)sc+=5;
+  if(type==='bounce'&&isLargeCap)sc+=4+Math.floor(secBonus/2);
+
+  // 全銘柄にセクターボーナス加算（最大15点中の一部）
+  sc+=secBonus;
 
   sc=Math.max(0,Math.min(sc,100));
   return{score:sc,type};
@@ -750,6 +783,35 @@ function getVolBadge(s){
   if(vr>=3)return `<span class="vol-badge high">📊 出来高 ${vr.toFixed(1)}倍</span>`;
   if(vr>=1.8)return `<span class="vol-badge high">📊 ${vr.toFixed(1)}倍</span>`;
   return '';
+}
+
+function renderSectorTrend(){
+  const sec=document.getElementById('sectorSection');
+  if(!sectorScores||!Object.keys(sectorScores).length){sec.style.display='none';return;}
+  sec.style.display='';
+  const bars=document.getElementById('sectorBars');
+  const entries=Object.entries(sectorScores).slice(0,8);
+  const maxSc=Math.max(...entries.map(e=>e[1].score));
+  let html='';
+  entries.forEach(([name,d],i)=>{
+    const pct=Math.round(d.score/maxSc*100);
+    const medal=i===0?'🏆':i===1?'🥈':i===2?'🥉':'';
+    const barColor=d.score>=7?'var(--green)':d.score>=5?'var(--blue)':'var(--amber)';
+    html+=`<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+      <div style="width:14px;text-align:center;font-size:11px">${medal||i+1}</div>
+      <div style="width:80px;font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden">${name}</div>
+      <div style="flex:1;background:var(--border);border-radius:4px;height:18px;position:relative">
+        <div style="width:${pct}%;background:${barColor};height:100%;border-radius:4px;transition:width .5s"></div>
+        <span style="position:absolute;right:6px;top:1px;font-size:10px;font-weight:700;color:var(--text)">${d.score}</span>
+      </div>
+      <div style="width:55px;font-size:10px;color:var(--text3);text-align:right">配当${d.avg_dividend}%</div>
+    </div>`;
+  });
+  bars.innerHTML=html;
+  // テーマ
+  const top3=entries.slice(0,3).map(e=>e[0]);
+  document.getElementById('sectorTheme').innerHTML=
+    `<span style="color:var(--blue);font-weight:600">📌 注目セクター：</span>${top3.join('、')}`;
 }
 
 function renderTop10(){
@@ -1061,6 +1123,7 @@ function run(){
   processStocks();
   renderMarketMode();
   renderHero();
+  renderSectorTrend();
   renderTop10();
   renderDanger();
   // Show history section if data exists
@@ -1094,6 +1157,7 @@ async function init(){
     RAW=data.stocks||[];
     window._updatedAt=data.updated_at||'—';
     window._stockData=data;
+    sectorScores=data.sector_scores||{};
     // ティッカー更新
     const tItems=document.querySelectorAll('.ticker-item');
     if(data.nikkei_price&&tItems[0]){

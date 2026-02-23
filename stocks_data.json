@@ -22846,5 +22846,95 @@
   "ai_summary": {
     "provider": "groq",
     "text": "今日の相場は多少下落しています。理由は、トランプ関税の不透明感が広がっています。また、ダウ先物が反落しています。来週のエヌビディアの決算や対米投資案件の内容に注目が集まっています。今日は買い気配には注意して、売り気配を見て売却することが好ましいです。"
+  },
+  "sector_scores": {
+    "Financial Services": {
+      "score": 8.2,
+      "avg_dividend": 4.05,
+      "avg_return_60d": 15.9,
+      "avg_return_120d": 19.4,
+      "avg_volume_ratio": 0.96,
+      "count": 22
+    },
+    "Basic Materials": {
+      "score": 7.8,
+      "avg_dividend": 3.94,
+      "avg_return_60d": 15.5,
+      "avg_return_120d": 17.5,
+      "avg_volume_ratio": 0.97,
+      "count": 26
+    },
+    "Energy": {
+      "score": 7.4,
+      "avg_dividend": 3.1,
+      "avg_return_60d": 22.6,
+      "avg_return_120d": 40.2,
+      "avg_volume_ratio": 0.92,
+      "count": 5
+    },
+    "Industrials": {
+      "score": 7.2,
+      "avg_dividend": 3.92,
+      "avg_return_60d": 8.6,
+      "avg_return_120d": 16.0,
+      "avg_volume_ratio": 1.02,
+      "count": 57
+    },
+    "Real Estate": {
+      "score": 7.0,
+      "avg_dividend": 4.48,
+      "avg_return_60d": 7.7,
+      "avg_return_120d": 12.5,
+      "avg_volume_ratio": 0.85,
+      "count": 7
+    },
+    "Consumer Cyclical": {
+      "score": 6.6,
+      "avg_dividend": 3.97,
+      "avg_return_60d": 6.9,
+      "avg_return_120d": 6.9,
+      "avg_volume_ratio": 0.99,
+      "count": 47
+    },
+    "Consumer Defensive": {
+      "score": 6.4,
+      "avg_dividend": 4.42,
+      "avg_return_60d": 2.0,
+      "avg_return_120d": 5.9,
+      "avg_volume_ratio": 0.81,
+      "count": 7
+    },
+    "Healthcare": {
+      "score": 6.0,
+      "avg_dividend": 3.68,
+      "avg_return_60d": 2.7,
+      "avg_return_120d": 5.9,
+      "avg_volume_ratio": 0.88,
+      "count": 11
+    },
+    "Utilities": {
+      "score": 5.8,
+      "avg_dividend": 2.03,
+      "avg_return_60d": 12.7,
+      "avg_return_120d": 25.8,
+      "avg_volume_ratio": 1.01,
+      "count": 6
+    },
+    "Technology": {
+      "score": 5.1,
+      "avg_dividend": 3.66,
+      "avg_return_60d": -9.7,
+      "avg_return_120d": -7.7,
+      "avg_volume_ratio": 0.97,
+      "count": 35
+    },
+    "Communication Services": {
+      "score": 4.1,
+      "avg_dividend": 3.42,
+      "avg_return_60d": -13.8,
+      "avg_return_120d": -15.7,
+      "avg_volume_ratio": 0.84,
+      "count": 17
+    }
   }
 }
