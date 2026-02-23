@@ -730,14 +730,24 @@ function buildSafetyRating(s){
   const vrLabel=`いつもの${vr.toFixed(1)}倍`;
 
   function bar(pct,label,icon,val,color){
-    const topPct=100-pct; // 上位○%に変換
+    // pct = calcPercentileの戻り値（何%の銘柄がこの値以下か）
+    const rank=100-pct; // 上位何%か（小さい=良い）
+    let pctLabel,pctColor;
+    if(rank<=50){
+      pctLabel=`上位${rank}%`;
+      pctColor=rank<=30?color:'var(--amber)';
+    }else{
+      pctLabel=`下位${100-rank}%`;
+      pctColor='var(--red)';
+    }
+    const barWidth=pct; // バーの長さ=パーセンタイル
     const barColor=pct>=70?color:pct>=35?'var(--amber)':'var(--red)';
     return `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:11px">
       <div style="min-width:110px;color:var(--text2);font-weight:500">${icon} ${label}</div>
       <div style="flex:1;height:8px;background:var(--border-l);border-radius:4px;overflow:hidden;position:relative">
-        <div style="width:${pct}%;height:100%;background:${barColor};border-radius:4px;transition:width .3s"></div>
+        <div style="width:${barWidth}%;height:100%;background:${barColor};border-radius:4px;transition:width .3s"></div>
       </div>
-      <div style="min-width:70px;text-align:right;font-family:var(--fn);font-size:10px;font-weight:700;color:${barColor}">上位${topPct}%</div>
+      <div style="min-width:70px;text-align:right;font-family:var(--fn);font-size:10px;font-weight:700;color:${pctColor}">${pctLabel}</div>
       <div style="min-width:80px;text-align:right;font-size:10px;color:var(--text3)">${val}</div>
     </div>`;
   }
@@ -809,10 +819,14 @@ function buildExpand(s){
     <!-- RIGHT: 指標 -->
     <div>
       <div class="d-sec-ttl">📈 この銘柄のポイント</div>
+      <div style="padding:10px 14px;margin-bottom:10px;background:linear-gradient(135deg,#F0FDF4,#ECFDF5);border-radius:10px;border:1px solid #BBF7D0;font-size:13px;color:#111">
+        💰 この株を買うには → <b style="font-size:16px;color:var(--green)">約${((s.price||0)*100)>=10000?Math.round((s.price||0)*100/10000)+'万':Math.round((s.price||0)*100/1000)+'千'}円</b><span style="font-size:10px;color:var(--text3)">（100株 × ¥${(s.price||0).toLocaleString()}）</span>
+        ${((s.price||0)*100)<=2400000?`<div style="font-size:10px;color:var(--text3);margin-top:3px">🎯 NISA成長投資枠（年240万円）の<b style="color:var(--green)">${Math.round((s.price||0)*100/24000)}%</b></div>`:''}
+      </div>
       <div class="d-cards">
         <div class="d-card"><b>${(s.dividend||0).toFixed(1)}%</b><small>配当利回り</small><div style="font-size:9px;color:${(s.dividend||0)>=3?'var(--green)':'var(--text3)'};font-weight:600;margin-top:2px">${(s.dividend||0)>=3?'3%↑優秀!':'平均2.2%'}</div></div>
         <div class="d-card"><b>${(s.pbr||0).toFixed(2)}倍</b><small>PBR(割安度)</small><div style="font-size:9px;color:${(s.pbr||0)<1&&(s.pbr||0)>0?'var(--green)':'var(--text3)'};font-weight:600;margin-top:2px">${(s.pbr||0)<1&&(s.pbr||0)>0?'1倍↓割安!':'1倍↓で割安'}</div></div>
-        <div class="d-card"><b>${(s.roe||0).toFixed(0)}%</b><small>ROE(稼ぐ力)</small><div style="font-size:9px;color:${(s.roe||0)>=10?'var(--green)':'var(--text3)'};font-weight:600;margin-top:2px">${(s.roe||0)>=10?'10%↑優秀!':'10%↑で◎'}</div></div>
+        <div class="d-card"><b>${(s.roe||0)>0?(s.roe||0).toFixed(0)+'%':'—'}</b><small>ROE(稼ぐ力)</small><div style="font-size:9px;color:${(s.roe||0)>=10?'var(--green)':'var(--text3)'};font-weight:600;margin-top:2px">${(s.roe||0)>=10?'10%↑優秀!':(s.roe||0)>0?'10%↑で◎':'(非開示の銘柄)'}</div></div>
       </div>
       ${buildSafetyRating(s)}
       <div style="margin-bottom:8px">${(s.vol_ratio_1d||1)>=1.5?`<span class="vol-badge high">📊 出来高: いつもの${(s.vol_ratio_1d||1).toFixed(1)}倍${(s.vol_ratio_1d||1)>=3?' （注目度が非常に高い）':(s.vol_ratio_1d||1)>=2?' （注目度が高い）':''}</span>`:`<span class="vol-badge normal">📊 出来高: 通常レベル</span>`}</div>
