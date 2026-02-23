@@ -1,17 +1,17 @@
 {
   "date": "2026-02-23",
-  "updated_at": "2026/02/23 16:15",
+  "updated_at": "2026/02/23 18:43",
   "version": "v7",
   "market": {
     "nikkei_price": 56826.0,
     "nikkei_ma25": 54810.0,
     "nikkei_1d_chg": -1.12,
     "nasdaq_1d_chg": 0.9,
-    "vix": 19.1,
-    "usdjpy": 154.47
+    "vix": 20.1,
+    "usdjpy": 154.77
   },
-  "total_scanned": 1560,
-  "buy_count": 403,
+  "total_scanned": 1568,
+  "buy_count": 405,
   "dip_top10": [
     {
       "code": "6448",
