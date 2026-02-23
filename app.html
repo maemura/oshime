@@ -608,7 +608,7 @@ function renderMarketMode(){
   }
 
   // クリアパス数
-  const pass=signals.filter(s=>s.val>0).length;
+  const pass=signals.filter(s=>s.val>=0).length;
   const total=signals.length;
   const scoreColor=mode==='aggressive'?'#059669':mode==='cautious'?'#EF4444':'#D97706';
 
