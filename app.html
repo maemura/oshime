@@ -500,34 +500,51 @@ function calcScoreTrend(s){
   let sc=0;
   const r120=s.ret120||0,r60=s.ret60||0,r20=s.ret20||0;
   const ma75d=s.ma75_dev||0,ma25d=s.ma25_dev||0;
-  // MA75 (25pt)
-  if(ma75d>=0&&ma75d<=1)sc+=25;else if(ma75d>=0&&ma75d<=2)sc+=22;else if(ma75d>=0&&ma75d<=3)sc+=18;
-  else if(ma75d>=0&&ma75d<=5)sc+=14;else if(ma75d>=0&&ma75d<=8)sc+=10;else if(ma75d>=0&&ma75d<=12)sc+=6;
+  const div=s.dividend||0,vol=s.volatility||2;
+
+  // ── 時価総額 (15pt) ── 大型＝安心＝勝負できる
+  if(mc>=30000)sc+=15;else if(mc>=10000)sc+=13;else if(mc>=5000)sc+=10;
+  else if(mc>=3000)sc+=7;else if(mc>=1000)sc+=4;else if(mc>=500)sc+=2;
+
+  // ── 配当利回り (15pt) ── 利回りが安心の根拠
+  if(div>=5)sc+=15;else if(div>=4)sc+=13;else if(div>=3.5)sc+=11;
+  else if(div>=3)sc+=9;else if(div>=2.5)sc+=6;else if(div>=2)sc+=3;else if(div>=1)sc+=1;
+
+  // ── MA75乖離 (20pt) ── 75日平均接近＝買い場
+  if(ma75d>=0&&ma75d<=1)sc+=20;else if(ma75d>=0&&ma75d<=2)sc+=18;else if(ma75d>=0&&ma75d<=3)sc+=15;
+  else if(ma75d>=0&&ma75d<=5)sc+=11;else if(ma75d>=0&&ma75d<=8)sc+=8;else if(ma75d>=0&&ma75d<=12)sc+=5;
   else if(ma75d>12)sc+=2;
-  else if(ma75d>=-2&&ma75d<0)sc+=3;  // わずかに下: ほぼ加点なし
-  else if(ma75d>=-5&&ma75d<-2)sc+=0;  // 明確に下: 0点
-  else sc-=5;                          // 大きく下: ペナルティ
-  // MA25 (15pt)
-  if(ma25d>=-5&&ma25d<=-3)sc+=15;else if(ma25d>=-8&&ma25d<-5)sc+=10;else if(ma25d>=-3&&ma25d<=-1)sc+=10;
-  else if(ma25d>-1&&ma25d<=0)sc+=6;else if(ma25d>0&&ma25d<=3)sc+=3;else if(ma25d>3)sc+=8;else if(ma25d<-8)sc+=3;
-  // r20 (15pt)
-  if(r20>=10)sc+=15;else if(r20>=5)sc+=12;else if(r20>=2)sc+=8;else if(r20>=0)sc+=4;
-  else if(r20>=-3)sc+=6;else if(r20>=-5)sc+=10;else if(r20>=-8)sc+=8;else sc+=3;
-  // r120 (10pt)
-  if(r120>=30)sc+=10;else if(r120>=15)sc+=8;else if(r120>=5)sc+=6;else if(r120>=0)sc+=3;else if(r120>=-5)sc+=0;else sc-=3;
-  // r60 (10pt)
-  if(r60>=15)sc+=10;else if(r60>=8)sc+=8;else if(r60>=3)sc+=5;else if(r60>=0)sc+=2;else if(r60>=-5)sc+=0;else sc-=3;
-  // 安心 (15pt)
-  const div=s.dividend||0,vol=s.volatility||2,roe=s.roe||0;
-  if(div>=4)sc+=5;else if(div>=3)sc+=4;else if(div>=2.5)sc+=3;else if(div>=2)sc+=2;
-  if(vol<=1.5&&r120>=5)sc+=5;else if(vol<=2&&r120>=5)sc+=4;else if(vol<=2.5&&r120>=0)sc+=2;
-  if(mc>=10000)sc+=5;else if(mc>=5000)sc+=4;else if(mc>=2000)sc+=3;else if(mc>=1000)sc+=2;else if(mc>=500)sc+=1;
-  // 一貫性 (±10pt)
+  else if(ma75d>=-2&&ma75d<0)sc+=3;
+  else if(ma75d>=-5&&ma75d<-2)sc+=0;
+  else sc-=5;
+
+  // ── MA25押し目 (10pt)
+  if(ma25d>=-5&&ma25d<=-3)sc+=10;else if(ma25d>=-8&&ma25d<-5)sc+=7;else if(ma25d>=-3&&ma25d<=-1)sc+=8;
+  else if(ma25d>-1&&ma25d<=0)sc+=5;else if(ma25d>0&&ma25d<=3)sc+=3;else if(ma25d>3)sc+=6;else if(ma25d<-8)sc+=2;
+
+  // ── 安定性 (8pt) ── 低ボラ＝下がってもいずれ上がる
+  if(vol<=1.2)sc+=8;else if(vol<=1.5)sc+=6;else if(vol<=2.0)sc+=4;else if(vol<=2.5)sc+=2;else if(vol>3.5)sc-=3;
+
+  // ── 120日リターン (8pt)
+  if(r120>=30)sc+=8;else if(r120>=15)sc+=7;else if(r120>=5)sc+=5;else if(r120>=0)sc+=3;else if(r120>=-5)sc+=0;else sc-=2;
+
+  // ── 60日リターン (8pt)
+  if(r60>=15)sc+=8;else if(r60>=8)sc+=7;else if(r60>=3)sc+=5;else if(r60>=0)sc+=2;else if(r60>=-5)sc+=0;else sc-=2;
+
+  // ── 20日リターン (8pt)
+  if(r20>=10)sc+=8;else if(r20>=5)sc+=7;else if(r20>=2)sc+=5;else if(r20>=0)sc+=3;
+  else if(r20>=-3)sc+=4;else if(r20>=-5)sc+=6;else if(r20>=-8)sc+=5;else sc+=2;
+
+  // ── 一貫性 (±8pt) ── 短中長期の方向が揃ってるか
   const pc=[r120,r60,r20].filter(r=>r>0).length;
-  if(pc===3)sc+=10;else if(pc===2)sc+=5;else if(pc===0)sc-=5;
-  // ペナルティ
+  if(pc===3)sc+=8;else if(pc===2)sc+=4;else if(pc===0)sc-=4;
+
+  // ── ペナルティ ──
   const vr1d=s.vol_ratio_1d||1,ret1d=s.ret_1d||0,rsi=s.rsi||50;
   if(vr1d>=3&&ret1d<=-3)sc-=10;if(vr1d>=3&&ret1d>=5)sc-=8;if(rsi>=80)sc-=5;
+  // 低配当ペナルティ強化（利回り1%未満はかなり減点）
+  if(div<1)sc-=10;else if(div<1.5)sc-=5;
+
   sc=Math.max(0,Math.min(sc,100));
   // type
   let type='neutral';
