@@ -388,7 +388,10 @@ function drawDetailChart(el,closes,ma25v,ma75v){
   const allVals=[...closes,...ma25calc.filter(v=>v!==null)];
   if(ma75v&&ma75v>0)allVals.push(ma75v);
   if(ma25v&&ma25v>0)allVals.push(ma25v);
-  const mn=Math.min(...allVals),mx=Math.max(...allVals);
+  let mn=Math.min(...allVals),mx=Math.max(...allVals);
+  // MA75ラベル用にY軸を上下5%広げる
+  const pad5=(mx-mn)*0.08;
+  mn-=pad5;mx+=pad5;
   const rng=mx-mn||1;
   const pp=toPath(closes,W,H,P,mn,mx);
   const lastX=P+((closes.length-1)/(closes.length-1))*(W-2*P);
@@ -398,7 +401,8 @@ function drawDetailChart(el,closes,ma25v,ma75v){
   let ma75line='';
   if(ma75v&&ma75v>0){
     let y75=P+(1-(ma75v-mn)/rng)*(H-2*P);
-    y75=Math.max(P+2,Math.min(H-P-2,y75)); // SVG範囲内にクリップ
+    // SVG範囲内に確実に収める
+    y75=Math.max(P+14,Math.min(H-P-4,y75));
     ma75line=`<rect x="${P}" y="${y75-2}" width="${W-2*P}" height="4" fill="#059669" opacity="0.12" rx="2"/>`;
     ma75line+=`<line x1="${P}" y1="${y75}" x2="${W-P}" y2="${y75}" stroke="#059669" stroke-width="2.5" stroke-dasharray="8,4"/>`;
     const textY=Math.max(P+12,y75-8); // テキストもクリップ
