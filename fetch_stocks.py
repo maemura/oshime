@@ -584,6 +584,7 @@ def fetch_one(ticker, _retry=0):
         ret10 = round((float(closes.iloc[-1]) / float(closes.iloc[-11]) - 1) * 100, 2) if len(closes) >= 11 else 0
         ret20 = round((float(closes.iloc[-1]) / float(closes.iloc[-21]) - 1) * 100, 2) if len(closes) >= 21 else 0
         ret60 = round((float(closes.iloc[-1]) / float(closes.iloc[-61]) - 1) * 100, 2) if len(closes) >= 61 else 0
+        ret120 = round((float(closes.iloc[-1]) / float(closes.iloc[0]) - 1) * 100, 2) if len(closes) >= 80 else 0
 
         # ── 機関投資家指標（yfinance .infoから無料取得）──
         roe = round(float(info.get("returnOnEquity", 0) or 0) * 100, 1)  # ROE %
@@ -648,6 +649,7 @@ def fetch_one(ticker, _retry=0):
             "ret10":         ret10,
             "ret20":         ret20,
             "ret60":         ret60,
+            "ret120":        ret120,
             # ── 機関投資家指標 ──
             "roe":              roe,
             "profit_margin":    profit_margin,
@@ -936,6 +938,121 @@ def calc_score_momentum(s):
     return max(0, min(score, 100))
 
 
+def calc_score_trend(s):
+    """📈 時間加重トレンドスコア（統合版）
+    
+    Fama-Frenchモメンタムファクターの簡易実装:
+      - 120日/60日/20日/5日リターンを時間加重
+      - 直近ほど配点が高い（5日=35pt, 20日=25pt, 60日=15pt, 120日=10pt）
+      - 一貫性ボーナス/ペナルティ（±10pt）
+      - 品質フィルター（時価総額300億以上）
+    
+    結果のパターン:
+      全期間プラス → 勢い銘柄（type: momentum）
+      長期プラス+短期マイナス → 押し目銘柄（type: dip）
+      全期間マイナス → 手を出すな（type: avoid）
+    """
+    mc = s.get("market_cap_b", 0)
+    if mc < 300: return 0, "avoid"
+
+    score = 0
+    r120 = s.get("ret120", 0)
+    r60  = s.get("ret60", 0)
+    r20  = s.get("ret20", 0)
+    r5   = s.get("ret5", 0)
+
+    # ── 120日リターン (max 10pt) ──
+    if r120 >= 30:    score += 10
+    elif r120 >= 15:  score += 8
+    elif r120 >= 5:   score += 5
+    elif r120 >= 0:   score += 2
+    elif r120 >= -5:  score += 0
+    elif r120 >= -15: score -= 3
+    else:             score -= 5
+
+    # ── 60日リターン (max 15pt) ──
+    if r60 >= 20:     score += 15
+    elif r60 >= 10:   score += 12
+    elif r60 >= 5:    score += 8
+    elif r60 >= 0:    score += 3
+    elif r60 >= -5:   score += 0
+    elif r60 >= -10:  score -= 3
+    else:             score -= 5
+
+    # ── 20日リターン (max 25pt) ──
+    if r20 >= 15:     score += 25
+    elif r20 >= 8:    score += 20
+    elif r20 >= 3:    score += 14
+    elif r20 >= 0:    score += 5
+    elif r20 >= -3:   score += 0
+    elif r20 >= -5:   score += 8   # 押し目チャンス加点
+    elif r20 >= -10:  score += 14  # より深い押し目
+    else:             score += 5   # 落ちすぎはリスク
+
+    # ── 5日リターン (max 35pt) — 最重要 ──
+    # 押し目（短期下落）にも勢い（短期上昇）にも加点する設計
+    if r5 <= -8:      score += 15  # 深い押し目（落ちすぎリスクあり）
+    elif r5 <= -5:    score += 30  # 最高の押し目ゾーン
+    elif r5 <= -3:    score += 25  # 良い押し目
+    elif r5 <= -1:    score += 15  # 軽い調整
+    elif r5 <= 1:     score += 5   # 横ばい
+    elif r5 <= 3:     score += 15  # 上昇中
+    elif r5 <= 5:     score += 25  # 強い上昇
+    elif r5 <= 8:     score += 30  # 急騰（勢い最高）
+    else:             score += 20  # 暴騰（過熱リスク）
+
+    # ── 一貫性ボーナス (±10pt) ──
+    periods = [r120, r60, r20]  # 5日は除外（短期の調整は許容）
+    positive_count = sum(1 for r in periods if r > 0)
+    if positive_count == 3:
+        score += 10  # 完璧なトレンド
+    elif positive_count == 2:
+        score += 5
+    elif positive_count == 1:
+        score += 0
+    else:
+        score -= 5  # 全期間マイナス = 構造的弱さ
+
+    # ── 出来高トレンド加点 (max 5pt) ──
+    vt = s.get("vol_trend", 1)
+    if vt >= 2.0:   score += 5
+    elif vt >= 1.3:  score += 3
+    elif vt >= 1.1:  score += 1
+
+    # ── 急落/過熱ペナルティ ──
+    vr1d = s.get("vol_ratio_1d", 1)
+    ret_1d = s.get("ret_1d", 0)
+    # パニック売り
+    if vr1d >= 3.0 and ret_1d <= -3:
+        score -= 10
+    # 仕手的急騰
+    if vr1d >= 3.0 and ret_1d >= 5:
+        score -= 8
+    # RSI過熱
+    rsi = s.get("rsi", 50)
+    if rsi >= 80:
+        score -= 5
+
+    score = max(0, min(score, 100))
+
+    # ── トレンドタイプ判定 ──
+    long_trend = r120 + r60  # 長期方向
+    short_signal = r5         # 短期方向
+
+    if positive_count >= 2 and short_signal <= -2:
+        trend_type = "dip"       # 🛡 長期上昇中の押し目
+    elif positive_count >= 2 and short_signal > 0:
+        trend_type = "momentum"  # 🚀 全面上昇トレンド
+    elif positive_count <= 1 and short_signal <= -2:
+        trend_type = "falling"   # ⚠ 落ちるナイフ
+    elif positive_count <= 1 and short_signal > 2:
+        trend_type = "bounce"    # 🔄 反発（持続性不明）
+    else:
+        trend_type = "neutral"   # 😐 方向感なし
+
+    return score, trend_type
+
+
 def calc_score_growth(s):
     """成長押し目スコア：MA乖離・RSI重視・小型OK"""
     d25 = (s["price"] - s["ma25"]) / s["ma25"] * 100 if s["ma25"] else 0
@@ -1079,7 +1196,10 @@ def main():
         s["score_growth"]   = calc_score_growth(s)
         s["score_bluechip"] = calc_score_bluechip(s)
         s["score_momentum"] = calc_score_momentum(s)
-        s["score"]          = s["score_bluechip"]
+        trend_score, trend_type = calc_score_trend(s)
+        s["score_trend"]    = trend_score
+        s["trend_type"]     = trend_type
+        s["score"]          = trend_score  # v6: 時間加重トレンドスコアをメインに
     results.sort(key=lambda x:-x["score"])
 
     prev_scores={}
@@ -1156,8 +1276,8 @@ def main():
             "score_dividend","score_value","score_rebound",
             "score_stable","score_growth","score_bluechip","score_momentum",
             "score","prev_score","market_cap_b","volatility","dip_zscore","ret5","ret10",
-            "ret20","ret60","roe","profit_margin","revenue_growth","earnings_growth",
-            "vol_trend","price_position",
+            "ret20","ret60","ret120","roe","profit_margin","revenue_growth","earnings_growth",
+            "vol_trend","price_position","score_trend","trend_type",
             "sector_ret5","sector_ret10","ret5_vs_sector","ret10_vs_sector","div_growth_years",
             "earnings_date","days_since_earnings","days_to_next_earnings"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]

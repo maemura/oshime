@@ -27,21 +27,28 @@
   function gaEvent(n,p){if(typeof gtag!=='undefined')gtag('event',n,p||{});}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0a2540; --navy2:#0d3060;
-  --orange:#e8541e; --orange2:#ff6b35; --orange-lt:#fff3ee;
-  --up:#d0021b; --dn:#0055cc;
-  --green:#00875a; --green-lt:#e3fcef;
-  --amber:#946500; --amber-lt:#fffae6;
-  --bg:#f0f4f8; --bg2:#ffffff; --bg3:#f7f9fc;
-  --border:#e2e8f0;
-  --text:#2d3748; --text2:#1a202c; --text3:#718096;
-  --r:8px; --r2:5px;
-  --fn:'DM Mono','Outfit',monospace;
-  --fh:'Outfit','Noto Sans JP',sans-serif;
-  --fb:'Noto Sans JP',sans-serif;
+  /* ── SBI-inspired Refined Palette ── */
+  --navy:#0f172a; --navy2:#1e293b; --navy3:#334155;
+  --accent:#2563eb; --accent-hover:#1d4ed8; --accent-lt:#eff6ff;
+  --up:#dc2626; --up-lt:#fef2f2;
+  --dn:#2563eb;
+  --green:#059669; --green-lt:#ecfdf5;
+  --amber:#d97706; --amber-lt:#fffbeb;
+  --orange:#ea580c;
+  --bg:#f8fafc; --bg2:#ffffff; --bg3:#f1f5f9;
+  --border:#e2e8f0; --border2:#cbd5e1;
+  --text:#0f172a; --text2:#334155; --text3:#64748b;
+  --r:10px; --r2:6px;
+  --fn:'IBM Plex Mono','Noto Sans JP',monospace;
+  --fh:'Plus Jakarta Sans','Noto Sans JP',sans-serif;
+  --fb:'Noto Sans JP','Plus Jakarta Sans',sans-serif;
+  --shadow-sm:0 1px 2px rgba(15,23,42,0.05);
+  --shadow:0 1px 3px rgba(15,23,42,0.08),0 1px 2px rgba(15,23,42,0.04);
+  --shadow-md:0 4px 6px -1px rgba(15,23,42,0.08),0 2px 4px -2px rgba(15,23,42,0.04);
+  --shadow-lg:0 10px 15px -3px rgba(15,23,42,0.08),0 4px 6px -4px rgba(15,23,42,0.04);
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html{font-size:15px;}
@@ -50,22 +57,24 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 /* ── TOPBAR ── */
 .topbar{
   position:sticky;top:0;z-index:300;
-  background:var(--navy);border-bottom:3px solid var(--orange);
-  height:54px;display:flex;align-items:center;padding:0 20px;
+  background:linear-gradient(180deg,var(--navy) 0%,#162033 100%);
+  border-bottom:1px solid rgba(37,99,235,0.3);
+  height:56px;display:flex;align-items:center;padding:0 20px;
+  box-shadow:0 1px 3px rgba(0,0,0,0.12);
 }
 .topbar-inner{width:100%;max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
-.logo-name{font-family:var(--fh);font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.3px;}
-.logo-tag{font-size:9px;color:rgba(255,255,255,0.4);font-family:var(--fh);margin-left:8px;}
+.logo-name{font-family:var(--fh);font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.5px;}
+.logo-tag{font-size:9px;color:rgba(148,163,184,0.7);font-family:var(--fh);margin-left:8px;letter-spacing:0.3px;}
 .topbar-right{display:flex;align-items:center;gap:8px;}
 .btn-topbar{
-  background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);
-  border-radius:var(--r2);padding:5px 12px;color:#fff;cursor:pointer;
+  background:rgba(37,99,235,0.15);border:1px solid rgba(37,99,235,0.3);
+  border-radius:var(--r2);padding:5px 12px;color:rgba(255,255,255,0.9);cursor:pointer;
   font-family:var(--fh);font-size:11px;font-weight:600;
-  display:flex;align-items:center;gap:5px;
+  display:flex;align-items:center;gap:5px;transition:all 0.2s;
 }
-.btn-topbar:hover{background:rgba(255,255,255,0.18);}
+.btn-topbar:hover{background:rgba(37,99,235,0.25);border-color:rgba(37,99,235,0.5);}
 .watch-count{
-  background:var(--orange);color:#fff;border-radius:10px;
+  background:var(--accent);color:#fff;border-radius:10px;
   padding:1px 5px;font-size:9px;font-weight:700;display:none;
 }
 .watch-count.show{display:inline-block;}
@@ -76,14 +85,14 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 
 /* ── HERO (compact) ── */
 .hero{
-  background:linear-gradient(135deg,var(--navy) 0%,#0e2f5a 100%);
+  background:linear-gradient(135deg,var(--navy) 0%,#1e3a5f 50%,#1a365d 100%);
   border-radius:var(--r);padding:20px 24px;margin-bottom:14px;
-  position:relative;overflow:hidden;
+  box-shadow:var(--shadow-lg);position:relative;overflow:hidden;
 }
 .hero::before{
-  content:'';position:absolute;right:-40px;top:-40px;
-  width:180px;height:180px;border-radius:50%;
-  background:rgba(232,84,30,0.08);pointer-events:none;
+  content:'';position:absolute;top:-50%;right:-30%;width:60%;height:200%;
+  background:radial-gradient(circle,rgba(37,99,235,0.08) 0%,transparent 70%);
+  pointer-events:none;
 }
 .hero-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
 .hero-left{}
@@ -130,6 +139,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .pulse{
   background:var(--bg2);border:1px solid var(--border);
   border-radius:var(--r);margin-bottom:12px;overflow:hidden;
+  box-shadow:var(--shadow-sm);
 }
 .pulse-row{display:flex;overflow-x:auto;scrollbar-width:none;}
 .pulse-row::-webkit-scrollbar{display:none;}
@@ -145,22 +155,23 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .stance{
   background:var(--bg2);border:1px solid var(--border);border-left:4px solid var(--border);
   border-radius:var(--r);padding:16px 18px;margin-bottom:14px;
+  box-shadow:var(--shadow);
 }
-.stance.bull{border-left-color:var(--up);}
+.stance.bull{border-left-color:var(--green);}
 .stance.neutral{border-left-color:var(--amber);}
-.stance.bear{border-left-color:var(--dn);}
+.stance.bear{border-left-color:var(--up);}
 .stance-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
-.stance-title{font-family:var(--fh);font-size:16px;font-weight:800;color:var(--text2);}
+.stance-title{font-family:var(--fh);font-size:16px;font-weight:800;color:var(--text);}
 .stance-date{font-size:10px;color:var(--text3);font-family:var(--fh);margin-top:2px;}
 .stance-badge{
   flex-shrink:0;padding:4px 12px;border-radius:20px;
   font-family:var(--fh);font-size:11px;font-weight:700;border:1px solid;
 }
-.stance-badge.bull{background:rgba(208,2,27,0.07);color:var(--up);border-color:rgba(208,2,27,0.2);}
-.stance-badge.neutral{background:var(--amber-lt);color:var(--amber);border-color:rgba(148,101,0,0.2);}
-.stance-badge.bear{background:rgba(0,85,204,0.07);color:var(--dn);border-color:rgba(0,85,204,0.2);}
+.stance-badge.bull{background:rgba(5,150,105,0.08);color:var(--green);border-color:rgba(5,150,105,0.25);}
+.stance-badge.neutral{background:var(--amber-lt);color:var(--amber);border-color:rgba(217,119,6,0.25);}
+.stance-badge.bear{background:rgba(220,38,38,0.07);color:var(--up);border-color:rgba(220,38,38,0.2);}
 .stance-reason{font-size:12px;color:var(--text);line-height:1.85;margin-bottom:12px;}
-.stance-reason strong{color:var(--navy);font-weight:700;}
+.stance-reason strong{color:var(--accent);font-weight:700;}
 .stance-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
 .stance-chip{
   border:1px solid var(--border);border-radius:var(--r2);
@@ -302,18 +313,19 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .stock-table-wrap{
   background:var(--bg2);border:1px solid var(--border);
   border-radius:var(--r);overflow:hidden;margin-bottom:14px;
+  box-shadow:var(--shadow);
 }
 .stock-table{width:100%;border-collapse:collapse;}
 .stock-table th{
-  background:var(--bg3);padding:8px 10px;
-  font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);
+  background:var(--bg3);padding:10px 10px;
+  font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.3px;
   text-align:right;border-bottom:2px solid var(--border);
   white-space:nowrap;cursor:pointer;user-select:none;
 }
 .stock-table th:first-child{text-align:left;}
-.stock-table th:hover{color:var(--navy);}
-.stock-table th.sort-asc::after{content:' ▲';}
-.stock-table th.sort-desc::after{content:' ▼';}
+.stock-table th:hover{color:var(--accent);}
+.stock-table th.sort-asc::after{content:' ▲';color:var(--accent);}
+.stock-table th.sort-desc::after{content:' ▼';color:var(--accent);}
 .stock-table td{
   padding:9px 10px;border-bottom:1px solid var(--border);
   font-size:12px;text-align:right;color:var(--text);
@@ -321,9 +333,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 }
 .stock-table td:first-child{text-align:left;}
 .stock-table tr:last-child td{border-bottom:none;}
-.stock-table tr.tbl-row{cursor:pointer;transition:background 0.1s;}
-.stock-table tr.tbl-row:hover{background:var(--bg3);}
-.stock-table tr.tbl-row.expanded{background:#f0f7ff;}
+.stock-table tr.tbl-row{cursor:pointer;transition:background 0.15s;}
+.stock-table tr.tbl-row:hover{background:var(--accent-lt);}
+.stock-table tr.tbl-row.expanded{background:var(--accent-lt);}
 .tbl-rank{
   font-family:var(--fn);font-size:11px;font-weight:700;
   width:28px;text-align:center;
@@ -574,6 +586,80 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 @media(max-width:480px){
   .stock-table th:nth-child(n+6),.stock-table td:nth-child(n+6){display:none;}
 }
+
+/* ── 4象限 QUADRANT MAP ── */
+.quadrant-section{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  padding:20px;margin-bottom:14px;box-shadow:var(--shadow);
+}
+.quadrant-title{
+  font-family:var(--fh);font-size:14px;font-weight:700;color:var(--text);
+  margin-bottom:4px;display:flex;align-items:center;gap:8px;
+}
+.quadrant-sub{font-size:11px;color:var(--text3);margin-bottom:16px;}
+.quadrant-wrap{position:relative;width:100%;max-width:460px;margin:0 auto;aspect-ratio:1/1;}
+.quadrant-grid{
+  position:absolute;inset:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;
+  border:2px solid var(--border2);border-radius:8px;overflow:hidden;
+}
+.q-cell{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:12px 8px;position:relative;transition:background 0.2s;cursor:default;
+}
+.q-cell:nth-child(1){background:rgba(37,99,235,0.03);border-right:1px solid var(--border);border-bottom:1px solid var(--border);}
+.q-cell:nth-child(2){background:rgba(5,150,105,0.03);border-bottom:1px solid var(--border);}
+.q-cell:nth-child(3){background:rgba(100,116,139,0.03);border-right:1px solid var(--border);}
+.q-cell:nth-child(4){background:rgba(234,88,12,0.03);}
+.q-cell:hover{filter:brightness(0.97);}
+.q-label{font-family:var(--fh);font-size:11px;font-weight:700;margin-bottom:4px;}
+.q-desc{font-size:9px;color:var(--text3);text-align:center;line-height:1.4;}
+.q-players{font-size:9px;color:var(--text3);margin-top:6px;opacity:0.7;}
+.q-dot{
+  position:absolute;width:18px;height:18px;border-radius:50%;
+  background:var(--accent);border:3px solid var(--bg2);
+  box-shadow:0 0 0 2px var(--accent),var(--shadow-md);
+  transition:all 0.6s cubic-bezier(0.34,1.56,0.64,1);z-index:10;
+}
+.q-dot-label{
+  position:absolute;font-family:var(--fh);font-size:9px;font-weight:700;
+  color:var(--accent);white-space:nowrap;z-index:10;
+  transition:all 0.6s cubic-bezier(0.34,1.56,0.64,1);
+}
+.q-dot.pulse{animation:qpulse 2s infinite;}
+@keyframes qpulse{0%,100%{box-shadow:0 0 0 2px var(--accent),0 0 0 4px rgba(37,99,235,0.2)}50%{box-shadow:0 0 0 2px var(--accent),0 0 0 8px rgba(37,99,235,0.1)}}
+.q-axis{position:absolute;font-family:var(--fh);font-size:9px;font-weight:600;color:var(--text3);}
+.q-axis-x-l{left:4px;top:50%;transform:translateY(-50%) rotate(-90deg);transform-origin:center;}
+.q-axis-x-r{right:4px;top:50%;transform:translateY(-50%) rotate(90deg);transform-origin:center;}
+.q-axis-y-t{top:4px;left:50%;transform:translateX(-50%);}
+.q-axis-y-b{bottom:4px;left:50%;transform:translateX(-50%);}
+
+/* ── AFFILIATE SLOT ── */
+.ad-slot{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  padding:14px 18px;margin-bottom:14px;
+  display:flex;align-items:center;gap:14px;
+  box-shadow:var(--shadow-sm);transition:border-color 0.2s;
+}
+.ad-slot:hover{border-color:var(--accent);}
+.ad-slot-icon{
+  width:44px;height:44px;border-radius:8px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(135deg,var(--navy),#1e3a5f);color:#fff;font-size:18px;
+}
+.ad-slot-body{flex:1;min-width:0;}
+.ad-slot-title{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--text);margin-bottom:2px;}
+.ad-slot-desc{font-size:10px;color:var(--text3);line-height:1.4;}
+.ad-slot-cta{
+  flex-shrink:0;padding:7px 16px;border-radius:var(--r2);
+  background:var(--accent);color:#fff;font-family:var(--fh);font-size:11px;font-weight:700;
+  text-decoration:none;transition:background 0.2s;white-space:nowrap;
+}
+.ad-slot-cta:hover{background:var(--accent-hover);}
+.ad-slot-tag{font-size:8px;color:var(--text3);opacity:0.5;margin-top:4px;}
+@media(max-width:480px){
+  .ad-slot{flex-wrap:wrap;}
+  .ad-slot-cta{width:100%;text-align:center;}
+}
 </style>
 </head>
 <body>
@@ -641,19 +727,66 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
       <div class="events-list" id="eventsList"></div>
     </div>
 
+    <!-- 4象限 POSITION MAP -->
+    <div class="quadrant-section" id="quadrantSection">
+      <div class="quadrant-title">📊 かぶのすけのポジション</div>
+      <div class="quadrant-sub">テクニカル分析 × 短期売買に特化。6ヶ月トレンドで5日の売買タイミングを判定</div>
+      <div class="quadrant-wrap" id="quadrantWrap">
+        <div class="q-axis q-axis-y-t" style="font-size:10px">ファンダメンタル重視</div>
+        <div class="q-axis q-axis-y-b" style="font-size:10px">テクニカル重視</div>
+        <div class="q-axis" style="left:4px;bottom:50%;font-size:10px;transform:translateY(50%)">長期</div>
+        <div class="q-axis" style="right:4px;bottom:50%;font-size:10px;transform:translateY(50%)">短期</div>
+        <div class="quadrant-grid">
+          <div class="q-cell">
+            <div class="q-label" style="color:var(--accent)">バリュー投資</div>
+            <div class="q-desc">企業価値を分析し<br>長期保有で成長を待つ</div>
+            <div class="q-players">四季報・バフェット流</div>
+          </div>
+          <div class="q-cell">
+            <div class="q-label" style="color:var(--green)">決算プレイ</div>
+            <div class="q-desc">ファンダで銘柄選定し<br>決算タイミングで売買</div>
+            <div class="q-players">マネックス・SBI</div>
+          </div>
+          <div class="q-cell">
+            <div class="q-label" style="color:var(--text3)">チャート長期</div>
+            <div class="q-desc">テクニカルで長期<br>トレンドに乗る</div>
+            <div class="q-players">空白地帯</div>
+          </div>
+          <div class="q-cell">
+            <div class="q-label" style="color:var(--orange)">短期テクニカル</div>
+            <div class="q-desc">テクニカル指標で<br>短期の売買タイミングを判定</div>
+            <div class="q-players" style="font-weight:700;color:var(--accent)">★ かぶのすけ</div>
+          </div>
+        </div>
+        <div class="q-dot pulse" id="qDot"></div>
+        <div class="q-dot-label" id="qDotLabel">かぶのすけ</div>
+      </div>
+    </div>
+
+    <!-- AFFILIATE SLOT 1 (TOP) -->
+    <a class="ad-slot" id="adSlot1" href="https://www.sbisec.co.jp/" target="_blank" rel="noopener sponsored" onclick="gaEvent('click_ad',{slot:'top',name:'sbi'})">
+      <div class="ad-slot-icon">📈</div>
+      <div class="ad-slot-body">
+        <div class="ad-slot-title">SBI証券 — NISA口座開設で投資デビュー</div>
+        <div class="ad-slot-desc">かぶのすけで見つけた銘柄をすぐ購入。業界最安水準の手数料で高配当株投資を始めよう。</div>
+        <div class="ad-slot-tag">PR・広告</div>
+      </div>
+      <span class="ad-slot-cta">口座開設 →</span>
+    </a>
+
     <!-- TODAY'S TOP5 DUAL -->
     <div class="top5-dual" id="top5Section" style="display:none">
       <div class="top5-section" style="border-left:4px solid var(--green)">
         <div class="top5-header">
           <div class="top5-title">🛡 押し目 TOP5</div>
-          <div class="top5-sub">高配当×割安×タイミング — 下がった優良株を狙う</div>
+          <div class="top5-sub">上昇トレンド中に短期下落した銘柄</div>
         </div>
-        <div class="top5-list" id="top5List"></div>
+        <div class="top5-list" id="top5DipList"></div>
       </div>
       <div class="top5-section" style="border-left:4px solid #e040fb">
         <div class="top5-header">
           <div class="top5-title">🚀 勢い TOP5</div>
-          <div class="top5-sub">モメンタム×ROE×出来高 — 上昇トレンドに乗る</div>
+          <div class="top5-sub">全期間上昇トレンドの銘柄</div>
         </div>
         <div class="top5-list" id="top5MomList"></div>
       </div>
@@ -668,7 +801,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
         <div class="filter-tab" id="disp-all" onclick="setDispCount(999,this)">全件</div>
       </div>
       <div class="filter-count" id="filterCount"></div>
-      <div id="styleNote" style="font-size:10px;color:var(--green);margin-left:auto;">🛡 押し目 + 🚀 勢い 2軸スコアで評価</div>
+      <div id="styleNote" style="font-size:10px;color:var(--green);margin-left:auto;">📈 時間加重トレンドスコア — 6ヶ月→5日の加速度で評価</div>
     </div>
 
     <!-- SECTOR FILTER -->
@@ -688,6 +821,17 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 
     <!-- DANGER SECTION -->
     <div id="dangerSection"></div>
+
+    <!-- AFFILIATE SLOT 2 (BOTTOM) -->
+    <a class="ad-slot" id="adSlot2" href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener sponsored" onclick="gaEvent('click_ad',{slot:'bottom',name:'rakuten'})" style="margin-top:14px">
+      <div class="ad-slot-icon">💰</div>
+      <div class="ad-slot-body">
+        <div class="ad-slot-title">楽天証券 — 楽天ポイントで株を買える</div>
+        <div class="ad-slot-desc">ポイント投資で気軽にスタート。NISA対応・手数料0円で高配当株投資を始めよう。</div>
+        <div class="ad-slot-tag">PR・広告</div>
+      </div>
+      <span class="ad-slot-cta">詳しく見る →</span>
+    </a>
 
     <!-- DISCLAIMER -->
     <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
@@ -1115,6 +1259,102 @@ function calcBreakdownMomentum(s){
 }
 
 // ═══════════════════════════════════════
+// UNIFIED TREND SCORE (時間加重トレンドスコア)
+// ═══════════════════════════════════════
+function calcScoreTrend(s){
+  const mc=s.market_cap_b||0;
+  if(mc<300)return{score:0,type:'avoid'};
+  let score=0;
+  const r120=s.ret120||0, r60=s.ret60||0, r20=s.ret20||0, r5=s.ret5||0;
+
+  // 120日 (max 10pt)
+  score+=r120>=30?10:r120>=15?8:r120>=5?5:r120>=0?2:r120>=-5?0:r120>=-15?-3:-5;
+  // 60日 (max 15pt)
+  score+=r60>=20?15:r60>=10?12:r60>=5?8:r60>=0?3:r60>=-5?0:r60>=-10?-3:-5;
+  // 20日 (max 25pt) — 押し目にも加点
+  if(r20>=15)score+=25;else if(r20>=8)score+=20;else if(r20>=3)score+=14;
+  else if(r20>=0)score+=5;else if(r20>=-3)score+=0;
+  else if(r20>=-5)score+=8;else if(r20>=-10)score+=14;else score+=5;
+  // 5日 (max 35pt) — 押し目にも勢いにも加点
+  if(r5<=-8)score+=15;else if(r5<=-5)score+=30;else if(r5<=-3)score+=25;
+  else if(r5<=-1)score+=15;else if(r5<=1)score+=5;else if(r5<=3)score+=15;
+  else if(r5<=5)score+=25;else if(r5<=8)score+=30;else score+=20;
+
+  // 一貫性 (±10pt)
+  const periods=[r120,r60,r20];
+  const posCount=periods.filter(r=>r>0).length;
+  if(posCount===3)score+=10;else if(posCount===2)score+=5;else if(posCount===0)score-=5;
+
+  // 出来高
+  const vt=s.vol_trend||1;
+  if(vt>=2)score+=5;else if(vt>=1.3)score+=3;else if(vt>=1.1)score+=1;
+
+  // ペナルティ
+  const vr1d=s.vol_ratio_1d||1,ret1d=s.ret_1d||0;
+  if(vr1d>=3&&ret1d<=-3)score-=10;
+  if(vr1d>=3&&ret1d>=5)score-=8;
+  if((s.rsi||50)>=80)score-=5;
+
+  score=Math.max(0,Math.min(score,100));
+
+  // タイプ判定
+  let type;
+  if(posCount>=2&&r5<=-2)type='dip';
+  else if(posCount>=2&&r5>0)type='momentum';
+  else if(posCount<=1&&r5<=-2)type='falling';
+  else if(posCount<=1&&r5>2)type='bounce';
+  else type='neutral';
+
+  return{score,type};
+}
+
+function calcBreakdownTrend(s){
+  const bd=[];
+  const r120=s.ret120||0, r60=s.ret60||0, r20=s.ret20||0, r5=s.ret5||0;
+  // 120日
+  const p120=r120>=30?10:r120>=15?8:r120>=5?5:r120>=0?2:r120>=-5?0:r120>=-15?-3:-5;
+  bd.push({l:'120日('+r120.toFixed(1)+'%)',v:p120,max:10,pos:p120>=0});
+  // 60日
+  const p60=r60>=20?15:r60>=10?12:r60>=5?8:r60>=0?3:r60>=-5?0:r60>=-10?-3:-5;
+  bd.push({l:'60日('+r60.toFixed(1)+'%)',v:p60,max:15,pos:p60>=0});
+  // 20日
+  let p20;
+  if(r20>=15)p20=25;else if(r20>=8)p20=20;else if(r20>=3)p20=14;
+  else if(r20>=0)p20=5;else if(r20>=-3)p20=0;
+  else if(r20>=-5)p20=8;else if(r20>=-10)p20=14;else p20=5;
+  bd.push({l:'20日('+r20.toFixed(1)+'%)',v:p20,max:25,pos:p20>=0});
+  // 5日
+  let p5;
+  if(r5<=-8)p5=15;else if(r5<=-5)p5=30;else if(r5<=-3)p5=25;
+  else if(r5<=-1)p5=15;else if(r5<=1)p5=5;else if(r5<=3)p5=15;
+  else if(r5<=5)p5=25;else if(r5<=8)p5=30;else p5=20;
+  bd.push({l:'5日('+r5.toFixed(1)+'%)',v:p5,max:35,pos:p5>=0});
+  // 一貫性
+  const posCount=[r120,r60,r20].filter(r=>r>0).length;
+  const cp=posCount===3?10:posCount===2?5:posCount===0?-5:0;
+  if(cp!==0)bd.push({l:'一貫性('+posCount+'/3期間↑)',v:cp,max:10,pos:cp>0});
+  // 出来高
+  const vt=s.vol_trend||1;
+  const vtp=vt>=2?5:vt>=1.3?3:vt>=1.1?1:0;
+  if(vtp>0)bd.push({l:'出来高トレンド(×'+vt.toFixed(1)+')',v:vtp,max:5,pos:true});
+  return bd;
+}
+
+const TREND_TYPE_LABEL={
+  dip:{icon:'🛡',label:'押し目',cls:'dip',color:'var(--green)'},
+  momentum:{icon:'🚀',label:'勢い',cls:'momentum',color:'#e040fb'},
+  falling:{icon:'⚠',label:'落ちるナイフ',cls:'falling',color:'var(--up)'},
+  bounce:{icon:'🔄',label:'反発',cls:'bounce',color:'var(--amber)'},
+  neutral:{icon:'😐',label:'方向感なし',cls:'neutral',color:'var(--text3)'},
+  avoid:{icon:'🚫',label:'対象外',cls:'avoid',color:'var(--text3)'},
+};
+
+function trendTypeBadge(type){
+  const t=TREND_TYPE_LABEL[type]||TREND_TYPE_LABEL.neutral;
+  return`<span style="font-size:10px;padding:1px 6px;border-radius:3px;background:${t.color}22;color:${t.color};font-weight:600">${t.icon}${t.label}</span>`;
+}
+
+// ═══════════════════════════════════════
 // PROCESS
 // ═══════════════════════════════════════
 function processStocks(){
@@ -1136,20 +1376,34 @@ function processStocks(){
 
   processed=list.map(s=>{
     const d25=dv(s.price,s.ma25);
-    const score = calcScoreBluechip(s);
-    const scoreMom = s.score_momentum||calcScoreMomentum(s);
+    // 統合トレンドスコア（サーバー計算済みならそれを使う）
+    let scoreTrend,trendType;
+    if(s.score_trend!=null&&s.trend_type){
+      scoreTrend=s.score_trend;
+      trendType=s.trend_type;
+    }else{
+      const t=calcScoreTrend(s);
+      scoreTrend=t.score;
+      trendType=t.type;
+    }
+    const score=scoreTrend;
     const zone=getZone(score);
-    return{...s,d25,score,scoreMom,zone};
+    return{...s,d25,score,scoreTrend,trendType,zone};
   });
 
-  // 🚀 勢いTOP5用（全銘柄、時価総額300億以上）
+  // 🚀 全銘柄用（TOP5表示用、フィルターなし）
   processedMomentum=STOCKS.filter(s=>(s.market_cap_b||0)>=300).map(s=>{
     const d25=dv(s.price,s.ma25);
-    const scoreMom=s.score_momentum||calcScoreMomentum(s);
-    const score=calcScoreBluechip(s);
+    let scoreTrend,trendType;
+    if(s.score_trend!=null&&s.trend_type){
+      scoreTrend=s.score_trend;trendType=s.trend_type;
+    }else{
+      const t=calcScoreTrend(s);scoreTrend=t.score;trendType=t.type;
+    }
+    const score=scoreTrend;
     const zone=getZone(score);
-    return{...s,d25,score,scoreMom,zone};
-  }).sort((a,b)=>b.scoreMom-a.scoreMom);
+    return{...s,d25,score,scoreTrend,trendType,zone};
+  }).sort((a,b)=>b.scoreTrend-a.scoreTrend);
 
   if(zoneFilter==='buy')processed=processed.filter(s=>s.zone.cls==='buy');
   else if(zoneFilter==='buywatch')processed=processed.filter(s=>s.zone.cls!=='hold');
@@ -1382,7 +1636,7 @@ function renderTable(){
         </td>
         <td><span class="tbl-zone ${s.zone.cls}">${s.zone.label}</span></td>
         <td><span class="tbl-score ${sc}">${s.score}</span></td>
-        <td><span class="tbl-score" style="color:${s.scoreMom>=50?'#e040fb':'var(--text3)'};font-size:${s.scoreMom>=50?'12px':'11px'}">${s.scoreMom||'—'}</span></td>
+        <td style="text-align:center">${trendTypeBadge(s.trendType||'neutral')}</td>
         <td class="tbl-num">${s.dividend}%</td>
         <td class="tbl-num ${d25cls}">${s.d25>0?'+':''}${s.d25}%</td>
         <td class="tbl-num ${s.rsi<=30?'dn':''}">${s.rsi}</td>
@@ -1402,8 +1656,8 @@ function renderTable(){
           <th style="text-align:left;width:28px">#</th>
           ${thClick('name','銘柄')}
           <th>ゾーン</th>
-          ${thClick('score','🛡押目')}
-          ${thClick('scoreMom','🚀勢い')}
+          ${thClick('score','スコア')}
+          <th style="text-align:center">タイプ</th>
           ${thClick('dividend','配当%')}
           ${thClick('d25','MA乖離')}
           ${thClick('rsi','RSI')}
@@ -1419,9 +1673,9 @@ function renderTable(){
 function buildDetailBox(s){
   const d25=s.d25;
   const reasons=buildReasons(s,d25);
-  const bd=calcBreakdown(s,currentMode);
-  const bdMom=calcBreakdownMomentum(s);
-  const momScore=s.scoreMom||calcScoreMomentum(s);
+  const bdTrend=calcBreakdownTrend(s);
+  const tType=s.trendType||'neutral';
+  const tLabel=TREND_TYPE_LABEL[tType]||TREND_TYPE_LABEL.neutral;
   const isFav=watchlist.includes(s.code);
 
   const whyHtml=reasons.length?reasons.map(w=>`
@@ -1434,21 +1688,14 @@ function buildDetailBox(s){
     </div>`).join('')
     :'<div style="font-size:11px;color:var(--text3)">現時点で明確な買いシグナルはありません</div>';
 
-  const bdHtml=bd.map(item=>`
+  const bdHtml=bdTrend.map(item=>`
     <div class="bd-row">
       <div class="bd-l">${item.l}</div>
       <div class="bd-bar"><div class="bd-fill" style="width:${Math.min(Math.abs(item.v)/item.max*100,100)}%;background:${item.pos?'var(--green)':'var(--up)'}"></div></div>
       <div class="bd-v ${item.pos?'pos':'neg'}">${item.v>0?'+':''}${item.v}点</div>
     </div>`).join('');
 
-  const bdMomHtml=bdMom.map(item=>`
-    <div class="bd-row">
-      <div class="bd-l">${item.l}</div>
-      <div class="bd-bar"><div class="bd-fill" style="width:${Math.min(Math.abs(item.v)/item.max*100,100)}%;background:#e040fb"></div></div>
-      <div class="bd-v pos" style="color:#e040fb">${item.v>0?'+':''}${item.v}点</div>
-    </div>`).join('');
-
-  const r20=s.ret20||0;const r60=s.ret60||0;
+  const r20=s.ret20||0;const r60=s.ret60||0;const r120=s.ret120||0;
 
   return`<div class="detail-box fadein">
     <div class="detail-grid">
@@ -1457,10 +1704,8 @@ function buildDetailBox(s){
         <div class="why-items">${whyHtml}</div>
       </div>
       <div>
-        <div class="detail-section-title">🛡 押し目スコア内訳（${s.score}点）</div>
+        <div class="detail-section-title">📈 時間加重トレンドスコア（${s.score}点） ${trendTypeBadge(tType)}</div>
         <div class="score-breakdown">${bdHtml}</div>
-        <div class="detail-section-title" style="margin-top:12px">🚀 勢いスコア内訳（${momScore}点）</div>
-        <div class="score-breakdown">${bdMomHtml}</div>
         <table style="width:100%;border-collapse:collapse;font-size:11px;margin-top:12px">
           <tr>
             <th style="background:var(--bg3);padding:5px 8px;text-align:left;font-size:10px;color:var(--text3)">指標</th>
@@ -1469,10 +1714,10 @@ function buildDetailBox(s){
           </tr>
           <tr><td style="padding:5px 8px;font-size:11px">現在値</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">¥${s.price.toLocaleString()}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">—</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">時価総額</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.market_cap_b>=10000?Math.round(s.market_cap_b/10000*10)/10+'兆円':s.market_cap_b?s.market_cap_b+'億円':'—'}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">1兆円以上が大型</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">120日リターン</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${r120>0?'var(--green)':'var(--up)'}">${r120>0?'+':''}${r120.toFixed(1)}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">6ヶ月トレンド</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">60日リターン</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${r60>0?'var(--green)':'var(--up)'}">${r60>0?'+':''}${r60.toFixed(1)}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">3ヶ月トレンド</td></tr>
+          <tr><td style="padding:5px 8px;font-size:11px">20日リターン</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${r20>0?'var(--green)':'var(--up)'}">${r20>0?'+':''}${r20.toFixed(1)}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">1ヶ月トレンド</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">ROE</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${(s.roe||0)>=10?'var(--green)':'var(--text)'}">${s.roe||0}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">10%以上が優良</td></tr>
-          <tr><td style="padding:5px 8px;font-size:11px">利益成長率</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${(s.earnings_growth||0)>0?'var(--green)':'var(--up)'}">${s.earnings_growth||0}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">+15%以上が高成長</td></tr>
-          <tr><td style="padding:5px 8px;font-size:11px">20日リターン</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${r20>0?'var(--green)':'var(--up)'}">${r20>0?'+':''}${r20.toFixed(1)}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">+5%以上がトレンド</td></tr>
-          <tr><td style="padding:5px 8px;font-size:11px">60日リターン</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${r60>0?'var(--green)':'var(--up)'}">${r60>0?'+':''}${r60.toFixed(1)}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">中期トレンド</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">配当利回り</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.dividend}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">3%以上が高配当</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">PBR</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.pbr}倍</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">1倍以下が割安</td></tr>
           ${s.days_to_next_earnings?`<tr><td style="padding:5px 8px;font-size:11px">📊 次回決算</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${s.days_to_next_earnings<=14?'var(--orange)':'var(--text)'}">約${s.days_to_next_earnings}日後</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">${s.days_to_next_earnings<=14?'⚠ 決算前注意':'推定値'}</td></tr>`:''}
@@ -1583,16 +1828,14 @@ function renderTrendTab(){
 
 function renderDanger(){
   // TOP5銘柄コードを収集（押し目+勢い両方）
-  const topDipCodes=new Set(
-    STOCKS.filter(s=>(s.dividend||0)>=2&&(s.market_cap_b||0)>=500)
-    .map(s=>({code:s.code,bc:calcScoreBluechip(s)}))
-    .sort((a,b)=>b.bc-a.bc).slice(0,5).map(s=>s.code)
-  );
-  const topMomCodes=new Set(
-    STOCKS.filter(s=>(s.market_cap_b||0)>=300)
-    .map(s=>({code:s.code,mc:calcScoreMomentum(s)}))
-    .sort((a,b)=>b.mc-a.mc).slice(0,5).map(s=>s.code)
-  );
+  const all=STOCKS.filter(s=>(s.market_cap_b||0)>=300).map(s=>{
+    let st,tt;
+    if(s.score_trend!=null&&s.trend_type){st=s.score_trend;tt=s.trend_type;}
+    else{const t=calcScoreTrend(s);st=t.score;tt=t.type;}
+    return{code:s.code,scoreTrend:st,trendType:tt};
+  });
+  const topDipCodes=new Set(all.filter(s=>s.trendType==='dip').sort((a,b)=>b.scoreTrend-a.scoreTrend).slice(0,5).map(s=>s.code));
+  const topMomCodes=new Set(all.filter(s=>s.trendType==='momentum').sort((a,b)=>b.scoreTrend-a.scoreTrend).slice(0,5).map(s=>s.code));
   const excludeCodes=new Set([...topDipCodes,...topMomCodes]);
 
   const dangers=STOCKS.map(s=>{
@@ -1679,69 +1922,80 @@ function genReason(s){
 function renderTop5(){
   const sec=document.getElementById('top5Section');
   if(!sec||!STOCKS.length) return;
-  // 🛡 押し目TOP5
-  const topDip=STOCKS.filter(s=>(s.dividend||0)>=2&&(s.market_cap_b||0)>=500)
-    .map(s=>({...s,bc:calcScoreBluechip(s)}))
-    .sort((a,b)=>b.bc-a.bc)
-    .slice(0,5);
-  // 🚀 勢いTOP5
-  const topMom=STOCKS.filter(s=>(s.market_cap_b||0)>=300)
-    .map(s=>({...s,mc:calcScoreMomentum(s)}))
-    .sort((a,b)=>b.mc-a.mc)
-    .slice(0,5);
+  // 全銘柄にトレンドスコア計算
+  const all=STOCKS.filter(s=>(s.market_cap_b||0)>=300).map(s=>{
+    let st,tt;
+    if(s.score_trend!=null&&s.trend_type){st=s.score_trend;tt=s.trend_type;}
+    else{const t=calcScoreTrend(s);st=t.score;tt=t.type;}
+    return{...s,scoreTrend:st,trendType:tt};
+  });
+  // 🛡 押し目TOP5: trend_type=dip のみ
+  const topDip=all.filter(s=>s.trendType==='dip'&&(s.dividend||0)>=2)
+    .sort((a,b)=>b.scoreTrend-a.scoreTrend).slice(0,5);
+  // 🚀 勢いTOP5: trend_type=momentum のみ
+  const topMom=all.filter(s=>s.trendType==='momentum')
+    .sort((a,b)=>b.scoreTrend-a.scoreTrend).slice(0,5);
   if(!topDip.length&&!topMom.length){sec.style.display='none';return;}
   sec.style.display='grid';
   // 押し目リスト
-  document.getElementById('top5List').innerHTML=topDip.map((s,i)=>{
-    const scCls=s.bc>=60?'hi':'';
+  const dipEl=document.getElementById('top5DipList');
+  if(dipEl) dipEl.innerHTML=topDip.length?topDip.map((s,i)=>{
+    const scCls=s.scoreTrend>=60?'hi':'';
     const rankCls=i===0?'gold':'';
-    const mcTxt=s.market_cap_b>=10000?((s.market_cap_b/10000).toFixed(1)+'兆'):(Math.round(s.market_cap_b)+'億');
+    const r5=s.ret5||0;const r20=s.ret20||0;const r120=s.ret120||0;
     return`<div class="top5-item" onclick="expandedCode='${s.code}';run();document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'})">
       <div class="top5-rank ${rankCls}">${i+1}</div>
       <div class="top5-info">
         <div class="top5-name-row">
           <span class="top5-name">${s.name}</span>
-          <span class="top5-score ${scCls}">${s.bc}pt</span>
+          <span class="top5-score ${scCls}">${s.scoreTrend}pt</span>
         </div>
         <div class="top5-meta">
-          ${s.code} | 配当${s.dividend}%${s.div_growth_years>=5?' ('+s.div_growth_years+'年増配)':''} | vs業種${(s.ret5_vs_sector||0)>0?'+':''}${(s.ret5_vs_sector||0).toFixed(1)}%
+          ${s.code} | 配当${s.dividend}% | 120日${r120>0?'+':''}${r120.toFixed(0)}% → 5日${r5>0?'+':''}${r5.toFixed(1)}%
         </div>
-        <div class="top5-reason">${genReason(s)}</div>
+        <div class="top5-reason">${genReasonTrend(s)}</div>
       </div>
     </div>`;
-  }).join('');
+  }).join(''):'<div style="font-size:11px;color:var(--text3);padding:10px">該当銘柄なし（上昇トレンド中の押し目が発生していません）</div>';
   // 勢いリスト
-  document.getElementById('top5MomList').innerHTML=topMom.map((s,i)=>{
-    const scCls=s.mc>=60?'hi':'';
+  document.getElementById('top5MomList').innerHTML=topMom.length?topMom.map((s,i)=>{
+    const scCls=s.scoreTrend>=60?'hi':'';
     const rankCls=i===0?'gold':'';
-    const r20=s.ret20||0;const r60=s.ret60||0;
+    const r20=s.ret20||0;const r60=s.ret60||0;const r120=s.ret120||0;
     return`<div class="top5-item" onclick="expandedCode='${s.code}';run();document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'})">
       <div class="top5-rank ${rankCls}" style="background:${i===0?'#e040fb':'var(--bg3)'}">${i+1}</div>
       <div class="top5-info">
         <div class="top5-name-row">
           <span class="top5-name">${s.name}</span>
-          <span class="top5-score ${scCls}" style="color:#e040fb">${s.mc}pt</span>
+          <span class="top5-score ${scCls}" style="color:#e040fb">${s.scoreTrend}pt</span>
         </div>
         <div class="top5-meta">
-          ${s.code} | ROE${s.roe||0}% | 20日${r20>0?'+':''}${r20.toFixed(1)}% | 60日${r60>0?'+':''}${r60.toFixed(1)}% | 出来高×${(s.vol_trend||1).toFixed(1)}
+          ${s.code} | 120日${r120>0?'+':''}${r120.toFixed(0)}% | 60日${r60>0?'+':''}${r60.toFixed(0)}% | 20日${r20>0?'+':''}${r20.toFixed(0)}%
         </div>
-        <div class="top5-reason">${genReasonMomentum(s)}</div>
+        <div class="top5-reason">${genReasonTrend(s)}</div>
       </div>
     </div>`;
-  }).join('');
+  }).join(''):'<div style="font-size:11px;color:var(--text3);padding:10px">該当銘柄なし</div>';
 }
 
-function genReasonMomentum(s){
+function genReasonTrend(s){
   const parts=[];
-  const r20=s.ret20||0;const r60=s.ret60||0;
-  if(r20>=10)parts.push('20日で+'+r20.toFixed(0)+'%の強い上昇トレンド');
-  else if(r20>=5)parts.push('20日で+'+r20.toFixed(0)+'%の上昇基調');
-  if((s.roe||0)>=10)parts.push('ROE'+s.roe+'%の高収益企業');
-  if((s.earnings_growth||0)>=15)parts.push('利益+'+s.earnings_growth+'%成長');
-  if((s.vol_trend||1)>=1.5)parts.push('出来高増加中（機関参入の可能性）');
-  if((s.sector_ret5||0)>=2)parts.push('セクター全体に追い風');
-  if((s.dividend||0)>=2&&r20>=5)parts.push('配当あり×モメンタム＝最強パターン');
-  return parts.slice(0,3).join('。')||'上昇トレンド銘柄';
+  const r120=s.ret120||0,r60=s.ret60||0,r20=s.ret20||0,r5=s.ret5||0;
+  const tt=s.trendType||'neutral';
+  if(tt==='dip'){
+    if(r120>=10)parts.push('6ヶ月で+'+r120.toFixed(0)+'%上昇中の銘柄');
+    parts.push('直近5日で'+r5.toFixed(1)+'%の短期調整');
+    if((s.dividend||0)>=3)parts.push('配当'+s.dividend+'%で下値も堅い');
+  }else if(tt==='momentum'){
+    const posN=[r120,r60,r20].filter(r=>r>0).length;
+    if(posN===3)parts.push('120日/60日/20日すべて上昇の完璧なトレンド');
+    if(r20>=10)parts.push('直近20日で+'+r20.toFixed(0)+'%加速中');
+    if((s.vol_trend||1)>=1.5)parts.push('出来高も増加中');
+  }else if(tt==='bounce'){
+    parts.push('反発の兆し（持続性は要確認）');
+  }
+  if((s.roe||0)>=10)parts.push('ROE'+s.roe+'%の高収益');
+  return parts.slice(0,3).join('。')||'トレンド分析中';
 }
 
 // ═══════════════════════════════════════
@@ -2038,14 +2292,52 @@ function run(){
   gaEvent('scan_executed',{mode:currentMode,buy_count:processed.filter(s=>s.zone.cls==='buy').length,data_source:dataSource});
 }
 
+function renderQuadrant(){
+  const wrap=document.getElementById('quadrantWrap');
+  if(!wrap)return;
+  const dot=document.getElementById('qDot');
+  const label=document.getElementById('qDotLabel');
+  if(!dot||!label)return;
+
+  const w=wrap.offsetWidth;
+  const h=wrap.offsetHeight;
+  // かぶのすけの位置: テクニカル(下)×短期(右) → 右下
+  // X: 0=左(長期) 1=右(短期), Y: 0=上(ファンダ) 1=下(テクニカル)
+  const posX=0.78, posY=0.78;
+  const px=posX*w-9;
+  const py=posY*h-9;
+
+  dot.style.left=px+'px';
+  dot.style.top=py+'px';
+  label.style.left=(px+24)+'px';
+  label.style.top=(py+2)+'px';
+
+  // hover tooltips on cells
+  const cells=wrap.querySelectorAll('.q-cell');
+  cells.forEach((cell,i)=>{
+    cell.addEventListener('mouseenter',()=>{
+      cell.style.transform='scale(1.02)';
+      cell.style.zIndex='5';
+    });
+    cell.addEventListener('mouseleave',()=>{
+      cell.style.transform='scale(1)';
+      cell.style.zIndex='1';
+    });
+  });
+}
+
 async function init(){
   updateWatchCount();
   await loadRealData();
   document.getElementById('sectorFilterWrap').style.display='block';
   loadEvents();
+  renderQuadrant();
   run();
   gaEvent('view_app',{data_source:dataSource});
 }
+
+// resize対応
+window.addEventListener('resize',()=>{renderQuadrant();});
 
 init();
 </script>
