@@ -178,8 +178,8 @@ a{color:var(--blue-m);text-decoration:none;}
 .t5-expand{background:var(--bg);padding:16px;border-top:1px solid var(--border);border-left:4px solid var(--blue);animation:fadein .25s ease;}
 .d-grid{display:grid;grid-template-columns:1fr;gap:14px;}
 .d-sec-ttl{font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:5px;}
-.d-chart-box{background:#FAFBFC;border-radius:10px;padding:10px 8px 6px;border:1px solid var(--border);}
-.d-chart-svg{width:100%;display:block;}
+.d-chart-box{background:#FAFBFC;border-radius:10px;padding:10px 8px 6px;border:1px solid var(--border);overflow:hidden;}
+.d-chart-svg{width:100%;display:block;overflow:hidden;}
 .d-legend{display:flex;gap:10px;padding:6px 0 2px;flex-wrap:wrap;}
 .d-leg{display:flex;align-items:center;gap:3px;font-size:10px;color:var(--text2);}
 .d-leg-ln{width:12px;height:2px;border-radius:1px;}
@@ -397,10 +397,12 @@ function drawDetailChart(el,closes,ma25v,ma75v){
   // MA75水平線（緑の破線）
   let ma75line='';
   if(ma75v&&ma75v>0){
-    const y75=P+(1-(ma75v-mn)/rng)*(H-2*P);
+    let y75=P+(1-(ma75v-mn)/rng)*(H-2*P);
+    y75=Math.max(P+2,Math.min(H-P-2,y75)); // SVG範囲内にクリップ
     ma75line=`<rect x="${P}" y="${y75-2}" width="${W-2*P}" height="4" fill="#059669" opacity="0.12" rx="2"/>`;
     ma75line+=`<line x1="${P}" y1="${y75}" x2="${W-P}" y2="${y75}" stroke="#059669" stroke-width="2.5" stroke-dasharray="8,4"/>`;
-    ma75line+=`<text x="${P+4}" y="${y75-8}" font-size="9" fill="#059669" font-weight="700" font-family="sans-serif">サポート ¥${Math.round(ma75v).toLocaleString()}</text>`;
+    const textY=Math.max(P+12,y75-8); // テキストもクリップ
+    ma75line+=`<text x="${P+4}" y="${textY}" font-size="9" fill="#059669" font-weight="700" font-family="sans-serif">サポート ¥${Math.round(ma75v).toLocaleString()}</text>`;
   }
   // MA25曲線
   const ma25path=toPath(ma25calc,W,H,P,mn,mx);
@@ -730,7 +732,7 @@ function buildExpand(s){
     <div>
       <div class="d-sec-ttl">📊 値動きチャート（60日）</div>
       ${hasSpark?`<div class="d-chart-box">
-        <svg class="d-chart-svg" viewBox="0 0 400 150" data-dchart="${s.code}"></svg>
+        <svg class="d-chart-svg" viewBox="0 0 400 150" overflow="hidden" data-dchart="${s.code}"></svg>
         <div class="d-legend">
           <div class="d-leg"><div class="d-leg-ln" style="background:#1A1A1A"></div>株価</div>
           <div class="d-leg"><div class="d-leg-ln" style="background:#F59E0B"></div>短期の目安 <b style="color:#F59E0B">¥${(s.ma25||0).toLocaleString()}</b></div>
