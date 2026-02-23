@@ -703,57 +703,61 @@ def calc_score_stable(s):
 
 
 def calc_score_bluechip(s):
-    """安定高配当スコア v3：配当×銘柄質×押し目度×セクター差分"""
+    """安定高配当スコア v4：バックテスト最適化済み
+    
+    フィルター（足切り）: 配当>=2%, 時価総額>=500億
+    ランキング（順位決定）: タイミング指標が最重要
+    
+    バックテスト結果:
+      - 配当利回り → ランキングに効かない（フィルター専用）
+      - ret5, ret5_vs_sector → 最も5日後リターンに相関
+      - dip_zscore → 有効
+    """
     div = s.get("dividend", 0)
     mc = s.get("market_cap_b", 0)
     if div < 2 or mc < 500: return 0
 
     score = 0
 
-    # ── 銘柄の質（変わらない）──
+    # ── フィルター通過ボーナス（銘柄の質）── max 16pt
+    # 配当はフィルター専用。ランキングには使わない（バックテスト結論）
 
-    # 配当利回り (max 20pt)
-    score += (20 if div >= 5 else 17 if div >= 4.5 else 14 if div >= 4
-              else 11 if div >= 3.5 else 8 if div >= 3 else 5 if div >= 2.5
-              else 2 if div >= 2 else 0)
+    # 時価総額 (max 5pt) — 大型ほど安定だが配点は控えめ
+    score += (5 if mc >= 50000 else 4 if mc >= 10000 else 3 if mc >= 5000
+              else 2 if mc >= 1000 else 1 if mc >= 500 else 0)
 
-    # 時価総額 (max 10pt)
-    score += (10 if mc >= 50000 else 9 if mc >= 10000 else 8 if mc >= 5000
-              else 6 if mc >= 1000 else 3 if mc >= 500 else 0)
-
-    # 増配ボーナス (max 10pt)
+    # 増配ボーナス (max 6pt)
     dgy = s.get("div_growth_years", 0)
-    score += (10 if dgy >= 15 else 7 if dgy >= 10 else 5 if dgy >= 7
-              else 3 if dgy >= 5 else 0)
-
-    # ── 今の割安度（毎日変わる）──
-
-    # 自分比押し目度 = dip_zscore (max 15pt)
-    z = s.get("dip_zscore", 0)
-    score += (15 if z <= -3.0 else 12 if z <= -2.0 else 9 if z <= -1.5
-              else 6 if z <= -1.0 else 3 if z <= -0.5 else 0)
+    score += (6 if dgy >= 15 else 4 if dgy >= 10 else 3 if dgy >= 7
+              else 2 if dgy >= 5 else 0)
 
     # PBR (max 5pt)
     pbr = s.get("pbr", 99)
     score += (5 if pbr <= 0.7 else 4 if pbr <= 0.9 else 3 if pbr <= 1.2
               else 1 if pbr <= 1.5 else 0)
 
-    # ── タイミング（毎日変わる）──
+    # ── タイミング指標（毎日変わる）── max 75pt
+    # バックテストで最も5日後リターンに相関した指標群
 
-    # 個別 vs セクター差分 (max 20pt) ← 最重要
-    # マイナス = 個別だけ下がっている = 反発チャンス
+    # 個別 vs セクター差分 (max 25pt) ← バックテスト有効
     diff5 = s.get("ret5_vs_sector", 0)
-    score += (20 if diff5 <= -5 else 15 if diff5 <= -3 else 10 if diff5 <= -1.5
-              else 5 if diff5 <= -0.5 else 0)
-    # セクターも下がっている場合はペナルティ（まだ下がるリスク）
+    score += (25 if diff5 <= -5 else 19 if diff5 <= -3 else 13 if diff5 <= -1.5
+              else 6 if diff5 <= -0.5 else 0)
+
+    # セクター下落ペナルティ
     sec_r5 = s.get("sector_ret5", 0)
     if sec_r5 <= -3:
-        score -= 5  # セクター全体が弱い → 慎重に
+        score -= 5
 
-    # 個別下落トレンド (max 10pt) — セクター差分と補完
+    # 個別5日下落 (max 25pt) ← バックテスト最強指標
     r5 = s.get("ret5", 0)
-    score += (10 if r5 <= -5 else 7 if r5 <= -3 else 4 if r5 <= -1.5
-              else 1 if r5 <= -0.5 else 0)
+    score += (25 if r5 <= -5 else 18 if r5 <= -3 else 10 if r5 <= -1.5
+              else 3 if r5 <= -0.5 else 0)
+
+    # 自分比押し目度 (max 15pt)
+    z = s.get("dip_zscore", 0)
+    score += (15 if z <= -3.0 else 12 if z <= -2.0 else 9 if z <= -1.5
+              else 6 if z <= -1.0 else 3 if z <= -0.5 else 0)
 
     # 10日リターン (max 5pt)
     r10 = s.get("ret10", 0)
@@ -1003,17 +1007,6 @@ def main():
         "trend_ranking":   trend_ranking_data,
         "stocks":          stocks_out,          # TOP200+大型高配当を配信
     }
-    # NaN対策: numpy/pandasのNaN → None → 0
-    import math
-    def sanitize(obj):
-        if isinstance(obj, dict):
-            return {k: sanitize(v) for k, v in obj.items()}
-        if isinstance(obj, list):
-            return [sanitize(v) for v in obj]
-        if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
-            return 0
-        return obj
-    output = sanitize(output)
     with open("stocks_data.json","w",encoding="utf-8") as f:
         json.dump(output,f,ensure_ascii=False,indent=2)
 

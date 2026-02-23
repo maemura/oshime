@@ -622,7 +622,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
         <div class="filter-tab" id="disp-all" onclick="setDispCount(999,this)">全件</div>
       </div>
       <div class="filter-count" id="filterCount"></div>
-      <div id="styleNote" style="font-size:10px;color:var(--green);margin-left:auto;">🏦 配当×時価総額×増配×セクター差分で評価</div>
+      <div id="styleNote" style="font-size:10px;color:var(--green);margin-left:auto;">🔬 バックテスト最適化済み — タイミング重視</div>
     </div>
 
     <!-- SECTOR FILTER -->
@@ -714,26 +714,25 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 <div class="logic-overlay" id="logicModal" onclick="closeLogicModal(event)">
   <div class="logic-box">
     <div class="modal-handle"></div>
-    <div class="logic-title">スコアロジック v3（100点満点）</div>
-    <div class="logic-sub">銘柄の質×今の割安度×タイミングの3軸で評価。セクター差分で「個別だけ下がっている」銘柄を優先的に検出します。</div>
+    <div class="logic-title">スコアロジック v4（バックテスト最適化済み）</div>
+    <div class="logic-sub">過去1年・46週のバックテストで検証済み。タイミング指標が最重要。配当はフィルター専用（2%以上が対象）。</div>
     <table class="logic-tbl">
       <tr><th>指標</th><th>条件</th><th style="text-align:right">最大点</th></tr>
-      <tr><td>配当利回り</td><td>2%〜5%以上</td><td class="pts">20pt</td></tr>
-      <tr><td>時価総額</td><td>500億〜5兆円以上</td><td class="pts">10pt</td></tr>
-      <tr><td>連続増配</td><td>5年〜15年以上</td><td class="pts">10pt</td></tr>
-      <tr><td>自分比押し目度</td><td>-0.5σ〜-3σ以下</td><td class="pts">15pt</td></tr>
-      <tr><td>個別vsセクター差分</td><td>-0.5%〜-5%以下</td><td class="pts">20pt</td></tr>
-      <tr><td>個別5日下落</td><td>-0.5%〜-5%以下</td><td class="pts">10pt</td></tr>
+      <tr style="background:#1a2e1a"><td>個別vsセクター差分</td><td>-0.5%〜-5%以下</td><td class="pts">25pt</td></tr>
+      <tr style="background:#1a2e1a"><td>個別5日下落</td><td>-0.5%〜-5%以下</td><td class="pts">25pt</td></tr>
+      <tr style="background:#1a2e1a"><td>自分比押し目度</td><td>-0.5σ〜-3σ以下</td><td class="pts">15pt</td></tr>
       <tr><td>10日リターン</td><td>-1%〜-8%以下</td><td class="pts">5pt</td></tr>
+      <tr><td>時価総額</td><td>500億〜5兆円以上</td><td class="pts">5pt</td></tr>
+      <tr><td>連続増配</td><td>5年〜15年以上</td><td class="pts">6pt</td></tr>
       <tr><td>PBR</td><td>1.5倍以下〜0.7倍以下</td><td class="pts">5pt</td></tr>
       <tr><td>安定株ボーナス</td><td>黒字+配当2%+大型</td><td class="pts">5pt</td></tr>
       <tr><td>⚠セクター下落</td><td>セクター全体-3%以下</td><td class="pts">-5pt</td></tr>
     </table>
     <div class="logic-note">
-      📊 銘柄の質: 配当+時価総額+連続増配（40pt）<br>
-      📉 割安度: 自分比σ+PBR（20pt）<br>
-      ⏱ タイミング: セクター差分+個別下落+10日リターン（40pt）<br>
-      ⚠ セクター全体が弱い時は慎重にペナルティ
+      🔬 過去46週のバックテストで最適化<br>
+      ⏱ タイミング指標（70pt）: セクター差分+個別下落+自分比σ<br>
+      🏦 銘柄の質（21pt）: 時価総額+増配+PBR<br>
+      📊 配当利回りはフィルター専用（2%以上が対象）
     </div>
     <button class="btn-logic-close" onclick="closeLogicModal()">閉じる</button>
   </div>
@@ -812,27 +811,25 @@ function calcScoreBluechip(s){
   const mc=s.market_cap_b||0;
   if(div<2||mc<500) return 0;
   let score=0;
-  // 配当利回り (max 20pt)
-  score+=div>=5?20:div>=4.5?17:div>=4?14:div>=3.5?11:div>=3?8:div>=2.5?5:div>=2?2:0;
-  // 時価総額 (max 10pt)
-  score+=mc>=50000?10:mc>=10000?9:mc>=5000?8:mc>=1000?6:mc>=500?3:0;
-  // 増配ボーナス (max 10pt)
+  // 時価総額 (max 5pt)
+  score+=mc>=50000?5:mc>=10000?4:mc>=5000?3:mc>=1000?2:mc>=500?1:0;
+  // 増配ボーナス (max 6pt)
   const dgy=s.div_growth_years||0;
-  score+=dgy>=15?10:dgy>=10?7:dgy>=7?5:dgy>=5?3:0;
-  // 自分比押し目度 (max 15pt)
-  const z=s.dip_zscore||0;
-  score+=z<=-3.0?15:z<=-2.0?12:z<=-1.5?9:z<=-1.0?6:z<=-0.5?3:0;
+  score+=dgy>=15?6:dgy>=10?4:dgy>=7?3:dgy>=5?2:0;
   // PBR (max 5pt)
   const pbr=s.pbr||99;
   score+=pbr<=0.7?5:pbr<=0.9?4:pbr<=1.2?3:pbr<=1.5?1:0;
-  // 個別vsセクター差分 (max 20pt)
+  // 個別vsセクター差分 (max 25pt)
   const diff5=s.ret5_vs_sector||0;
-  score+=diff5<=-5?20:diff5<=-3?15:diff5<=-1.5?10:diff5<=-0.5?5:0;
+  score+=diff5<=-5?25:diff5<=-3?19:diff5<=-1.5?13:diff5<=-0.5?6:0;
   const secR5=s.sector_ret5||0;
   if(secR5<=-3) score-=5;
-  // 個別下落 (max 10pt)
+  // 個別5日下落 (max 25pt) ← 最強指標
   const r5=s.ret5||0;
-  score+=r5<=-5?10:r5<=-3?7:r5<=-1.5?4:r5<=-0.5?1:0;
+  score+=r5<=-5?25:r5<=-3?18:r5<=-1.5?10:r5<=-0.5?3:0;
+  // 自分比押し目度 (max 15pt)
+  const z=s.dip_zscore||0;
+  score+=z<=-3.0?15:z<=-2.0?12:z<=-1.5?9:z<=-1.0?6:z<=-0.5?3:0;
   // 10日リターン (max 5pt)
   const r10=s.ret10||0;
   score+=r10<=-8?5:r10<=-5?3:r10<=-2?2:r10<=-1?1:0;
@@ -959,22 +956,22 @@ function calcBreakdownBluechip(s){
   const diff5=s.ret5_vs_sector||0;
   const dgy=s.div_growth_years||0;
   const bd=[];
-  const dp=div>=5?20:div>=4.5?17:div>=4?14:div>=3.5?11:div>=3?8:div>=2.5?5:div>=2?2:0;
-  if(dp>0)bd.push({l:'配当利回り',v:dp,max:20,pos:true});
-  const mcp=mc>=50000?10:mc>=10000?9:mc>=5000?8:mc>=1000?6:mc>=500?3:0;
-  if(mcp>0)bd.push({l:'時価総額',v:mcp,max:10,pos:true});
-  const dgp=dgy>=15?10:dgy>=10?7:dgy>=7?5:dgy>=5?3:0;
-  if(dgp>0)bd.push({l:'連続増配('+dgy+'年)',v:dgp,max:10,pos:true});
-  const zp=z<=-3.0?15:z<=-2.0?12:z<=-1.5?9:z<=-1.0?6:z<=-0.5?3:0;
-  if(zp>0)bd.push({l:'自分比押し目度',v:zp,max:15,pos:true});
-  const d5p=diff5<=-5?20:diff5<=-3?15:diff5<=-1.5?10:diff5<=-0.5?5:0;
-  if(d5p>0)bd.push({l:'個別vsセクター差分',v:d5p,max:20,pos:true});
+  // タイミング指標（最重要）
+  const d5p=diff5<=-5?25:diff5<=-3?19:diff5<=-1.5?13:diff5<=-0.5?6:0;
+  if(d5p>0)bd.push({l:'個別vsセクター差分',v:d5p,max:25,pos:true});
   const secR5=s.sector_ret5||0;
   if(secR5<=-3)bd.push({l:'セクター下落ペナルティ',v:-5,max:5,pos:false});
-  const r5p=r5<=-5?10:r5<=-3?7:r5<=-1.5?4:r5<=-0.5?1:0;
-  if(r5p>0)bd.push({l:'個別5日下落',v:r5p,max:10,pos:true});
+  const r5p=r5<=-5?25:r5<=-3?18:r5<=-1.5?10:r5<=-0.5?3:0;
+  if(r5p>0)bd.push({l:'個別5日下落',v:r5p,max:25,pos:true});
+  const zp=z<=-3.0?15:z<=-2.0?12:z<=-1.5?9:z<=-1.0?6:z<=-0.5?3:0;
+  if(zp>0)bd.push({l:'自分比押し目度',v:zp,max:15,pos:true});
   const r10p=r10<=-8?5:r10<=-5?3:r10<=-2?2:r10<=-1?1:0;
   if(r10p>0)bd.push({l:'10日リターン',v:r10p,max:5,pos:true});
+  // 銘柄の質（フィルター+軽い加点）
+  const mcp=mc>=50000?5:mc>=10000?4:mc>=5000?3:mc>=1000?2:mc>=500?1:0;
+  if(mcp>0)bd.push({l:'時価総額',v:mcp,max:5,pos:true});
+  const dgp=dgy>=15?6:dgy>=10?4:dgy>=7?3:dgy>=5?2:0;
+  if(dgp>0)bd.push({l:'連続増配('+dgy+'年)',v:dgp,max:6,pos:true});
   const pbr=s.pbr||99;
   const pp=pbr<=0.7?5:pbr<=0.9?4:pbr<=1.2?3:pbr<=1.5?1:0;
   if(pp>0)bd.push({l:'PBR',v:pp,max:5,pos:true});
