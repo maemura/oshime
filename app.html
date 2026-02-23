@@ -269,16 +269,6 @@ a{color:var(--blue-m);text-decoration:none;}
 <!-- HERO CONCLUSION -->
 <div class="hero" id="heroBox"></div>
 
-<!-- SECTOR TREND -->
-<div class="t5-sec" id="sectorSection" style="display:none">
-  <div style="padding:16px;background:var(--card);border-bottom:1px solid var(--border)">
-    <div style="font-weight:700;font-size:15px;margin-bottom:8px">📈 セクタートレンド</div>
-    <div style="font-size:11px;color:var(--text3);margin-bottom:12px">配当×リターン×出来高から自動算出。毎日更新。</div>
-    <div id="sectorBars"></div>
-    <div id="sectorTheme" style="margin-top:12px;font-size:12px;color:var(--text2)"></div>
-  </div>
-</div>
-
 <!-- TOP10 -->
 <div class="t5-sec" id="top5Section" style="display:none">
   <div class="t5-tabs">
@@ -310,6 +300,16 @@ a{color:var(--blue-m);text-decoration:none;}
 
 <!-- DANGER -->
 <div id="dangerSection" style="max-width:720px;margin:0 auto"></div>
+
+<!-- SECTOR TREND -->
+<div class="t5-sec" id="sectorSection" style="display:none">
+  <div style="padding:16px;background:var(--card);border-bottom:1px solid var(--border)">
+    <div style="font-weight:700;font-size:15px;margin-bottom:8px">📈 セクタートレンド</div>
+    <div style="font-size:11px;color:var(--text3);margin-bottom:12px">配当×リターン×出来高から自動算出。毎日更新。</div>
+    <div id="sectorBars"></div>
+    <div id="sectorTheme" style="margin-top:12px;font-size:12px;color:var(--text2)"></div>
+  </div>
+</div>
 
 <!-- AD #1 -->
 <div class="ad" id="adSlot1" onclick="gaEvent('ad_click',{slot:'top'})">
@@ -505,17 +505,38 @@ function drawDetailChart(el,closes,ma25v,ma75v){
 // SECTOR SCORE（動的セクタースコアリング）
 // ═══════════════════════════════════════
 let sectorScores={};  // JSONから読み込み
+let sectorRankMap={};  // セクター名→ランク順位ボーナスのマップ
+
+function buildSectorRankMap(){
+  // sectorScoresをスコア順にソートしてランク加点を割り当て
+  const entries=Object.entries(sectorScores).sort((a,b)=>b[1].score-a[1].score);
+  const bonuses=[8,7,6,5,4,3,2,1];  // 1位=8点〜8位=1点
+  sectorRankMap={};
+  entries.forEach(([name,d],i)=>{
+    sectorRankMap[name]=i<bonuses.length?bonuses[i]:0;
+  });
+}
+
 function getSectorBonus(sector,code){
-  // CODE_SECTORで変換後のセクター名でも検索
-  const secName=sMap(sector,code);
-  // sectorScoresから該当セクターのスコアを取得
-  for(const[key,val]of Object.entries(sectorScores)){
-    if(secName.includes(key)||key.includes(sector||('' ))){
-      // スコア0-10を0-8点に変換（最大8点ボーナス）
-      return Math.round((val.score||0)*0.8);
-    }
+  // yfinanceの英語セクター名を日本語に変換して照合
+  const SECTOR_JP_MAP={
+    'Financial Services':'金融','Basic Materials':'素材',
+    'Energy':'エネルギー','Industrials':'産業',
+    'Real Estate':'不動産','Consumer Cyclical':'消費（景気敏感）',
+    'Consumer Defensive':'消費（安定）','Healthcare':'医薬・ヘルスケア',
+    'Technology':'テック','Communication Services':'通信・メディア',
+    'Utilities':'電力・ガス'
+  };
+  // まず直接マッチ
+  if(sectorRankMap[sector])return sectorRankMap[sector];
+  // 英語→日本語変換してマッチ
+  const jpName=SECTOR_JP_MAP[sector];
+  if(jpName&&sectorRankMap[jpName])return sectorRankMap[jpName];
+  // 部分一致
+  for(const[key,bonus]of Object.entries(sectorRankMap)){
+    if(key.includes(sector||'')||( sector||'').includes(key))return bonus;
   }
-  return 0;  // 該当なし
+  return 0;
 }
 
 // ═══════════════════════════════════════
@@ -572,7 +593,8 @@ function calcScoreTrend(s){
   // 低配当ペナルティ強化（利回り1%未満はかなり減点）
   if(div<1)sc-=10;else if(div<1.5)sc-=5;
 
-  sc=Math.max(0,Math.min(sc,100));
+  // ペナルティ後のスコアを0以上に維持（上限クランプは最後に1回）
+  sc=Math.max(0,sc);
   // type
   let type='neutral';
   if(ma75d>=0&&ma25d<0&&pc>=2)type='dip';
@@ -694,11 +716,16 @@ function renderHero(){
   const buyN=all.filter(s=>s.zone==='buy').length;
   const topSc=all.length?Math.max(...all.map(s=>s.score)):0;
   const maxDiv=all.length?Math.max(...all.map(s=>s.dividend||0)).toFixed(1)+'%':'—';
-  // 狙いセクター計算
+  // 狙いセクター計算 — セクタースコアがあればそれを使う
   const dipStocks=all.filter(s=>(s.trend_type==='dip'||s.trend_type==='value_dip')&&s.score>=50);
-  const secCount={};
-  dipStocks.forEach(s=>{const k=sMap(s.sector,s.code);secCount[k]=(secCount[k]||0)+1;});
-  const topSecs=Object.entries(secCount).sort((a,b)=>b[1]-a[1]).slice(0,3).map(x=>x[0]);
+  let topSecs=[];
+  if(Object.keys(sectorScores).length>=3){
+    topSecs=Object.keys(sectorScores).slice(0,3);
+  } else {
+    const secCount={};
+    dipStocks.forEach(s=>{const k=sMap(s.sector,s.code);secCount[k]=(secCount[k]||0)+1;});
+    topSecs=Object.entries(secCount).sort((a,b)=>b[1]-a[1]).slice(0,3).map(x=>x[0]);
+  }
   // スタンス判定
   const avgSc=all.length?all.reduce((s,x)=>s+x.score,0)/all.length:0;
   const dipRatio=all.length?dipStocks.length/all.length:0;
@@ -709,7 +736,7 @@ function renderHero(){
   const updated=window._updatedAt||'—';
   el.innerHTML=`
     <div class="hero-date">${updated} 更新</div>
-    <div class="hero-hl">今日の割安チャンス：<em>${topSecs.length?topSecs.join('・'):'解析中...'}</em>が狙い目</div>
+    <div class="hero-hl">注目セクター：<em>${topSecs.length?topSecs.join('・'):'解析中...'}</em>が狙い目</div>
     <span class="stance ${stanceClass}">${stanceText}</span>
     <div class="hero-chips">${topSecs.map(s=>`<span class="hero-chip">${s}</span>`).join('')}</div>
     <div class="hero-big"><b>${buyN}</b><span>銘柄が買い時</span></div>
@@ -1158,6 +1185,7 @@ async function init(){
     window._updatedAt=data.updated_at||'—';
     window._stockData=data;
     sectorScores=data.sector_scores||{};
+    buildSectorRankMap();
     // ティッカー更新
     const tItems=document.querySelectorAll('.ticker-item');
     if(data.nikkei_price&&tItems[0]){
