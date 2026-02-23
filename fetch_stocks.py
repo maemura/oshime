@@ -10,33 +10,8 @@
 取得失敗時はハードコードリストにフォールバック。
 """
 
-import json, sys, time, os, io, shutil
+import json, sys, time, os, io
 from datetime import datetime
-
-# ── 連続増配・累進配当銘柄リスト（公開情報ベース）──
-# 増配年数はおおよそ。スコアでボーナス加点に使用。
-DIVIDEND_GROWERS = {
-    # 10年以上連続増配
-    "4452": 15, "8566": 26, "9433": 23, "8591": 26, "4732": 14,
-    "9432": 14, "8316": 14, "8593": 15, "7466": 14, "2914": 21,
-    "9434": 10, "8001": 11, "8053": 11, "8058": 10, "8031": 12,
-    "4502": 12, "8766": 13, "8309": 11, "6098": 11, "2124": 14,
-    "9783": 14, "4967": 12, "7164": 11, "2413": 13, "9142": 12,
-    "6301": 14, "7974": 12, "8795": 11, "1925": 12, "2802": 13,
-    "6869": 11, "4684": 14, "7741": 10, "4543": 13, "6367": 12,
-    "9020": 10, "6902": 11, "7269": 10, "4063": 10, "6273": 12,
-    "4519": 10, "8697": 10, "6645": 12, "9436": 10, "3659": 11,
-    "1928": 10, "2503": 10, "9303": 10, "7272": 10,
-    # 5〜9年連続増配
-    "8306": 7, "8411": 7, "7267": 6, "7203": 6, "5108": 6,
-    "6752": 5, "6758": 5, "4661": 8, "4689": 5, "6501": 6,
-    "6503": 5, "7751": 7, "9984": 5, "6861": 8, "4307": 7,
-    "2801": 6, "8750": 8, "9843": 5, "8354": 6, "1605": 7,
-    "5401": 5, "3405": 5, "5020": 6, "5019": 6, "2502": 7,
-    "7201": 5, "9613": 5, "3382": 5, "8801": 6, "8802": 6,
-    "4901": 6, "3088": 5, "2768": 5, "6954": 6, "3099": 5,
-    "8252": 5, "9101": 5, "9104": 5, "9107": 5,
-}
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # ── ライブラリチェック ──
@@ -533,67 +508,6 @@ def fetch_one(ticker, _retry=0):
             # 英語名しかない場合はshortNameを使う（後でJP名辞書で上書き）
             name = short_name or long_name or ticker.replace(".T","")
         sector   = info.get("sector") or info.get("industry") or "その他"
-
-        # ── 英語→日本語セクター変換 ──
-        SECTOR_EN_TO_JP = {
-            "Technology": "情報・通信業",
-            "Communication Services": "情報・通信業",
-            "Financial Services": "その他金融業",
-            "Consumer Cyclical": "小売業",
-            "Consumer Defensive": "食料品",
-            "Healthcare": "医薬品",
-            "Industrials": "機械",
-            "Basic Materials": "化学",
-            "Energy": "石油・石炭製品",
-            "Real Estate": "不動産業",
-            "Utilities": "電気・ガス業",
-        }
-        if sector in SECTOR_EN_TO_JP:
-            sector = SECTOR_EN_TO_JP[sector]
-
-        # ── カスタム業種上書き（東証分類が実態と合わない銘柄）──
-        code_str = ticker.replace(".T", "")
-        CUSTOM_SECTOR = {
-            # ゲーム
-            "7974": "ゲーム・エンタメ",  # 任天堂
-            "3635": "ゲーム・エンタメ",  # コーエーテクモ
-            "9684": "ゲーム・エンタメ",  # スクウェア・エニックス
-            "9766": "ゲーム・エンタメ",  # コナミ
-            "3659": "ゲーム・エンタメ",  # ネクソン
-            "2121": "ゲーム・エンタメ",  # mixi
-            "9697": "ゲーム・エンタメ",  # カプコン
-            "7832": "ゲーム・エンタメ",  # バンダイナムコ
-            "3668": "ゲーム・エンタメ",  # コロプラ
-            "3765": "ゲーム・エンタメ",  # ガンホー
-            # 半導体
-            "6723": "半導体",  # ルネサスエレクトロニクス
-            "6526": "半導体",  # ソシオネクスト
-            "6857": "半導体",  # アドバンテスト
-            "8035": "半導体",  # 東京エレクトロン
-            "6920": "半導体",  # レーザーテック
-            "6146": "半導体",  # ディスコ
-            # IT・SaaS
-            "4443": "IT・SaaS",  # Sansan
-            "4478": "IT・SaaS",  # フリー
-            "4751": "IT・ネット",  # サイバーエージェント
-            "4689": "IT・ネット",  # Zホールディングス
-            "4755": "IT・ネット",  # 楽天グループ
-            "9434": "通信キャリア",  # ソフトバンク
-            "9433": "通信キャリア",  # KDDI
-            "9432": "通信キャリア",  # NTT
-            # 商社
-            "8058": "総合商社",  # 三菱商事
-            "8031": "総合商社",  # 三井物産
-            "8001": "総合商社",  # 伊藤忠
-            "8002": "総合商社",  # 丸紅
-            "8053": "総合商社",  # 住友商事
-            # メガバンク
-            "8306": "メガバンク",  # 三菱UFJ
-            "8316": "メガバンク",  # 三井住友FG
-            "8411": "メガバンク",  # みずほFG
-        }
-        if code_str in CUSTOM_SECTOR:
-            sector = CUSTOM_SECTOR[code_str]
         # 時価総額（億円）
         mc_raw   = info.get("marketCap") or 0
         market_cap_b = round(mc_raw / 1e8, 0) if mc_raw else 0  # 億円
@@ -634,66 +548,6 @@ def fetch_one(ticker, _retry=0):
             + abs(range_pct) * 3,
         1)
 
-        # ── ボラティリティ＆自分比押し目度 ──
-        daily_ret = closes.pct_change().dropna()
-        volatility = round(float(daily_ret.iloc[-60:].std()) * 100, 3) if len(daily_ret) >= 20 else 2.0
-        d25_pct = (price - ma25) / ma25 * 100 if ma25 else 0
-        dip_zscore = round(d25_pct / volatility, 2) if volatility > 0 else 0
-
-        # ── MA乖離率（%） ──
-        ma25_dev = round((price - ma25) / ma25 * 100, 2) if ma25 else 0
-        ma75_dev = round((price - ma75) / ma75 * 100, 2) if ma75 else 0
-
-        # ── チャート用 終値配列（60日分） ──
-        closes_60d = []
-        if len(closes) >= 60:
-            closes_60d = [round(float(c), 1) for c in closes.iloc[-60:].tolist()]
-        elif len(closes) >= 20:
-            closes_60d = [round(float(c), 1) for c in closes.tolist()]
-
-        # ── 短期・中期リターン ──
-        ret5  = round((float(closes.iloc[-1]) / float(closes.iloc[-6]) - 1) * 100, 2) if len(closes) >= 6 else 0
-        ret10 = round((float(closes.iloc[-1]) / float(closes.iloc[-11]) - 1) * 100, 2) if len(closes) >= 11 else 0
-        ret20 = round((float(closes.iloc[-1]) / float(closes.iloc[-21]) - 1) * 100, 2) if len(closes) >= 21 else 0
-        ret60 = round((float(closes.iloc[-1]) / float(closes.iloc[-61]) - 1) * 100, 2) if len(closes) >= 61 else 0
-        ret120 = round((float(closes.iloc[-1]) / float(closes.iloc[0]) - 1) * 100, 2) if len(closes) >= 80 else 0
-
-        # ── 機関投資家指標（yfinance .infoから無料取得）──
-        roe = round(float(info.get("returnOnEquity", 0) or 0) * 100, 1)  # ROE %
-        profit_margin = round(float(info.get("profitMargins", 0) or 0) * 100, 1)  # 利益率 %
-        revenue_growth = round(float(info.get("revenueGrowth", 0) or 0) * 100, 1)  # 売上成長率 %
-        earnings_growth = round(float(info.get("earningsGrowth", 0) or 0) * 100, 1)  # 利益成長率 %
-
-        # ── 出来高トレンド ──
-        vol_trend = round(float(hist["Volume"].iloc[-5:].mean()) / float(hist["Volume"].iloc[-20:].mean()), 2) if vol_mean20 > 0 else 1.0
-
-        # ── 価格位置（52週高値/安値からの位置）──
-        high_52w = float(closes.max()) if len(closes) >= 60 else price
-        low_52w = float(closes.min()) if len(closes) >= 60 else price
-        price_position = round((price - low_52w) / (high_52w - low_52w) * 100, 1) if high_52w != low_52w else 50.0
-
-        # ── 決算日情報 ──
-        most_recent_q = info.get("mostRecentQuarter")  # timestamp
-        earnings_date = None
-        days_since_earnings = None
-        days_to_next_earnings = None
-        if most_recent_q:
-            from datetime import date
-            try:
-                last_q = date.fromtimestamp(most_recent_q)
-                today_d = date.today()
-                days_since_earnings = (today_d - last_q).days
-                # 次回決算は約90日後と推定
-                next_q = last_q + __import__('datetime').timedelta(days=90)
-                days_to_next_earnings = (next_q - today_d).days
-                if days_to_next_earnings < 0:
-                    # 既に過ぎている場合は+90日
-                    next_q = next_q + __import__('datetime').timedelta(days=90)
-                    days_to_next_earnings = (next_q - today_d).days
-                earnings_date = last_q.strftime("%Y-%m-%d")
-            except:
-                pass
-
         return {
             "code":          ticker.replace(".T",""),
             "name":          name,
@@ -709,35 +563,12 @@ def fetch_one(ticker, _retry=0):
             "vol_avg5":      int(vol_avg5),
             "turnover_avg5": turnover_avg5,
             # ── 注目度フィールド ──
-            "vol_ratio_1d":  vol_ratio_1d,
-            "avg_volume":    int(vol_mean20) if vol_mean20 > 0 else 0,
-            "ret_1d":        ret_1d,
-            "range_pct":     range_pct,
-            "gap_pct":       gap_pct,
-            "trend_score":   trend_score,
-            "market_cap_b":  market_cap_b,
-            "volatility":    volatility,
-            "dip_zscore":    dip_zscore,
-            "ret5":          ret5,
-            "ret10":         ret10,
-            "ret20":         ret20,
-            "ret60":         ret60,
-            "ret120":        ret120,
-            # ── 機関投資家指標 ──
-            "roe":              roe,
-            "profit_margin":    profit_margin,
-            "revenue_growth":   revenue_growth,
-            "earnings_growth":  earnings_growth,
-            "vol_trend":        vol_trend,
-            "price_position":   price_position,
-            # ── 決算日 ──
-            "earnings_date":          earnings_date,
-            "days_since_earnings":    days_since_earnings,
-            "days_to_next_earnings":  days_to_next_earnings,
-            # ── MA乖離率+チャート ──
-            "ma25_dev":       ma25_dev,
-            "ma75_dev":       ma75_dev,
-            "closes_60d":     closes_60d,
+            "vol_ratio_1d":  vol_ratio_1d,   # 昨日出来高倍率（20日比）
+            "ret_1d":        ret_1d,          # 昨日前日比%
+            "range_pct":     range_pct,       # 昨日値幅%
+            "gap_pct":       gap_pct,         # 始値ギャップ%
+            "trend_score":   trend_score,     # 注目度スコア
+            "market_cap_b":  market_cap_b,    # 時価総額（億円）
         }
     except Exception as e:
         err = str(e).lower()
@@ -752,7 +583,7 @@ def fetch_market():
     print("\n📡 市場データを取得中...")
     market = {}
     specs = [
-        ("^N225","nikkei"),("^IXIC","nasdaq"),
+        ("^N225","nikkei"),("^DJI","dow"),("^GSPC","sp500"),("^IXIC","nasdaq"),
         ("^VIX","vix"),("JPY=X","usdjpy"),("^TNX","us10y"),
     ]
     for ticker, key in specs:
@@ -767,13 +598,31 @@ def fetch_market():
                 market["nikkei_price"]  = round(latest,0)
                 market["nikkei_1d_chg"] = chg
                 h90 = yf.Ticker(ticker).history(period="90d")
-                market["nikkei_ma25"] = round(float(h90["Close"].rolling(25).mean().iloc[-1]),0)
+                if not h90.empty:
+                    market["nikkei_ma25"] = round(float(h90["Close"].rolling(25).mean().iloc[-1]),0)
+                    # 5日勝敗
+                    c5 = h90["Close"].tail(6)
+                    if len(c5)>=6:
+                        wins = sum(1 for i in range(1,len(c5)) if float(c5.iloc[i])>float(c5.iloc[i-1]))
+                        market["nikkei_5d_wins"] = wins
+                        market["nikkei_5d_losses"] = 5 - wins
+                    # 高値圏チェック（90日最高値との距離）
+                    high_90 = float(h90["Close"].max())
+                    market["nikkei_high_dist"] = round((high_90 - latest) / high_90 * 100, 1)
+            elif key=="dow":
+                market["dow_price"] = round(latest,0)
+                market["dow_1d_chg"] = chg
+            elif key=="sp500":
+                market["sp500_1d_chg"] = chg
             elif key=="nasdaq":
                 market["nasdaq_1d_chg"] = chg
             elif key=="vix":
                 market["vix"]=round(latest,1); market["vix_chg"]=chg
             elif key=="usdjpy":
                 market["usdjpy"]=round(latest,2); market["usdjpy_chg"]=round(latest-prev,2)
+                # 5日方向
+                if len(closes)>=5:
+                    market["usdjpy_5d_chg"] = round(latest - float(closes.iloc[0]), 2)
             elif key=="us10y":
                 market["us10y"]=round(latest,2)
             print(f"  ✓ {key}: {round(latest,2)}")
@@ -785,379 +634,217 @@ def fetch_market():
             market["topix_price"]  = round(float(th["Close"].iloc[-1]),0)
             market["topix_1d_chg"] = round((float(th["Close"].iloc[-1])-float(th["Close"].iloc[-2]))/float(th["Close"].iloc[-2])*100,2) if len(th)>=2 else 0
     except Exception: pass
+
+    # ── 相場モード判定（6シグナル） ──
+    signals = []
+    # 1. NYダウ前日比
+    dow_chg = market.get("dow_1d_chg", 0)
+    if dow_chg >= 0.5:   signals.append(("dow", 1, f"NYダウ +{dow_chg}% 上昇"))
+    elif dow_chg <= -1.0: signals.append(("dow", -1, f"NYダウ {dow_chg}% 下落"))
+    else:                signals.append(("dow", 0, f"NYダウ {dow_chg:+}% 小動き"))
+
+    # 2. ドル円方向（5日変化）
+    yen_5d = market.get("usdjpy_5d_chg", 0)
+    if yen_5d >= 1.5:    signals.append(("usdjpy", 1, f"円安方向（5日で{yen_5d:+}円）"))
+    elif yen_5d <= -1.5: signals.append(("usdjpy", -1, f"円高方向（5日で{yen_5d:+}円）"))
+    else:                signals.append(("usdjpy", 0, f"為替安定（5日で{yen_5d:+}円）"))
+
+    # 3. VIX
+    vix_val = market.get("vix", 20)
+    if vix_val <= 16:    signals.append(("vix", 1, f"VIX {vix_val} 市場安定"))
+    elif vix_val >= 25:  signals.append(("vix", -1, f"VIX {vix_val} 市場不安"))
+    else:                signals.append(("vix", 0, f"VIX {vix_val} 通常"))
+
+    # 4. 日経5日トレンド
+    wins = market.get("nikkei_5d_wins", 2)
+    if wins >= 4:        signals.append(("nk5d", 1, f"日経 5日中{wins}勝 上昇基調"))
+    elif wins <= 1:      signals.append(("nk5d", -1, f"日経 5日中{wins}勝 下落基調"))
+    else:                signals.append(("nk5d", 0, f"日経 5日中{wins}勝 もみ合い"))
+
+    # 5. 日経の高値圏チェック
+    hd = market.get("nikkei_high_dist", 5)
+    if hd <= 1.5:        signals.append(("nkhigh", -1, f"90日最高値まで{hd}% 過熱注意"))
+    elif hd >= 8:        signals.append(("nkhigh", 1, f"90日最高値から{hd}%下 割安圏"))
+    else:                signals.append(("nkhigh", 0, f"90日最高値から{hd}%下 通常"))
+
+    # 6. 曜日（月曜＋前週上昇は調整警戒）
+    weekday = datetime.now().weekday()
+    nk_chg = market.get("nikkei_1d_chg", 0)
+    if weekday == 0 and wins >= 3:
+        signals.append(("weekday", -1, "月曜＋前週上昇 → 調整入りやすい"))
+    elif weekday == 0:
+        signals.append(("weekday", 0, "月曜日（様子見スタート）"))
+    else:
+        signals.append(("weekday", 0, f"{['月','火','水','木','金','土','日'][weekday]}曜日"))
+
+    total_score = sum(s[1] for s in signals)
+    if total_score >= 2:
+        mode = "aggressive"
+        mode_label = "🟢 攻めモード"
+        mode_advice = "スコア50以上なら積極的に検討OK"
+    elif total_score <= -2:
+        mode = "cautious"
+        mode_label = "🔴 慎重モード"
+        mode_advice = "今日は見送り推奨。買うなら超厳選で"
+    else:
+        mode = "normal"
+        mode_label = "🟡 通常モード"
+        mode_advice = "スコア55以上にしぼると安全"
+
+    market["market_mode"]   = mode
+    market["mode_label"]    = mode_label
+    market["mode_advice"]   = mode_advice
+    market["mode_score"]    = total_score
+    market["signals"]       = [{"key":s[0],"val":s[1],"text":s[2]} for s in signals]
+
     market["geo_risk"]      = False
     market["rate_cut_flag"] = False
     return market
 
 
+# =============================================
+# ニュースヘッドライン取得（Google News RSS）
+# =============================================
+def fetch_news_headlines():
+    """Google News RSSから日本語株式関連ヘッドラインを取得"""
+    import xml.etree.ElementTree as ET
+    print("\n📰 ニュースヘッドラインを取得中...")
+    headlines = []
+    queries = ["日経平均", "米国株+関税", "為替+円", "日本株+決算", "金利+日銀"]
+    for q in queries:
+        try:
+            url = f"https://news.google.com/rss/search?q={q}&hl=ja&gl=JP&ceid=JP:ja"
+            r = req.get(url, timeout=10)
+            if r.status_code != 200:
+                continue
+            root = ET.fromstring(r.content)
+            for item in root.findall(".//item")[:2]:  # 各クエリから上位2件
+                title = item.find("title").text if item.find("title") is not None else ""
+                source = item.find("source").text if item.find("source") is not None else ""
+                pub = item.find("pubDate").text if item.find("pubDate") is not None else ""
+                if title and title not in [h["title"] for h in headlines]:
+                    headlines.append({"title": title, "source": source, "pubDate": pub})
+            print(f"  ✓ '{q}' → {min(2, len(root.findall('.//item')))}件")
+        except Exception as e:
+            print(f"  ⚠ '{q}': {e}")
+    # 最大8件に絞る
+    return headlines[:8]
+
+
+# =============================================
+# AI要約生成（Gemini → Groq → Mistral フォールバック）
+# =============================================
+def generate_ai_summary(headlines, market):
+    """ニュースヘッドラインと市場データからAI要約を生成"""
+    print("\n🤖 AI要約を生成中...")
+
+    # APIキーを環境変数から取得
+    gemini_key  = os.environ.get("GEMINI_API_KEY", "")
+    groq_key    = os.environ.get("GROQ_API_KEY", "")
+    mistral_key = os.environ.get("MISTRAL_API_KEY", "")
+
+    if not any([gemini_key, groq_key, mistral_key]):
+        print("  ⚠ AIキー未設定。AI要約をスキップ")
+        return None
+
+    news_text = "\n".join([f"・{h['title']}（{h['source']}）" for h in headlines[:6]])
+    data_text = (
+        f"NYダウ前日比: {market.get('dow_1d_chg', '?')}%  "
+        f"S&P500前日比: {market.get('sp500_1d_chg', '?')}%  "
+        f"ドル円: {market.get('usdjpy', '?')}円  "
+        f"VIX: {market.get('vix', '?')}  "
+        f"日経平均: {market.get('nikkei_price', '?')}円（前日比{market.get('nikkei_1d_chg', '?')}%）  "
+        f"相場モード: {market.get('mode_label', '?')}"
+    )
+
+    prompt = f"""あなたは株式投資アドバイザー「かぶのすけ」です。
+以下の最新ニュースと市場データから、今日の相場見通しを日本語で書いてください。
+
+【ニュース】
+{news_text}
+
+【市場データ】
+{data_text}
+
+【ルール】
+- 4〜5行で簡潔に
+- 初心者にもわかる言葉で
+- 「なぜ」今日の相場がこうなっているか、ニュースとデータを繋げて説明
+- 最後の1行で「今日はこうすべき」という具体的なアドバイス
+- 語尾は「です・ます」調
+- 投資は自己責任である旨は不要（別途表示している）"""
+
+    # ── Provider 1: Gemini ──
+    if gemini_key:
+        try:
+            r = req.post(
+                f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={gemini_key}",
+                json={"contents": [{"parts": [{"text": prompt}]}]},
+                timeout=30
+            )
+            if r.status_code == 200:
+                data = r.json()
+                text = data["candidates"][0]["content"]["parts"][0]["text"]
+                print(f"  ✓ Gemini → {len(text)}文字")
+                return {"provider": "gemini", "text": text.strip()}
+        except Exception as e:
+            print(f"  ⚠ Gemini: {e}")
+
+    # ── Provider 2: Groq ──
+    if groq_key:
+        try:
+            r = req.post(
+                "https://api.groq.com/openai/v1/chat/completions",
+                headers={"Authorization": f"Bearer {groq_key}", "Content-Type": "application/json"},
+                json={"model": "llama-3.3-70b-versatile", "messages": [{"role": "user", "content": prompt}], "max_tokens": 500},
+                timeout=30
+            )
+            if r.status_code == 200:
+                text = r.json()["choices"][0]["message"]["content"]
+                print(f"  ✓ Groq → {len(text)}文字")
+                return {"provider": "groq", "text": text.strip()}
+        except Exception as e:
+            print(f"  ⚠ Groq: {e}")
+
+    # ── Provider 3: Mistral ──
+    if mistral_key:
+        try:
+            r = req.post(
+                "https://api.mistral.ai/v1/chat/completions",
+                headers={"Authorization": f"Bearer {mistral_key}", "Content-Type": "application/json"},
+                json={"model": "mistral-small-latest", "messages": [{"role": "user", "content": prompt}], "max_tokens": 500},
+                timeout=30
+            )
+            if r.status_code == 200:
+                text = r.json()["choices"][0]["message"]["content"]
+                print(f"  ✓ Mistral → {len(text)}文字")
+                return {"provider": "mistral", "text": text.strip()}
+        except Exception as e:
+            print(f"  ⚠ Mistral: {e}")
+
+    print("  ❌ 全プロバイダ失敗。AI要約なし")
+    return None
+
+
 def calc_score_stable(s):
-    """安定高配当スコア：時価総額大・配当重視・大型安定株優遇"""
+    """安定高配当スコア：時価総額大・配当重視"""
     d25 = (s["price"] - s["ma25"]) / s["ma25"] * 100 if s["ma25"] else 0
-    div = s.get("dividend", 0)
-    if div < 2: return 0  # 配当2%未満は対象外
-
     score = 0
-
-    # 配当利回り (max 30pt) — 3%台でもしっかり加点
-    score += (30 if div >= 5 else 25 if div >= 4.5 else 20 if div >= 4
-              else 16 if div >= 3.5 else 12 if div >= 3 else 6 if div >= 2.5 else 0)
-
-    # 時価総額ボーナス (max 15pt) — 大型安定株を優遇
-    mc = s.get("market_cap_b", 0)
-    score += (15 if mc >= 10000 else 11 if mc >= 5000 else 7 if mc >= 1000
-              else 3 if mc >= 500 else 0)
-    # 小型ペナルティ
-    if 0 < mc < 300: score -= 10
-
-    # 25MA乖離 (max 22pt) — 大型株向けに-1.5%から加点
-    score += (22 if d25 <= -10 else 18 if d25 <= -7 else 14 if d25 <= -5
-              else 9 if d25 <= -3 else 4 if d25 <= -1.5 else 0)
-
-    # RSI (max 18pt)
-    rsi = s.get("rsi", 50)
-    score += (18 if rsi <= 25 else 14 if rsi <= 30 else 9 if rsi <= 37 else 4 if rsi <= 43 else 0)
-
-    # PBR (max 10pt)
+    div = s.get("dividend", 0)
+    score += 40 if div >= 5 else 32 if div >= 4.5 else 25 if div >= 4 else 18 if div >= 3.5 else 10 if div >= 3 else 0
     pbr = s.get("pbr", 99)
-    score += (10 if pbr <= 0.7 else 7 if pbr <= 1.0 else 3 if pbr <= 1.5 else 0)
-
-    # 安定株ボーナス (max 5pt) — 配当3%以上・黒字・大型の三拍子
-    if div >= 3 and s.get("per", 0) > 0 and mc >= 1000:
-        score += 5
-
-    # 出来高急増ペナルティ
-    if s.get("vol_r", 1) >= 1.5: score -= 15
-    if s.get("vol_r", 1) >= 2.5: score -= 10
-
-    return max(0, min(score, 100))
-
-
-def calc_score_bluechip(s):
-    """安定高配当スコア v4：バックテスト最適化済み
-    
-    フィルター（足切り）: 配当>=2%, 時価総額>=500億
-    ランキング（順位決定）: タイミング指標が最重要
-    
-    バックテスト結果:
-      - 配当利回り → ランキングに効かない（フィルター専用）
-      - ret5, ret5_vs_sector → 最も5日後リターンに相関
-      - dip_zscore → 有効
-    """
-    div = s.get("dividend", 0)
-    mc = s.get("market_cap_b", 0)
-    if div < 2 or mc < 500: return 0
-
-    score = 0
-
-    # ── フィルター通過ボーナス（銘柄の質）── max 16pt
-    # 配当はフィルター専用。ランキングには使わない（バックテスト結論）
-
-    # 時価総額 (max 5pt) — 大型ほど安定だが配点は控えめ
-    score += (5 if mc >= 50000 else 4 if mc >= 10000 else 3 if mc >= 5000
-              else 2 if mc >= 1000 else 1 if mc >= 500 else 0)
-
-    # 増配ボーナス (max 6pt)
-    dgy = s.get("div_growth_years", 0)
-    score += (6 if dgy >= 15 else 4 if dgy >= 10 else 3 if dgy >= 7
-              else 2 if dgy >= 5 else 0)
-
-    # PBR (max 5pt)
-    pbr = s.get("pbr", 99)
-    score += (5 if pbr <= 0.7 else 4 if pbr <= 0.9 else 3 if pbr <= 1.2
-              else 1 if pbr <= 1.5 else 0)
-
-    # ── タイミング指標（毎日変わる）── max 75pt
-    # バックテストで最も5日後リターンに相関した指標群
-
-    # 個別 vs セクター差分 (max 25pt) ← バックテスト有効
-    diff5 = s.get("ret5_vs_sector", 0)
-    score += (25 if diff5 <= -5 else 19 if diff5 <= -3 else 13 if diff5 <= -1.5
-              else 6 if diff5 <= -0.5 else 0)
-
-    # セクター下落ペナルティ
-    sec_r5 = s.get("sector_ret5", 0)
-    if sec_r5 <= -3:
-        score -= 5
-
-    # 個別5日下落 (max 25pt) ← バックテスト最強指標
-    r5 = s.get("ret5", 0)
-    score += (25 if r5 <= -5 else 18 if r5 <= -3 else 10 if r5 <= -1.5
-              else 3 if r5 <= -0.5 else 0)
-
-    # 自分比押し目度 (max 15pt)
-    z = s.get("dip_zscore", 0)
-    score += (15 if z <= -3.0 else 12 if z <= -2.0 else 9 if z <= -1.5
-              else 6 if z <= -1.0 else 3 if z <= -0.5 else 0)
-
-    # 10日リターン (max 5pt)
-    r10 = s.get("ret10", 0)
-    score += (5 if r10 <= -8 else 3 if r10 <= -5 else 2 if r10 <= -2
-              else 1 if r10 <= -1 else 0)
-
-    # 安定株ボーナス (max 5pt)
-    if s.get("per", 0) > 0 and div >= 2 and mc >= 5000:
-        score += 5
-    elif s.get("per", 0) > 0 and div >= 2 and mc >= 1000:
-        score += 3
-
-    # ── 急落ペナルティ（落ちるナイフ回避）──
-    # 出来高倍率3倍以上 = パニック売りの可能性
-    vr1d = s.get("vol_ratio_1d", 1)
-    if vr1d >= 3.0:
-        score -= 10
-    elif vr1d >= 2.5:
-        score -= 5
-    # 1日の下落が-5%超 = 悪材料の可能性
-    ret_1d = s.get("ret_1d", 0)
-    if ret_1d <= -5:
-        score -= 8
-    elif ret_1d <= -3:
-        score -= 4
-    # ボラティリティが通常の2倍以上 = 不安定
-    vol = s.get("volatility", 2)
-    if vol >= 4.0:  # 通常2%程度なので4%以上は異常
-        score -= 5
-
-    return max(0, min(score, 100))
-
-
-def calc_score_momentum(s):
-    """🚀 勢いスコア：モメンタム+クオリティ+出来高で上昇トレンド銘柄を検出
-    
-    機関投資家のクオンツモデルを簡易再現:
-      - モメンタム（上がっている株はさらに上がる）
-      - クオリティ（ROE・利益成長が高い）
-      - 出来高トレンド（機関の参入を検知）
-      - セクター強度（セクター全体が強い = 追い風）
-    """
-    mc = s.get("market_cap_b", 0)
-    if mc < 300: return 0  # 最低時価総額300億
-
-    score = 0
-
-    # ── モメンタム指標（max 40pt）── 最重要
-    # 20日モメンタム (max 20pt)
-    r20 = s.get("ret20", 0)
-    score += (20 if r20 >= 15 else 16 if r20 >= 10 else 12 if r20 >= 5
-              else 6 if r20 >= 2 else 0)
-
-    # 60日モメンタム (max 10pt)
-    r60 = s.get("ret60", 0)
-    score += (10 if r60 >= 25 else 8 if r60 >= 15 else 5 if r60 >= 8
-              else 2 if r60 >= 3 else 0)
-
-    # 5日モメンタム — 短期の勢い (max 10pt)
-    r5 = s.get("ret5", 0)
-    score += (10 if r5 >= 5 else 7 if r5 >= 3 else 4 if r5 >= 1
-              else 1 if r5 >= 0 else 0)
-
-    # ── クオリティ指標（max 25pt）──
-    # ROE (max 10pt)
-    roe = s.get("roe", 0)
-    score += (10 if roe >= 15 else 7 if roe >= 10 else 4 if roe >= 7
-              else 2 if roe >= 5 else 0)
-
-    # 利益成長率 (max 8pt)
-    eg = s.get("earnings_growth", 0)
-    score += (8 if eg >= 30 else 6 if eg >= 15 else 4 if eg >= 5
-              else 1 if eg >= 0 else 0)
-
-    # 売上成長率 (max 7pt)
-    rg = s.get("revenue_growth", 0)
-    score += (7 if rg >= 20 else 5 if rg >= 10 else 3 if rg >= 5
-              else 1 if rg >= 0 else 0)
-
-    # ── 出来高・需給（max 20pt）──
-    # 出来高トレンド — 機関参入の痕跡 (max 12pt)
-    vt = s.get("vol_trend", 1)
-    score += (12 if vt >= 2.5 else 9 if vt >= 1.8 else 6 if vt >= 1.3
-              else 3 if vt >= 1.1 else 0)
-
-    # 出来高倍率1日 (max 8pt)
-    vr1d = s.get("vol_ratio_1d", 1)
-    score += (8 if vr1d >= 3.0 else 6 if vr1d >= 2.0 else 4 if vr1d >= 1.5
-              else 1 if vr1d >= 1.1 else 0)
-
-    # ── セクター追い風（max 10pt）──
-    sec_r5 = s.get("sector_ret5", 0)
-    score += (10 if sec_r5 >= 3 else 7 if sec_r5 >= 1.5 else 4 if sec_r5 >= 0.5
-              else 0)
-
-    # ── 価格位置ペナルティ ──
-    pp = s.get("price_position", 50)
-    if pp >= 98:
-        score -= 5  # 天井圏ペナルティ
-
-    # ── 過熱ペナルティ（高値掴み回避）──
-    # RSI80以上 = 買われすぎ
+    score += 20 if pbr <= 0.7 else 15 if pbr <= 0.9 else 8 if pbr <= 1.1 else 3 if pbr <= 1.5 else 0
+    score += 20 if d25 <= -8 else 14 if d25 <= -5 else 8 if d25 <= -3 else 3 if d25 <= -1 else 0
     rsi = s.get("rsi", 50)
-    if rsi >= 80:
-        score -= 8
-    elif rsi >= 75:
-        score -= 4
-    # 出来高倍率3倍以上 + 急騰 = 仕手的な動き
-    vr1d = s.get("vol_ratio_1d", 1)
-    r5 = s.get("ret5", 0)
-    if vr1d >= 3.0 and r5 >= 5:
-        score -= 5  # 急騰+出来高急増 = 過熱警戒
-    # 1日で+5%以上 = ギャップアップ後の反落リスク
-    ret_1d = s.get("ret_1d", 0)
-    if ret_1d >= 7:
-        score -= 5
-    elif ret_1d >= 5:
-        score -= 3
-
-    # ── ボーナス ──
-    div = s.get("dividend", 0)
-    if div >= 2 and r20 >= 5:
-        score += 5
-
+    score += 15 if rsi <= 30 else 10 if rsi <= 38 else 5 if rsi <= 45 else 0
+    per = s.get("per", 99)
+    score += 10 if per <= 10 else 6 if per <= 13 else 3 if per <= 16 else 0
+    if s.get("vol_r", 1) >= 1.5: score -= 20
+    if div < 0.5: score = min(score, 5)
+    mc = s.get("market_cap_b", 9999)
+    if 0 < mc < 300: score -= 20
+    elif 0 < mc < 500: score -= 10
     return max(0, min(score, 100))
-
-
-def calc_score_trend(s):
-    """📈 v7: MA75押し目スコア（クオリティ×タイミング戦略）
-    
-    コンセプト: 「大手で長期上昇中の銘柄をMA75（緑線）タッチで買う」
-    
-    配点:
-      MA75乖離率      25pt  ← 緑線にどれだけ近いか（押し目の質）
-      MA25乖離率      15pt  ← 短期調整の深さ
-      20日リターン     15pt  ← 直近の方向
-      120日リターン    10pt  ← 長期トレンド
-      60日リターン     10pt  ← 中期トレンド
-      持ってて安心     15pt  ← 安定性+配当+大型
-      一貫性          ±10pt ← トレンドの信頼性
-                     ─────
-                    max 100pt
-    """
-    mc = s.get("market_cap_b", 0)
-    if mc < 300: return 0, "avoid"
-
-    score = 0
-    r120 = s.get("ret120", 0)
-    r60  = s.get("ret60", 0)
-    r20  = s.get("ret20", 0)
-    ma75_dev = s.get("ma75_dev", 0)
-    ma25_dev = s.get("ma25_dev", 0)
-
-    # ── MA75乖離率 (max 25pt) — 最重要：緑線タッチ ──
-    # MA75の上にいて、かつ近いほど高スコア（押し目の最高ポイント）
-    if 0 <= ma75_dev <= 1:      score += 25   # タッチ寸前 = 最高の押し目
-    elif 0 <= ma75_dev <= 2:    score += 22
-    elif 0 <= ma75_dev <= 3:    score += 18
-    elif 0 <= ma75_dev <= 5:    score += 14
-    elif 0 <= ma75_dev <= 8:    score += 10
-    elif 0 <= ma75_dev <= 12:   score += 6
-    elif ma75_dev > 12:         score += 2    # 離れすぎ（勢いはあるが押し目ではない）
-    elif -2 <= ma75_dev < 0:    score += 3    # わずかに下抜け（ほぼ加点なし）
-    elif -5 <= ma75_dev < -2:   score += 0    # 明確に下抜け（0点）
-    else:                       score -= 5    # 大きく下抜け = ペナルティ
-
-    # ── MA25乖離率 (max 15pt) — 短期調整の深さ ──
-    if -5 <= ma25_dev <= -3:    score += 15   # 良い押し目ゾーン
-    elif -8 <= ma25_dev < -5:   score += 10   # 深い押し目（やや危険も）
-    elif -3 <= ma25_dev <= -1:  score += 10   # 軽い調整
-    elif -1 < ma25_dev <= 0:    score += 6    # ほぼMA25上
-    elif 0 < ma25_dev <= 3:     score += 3    # MA25より上（勢い）
-    elif ma25_dev > 3:          score += 8    # 強い上昇トレンド（勢い銘柄用）
-    elif ma25_dev < -8:         score += 3    # 落ちすぎ（リスク高い）
-
-    # ── 20日リターン (max 15pt) ──
-    if r20 >= 10:     score += 15
-    elif r20 >= 5:    score += 12
-    elif r20 >= 2:    score += 8
-    elif r20 >= 0:    score += 4
-    elif r20 >= -3:   score += 6   # 軽い押し目
-    elif r20 >= -5:   score += 10  # 良い押し目
-    elif r20 >= -8:   score += 8   # 深い押し目
-    else:             score += 3   # 落ちすぎ
-
-    # ── 120日リターン (max 10pt) — 長期トレンド ──
-    if r120 >= 30:    score += 10
-    elif r120 >= 15:  score += 8
-    elif r120 >= 5:   score += 6
-    elif r120 >= 0:   score += 3
-    elif r120 >= -5:  score += 0
-    else:             score -= 3
-
-    # ── 60日リターン (max 10pt) — 中期トレンド ──
-    if r60 >= 15:     score += 10
-    elif r60 >= 8:    score += 8
-    elif r60 >= 3:    score += 5
-    elif r60 >= 0:    score += 2
-    elif r60 >= -5:   score += 0
-    else:             score -= 3
-
-    # ── 持ってて安心スコア (max 15pt) ──
-    div = s.get("dividend", 0)
-    vol = s.get("volatility", 2)
-    roe = s.get("roe", 0)
-    pbr = s.get("pbr", 99)
-
-    # 配当の厚み (max 5pt)
-    if div >= 4:     score += 5
-    elif div >= 3:   score += 4
-    elif div >= 2.5: score += 3
-    elif div >= 2:   score += 2
-
-    # 安定上昇（低ボラ+長期プラス）(max 5pt)
-    if vol <= 1.5 and r120 >= 5:   score += 5
-    elif vol <= 2.0 and r120 >= 5: score += 4
-    elif vol <= 2.5 and r120 >= 0: score += 2
-
-    # 大型安心 (max 5pt)
-    if mc >= 10000:  score += 5   # 1兆以上
-    elif mc >= 5000: score += 4   # 5000億以上
-    elif mc >= 2000: score += 3
-    elif mc >= 1000: score += 2
-    elif mc >= 500:  score += 1
-
-    # ── 一貫性ボーナス (±10pt) ──
-    periods = [r120, r60, r20]
-    positive_count = sum(1 for r in periods if r > 0)
-    if positive_count == 3:
-        score += 10
-    elif positive_count == 2:
-        score += 5
-    elif positive_count == 0:
-        score -= 5
-
-    # ── 急落/過熱ペナルティ ──
-    vr1d = s.get("vol_ratio_1d", 1)
-    ret_1d = s.get("ret_1d", 0)
-    rsi = s.get("rsi", 50)
-    if vr1d >= 3.0 and ret_1d <= -3:
-        score -= 10  # パニック売り
-    if vr1d >= 3.0 and ret_1d >= 5:
-        score -= 8   # 仕手的急騰
-    if rsi >= 80:
-        score -= 5   # RSI過熱
-
-    score = max(0, min(score, 100))
-
-    # ── トレンドタイプ判定 ──
-    # MA75の上 + MA25の下 = 押し目
-    # MA75の上 + MA25の上 = 勢い
-    # MA75の下 = 危険 or 反発
-    if ma75_dev >= 0 and ma25_dev < 0 and positive_count >= 2:
-        trend_type = "dip"       # 🛡 MA75上でMA25下抜け = 最高の押し目
-    elif ma75_dev >= 0 and ma25_dev >= 0 and positive_count >= 2:
-        trend_type = "momentum"  # 🚀 両MA上 = 勢い
-    elif ma75_dev < 0 and ma25_dev < 0:
-        trend_type = "falling"   # ⚠ 両MA下 = 落ちるナイフ
-    elif ma75_dev < 0 and ma25_dev >= 0:
-        trend_type = "bounce"    # 🔄 MA75下だがMA25上 = 反発
-    elif ma75_dev >= 0 and positive_count <= 1:
-        trend_type = "neutral"   # 😐 MA75上だがトレンド不明
-    else:
-        trend_type = "neutral"
-
-    # falling追加ペナルティ（-10pt）
-    if trend_type == "falling":
-        score = max(0, score - 10)
-
-    return score, trend_type
 
 
 def calc_score_growth(s):
@@ -1266,47 +953,13 @@ def main():
                 overwritten += 1
         print(f"  📝 日本語名に上書き: {overwritten}件")
 
-    # ── セクター別 平均リターン計算 ──
-    from collections import defaultdict
-    sector_ret5_sum  = defaultdict(lambda: [0, 0])  # [合計, 件数]
-    sector_ret10_sum = defaultdict(lambda: [0, 0])
-    for s in results:
-        sec = s.get("sector", "その他")
-        r5  = s.get("ret5", 0)
-        r10 = s.get("ret10", 0)
-        if r5 != 0:
-            sector_ret5_sum[sec][0] += r5
-            sector_ret5_sum[sec][1] += 1
-        if r10 != 0:
-            sector_ret10_sum[sec][0] += r10
-            sector_ret10_sum[sec][1] += 1
-    sector_ret5_avg  = {k: round(v[0]/v[1], 2) if v[1] > 0 else 0 for k, v in sector_ret5_sum.items()}
-    sector_ret10_avg = {k: round(v[0]/v[1], 2) if v[1] > 0 else 0 for k, v in sector_ret10_sum.items()}
-    print(f"  📊 セクター別ret5平均: {len(sector_ret5_avg)}セクター計算済み")
-
-    # ── 各銘柄にセクター差分・増配フラグを付与 ──
-    for s in results:
-        sec = s.get("sector", "その他")
-        s["sector_ret5"]  = sector_ret5_avg.get(sec, 0)
-        s["sector_ret10"] = sector_ret10_avg.get(sec, 0)
-        # 個別ret - セクター平均 = 差分（マイナスなら個別だけ下がっている）
-        s["ret5_vs_sector"]  = round(s.get("ret5", 0) - s["sector_ret5"], 2)
-        s["ret10_vs_sector"] = round(s.get("ret10", 0) - s["sector_ret10"], 2)
-        # 増配フラグ
-        s["div_growth_years"] = DIVIDEND_GROWERS.get(s["code"], 0)
-
     for s in results:
         s["score_dividend"] = calc_score(s,"dividend")
         s["score_value"]    = calc_score(s,"value")
         s["score_rebound"]  = calc_score(s,"rebound")
         s["score_stable"]   = calc_score_stable(s)
         s["score_growth"]   = calc_score_growth(s)
-        s["score_bluechip"] = calc_score_bluechip(s)
-        s["score_momentum"] = calc_score_momentum(s)
-        trend_score, trend_type = calc_score_trend(s)
-        s["score_trend"]    = trend_score
-        s["trend_type"]     = trend_type
-        s["score"]          = trend_score  # v6: 時間加重トレンドスコアをメインに
+        s["score"]          = s["score_stable"]
     results.sort(key=lambda x:-x["score"])
 
     prev_scores={}
@@ -1362,16 +1015,13 @@ def main():
     ]
 
     # ── 配信用データを絞る（ファイルサイズ削減・高速化） ──
-    # スコア順TOP200 + 買い圏全件 + 大型高配当株（常に含める）
+    # スコア順TOP200 + 買い圏全件（どちらか多い方）
     buy_all   = [s for s in results if s["score"] >= 60]
     top200    = results[:200]
-    # 大型高配当株: 時価総額1000億以上 & 配当3%以上 → 押し目タブの母集団として常に含める
-    large_div = [s for s in results if (s.get("market_cap_b", 0) >= 1000 and s.get("dividend", 0) >= 3) or (s.get("market_cap_b", 0) >= 5000 and s.get("dividend", 0) >= 2)]
-    print(f"  📦 大型高配当株（常時収録）: {len(large_div)}銘柄")
     # 和集合（重複なし・スコア順維持）
     seen = set()
     stocks_out = []
-    for s in top200 + buy_all + large_div:
+    for s in top200 + buy_all:
         if s["code"] not in seen:
             seen.add(s["code"])
             stocks_out.append(s)
@@ -1381,13 +1031,7 @@ def main():
     KEEP = {"code","name","sector","price","ma25","ma75","rsi","dividend",
             "pbr","per","vol_r","vol_ratio_1d","ret_1d","range_pct","trend_score",
             "score_dividend","score_value","score_rebound",
-            "score_stable","score_growth","score_bluechip","score_momentum",
-            "score","prev_score","market_cap_b","volatility","dip_zscore","ret5","ret10",
-            "ret20","ret60","ret120","roe","profit_margin","revenue_growth","earnings_growth",
-            "vol_trend","price_position","score_trend","trend_type",
-            "sector_ret5","sector_ret10","ret5_vs_sector","ret10_vs_sector","div_growth_years",
-            "earnings_date","days_since_earnings","days_to_next_earnings",
-            "ma25_dev","ma75_dev","closes_60d","avg_volume"}
+            "score_stable","score_growth","score","prev_score","market_cap_b"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
 
     output = {
@@ -1400,19 +1044,25 @@ def main():
         **market,
         "vol_ranking":     vol_ranking_data,
         "trend_ranking":   trend_ranking_data,
-        "stocks":          stocks_out,          # TOP200+大型高配当を配信
+        "stocks":          stocks_out,          # TOP200のみ配信
     }
-    # ── NaN/Inf防止（恒久対策）──
-    import math as _math
-    def sanitize(obj):
-        if isinstance(obj, dict):
-            return {k: sanitize(v) for k, v in obj.items()}
-        if isinstance(obj, list):
-            return [sanitize(v) for v in obj]
-        if isinstance(obj, float) and (_math.isnan(obj) or _math.isinf(obj)):
-            return 0
-        return obj
-    output = sanitize(output)
+
+    # ── ニュースヘッドライン + AI要約 ──
+    try:
+        headlines = fetch_news_headlines()
+        output["headlines"] = headlines
+    except Exception as e:
+        print(f"  ⚠ ニュース取得失敗: {e}")
+        headlines = []
+        output["headlines"] = []
+
+    try:
+        ai_summary = generate_ai_summary(headlines, market) if headlines else None
+        output["ai_summary"] = ai_summary
+    except Exception as e:
+        print(f"  ⚠ AI要約生成失敗: {e}")
+        output["ai_summary"] = None
+
     with open("stocks_data.json","w",encoding="utf-8") as f:
         json.dump(output,f,ensure_ascii=False,indent=2)
 
@@ -1427,147 +1077,6 @@ def main():
         for i,s in enumerate(results[:3],1):
             print(f"    {i}位: {s['name']}（{s['code']}）{s['score']}点 配当{s['dividend']}%")
     print(f"\n  📁 stocks_data.json 保存完了")
-
-    # ── 履歴保存（日次スナップショット）──
-    today_str = datetime.now().strftime("%Y-%m-%d")
-    history_dir = "history"
-    os.makedirs(history_dir, exist_ok=True)
-    # v7: trend_type別にTOP10を保存
-    dip_top10 = [s for s in results if s.get("trend_type") == "dip"][:10]
-    mom_top10 = [s for s in results if s.get("trend_type") == "momentum"][:10]
-    def hist_entry(s):
-        return {
-            "code": s["code"], "name": s.get("name",""), "score": s.get("score",0),
-            "score_trend": s.get("score_trend",0), "trend_type": s.get("trend_type",""),
-            "dividend": s.get("dividend",0), "market_cap_b": s.get("market_cap_b",0),
-            "ma75_dev": s.get("ma75_dev",0), "ma25_dev": s.get("ma25_dev",0),
-            "ret5": s.get("ret5",0), "ret20": s.get("ret20",0), "ret120": s.get("ret120",0),
-            "vol_ratio_1d": s.get("vol_ratio_1d",1),
-            "sector": s.get("sector",""), "price": s["price"],
-            "pbr": s.get("pbr",0), "roe": s.get("roe",0),
-        }
-    history_entry = {
-        "date": today_str,
-        "updated_at": output["updated_at"],
-        "version": "v7",
-        "market": {k: output.get(k) for k in ["nikkei_price","nikkei_ma25","nikkei_1d_chg","nasdaq_1d_chg","vix","usdjpy"]},
-        "total_scanned": len(results),
-        "buy_count": buy_count,
-        "dip_top10": [hist_entry(s) for s in dip_top10],
-        "mom_top10": [hist_entry(s) for s in mom_top10],
-        "top50_codes": [s["code"] for s in results[:50]],
-        "top50_scores": [{"code":s["code"],"score":s.get("score",0),"trend_type":s.get("trend_type",""),
-                          "price":s["price"],"dividend":s.get("dividend",0)}
-                         for s in results[:50]],
-    }
-    hist_path = os.path.join(history_dir, f"{today_str}.json")
-    with open(hist_path, "w", encoding="utf-8") as f:
-        json.dump(history_entry, f, ensure_ascii=False, indent=2)
-    print(f"  📜 履歴保存: {hist_path}")
-
-    # ── OGP画像自動生成（1200×630） ──
-    try:
-        from PIL import Image, ImageDraw, ImageFont
-        W, H = 1200, 630
-        img = Image.new("RGB", (W, H), "#0A1628")
-        draw = ImageDraw.Draw(img)
-
-        # フォント（システムフォント利用、なければデフォルト）
-        def get_font(size, bold=False):
-            paths = [
-                "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
-                "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
-                "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-                "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-            ]
-            for p in paths:
-                if os.path.exists(p):
-                    try:
-                        return ImageFont.truetype(p, size)
-                    except:
-                        pass
-            return ImageFont.load_default()
-
-        f_title = get_font(42, bold=True)
-        f_sub = get_font(24)
-        f_rank = get_font(56, bold=True)
-        f_name = get_font(32, bold=True)
-        f_score = get_font(28)
-        f_meta = get_font(20)
-        f_footer = get_font(18)
-
-        # 背景グラデーション風（上部に青帯）
-        for y in range(120):
-            r = int(10 + y * 0.15)
-            g = int(22 + y * 0.4)
-            b = int(40 + y * 0.8)
-            draw.line([(0, y), (W, y)], fill=(r, g, b))
-
-        # ロゴ + タイトル
-        draw.text((50, 30), "かぶのすけ", fill="#4ADE80", font=f_title)
-        draw.text((50, 82), f"{today_str} の押し目 TOP3", fill="#FFFFFF", font=f_sub)
-
-        # 区切り線
-        draw.line([(50, 125), (W - 50, 125)], fill="#1B6AC9", width=3)
-
-        # TOP3
-        dip_top3 = [s for s in results if s.get("trend_type") == "dip"][:3]
-        y_start = 155
-        for i, s in enumerate(dip_top3):
-            y = y_start + i * 140
-            # 背景カード
-            card_color = "#14233D" if i % 2 == 0 else "#0F1D33"
-            draw.rounded_rectangle([(40, y), (W - 40, y + 125)], radius=12, fill=card_color)
-
-            # 順位
-            rank_colors = ["#F59E0B", "#9CA3AF", "#CD7F32"]
-            cx, cy = 100, y + 62
-            draw.ellipse([(cx - 30, cy - 30), (cx + 30, cy + 30)], fill=rank_colors[i] if i < 3 else "#4A5568")
-            rank_text = str(i + 1)
-            bbox = draw.textbbox((0, 0), rank_text, font=f_rank)
-            tw = bbox[2] - bbox[0]
-            th = bbox[3] - bbox[1]
-            draw.text((cx - tw // 2, cy - th // 2 - 5), rank_text, fill="#FFFFFF", font=f_rank)
-
-            # 銘柄名
-            name = s.get("name", "")[:12]
-            draw.text((155, y + 18), name, fill="#FFFFFF", font=f_name)
-
-            # メタ情報
-            sector = s.get("sector", "")
-            div_val = s.get("dividend", 0)
-            meta = f"{s['code']} · {sector} · 配当{div_val:.1f}%"
-            draw.text((155, y + 62), meta, fill="#8E99A8", font=f_meta)
-
-            # スコア
-            score = s.get("score", 0)
-            score_text = f"{score}pt"
-            bbox = draw.textbbox((0, 0), score_text, font=f_rank)
-            sw = bbox[2] - bbox[0]
-            score_color = "#4ADE80" if score >= 60 else "#F59E0B" if score >= 40 else "#F87171"
-            draw.text((W - 90 - sw, y + 25), score_text, fill=score_color, font=f_rank)
-
-            # 押し目バッジ
-            badge = "押し目"
-            draw.rounded_rectangle([(W - 160, y + 82), (W - 75, y + 110)], radius=6, fill="#059669")
-            bbox = draw.textbbox((0, 0), badge, font=f_meta)
-            bw = bbox[2] - bbox[0]
-            draw.text((W - 118 - bw // 2, y + 84), badge, fill="#FFFFFF", font=f_meta)
-
-        # フッター
-        buy_count_val = buy_count
-        total_val = len(results)
-        draw.line([(50, H - 70), (W - 50, H - 70)], fill="#1E3050", width=1)
-        footer_text = f"全{total_val}銘柄スキャン · {buy_count_val}銘柄が買い時 · 毎朝7:30自動更新"
-        draw.text((50, H - 55), footer_text, fill="#4A5568", font=f_footer)
-        draw.text((W - 300, H - 55), "oshime.vercel.app", fill="#1B6AC9", font=f_footer)
-
-        ogp_path = "ogp.png"
-        img.save(ogp_path, "PNG", optimize=True)
-        print(f"  🖼️  OGP画像生成: {ogp_path}")
-    except Exception as e:
-        print(f"  ⚠ OGP画像生成スキップ: {e}")
-
     print("="*58)
 
 if __name__=="__main__":

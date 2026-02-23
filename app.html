@@ -111,6 +111,27 @@ a{color:var(--blue-m);text-decoration:none;}
   .t5-expand{grid-column:1/-1;}
 }
 
+/* MARKET MODE */
+.market-mode{margin:12px;padding:16px;border-radius:14px;border:2px solid;max-width:720px;}
+@media(min-width:700px){.market-mode{margin:12px auto;}}
+.market-mode.aggressive{border-color:#059669;background:linear-gradient(135deg,#F0FDF4,#ECFDF5);}
+.market-mode.cautious{border-color:#EF4444;background:linear-gradient(135deg,#FEF2F2,#FEE2E2);}
+.market-mode.normal{border-color:#F59E0B;background:linear-gradient(135deg,#FFFBEB,#FEF3C7);}
+.mm-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
+.mm-label{font-size:18px;font-weight:800;}
+.mm-score{font-size:11px;padding:3px 8px;border-radius:8px;font-weight:700;}
+.mm-advice{font-size:13px;font-weight:700;margin-bottom:10px;line-height:1.5;}
+.mm-signals{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px;}
+.mm-sig{font-size:10px;padding:3px 8px;border-radius:6px;font-weight:600;background:rgba(0,0,0,0.05);}
+.mm-sig.pos{color:#059669;}.mm-sig.neg{color:#EF4444;}.mm-sig.neu{color:#6B7280;}
+.mm-news{margin-top:10px;padding-top:10px;border-top:1px solid rgba(0,0,0,0.08);}
+.mm-news-title{font-size:11px;font-weight:700;color:var(--text2);margin-bottom:6px;}
+.mm-news-item{font-size:11px;color:var(--text);line-height:1.6;padding:2px 0;}
+.mm-news-src{font-size:9px;color:var(--text3);}
+.mm-ai{margin-top:10px;padding:12px;border-radius:10px;background:rgba(255,255,255,0.7);font-size:12px;line-height:1.7;color:var(--text);}
+.mm-ai-header{font-size:11px;font-weight:700;color:var(--text2);margin-bottom:6px;}
+.mm-toggle{font-size:10px;color:var(--blue);cursor:pointer;font-weight:600;}
+
 /* SHARE */
 .share{margin:10px 12px;display:flex;gap:8px;}
 .share-btn{flex:1;padding:10px;border-radius:10px;text-align:center;font-size:12px;font-weight:700;cursor:pointer;border:none;font-family:var(--f);}
@@ -240,6 +261,9 @@ a{color:var(--blue-m);text-decoration:none;}
   <div class="ticker" id="tickerBar"></div>
 </div>
 <div style="text-align:center;padding:6px 12px 0;font-size:11px;color:var(--text3);max-width:720px;margin:0 auto">AIが毎日500銘柄以上をスキャン → おすすめ株を自動で選定</div>
+
+<!-- MARKET MODE BANNER -->
+<div id="marketMode" class="market-mode" style="display:none"></div>
 
 <!-- HERO CONCLUSION -->
 <div class="hero" id="heroBox"></div>
@@ -544,6 +568,62 @@ function processStocks(){
 function renderTicker(){
   const el=document.getElementById('tickerBar');
   el.innerHTML=['日経平均 🇯🇵','NYダウ 🇺🇸','ドル円'].map(l=>`<div class="ticker-item"><div class="ticker-lbl">${l}</div><div class="ticker-val">—</div><div class="ticker-chg">—</div></div>`).join('');
+}
+function renderMarketMode(){
+  const el=document.getElementById('marketMode');
+  const d=window._stockData||{};
+  const mode=d.market_mode;
+  if(!mode){el.style.display='none';return;}
+  el.style.display='block';
+  el.className='market-mode '+mode;
+
+  const signals=d.signals||[];
+  const headlines=d.headlines||[];
+  const ai=d.ai_summary;
+
+  // シグナルバッジ
+  const sigHtml=signals.map(s=>{
+    const cls=s.val>0?'pos':s.val<0?'neg':'neu';
+    const icon=s.val>0?'✅':s.val<0?'❌':'⚠️';
+    return `<span class="mm-sig ${cls}">${icon} ${s.text}</span>`;
+  }).join('');
+
+  // ニュース
+  let newsHtml='';
+  if(headlines.length){
+    newsHtml=`<div class="mm-news">
+      <div class="mm-news-title">📰 今日の注目ニュース</div>
+      ${headlines.slice(0,5).map(h=>`<div class="mm-news-item">• ${h.title} <span class="mm-news-src">${h.source||''}</span></div>`).join('')}
+    </div>`;
+  }
+
+  // AI要約
+  let aiHtml='';
+  if(ai&&ai.text){
+    aiHtml=`<div class="mm-ai">
+      <div class="mm-ai-header">📝 かぶのすけの見立て</div>
+      ${ai.text.replace(/\n/g,'<br>')}
+    </div>`;
+  }
+
+  // クリアパス数
+  const pass=signals.filter(s=>s.val>0).length;
+  const total=signals.length;
+  const scoreColor=mode==='aggressive'?'#059669':mode==='cautious'?'#EF4444':'#D97706';
+
+  el.innerHTML=`
+    <div class="mm-header">
+      <div class="mm-label">${d.mode_label||'📡 相場チェック'}</div>
+      <div class="mm-score" style="background:${scoreColor}20;color:${scoreColor}">${pass}/${total} クリア</div>
+    </div>
+    <div class="mm-advice">${d.mode_advice||''}</div>
+    <div class="mm-signals" id="mmSignals">${sigHtml}</div>
+    <details>
+      <summary class="mm-toggle">📰 ニュースと見立てを見る</summary>
+      ${newsHtml}
+      ${aiHtml}
+    </details>
+  `;
 }
 function renderHero(){
   const el=document.getElementById('heroBox');
@@ -939,6 +1019,7 @@ function renderHistory(){
 // ═══════════════════════════════════════
 function run(){
   processStocks();
+  renderMarketMode();
   renderHero();
   renderTop10();
   renderDanger();
@@ -972,15 +1053,36 @@ async function init(){
     const data=await r.json();
     RAW=data.stocks||[];
     window._updatedAt=data.updated_at||'—';
-    if(data.nikkei225)document.querySelector('.ticker-item:nth-child(1) .ticker-val').textContent=data.nikkei225.toLocaleString();
+    window._stockData=data;
+    // ティッカー更新
+    const tItems=document.querySelectorAll('.ticker-item');
+    if(data.nikkei_price&&tItems[0]){
+      tItems[0].querySelector('.ticker-val').textContent='¥'+data.nikkei_price.toLocaleString();
+      const nc=data.nikkei_1d_chg||0;
+      tItems[0].querySelector('.ticker-chg').textContent=(nc>=0?'+':'')+nc+'%';
+      tItems[0].querySelector('.ticker-chg').style.color=nc>=0?'#6EE7B7':'#FCA5A5';
+    }
+    if(data.dow_price&&tItems[1]){
+      tItems[1].querySelector('.ticker-val').textContent='$'+data.dow_price.toLocaleString();
+      const dc=data.dow_1d_chg||0;
+      tItems[1].querySelector('.ticker-chg').textContent=(dc>=0?'+':'')+dc+'%';
+      tItems[1].querySelector('.ticker-chg').style.color=dc>=0?'#6EE7B7':'#FCA5A5';
+    }
+    if(data.usdjpy&&tItems[2]){
+      tItems[2].querySelector('.ticker-val').textContent='¥'+data.usdjpy;
+      const uc=data.usdjpy_chg||0;
+      tItems[2].querySelector('.ticker-chg').textContent=(uc>=0?'+':'')+uc+'円';
+      tItems[2].querySelector('.ticker-chg').style.color=uc>=0?'#6EE7B7':'#FCA5A5';
+    }
   }catch(e){
     RAW=SAMPLE_STOCKS;
     window._updatedAt='サンプルデータ';
+    window._stockData={};
   }
   await loadHistory();
   run();
-  gaEvent('page_view',{version:'v8.0'});
-  console.log('🟢 かぶのすけ v8.0 loaded');
+  gaEvent('page_view',{version:'v8.1'});
+  console.log('🟢 かぶのすけ v8.1 loaded');
 }
 
 init();
