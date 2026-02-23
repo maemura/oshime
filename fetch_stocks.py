@@ -1047,17 +1047,20 @@ def main():
     ]
 
     # ── 配信用データを絞る（ファイルサイズ削減・高速化） ──
-    # スコア順TOP200 + 買い圏全件（どちらか多い方）
+    # スコア順TOP200 + 買い圏全件 + 大型高配当株（常時収録）
     buy_all   = [s for s in results if s["score"] >= 60]
     top200    = results[:200]
+    # 大型高配当株: 時価総額3000億以上 & 配当2%以上 → 常にJSON収録
+    largecap  = [s for s in results if s.get("market_cap_b",0) >= 3000 and s.get("dividend",0) >= 2.0]
     # 和集合（重複なし・スコア順維持）
     seen = set()
     stocks_out = []
-    for s in top200 + buy_all:
+    for s in top200 + buy_all + largecap:
         if s["code"] not in seen:
             seen.add(s["code"])
             stocks_out.append(s)
     stocks_out.sort(key=lambda x: -x["score"])
+    print(f"  📦 大型高配当株（常時収録）: {len(largecap)}銘柄  → 配信合計: {len(stocks_out)}銘柄")
 
     # 各銘柄から不要フィールドを省いて軽量化
     KEEP = {"code","name","sector","price","ma25","ma75","rsi","dividend",
@@ -1096,6 +1099,28 @@ def main():
     except Exception as e:
         print(f"  ⚠ AI要約生成失敗: {e}")
         output["ai_summary"] = None
+
+    # ── ニュースDB蓄積（JSONL形式で毎日追記） ──
+    try:
+        news_db_dir = "news_db"
+        os.makedirs(news_db_dir, exist_ok=True)
+        today_str = datetime.now().strftime("%Y-%m-%d")
+        entry = {
+            "date": today_str,
+            "headlines": headlines,
+            "ai_summary": ai_summary.get("text", "") if ai_summary else "",
+            "market_mode": market.get("market_mode", ""),
+            "mode_score": market.get("mode_score", 0),
+            "nikkei_price": market.get("nikkei_price", 0),
+            "dow_1d_chg": market.get("dow_1d_chg", 0),
+            "vix": market.get("vix", 0),
+            "usdjpy": market.get("usdjpy", 0),
+        }
+        with open(f"{news_db_dir}/news_log.jsonl", "a", encoding="utf-8") as f:
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+        print(f"  📰 ニュースDB追記: {today_str}（{len(headlines)}件）")
+    except Exception as e:
+        print(f"  ⚠ ニュースDB保存失敗: {e}")
 
     with open("stocks_data.json","w",encoding="utf-8") as f:
         json.dump(output,f,ensure_ascii=False,indent=2)

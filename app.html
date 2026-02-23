@@ -377,7 +377,7 @@ const SAMPLE_STOCKS=[
 {code:"9433",name:"KDDI",sector:"情報・通信業",price:4800,ma25:4900,ma75:4700,rsi:41,dividend:3.2,pbr:1.8,per:14,vol_r:0.9,market_cap_b:11000,volatility:1.2,ret5:-1.8,ret10:-0.5,ret20:-2.1,ret60:5.2,ret120:12,roe:15,ma25_dev:-2.1,ma75_dev:2.1,trend_type:"dip",closes_60d:[]},
 ];
 const SECTOR_MAP={"銀行業":"🏦 銀行","メガバンク":"🏦 メガバンク","情報・通信業":"📡 通信","通信キャリア":"📡 通信キャリア","電気機器":"⚡ 電機","輸送用機器":"🚗 自動車","医薬品":"💊 医薬","化学":"🧪 化学","卸売業":"📦 商社","総合商社":"📦 総合商社","保険業":"🛡 保険","建設業":"🏗 建設","食料品":"🍙 食品","不動産業":"🏠 不動産","陸運業":"🚃 陸運","機械":"⚙ 機械","鉄鋼":"🔩 鉄鋼","サービス業":"💼 サービス","小売業":"🛒 小売","その他金融業":"💳 金融","ガラス・土石製品":"🧱 ガラス","非鉄金属":"🔧 非鉄","繊維製品":"👕 繊維","石油・石炭製品":"⛽ 石油","電気・ガス業":"💡 電力","海運業":"🚢 海運","空運業":"✈ 空運","鉱業":"⛏ 鉱業","パルプ・紙":"📄 紙パ","ゴム製品":"🔴 ゴム","金属製品":"🔨 金属","精密機器":"🔬 精密","水産・農林業":"🐟 水産","倉庫・運輸関連業":"📦 倉庫","その他製品":"🎯 その他製品","証券、商品先物取引業":"📈 証券","ゲーム・エンタメ":"🎮 ゲーム","半導体":"💎 半導体","IT・SaaS":"💻 SaaS","IT・ネット":"🌐 IT","Technology":"💻 テック","Communication Services":"📡 通信","Financial Services":"💳 金融","Consumer Cyclical":"🛒 消費","Consumer Defensive":"🍙 生活必需","Healthcare":"💊 医薬","Industrials":"⚙ 産業","Basic Materials":"🧪 素材","Energy":"⛽ エネルギー","Real Estate":"🏠 不動産","Utilities":"💡 公益"};
-const TREND_LABEL={"dip":"📉 割安","momentum":"📈 上昇中","falling":"⚠ 下落中","bounce":"🔄 反発","neutral":"😐 様子見","avoid":"🚫 対象外"};
+const TREND_LABEL={"dip":"📉 割安","momentum":"📈 上昇中","falling":"⚠ 下落中","bounce":"🔄 反発","neutral":"😐 様子見","avoid":"🚫 対象外","value_dip":"💎 逆張りチャンス"};
 let RAW=[],processed=[],EVENTS=[];
 let histYesterday=null,histDayBefore=null;
 let settings={mindiv:0,style:'trend',disp:10,zone:'all',sort:'score',sortDir:-1,sector:'all',top5tab:'dip'};
@@ -552,8 +552,20 @@ function calcScoreTrend(s){
   else if(ma75d>=0&&ma25d>=0&&pc>=2)type='momentum';
   else if(ma75d<0&&ma25d<0)type='falling';
   else if(ma75d<0&&ma25d>=0)type='bounce';
-  // falling追加ペナルティ
-  if(type==='falling')sc=Math.max(0,sc-10);
+
+  // ── 大型逆張りバリュー ──
+  // 大型高配当（時価総額3000億+配当2.5%+）が下落中 → ペナルティ免除＋ボーナス
+  const isLargeCap=mc>=3000&&div>=2.5;
+  if(type==='falling'&&isLargeCap){
+    type='value_dip';  // 逆張りチャンス
+    sc+=8;  // ボーナス（fallingペナルティなし）
+  } else if(type==='falling'){
+    sc=Math.max(0,sc-10);  // 小型株のfallingはペナルティ維持
+  }
+  // 大型bounce（75日割れだが反発気配）もボーナス
+  if(type==='bounce'&&isLargeCap)sc+=5;
+
+  sc=Math.max(0,Math.min(sc,100));
   return{score:sc,type};
 }
 
@@ -650,7 +662,7 @@ function renderHero(){
   const topSc=all.length?Math.max(...all.map(s=>s.score)):0;
   const maxDiv=all.length?Math.max(...all.map(s=>s.dividend||0)).toFixed(1)+'%':'—';
   // 狙いセクター計算
-  const dipStocks=all.filter(s=>s.trend_type==='dip'&&s.score>=50);
+  const dipStocks=all.filter(s=>(s.trend_type==='dip'||s.trend_type==='value_dip')&&s.score>=50);
   const secCount={};
   dipStocks.forEach(s=>{const k=sMap(s.sector,s.code);secCount[k]=(secCount[k]||0)+1;});
   const topSecs=Object.entries(secCount).sort((a,b)=>b[1]-a[1]).slice(0,3).map(x=>x[0]);
@@ -677,7 +689,13 @@ function renderHero(){
 
 function genReason(s){
   const parts=[];
-  if(s.trend_type==='momentum'){
+  if(s.trend_type==='value_dip'){
+    parts.push(`<strong>大型株の逆張りチャンス</strong>`);
+    if(s.ma75_dev<0)parts.push(`75日平均から${Math.abs(s.ma75_dev).toFixed(1)}%下落`);
+    if(s.dividend>=3)parts.push(`配当<strong>${s.dividend.toFixed(1)}%</strong>で待てる`);
+    else if(s.dividend>=2)parts.push(`配当${s.dividend.toFixed(1)}%`);
+    if(s.ret20<-3)parts.push(`短期${s.ret20.toFixed(0)}%下落 → 反発期待`);
+  }else if(s.trend_type==='momentum'){
     if(s.ret20>5)parts.push(`20日で<strong>+${s.ret20.toFixed(0)}%上昇中</strong>`);
     else if(s.ret20>0)parts.push(`じわじわ上昇中`);
     if((s.vol_ratio_1d||1)>=2)parts.push(`出来高<strong>${(s.vol_ratio_1d||1).toFixed(1)}倍</strong>に急増`);
@@ -718,7 +736,7 @@ function getRankBadge(code,tab){
   const yIdx=yList.findIndex(s=>s.code===code);
   if(yIdx<0)return '<span class="rank-chg new">🆕</span>';
   // 今日の順位を取得
-  const todayList=processed.filter(s=>tab==='dip'?s.trend_type==='dip':s.trend_type==='momentum').slice(0,10);
+  const todayList=processed.filter(s=>tab==='dip'?s.trend_type==='dip'||s.trend_type==='value_dip':s.trend_type==='momentum').slice(0,10);
   const tIdx=todayList.findIndex(s=>s.code===code);
   if(tIdx<0)return '';
   const diff=yIdx-tIdx; // positive = moved up
@@ -739,7 +757,7 @@ function renderTop10(){
   sec.style.display='';
   const body=document.getElementById('top5Body');
   const tab=settings.top5tab;
-  const items=processed.filter(s=>tab==='dip'?s.trend_type==='dip':s.trend_type==='momentum').slice(0,10);
+  const items=processed.filter(s=>tab==='dip'?s.trend_type==='dip'||s.trend_type==='value_dip':s.trend_type==='momentum').slice(0,10);
   if(!items.length){body.innerHTML='<div style="padding:24px;text-align:center;color:var(--text3);font-size:13px">該当する銘柄がありません</div>';return;}
   let html='<div class="t5-grid">';
   items.forEach((s,i)=>{
@@ -761,7 +779,7 @@ function renderTop10(){
       <div class="t5-right">
         <div class="t5-sc">${s.score}<span>/<small>100</small></span></div>
         <div class="t5-gauge"><div class="t5-gauge-fill" style="width:${s.score}%;background:${gaugeColor}"></div></div>
-        <div class="t5-type ${s.trend_type==='dip'?'dip':'mom'}">${TREND_LABEL[s.trend_type]||s.trend_type}</div>
+        <div class="t5-type ${s.trend_type==='dip'||s.trend_type==='value_dip'?'dip':'mom'}">${TREND_LABEL[s.trend_type]||s.trend_type}</div>
         <div class="t5-tap">${isOpen?'▲ 閉じる':'▼ 詳細'}</div>
       </div>
     </div>`;
@@ -879,7 +897,10 @@ function buildExpand(s){
   const ma25col=(s.ma25_dev||0)>=0?'var(--green)':'var(--red)';
   // Signal (初心者向け)
   let signal='';
-  if(s.trend_type==='dip'){
+  if(s.trend_type==='value_dip'){
+    signal=`<strong>💎 大型高配当株の逆張りチャンス。</strong>一時的な下落で割安に。配当${(s.dividend||0).toFixed(1)}%をもらいながら回復を待てる局面。`;
+    if(s.ma75_dev<0)signal+=`<br>75日平均（¥${(s.ma75||0).toLocaleString()}）を${Math.abs(s.ma75_dev||0).toFixed(1)}%下回っています。`;
+  }else if(s.trend_type==='dip'){
     signal=`長期では上昇トレンド。短期的に調整中で<strong>買いやすい価格帯に接近中</strong>。`;
     if(s.ma75_dev<=3)signal+=`<br>75日平均（買いライン ¥${(s.ma75||0).toLocaleString()}）まであと${(s.ma75_dev||0).toFixed(1)}%。ここまで下がれば絶好のチャンス。`;
     else signal+=`<br>75日平均（買いライン）までまだ距離あり（${(s.ma75_dev||0).toFixed(1)}%）。もう少し下がるのを待つ手も。`;
@@ -984,7 +1005,7 @@ function renderDanger(){
 
 // ── SHARE ──
 function shareX(){
-  const top=processed.filter(s=>s.trend_type==='dip').slice(0,3);
+  const top=processed.filter(s=>s.trend_type==='dip'||s.trend_type==='value_dip').slice(0,3);
   const text=`📊 かぶのすけ 今日の押し目TOP3\n${top.map((s,i)=>`${i+1}. ${s.name}（${s.score}pt）`).join('\n')}\nhttps://oshime.vercel.app/app.html`;
   window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text),'_blank');
   gaEvent('share',{platform:'x'});
