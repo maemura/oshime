@@ -1,16 +1,16 @@
 {
   "date": "2026-02-23",
-  "updated_at": "2026/02/23 14:32",
+  "updated_at": "2026/02/23 14:56",
   "market": {
     "nikkei_price": 56826.0,
     "nikkei_ma25": 54810.0,
     "nikkei_1d_chg": -1.12,
     "nasdaq_1d_chg": 0.9,
     "vix": 19.1,
-    "usdjpy": 154.47
+    "usdjpy": 154.43
   },
   "total_scanned": 1560,
-  "buy_count": 403,
+  "buy_count": 399,
   "top5": [
     {
       "code": "6448",
@@ -21,9 +21,9 @@
       "ret5": -0.29,
       "ret10": -5.14,
       "dip_zscore": -1.9,
-      "ret5_vs_sector": -1.53,
-      "sector": "Industrials",
-      "sector_ret5": 1.24,
+      "ret5_vs_sector": -1.62,
+      "sector": "機械",
+      "sector_ret5": 1.33,
       "div_growth_years": 0,
       "price": 3098.0
     },
@@ -36,9 +36,9 @@
       "ret5": 0.13,
       "ret10": -7.56,
       "dip_zscore": -2.82,
-      "ret5_vs_sector": -1.11,
-      "sector": "Industrials",
-      "sector_ret5": 1.24,
+      "ret5_vs_sector": -1.2,
+      "sector": "機械",
+      "sector_ret5": 1.33,
       "div_growth_years": 0,
       "price": 3850.0
     },
@@ -51,9 +51,9 @@
       "ret5": -1.98,
       "ret10": -6.08,
       "dip_zscore": -2.49,
-      "ret5_vs_sector": -3.22,
-      "sector": "Industrials",
-      "sector_ret5": 1.24,
+      "ret5_vs_sector": -3.31,
+      "sector": "機械",
+      "sector_ret5": 1.33,
       "div_growth_years": 0,
       "price": 1437.0
     },
@@ -67,7 +67,7 @@
       "ret10": -5.13,
       "dip_zscore": -2.12,
       "ret5_vs_sector": -6.96,
-      "sector": "Consumer Defensive",
+      "sector": "食料品",
       "sector_ret5": -0.79,
       "div_growth_years": 5,
       "price": 2191.0
@@ -81,9 +81,9 @@
       "ret5": -1.61,
       "ret10": -6.68,
       "dip_zscore": -2.86,
-      "ret5_vs_sector": -2.85,
-      "sector": "Industrials",
-      "sector_ret5": 1.24,
+      "ret5_vs_sector": -2.94,
+      "sector": "機械",
+      "sector_ret5": 1.33,
       "div_growth_years": 0,
       "price": 1159.0
     }
@@ -108,7 +108,7 @@
       "ret60": 42.84,
       "roe": 0.0,
       "vol_trend": 3.0,
-      "sector_ret5": 1.24,
+      "sector_ret5": 1.33,
       "price": 1147.0
     },
     {
@@ -123,17 +123,6 @@
       "price": 8140.0
     },
     {
-      "code": "6653",
-      "name": "正興電機製作所",
-      "score_momentum": 72,
-      "ret20": 11.51,
-      "ret60": 15.26,
-      "roe": 12.0,
-      "vol_trend": 1.37,
-      "sector_ret5": 1.79,
-      "price": 2547.0
-    },
-    {
       "code": "7972",
       "name": "イトーキ",
       "score_momentum": 71,
@@ -141,8 +130,19 @@
       "ret60": 44.47,
       "roe": 17.7,
       "vol_trend": 1.82,
-      "sector_ret5": 0.15,
+      "sector_ret5": 0.25,
       "price": 3205.0
+    },
+    {
+      "code": "3482",
+      "name": "ロードスターキャピタル",
+      "score_momentum": 70,
+      "ret20": 15.4,
+      "ret60": 30.74,
+      "roe": 27.2,
+      "vol_trend": 1.85,
+      "sector_ret5": 1.05,
+      "price": 3560.0
     }
   ],
   "top50_codes": [
@@ -174,7 +174,6 @@
     "3289",
     "3401",
     "7337",
-    "7751",
     "8001",
     "8103",
     "8309",
@@ -195,7 +194,8 @@
     "8078",
     "8137",
     "8331",
-    "8381"
+    "8381",
+    "8804"
   ],
   "top50_scores": [
     {
@@ -395,13 +395,6 @@
       "ret5": -0.77
     },
     {
-      "code": "7751",
-      "score": 67,
-      "price": 4685.0,
-      "dividend": 3.42,
-      "ret5": -2.88
-    },
-    {
       "code": "8001",
       "score": 67,
       "price": 2192.5,
@@ -547,20 +540,33 @@
       "price": 1764.0,
       "dividend": 3.17,
       "ret5": 0.68
+    },
+    {
+      "code": "8804",
+      "score": 66,
+      "price": 4145.0,
+      "dividend": 2.94,
+      "ret5": 0.41
     }
   ],
   "sector_ret5_avg": {
-    "Consumer Defensive": -0.79,
-    "Industrials": 1.24,
-    "Consumer Cyclical": 0.15,
-    "Basic Materials": 1.94,
-    "Energy": 2.15,
-    "Utilities": 2.87,
-    "Technology": 1.79,
-    "Real Estate": 1.05,
-    "Communication Services": -1.13,
-    "Financial Services": -0.01,
-    "Healthcare": NaN,
-    "その他": 0.17
+    "食料品": -0.79,
+    "機械": 1.33,
+    "小売業": 0.25,
+    "化学": 1.94,
+    "石油・石炭製品": 2.15,
+    "電気・ガス業": 2.87,
+    "情報・通信業": 1.15,
+    "不動産業": 1.05,
+    "ゲーム・エンタメ": 1.37,
+    "その他金融業": 0.02,
+    "医薬品": NaN,
+    "IT・SaaS": 1.66,
+    "IT・ネット": -3.5,
+    "半導体": -1.47,
+    "その他": 0.17,
+    "総合商社": -3.02,
+    "メガバンク": -3.42,
+    "通信キャリア": -2.38
   }
 }

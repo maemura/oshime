@@ -533,6 +533,67 @@ def fetch_one(ticker, _retry=0):
             # 英語名しかない場合はshortNameを使う（後でJP名辞書で上書き）
             name = short_name or long_name or ticker.replace(".T","")
         sector   = info.get("sector") or info.get("industry") or "その他"
+
+        # ── 英語→日本語セクター変換 ──
+        SECTOR_EN_TO_JP = {
+            "Technology": "情報・通信業",
+            "Communication Services": "情報・通信業",
+            "Financial Services": "その他金融業",
+            "Consumer Cyclical": "小売業",
+            "Consumer Defensive": "食料品",
+            "Healthcare": "医薬品",
+            "Industrials": "機械",
+            "Basic Materials": "化学",
+            "Energy": "石油・石炭製品",
+            "Real Estate": "不動産業",
+            "Utilities": "電気・ガス業",
+        }
+        if sector in SECTOR_EN_TO_JP:
+            sector = SECTOR_EN_TO_JP[sector]
+
+        # ── カスタム業種上書き（東証分類が実態と合わない銘柄）──
+        code_str = ticker.replace(".T", "")
+        CUSTOM_SECTOR = {
+            # ゲーム
+            "7974": "ゲーム・エンタメ",  # 任天堂
+            "3635": "ゲーム・エンタメ",  # コーエーテクモ
+            "9684": "ゲーム・エンタメ",  # スクウェア・エニックス
+            "9766": "ゲーム・エンタメ",  # コナミ
+            "3659": "ゲーム・エンタメ",  # ネクソン
+            "2121": "ゲーム・エンタメ",  # mixi
+            "9697": "ゲーム・エンタメ",  # カプコン
+            "7832": "ゲーム・エンタメ",  # バンダイナムコ
+            "3668": "ゲーム・エンタメ",  # コロプラ
+            "3765": "ゲーム・エンタメ",  # ガンホー
+            # 半導体
+            "6723": "半導体",  # ルネサスエレクトロニクス
+            "6526": "半導体",  # ソシオネクスト
+            "6857": "半導体",  # アドバンテスト
+            "8035": "半導体",  # 東京エレクトロン
+            "6920": "半導体",  # レーザーテック
+            "6146": "半導体",  # ディスコ
+            # IT・SaaS
+            "4443": "IT・SaaS",  # Sansan
+            "4478": "IT・SaaS",  # フリー
+            "4751": "IT・ネット",  # サイバーエージェント
+            "4689": "IT・ネット",  # Zホールディングス
+            "4755": "IT・ネット",  # 楽天グループ
+            "9434": "通信キャリア",  # ソフトバンク
+            "9433": "通信キャリア",  # KDDI
+            "9432": "通信キャリア",  # NTT
+            # 商社
+            "8058": "総合商社",  # 三菱商事
+            "8031": "総合商社",  # 三井物産
+            "8001": "総合商社",  # 伊藤忠
+            "8002": "総合商社",  # 丸紅
+            "8053": "総合商社",  # 住友商事
+            # メガバンク
+            "8306": "メガバンク",  # 三菱UFJ
+            "8316": "メガバンク",  # 三井住友FG
+            "8411": "メガバンク",  # みずほFG
+        }
+        if code_str in CUSTOM_SECTOR:
+            sector = CUSTOM_SECTOR[code_str]
         # 時価総額（億円）
         mc_raw   = info.get("marketCap") or 0
         market_cap_b = round(mc_raw / 1e8, 0) if mc_raw else 0  # 億円
@@ -988,18 +1049,18 @@ def calc_score_trend(s):
     elif 0 <= ma75_dev <= 8:    score += 10
     elif 0 <= ma75_dev <= 12:   score += 6
     elif ma75_dev > 12:         score += 2    # 離れすぎ（勢いはあるが押し目ではない）
-    elif -2 <= ma75_dev < 0:    score += 15   # わずかに下抜け（反発期待）
-    elif -5 <= ma75_dev < -2:   score += 8    # 下抜け（要注意）
-    else:                       score += 0    # 大きく下抜け = 危険
+    elif -2 <= ma75_dev < 0:    score += 3    # わずかに下抜け（ほぼ加点なし）
+    elif -5 <= ma75_dev < -2:   score += 0    # 明確に下抜け（0点）
+    else:                       score -= 5    # 大きく下抜け = ペナルティ
 
     # ── MA25乖離率 (max 15pt) — 短期調整の深さ ──
     if -5 <= ma25_dev <= -3:    score += 15   # 良い押し目ゾーン
-    elif -8 <= ma25_dev < -5:   score += 12   # 深い押し目（やや危険も）
+    elif -8 <= ma25_dev < -5:   score += 10   # 深い押し目（やや危険も）
     elif -3 <= ma25_dev <= -1:  score += 10   # 軽い調整
     elif -1 < ma25_dev <= 0:    score += 6    # ほぼMA25上
     elif 0 < ma25_dev <= 3:     score += 3    # MA25より上（勢い）
     elif ma25_dev > 3:          score += 8    # 強い上昇トレンド（勢い銘柄用）
-    elif ma25_dev < -8:         score += 5    # 落ちすぎ（リバウンド期待だがリスク）
+    elif ma25_dev < -8:         score += 3    # 落ちすぎ（リスク高い）
 
     # ── 20日リターン (max 15pt) ──
     if r20 >= 10:     score += 15
@@ -1090,6 +1151,10 @@ def calc_score_trend(s):
         trend_type = "neutral"   # 😐 MA75上だがトレンド不明
     else:
         trend_type = "neutral"
+
+    # falling追加ペナルティ（-10pt）
+    if trend_type == "falling":
+        score = max(0, score - 10)
 
     return score, trend_type
 

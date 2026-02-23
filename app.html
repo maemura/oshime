@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>かぶのすけ — 高配当株の買い場を毎日スキャン</title>
-<meta name="description" content="東証プライム1,600銘柄を毎朝自動スキャン。MA75押し目スコアで今日の買い場を即検出。">
+<meta name="description" content="東証プライム1,600銘柄を毎朝自動スキャン。押し目スコアで今日の買い場を即検出。">
 <meta property="og:title" content="かぶのすけ — 高配当株の買い場を毎朝スキャン">
 <meta property="og:description" content="東証プライム1,600銘柄を毎朝7:30に自動スキャン。6ヶ月トレンド×MA75で今日の押し目TOP5を即表示。">
 <meta property="og:image" content="https://oshime.vercel.app/ogp.png">
@@ -109,7 +109,7 @@ a{color:var(--blue-m);text-decoration:none;}
 .sec-hdr{margin:16px 12px 6px;display:flex;align-items:center;justify-content:space-between;}
 .sec-ttl{font-size:15px;font-weight:800;}.sec-act{font-size:11px;color:var(--blue-m);font-weight:700;cursor:pointer;}
 .tbl-wrap{background:var(--card);border-radius:var(--r);margin:0 12px 10px;box-shadow:var(--sh);overflow-x:auto;}
-.tbl{width:100%;border-collapse:collapse;min-width:580px;}
+.tbl{width:100%;border-collapse:collapse;min-width:420px;}
 .tbl thead th{background:var(--blue);color:rgba(255,255,255,0.9);padding:9px 8px;font-size:10px;font-weight:600;text-align:left;cursor:pointer;user-select:none;position:sticky;top:44px;z-index:10;}
 .tbl thead th:hover{background:var(--blue-tab);}
 .tbl tbody td{padding:10px 8px;border-bottom:1px solid var(--border-l);font-size:12px;vertical-align:middle;}
@@ -192,15 +192,47 @@ a{color:var(--blue-m);text-decoration:none;}
 /* RESPONSIVE */
 @media(max-width:600px){
   .ticker-val{font-size:15px;}.hero-hl{font-size:18px;}
-  .tbl{font-size:11px;}.tbl thead th{font-size:9px;padding:7px 4px;}
-  .tbl tbody td{padding:8px 4px;}
   .hero-stat b{font-size:18px;}
 }
-@media(min-width:768px){.detail-grid{grid-template-columns:1fr 1fr;}}
+@media(min-width:600px){.d-grid{grid-template-columns:1fr 1fr;}}
 
 /* ANIMATION */
 .fadein{animation:fadein .3s ease;}
 @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── DETAIL EXPAND (TOP10内アコーディオン) ── */
+.t5-expand{background:var(--bg);padding:16px;border-top:1px solid var(--border);animation:fadein .25s ease;}
+.d-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+.d-sec-ttl{font-size:12px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:5px;}
+.d-chart-box{background:#FAFBFC;border-radius:10px;padding:10px 8px 6px;border:1px solid var(--border);}
+.d-chart-svg{width:100%;display:block;}
+.d-legend{display:flex;gap:10px;padding:6px 0 2px;flex-wrap:wrap;}
+.d-leg{display:flex;align-items:center;gap:3px;font-size:10px;color:var(--text2);}
+.d-leg-ln{width:12px;height:2px;border-radius:1px;}
+.d-leg b{font-family:var(--fn);font-weight:700;font-size:10px;}
+.d-ma{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
+.d-ma-row{display:flex;align-items:center;gap:6px;font-size:11px;}
+.d-ma-lbl{min-width:90px;color:var(--text2);font-weight:500;font-size:10px;}
+.d-ma-bar{flex:1;height:16px;background:var(--border-l);border-radius:3px;position:relative;overflow:hidden;}
+.d-ma-ctr{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--text3);opacity:0.2;}
+.d-ma-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.2);}
+.d-ma-val{min-width:48px;text-align:right;font-family:var(--fn);font-size:11px;font-weight:700;}
+.d-ma-val.up{color:var(--green);}.d-ma-val.dn{color:var(--red);}
+.d-ma-tag{font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:3px;}
+.d-ma-tag.near{background:var(--amber-bg);color:var(--amber);}
+.d-pl{margin-top:8px;padding-top:8px;border-top:1px solid var(--border);}
+.d-pl-row{display:flex;justify-content:space-between;padding:3px 0;font-size:11px;}
+.d-pl-lbl{color:var(--text2);font-weight:500;}.d-pl-val{font-family:var(--fn);font-weight:700;}
+.d-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px;}
+.d-card{text-align:center;padding:10px 6px;background:var(--card);border-radius:8px;border:1px solid var(--border);}
+.d-card b{font-family:var(--fn);font-size:18px;font-weight:800;display:block;}
+.d-card small{font-size:9px;color:var(--text3);}
+.d-signal{background:var(--blue-l);border-radius:8px;padding:12px;margin-top:10px;border:1px solid rgba(27,106,201,0.12);}
+.d-signal b{font-size:10px;font-weight:700;color:var(--blue);display:block;margin-bottom:4px;}
+.d-signal p{font-size:11px;color:var(--text);line-height:1.7;margin:0;}
+.d-btns{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
+.d-btn{padding:6px 14px;border-radius:8px;font-size:11px;font-weight:600;border:1px solid var(--border);background:var(--card);color:var(--text2);cursor:pointer;font-family:var(--f);transition:all .15s;display:inline-flex;align-items:center;text-decoration:none;}
+.d-btn:hover{border-color:var(--blue-m);color:var(--blue-m);}
 
 /* SECTOR CHIPS */
 .sector-scroll{overflow-x:auto;margin:0 12px 8px;-webkit-overflow-scrolling:touch;padding:2px 0;}
@@ -218,11 +250,11 @@ a{color:var(--blue-m);text-decoration:none;}
 <!-- HERO CONCLUSION -->
 <div class="hero" id="heroBox"></div>
 
-<!-- TOP5 -->
+<!-- TOP10 -->
 <div class="t5-sec" id="top5Section" style="display:none">
   <div class="t5-tabs">
-    <div class="t5-tab active" id="t5TabDip" onclick="setTop5Tab('dip')">🛡 押し目 TOP5</div>
-    <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">🚀 勢い TOP5</div>
+    <div class="t5-tab active" id="t5TabDip" onclick="setTop5Tab('dip')">🛡 今日の押し目 TOP10</div>
+    <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">🚀 上昇中 TOP10</div>
   </div>
   <div class="t5-body" id="top5Body"></div>
 </div>
@@ -243,30 +275,6 @@ a{color:var(--blue-m);text-decoration:none;}
   <div class="ad-cta">口座開設 →</div>
 </div>
 
-<!-- FILTER BAR -->
-<div class="filter-bar">
-  <span class="f-label">表示：</span>
-  <div class="f-tabs">
-    <div class="f-tab active" onclick="setDisp(10,this)">TOP10</div>
-    <div class="f-tab" onclick="setDisp(30,this)">TOP30</div>
-    <div class="f-tab" onclick="setDisp(50,this)">TOP50</div>
-    <div class="f-tab" onclick="setDisp(9999,this)">全部</div>
-  </div>
-  <span class="f-label" style="margin-left:6px">ゾーン：</span>
-  <div class="f-tabs">
-    <div class="f-tab active" onclick="setZone('all',this)">全て</div>
-    <div class="f-tab" onclick="setZone('buy',this)">買い</div>
-    <div class="f-tab" onclick="setZone('buywatch',this)">買い+注目</div>
-  </div>
-</div>
-
-<!-- SECTOR CHIPS -->
-<div class="sector-scroll" id="sectorScroll"></div>
-
-<!-- TABLE -->
-<div class="sec-hdr"><div class="sec-ttl">📋 全銘柄ランキング</div><div class="sec-act" onclick="openLogic()">📐 ロジック</div></div>
-<div class="tbl-wrap" id="tableWrap"></div>
-
 <!-- AD #2 -->
 <div class="ad" id="adSlot2" onclick="gaEvent('ad_click',{slot:'bottom'})" style="background:linear-gradient(135deg,#059669,#047857)">
   <div style="flex:1"><div class="ad-t">🎯 NISAで高配当株を始めよう</div><div class="ad-d">非課税で配当金を受け取り。かぶのすけ銘柄をNISAで長期保有</div><div class="ad-pr">PR</div></div>
@@ -283,7 +291,7 @@ a{color:var(--blue-m);text-decoration:none;}
       <div class="q-cell tl"><b>四季報・バフェット</b>ファンダ×長期</div>
       <div class="q-cell tr"><b>マネックス・SBI</b>ファンダ×短期</div>
       <div class="q-cell bl"><b>（空白地帯）</b>テクニカル×長期</div>
-      <div class="q-cell br"><b>かぶのすけ</b>テクニカル×短期<br>MA75押し目スコア</div>
+      <div class="q-cell br"><b>かぶのすけ</b>テクニカル×短期<br>サポートライン押し目スコア</div>
     </div>
     <div class="q-ax" style="writing-mode:vertical-rl;padding:6px 2px">短期 ▶</div>
   </div>
@@ -293,18 +301,19 @@ a{color:var(--blue-m);text-decoration:none;}
 <!-- FOOTER -->
 <div class="footer">
   ※ 本サイトは投資助言ではありません。投資判断は自己責任でお願いします。<br>
-  かぶのすけ v7 · MA75押し目スコア · 毎朝7:30自動更新
+  かぶのすけ v7.3 · 押し目スコア · 毎朝7:30自動更新<br>
+  <a href="#" onclick="openLogic();return false" style="color:var(--blue-m);text-decoration:none;font-weight:600">📐 スコアの仕組みを見る</a>
 </div>
 
 <!-- LOGIC MODAL -->
 <div class="modal-bg" id="logicModal" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="modal">
     <h3>📐 スコアリングロジック v7</h3>
-    <p><strong style="color:var(--text)">コンセプト：</strong>大手の安定上昇株を、MA75（緑線）タッチで買う</p>
+    <p><strong style="color:var(--text)">コンセプト：</strong>大手の安定上昇株を、「下がりにくい価格帯」まで下がった時に買う</p>
     <table style="width:100%;font-size:11px;border-collapse:collapse;margin:8px 0">
       <tr style="background:var(--blue);color:#fff"><th style="padding:6px 8px;text-align:left">要素</th><th style="padding:6px 8px;text-align:right">配点</th><th style="padding:6px 8px;text-align:left">意味</th></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">MA75乖離率</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)"><strong>25点</strong></td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">緑線タッチ＝最高の押し目</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">MA25乖離率</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">15点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">短期調整の深さ</td></tr>
+      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">サポートラインとの距離</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)"><strong>25点</strong></td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">反発しやすい価格帯に近い＝買い時</td></tr>
+      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">短期の目安との差</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">15点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">短期的にどれだけ調整しているか</td></tr>
       <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">20日リターン</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">15点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">直近の方向</td></tr>
       <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">120日リターン</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">10点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">長期トレンド</td></tr>
       <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">60日リターン</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">10点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">中期トレンド</td></tr>
@@ -312,7 +321,7 @@ a{color:var(--blue-m);text-decoration:none;}
       <tr><td style="padding:5px 8px">一貫性ボーナス</td><td style="padding:5px 8px;text-align:right">±10点</td><td style="padding:5px 8px">トレンドの信頼性</td></tr>
     </table>
     <p><strong style="color:var(--text)">🏷 タイプ自動判定：</strong></p>
-    <p>🛡 押し目 — MA75の上 + MA25の下 = 絶好の買い場<br>🚀 勢い — 両MAの上 = トレンドに乗る<br>⚠ 落ちるナイフ — 両MAの下 = 触らない<br>🔄 反発 — MA75下 + MA25上 = 持続性不明</p>
+    <p>🛡 押し目 — サポートラインの上で短期調整中 = 買いチャンス<br>🚀 勢い — 上昇トレンド全開 = 流れに乗る<br>⚠ 落ちるナイフ — サポート割れ = 今は触らない<br>🔄 反発 — 下落後に持ち直しの兆し = 様子見</p>
     <button class="close-btn" onclick="document.getElementById('logicModal').classList.remove('open')">✕ 閉じる</button>
   </div>
 </div>
@@ -337,7 +346,7 @@ a{color:var(--blue-m);text-decoration:none;}
 <!-- BOTTOM NAV -->
 <nav class="bnav">
   <a href="#" class="active" onclick="return false"><span class="bnav-i">🏠</span>ホーム</a>
-  <a href="#tableWrap" onclick="document.getElementById('tableWrap').scrollIntoView({behavior:'smooth'});return false"><span class="bnav-i">📋</span>ランキング</a>
+  <a href="#" onclick="document.getElementById('top5Section').scrollIntoView({behavior:'smooth'});return false"><span class="bnav-i">📋</span>TOP10</a>
   <a href="#" onclick="return false"><span class="bnav-i">⭐</span>ウォッチ</a>
   <a href="#" onclick="document.getElementById('settingsPanel').classList.toggle('open');return false"><span class="bnav-i">⚙</span>設定</a>
   <a href="#" onclick="shareX();return false"><span class="bnav-i">📤</span>シェア</a>
@@ -351,12 +360,12 @@ const SAMPLE_STOCKS=[
 {code:"8316",name:"三井住友FG",sector:"銀行業",price:3200,ma25:3300,ma75:3100,rsi:38,dividend:3.8,pbr:0.9,per:11,vol_r:1.1,market_cap_b:9500,volatility:1.5,ret5:-2.5,ret10:-1.8,ret20:-3.2,ret60:8.5,ret120:22,roe:12,ma25_dev:-3.0,ma75_dev:3.2,trend_type:"dip",closes_60d:[]},
 {code:"9433",name:"KDDI",sector:"情報・通信業",price:4800,ma25:4900,ma75:4700,rsi:41,dividend:3.2,pbr:1.8,per:14,vol_r:0.9,market_cap_b:11000,volatility:1.2,ret5:-1.8,ret10:-0.5,ret20:-2.1,ret60:5.2,ret120:12,roe:15,ma25_dev:-2.1,ma75_dev:2.1,trend_type:"dip",closes_60d:[]},
 ];
-const SECTOR_MAP={"銀行業":"🏦 銀行","情報・通信業":"📡 通信","電気機器":"⚡ 電機","輸送用機器":"🚗 自動車","医薬品":"💊 医薬","化学":"🧪 化学","卸売業":"📦 商社","保険業":"🛡 保険","建設業":"🏗 建設","食料品":"🍙 食品","不動産業":"🏠 不動産","陸運業":"🚃 陸運","機械":"⚙ 機械","鉄鋼":"🔩 鉄鋼","サービス業":"💼 サービス","小売業":"🛒 小売","その他金融業":"💳 金融","ガラス・土石製品":"🧱 ガラス","非鉄金属":"🔧 非鉄","繊維製品":"👕 繊維","石油・石炭製品":"⛽ 石油","電気・ガス業":"💡 電力","海運業":"🚢 海運","空運業":"✈ 空運","鉱業":"⛏ 鉱業","パルプ・紙":"📄 紙パ","ゴム製品":"🔴 ゴム","金属製品":"🔨 金属","精密機器":"🔬 精密","水産・農林業":"🐟 水産","倉庫・運輸関連業":"📦 倉庫"};
+const SECTOR_MAP={"銀行業":"🏦 銀行","メガバンク":"🏦 メガバンク","情報・通信業":"📡 通信","通信キャリア":"📡 通信キャリア","電気機器":"⚡ 電機","輸送用機器":"🚗 自動車","医薬品":"💊 医薬","化学":"🧪 化学","卸売業":"📦 商社","総合商社":"📦 総合商社","保険業":"🛡 保険","建設業":"🏗 建設","食料品":"🍙 食品","不動産業":"🏠 不動産","陸運業":"🚃 陸運","機械":"⚙ 機械","鉄鋼":"🔩 鉄鋼","サービス業":"💼 サービス","小売業":"🛒 小売","その他金融業":"💳 金融","ガラス・土石製品":"🧱 ガラス","非鉄金属":"🔧 非鉄","繊維製品":"👕 繊維","石油・石炭製品":"⛽ 石油","電気・ガス業":"💡 電力","海運業":"🚢 海運","空運業":"✈ 空運","鉱業":"⛏ 鉱業","パルプ・紙":"📄 紙パ","ゴム製品":"🔴 ゴム","金属製品":"🔨 金属","精密機器":"🔬 精密","水産・農林業":"🐟 水産","倉庫・運輸関連業":"📦 倉庫","その他製品":"🎯 その他製品","証券、商品先物取引業":"📈 証券","ゲーム・エンタメ":"🎮 ゲーム","半導体":"💎 半導体","IT・SaaS":"💻 SaaS","IT・ネット":"🌐 IT","Technology":"💻 テック","Communication Services":"📡 通信","Financial Services":"💳 金融","Consumer Cyclical":"🛒 消費","Consumer Defensive":"🍙 生活必需","Healthcare":"💊 医薬","Industrials":"⚙ 産業","Basic Materials":"🧪 素材","Energy":"⛽ エネルギー","Real Estate":"🏠 不動産","Utilities":"💡 公益"};
 const TREND_LABEL={"dip":"🛡 押し目","momentum":"🚀 勢い","falling":"⚠ 落ちるナイフ","bounce":"🔄 反発","neutral":"😐 方向感なし","avoid":"🚫 対象外"};
 let RAW=[],processed=[],EVENTS=[];
 let settings={mindiv:0,style:'trend',disp:10,zone:'all',sort:'score',sortDir:-1,sector:'all',top5tab:'dip'};
 let favorites=JSON.parse(localStorage.getItem('kbn_fav')||'[]');
-let openDetail=null;
+
 
 // ── LocalStorage ──
 try{
@@ -433,10 +442,13 @@ function calcScoreTrend(s){
   // MA75 (25pt)
   if(ma75d>=0&&ma75d<=1)sc+=25;else if(ma75d>=0&&ma75d<=2)sc+=22;else if(ma75d>=0&&ma75d<=3)sc+=18;
   else if(ma75d>=0&&ma75d<=5)sc+=14;else if(ma75d>=0&&ma75d<=8)sc+=10;else if(ma75d>=0&&ma75d<=12)sc+=6;
-  else if(ma75d>12)sc+=2;else if(ma75d>=-2)sc+=15;else if(ma75d>=-5)sc+=8;
+  else if(ma75d>12)sc+=2;
+  else if(ma75d>=-2&&ma75d<0)sc+=3;  // わずかに下: ほぼ加点なし
+  else if(ma75d>=-5&&ma75d<-2)sc+=0;  // 明確に下: 0点
+  else sc-=5;                          // 大きく下: ペナルティ
   // MA25 (15pt)
-  if(ma25d>=-5&&ma25d<=-3)sc+=15;else if(ma25d>=-8&&ma25d<-5)sc+=12;else if(ma25d>=-3&&ma25d<=-1)sc+=10;
-  else if(ma25d>-1&&ma25d<=0)sc+=6;else if(ma25d>0&&ma25d<=3)sc+=3;else if(ma25d>3)sc+=8;else if(ma25d<-8)sc+=5;
+  if(ma25d>=-5&&ma25d<=-3)sc+=15;else if(ma25d>=-8&&ma25d<-5)sc+=10;else if(ma25d>=-3&&ma25d<=-1)sc+=10;
+  else if(ma25d>-1&&ma25d<=0)sc+=6;else if(ma25d>0&&ma25d<=3)sc+=3;else if(ma25d>3)sc+=8;else if(ma25d<-8)sc+=3;
   // r20 (15pt)
   if(r20>=10)sc+=15;else if(r20>=5)sc+=12;else if(r20>=2)sc+=8;else if(r20>=0)sc+=4;
   else if(r20>=-3)sc+=6;else if(r20>=-5)sc+=10;else if(r20>=-8)sc+=8;else sc+=3;
@@ -462,11 +474,15 @@ function calcScoreTrend(s){
   else if(ma75d>=0&&ma25d>=0&&pc>=2)type='momentum';
   else if(ma75d<0&&ma25d<0)type='falling';
   else if(ma75d<0&&ma25d>=0)type='bounce';
+  // falling追加ペナルティ
+  if(type==='falling')sc=Math.max(0,sc-10);
   return{score:sc,type};
 }
 
 function getZone(sc){return sc>=60?'buy':sc>=40?'watch':'hold';}
-function sMap(s){return SECTOR_MAP[s]||s||'その他';}
+// コード別の強制上書き（JSONの分類に関わらず確実に日本語表示）
+const CODE_SECTOR={"7974":"🎮 ゲーム","3635":"🎮 ゲーム","9684":"🎮 ゲーム","9766":"🎮 ゲーム","3659":"🎮 ゲーム","2121":"🎮 ゲーム","9697":"🎮 ゲーム","7832":"🎮 ゲーム","3668":"🎮 ゲーム","3765":"🎮 ゲーム","6723":"💎 半導体","6526":"💎 半導体","6857":"💎 半導体","8035":"💎 半導体","6920":"💎 半導体","6146":"💎 半導体","4443":"💻 SaaS","4478":"💻 SaaS","4751":"🌐 IT","4689":"🌐 IT","4755":"🌐 IT","9434":"📡 通信キャリア","9433":"📡 通信キャリア","9432":"📡 通信キャリア","8058":"📦 総合商社","8031":"📦 総合商社","8001":"📦 総合商社","8002":"📦 総合商社","8053":"📦 総合商社","8306":"🏦 メガバンク","8316":"🏦 メガバンク","8411":"🏦 メガバンク"};
+function sMap(s,code){if(code&&CODE_SECTOR[code])return CODE_SECTOR[code];return SECTOR_MAP[s]||s||'その他';}
 
 // ═══════════════════════════════════════
 // PROCESS
@@ -480,8 +496,7 @@ function processStocks(){
   if(settings.mindiv>0)out=out.filter(s=>(s.dividend||0)>=settings.mindiv);
   if(settings.zone==='buy')out=out.filter(s=>s.zone==='buy');
   else if(settings.zone==='buywatch')out=out.filter(s=>s.zone==='buy'||s.zone==='watch');
-  if(settings.sector!=='all')out=out.filter(s=>sMap(s.sector)===settings.sector);
-  out.sort((a,b)=>(b[settings.sort]||0)-(a[settings.sort]||0)*settings.sortDir< 0?-1:1);
+  if(settings.sector!=='all')out=out.filter(s=>sMap(s.sector,s.code)===settings.sector);
   out.sort((a,b)=>settings.sortDir*((b[settings.sort]||0)-(a[settings.sort]||0)));
   processed=out;
   return out;
@@ -503,7 +518,7 @@ function renderHero(){
   // 狙いセクター計算
   const dipStocks=all.filter(s=>s.trend_type==='dip'&&s.score>=50);
   const secCount={};
-  dipStocks.forEach(s=>{const k=sMap(s.sector);secCount[k]=(secCount[k]||0)+1;});
+  dipStocks.forEach(s=>{const k=sMap(s.sector,s.code);secCount[k]=(secCount[k]||0)+1;});
   const topSecs=Object.entries(secCount).sort((a,b)=>b[1]-a[1]).slice(0,3).map(x=>x[0]);
   // スタンス判定
   const avgSc=all.length?all.reduce((s,x)=>s+x.score,0)/all.length:0;
@@ -529,31 +544,38 @@ function renderHero(){
 function genReason(s){
   const parts=[];
   if(s.ma75_dev!==undefined){
-    if(s.ma75_dev>=0&&s.ma75_dev<=3)parts.push(`MA75まで${s.ma75_dev.toFixed(1)}%（タッチ接近）`);
-    else if(s.ma75_dev>3)parts.push(`MA75の${s.ma75_dev.toFixed(1)}%上で推移`);
-    else parts.push(`MA75を${Math.abs(s.ma75_dev).toFixed(1)}%下抜け`);
+    if(s.ma75_dev>=0&&s.ma75_dev<=3)parts.push(`サポートライン（緑線）にタッチ接近中`);
+    else if(s.ma75_dev>3&&s.ma75_dev<=8)parts.push(`上昇トレンド継続中`);
+    else if(s.ma75_dev>8)parts.push(`高値圏で推移`);
+    else parts.push(`サポートラインを下回り注意`);
   }
-  if(s.ret120>5)parts.push(`6ヶ月+${s.ret120.toFixed(0)}%上昇`);
+  if(s.ret120>10)parts.push(`半年で+${s.ret120.toFixed(0)}%成長`);
+  else if(s.ret120>5)parts.push(`半年で安定上昇`);
   if(s.dividend>=3)parts.push(`配当${s.dividend.toFixed(1)}%`);
-  if(s.pbr&&s.pbr<1.2)parts.push(`PBR${s.pbr.toFixed(1)}倍`);
-  if(s.roe&&s.roe>=10)parts.push(`ROE${s.roe.toFixed(0)}%`);
-  return parts.slice(0,3).join(' · ');
+  return parts.slice(0,3).join(' · ')||'分析中…';
 }
 
-function renderTop5(){
+// ═══════════════════════════════════════
+// TOP10 + INLINE DETAIL EXPAND
+// ═══════════════════════════════════════
+let expandedCode=null;
+
+function renderTop10(){
   const sec=document.getElementById('top5Section');
   sec.style.display='';
   const body=document.getElementById('top5Body');
   const tab=settings.top5tab;
-  const items=processed.filter(s=>tab==='dip'?s.trend_type==='dip':s.trend_type==='momentum').slice(0,5);
-  if(!items.length){body.innerHTML='<div style="padding:20px;text-align:center;color:var(--text3);font-size:12px">該当銘柄なし</div>';return;}
-  body.innerHTML=items.map((s,i)=>{
-    const hasSpark=s.closes_60d&&s.closes_60d.length>5;
-    return `<div class="t5-item" onclick="scrollToStock('${s.code}')">
+  const items=processed.filter(s=>tab==='dip'?s.trend_type==='dip':s.trend_type==='momentum').slice(0,10);
+  if(!items.length){body.innerHTML='<div style="padding:24px;text-align:center;color:var(--text3);font-size:13px">該当する銘柄がありません</div>';return;}
+  let html='';
+  items.forEach((s,i)=>{
+    const hasSpark=s.closes_60d&&s.closes_60d.length>10;
+    const isOpen=expandedCode===s.code;
+    html+=`<div class="t5-item" onclick="toggleExpand('${s.code}')" style="${isOpen?'background:var(--blue-l)':''}">
       <div class="t5-rank${i===0?' gold':''}">${i+1}</div>
       <div class="t5-info">
         <div class="t5-nm">${s.name}</div>
-        <div class="t5-meta">${s.code} · ${sMap(s.sector)} · 配当${(s.dividend||0).toFixed(1)}% · PBR${(s.pbr||0).toFixed(1)} · ROE${(s.roe||0).toFixed(0)}%</div>
+        <div class="t5-meta">${s.code} · ${sMap(s.sector,s.code)} · 配当${(s.dividend||0).toFixed(1)}%</div>
         <div class="t5-reason">${genReason(s)}</div>
       </div>
       ${hasSpark?`<svg class="t5-spark" viewBox="0 0 80 36" data-spark="${s.code}"></svg>`:''}
@@ -562,210 +584,142 @@ function renderTop5(){
         <div class="t5-type ${s.trend_type==='dip'?'dip':'mom'}">${TREND_LABEL[s.trend_type]||s.trend_type}</div>
       </div>
     </div>`;
-  }).join('');
+    // ── 展開エリア ──
+    if(isOpen) html+=buildExpand(s);
+  });
+  body.innerHTML=html;
   // Draw sparklines
   items.forEach(s=>{
-    if(s.closes_60d&&s.closes_60d.length>5){
+    if(s.closes_60d&&s.closes_60d.length>10){
       const el=body.querySelector(`[data-spark="${s.code}"]`);
       if(el)drawSpark(el,s.closes_60d,80,36);
     }
   });
+  // Draw detail chart
+  if(expandedCode){
+    setTimeout(()=>{
+      const s=items.find(x=>x.code===expandedCode);
+      if(s&&s.closes_60d&&s.closes_60d.length>10){
+        const el=document.querySelector(`[data-dchart="${expandedCode}"]`);
+        if(el)drawDetailChart(el,s.closes_60d,s.ma25,s.ma75);
+      }
+    },50);
+  }
 }
+
+function toggleExpand(code){
+  expandedCode=expandedCode===code?null:code;
+  renderTop10();
+  if(expandedCode){
+    setTimeout(()=>{
+      const el=document.querySelector(`[data-dchart="${code}"]`)||document.querySelector('.t5-expand');
+      if(el)el.scrollIntoView({behavior:'smooth',block:'nearest'});
+    },100);
+    gaEvent('detail_open',{code});
+  }
+}
+
+function buildExpand(s){
+  const hasSpark=s.closes_60d&&s.closes_60d.length>10;
+  const ma75pct=Math.max(5,Math.min(95,50+(s.ma75_dev||0)*3));
+  const ma25pct=Math.max(5,Math.min(95,50+(s.ma25_dev||0)*3));
+  const ma75col=(s.ma75_dev||0)>=0?'var(--green)':'var(--red)';
+  const ma25col=(s.ma25_dev||0)>=0?'var(--green)':'var(--red)';
+  // Signal (初心者向け)
+  let signal='';
+  if(s.trend_type==='dip'){
+    signal=`長期では上昇トレンド。短期的に調整中で<strong>買いやすい価格帯に接近中</strong>。`;
+    if(s.ma75_dev<=3)signal+=`<br>サポートライン（緑線 ¥${(s.ma75||0).toLocaleString()}）まであと${(s.ma75_dev||0).toFixed(1)}%。ここまで下がれば絶好のチャンス。`;
+    else signal+=`<br>サポートラインまでまだ距離あり（${(s.ma75_dev||0).toFixed(1)}%）。もう少し下がるのを待つ手も。`;
+  }else if(s.trend_type==='momentum'){
+    signal=`短期・長期ともに上昇中。<strong>勢いに乗っている状態</strong>。高値掴みに注意しつつ、流れに乗るタイミング。`;
+  }else{
+    signal=`現在は方向感が読みにくい状況。無理せず様子見がおすすめ。`;
+  }
+  // MA tag
+  let ma75tag='';
+  if(s.ma75_dev>=0&&s.ma75_dev<=3)ma75tag='<span class="d-ma-tag near">接近中!</span>';
+
+  return `<div class="t5-expand">
+  <div class="d-grid">
+    <!-- LEFT: チャート -->
+    <div>
+      <div class="d-sec-ttl">📊 値動きチャート（60日）</div>
+      ${hasSpark?`<div class="d-chart-box">
+        <svg class="d-chart-svg" viewBox="0 0 400 150" data-dchart="${s.code}"></svg>
+        <div class="d-legend">
+          <div class="d-leg"><div class="d-leg-ln" style="background:#1A1A1A"></div>株価</div>
+          <div class="d-leg"><div class="d-leg-ln" style="background:#F59E0B"></div>短期の目安 <b style="color:#F59E0B">¥${(s.ma25||0).toLocaleString()}</b></div>
+          <div class="d-leg"><div class="d-leg-ln" style="background:#059669"></div>サポートライン <b style="color:#059669">¥${(s.ma75||0).toLocaleString()}</b></div>
+        </div>
+      </div>`:`<div style="padding:20px;text-align:center;background:var(--card);border-radius:8px;border:1px solid var(--border)">
+        <div style="font-size:12px;color:var(--text)">短期の目安: ¥${(s.ma25||0).toLocaleString()} / サポート: ¥${(s.ma75||0).toLocaleString()}</div>
+      </div>`}
+      <div class="d-ma">
+        <div class="d-ma-row">
+          <div class="d-ma-lbl">短期の目安との差</div>
+          <div class="d-ma-bar"><div class="d-ma-ctr"></div><div class="d-ma-dot" style="left:${ma25pct}%;background:${ma25col}"></div></div>
+          <div class="d-ma-val ${(s.ma25_dev||0)>=0?'up':'dn'}">${(s.ma25_dev||0)>=0?'+':''}${(s.ma25_dev||0).toFixed(1)}%</div>
+        </div>
+        <div class="d-ma-row">
+          <div class="d-ma-lbl">サポートラインとの差</div>
+          <div class="d-ma-bar"><div class="d-ma-ctr"></div><div class="d-ma-dot" style="left:${ma75pct}%;background:${ma75col}"></div></div>
+          <div class="d-ma-val ${(s.ma75_dev||0)>=0?'up':'dn'}">${(s.ma75_dev||0)>=0?'+':''}${(s.ma75_dev||0).toFixed(1)}%</div>
+          ${ma75tag}
+        </div>
+      </div>
+      <div class="d-pl">
+        <div class="d-pl-row"><div class="d-pl-lbl">🟢 サポートライン</div><div class="d-pl-val" style="color:var(--green)">¥${(s.ma75||0).toLocaleString()}</div></div>
+        <div class="d-pl-row"><div class="d-pl-lbl">📍 今の株価</div><div class="d-pl-val">¥${(s.price||0).toLocaleString()}</div></div>
+        <div class="d-pl-row"><div class="d-pl-lbl">🟠 短期の目安</div><div class="d-pl-val" style="color:#F59E0B">¥${(s.ma25||0).toLocaleString()}</div></div>
+      </div>
+    </div>
+    <!-- RIGHT: 指標 -->
+    <div>
+      <div class="d-sec-ttl">📈 この銘柄のポイント</div>
+      <div class="d-cards">
+        <div class="d-card"><b>${(s.dividend||0).toFixed(1)}%</b><small>年間配当</small></div>
+        <div class="d-card"><b>${(s.pbr||0).toFixed(2)}倍</b><small>割安度</small></div>
+        <div class="d-card"><b>${(s.roe||0).toFixed(0)}%</b><small>稼ぐ力</small></div>
+      </div>
+      <div style="font-size:10px;color:var(--text3);margin:-4px 0 10px;line-height:1.5">
+        💡 <strong>年間配当</strong>=持ってるだけでもらえる利益 / <strong>割安度</strong>(PBR)=1倍以下なら割安 / <strong>稼ぐ力</strong>(ROE)=高いほど優秀な会社
+      </div>
+      <div style="font-size:10px;color:var(--text3);margin-bottom:8px;line-height:1.5">
+        📐 <strong>サポートライン</strong> = 過去75日間の平均株価（MA75）。ここまで下がると反発しやすい「下値の壁」
+      </div>
+      <div class="d-signal"><b>📝 かぶのすけの判定</b><p>${signal}</p></div>
+      <div class="d-btns">
+        <a class="d-btn" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener">Yahoo!ファイナンス →</a>
+        <a class="d-btn" href="https://kabutan.jp/stock/?code=${s.code}" target="_blank" rel="noopener">株探で詳しく →</a>
+      </div>
+    </div>
+  </div>
+</div>`;
+}
+
 function setTop5Tab(tab){
   settings.top5tab=tab;
+  expandedCode=null;
   document.getElementById('t5TabDip').classList.toggle('active',tab==='dip');
   document.getElementById('t5TabMom').classList.toggle('active',tab==='mom');
-  renderTop5();
+  renderTop10();
 }
 
 function renderDanger(){
   const sec=document.getElementById('dangerSection');
   const items=processed.filter(s=>s.trend_type==='falling'&&s.score<=30).slice(0,5);
   if(!items.length){sec.innerHTML='';return;}
-  sec.innerHTML=`<div class="danger"><div class="danger-ttl">⚠ 今日は避けたい銘柄</div>${items.map(s=>`
+  sec.innerHTML=`<div class="danger"><div class="danger-ttl">⚠ 今日は手を出さない方がいい銘柄</div>${items.map(s=>`
     <div class="danger-row">
-      <div><div class="danger-nm">${s.name}</div><div class="danger-cd">${s.code} · ${sMap(s.sector)}</div></div>
+      <div><div class="danger-nm">${s.name}</div><div class="danger-cd">${s.code} · ${sMap(s.sector,s.code)}</div></div>
       <div style="display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end">
-        ${s.rsi>=75?`<span class="danger-badge">RSI ${s.rsi}</span>`:''}
+        ${s.rsi>=75?`<span class="danger-badge">過熱 RSI${s.rsi}</span>`:''}
         ${(s.ret_1d||0)<=-3?`<span class="danger-badge">前日${s.ret_1d.toFixed(1)}%</span>`:''}
-        ${(s.ma75_dev||0)<-5?`<span class="danger-badge">MA75 ${s.ma75_dev.toFixed(1)}%</span>`:''}
-        ${s.trend_type==='falling'?'<span class="danger-badge">下落トレンド</span>':''}
+        ${(s.ma75_dev||0)<-5?`<span class="danger-badge">下落トレンド</span>`:''}
+        ${s.trend_type==='falling'?'<span class="danger-badge">サポート割れ</span>':''}
       </div>
     </div>`).join('')}</div>`;
-}
-
-// ── TABLE ──
-function renderTable(){
-  const wrap=document.getElementById('tableWrap');
-  const list=processed.slice(0,settings.disp);
-  if(!list.length){wrap.innerHTML='<div style="padding:30px;text-align:center;color:var(--text3)">データ読込中…</div>';return;}
-  let h=`<table class="tbl"><thead><tr>
-    <th onclick="setSort('score')">#</th>
-    <th onclick="setSort('name')">銘柄</th>
-    <th>チャート</th>
-    <th onclick="setSort('score')" style="text-align:right">スコア</th>
-    <th>タイプ</th>
-    <th onclick="setSort('dividend')" style="text-align:right">配当</th>
-    <th onclick="setSort('pbr')" style="text-align:right">PBR</th>
-    <th onclick="setSort('roe')" style="text-align:right">ROE</th>
-    <th onclick="setSort('ma75_dev')" style="text-align:right">MA75</th>
-  </tr></thead><tbody>`;
-  list.forEach((s,i)=>{
-    const hasSpark=s.closes_60d&&s.closes_60d.length>5;
-    const ma75c=s.ma75_dev>=0?'up':'dn';
-    h+=`<tr onclick="toggleDetail('${s.code}')">
-      <td><span style="font-family:var(--fn);font-weight:800;${i<3?'color:#D97706':''}">${i+1}</span></td>
-      <td><div class="t-nm">${s.name}</div><div class="t-cd">${s.code} · ${sMap(s.sector)}</div></td>
-      <td>${hasSpark?`<svg class="t-spark" viewBox="0 0 64 28" data-tblspark="${s.code}"></svg>`:''}</td>
-      <td class="t-num"><span class="t-sc">${s.score}</span></td>
-      <td><span class="t-badge ${s.trend_type}">${TREND_LABEL[s.trend_type]||'—'}</span></td>
-      <td class="t-num">${(s.dividend||0).toFixed(1)}%</td>
-      <td class="t-num">${(s.pbr||0).toFixed(2)}</td>
-      <td class="t-num">${(s.roe||0).toFixed(1)}%</td>
-      <td class="t-num" style="color:var(--${ma75c==='up'?'green':'red'})">${s.ma75_dev>=0?'+':''}${(s.ma75_dev||0).toFixed(1)}%</td>
-    </tr>`;
-    if(openDetail===s.code)h+=`<tr><td colspan="9" style="padding:0">${buildDetailBox(s)}</td></tr>`;
-  });
-  h+=`</tbody></table>`;
-  wrap.innerHTML=h;
-  // Draw table sparklines
-  list.forEach(s=>{
-    if(s.closes_60d&&s.closes_60d.length>5){
-      const el=wrap.querySelector(`[data-tblspark="${s.code}"]`);
-      if(el)drawSpark(el,s.closes_60d,64,28);
-    }
-  });
-}
-
-function buildDetailBox(s){
-  const isFav=favorites.includes(s.code);
-  const hasSpark=s.closes_60d&&s.closes_60d.length>5;
-  // MA position percentage for visual bar (50% = at MA, higher = above)
-  const ma75pct=Math.max(5,Math.min(95,50+(s.ma75_dev||0)*3));
-  const ma25pct=Math.max(5,Math.min(95,50+(s.ma25_dev||0)*3));
-  const ma75col=(s.ma75_dev||0)>=0?'var(--green)':'var(--red)';
-  const ma25col=(s.ma25_dev||0)>=0?'var(--green)':'var(--red)';
-  // Signal text
-  let signal='';
-  if(s.trend_type==='dip'){
-    signal=`MA75（緑線）の上で推移中。MA25を下抜けし短期調整中。<strong>MA75（¥${(s.ma75||0).toLocaleString()}）まで${(s.ma75_dev||0).toFixed(1)}%</strong> — `;
-    if(s.ma75_dev<=3)signal+='タッチ接近、絶好の押し目。';
-    else signal+='まだ余裕あり。緑線まで待つのも手。';
-  }else if(s.trend_type==='momentum'){
-    signal=`両MAの上で力強い上昇トレンド。勢いに乗る銘柄。`;
-  }else if(s.trend_type==='falling'){
-    signal=`MA75を下抜け。下落トレンド継続中。見送り推奨。`;
-  }else{
-    signal=`方向感が定まっていない。様子見。`;
-  }
-  let html=`<div class="detail fadein"><div class="detail-grid">`;
-  // LEFT: Chart
-  html+=`<div>
-    <div class="d-title">📊 60日チャート</div>
-    ${hasSpark?`<div class="chart-box"><svg class="chart-svg" viewBox="0 0 400 150" data-detailchart="${s.code}"></svg>
-    <div class="chart-legend">
-      <div class="leg-item"><div class="leg-line" style="background:#1A1A1A"></div>株価</div>
-      <div class="leg-item"><div class="leg-line" style="background:#F59E0B"></div>MA25 <span class="leg-val" style="color:#F59E0B">¥${(s.ma25||0).toLocaleString()}</span></div>
-      <div class="leg-item"><div class="leg-line" style="background:#059669"></div>MA75 <span class="leg-val" style="color:#059669">¥${(s.ma75||0).toLocaleString()}</span></div>
-    </div></div>`:'<div style="color:var(--text3);font-size:11px">チャートデータなし</div>'}
-    <div class="ma-rows">
-      <div class="ma-row"><div class="ma-lbl">vs MA25</div><div class="ma-bar"><div class="ma-dot" style="left:${ma25pct}%;background:${ma25col}"></div></div><div class="ma-val ${(s.ma25_dev||0)>=0?'up':'dn'}">${(s.ma25_dev||0)>=0?'+':''}${(s.ma25_dev||0).toFixed(1)}%</div></div>
-      <div class="ma-row"><div class="ma-lbl">vs MA75</div><div class="ma-bar"><div class="ma-dot" style="left:${ma75pct}%;background:${ma75col}"></div></div><div class="ma-val ${(s.ma75_dev||0)>=0?'up':'dn'}">${(s.ma75_dev||0)>=0?'+':''}${(s.ma75_dev||0).toFixed(1)}%</div></div>
-    </div>
-    <div class="price-levels">
-      <div class="pl-row"><div class="pl-lbl">🟢 MA75価格</div><div class="pl-val" style="color:var(--green)">¥${(s.ma75||0).toLocaleString()}</div></div>
-      <div class="pl-row"><div class="pl-lbl">📍 現在値</div><div class="pl-val">¥${(s.price||0).toLocaleString()}</div></div>
-      <div class="pl-row"><div class="pl-lbl">🟠 MA25価格</div><div class="pl-val" style="color:#F59E0B">¥${(s.ma25||0).toLocaleString()}</div></div>
-    </div>
-  </div>`;
-  // RIGHT: Indicators + Breakdown
-  html+=`<div>
-    <div class="d-title">📈 スコア内訳</div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px">
-      <div style="text-align:center;padding:8px;background:var(--card);border-radius:8px;border:1px solid var(--border)">
-        <div style="font-family:var(--fn);font-size:18px;font-weight:800">${(s.dividend||0).toFixed(1)}%</div>
-        <div style="font-size:9px;color:var(--text3)">配当利回り</div>
-      </div>
-      <div style="text-align:center;padding:8px;background:var(--card);border-radius:8px;border:1px solid var(--border)">
-        <div style="font-family:var(--fn);font-size:18px;font-weight:800">${(s.pbr||0).toFixed(2)}</div>
-        <div style="font-size:9px;color:var(--text3)">PBR</div>
-      </div>
-      <div style="text-align:center;padding:8px;background:var(--card);border-radius:8px;border:1px solid var(--border)">
-        <div style="font-family:var(--fn);font-size:18px;font-weight:800">${(s.roe||0).toFixed(1)}%</div>
-        <div style="font-size:9px;color:var(--text3)">ROE</div>
-      </div>
-    </div>
-    <div class="bd-row"><div class="bd-l">MA75乖離 (25pt)</div><div class="bd-bar"><div class="bd-fill" style="width:${Math.min(100,Math.max(0,(s.ma75_dev>=0&&s.ma75_dev<=5)?100-s.ma75_dev*15:30))}%;background:var(--green)"></div></div><div class="bd-v p">${s.ma75_dev>=0&&s.ma75_dev<=3?'◎':'○'}</div></div>
-    <div class="bd-row"><div class="bd-l">MA25乖離 (15pt)</div><div class="bd-bar"><div class="bd-fill" style="width:${Math.min(100,Math.abs(s.ma25_dev||0)*10+20)}%;background:#F59E0B"></div></div><div class="bd-v">${(s.ma25_dev||0).toFixed(1)}%</div></div>
-    <div class="bd-row"><div class="bd-l">20日リターン (15pt)</div><div class="bd-bar"><div class="bd-fill" style="width:${Math.min(100,Math.max(10,(s.ret20||0)*5+50))}%;background:${(s.ret20||0)>=0?'var(--green)':'var(--red)'}"></div></div><div class="bd-v ${(s.ret20||0)>=0?'p':'n'}">${(s.ret20||0)>=0?'+':''}${(s.ret20||0).toFixed(1)}%</div></div>
-    <div class="bd-row"><div class="bd-l">120日リターン (10pt)</div><div class="bd-bar"><div class="bd-fill" style="width:${Math.min(100,Math.max(10,(s.ret120||0)*2+30))}%;background:${(s.ret120||0)>=0?'var(--green)':'var(--red)'}"></div></div><div class="bd-v ${(s.ret120||0)>=0?'p':'n'}">${(s.ret120||0)>=0?'+':''}${(s.ret120||0).toFixed(1)}%</div></div>
-    <div class="bd-row"><div class="bd-l">持ってて安心 (15pt)</div><div class="bd-bar"><div class="bd-fill" style="width:${Math.min(100,((s.dividend||0)*10+(s.market_cap_b>5000?30:10)+(s.volatility<2?20:5)))}%;background:var(--blue-m)"></div></div><div class="bd-v">—</div></div>
-    <div class="signal-box"><div class="signal-ttl">📝 テクニカル判定</div><div class="signal-txt">${signal}</div></div>
-    <div class="d-btns">
-      <button class="d-btn fav${isFav?' active':''}" onclick="event.stopPropagation();toggleFav('${s.code}')">${isFav?'★ ウォッチ中':'☆ ウォッチ追加'}</button>
-      <a class="d-btn" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener">Yahoo! →</a>
-      <a class="d-btn" href="https://kabutan.jp/stock/?code=${s.code}" target="_blank" rel="noopener">株探 →</a>
-    </div>
-  </div>`;
-  html+=`</div></div>`;
-  return html;
-}
-
-function toggleDetail(code){
-  openDetail=openDetail===code?null:code;
-  renderTable();
-  // Draw detail chart after render
-  if(openDetail){
-    const s=processed.find(x=>x.code===code);
-    if(s&&s.closes_60d&&s.closes_60d.length>5){
-      const el=document.querySelector(`[data-detailchart="${code}"]`);
-      if(el)drawDetailChart(el,s.closes_60d,s.ma25,s.ma75);
-    }
-    gaEvent('detail_open',{code});
-  }
-}
-function scrollToStock(code){
-  openDetail=code;
-  renderTable();
-  setTimeout(()=>{
-    const el=document.querySelector(`[data-detailchart="${code}"]`);
-    if(el)el.scrollIntoView({behavior:'smooth',block:'center'});
-  },100);
-}
-
-// ── SORT ──
-function setSort(key){
-  if(settings.sort===key)settings.sortDir*=-1;
-  else{settings.sort=key;settings.sortDir=-1;}
-  run();
-}
-
-// ── FILTERS ──
-function setDisp(n,el){settings.disp=n;document.querySelectorAll('.f-tabs .f-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');renderTable();}
-function setZone(z,el){settings.zone=z;el.parentElement.querySelectorAll('.f-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');run();}
-
-// ── SECTOR CHIPS ──
-function buildSectorChips(){
-  const counts={};processed.forEach(s=>{const k=sMap(s.sector);counts[k]=(counts[k]||0)+1;});
-  const sorted=Object.entries(counts).sort((a,b)=>b[1]-a[1]);
-  const el=document.getElementById('sectorScroll');
-  el.innerHTML=`<div class="sector-inner">
-    <div class="s-chip${settings.sector==='all'?' active':''}" onclick="setSector('all',this)">全セクター</div>
-    ${sorted.map(([k,v])=>`<div class="s-chip${settings.sector===k?' active':''}" onclick="setSector('${k}',this)">${k} <span style="opacity:0.5;font-family:var(--fn)">${v}</span></div>`).join('')}
-  </div>`;
-}
-function setSector(sec,el){
-  settings.sector=sec;
-  document.querySelectorAll('.s-chip').forEach(c=>c.classList.remove('active'));
-  el.classList.add('active');run();
-}
-
-// ── FAVORITES ──
-function toggleFav(code){
-  const i=favorites.indexOf(code);
-  if(i>=0)favorites.splice(i,1);else favorites.push(code);
-  localStorage.setItem('kbn_fav',JSON.stringify(favorites));
-  renderTable();
 }
 
 // ── SHARE ──
@@ -794,11 +748,8 @@ function openLogic(){document.getElementById('logicModal').classList.add('open')
 function run(){
   processStocks();
   renderHero();
-  renderTop5();
+  renderTop10();
   renderDanger();
-  buildSectorChips();
-  renderTable();
-  // Save settings
   try{localStorage.setItem('kbn_settings',JSON.stringify({mindiv:settings.mindiv}));}catch(e){}
 }
 
