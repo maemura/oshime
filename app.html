@@ -72,6 +72,7 @@ a{color:var(--blue-m);text-decoration:none;}
 .t5-body{background:var(--card);border-radius:0 0 var(--r) var(--r);box-shadow:var(--sh);}
 .t5-item{display:flex;align-items:center;gap:12px;padding:14px 16px;border-bottom:1px solid var(--border);cursor:pointer;transition:background .1s;}
 .t5-item:last-child{border-bottom:none;}.t5-item:active{background:var(--blue-l);}
+.t5-tap{font-size:9px;color:var(--blue);font-weight:700;margin-top:2px;}
 .t5-rank{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fn);font-size:13px;font-weight:800;background:var(--bg);color:var(--text2);flex-shrink:0;}
 .t5-rank.gold{background:linear-gradient(135deg,#FEF3C7,#FDE68A);font-size:18px;border:2px solid #F59E0B;}
 .t5-rank.silver{background:linear-gradient(135deg,#F1F5F9,#E2E8F0);font-size:16px;border:2px solid #94A3B8;}
@@ -618,7 +619,7 @@ function renderMarketMode(){
     </div>
     <div class="mm-advice">${d.mode_advice||''}</div>
     <div class="mm-signals" id="mmSignals">${sigHtml}</div>
-    <details>
+    <details open>
       <summary class="mm-toggle">📰 ニュースと見立てを見る</summary>
       ${newsHtml}
       ${aiHtml}
@@ -744,6 +745,7 @@ function renderTop10(){
         <div class="t5-sc">${s.score}<span>/<small>100</small></span></div>
         <div class="t5-gauge"><div class="t5-gauge-fill" style="width:${s.score}%;background:${gaugeColor}"></div></div>
         <div class="t5-type ${s.trend_type==='dip'?'dip':'mom'}">${TREND_LABEL[s.trend_type]||s.trend_type}</div>
+        <div class="t5-tap">${isOpen?'▲ 閉じる':'▼ 詳細'}</div>
       </div>
     </div>`;
     if(isOpen) html+=buildExpand(s);
