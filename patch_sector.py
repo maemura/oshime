@@ -2,12 +2,47 @@
 """既存stocks_data.jsonからセクタースコアを算出・追加"""
 import json
 
+# セクター名 英語→日本語マッピング
+SECTOR_JP = {
+    "Financial Services": "金融",
+    "Basic Materials": "素材",
+    "Energy": "エネルギー",
+    "Industrials": "産業",
+    "Real Estate": "不動産",
+    "Consumer Cyclical": "消費（景気敏感）",
+    "Consumer Defensive": "消費（安定）",
+    "Healthcare": "医薬・ヘルスケア",
+    "Technology": "テック",
+    "Communication Services": "通信・メディア",
+    "Utilities": "電力・ガス",
+    # 日本語のまま
+    "金融": "金融",
+    "素材": "素材",
+    "エネルギー": "エネルギー",
+    "産業": "産業",
+    "不動産": "不動産",
+    "消費": "消費",
+    "医薬": "医薬・ヘルスケア",
+    "テック": "テック",
+    "通信": "通信・メディア",
+    "電力・ガス": "電力・ガス",
+}
+
 d = json.load(open('stocks_data.json'))
 stocks = d['stocks']
 
+SECTOR_JP = {
+    "Financial Services": "💰 金融", "Basic Materials": "🧪 素材",
+    "Energy": "⛽ エネルギー", "Industrials": "⚙ 産業",
+    "Real Estate": "🏠 不動産", "Consumer Cyclical": "🛒 消費(景気敏感)",
+    "Consumer Defensive": "🛡 消費(安定)", "Healthcare": "💊 医薬",
+    "Technology": "💻 テック", "Communication Services": "📡 通信",
+    "Utilities": "⚡ 電力ガス",
+}
+
 sectors = {}
 for s in stocks:
-    sec = s.get("sector", "その他")
+    sec = SECTOR_JP.get(s.get("sector", ""), s.get("sector", "その他"))
     if sec not in sectors:
         sectors[sec] = {"divs": [], "rets60": [], "rets120": [], "vols": [], "count": 0}
     sectors[sec]["divs"].append(s.get("dividend", 0) or 0)
@@ -59,10 +94,25 @@ for sec, data in sectors.items():
 
 sector_scores = dict(sorted(sector_scores.items(), key=lambda x: -x[1]["score"]))
 
+# 英語キーを日本語に変換
+sector_scores_jp = {}
+for sec, sc in sector_scores.items():
+    jp_name = SECTOR_JP.get(sec, sec)
+    # 同じ日本語名が既にあれば統合（平均化）
+    if jp_name in sector_scores_jp:
+        existing = sector_scores_jp[jp_name]
+        existing["score"] = round((existing["score"] + sc["score"]) / 2, 1)
+        existing["avg_dividend"] = round((existing["avg_dividend"] + sc["avg_dividend"]) / 2, 2)
+        existing["count"] += sc["count"]
+    else:
+        sector_scores_jp[jp_name] = sc
+
+sector_scores_jp = dict(sorted(sector_scores_jp.items(), key=lambda x: -x[1]["score"]))
+
 print("📊 セクタースコア:")
-for i, (sec, sc) in enumerate(sector_scores.items()):
+for i, (sec, sc) in enumerate(sector_scores_jp.items()):
     print(f"  {i+1}. {sec}: {sc['score']} (配当{sc['avg_dividend']}% / 60日{sc['avg_return_60d']}% / 銘柄数{sc['count']})")
 
-d['sector_scores'] = sector_scores
+d['sector_scores'] = sector_scores_jp
 json.dump(d, open('stocks_data.json', 'w'), ensure_ascii=False, indent=2)
-print(f"\n✅ sector_scores追加完了（{len(sector_scores)}セクター）")
+print(f"\n✅ sector_scores追加完了（{len(sector_scores_jp)}セクター）")

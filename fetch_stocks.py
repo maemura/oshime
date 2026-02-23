@@ -1070,11 +1070,19 @@ def main():
             "trend_type","ma75_dev","ma25_dev","roe","closes_60d",
             "ret120","ret20","ret60","volatility"}
     # ── セクタースコア自動算出 ──
+    SECTOR_JP = {
+        "Financial Services": "💰 金融", "Basic Materials": "🧪 素材",
+        "Energy": "⛽ エネルギー", "Industrials": "⚙ 産業",
+        "Real Estate": "🏠 不動産", "Consumer Cyclical": "🛒 消費(景気敏感)",
+        "Consumer Defensive": "🛡 消費(安定)", "Healthcare": "💊 医薬",
+        "Technology": "💻 テック", "Communication Services": "📡 通信",
+        "Utilities": "⚡ 電力ガス",
+    }
     def calc_sector_scores(all_results):
         """全銘柄データからセクター別のスコアを自動算出"""
         sectors = {}
         for s in all_results:
-            sec = s.get("sector", "その他")
+            sec = SECTOR_JP.get(s.get("sector", ""), s.get("sector", "その他"))
             if sec not in sectors:
                 sectors[sec] = {"divs": [], "rets60": [], "rets120": [], "vols": [], "count": 0}
             sectors[sec]["divs"].append(s.get("dividend", 0) or 0)
@@ -1132,6 +1140,28 @@ def main():
         return sector_scores
 
     sector_scores = calc_sector_scores(results)
+
+    # セクター名を日本語に変換
+    SECTOR_JP = {
+        "Financial Services": "金融", "Basic Materials": "素材",
+        "Energy": "エネルギー", "Industrials": "産業",
+        "Real Estate": "不動産", "Consumer Cyclical": "消費（景気敏感）",
+        "Consumer Defensive": "消費（安定）", "Healthcare": "医薬・ヘルスケア",
+        "Technology": "テック", "Communication Services": "通信・メディア",
+        "Utilities": "電力・ガス",
+    }
+    sector_scores_jp = {}
+    for sec, sc in sector_scores.items():
+        jp = SECTOR_JP.get(sec, sec)
+        if jp in sector_scores_jp:
+            e = sector_scores_jp[jp]
+            e["score"] = round((e["score"] + sc["score"]) / 2, 1)
+            e["avg_dividend"] = round((e["avg_dividend"] + sc["avg_dividend"]) / 2, 2)
+            e["count"] += sc["count"]
+        else:
+            sector_scores_jp[jp] = sc
+    sector_scores = dict(sorted(sector_scores_jp.items(), key=lambda x: -x[1]["score"]))
+
     print(f"\n📊 セクタースコア TOP10:")
     for i, (sec, sc) in enumerate(list(sector_scores.items())[:10]):
         print(f"  {i+1}. {sec}: {sc['score']} (配当{sc['avg_dividend']}% / 60日{sc['avg_return_60d']}% / 出来高{sc['avg_volume_ratio']}x)")

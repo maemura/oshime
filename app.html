@@ -529,9 +529,9 @@ function calcScoreTrend(s){
   const ma75d=s.ma75_dev||0,ma25d=s.ma25_dev||0;
   const div=s.dividend||0,vol=s.volatility||2;
 
-  // ── 時価総額 (15pt) ── 大型＝安心＝勝負できる
-  if(mc>=30000)sc+=15;else if(mc>=10000)sc+=13;else if(mc>=5000)sc+=10;
-  else if(mc>=3000)sc+=7;else if(mc>=1000)sc+=4;else if(mc>=500)sc+=2;
+  // ── 時価総額 (18pt) ── 大型＝安心＝勝負できる。1000億ごとに加点。
+  if(mc>=30000)sc+=18;else if(mc>=10000)sc+=15;else if(mc>=5000)sc+=12;
+  else if(mc>=3000)sc+=8;else if(mc>=1000)sc+=4;else if(mc>=500)sc+=2;
 
   // ── 配当利回り (15pt) ── 利回りが安心の根拠
   if(div>=5)sc+=15;else if(div>=4)sc+=13;else if(div>=3.5)sc+=11;
@@ -558,9 +558,9 @@ function calcScoreTrend(s){
   // ── 60日リターン (8pt)
   if(r60>=15)sc+=8;else if(r60>=8)sc+=7;else if(r60>=3)sc+=5;else if(r60>=0)sc+=2;else if(r60>=-5)sc+=0;else sc-=2;
 
-  // ── 20日リターン (8pt)
-  if(r20>=10)sc+=8;else if(r20>=5)sc+=7;else if(r20>=2)sc+=5;else if(r20>=0)sc+=3;
-  else if(r20>=-3)sc+=4;else if(r20>=-5)sc+=6;else if(r20>=-8)sc+=5;else sc+=2;
+  // ── 20日リターン (5pt)
+  if(r20>=10)sc+=5;else if(r20>=5)sc+=4;else if(r20>=2)sc+=3;else if(r20>=0)sc+=2;
+  else if(r20>=-3)sc+=3;else if(r20>=-5)sc+=4;else if(r20>=-8)sc+=3;else sc+=1;
 
   // ── 一貫性 (±8pt) ── 短中長期の方向が揃ってるか
   const pc=[r120,r60,r20].filter(r=>r>0).length;
@@ -769,7 +769,7 @@ function getRankBadge(code,tab){
   const yIdx=yList.findIndex(s=>s.code===code);
   if(yIdx<0)return '<span class="rank-chg new">🆕</span>';
   // 今日の順位を取得
-  const todayList=processed.filter(s=>tab==='dip'?s.trend_type==='dip'||s.trend_type==='value_dip':s.trend_type==='momentum').slice(0,10);
+  const todayList=processed.filter(s=>tab==='dip'?(s.trend_type==='dip'||s.trend_type==='value_dip'):(s.trend_type==='momentum'&&(s.market_cap_b||0)>=1000)).slice(0,10);
   const tIdx=todayList.findIndex(s=>s.code===code);
   if(tIdx<0)return '';
   const diff=yIdx-tIdx; // positive = moved up
@@ -819,7 +819,7 @@ function renderTop10(){
   sec.style.display='';
   const body=document.getElementById('top5Body');
   const tab=settings.top5tab;
-  const items=processed.filter(s=>tab==='dip'?s.trend_type==='dip'||s.trend_type==='value_dip':s.trend_type==='momentum').slice(0,10);
+  const items=processed.filter(s=>tab==='dip'?(s.trend_type==='dip'||s.trend_type==='value_dip'):(s.trend_type==='momentum'&&(s.market_cap_b||0)>=1000)).slice(0,10);
   if(!items.length){body.innerHTML='<div style="padding:24px;text-align:center;color:var(--text3);font-size:13px">該当する銘柄がありません</div>';return;}
   let html='<div class="t5-grid">';
   items.forEach((s,i)=>{

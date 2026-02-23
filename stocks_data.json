@@ -22848,7 +22848,7 @@
     "text": "今日の相場は多少下落しています。理由は、トランプ関税の不透明感が広がっています。また、ダウ先物が反落しています。来週のエヌビディアの決算や対米投資案件の内容に注目が集まっています。今日は買い気配には注意して、売り気配を見て売却することが好ましいです。"
   },
   "sector_scores": {
-    "Financial Services": {
+    "💰 金融": {
       "score": 8.2,
       "avg_dividend": 4.05,
       "avg_return_60d": 15.9,
@@ -22856,7 +22856,7 @@
       "avg_volume_ratio": 0.96,
       "count": 22
     },
-    "Basic Materials": {
+    "🧪 素材": {
       "score": 7.8,
       "avg_dividend": 3.94,
       "avg_return_60d": 15.5,
@@ -22864,7 +22864,7 @@
       "avg_volume_ratio": 0.97,
       "count": 26
     },
-    "Energy": {
+    "⛽ エネルギー": {
       "score": 7.4,
       "avg_dividend": 3.1,
       "avg_return_60d": 22.6,
@@ -22872,7 +22872,7 @@
       "avg_volume_ratio": 0.92,
       "count": 5
     },
-    "Industrials": {
+    "⚙ 産業": {
       "score": 7.2,
       "avg_dividend": 3.92,
       "avg_return_60d": 8.6,
@@ -22880,7 +22880,7 @@
       "avg_volume_ratio": 1.02,
       "count": 57
     },
-    "Real Estate": {
+    "🏠 不動産": {
       "score": 7.0,
       "avg_dividend": 4.48,
       "avg_return_60d": 7.7,
@@ -22888,7 +22888,7 @@
       "avg_volume_ratio": 0.85,
       "count": 7
     },
-    "Consumer Cyclical": {
+    "🛒 消費(景気敏感)": {
       "score": 6.6,
       "avg_dividend": 3.97,
       "avg_return_60d": 6.9,
@@ -22896,7 +22896,7 @@
       "avg_volume_ratio": 0.99,
       "count": 47
     },
-    "Consumer Defensive": {
+    "🛡 消費(安定)": {
       "score": 6.4,
       "avg_dividend": 4.42,
       "avg_return_60d": 2.0,
@@ -22904,7 +22904,7 @@
       "avg_volume_ratio": 0.81,
       "count": 7
     },
-    "Healthcare": {
+    "💊 医薬": {
       "score": 6.0,
       "avg_dividend": 3.68,
       "avg_return_60d": 2.7,
@@ -22912,7 +22912,7 @@
       "avg_volume_ratio": 0.88,
       "count": 11
     },
-    "Utilities": {
+    "⚡ 電力ガス": {
       "score": 5.8,
       "avg_dividend": 2.03,
       "avg_return_60d": 12.7,
@@ -22920,7 +22920,7 @@
       "avg_volume_ratio": 1.01,
       "count": 6
     },
-    "Technology": {
+    "💻 テック": {
       "score": 5.1,
       "avg_dividend": 3.66,
       "avg_return_60d": -9.7,
@@ -22928,7 +22928,7 @@
       "avg_volume_ratio": 0.97,
       "count": 35
     },
-    "Communication Services": {
+    "📡 通信": {
       "score": 4.1,
       "avg_dividend": 3.42,
       "avg_return_60d": -13.8,
