@@ -34,7 +34,11 @@ jobs:
         run: python3 fetch_stocks.py
         env:
           TZ: Asia/Tokyo
-        # ※ fetch_stocks.py が stocks_data.json + history/*.json を出力する前提
+
+      - name: validate.py を実行（推薦検証）
+        run: python3 validate.py || echo "検証スキップ（データ不足）"
+        env:
+          TZ: Asia/Tokyo
 
       - name: stocks_data.json + 履歴をコミット & プッシュ
         run: |
@@ -42,6 +46,7 @@ jobs:
           git config user.email "bot@kabunosuke.app"
           git add stocks_data.json
           git add history/ || true
+          git add weights.json || true
           # 変更がある場合だけコミット（変更なければスキップ）
           if git diff --cached --quiet; then
             echo "データに変更なし。スキップ。"

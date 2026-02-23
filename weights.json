@@ -1,0 +1,12 @@
+{
+  "w_dividend": 0,
+  "w_market_cap": 10,
+  "w_div_growth": 6,
+  "w_dip_zscore": 15,
+  "w_pbr": 5,
+  "w_ret5_vs_sector": 25,
+  "w_ret5": 25,
+  "w_ret10": 5,
+  "w_stable_bonus": 5,
+  "w_sector_penalty": -5
+}

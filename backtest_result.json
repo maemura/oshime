@@ -1,0 +1,3346 @@
+{
+  "backtest_period": "2025-02-01 〜 2026-02-21",
+  "weeks": 46,
+  "total_alpha": -7.16,
+  "avg_alpha_per_week": -0.16,
+  "win_rate_weeks": 43.5,
+  "avg_hit_rate": 47.0,
+  "final_weights": {
+    "w_dividend": 0,
+    "w_market_cap": 10,
+    "w_div_growth": 6,
+    "w_dip_zscore": 15,
+    "w_pbr": 5,
+    "w_ret5_vs_sector": 25,
+    "w_ret5": 25,
+    "w_ret10": 5,
+    "w_stable_bonus": 5,
+    "w_sector_penalty": -5
+  },
+  "initial_weights": {
+    "w_dividend": 20,
+    "w_market_cap": 10,
+    "w_div_growth": 10,
+    "w_dip_zscore": 15,
+    "w_pbr": 5,
+    "w_ret5_vs_sector": 20,
+    "w_ret5": 10,
+    "w_ret10": 5,
+    "w_stable_bonus": 5,
+    "w_sector_penalty": -5
+  },
+  "weekly_results": [
+    {
+      "week": 1,
+      "date": "2025-02-03",
+      "top5_avg": -1.48,
+      "market_avg": 0.16,
+      "alpha": -1.64,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 20,
+        "w_market_cap": 10,
+        "w_div_growth": 10,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 20,
+        "w_ret5": 10,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6367",
+          "score": 85.0,
+          "return_5d": -7.85,
+          "dividend": 167.0,
+          "dip_zscore": -3.01,
+          "ret5": -6.84,
+          "ret5_vs_sector": -3.99,
+          "div_growth_years": 12
+        },
+        {
+          "code": "6273",
+          "score": 83.0,
+          "return_5d": 0.34,
+          "dividend": 137.0,
+          "dip_zscore": -3.13,
+          "ret5": -6.43,
+          "ret5_vs_sector": -3.58,
+          "div_growth_years": 12
+        },
+        {
+          "code": "7267",
+          "score": 81.0,
+          "return_5d": 3.72,
+          "dividend": 454.0,
+          "dip_zscore": -3.93,
+          "ret5": -8.2,
+          "ret5_vs_sector": -4.6,
+          "div_growth_years": 6
+        },
+        {
+          "code": "7272",
+          "score": 81.0,
+          "return_5d": -0.48,
+          "dividend": 405.99999999999994,
+          "dip_zscore": -3.45,
+          "ret5": -6.81,
+          "ret5_vs_sector": -3.21,
+          "div_growth_years": 10
+        },
+        {
+          "code": "7741",
+          "score": 77.0,
+          "return_5d": -3.13,
+          "dividend": 87.0,
+          "dip_zscore": -2.23,
+          "ret5": -8.27,
+          "ret5_vs_sector": -4.86,
+          "div_growth_years": 10
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "date": "2025-02-10",
+      "top5_avg": -0.02,
+      "market_avg": 0.78,
+      "alpha": -0.8,
+      "hit_rate": 20.0,
+      "weights_snapshot": {
+        "w_dividend": 20,
+        "w_market_cap": 10,
+        "w_div_growth": 10,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 20,
+        "w_ret5": 10,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6367",
+          "score": 92.0,
+          "return_5d": -1.53,
+          "dividend": 167.0,
+          "dip_zscore": -5.84,
+          "ret5": -7.85,
+          "ret5_vs_sector": -5.66,
+          "div_growth_years": 12
+        },
+        {
+          "code": "8001",
+          "score": 90.0,
+          "return_5d": -3.01,
+          "dividend": 200.99999999999997,
+          "dip_zscore": -6.93,
+          "ret5": -7.49,
+          "ret5_vs_sector": -5.3,
+          "div_growth_years": 11
+        },
+        {
+          "code": "4901",
+          "score": 90.0,
+          "return_5d": 5.68,
+          "dividend": 233.0,
+          "dip_zscore": -3.55,
+          "ret5": -9.12,
+          "ret5_vs_sector": -6.93,
+          "div_growth_years": 6
+        },
+        {
+          "code": "8031",
+          "score": 87.0,
+          "return_5d": -1.87,
+          "dividend": 218.00000000000003,
+          "dip_zscore": -7.05,
+          "ret5": -6.15,
+          "ret5_vs_sector": -3.96,
+          "div_growth_years": 12
+        },
+        {
+          "code": "2801",
+          "score": 87.0,
+          "return_5d": 0.65,
+          "dividend": 202.0,
+          "dip_zscore": -5.19,
+          "ret5": -7.45,
+          "ret5_vs_sector": -6.18,
+          "div_growth_years": 6
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "date": "2025-02-17",
+      "top5_avg": -0.13,
+      "market_avg": 0.04,
+      "alpha": -0.17,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 20,
+        "w_market_cap": 10,
+        "w_div_growth": 10,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 20,
+        "w_ret5": 10,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6098",
+          "score": 92.0,
+          "return_5d": -8.88,
+          "dividend": 40.0,
+          "dip_zscore": -4.01,
+          "ret5": -6.54,
+          "ret5_vs_sector": -6.0,
+          "div_growth_years": 11
+        },
+        {
+          "code": "6273",
+          "score": 91.0,
+          "return_5d": 5.86,
+          "dividend": 137.0,
+          "dip_zscore": -4.65,
+          "ret5": -6.02,
+          "ret5_vs_sector": -6.35,
+          "div_growth_years": 12
+        },
+        {
+          "code": "2914",
+          "score": 85.0,
+          "return_5d": -0.11,
+          "dividend": 411.00000000000006,
+          "dip_zscore": -3.86,
+          "ret5": -3.83,
+          "ret5_vs_sector": -3.27,
+          "div_growth_years": 21
+        },
+        {
+          "code": "8001",
+          "score": 84.0,
+          "return_5d": 1.91,
+          "dividend": 200.99999999999997,
+          "dip_zscore": -5.62,
+          "ret5": -3.82,
+          "ret5_vs_sector": -4.15,
+          "div_growth_years": 11
+        },
+        {
+          "code": "8593",
+          "score": 82.0,
+          "return_5d": 0.55,
+          "dividend": 306.0,
+          "dip_zscore": -2.31,
+          "ret5": -1.33,
+          "ret5_vs_sector": -5.29,
+          "div_growth_years": 15
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "date": "2025-03-03",
+      "top5_avg": 4.92,
+      "market_avg": -0.43,
+      "alpha": 5.35,
+      "hit_rate": 80.0,
+      "weights_snapshot": {
+        "w_dividend": 20,
+        "w_market_cap": 10,
+        "w_div_growth": 10,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 20,
+        "w_ret5": 10,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6301",
+          "score": 77.0,
+          "return_5d": -1.96,
+          "dividend": 252.0,
+          "dip_zscore": -1.06,
+          "ret5": -3.12,
+          "ret5_vs_sector": -5.1,
+          "div_growth_years": 14
+        },
+        {
+          "code": "6367",
+          "score": 69.0,
+          "return_5d": 6.57,
+          "dividend": 167.0,
+          "dip_zscore": -3.19,
+          "ret5": 0.06,
+          "ret5_vs_sector": -1.92,
+          "div_growth_years": 12
+        },
+        {
+          "code": "6273",
+          "score": 69.0,
+          "return_5d": 7.31,
+          "dividend": 137.0,
+          "dip_zscore": -1.81,
+          "ret5": -2.53,
+          "ret5_vs_sector": -4.51,
+          "div_growth_years": 12
+        },
+        {
+          "code": "6954",
+          "score": 67.0,
+          "return_5d": 0.02,
+          "dividend": 160.0,
+          "dip_zscore": -1.59,
+          "ret5": -2.4,
+          "ret5_vs_sector": -4.38,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6503",
+          "score": 62.0,
+          "return_5d": 12.66,
+          "dividend": 94.0,
+          "dip_zscore": -2.63,
+          "ret5": -0.61,
+          "ret5_vs_sector": -2.59,
+          "div_growth_years": 5
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "date": "2025-03-10",
+      "top5_avg": 2.24,
+      "market_avg": 1.2,
+      "alpha": 1.04,
+      "hit_rate": 80.0,
+      "weights_snapshot": {
+        "w_dividend": 23,
+        "w_market_cap": 10,
+        "w_div_growth": 7,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 20,
+        "w_ret5": 8,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "4519",
+          "score": 87.9,
+          "return_5d": 2.31,
+          "dividend": 133.0,
+          "dip_zscore": -2.81,
+          "ret5": -11.99,
+          "ret5_vs_sector": -9.26,
+          "div_growth_years": 10
+        },
+        {
+          "code": "7974",
+          "score": 80.9,
+          "return_5d": 2.8,
+          "dividend": 211.0,
+          "dip_zscore": -3.4,
+          "ret5": -9.58,
+          "ret5_vs_sector": -3.33,
+          "div_growth_years": 12
+        },
+        {
+          "code": "3099",
+          "score": 76.7,
+          "return_5d": -0.11,
+          "dividend": 268.0,
+          "dip_zscore": -3.98,
+          "ret5": -4.37,
+          "ret5_vs_sector": -4.35,
+          "div_growth_years": 5
+        },
+        {
+          "code": "6301",
+          "score": 76.1,
+          "return_5d": 2.72,
+          "dividend": 252.0,
+          "dip_zscore": -2.22,
+          "ret5": -1.96,
+          "ret5_vs_sector": -3.36,
+          "div_growth_years": 14
+        },
+        {
+          "code": "1803",
+          "score": 73.0,
+          "return_5d": 3.49,
+          "dividend": 188.0,
+          "dip_zscore": -1.16,
+          "ret5": -5.61,
+          "ret5_vs_sector": -7.01,
+          "div_growth_years": 0
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "date": "2025-03-17",
+      "top5_avg": 0.88,
+      "market_avg": 1.96,
+      "alpha": -1.08,
+      "hit_rate": 20.0,
+      "weights_snapshot": {
+        "w_dividend": 23,
+        "w_market_cap": 10,
+        "w_div_growth": 7,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 20,
+        "w_ret5": 8,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6098",
+          "score": 85.9,
+          "return_5d": 3.41,
+          "dividend": 40.0,
+          "dip_zscore": -5.22,
+          "ret5": -12.1,
+          "ret5_vs_sector": -7.45,
+          "div_growth_years": 11
+        },
+        {
+          "code": "4307",
+          "score": 70.1,
+          "return_5d": -1.55,
+          "dividend": 193.0,
+          "dip_zscore": -2.05,
+          "ret5": -3.24,
+          "ret5_vs_sector": -2.41,
+          "div_growth_years": 7
+        },
+        {
+          "code": "6273",
+          "score": 67.5,
+          "return_5d": 0.9,
+          "dividend": 137.0,
+          "dip_zscore": 0.68,
+          "ret5": -3.59,
+          "ret5_vs_sector": -5.35,
+          "div_growth_years": 12
+        },
+        {
+          "code": "4901",
+          "score": 67.3,
+          "return_5d": -0.2,
+          "dividend": 233.0,
+          "dip_zscore": -1.22,
+          "ret5": -2.24,
+          "ret5_vs_sector": -4.0,
+          "div_growth_years": 6
+        },
+        {
+          "code": "7741",
+          "score": 61.9,
+          "return_5d": 1.83,
+          "dividend": 87.0,
+          "dip_zscore": -2.27,
+          "ret5": 0.26,
+          "ret5_vs_sector": -0.56,
+          "div_growth_years": 10
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "date": "2025-03-24",
+      "top5_avg": -3.39,
+      "market_avg": -2.86,
+      "alpha": -0.53,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 23,
+        "w_market_cap": 10,
+        "w_div_growth": 7,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 20,
+        "w_ret5": 8,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6098",
+          "score": 81.1,
+          "return_5d": -7.05,
+          "dividend": 40.0,
+          "dip_zscore": -3.1,
+          "ret5": -2.9,
+          "ret5_vs_sector": -3.52,
+          "div_growth_years": 11
+        },
+        {
+          "code": "4307",
+          "score": 65.3,
+          "return_5d": -0.36,
+          "dividend": 193.0,
+          "dip_zscore": -2.26,
+          "ret5": -1.35,
+          "ret5_vs_sector": -2.44,
+          "div_growth_years": 7
+        },
+        {
+          "code": "3099",
+          "score": 64.3,
+          "return_5d": -2.82,
+          "dividend": 268.0,
+          "dip_zscore": -1.11,
+          "ret5": -1.63,
+          "ret5_vs_sector": -3.73,
+          "div_growth_years": 5
+        },
+        {
+          "code": "4901",
+          "score": 64.1,
+          "return_5d": -3.68,
+          "dividend": 233.0,
+          "dip_zscore": -2.04,
+          "ret5": -0.03,
+          "ret5_vs_sector": -1.95,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6273",
+          "score": 60.1,
+          "return_5d": -3.03,
+          "dividend": 137.0,
+          "dip_zscore": -0.47,
+          "ret5": -1.88,
+          "ret5_vs_sector": -3.8,
+          "div_growth_years": 12
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "date": "2025-03-31",
+      "top5_avg": -17.32,
+      "market_avg": -12.18,
+      "alpha": -5.14,
+      "hit_rate": 20.0,
+      "weights_snapshot": {
+        "w_dividend": 23,
+        "w_market_cap": 10,
+        "w_div_growth": 7,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 20,
+        "w_ret5": 8,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "7267",
+          "score": 78.1,
+          "return_5d": -10.24,
+          "dividend": 454.0,
+          "dip_zscore": -2.72,
+          "ret5": -8.45,
+          "ret5_vs_sector": -3.62,
+          "div_growth_years": 6
+        },
+        {
+          "code": "7741",
+          "score": 72.5,
+          "return_5d": -12.9,
+          "dividend": 87.0,
+          "dip_zscore": -2.6,
+          "ret5": -3.43,
+          "ret5_vs_sector": -1.91,
+          "div_growth_years": 10
+        },
+        {
+          "code": "8411",
+          "score": 71.5,
+          "return_5d": -27.8,
+          "dividend": 202.0,
+          "dip_zscore": -1.28,
+          "ret5": -5.96,
+          "ret5_vs_sector": -3.53,
+          "div_growth_years": 7
+        },
+        {
+          "code": "6098",
+          "score": 70.9,
+          "return_5d": -13.31,
+          "dividend": 40.0,
+          "dip_zscore": -4.33,
+          "ret5": -7.05,
+          "ret5_vs_sector": -1.18,
+          "div_growth_years": 11
+        },
+        {
+          "code": "6954",
+          "score": 68.7,
+          "return_5d": -22.36,
+          "dividend": 160.0,
+          "dip_zscore": -3.02,
+          "ret5": -4.97,
+          "ret5_vs_sector": -1.61,
+          "div_growth_years": 6
+        }
+      ]
+    },
+    {
+      "week": 9,
+      "date": "2025-04-07",
+      "top5_avg": 8.0,
+      "market_avg": 7.26,
+      "alpha": 0.74,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 20,
+        "w_market_cap": 10,
+        "w_div_growth": 7,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 22,
+        "w_ret5": 8,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6752",
+          "score": 85.1,
+          "return_5d": 6.56,
+          "dividend": 159.0,
+          "dip_zscore": -6.58,
+          "ret5": -20.46,
+          "ret5_vs_sector": -9.08,
+          "div_growth_years": 5
+        },
+        {
+          "code": "7741",
+          "score": 84.9,
+          "return_5d": 3.97,
+          "dividend": 87.0,
+          "dip_zscore": -6.81,
+          "ret5": -12.9,
+          "ret5_vs_sector": -7.44,
+          "div_growth_years": 10
+        },
+        {
+          "code": "8411",
+          "score": 83.5,
+          "return_5d": 12.55,
+          "dividend": 202.0,
+          "dip_zscore": -6.68,
+          "ret5": -27.8,
+          "ret5_vs_sector": -6.6,
+          "div_growth_years": 7
+        },
+        {
+          "code": "6954",
+          "score": 82.1,
+          "return_5d": 7.87,
+          "dividend": 160.0,
+          "dip_zscore": -6.82,
+          "ret5": -22.36,
+          "ret5_vs_sector": -10.14,
+          "div_growth_years": 6
+        },
+        {
+          "code": "7272",
+          "score": 81.4,
+          "return_5d": 9.03,
+          "dividend": 405.99999999999994,
+          "dip_zscore": -6.92,
+          "ret5": -17.25,
+          "ret5_vs_sector": -3.09,
+          "div_growth_years": 10
+        }
+      ]
+    },
+    {
+      "week": 10,
+      "date": "2025-04-14",
+      "top5_avg": -1.97,
+      "market_avg": 1.86,
+      "alpha": -3.83,
+      "hit_rate": 0.0,
+      "weights_snapshot": {
+        "w_dividend": 20,
+        "w_market_cap": 10,
+        "w_div_growth": 7,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 22,
+        "w_ret5": 8,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "4452",
+          "score": 83.2,
+          "return_5d": 0.54,
+          "dividend": 120.0,
+          "dip_zscore": -2.71,
+          "ret5": -2.57,
+          "ret5_vs_sector": -7.5,
+          "div_growth_years": 15
+        },
+        {
+          "code": "6273",
+          "score": 80.9,
+          "return_5d": -6.61,
+          "dividend": 137.0,
+          "dip_zscore": -4.05,
+          "ret5": -0.46,
+          "ret5_vs_sector": -8.06,
+          "div_growth_years": 12
+        },
+        {
+          "code": "4901",
+          "score": 76.1,
+          "return_5d": 1.25,
+          "dividend": 233.0,
+          "dip_zscore": -2.58,
+          "ret5": 2.12,
+          "ret5_vs_sector": -5.48,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6752",
+          "score": 73.6,
+          "return_5d": 0.63,
+          "dividend": 159.0,
+          "dip_zscore": -2.48,
+          "ret5": 6.56,
+          "ret5_vs_sector": -3.27,
+          "div_growth_years": 5
+        },
+        {
+          "code": "3099",
+          "score": 72.6,
+          "return_5d": -5.65,
+          "dividend": 268.0,
+          "dip_zscore": -4.02,
+          "ret5": 3.38,
+          "ret5_vs_sector": -3.52,
+          "div_growth_years": 5
+        }
+      ]
+    },
+    {
+      "week": 11,
+      "date": "2025-04-21",
+      "top5_avg": 6.07,
+      "market_avg": 4.77,
+      "alpha": 1.3,
+      "hit_rate": 80.0,
+      "weights_snapshot": {
+        "w_dividend": 20,
+        "w_market_cap": 10,
+        "w_div_growth": 7,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 22,
+        "w_ret5": 8,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6273",
+          "score": 86.9,
+          "return_5d": 8.9,
+          "dividend": 137.0,
+          "dip_zscore": -4.5,
+          "ret5": -6.61,
+          "ret5_vs_sector": -6.92,
+          "div_growth_years": 12
+        },
+        {
+          "code": "3099",
+          "score": 83.1,
+          "return_5d": 7.7,
+          "dividend": 268.0,
+          "dip_zscore": -4.2,
+          "ret5": -5.65,
+          "ret5_vs_sector": -6.94,
+          "div_growth_years": 5
+        },
+        {
+          "code": "6301",
+          "score": 71.0,
+          "return_5d": 6.15,
+          "dividend": 252.0,
+          "dip_zscore": -1.73,
+          "ret5": -3.71,
+          "ret5_vs_sector": -4.02,
+          "div_growth_years": 14
+        },
+        {
+          "code": "7741",
+          "score": 67.9,
+          "return_5d": 6.47,
+          "dividend": 87.0,
+          "dip_zscore": -1.2,
+          "ret5": 2.7,
+          "ret5_vs_sector": -6.09,
+          "div_growth_years": 10
+        },
+        {
+          "code": "4452",
+          "score": 66.0,
+          "return_5d": 1.14,
+          "dividend": 120.0,
+          "dip_zscore": -2.0,
+          "ret5": 0.54,
+          "ret5_vs_sector": -2.23,
+          "div_growth_years": 15
+        }
+      ]
+    },
+    {
+      "week": 12,
+      "date": "2025-04-28",
+      "top5_avg": 1.44,
+      "market_avg": 1.75,
+      "alpha": -0.31,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 20,
+        "w_market_cap": 10,
+        "w_div_growth": 7,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 22,
+        "w_ret5": 8,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "4519",
+          "score": 67.5,
+          "return_5d": 3.67,
+          "dividend": 133.0,
+          "dip_zscore": 2.43,
+          "ret5": -4.77,
+          "ret5_vs_sector": -6.31,
+          "div_growth_years": 10
+        },
+        {
+          "code": "9020",
+          "score": 67.5,
+          "return_5d": 3.7,
+          "dividend": 184.0,
+          "dip_zscore": 0.6,
+          "ret5": -3.66,
+          "ret5_vs_sector": -10.26,
+          "div_growth_years": 10
+        },
+        {
+          "code": "8566",
+          "score": 62.0,
+          "return_5d": -4.4,
+          "dividend": 308.0,
+          "dip_zscore": 0.9,
+          "ret5": 0.18,
+          "ret5_vs_sector": -6.2,
+          "div_growth_years": 26
+        },
+        {
+          "code": "6367",
+          "score": 61.9,
+          "return_5d": 4.9,
+          "dividend": 167.0,
+          "dip_zscore": 0.05,
+          "ret5": 0.75,
+          "ret5_vs_sector": -5.85,
+          "div_growth_years": 12
+        },
+        {
+          "code": "8593",
+          "score": 55.0,
+          "return_5d": -0.69,
+          "dividend": 306.0,
+          "dip_zscore": 1.09,
+          "ret5": 3.8,
+          "ret5_vs_sector": -2.58,
+          "div_growth_years": 15
+        }
+      ]
+    },
+    {
+      "week": 13,
+      "date": "2025-05-12",
+      "top5_avg": 1.05,
+      "market_avg": -0.02,
+      "alpha": 1.07,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 17,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 24,
+        "w_ret5": 11,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "2269",
+          "score": 84.0,
+          "return_5d": 0.0,
+          "dividend": 272.0,
+          "dip_zscore": -2.81,
+          "ret5": -8.92,
+          "ret5_vs_sector": -8.86,
+          "div_growth_years": 0
+        },
+        {
+          "code": "4519",
+          "score": 78.5,
+          "return_5d": 4.82,
+          "dividend": 133.0,
+          "dip_zscore": -0.52,
+          "ret5": -13.45,
+          "ret5_vs_sector": -10.9,
+          "div_growth_years": 10
+        },
+        {
+          "code": "4507",
+          "score": 69.0,
+          "return_5d": -0.69,
+          "dividend": 181.0,
+          "dip_zscore": -1.28,
+          "ret5": -6.63,
+          "ret5_vs_sector": -4.08,
+          "div_growth_years": 0
+        },
+        {
+          "code": "4503",
+          "score": 64.0,
+          "return_5d": 2.42,
+          "dividend": 315.0,
+          "dip_zscore": -0.58,
+          "ret5": -6.74,
+          "ret5_vs_sector": -4.19,
+          "div_growth_years": 0
+        },
+        {
+          "code": "6367",
+          "score": 63.9,
+          "return_5d": -1.3,
+          "dividend": 167.0,
+          "dip_zscore": 0.13,
+          "ret5": -1.82,
+          "ret5_vs_sector": -5.41,
+          "div_growth_years": 12
+        }
+      ]
+    },
+    {
+      "week": 14,
+      "date": "2025-05-19",
+      "top5_avg": -0.89,
+      "market_avg": 0.79,
+      "alpha": -1.68,
+      "hit_rate": 0.0,
+      "weights_snapshot": {
+        "w_dividend": 17,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 24,
+        "w_ret5": 11,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "7272",
+          "score": 71.5,
+          "return_5d": -1.06,
+          "dividend": 405.99999999999994,
+          "dip_zscore": -0.91,
+          "ret5": -6.21,
+          "ret5_vs_sector": -4.93,
+          "div_growth_years": 10
+        },
+        {
+          "code": "7267",
+          "score": 69.5,
+          "return_5d": -0.32,
+          "dividend": 454.0,
+          "dip_zscore": -0.29,
+          "ret5": -5.21,
+          "ret5_vs_sector": -3.93,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6752",
+          "score": 67.5,
+          "return_5d": -0.78,
+          "dividend": 159.0,
+          "dip_zscore": 0.51,
+          "ret5": -5.35,
+          "ret5_vs_sector": -3.98,
+          "div_growth_years": 5
+        },
+        {
+          "code": "8566",
+          "score": 65.7,
+          "return_5d": -1.15,
+          "dividend": 308.0,
+          "dip_zscore": -1.86,
+          "ret5": -3.15,
+          "ret5_vs_sector": -2.18,
+          "div_growth_years": 26
+        },
+        {
+          "code": "2503",
+          "score": 65.2,
+          "return_5d": -1.14,
+          "dividend": 288.0,
+          "dip_zscore": -1.81,
+          "ret5": -3.23,
+          "ret5_vs_sector": -2.06,
+          "div_growth_years": 10
+        }
+      ]
+    },
+    {
+      "week": 15,
+      "date": "2025-05-26",
+      "top5_avg": -0.15,
+      "market_avg": 0.59,
+      "alpha": -0.74,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 17,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 24,
+        "w_ret5": 11,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "2801",
+          "score": 72.2,
+          "return_5d": -3.78,
+          "dividend": 202.0,
+          "dip_zscore": -2.56,
+          "ret5": -4.32,
+          "ret5_vs_sector": -3.51,
+          "div_growth_years": 6
+        },
+        {
+          "code": "8566",
+          "score": 68.1,
+          "return_5d": 0.58,
+          "dividend": 308.0,
+          "dip_zscore": -2.59,
+          "ret5": -1.15,
+          "ret5_vs_sector": -4.63,
+          "div_growth_years": 26
+        },
+        {
+          "code": "4519",
+          "score": 60.6,
+          "return_5d": 2.23,
+          "dividend": 133.0,
+          "dip_zscore": -1.43,
+          "ret5": -1.23,
+          "ret5_vs_sector": -3.15,
+          "div_growth_years": 10
+        },
+        {
+          "code": "9020",
+          "score": 59.9,
+          "return_5d": -3.09,
+          "dividend": 184.0,
+          "dip_zscore": -1.31,
+          "ret5": -1.73,
+          "ret5_vs_sector": -2.14,
+          "div_growth_years": 10
+        },
+        {
+          "code": "3099",
+          "score": 52.2,
+          "return_5d": 3.3,
+          "dividend": 268.0,
+          "dip_zscore": 4.83,
+          "ret5": -3.3,
+          "ret5_vs_sector": -2.41,
+          "div_growth_years": 5
+        }
+      ]
+    },
+    {
+      "week": 16,
+      "date": "2025-06-02",
+      "top5_avg": 0.91,
+      "market_avg": -0.37,
+      "alpha": 1.28,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 17,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 24,
+        "w_ret5": 11,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "7741",
+          "score": 88.5,
+          "return_5d": 0.36,
+          "dividend": 87.0,
+          "dip_zscore": -3.09,
+          "ret5": -7.86,
+          "ret5_vs_sector": -7.17,
+          "div_growth_years": 10
+        },
+        {
+          "code": "9020",
+          "score": 78.2,
+          "return_5d": 1.14,
+          "dividend": 184.0,
+          "dip_zscore": -4.86,
+          "ret5": -3.09,
+          "ret5_vs_sector": -3.08,
+          "div_growth_years": 10
+        },
+        {
+          "code": "2801",
+          "score": 76.2,
+          "return_5d": -0.73,
+          "dividend": 202.0,
+          "dip_zscore": -5.2,
+          "ret5": -3.78,
+          "ret5_vs_sector": -3.44,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6503",
+          "score": 60.2,
+          "return_5d": 4.55,
+          "dividend": 94.0,
+          "dip_zscore": 0.49,
+          "ret5": -4.35,
+          "ret5_vs_sector": -4.34,
+          "div_growth_years": 5
+        },
+        {
+          "code": "6954",
+          "score": 59.2,
+          "return_5d": -0.79,
+          "dividend": 160.0,
+          "dip_zscore": -0.27,
+          "ret5": -3.46,
+          "ret5_vs_sector": -3.45,
+          "div_growth_years": 6
+        }
+      ]
+    },
+    {
+      "week": 17,
+      "date": "2025-06-09",
+      "top5_avg": -0.22,
+      "market_avg": -0.45,
+      "alpha": 0.23,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 14,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 13,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6752",
+          "score": 79.2,
+          "return_5d": -2.18,
+          "dividend": 159.0,
+          "dip_zscore": -2.85,
+          "ret5": -5.99,
+          "ret5_vs_sector": -3.17,
+          "div_growth_years": 5
+        },
+        {
+          "code": "4901",
+          "score": 70.5,
+          "return_5d": -0.96,
+          "dividend": 233.0,
+          "dip_zscore": -2.43,
+          "ret5": -2.97,
+          "ret5_vs_sector": -3.02,
+          "div_growth_years": 6
+        },
+        {
+          "code": "3088",
+          "score": 66.3,
+          "return_5d": 0.18,
+          "dividend": 185.0,
+          "dip_zscore": -1.1,
+          "ret5": -3.53,
+          "ret5_vs_sector": -3.31,
+          "div_growth_years": 5
+        },
+        {
+          "code": "7270",
+          "score": 64.6,
+          "return_5d": -1.44,
+          "dividend": 381.0,
+          "dip_zscore": -1.5,
+          "ret5": -3.5,
+          "ret5_vs_sector": -1.91,
+          "div_growth_years": 0
+        },
+        {
+          "code": "8002",
+          "score": 56.9,
+          "return_5d": 3.29,
+          "dividend": 188.0,
+          "dip_zscore": 0.86,
+          "ret5": -3.21,
+          "ret5_vs_sector": -3.26,
+          "div_growth_years": 0
+        }
+      ]
+    },
+    {
+      "week": 18,
+      "date": "2025-06-16",
+      "top5_avg": -1.54,
+      "market_avg": -0.72,
+      "alpha": -0.82,
+      "hit_rate": 20.0,
+      "weights_snapshot": {
+        "w_dividend": 14,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 13,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "7203",
+          "score": 74.3,
+          "return_5d": -2.39,
+          "dividend": 261.0,
+          "dip_zscore": -2.62,
+          "ret5": -3.24,
+          "ret5_vs_sector": -3.69,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6752",
+          "score": 71.2,
+          "return_5d": -2.03,
+          "dividend": 159.0,
+          "dip_zscore": -3.14,
+          "ret5": -2.18,
+          "ret5_vs_sector": -2.38,
+          "div_growth_years": 5
+        },
+        {
+          "code": "6098",
+          "score": 69.1,
+          "return_5d": -1.59,
+          "dividend": 40.0,
+          "dip_zscore": -2.12,
+          "ret5": -4.13,
+          "ret5_vs_sector": -1.51,
+          "div_growth_years": 11
+        },
+        {
+          "code": "7270",
+          "score": 59.8,
+          "return_5d": -0.56,
+          "dividend": 381.0,
+          "dip_zscore": -2.21,
+          "ret5": -1.44,
+          "ret5_vs_sector": -1.89,
+          "div_growth_years": 0
+        },
+        {
+          "code": "8750",
+          "score": 59.1,
+          "return_5d": -1.11,
+          "dividend": 359.0,
+          "dip_zscore": -0.63,
+          "ret5": -3.22,
+          "ret5_vs_sector": -1.83,
+          "div_growth_years": 8
+        }
+      ]
+    },
+    {
+      "week": 19,
+      "date": "2025-06-23",
+      "top5_avg": 4.52,
+      "market_avg": 2.36,
+      "alpha": 2.16,
+      "hit_rate": 80.0,
+      "weights_snapshot": {
+        "w_dividend": 14,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 13,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6098",
+          "score": 71.5,
+          "return_5d": 9.24,
+          "dividend": 40.0,
+          "dip_zscore": -2.17,
+          "ret5": -1.59,
+          "ret5_vs_sector": -3.83,
+          "div_growth_years": 11
+        },
+        {
+          "code": "4503",
+          "score": 69.0,
+          "return_5d": 4.27,
+          "dividend": 315.0,
+          "dip_zscore": -3.1,
+          "ret5": -1.95,
+          "ret5_vs_sector": -3.07,
+          "div_growth_years": 0
+        },
+        {
+          "code": "6954",
+          "score": 65.1,
+          "return_5d": 6.14,
+          "dividend": 160.0,
+          "dip_zscore": -2.34,
+          "ret5": -3.58,
+          "ret5_vs_sector": -2.46,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6273",
+          "score": 63.2,
+          "return_5d": 2.99,
+          "dividend": 137.0,
+          "dip_zscore": -2.61,
+          "ret5": -2.96,
+          "ret5_vs_sector": -1.84,
+          "div_growth_years": 12
+        },
+        {
+          "code": "7203",
+          "score": 61.0,
+          "return_5d": -0.02,
+          "dividend": 261.0,
+          "dip_zscore": -3.15,
+          "ret5": -2.39,
+          "ret5_vs_sector": -0.53,
+          "div_growth_years": 6
+        }
+      ]
+    },
+    {
+      "week": 20,
+      "date": "2025-06-30",
+      "top5_avg": 0.11,
+      "market_avg": -1.26,
+      "alpha": 1.37,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 14,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 13,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "8354",
+          "score": 58.3,
+          "return_5d": 1.71,
+          "dividend": 279.0,
+          "dip_zscore": -2.17,
+          "ret5": -0.67,
+          "ret5_vs_sector": -1.78,
+          "div_growth_years": 6
+        },
+        {
+          "code": "7267",
+          "score": 57.3,
+          "return_5d": 1.97,
+          "dividend": 454.0,
+          "dip_zscore": -1.14,
+          "ret5": -0.82,
+          "ret5_vs_sector": -2.02,
+          "div_growth_years": 6
+        },
+        {
+          "code": "8795",
+          "score": 52.8,
+          "return_5d": -0.19,
+          "dividend": 309.0,
+          "dip_zscore": -2.99,
+          "ret5": -0.28,
+          "ret5_vs_sector": -1.39,
+          "div_growth_years": 11
+        },
+        {
+          "code": "7203",
+          "score": 51.8,
+          "return_5d": -1.58,
+          "dividend": 261.0,
+          "dip_zscore": -2.97,
+          "ret5": -0.02,
+          "ret5_vs_sector": -1.22,
+          "div_growth_years": 6
+        },
+        {
+          "code": "3099",
+          "score": 48.3,
+          "return_5d": -1.36,
+          "dividend": 268.0,
+          "dip_zscore": -0.64,
+          "ret5": -1.01,
+          "ret5_vs_sector": -2.21,
+          "div_growth_years": 5
+        }
+      ]
+    },
+    {
+      "week": 21,
+      "date": "2025-07-07",
+      "top5_avg": -0.18,
+      "market_avg": 1.33,
+      "alpha": -1.51,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 11,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 15,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6273",
+          "score": 85.5,
+          "return_5d": 1.4,
+          "dividend": 137.0,
+          "dip_zscore": -3.11,
+          "ret5": -6.78,
+          "ret5_vs_sector": -6.14,
+          "div_growth_years": 12
+        },
+        {
+          "code": "4901",
+          "score": 65.5,
+          "return_5d": -1.11,
+          "dividend": 233.0,
+          "dip_zscore": -2.42,
+          "ret5": -3.63,
+          "ret5_vs_sector": -2.99,
+          "div_growth_years": 6
+        },
+        {
+          "code": "4519",
+          "score": 63.0,
+          "return_5d": -3.59,
+          "dividend": 133.0,
+          "dip_zscore": -1.6,
+          "ret5": -5.12,
+          "ret5_vs_sector": -2.12,
+          "div_growth_years": 10
+        },
+        {
+          "code": "6954",
+          "score": 59.8,
+          "return_5d": -0.48,
+          "dividend": 160.0,
+          "dip_zscore": -0.9,
+          "ret5": -4.42,
+          "ret5_vs_sector": -3.78,
+          "div_growth_years": 6
+        },
+        {
+          "code": "4452",
+          "score": 58.2,
+          "return_5d": 2.89,
+          "dividend": 120.0,
+          "dip_zscore": -4.75,
+          "ret5": -1.97,
+          "ret5_vs_sector": -0.58,
+          "div_growth_years": 15
+        }
+      ]
+    },
+    {
+      "week": 22,
+      "date": "2025-07-14",
+      "top5_avg": -0.62,
+      "market_avg": 0.01,
+      "alpha": -0.63,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 11,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 15,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "4519",
+          "score": 82.0,
+          "return_5d": -1.5,
+          "dividend": 133.0,
+          "dip_zscore": -2.65,
+          "ret5": -3.59,
+          "ret5_vs_sector": -6.45,
+          "div_growth_years": 10
+        },
+        {
+          "code": "4307",
+          "score": 63.8,
+          "return_5d": 1.1,
+          "dividend": 193.0,
+          "dip_zscore": -6.68,
+          "ret5": -5.79,
+          "ret5_vs_sector": -1.21,
+          "div_growth_years": 7
+        },
+        {
+          "code": "3099",
+          "score": 60.8,
+          "return_5d": 0.16,
+          "dividend": 268.0,
+          "dip_zscore": -2.83,
+          "ret5": -1.29,
+          "ret5_vs_sector": -4.19,
+          "div_growth_years": 5
+        },
+        {
+          "code": "2269",
+          "score": 58.5,
+          "return_5d": -2.22,
+          "dividend": 272.0,
+          "dip_zscore": -2.45,
+          "ret5": -2.02,
+          "ret5_vs_sector": -2.14,
+          "div_growth_years": 0
+        },
+        {
+          "code": "4901",
+          "score": 57.5,
+          "return_5d": -0.65,
+          "dividend": 233.0,
+          "dip_zscore": -2.75,
+          "ret5": -1.11,
+          "ret5_vs_sector": -2.52,
+          "div_growth_years": 6
+        }
+      ]
+    },
+    {
+      "week": 23,
+      "date": "2025-07-28",
+      "top5_avg": 3.44,
+      "market_avg": -0.24,
+      "alpha": 3.68,
+      "hit_rate": 100.0,
+      "weights_snapshot": {
+        "w_dividend": 11,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 15,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "7974",
+          "score": 59.0,
+          "return_5d": 3.08,
+          "dividend": 211.0,
+          "dip_zscore": -0.83,
+          "ret5": -0.96,
+          "ret5_vs_sector": -6.45,
+          "div_growth_years": 12
+        },
+        {
+          "code": "3088",
+          "score": 57.5,
+          "return_5d": 2.9,
+          "dividend": 185.0,
+          "dip_zscore": 1.5,
+          "ret5": -2.2,
+          "ret5_vs_sector": -5.28,
+          "div_growth_years": 5
+        },
+        {
+          "code": "1803",
+          "score": 51.5,
+          "return_5d": 3.79,
+          "dividend": 188.0,
+          "dip_zscore": 1.39,
+          "ret5": -0.72,
+          "ret5_vs_sector": -6.68,
+          "div_growth_years": 0
+        },
+        {
+          "code": "3099",
+          "score": 51.5,
+          "return_5d": 3.42,
+          "dividend": 268.0,
+          "dip_zscore": 0.65,
+          "ret5": 0.78,
+          "ret5_vs_sector": -6.72,
+          "div_growth_years": 5
+        },
+        {
+          "code": "9020",
+          "score": 49.2,
+          "return_5d": 4.0,
+          "dividend": 184.0,
+          "dip_zscore": 0.95,
+          "ret5": 0.99,
+          "ret5_vs_sector": -4.97,
+          "div_growth_years": 10
+        }
+      ]
+    },
+    {
+      "week": 24,
+      "date": "2025-08-04",
+      "top5_avg": 5.45,
+      "market_avg": 4.22,
+      "alpha": 1.23,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 11,
+        "w_market_cap": 10,
+        "w_div_growth": 5,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 15,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6301",
+          "score": 74.5,
+          "return_5d": 3.03,
+          "dividend": 252.0,
+          "dip_zscore": -0.92,
+          "ret5": -10.03,
+          "ret5_vs_sector": -8.78,
+          "div_growth_years": 14
+        },
+        {
+          "code": "7741",
+          "score": 70.5,
+          "return_5d": 9.44,
+          "dividend": 87.0,
+          "dip_zscore": 0.2,
+          "ret5": -7.38,
+          "ret5_vs_sector": -7.04,
+          "div_growth_years": 10
+        },
+        {
+          "code": "7267",
+          "score": 66.2,
+          "return_5d": 6.39,
+          "dividend": 454.0,
+          "dip_zscore": 0.72,
+          "ret5": -6.54,
+          "ret5_vs_sector": -4.66,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6752",
+          "score": 64.5,
+          "return_5d": 5.91,
+          "dividend": 159.0,
+          "dip_zscore": -0.74,
+          "ret5": -2.28,
+          "ret5_vs_sector": -6.25,
+          "div_growth_years": 5
+        },
+        {
+          "code": "6098",
+          "score": 63.2,
+          "return_5d": 2.46,
+          "dividend": 40.0,
+          "dip_zscore": 0.57,
+          "ret5": -5.2,
+          "ret5_vs_sector": -4.14,
+          "div_growth_years": 11
+        }
+      ]
+    },
+    {
+      "week": 25,
+      "date": "2025-08-18",
+      "top5_avg": -0.36,
+      "market_avg": 0.12,
+      "alpha": -0.48,
+      "hit_rate": 20.0,
+      "weights_snapshot": {
+        "w_dividend": 8,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 17,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6273",
+          "score": 88.2,
+          "return_5d": -1.67,
+          "dividend": 137.0,
+          "dip_zscore": -3.13,
+          "ret5": -6.72,
+          "ret5_vs_sector": -7.84,
+          "div_growth_years": 12
+        },
+        {
+          "code": "3088",
+          "score": 72.8,
+          "return_5d": -1.06,
+          "dividend": 185.0,
+          "dip_zscore": -1.06,
+          "ret5": -7.69,
+          "ret5_vs_sector": -7.82,
+          "div_growth_years": 5
+        },
+        {
+          "code": "7270",
+          "score": 51.5,
+          "return_5d": 1.04,
+          "dividend": 381.0,
+          "dip_zscore": 1.42,
+          "ret5": -2.01,
+          "ret5_vs_sector": -4.23,
+          "div_growth_years": 0
+        },
+        {
+          "code": "4452",
+          "score": 48.3,
+          "return_5d": 0.09,
+          "dividend": 120.0,
+          "dip_zscore": -0.03,
+          "ret5": -2.31,
+          "ret5_vs_sector": -2.4,
+          "div_growth_years": 15
+        },
+        {
+          "code": "8795",
+          "score": 46.0,
+          "return_5d": -0.2,
+          "dividend": 309.0,
+          "dip_zscore": 4.31,
+          "ret5": 1.06,
+          "ret5_vs_sector": -3.15,
+          "div_growth_years": 11
+        }
+      ]
+    },
+    {
+      "week": 26,
+      "date": "2025-08-25",
+      "top5_avg": -4.13,
+      "market_avg": -1.54,
+      "alpha": -2.59,
+      "hit_rate": 0.0,
+      "weights_snapshot": {
+        "w_dividend": 8,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 17,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6273",
+          "score": 65.5,
+          "return_5d": -2.53,
+          "dividend": 137.0,
+          "dip_zscore": -5.5,
+          "ret5": -1.67,
+          "ret5_vs_sector": -2.25,
+          "div_growth_years": 12
+        },
+        {
+          "code": "6954",
+          "score": 55.4,
+          "return_5d": -6.89,
+          "dividend": 160.0,
+          "dip_zscore": 0.89,
+          "ret5": -3.04,
+          "ret5_vs_sector": -3.62,
+          "div_growth_years": 6
+        },
+        {
+          "code": "7974",
+          "score": 53.7,
+          "return_5d": -4.36,
+          "dividend": 211.0,
+          "dip_zscore": 0.89,
+          "ret5": -6.18,
+          "ret5_vs_sector": -2.49,
+          "div_growth_years": 12
+        },
+        {
+          "code": "4307",
+          "score": 51.4,
+          "return_5d": -3.55,
+          "dividend": 193.0,
+          "dip_zscore": 0.15,
+          "ret5": -3.96,
+          "ret5_vs_sector": -2.3,
+          "div_growth_years": 7
+        },
+        {
+          "code": "8308",
+          "score": 41.3,
+          "return_5d": -3.34,
+          "dividend": 146.0,
+          "dip_zscore": 2.74,
+          "ret5": -1.67,
+          "ret5_vs_sector": -2.53,
+          "div_growth_years": 0
+        }
+      ]
+    },
+    {
+      "week": 27,
+      "date": "2025-09-01",
+      "top5_avg": 2.7,
+      "market_avg": 3.5,
+      "alpha": -0.8,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 8,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 17,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6954",
+          "score": 86.8,
+          "return_5d": 1.31,
+          "dividend": 160.0,
+          "dip_zscore": -3.77,
+          "ret5": -6.89,
+          "ret5_vs_sector": -5.48,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6367",
+          "score": 84.2,
+          "return_5d": 1.28,
+          "dividend": 167.0,
+          "dip_zscore": -2.97,
+          "ret5": -6.94,
+          "ret5_vs_sector": -5.53,
+          "div_growth_years": 12
+        },
+        {
+          "code": "6503",
+          "score": 68.5,
+          "return_5d": 4.1,
+          "dividend": 94.0,
+          "dip_zscore": -1.04,
+          "ret5": -5.31,
+          "ret5_vs_sector": -3.9,
+          "div_growth_years": 5
+        },
+        {
+          "code": "6273",
+          "score": 56.2,
+          "return_5d": -1.05,
+          "dividend": 137.0,
+          "dip_zscore": -5.18,
+          "ret5": -2.53,
+          "ret5_vs_sector": -1.12,
+          "div_growth_years": 12
+        },
+        {
+          "code": "3088",
+          "score": 54.1,
+          "return_5d": 7.84,
+          "dividend": 185.0,
+          "dip_zscore": -1.94,
+          "ret5": -1.75,
+          "ret5_vs_sector": -1.92,
+          "div_growth_years": 5
+        }
+      ]
+    },
+    {
+      "week": 28,
+      "date": "2025-09-08",
+      "top5_avg": 0.16,
+      "market_avg": -0.45,
+      "alpha": 0.61,
+      "hit_rate": 80.0,
+      "weights_snapshot": {
+        "w_dividend": 8,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 17,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6273",
+          "score": 63.7,
+          "return_5d": 2.15,
+          "dividend": 137.0,
+          "dip_zscore": -3.77,
+          "ret5": -1.05,
+          "ret5_vs_sector": -4.8,
+          "div_growth_years": 12
+        },
+        {
+          "code": "6098",
+          "score": 56.7,
+          "return_5d": 0.19,
+          "dividend": 40.0,
+          "dip_zscore": -1.23,
+          "ret5": -1.35,
+          "ret5_vs_sector": -3.11,
+          "div_growth_years": 11
+        },
+        {
+          "code": "6367",
+          "score": 54.7,
+          "return_5d": -5.46,
+          "dividend": 167.0,
+          "dip_zscore": -2.12,
+          "ret5": 1.28,
+          "ret5_vs_sector": -2.47,
+          "div_growth_years": 12
+        },
+        {
+          "code": "4307",
+          "score": 54.5,
+          "return_5d": 1.62,
+          "dividend": 193.0,
+          "dip_zscore": -3.01,
+          "ret5": 0.03,
+          "ret5_vs_sector": -2.15,
+          "div_growth_years": 7
+        },
+        {
+          "code": "6954",
+          "score": 52.3,
+          "return_5d": 2.32,
+          "dividend": 160.0,
+          "dip_zscore": -2.31,
+          "ret5": 1.31,
+          "ret5_vs_sector": -2.44,
+          "div_growth_years": 6
+        }
+      ]
+    },
+    {
+      "week": 29,
+      "date": "2025-09-22",
+      "top5_avg": 0.39,
+      "market_avg": -0.3,
+      "alpha": 0.69,
+      "hit_rate": 80.0,
+      "weights_snapshot": {
+        "w_dividend": 5,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 19,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "8795",
+          "score": 86.2,
+          "return_5d": 1.63,
+          "dividend": 309.0,
+          "dip_zscore": -4.33,
+          "ret5": -7.97,
+          "ret5_vs_sector": -6.51,
+          "div_growth_years": 11
+        },
+        {
+          "code": "8750",
+          "score": 70.0,
+          "return_5d": 0.58,
+          "dividend": 359.0,
+          "dip_zscore": -2.66,
+          "ret5": -4.56,
+          "ret5_vs_sector": -3.1,
+          "div_growth_years": 8
+        },
+        {
+          "code": "7974",
+          "score": 67.7,
+          "return_5d": 1.19,
+          "dividend": 211.0,
+          "dip_zscore": -3.67,
+          "ret5": -10.85,
+          "ret5_vs_sector": -2.42,
+          "div_growth_years": 12
+        },
+        {
+          "code": "4452",
+          "score": 63.1,
+          "return_5d": -1.45,
+          "dividend": 120.0,
+          "dip_zscore": -3.67,
+          "ret5": -2.96,
+          "ret5_vs_sector": -2.47,
+          "div_growth_years": 15
+        },
+        {
+          "code": "6367",
+          "score": 62.3,
+          "return_5d": 0.02,
+          "dividend": 167.0,
+          "dip_zscore": -5.62,
+          "ret5": -2.71,
+          "ret5_vs_sector": -2.96,
+          "div_growth_years": 12
+        }
+      ]
+    },
+    {
+      "week": 30,
+      "date": "2025-09-29",
+      "top5_avg": 3.59,
+      "market_avg": 2.14,
+      "alpha": 1.45,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 5,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 19,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "4519",
+          "score": 82.2,
+          "return_5d": 14.56,
+          "dividend": 133.0,
+          "dip_zscore": -2.22,
+          "ret5": -7.43,
+          "ret5_vs_sector": -5.05,
+          "div_growth_years": 10
+        },
+        {
+          "code": "4452",
+          "score": 67.8,
+          "return_5d": -1.2,
+          "dividend": 120.0,
+          "dip_zscore": -5.13,
+          "ret5": -3.71,
+          "ret5_vs_sector": -2.68,
+          "div_growth_years": 15
+        },
+        {
+          "code": "7267",
+          "score": 63.9,
+          "return_5d": 1.6,
+          "dividend": 454.0,
+          "dip_zscore": -3.08,
+          "ret5": -2.03,
+          "ret5_vs_sector": -1.53,
+          "div_growth_years": 6
+        },
+        {
+          "code": "4307",
+          "score": 62.0,
+          "return_5d": 2.32,
+          "dividend": 193.0,
+          "dip_zscore": -1.13,
+          "ret5": -3.01,
+          "ret5_vs_sector": -3.63,
+          "div_growth_years": 7
+        },
+        {
+          "code": "8795",
+          "score": 56.6,
+          "return_5d": 0.65,
+          "dividend": 309.0,
+          "dip_zscore": -3.71,
+          "ret5": -1.15,
+          "ret5_vs_sector": -2.61,
+          "div_growth_years": 11
+        }
+      ]
+    },
+    {
+      "week": 31,
+      "date": "2025-10-06",
+      "top5_avg": -1.76,
+      "market_avg": -2.81,
+      "alpha": 1.05,
+      "hit_rate": 80.0,
+      "weights_snapshot": {
+        "w_dividend": 5,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 19,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "3088",
+          "score": 70.4,
+          "return_5d": -0.17,
+          "dividend": 185.0,
+          "dip_zscore": -3.05,
+          "ret5": -2.69,
+          "ret5_vs_sector": -8.11,
+          "div_growth_years": 5
+        },
+        {
+          "code": "8308",
+          "score": 51.8,
+          "return_5d": -2.44,
+          "dividend": 146.0,
+          "dip_zscore": -1.33,
+          "ret5": -4.87,
+          "ret5_vs_sector": -2.88,
+          "div_growth_years": 0
+        },
+        {
+          "code": "4452",
+          "score": 50.1,
+          "return_5d": -1.75,
+          "dividend": 120.0,
+          "dip_zscore": -6.18,
+          "ret5": -1.2,
+          "ret5_vs_sector": -1.43,
+          "div_growth_years": 15
+        },
+        {
+          "code": "1803",
+          "score": 47.9,
+          "return_5d": -4.04,
+          "dividend": 188.0,
+          "dip_zscore": -0.12,
+          "ret5": -0.96,
+          "ret5_vs_sector": -5.29,
+          "div_growth_years": 0
+        },
+        {
+          "code": "9020",
+          "score": 46.0,
+          "return_5d": -0.39,
+          "dividend": 184.0,
+          "dip_zscore": -0.68,
+          "ret5": -0.36,
+          "ret5_vs_sector": -4.69,
+          "div_growth_years": 10
+        }
+      ]
+    },
+    {
+      "week": 32,
+      "date": "2025-10-20",
+      "top5_avg": -0.69,
+      "market_avg": 2.25,
+      "alpha": -2.94,
+      "hit_rate": 0.0,
+      "weights_snapshot": {
+        "w_dividend": 5,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 19,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "3099",
+          "score": 70.8,
+          "return_5d": 0.32,
+          "dividend": 268.0,
+          "dip_zscore": -4.52,
+          "ret5": -3.57,
+          "ret5_vs_sector": -4.22,
+          "div_growth_years": 5
+        },
+        {
+          "code": "4519",
+          "score": 62.0,
+          "return_5d": -3.88,
+          "dividend": 133.0,
+          "dip_zscore": 1.09,
+          "ret5": -5.59,
+          "ret5_vs_sector": -4.88,
+          "div_growth_years": 10
+        },
+        {
+          "code": "6098",
+          "score": 60.2,
+          "return_5d": 1.33,
+          "dividend": 40.0,
+          "dip_zscore": -0.87,
+          "ret5": -3.95,
+          "ret5_vs_sector": -3.91,
+          "div_growth_years": 11
+        },
+        {
+          "code": "8795",
+          "score": 56.3,
+          "return_5d": -0.58,
+          "dividend": 309.0,
+          "dip_zscore": -2.0,
+          "ret5": -2.07,
+          "ret5_vs_sector": -2.48,
+          "div_growth_years": 11
+        },
+        {
+          "code": "8750",
+          "score": 56.1,
+          "return_5d": -0.63,
+          "dividend": 359.0,
+          "dip_zscore": -2.09,
+          "ret5": -1.77,
+          "ret5_vs_sector": -2.18,
+          "div_growth_years": 8
+        }
+      ]
+    },
+    {
+      "week": 33,
+      "date": "2025-10-27",
+      "top5_avg": -2.28,
+      "market_avg": -0.93,
+      "alpha": -1.35,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 2,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 21,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "4519",
+          "score": 68.9,
+          "return_5d": 2.37,
+          "dividend": 133.0,
+          "dip_zscore": -0.82,
+          "ret5": -3.88,
+          "ret5_vs_sector": -5.0,
+          "div_growth_years": 10
+        },
+        {
+          "code": "3099",
+          "score": 53.5,
+          "return_5d": -5.24,
+          "dividend": 268.0,
+          "dip_zscore": -3.25,
+          "ret5": 0.32,
+          "ret5_vs_sector": -4.17,
+          "div_growth_years": 5
+        },
+        {
+          "code": "2801",
+          "score": 45.7,
+          "return_5d": -0.56,
+          "dividend": 202.0,
+          "dip_zscore": -1.03,
+          "ret5": -2.74,
+          "ret5_vs_sector": -2.71,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6752",
+          "score": 44.6,
+          "return_5d": -4.53,
+          "dividend": 159.0,
+          "dip_zscore": 1.86,
+          "ret5": -0.68,
+          "ret5_vs_sector": -3.44,
+          "div_growth_years": 5
+        },
+        {
+          "code": "3088",
+          "score": 42.3,
+          "return_5d": -3.43,
+          "dividend": 185.0,
+          "dip_zscore": -2.45,
+          "ret5": -0.41,
+          "ret5_vs_sector": -1.53,
+          "div_growth_years": 5
+        }
+      ]
+    },
+    {
+      "week": 34,
+      "date": "2025-11-10",
+      "top5_avg": 0.82,
+      "market_avg": 1.17,
+      "alpha": -0.35,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 2,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 21,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "4901",
+          "score": 84.8,
+          "return_5d": -1.7,
+          "dividend": 233.0,
+          "dip_zscore": -3.61,
+          "ret5": -6.09,
+          "ret5_vs_sector": -9.65,
+          "div_growth_years": 6
+        },
+        {
+          "code": "7267",
+          "score": 69.2,
+          "return_5d": 0.4,
+          "dividend": 454.0,
+          "dip_zscore": -1.87,
+          "ret5": -3.14,
+          "ret5_vs_sector": -3.85,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6752",
+          "score": 67.2,
+          "return_5d": 3.66,
+          "dividend": 159.0,
+          "dip_zscore": -1.88,
+          "ret5": -4.2,
+          "ret5_vs_sector": -3.17,
+          "div_growth_years": 5
+        },
+        {
+          "code": "8795",
+          "score": 59.1,
+          "return_5d": 0.46,
+          "dividend": 309.0,
+          "dip_zscore": -3.37,
+          "ret5": -2.17,
+          "ret5_vs_sector": -2.43,
+          "div_growth_years": 11
+        },
+        {
+          "code": "6301",
+          "score": 54.0,
+          "return_5d": 1.28,
+          "dividend": 252.0,
+          "dip_zscore": -1.5,
+          "ret5": 0.0,
+          "ret5_vs_sector": -3.56,
+          "div_growth_years": 14
+        }
+      ]
+    },
+    {
+      "week": 35,
+      "date": "2025-11-17",
+      "top5_avg": 1.17,
+      "market_avg": 0.01,
+      "alpha": 1.16,
+      "hit_rate": 80.0,
+      "weights_snapshot": {
+        "w_dividend": 2,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 21,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "3099",
+          "score": 68.5,
+          "return_5d": 4.97,
+          "dividend": 268.0,
+          "dip_zscore": -1.78,
+          "ret5": -5.64,
+          "ret5_vs_sector": -4.83,
+          "div_growth_years": 5
+        },
+        {
+          "code": "3088",
+          "score": 63.5,
+          "return_5d": 2.32,
+          "dividend": 185.0,
+          "dip_zscore": -1.34,
+          "ret5": -4.71,
+          "ret5_vs_sector": -8.17,
+          "div_growth_years": 5
+        },
+        {
+          "code": "7741",
+          "score": 62.9,
+          "return_5d": -3.16,
+          "dividend": 87.0,
+          "dip_zscore": 0.46,
+          "ret5": -4.32,
+          "ret5_vs_sector": -7.78,
+          "div_growth_years": 10
+        },
+        {
+          "code": "4901",
+          "score": 59.7,
+          "return_5d": 0.3,
+          "dividend": 233.0,
+          "dip_zscore": -3.98,
+          "ret5": -1.7,
+          "ret5_vs_sector": -2.41,
+          "div_growth_years": 6
+        },
+        {
+          "code": "8593",
+          "score": 58.4,
+          "return_5d": 1.41,
+          "dividend": 306.0,
+          "dip_zscore": -0.31,
+          "ret5": -2.19,
+          "ret5_vs_sector": -5.02,
+          "div_growth_years": 15
+        }
+      ]
+    },
+    {
+      "week": 36,
+      "date": "2025-12-01",
+      "top5_avg": 0.07,
+      "market_avg": 0.98,
+      "alpha": -0.91,
+      "hit_rate": 20.0,
+      "weights_snapshot": {
+        "w_dividend": 2,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 21,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "4452",
+          "score": 70.5,
+          "return_5d": -0.57,
+          "dividend": 120.0,
+          "dip_zscore": -2.88,
+          "ret5": -4.9,
+          "ret5_vs_sector": -4.32,
+          "div_growth_years": 15
+        },
+        {
+          "code": "4901",
+          "score": 53.6,
+          "return_5d": -0.24,
+          "dividend": 233.0,
+          "dip_zscore": -2.38,
+          "ret5": -0.6,
+          "ret5_vs_sector": -3.68,
+          "div_growth_years": 6
+        },
+        {
+          "code": "4307",
+          "score": 52.4,
+          "return_5d": -1.64,
+          "dividend": 193.0,
+          "dip_zscore": 1.21,
+          "ret5": -1.78,
+          "ret5_vs_sector": -5.47,
+          "div_growth_years": 7
+        },
+        {
+          "code": "3088",
+          "score": 50.0,
+          "return_5d": 0.32,
+          "dividend": 185.0,
+          "dip_zscore": -0.58,
+          "ret5": -3.78,
+          "ret5_vs_sector": -1.78,
+          "div_growth_years": 5
+        },
+        {
+          "code": "8750",
+          "score": 49.1,
+          "return_5d": 2.49,
+          "dividend": 359.0,
+          "dip_zscore": 2.07,
+          "ret5": -2.75,
+          "ret5_vs_sector": -4.42,
+          "div_growth_years": 8
+        }
+      ]
+    },
+    {
+      "week": 37,
+      "date": "2025-12-08",
+      "top5_avg": 1.83,
+      "market_avg": 3.1,
+      "alpha": -1.27,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 23,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "7974",
+          "score": 79.0,
+          "return_5d": -6.7,
+          "dividend": 211.0,
+          "dip_zscore": -4.33,
+          "ret5": -5.7,
+          "ret5_vs_sector": -3.6,
+          "div_growth_years": 12
+        },
+        {
+          "code": "7270",
+          "score": 54.6,
+          "return_5d": 8.58,
+          "dividend": 381.0,
+          "dip_zscore": -1.3,
+          "ret5": -4.07,
+          "ret5_vs_sector": -2.87,
+          "div_growth_years": 0
+        },
+        {
+          "code": "2503",
+          "score": 48.8,
+          "return_5d": 0.57,
+          "dividend": 288.0,
+          "dip_zscore": 0.33,
+          "ret5": -3.46,
+          "ret5_vs_sector": -2.22,
+          "div_growth_years": 10
+        },
+        {
+          "code": "1803",
+          "score": 48.2,
+          "return_5d": 0.09,
+          "dividend": 188.0,
+          "dip_zscore": 3.87,
+          "ret5": -2.51,
+          "ret5_vs_sector": -5.74,
+          "div_growth_years": 0
+        },
+        {
+          "code": "9020",
+          "score": 47.2,
+          "return_5d": 6.63,
+          "dividend": 184.0,
+          "dip_zscore": 1.06,
+          "ret5": -1.57,
+          "ret5_vs_sector": -4.8,
+          "div_growth_years": 10
+        }
+      ]
+    },
+    {
+      "week": 38,
+      "date": "2025-12-15",
+      "top5_avg": -2.27,
+      "market_avg": -1.43,
+      "alpha": -0.84,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 23,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "7974",
+          "score": 87.2,
+          "return_5d": -10.87,
+          "dividend": 211.0,
+          "dip_zscore": -6.24,
+          "ret5": -6.7,
+          "ret5_vs_sector": -6.58,
+          "div_growth_years": 12
+        },
+        {
+          "code": "6273",
+          "score": 60.3,
+          "return_5d": -1.01,
+          "dividend": 137.0,
+          "dip_zscore": -0.33,
+          "ret5": -3.89,
+          "ret5_vs_sector": -6.67,
+          "div_growth_years": 12
+        },
+        {
+          "code": "6301",
+          "score": 47.2,
+          "return_5d": 0.02,
+          "dividend": 252.0,
+          "dip_zscore": -1.16,
+          "ret5": -0.5,
+          "ret5_vs_sector": -3.28,
+          "div_growth_years": 14
+        },
+        {
+          "code": "6367",
+          "score": 45.2,
+          "return_5d": 3.56,
+          "dividend": 167.0,
+          "dip_zscore": -0.89,
+          "ret5": -1.19,
+          "ret5_vs_sector": -3.97,
+          "div_growth_years": 12
+        },
+        {
+          "code": "4307",
+          "score": 42.0,
+          "return_5d": -3.05,
+          "dividend": 193.0,
+          "dip_zscore": 0.1,
+          "ret5": 0.79,
+          "ret5_vs_sector": -7.56,
+          "div_growth_years": 7
+        }
+      ]
+    },
+    {
+      "week": 39,
+      "date": "2025-12-22",
+      "top5_avg": 2.38,
+      "market_avg": 0.68,
+      "alpha": 1.7,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 23,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "7974",
+          "score": 82.2,
+          "return_5d": 4.83,
+          "dividend": 211.0,
+          "dip_zscore": -9.77,
+          "ret5": -10.87,
+          "ret5_vs_sector": -7.35,
+          "div_growth_years": 12
+        },
+        {
+          "code": "3088",
+          "score": 65.3,
+          "return_5d": -0.75,
+          "dividend": 185.0,
+          "dip_zscore": -2.64,
+          "ret5": -5.05,
+          "ret5_vs_sector": -2.85,
+          "div_growth_years": 5
+        },
+        {
+          "code": "3099",
+          "score": 58.6,
+          "return_5d": -0.86,
+          "dividend": 268.0,
+          "dip_zscore": -1.24,
+          "ret5": -4.55,
+          "ret5_vs_sector": -3.76,
+          "div_growth_years": 5
+        },
+        {
+          "code": "6752",
+          "score": 50.3,
+          "return_5d": 1.44,
+          "dividend": 159.0,
+          "dip_zscore": 1.74,
+          "ret5": -6.69,
+          "ret5_vs_sector": -1.82,
+          "div_growth_years": 5
+        },
+        {
+          "code": "8001",
+          "score": 47.8,
+          "return_5d": 7.26,
+          "dividend": 200.99999999999997,
+          "dip_zscore": 0.56,
+          "ret5": -3.43,
+          "ret5_vs_sector": -1.75,
+          "div_growth_years": 11
+        }
+      ]
+    },
+    {
+      "week": 40,
+      "date": "2025-12-29",
+      "top5_avg": 1.46,
+      "market_avg": 1.47,
+      "alpha": -0.01,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 23,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "8308",
+          "score": 56.0,
+          "return_5d": 5.78,
+          "dividend": 146.0,
+          "dip_zscore": -2.33,
+          "ret5": -2.75,
+          "ret5_vs_sector": -3.36,
+          "div_growth_years": 0
+        },
+        {
+          "code": "7270",
+          "score": 52.6,
+          "return_5d": -2.66,
+          "dividend": 381.0,
+          "dip_zscore": -0.68,
+          "ret5": -4.29,
+          "ret5_vs_sector": -2.75,
+          "div_growth_years": 0
+        },
+        {
+          "code": "7741",
+          "score": 52.2,
+          "return_5d": 6.78,
+          "dividend": 87.0,
+          "dip_zscore": -0.88,
+          "ret5": -2.13,
+          "ret5_vs_sector": -3.11,
+          "div_growth_years": 10
+        },
+        {
+          "code": "3088",
+          "score": 45.6,
+          "return_5d": -1.51,
+          "dividend": 185.0,
+          "dip_zscore": -2.76,
+          "ret5": -0.75,
+          "ret5_vs_sector": -1.73,
+          "div_growth_years": 5
+        },
+        {
+          "code": "7267",
+          "score": 42.2,
+          "return_5d": -1.07,
+          "dividend": 454.0,
+          "dip_zscore": -0.6,
+          "ret5": -2.59,
+          "ret5_vs_sector": -1.05,
+          "div_growth_years": 6
+        }
+      ]
+    },
+    {
+      "week": 41,
+      "date": "2026-01-05",
+      "top5_avg": -1.41,
+      "market_avg": 3.39,
+      "alpha": -4.8,
+      "hit_rate": 20.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 25,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "3088",
+          "score": 44.8,
+          "return_5d": -3.48,
+          "dividend": 185.0,
+          "dip_zscore": -2.76,
+          "ret5": -0.71,
+          "ret5_vs_sector": -2.93,
+          "div_growth_years": 5
+        },
+        {
+          "code": "4901",
+          "score": 37.5,
+          "return_5d": -1.88,
+          "dividend": 233.0,
+          "dip_zscore": 1.0,
+          "ret5": 0.24,
+          "ret5_vs_sector": -3.05,
+          "div_growth_years": 6
+        },
+        {
+          "code": "7974",
+          "score": 36.2,
+          "return_5d": -6.57,
+          "dividend": 211.0,
+          "dip_zscore": -3.91,
+          "ret5": 2.06,
+          "ret5_vs_sector": 1.44,
+          "div_growth_years": 12
+        },
+        {
+          "code": "8795",
+          "score": 31.7,
+          "return_5d": 7.31,
+          "dividend": 309.0,
+          "dip_zscore": 2.66,
+          "ret5": -0.14,
+          "ret5_vs_sector": -1.86,
+          "div_growth_years": 11
+        },
+        {
+          "code": "6367",
+          "score": 31.7,
+          "return_5d": -2.44,
+          "dividend": 167.0,
+          "dip_zscore": 1.11,
+          "ret5": 0.47,
+          "ret5_vs_sector": -2.82,
+          "div_growth_years": 12
+        }
+      ]
+    },
+    {
+      "week": 42,
+      "date": "2026-01-19",
+      "top5_avg": -0.78,
+      "market_avg": -2.56,
+      "alpha": 1.78,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 25,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "9020",
+          "score": 86.2,
+          "return_5d": 0.99,
+          "dividend": 184.0,
+          "dip_zscore": -3.06,
+          "ret5": -5.23,
+          "ret5_vs_sector": -10.32,
+          "div_growth_years": 10
+        },
+        {
+          "code": "3088",
+          "score": 77.5,
+          "return_5d": 2.2,
+          "dividend": 185.0,
+          "dip_zscore": -4.74,
+          "ret5": -5.78,
+          "ret5_vs_sector": -3.81,
+          "div_growth_years": 5
+        },
+        {
+          "code": "4452",
+          "score": 52.5,
+          "return_5d": 0.4,
+          "dividend": 120.0,
+          "dip_zscore": -1.91,
+          "ret5": -1.52,
+          "ret5_vs_sector": -2.29,
+          "div_growth_years": 15
+        },
+        {
+          "code": "4307",
+          "score": 52.0,
+          "return_5d": -3.82,
+          "dividend": 193.0,
+          "dip_zscore": -0.48,
+          "ret5": -2.1,
+          "ret5_vs_sector": -8.68,
+          "div_growth_years": 7
+        },
+        {
+          "code": "8593",
+          "score": 41.8,
+          "return_5d": -3.67,
+          "dividend": 306.0,
+          "dip_zscore": 4.8,
+          "ret5": 1.85,
+          "ret5_vs_sector": -3.18,
+          "div_growth_years": 15
+        }
+      ]
+    },
+    {
+      "week": 43,
+      "date": "2026-01-26",
+      "top5_avg": 0.19,
+      "market_avg": -0.77,
+      "alpha": 0.96,
+      "hit_rate": 60.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 25,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6098",
+          "score": 78.0,
+          "return_5d": -1.31,
+          "dividend": 40.0,
+          "dip_zscore": -3.1,
+          "ret5": -10.63,
+          "ret5_vs_sector": -4.51,
+          "div_growth_years": 11
+        },
+        {
+          "code": "2914",
+          "score": 71.2,
+          "return_5d": 1.95,
+          "dividend": 411.00000000000006,
+          "dip_zscore": -2.35,
+          "ret5": -3.42,
+          "ret5_vs_sector": -4.29,
+          "div_growth_years": 21
+        },
+        {
+          "code": "7272",
+          "score": 68.7,
+          "return_5d": -0.38,
+          "dividend": 405.99999999999994,
+          "dip_zscore": -2.07,
+          "ret5": -6.89,
+          "ret5_vs_sector": -2.07,
+          "div_growth_years": 10
+        },
+        {
+          "code": "4901",
+          "score": 68.3,
+          "return_5d": -1.64,
+          "dividend": 233.0,
+          "dip_zscore": -4.08,
+          "ret5": -6.57,
+          "ret5_vs_sector": -2.89,
+          "div_growth_years": 6
+        },
+        {
+          "code": "7270",
+          "score": 64.5,
+          "return_5d": 2.33,
+          "dividend": 381.0,
+          "dip_zscore": -2.79,
+          "ret5": -7.14,
+          "ret5_vs_sector": -2.32,
+          "div_growth_years": 0
+        }
+      ]
+    },
+    {
+      "week": 44,
+      "date": "2026-02-02",
+      "top5_avg": 4.24,
+      "market_avg": 7.57,
+      "alpha": -3.33,
+      "hit_rate": 40.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 25,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "6954",
+          "score": 83.8,
+          "return_5d": 11.34,
+          "dividend": 160.0,
+          "dip_zscore": -2.1,
+          "ret5": -5.49,
+          "ret5_vs_sector": -5.07,
+          "div_growth_years": 6
+        },
+        {
+          "code": "4307",
+          "score": 82.0,
+          "return_5d": -8.97,
+          "dividend": 193.0,
+          "dip_zscore": -5.35,
+          "ret5": -20.48,
+          "ret5_vs_sector": -7.53,
+          "div_growth_years": 7
+        },
+        {
+          "code": "2503",
+          "score": 73.0,
+          "return_5d": 4.17,
+          "dividend": 288.0,
+          "dip_zscore": -1.52,
+          "ret5": -5.26,
+          "ret5_vs_sector": -4.44,
+          "div_growth_years": 10
+        },
+        {
+          "code": "9020",
+          "score": 72.5,
+          "return_5d": 3.45,
+          "dividend": 184.0,
+          "dip_zscore": -4.24,
+          "ret5": -4.33,
+          "ret5_vs_sector": -3.91,
+          "div_growth_years": 10
+        },
+        {
+          "code": "6273",
+          "score": 59.5,
+          "return_5d": 11.2,
+          "dividend": 137.0,
+          "dip_zscore": -0.1,
+          "ret5": -3.6,
+          "ret5_vs_sector": -3.18,
+          "div_growth_years": 12
+        }
+      ]
+    },
+    {
+      "week": 45,
+      "date": "2026-02-09",
+      "top5_avg": 3.38,
+      "market_avg": -0.68,
+      "alpha": 4.06,
+      "hit_rate": 80.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 25,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "4307",
+          "score": 87.0,
+          "return_5d": -6.96,
+          "dividend": 193.0,
+          "dip_zscore": -5.83,
+          "ret5": -8.97,
+          "ret5_vs_sector": -14.19,
+          "div_growth_years": 7
+        },
+        {
+          "code": "7272",
+          "score": 86.2,
+          "return_5d": 14.67,
+          "dividend": 405.99999999999994,
+          "dip_zscore": -2.92,
+          "ret5": -6.65,
+          "ret5_vs_sector": -10.72,
+          "div_growth_years": 10
+        },
+        {
+          "code": "7270",
+          "score": 86.0,
+          "return_5d": 0.92,
+          "dividend": 381.0,
+          "dip_zscore": -3.36,
+          "ret5": -8.81,
+          "ret5_vs_sector": -12.88,
+          "div_growth_years": 0
+        },
+        {
+          "code": "4901",
+          "score": 70.8,
+          "return_5d": 1.05,
+          "dividend": 233.0,
+          "dip_zscore": -3.67,
+          "ret5": -2.15,
+          "ret5_vs_sector": -13.08,
+          "div_growth_years": 6
+        },
+        {
+          "code": "6367",
+          "score": 65.2,
+          "return_5d": 7.2,
+          "dividend": 167.0,
+          "dip_zscore": -1.63,
+          "ret5": -2.37,
+          "ret5_vs_sector": -13.3,
+          "div_growth_years": 12
+        }
+      ]
+    },
+    {
+      "week": 46,
+      "date": "2026-02-16",
+      "top5_avg": -0.92,
+      "market_avg": 0.6,
+      "alpha": -1.52,
+      "hit_rate": 20.0,
+      "weights_snapshot": {
+        "w_dividend": 0,
+        "w_market_cap": 10,
+        "w_div_growth": 6,
+        "w_dip_zscore": 15,
+        "w_pbr": 5,
+        "w_ret5_vs_sector": 25,
+        "w_ret5": 25,
+        "w_ret10": 5,
+        "w_stable_bonus": 5,
+        "w_sector_penalty": -5
+      },
+      "results": [
+        {
+          "code": "7270",
+          "score": 83.0,
+          "return_5d": -2.36,
+          "dividend": 381.0,
+          "dip_zscore": -2.6,
+          "ret5": -7.42,
+          "ret5_vs_sector": -7.44,
+          "div_growth_years": 0
+        },
+        {
+          "code": "6098",
+          "score": 78.0,
+          "return_5d": -1.27,
+          "dividend": 40.0,
+          "dip_zscore": -5.31,
+          "ret5": -9.87,
+          "ret5_vs_sector": -4.98,
+          "div_growth_years": 11
+        },
+        {
+          "code": "7267",
+          "score": 77.8,
+          "return_5d": -0.8,
+          "dividend": 454.0,
+          "dip_zscore": -1.28,
+          "ret5": -8.07,
+          "ret5_vs_sector": -8.09,
+          "div_growth_years": 6
+        },
+        {
+          "code": "9020",
+          "score": 75.7,
+          "return_5d": 0.66,
+          "dividend": 184.0,
+          "dip_zscore": -2.04,
+          "ret5": -4.75,
+          "ret5_vs_sector": -8.9,
+          "div_growth_years": 10
+        },
+        {
+          "code": "7203",
+          "score": 54.0,
+          "return_5d": -0.85,
+          "dividend": 261.0,
+          "dip_zscore": 0.81,
+          "ret5": -3.02,
+          "ret5_vs_sector": -3.04,
+          "div_growth_years": 6
+        }
+      ]
+    }
+  ]
+}
