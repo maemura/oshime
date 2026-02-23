@@ -583,6 +583,28 @@ def fetch_one(ticker, _retry=0):
         ret5  = round((float(closes.iloc[-1]) / float(closes.iloc[-6]) - 1) * 100, 2) if len(closes) >= 6 else 0
         ret10 = round((float(closes.iloc[-1]) / float(closes.iloc[-11]) - 1) * 100, 2) if len(closes) >= 11 else 0
 
+        # ── 決算日情報 ──
+        most_recent_q = info.get("mostRecentQuarter")  # timestamp
+        earnings_date = None
+        days_since_earnings = None
+        days_to_next_earnings = None
+        if most_recent_q:
+            from datetime import date
+            try:
+                last_q = date.fromtimestamp(most_recent_q)
+                today_d = date.today()
+                days_since_earnings = (today_d - last_q).days
+                # 次回決算は約90日後と推定
+                next_q = last_q + __import__('datetime').timedelta(days=90)
+                days_to_next_earnings = (next_q - today_d).days
+                if days_to_next_earnings < 0:
+                    # 既に過ぎている場合は+90日
+                    next_q = next_q + __import__('datetime').timedelta(days=90)
+                    days_to_next_earnings = (next_q - today_d).days
+                earnings_date = last_q.strftime("%Y-%m-%d")
+            except:
+                pass
+
         return {
             "code":          ticker.replace(".T",""),
             "name":          name,
@@ -598,16 +620,20 @@ def fetch_one(ticker, _retry=0):
             "vol_avg5":      int(vol_avg5),
             "turnover_avg5": turnover_avg5,
             # ── 注目度フィールド ──
-            "vol_ratio_1d":  vol_ratio_1d,   # 昨日出来高倍率（20日比）
-            "ret_1d":        ret_1d,          # 昨日前日比%
-            "range_pct":     range_pct,       # 昨日値幅%
-            "gap_pct":       gap_pct,         # 始値ギャップ%
-            "trend_score":   trend_score,     # 注目度スコア
-            "market_cap_b":  market_cap_b,    # 時価総額（億円）
-            "volatility":    volatility,      # 日次ボラティリティ%
-            "dip_zscore":    dip_zscore,       # 自分比押し目度（σ）
-            "ret5":          ret5,             # 5日リターン%
-            "ret10":         ret10,            # 10日リターン%
+            "vol_ratio_1d":  vol_ratio_1d,
+            "ret_1d":        ret_1d,
+            "range_pct":     range_pct,
+            "gap_pct":       gap_pct,
+            "trend_score":   trend_score,
+            "market_cap_b":  market_cap_b,
+            "volatility":    volatility,
+            "dip_zscore":    dip_zscore,
+            "ret5":          ret5,
+            "ret10":         ret10,
+            # ── 決算日 ──
+            "earnings_date":          earnings_date,
+            "days_since_earnings":    days_since_earnings,
+            "days_to_next_earnings":  days_to_next_earnings,
         }
     except Exception as e:
         err = str(e).lower()
@@ -992,7 +1018,8 @@ def main():
             "score_dividend","score_value","score_rebound",
             "score_stable","score_growth","score_bluechip",
             "score","prev_score","market_cap_b","volatility","dip_zscore","ret5","ret10",
-            "sector_ret5","sector_ret10","ret5_vs_sector","ret10_vs_sector","div_growth_years"}
+            "sector_ret5","sector_ret10","ret5_vs_sector","ret10_vs_sector","div_growth_years",
+            "earnings_date","days_since_earnings","days_to_next_earnings"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
 
     output = {
@@ -1007,16 +1034,6 @@ def main():
         "trend_ranking":   trend_ranking_data,
         "stocks":          stocks_out,          # TOP200+大型高配当を配信
     }
-    import math as _math
-    def sanitize(obj):
-        if isinstance(obj, dict):
-            return {k: sanitize(v) for k, v in obj.items()}
-        if isinstance(obj, list):
-            return [sanitize(v) for v in obj]
-        if isinstance(obj, float) and (_math.isnan(obj) or _math.isinf(obj)):
-            return 0
-        return obj
-    output = sanitize(output)
     with open("stocks_data.json","w",encoding="utf-8") as f:
         json.dump(output,f,ensure_ascii=False,indent=2)
 

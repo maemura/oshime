@@ -206,6 +206,30 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .filter-sep{width:1px;height:20px;background:var(--border);}
 .filter-count{font-family:var(--fn);font-size:11px;color:var(--text3);margin-left:auto;}
 
+/* ── EVENTS CALENDAR ── */
+.events-section{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  margin-bottom:14px;overflow:hidden;padding:10px 14px;
+}
+.events-header{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.events-list{display:flex;flex-direction:column;gap:4px;}
+.event-item{
+  display:flex;align-items:center;gap:8px;font-size:12px;
+  padding:5px 8px;border-radius:6px;background:var(--bg3);
+}
+.event-date{color:var(--amber);font-weight:600;white-space:nowrap;min-width:50px;}
+.event-label{color:var(--text);flex:1;}
+.event-days{color:var(--sub);font-size:11px;white-space:nowrap;}
+.event-item.today{background:#2d1a00;border-left:3px solid var(--orange);}
+.event-item.soon{background:#1a1a00;border-left:3px solid var(--amber);}
+/* earnings badge in stock row */
+.earnings-badge{
+  display:inline-block;font-size:10px;padding:1px 5px;border-radius:3px;
+  margin-left:4px;font-weight:600;
+}
+.earnings-badge.soon{background:#2d1a00;color:var(--orange);}
+.earnings-badge.recent{background:#001a2d;color:#5bc0de;}
+
 /* ── TODAY'S TOP5 ── */
 .top5-section{
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
@@ -603,6 +627,12 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 
     <!-- STANCE -->
     <div id="stanceBox"></div>
+
+    <!-- UPCOMING EVENTS -->
+    <div class="events-section" id="eventsSection" style="display:none">
+      <div class="events-header">📅 今週〜来週の重要イベント</div>
+      <div class="events-list" id="eventsList"></div>
+    </div>
 
     <!-- TODAY'S TOP5 -->
     <div class="top5-section" id="top5Section" style="display:none">
@@ -1233,6 +1263,7 @@ function renderTable(){
             <div class="tbl-code">${s.code}・${sectorMap(s.sector)}</div>
             ${prevBadge}
             ${trendBadge(s)}
+            ${earningsBadge(s)}
           </div>
         </td>
         <td><span class="tbl-zone ${s.zone.cls}">${s.zone.label}</span></td>
@@ -1313,6 +1344,7 @@ function buildDetailBox(s){
           <tr><td style="padding:5px 8px;font-size:11px">RSI</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.rsi}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">30以下が強い</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">配当利回り</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.dividend}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">3%以上が高配当</td></tr>
           <tr><td style="padding:5px 8px;font-size:11px">PBR</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.pbr}倍</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">1倍以下が割安</td></tr>
+          ${s.days_to_next_earnings?`<tr><td style="padding:5px 8px;font-size:11px">📊 次回決算</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${s.days_to_next_earnings<=14?'var(--orange)':'var(--text)'}">約${s.days_to_next_earnings}日後</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">${s.days_to_next_earnings<=14?'⚠ 決算前注意':'推定値'}</td></tr>`:''}
         </table>
         <div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap">
           <button class="detail-fav-btn ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav('${s.code}')">
@@ -1750,6 +1782,57 @@ async function loadRealData(){
 }
 
 // ═══════════════════════════════════════
+// EARNINGS BADGE
+// ═══════════════════════════════════════
+function earningsBadge(s){
+  const d=s.days_to_next_earnings;
+  if(!d)return'';
+  if(d<=7)return'<span class="earnings-badge soon">決算'+d+'日前</span>';
+  if(d<=14)return'<span class="earnings-badge soon">決算'+d+'日前</span>';
+  const ds=s.days_since_earnings;
+  if(ds&&ds<=7)return'<span class="earnings-badge recent">決算'+ds+'日後</span>';
+  return'';
+}
+
+// ═══════════════════════════════════════
+// ECONOMIC EVENTS CALENDAR
+// ═══════════════════════════════════════
+let EVENTS=[];
+function loadEvents(){
+  fetch('events.json').then(r=>r.json()).then(data=>{
+    EVENTS=data;
+    renderEvents();
+  }).catch(()=>{});
+}
+function renderEvents(){
+  const sec=document.getElementById('eventsSection');
+  const list=document.getElementById('eventsList');
+  if(!sec||!EVENTS.length)return;
+  const today=new Date();
+  today.setHours(0,0,0,0);
+  const twoWeeks=new Date(today);
+  twoWeeks.setDate(twoWeeks.getDate()+14);
+  const upcoming=EVENTS.filter(e=>{
+    const d=new Date(e.date+'T00:00:00');
+    return d>=today&&d<=twoWeeks;
+  }).sort((a,b)=>a.date.localeCompare(b.date));
+  if(!upcoming.length){sec.style.display='none';return;}
+  sec.style.display='block';
+  list.innerHTML=upcoming.map(e=>{
+    const d=new Date(e.date+'T00:00:00');
+    const diff=Math.round((d-today)/(1000*60*60*24));
+    const cls=diff===0?'today':diff<=3?'soon':'';
+    const dayStr=diff===0?'今日':diff===1?'明日':diff+'日後';
+    const mm=(d.getMonth()+1)+'/'+d.getDate();
+    return`<div class="event-item ${cls}">
+      <span class="event-date">${mm}</span>
+      <span class="event-label">${e.label}</span>
+      <span class="event-days">${dayStr}</span>
+    </div>`;
+  }).join('');
+}
+
+// ═══════════════════════════════════════
 // RUN
 // ═══════════════════════════════════════
 function run(){
@@ -1772,6 +1855,7 @@ async function init(){
   updateWatchCount();
   await loadRealData();
   document.getElementById('sectorFilterWrap').style.display='block';
+  loadEvents();
   run();
   gaEvent('view_app',{data_source:dataSource});
 }
