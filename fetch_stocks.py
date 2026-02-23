@@ -548,6 +548,27 @@ def fetch_one(ticker, _retry=0):
             + abs(range_pct) * 3,
         1)
 
+        # ── JS calcScoreTrend が必要なフィールド ──
+        ma75_dev = round((price - ma75) / ma75 * 100, 2) if ma75 else 0
+        ma25_dev = round((price - ma25) / ma25 * 100, 2) if ma25 else 0
+
+        # リターン（n日前からの騰落率%）
+        ret20 = round((price / float(closes.iloc[-min(20,len(closes))]) - 1) * 100, 2) if len(closes) >= 5 else 0
+        ret60 = round((price / float(closes.iloc[-min(60,len(closes))]) - 1) * 100, 2) if len(closes) >= 20 else 0
+        ret120 = round((price / float(closes.iloc[-min(120,len(closes))]) - 1) * 100, 2) if len(closes) >= 40 else 0
+
+        # ROE
+        roe_raw = info.get("returnOnEquity")
+        roe = round(float(roe_raw) * 100, 1) if roe_raw else 0
+
+        # ボラティリティ（20日日次リターンの標準偏差）
+        daily_rets = closes.pct_change().dropna().tail(20)
+        volatility = round(float(daily_rets.std()) * 100, 2) if len(daily_rets) >= 10 else 2.0
+
+        # 60日終値（スパークライン用）
+        c60 = closes.tail(60).tolist()
+        closes_60d = [round(float(v), 1) for v in c60]
+
         return {
             "code":          ticker.replace(".T",""),
             "name":          name,
@@ -569,6 +590,15 @@ def fetch_one(ticker, _retry=0):
             "gap_pct":       gap_pct,         # 始値ギャップ%
             "trend_score":   trend_score,     # 注目度スコア
             "market_cap_b":  market_cap_b,    # 時価総額（億円）
+            # ── JS calcScoreTrend 用 ──
+            "ma75_dev":      ma75_dev,
+            "ma25_dev":      ma25_dev,
+            "ret20":         ret20,
+            "ret60":         ret60,
+            "ret120":        ret120,
+            "roe":           roe,
+            "volatility":    volatility,
+            "closes_60d":    closes_60d,
         }
     except Exception as e:
         err = str(e).lower()
@@ -1033,7 +1063,7 @@ def main():
             "score_dividend","score_value","score_rebound",
             "score_stable","score_growth","score","prev_score","market_cap_b",
             "trend_type","ma75_dev","ma25_dev","roe","closes_60d",
-            "ret120","ret20","ret60"}
+            "ret120","ret20","ret60","volatility"}
     stocks_out = [{k:v for k,v in s.items() if k in KEEP} for s in stocks_out]
 
     output = {
