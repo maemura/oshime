@@ -1431,42 +1431,141 @@ def main():
     today_str = datetime.now().strftime("%Y-%m-%d")
     history_dir = "history"
     os.makedirs(history_dir, exist_ok=True)
-    # TOP50 + 各指標値を記録（検証用）
-    top50 = results[:50]
-    # モメンタムTOP5（勢いスコア順）
-    momentum_sorted = sorted(results, key=lambda x: -x.get("score_momentum", 0))[:5]
+    # v7: trend_type別にTOP10を保存
+    dip_top10 = [s for s in results if s.get("trend_type") == "dip"][:10]
+    mom_top10 = [s for s in results if s.get("trend_type") == "momentum"][:10]
+    def hist_entry(s):
+        return {
+            "code": s["code"], "name": s.get("name",""), "score": s.get("score",0),
+            "score_trend": s.get("score_trend",0), "trend_type": s.get("trend_type",""),
+            "dividend": s.get("dividend",0), "market_cap_b": s.get("market_cap_b",0),
+            "ma75_dev": s.get("ma75_dev",0), "ma25_dev": s.get("ma25_dev",0),
+            "ret5": s.get("ret5",0), "ret20": s.get("ret20",0), "ret120": s.get("ret120",0),
+            "vol_ratio_1d": s.get("vol_ratio_1d",1),
+            "sector": s.get("sector",""), "price": s["price"],
+            "pbr": s.get("pbr",0), "roe": s.get("roe",0),
+        }
     history_entry = {
         "date": today_str,
         "updated_at": output["updated_at"],
+        "version": "v7",
         "market": {k: output.get(k) for k in ["nikkei_price","nikkei_ma25","nikkei_1d_chg","nasdaq_1d_chg","vix","usdjpy"]},
         "total_scanned": len(results),
         "buy_count": buy_count,
-        "top5": [
-            {"code": s["code"], "name": s.get("name",""), "score": s["score"],
-             "dividend": s.get("dividend",0), "market_cap_b": s.get("market_cap_b",0),
-             "ret5": s.get("ret5",0), "ret10": s.get("ret10",0),
-             "dip_zscore": s.get("dip_zscore",0), "ret5_vs_sector": s.get("ret5_vs_sector",0),
-             "sector": s.get("sector",""), "sector_ret5": s.get("sector_ret5",0),
-             "div_growth_years": s.get("div_growth_years",0), "price": s["price"]}
-            for s in top50[:5]
-        ],
-        "top5_momentum": [
-            {"code": s["code"], "name": s.get("name",""), "score_momentum": s.get("score_momentum",0),
-             "ret20": s.get("ret20",0), "ret60": s.get("ret60",0), "roe": s.get("roe",0),
-             "vol_trend": s.get("vol_trend",1), "sector_ret5": s.get("sector_ret5",0),
-             "price": s["price"]}
-            for s in momentum_sorted
-        ],
-        "top50_codes": [s["code"] for s in top50],
-        "top50_scores": [{"code":s["code"],"score":s["score"],"price":s["price"],
-                          "dividend":s.get("dividend",0),"ret5":s.get("ret5",0)}
-                         for s in top50],
-        "sector_ret5_avg": sector_ret5_avg,
+        "dip_top10": [hist_entry(s) for s in dip_top10],
+        "mom_top10": [hist_entry(s) for s in mom_top10],
+        "top50_codes": [s["code"] for s in results[:50]],
+        "top50_scores": [{"code":s["code"],"score":s.get("score",0),"trend_type":s.get("trend_type",""),
+                          "price":s["price"],"dividend":s.get("dividend",0)}
+                         for s in results[:50]],
     }
     hist_path = os.path.join(history_dir, f"{today_str}.json")
     with open(hist_path, "w", encoding="utf-8") as f:
         json.dump(history_entry, f, ensure_ascii=False, indent=2)
     print(f"  📜 履歴保存: {hist_path}")
+
+    # ── OGP画像自動生成（1200×630） ──
+    try:
+        from PIL import Image, ImageDraw, ImageFont
+        W, H = 1200, 630
+        img = Image.new("RGB", (W, H), "#0A1628")
+        draw = ImageDraw.Draw(img)
+
+        # フォント（システムフォント利用、なければデフォルト）
+        def get_font(size, bold=False):
+            paths = [
+                "/usr/share/fonts/truetype/noto/NotoSansCJK-Bold.ttc",
+                "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc",
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+                "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+            ]
+            for p in paths:
+                if os.path.exists(p):
+                    try:
+                        return ImageFont.truetype(p, size)
+                    except:
+                        pass
+            return ImageFont.load_default()
+
+        f_title = get_font(42, bold=True)
+        f_sub = get_font(24)
+        f_rank = get_font(56, bold=True)
+        f_name = get_font(32, bold=True)
+        f_score = get_font(28)
+        f_meta = get_font(20)
+        f_footer = get_font(18)
+
+        # 背景グラデーション風（上部に青帯）
+        for y in range(120):
+            r = int(10 + y * 0.15)
+            g = int(22 + y * 0.4)
+            b = int(40 + y * 0.8)
+            draw.line([(0, y), (W, y)], fill=(r, g, b))
+
+        # ロゴ + タイトル
+        draw.text((50, 30), "かぶのすけ", fill="#4ADE80", font=f_title)
+        draw.text((50, 82), f"{today_str} の押し目 TOP3", fill="#FFFFFF", font=f_sub)
+
+        # 区切り線
+        draw.line([(50, 125), (W - 50, 125)], fill="#1B6AC9", width=3)
+
+        # TOP3
+        dip_top3 = [s for s in results if s.get("trend_type") == "dip"][:3]
+        y_start = 155
+        for i, s in enumerate(dip_top3):
+            y = y_start + i * 140
+            # 背景カード
+            card_color = "#14233D" if i % 2 == 0 else "#0F1D33"
+            draw.rounded_rectangle([(40, y), (W - 40, y + 125)], radius=12, fill=card_color)
+
+            # 順位
+            rank_colors = ["#F59E0B", "#9CA3AF", "#CD7F32"]
+            cx, cy = 100, y + 62
+            draw.ellipse([(cx - 30, cy - 30), (cx + 30, cy + 30)], fill=rank_colors[i] if i < 3 else "#4A5568")
+            rank_text = str(i + 1)
+            bbox = draw.textbbox((0, 0), rank_text, font=f_rank)
+            tw = bbox[2] - bbox[0]
+            th = bbox[3] - bbox[1]
+            draw.text((cx - tw // 2, cy - th // 2 - 5), rank_text, fill="#FFFFFF", font=f_rank)
+
+            # 銘柄名
+            name = s.get("name", "")[:12]
+            draw.text((155, y + 18), name, fill="#FFFFFF", font=f_name)
+
+            # メタ情報
+            sector = s.get("sector", "")
+            div_val = s.get("dividend", 0)
+            meta = f"{s['code']} · {sector} · 配当{div_val:.1f}%"
+            draw.text((155, y + 62), meta, fill="#8E99A8", font=f_meta)
+
+            # スコア
+            score = s.get("score", 0)
+            score_text = f"{score}pt"
+            bbox = draw.textbbox((0, 0), score_text, font=f_rank)
+            sw = bbox[2] - bbox[0]
+            score_color = "#4ADE80" if score >= 60 else "#F59E0B" if score >= 40 else "#F87171"
+            draw.text((W - 90 - sw, y + 25), score_text, fill=score_color, font=f_rank)
+
+            # 押し目バッジ
+            badge = "押し目"
+            draw.rounded_rectangle([(W - 160, y + 82), (W - 75, y + 110)], radius=6, fill="#059669")
+            bbox = draw.textbbox((0, 0), badge, font=f_meta)
+            bw = bbox[2] - bbox[0]
+            draw.text((W - 118 - bw // 2, y + 84), badge, fill="#FFFFFF", font=f_meta)
+
+        # フッター
+        buy_count_val = buy_count
+        total_val = len(results)
+        draw.line([(50, H - 70), (W - 50, H - 70)], fill="#1E3050", width=1)
+        footer_text = f"全{total_val}銘柄スキャン · {buy_count_val}銘柄が買い時 · 毎朝7:30自動更新"
+        draw.text((50, H - 55), footer_text, fill="#4A5568", font=f_footer)
+        draw.text((W - 300, H - 55), "oshime.vercel.app", fill="#1B6AC9", font=f_footer)
+
+        ogp_path = "ogp.png"
+        img.save(ogp_path, "PNG", optimize=True)
+        print(f"  🖼️  OGP画像生成: {ogp_path}")
+    except Exception as e:
+        print(f"  ⚠ OGP画像生成スキップ: {e}")
 
     print("="*58)
 

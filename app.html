@@ -116,78 +116,10 @@ a{color:var(--blue-m);text-decoration:none;}
 .ad-cta{padding:7px 16px;border-radius:8px;font-size:11px;font-weight:700;background:#fff;color:var(--navy-bar);white-space:nowrap;}
 .ad-pr{font-size:8px;color:rgba(255,255,255,0.3);margin-top:5px;}
 
-/* FILTER */
-.filter-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:10px 14px;background:var(--card);border-radius:var(--r);border:1px solid var(--border);margin:10px 12px;box-shadow:var(--sh);}
-.f-label{font-size:10px;color:var(--text3);font-weight:600;}
-.f-tabs{display:flex;gap:3px;}
-.f-tab{padding:4px 12px;border-radius:8px;font-size:11px;font-weight:600;cursor:pointer;color:var(--text2);background:transparent;border:1px solid transparent;transition:all .15s;font-family:var(--f);}
-.f-tab:hover{background:var(--bg);}.f-tab.active{background:var(--navy-bar);color:#fff;}
-
-/* TABLE */
-.sec-hdr{margin:16px 12px 6px;display:flex;align-items:center;justify-content:space-between;}
-.sec-ttl{font-size:15px;font-weight:800;}.sec-act{font-size:11px;color:var(--blue-m);font-weight:700;cursor:pointer;}
-.tbl-wrap{background:var(--card);border-radius:var(--r);margin:0 12px 10px;box-shadow:var(--sh);overflow-x:auto;}
-.tbl{width:100%;border-collapse:collapse;min-width:420px;}
-.tbl thead th{background:var(--blue);color:rgba(255,255,255,0.9);padding:9px 8px;font-size:10px;font-weight:600;text-align:left;cursor:pointer;user-select:none;position:sticky;top:44px;z-index:10;}
-.tbl thead th:hover{background:var(--blue-tab);}
-.tbl tbody td{padding:10px 8px;border-bottom:1px solid var(--border-l);font-size:12px;vertical-align:middle;}
-.tbl tbody tr:nth-child(even){background:#F8FAFC;}
-.tbl tbody tr:hover{background:var(--blue-l);}
-.tbl tbody tr{cursor:pointer;transition:background .1s;}
-.t-nm{font-weight:700;font-size:12px;line-height:1.3;}.t-cd{font-family:var(--fn);font-size:10px;color:var(--text3);}
-.t-num{font-family:var(--fn);text-align:right;font-size:12px;color:var(--text2);}
-.t-badge{font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;display:inline-block;white-space:nowrap;}
-.t-badge.dip{background:var(--green-bg);color:var(--green);}.t-badge.momentum{background:var(--blue-l);color:var(--blue);}
-.t-badge.falling{background:var(--red-bg);color:var(--red);}.t-badge.bounce{background:var(--amber-bg);color:var(--amber);}
-.t-badge.neutral{background:var(--bg);color:var(--text3);}
-.t-sc{font-family:var(--fn);font-weight:800;font-size:14px;}
-.t-spark{width:64px;height:28px;}
-
-/* DETAIL BOX */
-.detail{background:var(--bg);border-radius:12px;padding:18px;margin:4px 0 8px;border:1px solid var(--border);}
-.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-@media(max-width:600px){.detail-grid{grid-template-columns:1fr;}}
-.d-title{font-size:13px;font-weight:700;color:var(--text);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
-.chart-box{background:#FAFBFC;border-radius:10px;padding:10px 8px 6px;border:1px solid var(--border);}
-.chart-svg{width:100%;display:block;}
-.chart-legend{display:flex;gap:12px;padding:6px 0 2px;flex-wrap:wrap;}
-.leg-item{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--text2);}
-.leg-line{width:14px;height:2px;border-radius:1px;}
-.leg-val{font-family:var(--fn);font-weight:700;font-size:10px;}
-.ma-rows{display:flex;flex-direction:column;gap:5px;margin-top:10px;}
-.ma-row{display:flex;align-items:center;gap:6px;font-size:11px;}
-.ma-lbl{min-width:48px;color:var(--text3);font-weight:600;font-size:10px;}
-.ma-bar{flex:1;height:16px;background:var(--border-l);border-radius:3px;position:relative;overflow:hidden;}
-.ma-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.2);}
-.ma-val{min-width:48px;text-align:right;font-family:var(--fn);font-size:11px;font-weight:700;}
-.ma-val.up{color:var(--green);}.ma-val.dn{color:var(--red);}
-.price-levels{margin-top:8px;padding-top:8px;border-top:1px solid var(--border);}
-.pl-row{display:flex;justify-content:space-between;padding:3px 0;font-size:11px;}
-.pl-lbl{color:var(--text2);font-weight:500;}.pl-val{font-family:var(--fn);font-weight:700;}
-.signal-box{background:var(--blue-l);border-radius:8px;padding:12px;margin-top:10px;border:1px solid rgba(27,106,201,0.12);}
-.signal-ttl{font-size:10px;font-weight:700;color:var(--blue);margin-bottom:4px;}
-.signal-txt{font-size:11px;color:var(--text);line-height:1.6;}
-.bd-row{display:flex;align-items:center;gap:6px;font-size:11px;margin-bottom:4px;}
-.bd-l{min-width:100px;color:var(--text2);font-weight:500;font-size:10px;}
-.bd-bar{flex:1;height:5px;background:var(--border-l);border-radius:2px;overflow:hidden;}
-.bd-fill{height:100%;border-radius:2px;}
-.bd-v{font-family:var(--fn);font-size:10px;font-weight:600;min-width:36px;text-align:right;}
-.bd-v.p{color:var(--green);}.bd-v.n{color:var(--red);}
-.d-btns{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
-.d-btn{padding:6px 14px;border-radius:8px;font-size:11px;font-weight:600;border:1px solid var(--border);background:var(--card);color:var(--text2);cursor:pointer;font-family:var(--f);transition:all .15s;display:inline-flex;align-items:center;text-decoration:none;}
-.d-btn:hover{border-color:var(--blue-m);color:var(--blue-m);}
-.d-btn.fav{}.d-btn.fav.active{background:var(--blue);color:#fff;border-color:var(--blue);}
+/* (old table/filter/detail CSS removed) */
 
 /* QUADRANT */
-.q-sec{margin:10px 12px;padding:18px;background:var(--card);border-radius:var(--r);box-shadow:var(--sh);}
-.q-ttl{font-size:13px;font-weight:700;margin-bottom:12px;}
-.q-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-width:380px;margin:0 auto;}
-.q-cell{padding:14px 10px;border-radius:10px;text-align:center;font-size:10px;color:var(--text2);line-height:1.5;}
-.q-cell b{font-size:11px;display:block;margin-bottom:3px;color:var(--text);}
-.q-cell.tl{background:var(--blue-l);}.q-cell.tr{background:var(--purple-bg);}
-.q-cell.bl{background:var(--bg);}.q-cell.br{background:var(--green-bg);border:2px solid var(--green);position:relative;}
-.q-cell.br::after{content:'★';position:absolute;top:5px;right:7px;font-size:10px;color:var(--green);}
-.q-ax{text-align:center;font-size:9px;color:var(--text3);font-weight:500;padding:3px;}
+/* (quadrant removed) */
 
 /* BOTTOM NAV */
 .bnav{position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--border);display:flex;justify-content:space-around;padding:5px 0 max(5px,env(safe-area-inset-bottom));z-index:100;max-width:960px;margin:0 auto;}
@@ -218,6 +150,30 @@ a{color:var(--blue-m);text-decoration:none;}
 .fadein{animation:fadein .3s ease;}
 @keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 
+/* 推移バッジ */
+.rank-chg{font-size:9px;font-weight:700;margin-left:4px;padding:1px 5px;border-radius:6px;}
+.rank-chg.up{background:var(--green-bg);color:var(--green);}
+.rank-chg.dn{background:var(--red-bg);color:var(--red);}
+.rank-chg.same{background:var(--border-l);color:var(--text3);}
+.rank-chg.new{background:var(--amber-bg);color:var(--amber);}
+/* 出来高バッジ */
+.vol-badge{display:inline-flex;align-items:center;gap:2px;padding:2px 7px;border-radius:8px;font-family:var(--fn);font-size:10px;font-weight:700;}
+.vol-badge.high{background:var(--amber-bg);color:var(--amber);}
+.vol-badge.normal{background:var(--border-l);color:var(--text3);}
+/* 履歴セクション */
+.hist-sec{margin:10px 12px;}
+.hist-toggle{background:var(--card);border-radius:var(--r);padding:12px 16px;box-shadow:var(--sh);cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-size:13px;font-weight:700;color:var(--text2);}
+.hist-toggle:hover{background:var(--blue-l);}
+.hist-arrow{transition:transform .2s;font-size:10px;color:var(--text3);}
+.hist-arrow.open{transform:rotate(180deg);}
+.hist-body{background:var(--card);border-radius:0 0 var(--r) var(--r);box-shadow:var(--sh);margin-top:-4px;padding:0 16px 14px;animation:fadein .2s ease;}
+.hist-day{margin-top:12px;}
+.hist-day-ttl{font-size:11px;font-weight:700;color:var(--text2);padding:6px 0;border-bottom:1px solid var(--border);}
+.hist-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border-l);font-size:12px;}
+.hist-row:last-child{border-bottom:none;}
+.hist-rank{width:20px;text-align:center;font-family:var(--fn);font-weight:800;color:var(--text2);}
+.hist-nm{flex:1;font-weight:600;}.hist-sc{font-family:var(--fn);font-weight:800;}
+
 /* ── DETAIL EXPAND (TOP10内アコーディオン) ── */
 .t5-expand{background:var(--bg);padding:16px;border-top:1px solid var(--border);border-left:4px solid var(--blue);animation:fadein .25s ease;}
 .d-grid{display:grid;grid-template-columns:1fr;gap:14px;}
@@ -245,6 +201,12 @@ a{color:var(--blue-m);text-decoration:none;}
 .d-card{text-align:center;padding:10px 6px;background:var(--card);border-radius:8px;border:1px solid var(--border);}
 .d-card b{font-family:var(--fn);font-size:18px;font-weight:800;display:block;}
 .d-card small{font-size:9px;color:var(--text3);}
+/* 安心度 */
+.d-safe{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:8px;}
+.d-safe-item{text-align:center;padding:8px 4px;background:var(--card);border-radius:8px;border:1px solid var(--border);}
+.d-safe-stars{font-size:14px;letter-spacing:1px;display:block;line-height:1.3;}
+.d-safe-lbl{font-size:9px;color:var(--text3);display:block;margin-top:2px;}
+.d-safe-val{font-size:9px;font-family:var(--fn);font-weight:600;color:var(--text2);display:block;}
 .d-signal{background:var(--blue-l);border-radius:8px;padding:12px;margin-top:10px;border:1px solid rgba(27,106,201,0.12);}
 .d-signal b{font-size:10px;font-weight:700;color:var(--blue);display:block;margin-bottom:4px;}
 .d-signal p{font-size:11px;color:var(--text);line-height:1.7;margin:0;}
@@ -287,6 +249,15 @@ a{color:var(--blue-m);text-decoration:none;}
   <button class="share-btn copy" onclick="copyLink()">🔗 コピー</button>
 </div>
 
+<!-- HISTORY -->
+<div class="hist-sec" id="histSection" style="display:none">
+  <div class="hist-toggle" onclick="toggleHistory()">
+    <span>📅 昨日・一昨日のランキング</span>
+    <span class="hist-arrow" id="histArrow">▼</span>
+  </div>
+  <div class="hist-body" id="histBody" style="display:none"></div>
+</div>
+
 <!-- DANGER -->
 <div id="dangerSection"></div>
 
@@ -302,27 +273,11 @@ a{color:var(--blue-m);text-decoration:none;}
   <div class="ad-cta" style="color:#059669">詳しく見る →</div>
 </div>
 
-<!-- QUADRANT -->
-<div class="q-sec">
-  <div class="q-ttl">📍 かぶのすけのポジション</div>
-  <div class="q-ax">▲ ファンダメンタル</div>
-  <div style="display:flex;align-items:center">
-    <div class="q-ax" style="writing-mode:vertical-rl;transform:rotate(180deg);padding:6px 2px">◀ 長期</div>
-    <div class="q-grid" style="flex:1">
-      <div class="q-cell tl"><b>四季報・バフェット</b>ファンダ×長期</div>
-      <div class="q-cell tr"><b>マネックス・SBI</b>ファンダ×短期</div>
-      <div class="q-cell bl"><b>（空白地帯）</b>テクニカル×長期</div>
-      <div class="q-cell br"><b>かぶのすけ</b>テクニカル×短期<br>サポートライン押し目スコア</div>
-    </div>
-    <div class="q-ax" style="writing-mode:vertical-rl;padding:6px 2px">短期 ▶</div>
-  </div>
-  <div class="q-ax">▼ テクニカル</div>
-</div>
-
 <!-- FOOTER -->
 <div class="footer">
   ※ 本サイトは投資助言ではありません。投資判断は自己責任でお願いします。<br>
-  かぶのすけ v7.3 · 押し目スコア · 毎朝7:30自動更新<br>
+  かぶのすけ = テクニカル×短期の押し目スコア（サポートラインで買い場を検出）<br>
+  かぶのすけ v7.5 · 毎朝7:30自動更新<br>
   <a href="#" onclick="openLogic();return false" style="color:var(--blue-m);text-decoration:none;font-weight:600">📐 スコアの仕組みを見る</a>
 </div>
 
@@ -384,6 +339,7 @@ const SAMPLE_STOCKS=[
 const SECTOR_MAP={"銀行業":"🏦 銀行","メガバンク":"🏦 メガバンク","情報・通信業":"📡 通信","通信キャリア":"📡 通信キャリア","電気機器":"⚡ 電機","輸送用機器":"🚗 自動車","医薬品":"💊 医薬","化学":"🧪 化学","卸売業":"📦 商社","総合商社":"📦 総合商社","保険業":"🛡 保険","建設業":"🏗 建設","食料品":"🍙 食品","不動産業":"🏠 不動産","陸運業":"🚃 陸運","機械":"⚙ 機械","鉄鋼":"🔩 鉄鋼","サービス業":"💼 サービス","小売業":"🛒 小売","その他金融業":"💳 金融","ガラス・土石製品":"🧱 ガラス","非鉄金属":"🔧 非鉄","繊維製品":"👕 繊維","石油・石炭製品":"⛽ 石油","電気・ガス業":"💡 電力","海運業":"🚢 海運","空運業":"✈ 空運","鉱業":"⛏ 鉱業","パルプ・紙":"📄 紙パ","ゴム製品":"🔴 ゴム","金属製品":"🔨 金属","精密機器":"🔬 精密","水産・農林業":"🐟 水産","倉庫・運輸関連業":"📦 倉庫","その他製品":"🎯 その他製品","証券、商品先物取引業":"📈 証券","ゲーム・エンタメ":"🎮 ゲーム","半導体":"💎 半導体","IT・SaaS":"💻 SaaS","IT・ネット":"🌐 IT","Technology":"💻 テック","Communication Services":"📡 通信","Financial Services":"💳 金融","Consumer Cyclical":"🛒 消費","Consumer Defensive":"🍙 生活必需","Healthcare":"💊 医薬","Industrials":"⚙ 産業","Basic Materials":"🧪 素材","Energy":"⛽ エネルギー","Real Estate":"🏠 不動産","Utilities":"💡 公益"};
 const TREND_LABEL={"dip":"🛡 押し目","momentum":"🚀 勢い","falling":"⚠ 落ちるナイフ","bounce":"🔄 反発","neutral":"😐 方向感なし","avoid":"🚫 対象外"};
 let RAW=[],processed=[],EVENTS=[];
+let histYesterday=null,histDayBefore=null;
 let settings={mindiv:0,style:'trend',disp:10,zone:'all',sort:'score',sortDir:-1,sector:'all',top5tab:'dip'};
 let favorites=JSON.parse(localStorage.getItem('kbn_fav')||'[]');
 
@@ -433,18 +389,30 @@ function drawSpark(el,closes,w,h){
 function drawDetailChart(el,closes,ma25v,ma75v){
   if(!closes||!closes.length||!el)return;
   const W=400,H=150,P=6;
-  const ma25=calcMA(closes,25);
-  const ma75arr=calcMA(closes,Math.min(closes.length,60));
-  const all=closes.concat(ma25.filter(v=>v!==null),ma75arr.filter(v=>v!==null));
-  const mn=Math.min(...all),mx=Math.max(...all);
+  const ma25calc=calcMA(closes,25);
+  // MA75/MA25の実値を水平線で描画（60日データでは75日MAは計算不可能）
+  const allVals=closes.concat(ma25calc.filter(v=>v!==null));
+  if(ma75v)allVals.push(ma75v);
+  if(ma25v)allVals.push(ma25v);
+  const mn=Math.min(...allVals),mx=Math.max(...allVals);
+  const rng=mx-mn||1;
   const pp=toPath(closes,W,H,P,mn,mx);
   const lastX=P+((closes.length-1)/(closes.length-1))*(W-2*P);
-  const lastY=P+(1-(closes[closes.length-1]-mn)/(mx-mn||1))*(H-2*P);
+  const lastY=P+(1-(closes[closes.length-1]-mn)/rng)*(H-2*P);
   const id='dg_'+Math.random().toString(36).substr(2,6);
+  // MA75水平線Y座標
+  let ma75line='';
+  if(ma75v&&ma75v>=mn&&ma75v<=mx){
+    const y75=P+(1-(ma75v-mn)/rng)*(H-2*P);
+    ma75line=`<line x1="${P}" y1="${y75.toFixed(1)}" x2="${W-P}" y2="${y75.toFixed(1)}" stroke="#059669" stroke-width="2" stroke-dasharray="6,3" opacity="0.8"/>`;
+    ma75line+=`<text x="${W-P-2}" y="${y75.toFixed(1)-4}" font-size="8" fill="#059669" text-anchor="end" font-weight="700">サポート ¥${ma75v.toLocaleString()}</text>`;
+  }
+  // MA25曲線（計算可能な部分）
+  const ma25path=toPath(ma25calc,W,H,P,mn,mx);
   el.innerHTML=`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B6AC9" stop-opacity="0.12"/><stop offset="100%" stop-color="#1B6AC9" stop-opacity="0.01"/></linearGradient></defs>`+
     `<path d="${pp} L${lastX},${H-P} L${P},${H-P} Z" fill="url(#${id})"/>`+
-    `<path d="${toPath(ma75arr,W,H,P,mn,mx)}" fill="none" stroke="#059669" stroke-width="2" opacity="0.8"/>`+
-    `<path d="${toPath(ma25,W,H,P,mn,mx)}" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity="0.7"/>`+
+    ma75line+
+    `<path d="${ma25path}" fill="none" stroke="#F59E0B" stroke-width="1.5" opacity="0.7"/>`+
     `<path d="${pp}" fill="none" stroke="#1A1A1A" stroke-width="2"/>`+
     `<circle cx="${lastX}" cy="${lastY}" r="4" fill="#DC2626" stroke="#fff" stroke-width="2"/>`+
     `<text x="${P}" y="${H-1}" font-size="9" fill="#8E99A8">60日前</text>`+
@@ -564,15 +532,26 @@ function renderHero(){
 
 function genReason(s){
   const parts=[];
-  if(s.ma75_dev!==undefined){
-    if(s.ma75_dev>=0&&s.ma75_dev<=3)parts.push(`サポートライン（緑線）にタッチ接近中`);
-    else if(s.ma75_dev>3&&s.ma75_dev<=8)parts.push(`上昇トレンド継続中`);
-    else if(s.ma75_dev>8)parts.push(`高値圏で推移`);
-    else parts.push(`サポートラインを下回り注意`);
+  if(s.trend_type==='momentum'){
+    // 勢い系の切り口
+    if(s.ret20>5)parts.push(`20日で+${s.ret20.toFixed(0)}%上昇中`);
+    else if(s.ret20>0)parts.push(`じわじわ上昇中`);
+    if((s.vol_ratio_1d||1)>=2)parts.push(`出来高${(s.vol_ratio_1d||1).toFixed(1)}倍に急増`);
+    if(s.ret120>15)parts.push(`半年で+${s.ret120.toFixed(0)}%の強さ`);
+    else if(s.ret120>5)parts.push(`半年で安定上昇`);
+  }else{
+    // 押し目系
+    if(s.ma75_dev!==undefined){
+      if(s.ma75_dev>=0&&s.ma75_dev<=3)parts.push(`サポートライン接近中`);
+      else if(s.ma75_dev>3&&s.ma75_dev<=8)parts.push(`上昇トレンド継続中`);
+      else if(s.ma75_dev>8)parts.push(`高値圏で推移`);
+      else parts.push(`サポートラインを下回り注意`);
+    }
+    if(s.ret120>10)parts.push(`半年で+${s.ret120.toFixed(0)}%成長`);
+    else if(s.ret120>5)parts.push(`半年で安定上昇`);
   }
-  if(s.ret120>10)parts.push(`半年で+${s.ret120.toFixed(0)}%成長`);
-  else if(s.ret120>5)parts.push(`半年で安定上昇`);
   if(s.dividend>=3)parts.push(`配当${s.dividend.toFixed(1)}%`);
+  if((s.vol_ratio_1d||1)>=2&&s.trend_type!=='momentum')parts.push(`出来高急増`);
   return parts.slice(0,3).join(' · ')||'分析中…';
 }
 
@@ -580,6 +559,29 @@ function genReason(s){
 // TOP10 + INLINE DETAIL EXPAND
 // ═══════════════════════════════════════
 let expandedCode=null;
+
+function getRankBadge(code,tab){
+  if(!histYesterday||!histYesterday.version)return '';
+  const key=tab==='dip'?'dip_top10':'mom_top10';
+  const yList=histYesterday[key]||[];
+  const yIdx=yList.findIndex(s=>s.code===code);
+  if(yIdx<0)return '<span class="rank-chg new">🆕</span>';
+  // 今日の順位を取得
+  const todayList=processed.filter(s=>tab==='dip'?s.trend_type==='dip':s.trend_type==='momentum').slice(0,10);
+  const tIdx=todayList.findIndex(s=>s.code===code);
+  if(tIdx<0)return '';
+  const diff=yIdx-tIdx; // positive = moved up
+  if(diff>0)return `<span class="rank-chg up">↑${diff} 昨日${yIdx+1}位</span>`;
+  if(diff<0)return `<span class="rank-chg dn">↓${Math.abs(diff)} 昨日${yIdx+1}位</span>`;
+  return `<span class="rank-chg same">→ 昨日も${yIdx+1}位</span>`;
+}
+
+function getVolBadge(s){
+  const vr=s.vol_ratio_1d||1;
+  if(vr>=3)return `<span class="vol-badge high">📊 出来高 ${vr.toFixed(1)}倍</span>`;
+  if(vr>=1.8)return `<span class="vol-badge high">📊 ${vr.toFixed(1)}倍</span>`;
+  return '';
+}
 
 function renderTop10(){
   const sec=document.getElementById('top5Section');
@@ -594,11 +596,13 @@ function renderTop10(){
     const isOpen=expandedCode===s.code;
     const divBadge=(s.dividend||0)>=2?`<span class="div-badge">💰 ${(s.dividend||0).toFixed(1)}%</span>`:`配当${(s.dividend||0).toFixed(1)}%`;
     const gaugeColor=s.score>=60?'var(--green)':s.score>=40?'var(--amber)':'var(--red)';
+    const rankBadge=getRankBadge(s.code,tab);
+    const volBadge=getVolBadge(s);
     html+=`<div class="t5-item" onclick="toggleExpand('${s.code}')" style="${isOpen?'background:var(--blue-l)':''}">
       <div class="t5-rank${i===0?' gold':''}">${i+1}</div>
       <div class="t5-info">
-        <div class="t5-nm">${s.name}</div>
-        <div class="t5-meta">${s.code} · ${sMap(s.sector,s.code)} · ${divBadge}</div>
+        <div class="t5-nm">${s.name} ${rankBadge}</div>
+        <div class="t5-meta">${s.code} · ${sMap(s.sector,s.code)} · ${divBadge} ${volBadge}</div>
         <div class="t5-reason">${genReason(s)}</div>
       </div>
       ${hasSpark?`<svg class="t5-spark" viewBox="0 0 120 44" data-spark="${s.code}"></svg>`:''}
@@ -641,6 +645,34 @@ function toggleExpand(code){
     },100);
     gaEvent('detail_open',{code});
   }
+}
+
+function buildSafetyRating(s){
+  // 時価総額: ★★★=1兆+, ★★☆=3000億~1兆, ★☆☆=<3000億
+  const mc=s.market_cap_b||0;
+  let mcStars,mcLbl,mcVal;
+  if(mc>=10000){mcStars='★★★';mcLbl='大型株';mcVal=`${(mc/10000).toFixed(1)}兆円`;}
+  else if(mc>=3000){mcStars='★★☆';mcLbl='中型株';mcVal=`${Math.round(mc/100)*100>9999?(mc/10000).toFixed(1)+'兆':Math.round(mc)}億円`;}
+  else{mcStars='★☆☆';mcLbl='小型株';mcVal=`${Math.round(mc)}億円`;}
+  // 流動性: 出来高比で簡易判定
+  const vr=s.vol_ratio_1d||1;
+  let lqStars,lqLbl;
+  if(mc>=10000||vr>=2){lqStars='★★★';lqLbl='売買しやすい';}
+  else if(mc>=3000||vr>=1.2){lqStars='★★☆';lqLbl='ふつう';}
+  else{lqStars='★☆☆';lqLbl='注意';}
+  // 今日の出来高
+  let volStars,volLbl;
+  if(vr>=2.5){volStars='★★★';volLbl='注目度が高い';}
+  else if(vr>=1.3){volStars='★★☆';volLbl='やや活発';}
+  else{volStars='★☆☆';volLbl='静か';}
+  return `<div class="d-safe">
+    <div class="d-safe-item"><span class="d-safe-stars">${mcStars}</span><span class="d-safe-lbl">🏢 企業規模</span><span class="d-safe-val">${mcVal}</span></div>
+    <div class="d-safe-item"><span class="d-safe-stars">${lqStars}</span><span class="d-safe-lbl">💧 売買のしやすさ</span><span class="d-safe-val">${lqLbl}</span></div>
+    <div class="d-safe-item"><span class="d-safe-stars">${volStars}</span><span class="d-safe-lbl">📊 今日の注目度</span><span class="d-safe-val">${volLbl}</span></div>
+  </div>
+  <div style="font-size:9px;color:var(--text3);margin:-2px 0 8px;line-height:1.5">
+    🛡 ★が多い＝初心者でも安心して持てる銘柄
+  </div>`;
 }
 
 function buildExpand(s){
@@ -702,15 +734,17 @@ function buildExpand(s){
     <div>
       <div class="d-sec-ttl">📈 この銘柄のポイント</div>
       <div class="d-cards">
-        <div class="d-card"><b>${(s.dividend||0).toFixed(1)}%</b><small>年間配当</small></div>
-        <div class="d-card"><b>${(s.pbr||0).toFixed(2)}倍</b><small>割安度</small></div>
-        <div class="d-card"><b>${(s.roe||0).toFixed(0)}%</b><small>稼ぐ力</small></div>
+        <div class="d-card"><b>${(s.dividend||0).toFixed(1)}%</b><small>配当利回り</small></div>
+        <div class="d-card"><b>${(s.pbr||0).toFixed(2)}倍</b><small>PBR(割安度)</small></div>
+        <div class="d-card"><b>${(s.roe||0).toFixed(0)}%</b><small>ROE(稼ぐ力)</small></div>
       </div>
-      <div style="font-size:10px;color:var(--text3);margin:-4px 0 10px;line-height:1.5">
-        💡 <strong>年間配当</strong>=持ってるだけでもらえる利益 / <strong>割安度</strong>(PBR)=1倍以下なら割安 / <strong>稼ぐ力</strong>(ROE)=高いほど優秀な会社
+      <div style="font-size:9px;color:var(--text3);margin:-4px 0 8px;line-height:1.6">
+        💡 配当 <strong>3%↑優秀</strong> / PBR <strong>1倍↓割安</strong> / ROE <strong>10%↑稼ぐ力◎</strong>
       </div>
-      <div style="font-size:10px;color:var(--text3);margin-bottom:8px;line-height:1.5">
-        📐 <strong>サポートライン</strong> = 過去75日間の平均株価（MA75）。ここまで下がると反発しやすい「下値の壁」
+      ${buildSafetyRating(s)}
+      <div style="margin-bottom:8px">${(s.vol_ratio_1d||1)>=1.5?`<span class="vol-badge high">📊 出来高: いつもの${(s.vol_ratio_1d||1).toFixed(1)}倍${(s.vol_ratio_1d||1)>=3?' （注目度が非常に高い）':(s.vol_ratio_1d||1)>=2?' （注目度が高い）':''}</span>`:`<span class="vol-badge normal">📊 出来高: 通常レベル</span>`}</div>
+      <div style="font-size:9px;color:var(--text3);margin-bottom:8px;line-height:1.5">
+        📐 <strong>サポートライン</strong> = 75日平均株価。ここまで下がると反発しやすい「下値の壁」
       </div>
       <div class="d-signal"><b>📝 かぶのすけの判定</b><p>${signal}</p></div>
       <div class="d-btns">
@@ -723,11 +757,12 @@ function buildExpand(s){
 }
 
 function setTop5Tab(tab){
-  settings.top5tab=tab;
   expandedCode=null;
+  settings.top5tab=tab;
   document.getElementById('t5TabDip').classList.toggle('active',tab==='dip');
   document.getElementById('t5TabMom').classList.toggle('active',tab==='mom');
   renderTop10();
+  document.getElementById('top5Section').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 function renderDanger(){
@@ -766,6 +801,37 @@ function copyLink(){
 // ── MODALS ──
 function openLogic(){document.getElementById('logicModal').classList.add('open');}
 
+// ── HISTORY ──
+function toggleHistory(){
+  const body=document.getElementById('histBody');
+  const arrow=document.getElementById('histArrow');
+  const isOpen=body.style.display!=='none';
+  body.style.display=isOpen?'none':'';
+  arrow.classList.toggle('open',!isOpen);
+  if(!isOpen)renderHistory();
+}
+function renderHistory(){
+  const body=document.getElementById('histBody');
+  let html='';
+  [histYesterday,histDayBefore].forEach(h=>{
+    if(!h||!h.version)return;
+    const dipList=h.dip_top10||[];
+    const label=h===histYesterday?'昨日':'一昨日';
+    html+=`<div class="hist-day"><div class="hist-day-ttl">📅 ${label}（${h.date}）の押し目TOP10</div>`;
+    if(!dipList.length){html+=`<div style="padding:8px;font-size:11px;color:var(--text3)">データなし</div>`;}
+    dipList.forEach((s,i)=>{
+      html+=`<div class="hist-row">
+        <div class="hist-rank">${i+1}</div>
+        <div class="hist-nm">${s.name}</div>
+        <div class="hist-sc">${s.score}pt</div>
+      </div>`;
+    });
+    html+=`</div>`;
+  });
+  if(!html)html='<div style="padding:14px;font-size:12px;color:var(--text3);text-align:center">履歴データはまだありません（明日以降に表示されます）</div>';
+  body.innerHTML=html;
+}
+
 // ═══════════════════════════════════════
 // RUN & INIT
 // ═══════════════════════════════════════
@@ -774,7 +840,27 @@ function run(){
   renderHero();
   renderTop10();
   renderDanger();
+  // Show history section if data exists
+  const histSec=document.getElementById('histSection');
+  if(histYesterday&&histYesterday.version)histSec.style.display='';
   try{localStorage.setItem('kbn_settings',JSON.stringify({mindiv:settings.mindiv}));}catch(e){}
+}
+
+async function loadHistory(){
+  // 昨日・一昨日のhistory JSONを読み込み
+  const today=new Date();
+  for(let d=1;d<=7;d++){
+    // 土日スキップのため最大7日遡る
+    const dt=new Date(today);dt.setDate(dt.getDate()-d);
+    const ds=dt.toISOString().slice(0,10);
+    try{
+      const r=await fetch(`history/${ds}.json?t=${Date.now()}`);
+      if(!r.ok)continue;
+      const data=await r.json();
+      if(!histYesterday){histYesterday=data;}
+      else if(!histDayBefore){histDayBefore=data;break;}
+    }catch(e){continue;}
+  }
 }
 
 async function init(){
@@ -789,8 +875,9 @@ async function init(){
     RAW=SAMPLE_STOCKS;
     window._updatedAt='サンプルデータ';
   }
+  await loadHistory();
   run();
-  gaEvent('page_view',{version:'v7'});
+  gaEvent('page_view',{version:'v7.5'});
 }
 
 init();

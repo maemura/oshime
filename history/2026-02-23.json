@@ -1,148 +1,399 @@
 {
   "date": "2026-02-23",
-  "updated_at": "2026/02/23 14:56",
+  "updated_at": "2026/02/23 15:54",
+  "version": "v7",
   "market": {
     "nikkei_price": 56826.0,
     "nikkei_ma25": 54810.0,
     "nikkei_1d_chg": -1.12,
     "nasdaq_1d_chg": 0.9,
     "vix": 19.1,
-    "usdjpy": 154.43
+    "usdjpy": 154.29
   },
-  "total_scanned": 1560,
-  "buy_count": 399,
-  "top5": [
+  "total_scanned": 1568,
+  "buy_count": 407,
+  "dip_top10": [
     {
       "code": "6448",
       "name": "ブラザー工業",
       "score": 76,
+      "score_trend": 76,
+      "trend_type": "dip",
       "dividend": 3.23,
       "market_cap_b": 7742.0,
+      "ma75_dev": 0.61,
+      "ma25_dev": -2.52,
       "ret5": -0.29,
-      "ret10": -5.14,
-      "dip_zscore": -1.9,
-      "ret5_vs_sector": -1.62,
+      "ret20": -3.64,
+      "ret120": 23.67,
+      "vol_ratio_1d": 1.38,
       "sector": "機械",
-      "sector_ret5": 1.33,
-      "div_growth_years": 0,
-      "price": 3098.0
+      "price": 3098.0,
+      "pbr": 1.06,
+      "roe": 7.1
     },
     {
       "code": "9336",
       "name": "大栄環境",
       "score": 76,
+      "score_trend": 76,
+      "trend_type": "dip",
       "dividend": 1.27,
       "market_cap_b": 3844.0,
+      "ma75_dev": 0.15,
+      "ma25_dev": -4.93,
       "ret5": 0.13,
-      "ret10": -7.56,
-      "dip_zscore": -2.82,
-      "ret5_vs_sector": -1.2,
+      "ret20": -6.21,
+      "ret120": 25.11,
+      "vol_ratio_1d": 1.27,
       "sector": "機械",
-      "sector_ret5": 1.33,
-      "div_growth_years": 0,
-      "price": 3850.0
+      "price": 3850.0,
+      "pbr": 3.69,
+      "roe": 13.9
     },
     {
       "code": "6458",
       "name": "新晃工業",
       "score": 75,
+      "score_trend": 75,
+      "trend_type": "dip",
       "dividend": 3.48,
       "market_cap_b": 970.0,
+      "ma75_dev": 1.82,
+      "ma25_dev": -4.25,
       "ret5": -1.98,
-      "ret10": -6.08,
-      "dip_zscore": -2.49,
-      "ret5_vs_sector": -3.31,
+      "ret20": -5.46,
+      "ret120": 15.18,
+      "vol_ratio_1d": 0.95,
       "sector": "機械",
-      "sector_ret5": 1.33,
-      "div_growth_years": 0,
-      "price": 1437.0
+      "price": 1437.0,
+      "pbr": 1.57,
+      "roe": 10.6
     },
     {
       "code": "3382",
       "name": "セブン＆アイ・ホールディングス",
       "score": 73,
+      "score_trend": 73,
+      "trend_type": "dip",
       "dividend": 2.28,
       "market_cap_b": 51124.0,
+      "ma75_dev": 0.51,
+      "ma25_dev": -3.4,
       "ret5": -7.75,
-      "ret10": -5.13,
-      "dip_zscore": -2.12,
-      "ret5_vs_sector": -6.96,
+      "ret20": -1.77,
+      "ret120": 11.19,
+      "vol_ratio_1d": 1.05,
       "sector": "食料品",
-      "sector_ret5": -0.79,
-      "div_growth_years": 5,
-      "price": 2191.0
+      "price": 2191.0,
+      "pbr": 1.49,
+      "roe": 8.6
     },
     {
       "code": "6118",
       "name": "アイダエンジニアリング",
       "score": 72,
+      "score_trend": 72,
+      "trend_type": "dip",
       "dividend": 3.19,
       "market_cap_b": 629.0,
+      "ma75_dev": 0.63,
+      "ma25_dev": -4.58,
       "ret5": -1.61,
-      "ret10": -6.68,
-      "dip_zscore": -2.86,
-      "ret5_vs_sector": -2.94,
+      "ret20": -7.72,
+      "ret120": 22.65,
+      "vol_ratio_1d": 0.44,
       "sector": "機械",
-      "sector_ret5": 1.33,
-      "div_growth_years": 0,
-      "price": 1159.0
+      "price": 1159.0,
+      "pbr": 0.74,
+      "roe": 6.1
+    },
+    {
+      "code": "8084",
+      "name": "ＲＹＯＤＥＮ",
+      "score": 72,
+      "score_trend": 72,
+      "trend_type": "dip",
+      "dividend": 3.83,
+      "market_cap_b": 765.0,
+      "ma75_dev": 2.59,
+      "ma25_dev": -3.22,
+      "ret5": -3.14,
+      "ret20": -6.82,
+      "ret120": 18.74,
+      "vol_ratio_1d": 1.14,
+      "sector": "情報・通信業",
+      "price": 3550.0,
+      "pbr": 0.85,
+      "roe": 5.9
+    },
+    {
+      "code": "8892",
+      "name": "エスコン",
+      "score": 71,
+      "score_trend": 71,
+      "trend_type": "dip",
+      "dividend": 4.26,
+      "market_cap_b": 1078.0,
+      "ma75_dev": 1.55,
+      "ma25_dev": -4.61,
+      "ret5": -2.84,
+      "ret20": -8.08,
+      "ret120": 9.74,
+      "vol_ratio_1d": 0.95,
+      "sector": "不動産業",
+      "price": 1127.0,
+      "pbr": 1.37,
+      "roe": 0.0
+    },
+    {
+      "code": "3539",
+      "name": "ＪＭホールディングス",
+      "score": 70,
+      "score_trend": 70,
+      "trend_type": "dip",
+      "dividend": 1.42,
+      "market_cap_b": 859.0,
+      "ma75_dev": 2.57,
+      "ma25_dev": -3.79,
+      "ret5": -5.44,
+      "ret20": -3.49,
+      "ret120": 19.17,
+      "vol_ratio_1d": 1.11,
+      "sector": "食料品",
+      "price": 1686.0,
+      "pbr": 1.89,
+      "roe": 14.8
+    },
+    {
+      "code": "4526",
+      "name": "理研ビタミン",
+      "score": 70,
+      "score_trend": 70,
+      "trend_type": "dip",
+      "dividend": 3.67,
+      "market_cap_b": 879.0,
+      "ma75_dev": 0.66,
+      "ma25_dev": -4.12,
+      "ret5": -1.96,
+      "ret20": -3.38,
+      "ret120": 4.33,
+      "vol_ratio_1d": 1.99,
+      "sector": "食料品",
+      "price": 3000.0,
+      "pbr": 1.08,
+      "roe": 11.7
+    },
+    {
+      "code": "8214",
+      "name": "ＡＯＫＩホールディングス",
+      "score": 70,
+      "score_trend": 70,
+      "trend_type": "dip",
+      "dividend": 4.5,
+      "market_cap_b": 1496.0,
+      "ma75_dev": 0.57,
+      "ma25_dev": -3.13,
+      "ret5": -2.09,
+      "ret20": -5.22,
+      "ret120": 1.62,
+      "vol_ratio_1d": 1.46,
+      "sector": "小売業",
+      "price": 1778.0,
+      "pbr": 1.08,
+      "roe": 6.3
     }
   ],
-  "top5_momentum": [
+  "mom_top10": [
     {
-      "code": "4973",
-      "name": "日本高純度化学",
-      "score_momentum": 77,
-      "ret20": 32.0,
-      "ret60": 72.27,
-      "roe": 10.9,
-      "vol_trend": 1.14,
-      "sector_ret5": 1.94,
-      "price": 5280.0
+      "code": "3003",
+      "name": "ヒューリック",
+      "score": 69,
+      "score_trend": 69,
+      "trend_type": "momentum",
+      "dividend": 3.29,
+      "market_cap_b": 15479.0,
+      "ma75_dev": 16.99,
+      "ma25_dev": 8.07,
+      "ret5": 0.47,
+      "ret20": 14.07,
+      "ret120": 30.97,
+      "vol_ratio_1d": 0.66,
+      "sector": "不動産業",
+      "price": 2038.5,
+      "pbr": 1.69,
+      "roe": 12.8
     },
     {
-      "code": "6140",
-      "name": "旭ダイヤモンド工業",
-      "score_momentum": 76,
-      "ret20": 28.73,
-      "ret60": 42.84,
-      "roe": 0.0,
-      "vol_trend": 3.0,
-      "sector_ret5": 1.33,
-      "price": 1147.0
+      "code": "4502",
+      "name": "武田薬品工業",
+      "score": 69,
+      "score_trend": 69,
+      "trend_type": "momentum",
+      "dividend": 3.45,
+      "market_cap_b": 91459.0,
+      "ma75_dev": 19.86,
+      "ma25_dev": 7.84,
+      "ret5": 3.14,
+      "ret20": 15.18,
+      "ret120": 31.28,
+      "vol_ratio_1d": 0.81,
+      "sector": "医薬品",
+      "price": 5790.0,
+      "pbr": 1.2,
+      "roe": 1.5
     },
     {
-      "code": "3465",
-      "name": "ケイアイスター不動産",
-      "score_momentum": 74,
-      "ret20": 23.71,
-      "ret60": 48.0,
-      "roe": 21.4,
-      "vol_trend": 1.85,
-      "sector_ret5": 1.05,
-      "price": 8140.0
+      "code": "4114",
+      "name": "日本触媒",
+      "score": 68,
+      "score_trend": 68,
+      "trend_type": "momentum",
+      "dividend": 4.08,
+      "market_cap_b": 3622.0,
+      "ma75_dev": 20.25,
+      "ma25_dev": 5.97,
+      "ret5": 1.22,
+      "ret20": 10.08,
+      "ret120": 36.57,
+      "vol_ratio_1d": 0.71,
+      "sector": "化学",
+      "price": 2451.5,
+      "pbr": 0.93,
+      "roe": 4.7
     },
     {
-      "code": "7972",
-      "name": "イトーキ",
-      "score_momentum": 71,
-      "ret20": 25.05,
-      "ret60": 44.47,
-      "roe": 17.7,
-      "vol_trend": 1.82,
-      "sector_ret5": 0.25,
-      "price": 3205.0
+      "code": "4503",
+      "name": "アステラス製薬",
+      "score": 68,
+      "score_trend": 68,
+      "trend_type": "momentum",
+      "dividend": 3.15,
+      "market_cap_b": 44364.0,
+      "ma75_dev": 17.47,
+      "ma25_dev": 6.49,
+      "ret5": -1.35,
+      "ret20": 10.31,
+      "ret120": 51.44,
+      "vol_ratio_1d": 0.8,
+      "sector": "医薬品",
+      "price": 2476.5,
+      "pbr": 2.52,
+      "roe": 19.8
     },
     {
-      "code": "3482",
-      "name": "ロードスターキャピタル",
-      "score_momentum": 70,
-      "ret20": 15.4,
-      "ret60": 30.74,
-      "roe": 27.2,
-      "vol_trend": 1.85,
-      "sector_ret5": 1.05,
-      "price": 3560.0
+      "code": "5076",
+      "name": "インフロニア・ホールディングス",
+      "score": 68,
+      "score_trend": 68,
+      "trend_type": "momentum",
+      "dividend": 4.83,
+      "market_cap_b": 6483.0,
+      "ma75_dev": 19.79,
+      "ma25_dev": 5.02,
+      "ret5": 0.16,
+      "ret20": 12.12,
+      "ret120": 82.44,
+      "vol_ratio_1d": 1.06,
+      "sector": "機械",
+      "price": 2566.5,
+      "pbr": 1.13,
+      "roe": 11.4
+    },
+    {
+      "code": "8591",
+      "name": "オリックス",
+      "score": 68,
+      "score_trend": 68,
+      "trend_type": "momentum",
+      "dividend": 3.47,
+      "market_cap_b": 59824.0,
+      "ma75_dev": 19.7,
+      "ma25_dev": 8.51,
+      "ret5": -0.61,
+      "ret20": 14.69,
+      "ret120": 44.3,
+      "vol_ratio_1d": 1.03,
+      "sector": "その他金融業",
+      "price": 5410.0,
+      "pbr": 1.31,
+      "roe": 10.7
+    },
+    {
+      "code": "9503",
+      "name": "関西電力",
+      "score": 68,
+      "score_trend": 68,
+      "trend_type": "momentum",
+      "dividend": 3.36,
+      "market_cap_b": 29879.0,
+      "ma75_dev": 6.48,
+      "ma25_dev": 4.39,
+      "ret5": -2.31,
+      "ret20": 5.16,
+      "ret120": 32.15,
+      "vol_ratio_1d": 1.24,
+      "sector": "電気・ガス業",
+      "price": 2682.0,
+      "pbr": 0.88,
+      "roe": 12.4
+    },
+    {
+      "code": "3289",
+      "name": "東急不動産ホールディングス",
+      "score": 67,
+      "score_trend": 67,
+      "trend_type": "momentum",
+      "dividend": 2.86,
+      "market_cap_b": 11101.0,
+      "ma75_dev": 8.54,
+      "ma25_dev": 4.39,
+      "ret5": 0.71,
+      "ret20": 5.82,
+      "ret120": 31.18,
+      "vol_ratio_1d": 0.92,
+      "sector": "不動産業",
+      "price": 1554.0,
+      "pbr": 1.31,
+      "roe": 11.3
+    },
+    {
+      "code": "3401",
+      "name": "帝人",
+      "score": 67,
+      "score_trend": 67,
+      "trend_type": "momentum",
+      "dividend": 3.04,
+      "market_cap_b": 3168.0,
+      "ma75_dev": 18.02,
+      "ma25_dev": 5.65,
+      "ret5": -2.29,
+      "ret20": 12.73,
+      "ret120": 30.22,
+      "vol_ratio_1d": 1.17,
+      "sector": "機械",
+      "price": 1642.5,
+      "pbr": 0.82,
+      "roe": -18.9
+    },
+    {
+      "code": "7337",
+      "name": "ひろぎんホールディングス",
+      "score": 67,
+      "score_trend": 67,
+      "trend_type": "momentum",
+      "dividend": 2.81,
+      "market_cap_b": 5746.0,
+      "ma75_dev": 17.64,
+      "ma25_dev": 5.92,
+      "ret5": -0.77,
+      "ret20": 12.51,
+      "ret120": 38.32,
+      "vol_ratio_1d": 0.9,
+      "sector": "その他金融業",
+      "price": 1924.5,
+      "pbr": 1.03,
+      "roe": 7.3
     }
   ],
   "top50_codes": [
@@ -174,6 +425,7 @@
     "3289",
     "3401",
     "7337",
+    "7751",
     "8001",
     "8103",
     "8309",
@@ -187,386 +439,365 @@
     "4732",
     "5020",
     "5451",
+    "5832",
     "6178",
+    "6727",
     "7167",
     "7186",
     "7327",
     "8078",
-    "8137",
-    "8331",
-    "8381",
-    "8804"
+    "8137"
   ],
   "top50_scores": [
     {
       "code": "6448",
       "score": 76,
+      "trend_type": "dip",
       "price": 3098.0,
-      "dividend": 3.23,
-      "ret5": -0.29
+      "dividend": 3.23
     },
     {
       "code": "9336",
       "score": 76,
+      "trend_type": "dip",
       "price": 3850.0,
-      "dividend": 1.27,
-      "ret5": 0.13
+      "dividend": 1.27
     },
     {
       "code": "6458",
       "score": 75,
+      "trend_type": "dip",
       "price": 1437.0,
-      "dividend": 3.48,
-      "ret5": -1.98
+      "dividend": 3.48
     },
     {
       "code": "3382",
       "score": 73,
+      "trend_type": "dip",
       "price": 2191.0,
-      "dividend": 2.28,
-      "ret5": -7.75
+      "dividend": 2.28
     },
     {
       "code": "6118",
       "score": 72,
+      "trend_type": "dip",
       "price": 1159.0,
-      "dividend": 3.19,
-      "ret5": -1.61
+      "dividend": 3.19
     },
     {
       "code": "8084",
       "score": 72,
+      "trend_type": "dip",
       "price": 3550.0,
-      "dividend": 3.83,
-      "ret5": -3.14
+      "dividend": 3.83
     },
     {
       "code": "8892",
       "score": 71,
+      "trend_type": "dip",
       "price": 1127.0,
-      "dividend": 4.26,
-      "ret5": -2.84
+      "dividend": 4.26
     },
     {
       "code": "3539",
       "score": 70,
+      "trend_type": "dip",
       "price": 1686.0,
-      "dividend": 1.42,
-      "ret5": -5.44
+      "dividend": 1.42
     },
     {
       "code": "4526",
       "score": 70,
+      "trend_type": "dip",
       "price": 3000.0,
-      "dividend": 3.67,
-      "ret5": -1.96
+      "dividend": 3.67
     },
     {
       "code": "8214",
       "score": 70,
+      "trend_type": "dip",
       "price": 1778.0,
-      "dividend": 4.5,
-      "ret5": -2.09
+      "dividend": 4.5
     },
     {
       "code": "1762",
       "score": 69,
+      "trend_type": "dip",
       "price": 3935.0,
-      "dividend": 2.29,
-      "ret5": 0.38
+      "dividend": 2.29
     },
     {
       "code": "3003",
       "score": 69,
+      "trend_type": "momentum",
       "price": 2038.5,
-      "dividend": 3.29,
-      "ret5": 0.47
+      "dividend": 3.29
     },
     {
       "code": "4043",
       "score": 69,
+      "trend_type": "dip",
       "price": 4169.0,
-      "dividend": 2.88,
-      "ret5": 0.99
+      "dividend": 2.88
     },
     {
       "code": "4502",
       "score": 69,
+      "trend_type": "momentum",
       "price": 5790.0,
-      "dividend": 3.45,
-      "ret5": 3.14
+      "dividend": 3.45
     },
     {
       "code": "4665",
       "score": 69,
+      "trend_type": "dip",
       "price": 4227.0,
-      "dividend": 3.08,
-      "ret5": -1.86
+      "dividend": 3.08
     },
     {
       "code": "5214",
       "score": 69,
+      "trend_type": "dip",
       "price": 6180.0,
-      "dividend": 2.59,
-      "ret5": 8.42
+      "dividend": 2.59
     },
     {
       "code": "4114",
       "score": 68,
+      "trend_type": "momentum",
       "price": 2451.5,
-      "dividend": 4.08,
-      "ret5": 1.22
+      "dividend": 4.08
     },
     {
       "code": "4503",
       "score": 68,
+      "trend_type": "momentum",
       "price": 2476.5,
-      "dividend": 3.15,
-      "ret5": -1.35
+      "dividend": 3.15
     },
     {
       "code": "5076",
       "score": 68,
+      "trend_type": "momentum",
       "price": 2566.5,
-      "dividend": 4.83,
-      "ret5": 0.16
+      "dividend": 4.83
     },
     {
       "code": "6351",
       "score": 68,
+      "trend_type": "dip",
       "price": 2203.0,
-      "dividend": 1.23,
-      "ret5": -1.17
+      "dividend": 1.23
     },
     {
       "code": "7309",
       "score": 68,
+      "trend_type": "dip",
       "price": 16880.0,
-      "dividend": 2.15,
-      "ret5": 0.75
+      "dividend": 2.15
     },
     {
       "code": "7911",
       "score": 68,
+      "trend_type": "dip",
       "price": 4606.0,
-      "dividend": 1.22,
-      "ret5": -5.81
+      "dividend": 1.22
     },
     {
       "code": "8591",
       "score": 68,
+      "trend_type": "momentum",
       "price": 5410.0,
-      "dividend": 3.47,
-      "ret5": -0.61
+      "dividend": 3.47
     },
     {
       "code": "9503",
       "score": 68,
+      "trend_type": "momentum",
       "price": 2682.0,
-      "dividend": 3.36,
-      "ret5": -2.31
+      "dividend": 3.36
     },
     {
       "code": "2146",
       "score": 67,
+      "trend_type": "dip",
       "price": 202.0,
-      "dividend": 5.15,
-      "ret5": 0.5
+      "dividend": 5.15
     },
     {
       "code": "3289",
       "score": 67,
+      "trend_type": "momentum",
       "price": 1554.0,
-      "dividend": 2.86,
-      "ret5": 0.71
+      "dividend": 2.86
     },
     {
       "code": "3401",
       "score": 67,
+      "trend_type": "momentum",
       "price": 1642.5,
-      "dividend": 3.04,
-      "ret5": -2.29
+      "dividend": 3.04
     },
     {
       "code": "7337",
       "score": 67,
+      "trend_type": "momentum",
       "price": 1924.5,
-      "dividend": 2.81,
-      "ret5": -0.77
+      "dividend": 2.81
+    },
+    {
+      "code": "7751",
+      "score": 67,
+      "trend_type": "dip",
+      "price": 4685.0,
+      "dividend": 3.42
     },
     {
       "code": "8001",
       "score": 67,
+      "trend_type": "momentum",
       "price": 2192.5,
-      "dividend": 2.01,
-      "ret5": -1.48
+      "dividend": 2.01
     },
     {
       "code": "8103",
       "score": 67,
+      "trend_type": "dip",
       "price": 943.0,
-      "dividend": 4.03,
-      "ret5": -2.28
+      "dividend": 4.03
     },
     {
       "code": "8309",
       "score": 67,
+      "trend_type": "momentum",
       "price": 5484.0,
-      "dividend": 3.28,
-      "ret5": -4.46
+      "dividend": 3.28
     },
     {
       "code": "8593",
       "score": 67,
+      "trend_type": "momentum",
       "price": 1503.5,
-      "dividend": 3.06,
-      "ret5": 2.49
+      "dividend": 3.06
     },
     {
       "code": "9107",
       "score": 67,
+      "trend_type": "momentum",
       "price": 2405.5,
-      "dividend": 4.99,
-      "ret5": 3.75
+      "dividend": 4.99
     },
     {
       "code": "9502",
       "score": 67,
+      "trend_type": "momentum",
       "price": 2573.5,
-      "dividend": 2.72,
-      "ret5": -1.7
+      "dividend": 2.72
     },
     {
       "code": "1802",
       "score": 66,
+      "trend_type": "momentum",
       "price": 4153.0,
-      "dividend": 2.09,
-      "ret5": -1.02
+      "dividend": 2.09
     },
     {
       "code": "1878",
       "score": 66,
+      "trend_type": "momentum",
       "price": 3470.0,
-      "dividend": 4.12,
-      "ret5": -1.17
+      "dividend": 4.12
     },
     {
       "code": "3407",
       "score": 66,
+      "trend_type": "momentum",
       "price": 1740.0,
-      "dividend": 2.3,
-      "ret5": 0.17
+      "dividend": 2.3
     },
     {
       "code": "4694",
       "score": 66,
+      "trend_type": "momentum",
       "price": 4145.0,
-      "dividend": 2.9,
-      "ret5": 0.48
+      "dividend": 2.9
     },
     {
       "code": "4732",
       "score": 66,
+      "trend_type": "momentum",
       "price": 1849.0,
-      "dividend": 2.88,
-      "ret5": 0.74
+      "dividend": 2.88
     },
     {
       "code": "5020",
       "score": 66,
+      "trend_type": "momentum",
       "price": 1456.0,
-      "dividend": 2.34,
-      "ret5": 2.14
+      "dividend": 2.34
     },
     {
       "code": "5451",
       "score": 66,
+      "trend_type": "dip",
       "price": 1406.0,
-      "dividend": 4.27,
-      "ret5": 0.64
+      "dividend": 4.27
+    },
+    {
+      "code": "5832",
+      "score": 66,
+      "trend_type": "momentum",
+      "price": 3348.0,
+      "dividend": 2.51
     },
     {
       "code": "6178",
       "score": 66,
+      "trend_type": "momentum",
       "price": 2012.0,
-      "dividend": 2.49,
-      "ret5": -1.57
+      "dividend": 2.49
+    },
+    {
+      "code": "6727",
+      "score": 66,
+      "trend_type": "momentum",
+      "price": 849.0,
+      "dividend": 2.83
     },
     {
       "code": "7167",
       "score": 66,
+      "trend_type": "momentum",
       "price": 1320.0,
-      "dividend": 2.12,
-      "ret5": 0.38
+      "dividend": 2.12
     },
     {
       "code": "7186",
       "score": 66,
+      "trend_type": "momentum",
       "price": 1698.5,
-      "dividend": 2.18,
-      "ret5": 1.04
+      "dividend": 2.18
     },
     {
       "code": "7327",
       "score": 66,
+      "trend_type": "momentum",
       "price": 1998.0,
-      "dividend": 2.7,
-      "ret5": -1.77
+      "dividend": 2.7
     },
     {
       "code": "8078",
       "score": 66,
+      "trend_type": "momentum",
       "price": 8800.0,
-      "dividend": 2.84,
-      "ret5": 0.57
+      "dividend": 2.84
     },
     {
       "code": "8137",
       "score": 66,
+      "trend_type": "momentum",
       "price": 3310.0,
-      "dividend": 3.63,
-      "ret5": 1.85
-    },
-    {
-      "code": "8331",
-      "score": 66,
-      "price": 2383.5,
-      "dividend": 2.35,
-      "ret5": -0.48
-    },
-    {
-      "code": "8381",
-      "score": 66,
-      "price": 1764.0,
-      "dividend": 3.17,
-      "ret5": 0.68
-    },
-    {
-      "code": "8804",
-      "score": 66,
-      "price": 4145.0,
-      "dividend": 2.94,
-      "ret5": 0.41
+      "dividend": 3.63
     }
-  ],
-  "sector_ret5_avg": {
-    "食料品": -0.79,
-    "機械": 1.33,
-    "小売業": 0.25,
-    "化学": 1.94,
-    "石油・石炭製品": 2.15,
-    "電気・ガス業": 2.87,
-    "情報・通信業": 1.15,
-    "不動産業": 1.05,
-    "ゲーム・エンタメ": 1.37,
-    "その他金融業": 0.02,
-    "医薬品": NaN,
-    "IT・SaaS": 1.66,
-    "IT・ネット": -3.5,
-    "半導体": -1.47,
-    "その他": 0.17,
-    "総合商社": -3.02,
-    "メガバンク": -3.42,
-    "通信キャリア": -2.38
-  }
+  ]
 }
