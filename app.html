@@ -854,119 +854,58 @@ function renderSectorTrend(){
     `<span style="color:var(--blue);font-weight:600">📌 注目セクター：</span>${top3.join('、')}<div style="margin-top:4px;font-size:10px;color:var(--text3)">👆 セクターをタップで銘柄一覧</div>`;
 }
 
-// セクター名→yfinanceセクター名の逆引き
-const JP_TO_EN={"金融":"Financial Services","素材":"Basic Materials","エネルギー":"Energy",
-  "産業":"Industrials","不動産":"Real Estate","消費（景気敏感）":"Consumer Cyclical",
-  "消費（安定）":"Consumer Defensive","医薬・ヘルスケア":"Healthcare",
-  "テック":"Technology","通信・メディア":"Communication Services","電力・ガス":"Utilities"};
-// スコアキー→マッチすべきキーワード群
-const SEC_KEYWORDS={"金融":["Financial Services","メガバンク","地銀","証券","保険","リース","銀行","金融"],
-  "素材":["Basic Materials","素材","鉄鋼","化学","ゴム","ガラス","紙"],
-  "エネルギー":["Energy","エネルギー","石油","鉱業"],
-  "産業":["Industrials","産業","商社","総合商社","建設","重工","機械","海運","陸運","倉庫","自動車","輸送"],
-  "不動産":["Real Estate","不動産","住宅","REIT"],
-  "消費（景気敏感）":["Consumer Cyclical","消費","小売","アパレル","百貨店","外食"],
-  "消費（安定）":["Consumer Defensive","消費","食品","飲料","日用品","たばこ"],
-  "医薬・ヘルスケア":["Healthcare","医薬","ヘルスケア","製薬","バイオ"],
-  "テック":["Technology","テック","IT","SaaS","半導体","ゲーム","電機","精密"],
-  "通信・メディア":["Communication Services","通信","メディア","放送","広告","キャリア"],
-  "電力・ガス":["Utilities","電力","ガス","公益"]};
 
-// コード→セクターカテゴリ（確実にマッチさせるための直接マッピング）
-const CODE_TO_SECTOR_CAT={
-  // 金融
-  "8306":"金融","8316":"金融","8411":"金融","8308":"金融","8331":"金融","8354":"金融","5831":"金融",
-  "8766":"金融","8725":"金融","8750":"金融","8630":"金融","8795":"金融",
-  "8591":"金融","8593":"金融","8601":"金融","8604":"金融","8309":"金融",
-  // エネルギー
-  "1605":"エネルギー","5020":"エネルギー","5019":"エネルギー",
-  // 素材
-  "5401":"素材","5411":"素材","5406":"素材","5713":"素材","3407":"素材","4063":"素材","4188":"素材",
-  // 産業（商社・建設・重工・海運・機械）
-  "8058":"産業","8031":"産業","8001":"産業","8002":"産業","8053":"産業","8015":"産業",
-  "1801":"産業","1802":"産業","1812":"産業","1803":"産業",
-  "7011":"産業","7012":"産業","7013":"産業","6301":"産業","6326":"産業",
-  "9101":"産業","9104":"産業","9107":"産業",
-  "7203":"産業","7267":"産業","7269":"産業","7270":"産業","7272":"産業","7261":"産業","7201":"産業",
-  "6902":"産業","6367":"産業","6273":"産業","6361":"産業",
-  // 不動産
-  "8801":"不動産","8802":"不動産","8830":"不動産","1925":"不動産","1928":"不動産",
-  // テック
-  "6758":"テック","6861":"テック","6501":"テック","6503":"テック","6702":"テック","6752":"テック",
-  "8035":"テック","6857":"テック","6920":"テック","6723":"テック","6526":"テック","6146":"テック",
-  "6954":"テック","6506":"テック","6504":"テック","6971":"テック","6981":"テック","6976":"テック",
-  "6594":"テック","6645":"テック","6701":"テック","6098":"テック","7974":"テック",
-  // 通信・メディア
-  "9432":"通信・メディア","9433":"通信・メディア","9434":"通信・メディア","9613":"通信・メディア",
-  // 電力・ガス
-  "9501":"電力・ガス","9502":"電力・ガス","9503":"電力・ガス","9508":"電力・ガス",
-  "9531":"電力・ガス","9532":"電力・ガス",
-  // 消費（景気敏感）
-  "3382":"消費（景気敏感）","8267":"消費（景気敏感）","7532":"消費（景気敏感）",
-  "9843":"消費（景気敏感）","9983":"消費（景気敏感）","3099":"消費（景気敏感）","8233":"消費（景気敏感）",
-  // 消費（安定）
-  "2914":"消費（安定）","2802":"消費（安定）","2502":"消費（安定）","2503":"消費（安定）",
-  "4452":"消費（安定）","8113":"消費（安定）","2801":"消費（安定）",
-  // 医薬
-  "4502":"医薬・ヘルスケア","4503":"医薬・ヘルスケア","4568":"医薬・ヘルスケア",
-  "4519":"医薬・ヘルスケア","4507":"医薬・ヘルスケア","4523":"医薬・ヘルスケア","4543":"医薬・ヘルスケア",
-};
-
+// セクタータップ→銘柄一覧（JSONのcodes配列で直接引く。マッチング不要）
 function showSectorStocks(secName){
-  const keywords=SEC_KEYWORDS[secName]||[secName];
-  // RAWから全銘柄を対象に検索（フィルター設定に関係なく）
-  const allScored=RAW.map(s=>{
-    const {score,type}=calcScoreTrend(s);
-    return {...s,score,trend_type:type};
-  });
-  const matches=allScored.filter(s=>{
-    // 1. コード直接マッピング（最優先・確実）
-    if(CODE_TO_SECTOR_CAT[s.code]===secName)return true;
-    // 2. yfinanceセクター名マッチ
-    const sSec=s.sector||'';
-    if(keywords.some(kw=>sSec===kw))return true;
-    // 3. 表示名マッチ
-    const sDisp=sMap(sSec,s.code);
-    if(keywords.some(kw=>sDisp.includes(kw)))return true;
-    return false;
-  }).sort((a,b)=>b.score-a.score).slice(0,15);
+  try{
+    const secData=sectorScores[secName];
+    const codes=secData&&secData.codes?secData.codes:[];
+    if(!codes.length){alert(secName+': 銘柄データがありません');return;}
+    const codeSet=new Set(codes);
+    const matches=RAW.filter(s=>codeSet.has(s.code)).map(s=>{
+      const {score,type}=calcScoreTrend(s);
+      return {...s,score,trend_type:type};
+    }).sort((a,b)=>b.score-a.score).slice(0,15);
 
-  // モーダル表示（PC=中央、スマホ=下からスライド）
-  let html=`<div id="secModal" onclick="if(event.target.id==='secModal')this.remove()" style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:999;display:flex;align-items:center;justify-content:center;padding:16px">
-    <div style="background:var(--bg);max-width:480px;width:100%;max-height:80vh;border-radius:16px;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3)">
-      <div style="padding:16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg);z-index:1;border-radius:16px 16px 0 0">
-        <div><div style="font-weight:700;font-size:16px">📊 ${secName} セクター</div>
-        <div style="font-size:11px;color:var(--text3);margin-top:2px">${matches.length}銘柄 ・ スコア順</div></div>
-        <div onclick="this.closest('#secModal').remove()" style="font-size:20px;cursor:pointer;padding:8px 12px;color:var(--text3);background:var(--border);border-radius:8px;line-height:1">✕</div>
-      </div>`;
+    const old=document.getElementById('secModal');
+    if(old)old.remove();
+    let html=`<div id="secModal" onclick="if(event.target.id==='secModal')this.remove()" style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:999;display:flex;align-items:center;justify-content:center;padding:16px">
+      <div style="background:var(--bg);max-width:480px;width:100%;max-height:80vh;border-radius:16px;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3)">
+        <div style="padding:16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg);z-index:1;border-radius:16px 16px 0 0">
+          <div><div style="font-weight:700;font-size:16px">${secName} セクター</div>
+          <div style="font-size:11px;color:var(--text3);margin-top:2px">${matches.length}銘柄 ・ スコア順</div></div>
+          <div onclick="document.getElementById('secModal').remove()" style="font-size:16px;cursor:pointer;padding:8px 12px;color:var(--text3);background:var(--border);border-radius:8px;font-weight:700">✕</div>
+        </div>`;
 
-  if(!matches.length){
-    html+='<div style="padding:32px;text-align:center;color:var(--text3)">該当銘柄がありません</div>';
-  } else {
-    matches.forEach(s=>{
-      const typeLabel=s.trend_type==='value_dip'?'💎 逆張り':s.trend_type==='dip'?'📉 割安':
-        s.trend_type==='momentum'?'📈 上昇中':s.trend_type==='bounce'?'🔄 反発':'—';
-      const typeColor=s.trend_type==='momentum'?'var(--green)':s.trend_type==='dip'||s.trend_type==='value_dip'?'var(--blue)':'var(--text3)';
-      const divBadge=(s.dividend||0)>=2?`<span style="background:var(--green-bg);color:var(--green);padding:1px 6px;border-radius:8px;font-size:10px;font-weight:600">💰${(s.dividend||0).toFixed(1)}%</span>`:'';
-      const scoreColor=s.score>=60?'var(--green)':s.score>=40?'var(--amber)':'var(--red)';
-      html+=`<div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
-        <div style="flex:1;min-width:0">
-          <div style="font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${s.name}</div>
-          <div style="font-size:11px;color:var(--text3);margin-top:2px">${s.code} ${divBadge}</div>
-        </div>
-        <div style="text-align:center">
-          <div style="font-size:11px;color:${typeColor};font-weight:600">${typeLabel}</div>
-        </div>
-        <div style="text-align:right;min-width:50px">
-          <div style="font-size:20px;font-weight:800;color:${scoreColor}">${s.score}</div>
-          <div style="font-size:9px;color:var(--text3)">/100</div>
-        </div>
-      </div>`;
-    });
-  }
-  html+='</div></div>';
-  document.body.insertAdjacentHTML('beforeend',html);
+    if(!matches.length){
+      html+='<div style="padding:32px;text-align:center;color:var(--text3)">該当銘柄がありません</div>';
+    } else {
+      matches.forEach(s=>{
+        const typeLabel=s.trend_type==='value_dip'?'💎逆張り':s.trend_type==='dip'?'📉割安':
+          s.trend_type==='momentum'?'📈上昇中':s.trend_type==='bounce'?'🔄反発':'—';
+        const typeColor=s.trend_type==='momentum'?'var(--green)':s.trend_type==='dip'||s.trend_type==='value_dip'?'var(--blue)':'var(--text3)';
+        const divBadge=(s.dividend||0)>=2?`<span style="background:#ECFDF5;color:#059669;padding:1px 6px;border-radius:8px;font-size:10px;font-weight:600">💰${(s.dividend||0).toFixed(1)}%</span>`:'';
+        const scoreColor=s.score>=60?'var(--green)':s.score>=40?'var(--amber)':'var(--red)';
+        html+=`<div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
+          <div style="flex:1;min-width:0">
+            <div style="font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${s.name}</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:2px">${s.code} ${divBadge}</div>
+          </div>
+          <div style="text-align:center">
+            <div style="font-size:11px;color:${typeColor};font-weight:600">${typeLabel}</div>
+          </div>
+          <div style="text-align:right;min-width:50px">
+            <div style="font-size:20px;font-weight:800;color:${scoreColor}">${s.score}</div>
+            <div style="font-size:9px;color:var(--text3)">/100</div>
+          </div>
+        </div>`;
+      });
+    }
+    html+='</div></div>';
+    document.body.insertAdjacentHTML('beforeend',html);
+  }catch(e){alert('エラー: '+e.message);}
 }
+
 
 function renderTop10(){
   const sec=document.getElementById('top5Section');
