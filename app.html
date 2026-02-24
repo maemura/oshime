@@ -294,13 +294,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   text-decoration:none;display:inline-flex;align-items:center;
 }
 .detail-link-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
-/* 変化バッジ */
-.change-badge{
-  display:inline-flex;align-items:center;padding:1px 6px;border-radius:3px;
-  font-family:var(--fn);font-size:10px;font-weight:700;
-}
-.change-badge.up{background:rgba(208,2,27,0.07);color:var(--up);}
-.change-badge.dn{background:rgba(0,85,204,0.07);color:var(--dn);}
 
 /* ── TREND BADGES ── */
 .trend-badge{
@@ -334,22 +327,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   font-size:11px;font-weight:700;color:var(--up);
 }
 
-/* ── DANGER SECTION ── */
-.danger-section{
-  background:var(--bg2);border:1px solid var(--border);border-left:4px solid var(--up);
-  border-radius:var(--r);padding:14px 16px;margin-bottom:14px;
-}
-.danger-title{font-family:var(--fh);font-size:12px;font-weight:700;color:var(--up);margin-bottom:10px;display:flex;align-items:center;gap:6px;}
-.danger-rows{display:flex;flex-direction:column;gap:6px;}
-.danger-row{
-  display:flex;align-items:center;justify-content:space-between;gap:8px;
-  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);
-  padding:8px 12px;
-}
-.danger-name{font-size:12px;font-weight:600;color:var(--text2);}
-.danger-code{font-family:var(--fn);font-size:10px;color:var(--text3);}
-.danger-reason{font-size:10px;color:var(--up);font-weight:700;background:rgba(208,2,27,0.07);padding:2px 7px;border-radius:4px;}
-
 /* ── PORTFOLIO DIARY ── */
 .pf-hero{display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:12px;}
 .pf-nav{font-family:var(--fn);font-size:24px;font-weight:800;color:var(--text1);}
@@ -367,7 +344,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .pf-hold-pnl.up{color:var(--dn);} .pf-hold-pnl.dn{color:var(--up);}
 .pf-note-link{display:block;text-align:center;padding:12px;background:var(--navy);color:#fff;border-radius:var(--r);font-size:13px;font-weight:700;text-decoration:none;margin-top:10px;transition:opacity 0.15s;}
 .pf-note-link:hover{opacity:0.85;}
-.pf-empty{padding:16px;text-align:center;font-size:12px;color:var(--text3);}
 
 /* ── WATCHLIST / HISTORY ── */
 .watch-empty{padding:20px;text-align:center;font-size:12px;color:var(--text3);}
@@ -588,9 +564,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     </div>
 
     <!-- DANGER SECTION -->
-    <div id="dangerSection"></div>
-
-    <!-- 📊 かぶのすけ投資日記 -->
+    <!-- 📊 かぶのすけの投資日記 -->
     <div class="sec-wrap" id="portfolioSection">
       <div class="sec-head">
         <div class="sec-head-title">📊 かぶのすけの投資日記</div>
@@ -1081,8 +1055,6 @@ function renderTable(){
     const sc=s.score>=60?'hi':s.score>=35?'md':'lo';
     const d25cls=s.d25<0?'dn':'up';
     const isExpanded=expandedCode===s.code;
-    const prevBadge=s.prev_score!=null
-      ?`<span class="change-badge ${s.score>s.prev_score?'up':'dn'}">${s.score>s.prev_score?'▲':'▼'}${Math.abs(s.score-s.prev_score)}</span>`:'';
 
     const detailRow=isExpanded?`
       <tr class="detail-row" id="detail-${s.code}">
@@ -1098,7 +1070,6 @@ function renderTable(){
           <a class="tbl-name-link" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation();gaEvent('click_yahoo',{code:s.code})">${s.name}</a>
           <div style="display:flex;align-items:center;gap:5px;margin-top:2px;flex-wrap:wrap">
             <div class="tbl-code">${s.code}・${s.sector}</div>
-            ${prevBadge}
             ${trendBadge(s)}
           </div>
         </td>
@@ -1282,43 +1253,6 @@ function renderTrendTab(){
     </table>`;
 }
 
-function renderDanger(){
-  const dangers=STOCKS.map(s=>{
-    const reasons=[];
-    if(s.vol_r>=2.0)reasons.push(`出来高${s.vol_r}倍急増`);
-    else if(s.vol_r>=1.5)reasons.push(`出来高${s.vol_r}倍増`);
-    const d25=dv(s.price,s.ma25);
-    if(d25>=5)reasons.push(`25MA比+${d25}%（高値圏）`);
-    if(s.rsi>=70)reasons.push(`RSI ${s.rsi}（買われすぎ）`);
-    return{...s,d25,dangerReasons:reasons};
-  }).filter(s=>s.dangerReasons.length>0)
-    .sort((a,b)=>b.vol_r-a.vol_r)
-    .slice(0,5);
-
-  if(!dangers.length){
-    document.getElementById('dangerSection').innerHTML='';
-    return;
-  }
-
-  document.getElementById('dangerSection').innerHTML=`
-    <div class="danger-section fadein">
-      <div class="danger-title">⚠ 今日は避けたい銘柄（TOP${dangers.length}）</div>
-      <div class="danger-rows">
-        ${dangers.map(s=>`
-          <div class="danger-row">
-            <div>
-              <div class="danger-name">${s.name}</div>
-              <div class="danger-code">${s.code}・${s.sector}</div>
-            </div>
-            <div style="display:flex;gap:5px;flex-wrap:wrap;justify-content:flex-end">
-              ${s.dangerReasons.map(r=>`<span class="danger-reason">${r}</span>`).join('')}
-            </div>
-          </div>`).join('')}
-      </div>
-      <div style="font-size:10px;color:var(--text3);margin-top:8px">出来高急増・高値圏・RSI過熱を検知した銘柄。押し目買いの対象からは外すことを推奨します。</div>
-    </div>`;
-}
-
 // ═══════════════════════════════════════
 // RENDER: PORTFOLIO DIARY
 // ═══════════════════════════════════════
@@ -1337,11 +1271,10 @@ function renderPortfolio() {
   if (!body) return;
 
   if (!portfolioData || !portfolioData.daily_nav || portfolioData.daily_nav.length <= 1) {
-    // 初日 or データなし
-    body.innerHTML = `<div class="pf-empty">
+    body.innerHTML = `<div style="padding:20px;text-align:center">
       <div style="font-size:32px;margin-bottom:8px">🚀</div>
       <div style="font-size:13px;font-weight:700;color:var(--text1);margin-bottom:4px">1000万円で運用開始</div>
-      <div>AIがスコアに基づいて自動売買。毎日更新します。</div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:12px">AIがスコアに基づいて自動売買。毎日更新します。</div>
       <a class="pf-note-link" href="https://note.com/kabunosuke_navi" target="_blank" rel="noopener">📝 投資日記をnoteで読む →</a>
     </div>`;
     return;
@@ -1359,7 +1292,6 @@ function renderPortfolio() {
   const pnlCls = pnl >= 0 ? 'up' : 'dn';
   const pnlSign = pnl >= 0 ? '+' : '';
 
-  // 保有銘柄
   const holdingsHtml = posCount
     ? (pf.positions || []).map(p => {
         const pc = (p.pnl_pct||0) >= 0 ? 'up' : 'dn';
@@ -1374,12 +1306,10 @@ function renderPortfolio() {
       }).join('')
     : '<div style="font-size:11px;color:var(--text3);padding:4px 0">現金待機中 🔍</div>';
 
-  // NAVミニチャート（SVG）
   let chartHtml = '';
   if (pf.daily_nav.length >= 3) {
     const vals = pf.daily_nav.map(d => d.nav);
-    const mn = Math.min(...vals), mx = Math.max(...vals);
-    const rng = mx - mn || 1;
+    const mn = Math.min(...vals), mx = Math.max(...vals), rng = mx - mn || 1;
     const w = 280, h = 40;
     const pts = vals.map((v,i) => `${(i/(vals.length-1))*w},${h-((v-mn)/rng)*h*0.8-h*0.1}`).join(' ');
     const clr = vals[vals.length-1] >= pf.initial_capital ? 'var(--dn)' : 'var(--up)';
@@ -1617,10 +1547,9 @@ function run(){
   renderPulse();
   // テーブルを最優先で描画
   renderTable();
-  // スタンス・危険銘柄は少し遅らせてもOK（体感速度改善）
+  // スタンスは少し遅らせてもOK（体感速度改善）
   requestAnimationFrame(()=>{
     renderStance();
-    renderDanger();
   });
   gaEvent('scan_executed',{mode:currentMode,buy_count:processed.filter(s=>s.zone.cls==='buy').length,data_source:dataSource});
 }
@@ -1629,7 +1558,7 @@ async function init(){
   updateWatchCount();
   await loadRealData();
   run();
-  loadPortfolio(); // 非同期でポートフォリオ読み込み
+  loadPortfolio();
   gaEvent('view_app',{data_source:dataSource});
 }
 
