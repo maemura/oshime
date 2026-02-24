@@ -1283,7 +1283,7 @@ function renderPortfolio(pf){
   const body=document.getElementById('portfolioBody');
   if(!body)return;
 
-  if(!pf||!pf.daily_nav||pf.daily_nav.length<=1){
+  if(!pf||!pf.daily_nav||pf.daily_nav.length<1){
     body.innerHTML=`<div style="text-align:center">
       <div style="font-size:28px;margin-bottom:6px">🚀</div>
       <div style="font-size:13px;font-weight:700;color:var(--text1);margin-bottom:4px">1000万円で運用開始</div>
