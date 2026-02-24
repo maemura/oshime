@@ -1366,8 +1366,8 @@ async function init(){
     window._stockData={};
   }
   await loadHistory();
-  run();
-  loadPortfolio(); // 投資日記（非同期、ブロックしない）
+  loadPortfolio();
+  try{ run(); }catch(e){ console.error("run error:",e); }
   gaEvent('page_view',{version:'v8.5'});
   console.log('🟢 かぶのすけ v8.5 loaded');
 }
