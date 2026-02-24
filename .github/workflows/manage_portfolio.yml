@@ -1,0 +1,42 @@
+name: かぶのすけ ポートフォリオ管理
+
+on:
+  schedule:
+    # 毎朝 9:15 JST = UTC 0:15 月〜金
+    - cron: '15 0 * * 1-5'
+  workflow_dispatch:  # 手動実行ボタン
+
+jobs:
+  portfolio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: リポジトリをチェックアウト
+        uses: actions/checkout@v4
+
+      - name: Python 3.11 セットアップ
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: ポートフォリオ自動管理
+        run: python3 manage_portfolio.py
+        env:
+          TZ: Asia/Tokyo
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+
+      - name: 変更をコミット & プッシュ
+        run: |
+          git config user.name  "かぶのすけBot"
+          git config user.email "bot@kabunosuke.app"
+          git add portfolio.json note_today.txt x_today.txt
+          if git diff --cached --quiet; then
+            echo "変更なし。スキップ。"
+          else
+            git commit -m "📊 投資日記 Day更新 $(TZ=Asia/Tokyo date '+%Y/%m/%d %H:%M JST')"
+            git push
+          fi

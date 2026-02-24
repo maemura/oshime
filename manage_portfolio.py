@@ -8,7 +8,7 @@
 - note/X投稿テキスト生成
 """
 
-import json, os, sys, datetime, urllib.request, urllib.error, time
+import json, os, sys, datetime, urllib.request, urllib.error, time, re
 
 TODAY = datetime.date.today().strftime("%Y-%m-%d")
 TODAY_SHORT = datetime.date.today().strftime("%Y/%m/%d")
@@ -468,6 +468,110 @@ def generate_x_text(pf, sells, buys):
 
 
 # ══════════════════════════════════════
+# DISCORD NOTIFICATION
+# ══════════════════════════════════════
+DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK_URL", "")
+
+def send_discord(message):
+    """Discordに通知を送る"""
+    if not DISCORD_WEBHOOK:
+        print("  ⚠ DISCORD_WEBHOOK_URL未設定、通知スキップ")
+        return
+    try:
+        data = json.dumps({"content": message}).encode("utf-8")
+        req = urllib.request.Request(
+            DISCORD_WEBHOOK,
+            data=data,
+            headers={"Content-Type": "application/json"},
+            method="POST"
+        )
+        urllib.request.urlopen(req, timeout=10)
+        print("  ✅ Discord通知送信完了")
+    except Exception as e:
+        print(f"  ⚠ Discord通知失敗: {e}")
+
+
+def build_discord_message(pf, sells, buys, stocks_data):
+    """Discord通知メッセージを構築"""
+    nav = calc_nav(pf)
+    pnl = nav - pf["initial_capital"]
+    pnl_pct = pnl / pf["initial_capital"] * 100
+    day_count = len(pf["daily_nav"])
+    pnl_sign = "+" if pnl >= 0 else ""
+
+    lines = []
+    lines.append(f"📊 **かぶのすけ Day {day_count}**（{TODAY_SHORT}）")
+    lines.append(f"💰 NAV: ¥{nav:,.0f}（{pnl_sign}{pnl_pct:.2f}%）")
+    lines.append("")
+
+    # 保有銘柄
+    for pos in pf.get("positions", []):
+        emoji = "🛡" if pos.get("type") == "守り" else "⚔"
+        ps = "+" if pos["pnl_pct"] >= 0 else ""
+        lines.append(f"{emoji} {pos['name']} {ps}{pos['pnl_pct']:.1f}%")
+
+    # 売買
+    if sells:
+        lines.append("")
+        for s in sells:
+            emoji = "🔴" if s["type"] == "stop_loss" else "🟢"
+            lines.append(f"{emoji} {'損切り' if s['type']=='stop_loss' else '利確'}: {s['name']}")
+    if buys:
+        lines.append("")
+        for b in buys:
+            lines.append(f"🆕 新規: {b['name']} {b['shares']}株 @¥{b['price']:,.0f}")
+
+    lines.append("")
+    lines.append("─────────────────")
+
+    # 中の人トリガー判定
+    trigger = check_human_trigger(pf, sells, buys)
+    if trigger:
+        lines.append("")
+        lines.append(f"📣 **中の人へ：**{trigger}")
+        lines.append("→ 回答あればnoteに追記してね！")
+    else:
+        lines.append("")
+        lines.append("✅ note_today.txt と x_today.txt 生成済み。コピペして投稿！")
+
+    return "\n".join(lines)
+
+
+def check_human_trigger(pf, sells, buys):
+    """中の人に質問するトリガー判定"""
+    day_count = len(pf["daily_nav"])
+    weekday = datetime.date.today().weekday()  # 0=Mon
+
+    # 損切りした日
+    if any(s.get("type") == "stop_loss" for s in sells):
+        return "今日かぶのすけが損切りしました😢 中の人ならどう判断しました？"
+
+    # 新規買いした日
+    if buys:
+        names = "・".join(b["name"] for b in buys)
+        return f"今日 {names} を新規購入しました💪 中の人は最近何か仕込みましたか？"
+
+    # 金曜日（週間まとめ）
+    if weekday == 4:
+        return "今週お疲れ様でした！中の人の今週の成績はどうでしたか？📊"
+
+    # 月初（1〜3日）
+    if datetime.date.today().day <= 3:
+        return "月初です！先月の中の人 vs AI、成績比較しませんか？🏆"
+
+    # 保有銘柄が+10%超
+    for pos in pf.get("positions", []):
+        if pos.get("pnl_pct", 0) >= 10:
+            return f"{pos['name']}が+{pos['pnl_pct']:.1f}%です🎉 中の人の銘柄はどうですか？"
+
+    # Day 7, 14, 30 などの節目
+    if day_count in [7, 14, 30, 60, 90, 100]:
+        return f"Day {day_count}到達！ここまでの感想を一言もらえますか？"
+
+    return None
+
+
+# ══════════════════════════════════════
 # MAIN
 # ══════════════════════════════════════
 def main():
@@ -563,6 +667,11 @@ def main():
     with open(X_PATH, "w", encoding="utf-8") as f:
         f.write(x_text)
     print(f"🐦 X投稿 → {X_PATH}")
+
+    # ⑨ Discord通知
+    print("\n📨 Discord通知送信...")
+    discord_msg = build_discord_message(pf, sells, buys, stocks_data)
+    send_discord(discord_msg)
 
 
 if __name__ == "__main__":

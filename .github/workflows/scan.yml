@@ -46,30 +46,3 @@ jobs:
             git commit -m "📊 自動更新 $(TZ=Asia/Tokyo date '+%Y/%m/%d %H:%M JST')"
             git push
           fi
-
-      - name: ポートフォリオ自動売買
-        if: success()
-        run: python3 manage_portfolio.py
-        env:
-          TZ: Asia/Tokyo
-
-      - name: portfolio.json をコミット & プッシュ
-        if: success()
-        run: |
-          git add portfolio.json note_today.txt x_today.txt
-          if git diff --cached --quiet; then
-            echo "ポートフォリオ変更なし。"
-          else
-            git commit -m "📊 投資日記更新 $(TZ=Asia/Tokyo date '+%Y/%m/%d %H:%M JST')"
-            git push
-          fi
-
-      - name: X（Twitter）に自動投稿
-        if: success()
-        run: python3 post_x.py
-        env:
-          TZ: Asia/Tokyo
-          X_API_KEY: ${{ secrets.X_API_KEY }}
-          X_API_SECRET: ${{ secrets.X_API_SECRET }}
-          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
-          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
