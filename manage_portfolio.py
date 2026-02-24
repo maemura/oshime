@@ -41,8 +41,6 @@ def fetch_opening_price(code):
         with urllib.request.urlopen(req, timeout=10) as res:
             html = res.read().decode("utf-8", errors="ignore")
         # 始値を探す（HTMLパース）
-        # パターン: "始値" の後に数字
-        import re
         # 始値のパターンを探す
         patterns = [
             r'始値[^0-9]*?([0-9,]+\.?[0-9]*)',
@@ -103,16 +101,25 @@ def save_json(path, data):
 def update_positions(pf):
     """保有銘柄の株価更新"""
     print("\n📡 保有銘柄の初値取得中...")
+    all_ok = True
     for pos in pf.get("positions", []):
         code = pos["code"]
         price = get_opening_price(code)
-        if price:
+        if price and price > 0:
+            # 異常値ガード: 前回値の50%以下 or 200%以上はゴミデータとして無視
+            prev = pos.get("current_price", pos["buy_price"])
+            if prev > 0 and (price < prev * 0.5 or price > prev * 2.0):
+                print(f"  ⚠ {pos['name']}({code}): 異常値 ¥{price:,.0f}（前回¥{prev:,.0f}）→ 無視、前回値維持")
+                all_ok = False
+                continue
             pos["current_price"] = price
             pos["pnl_pct"] = round((price - pos["buy_price"]) / pos["buy_price"] * 100, 2)
             print(f"  ✅ {pos['name']}({code}): ¥{price:,.0f} ({pos['pnl_pct']:+.2f}%)")
         else:
             print(f"  ⚠ {pos['name']}({code}): 取得失敗、前回値維持")
+            all_ok = False
         time.sleep(1)  # レート制限対策
+    return all_ok
 
 
 def check_stop_loss_take_profit(pf):
@@ -235,13 +242,13 @@ def select_new_buys(pf, stocks_data):
         invest_amount = c["price"] * shares_unit
         
         # 100万円以内で最大株数
-        max_shares = (PER_STOCK_MAX // c["price"]) // 100 * 100
+        max_shares = int((PER_STOCK_MAX // c["price"]) // 100 * 100)
         if max_shares < 100:
             max_shares = 100
         invest_amount = c["price"] * max_shares
         
         if invest_amount > pf["cash"] * 0.3:  # 残り現金の30%以上は1銘柄に使わない
-            max_shares = (int(pf["cash"] * 0.3) // c["price"]) // 100 * 100
+            max_shares = int((int(pf["cash"] * 0.3) // c["price"]) // 100 * 100)
             if max_shares < 100:
                 continue
             invest_amount = c["price"] * max_shares
@@ -470,7 +477,7 @@ def generate_x_text(pf, sells, buys):
 # ══════════════════════════════════════
 # DISCORD NOTIFICATION
 # ══════════════════════════════════════
-DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK_URL", "")
+DISCORD_WEBHOOK = os.environ.get("DISCORD_WEBHOOK_URL", "").strip()
 
 def send_discord(message):
     """Discordに通知を送る"""
@@ -478,15 +485,22 @@ def send_discord(message):
         print("  ⚠ DISCORD_WEBHOOK_URL未設定、通知スキップ")
         return
     try:
-        data = json.dumps({"content": message}).encode("utf-8")
+        payload = json.dumps({"content": message[:2000]})  # Discord上限2000文字
+        data = payload.encode("utf-8")
         req = urllib.request.Request(
             DISCORD_WEBHOOK,
             data=data,
-            headers={"Content-Type": "application/json"},
+            headers={
+                "Content-Type": "application/json",
+                "User-Agent": "KabunosukeBot/1.0"
+            },
             method="POST"
         )
-        urllib.request.urlopen(req, timeout=10)
-        print("  ✅ Discord通知送信完了")
+        with urllib.request.urlopen(req, timeout=15) as res:
+            print(f"  ✅ Discord通知送信完了 (status: {res.status})")
+    except urllib.error.HTTPError as e:
+        print(f"  ⚠ Discord通知失敗: HTTP {e.code} - {e.reason}")
+        print(f"  ⚠ URL: {DISCORD_WEBHOOK[:60]}...")
     except Exception as e:
         print(f"  ⚠ Discord通知失敗: {e}")
 
@@ -600,19 +614,24 @@ def main():
     prev_nav_entry = daily_nav[-1] if daily_nav else None
     
     # ① 保有銘柄の株価更新
-    update_positions(pf)
+    prices_ok = update_positions(pf)
     
-    # ② 損切り・利確判定
-    print("\n📋 損切り・利確チェック...")
-    sells = check_stop_loss_take_profit(pf)
-    if not sells:
-        print("  → 該当なし")
-    
-    # ③ 新規銘柄選定
-    print("\n🔍 新規銘柄スキャン...")
-    buys = select_new_buys(pf, stocks_data)
-    if not buys:
-        print("  → 新規買いなし")
+    # ② 損切り・利確判定（株価が正常な時のみ）
+    sells = []
+    buys = []
+    if prices_ok:
+        print("\n📋 損切り・利確チェック...")
+        sells = check_stop_loss_take_profit(pf)
+        if not sells:
+            print("  → 該当なし")
+        
+        # ③ 新規銘柄選定
+        print("\n🔍 新規銘柄スキャン...")
+        buys = select_new_buys(pf, stocks_data)
+        if not buys:
+            print("  → 新規買いなし")
+    else:
+        print("\n⚠ 株価データに異常あり → 売買判断スキップ（安全モード）")
     
     # ④ daily_nav更新
     update_daily_nav(pf, stocks_data)
