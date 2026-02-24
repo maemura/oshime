@@ -1,35 +1,35 @@
 {
   "start_date": "2026-02-24",
   "initial_capital": 10000000,
-  "cash": 6453700.0,
+  "cash": 8109400,
   "positions": [
     {
       "code": "4676",
       "name": "フジ・メディア・ホールディングス",
       "buy_date": "2026-02-24",
-      "buy_price": 3374.0,
-      "shares": 200.0,
-      "cost": 674800.0,
-      "current_price": 3374.0,
+      "buy_price": 3351,
+      "shares": 300,
+      "cost": 1005300,
+      "current_price": 3351,
       "pnl_pct": 0.0,
-      "thesis": "スコア78。配当3.7%。RSI25。",
-      "stop_loss": 2868,
-      "take_profit": 4049,
+      "thesis": "スコア78全体1位。RSI25売られすぎ。25MA乖離-9.7%で深い押し目。配当3.7%。",
+      "stop_loss": 2848,
+      "take_profit": 4021,
       "type": "守り"
     },
     {
-      "code": "7172",
-      "name": "ジャパンインベストメントアドバイザー",
+      "code": "7270",
+      "name": "SUBARU",
       "buy_date": "2026-02-24",
-      "buy_price": 1963.0,
-      "shares": 500.0,
-      "cost": 981500.0,
-      "current_price": 1963.0,
+      "buy_price": 2951,
+      "shares": 300,
+      "cost": 885300,
+      "current_price": 2951,
       "pnl_pct": 0.0,
-      "thesis": "スコア76。配当5.5%。RSI35。",
-      "stop_loss": 1669,
-      "take_profit": 2356,
-      "type": "守り"
+      "thesis": "スコア73。時価2.1兆大型。75日線-10.5%の大幅乖離でリバウンド狙い。配当3.8%。",
+      "stop_loss": 2508,
+      "take_profit": 3541,
+      "type": "攻め"
     }
   ],
   "history": [
@@ -52,55 +52,15 @@
       "shares": 300,
       "amount": 885300,
       "reason": "75日線-10.5%乖離のリバウンド狙い・配当3.8%"
-    },
-    {
-      "date": "2026-02-24",
-      "action": "sell",
-      "code": "4676",
-      "name": "フジ・メディア・ホールディングス",
-      "price": 1.0,
-      "shares": 300,
-      "amount": 300,
-      "reason": "損切り（-100.0%）。ルール通りです。"
-    },
-    {
-      "date": "2026-02-24",
-      "action": "sell",
-      "code": "7270",
-      "name": "SUBARU",
-      "price": 1.0,
-      "shares": 300,
-      "amount": 300,
-      "reason": "損切り（-100.0%）。ルール通りです。"
-    },
-    {
-      "date": "2026-02-24",
-      "action": "buy",
-      "code": "4676",
-      "name": "フジ・メディア・ホールディングス",
-      "price": 3374.0,
-      "shares": 200.0,
-      "amount": 674800,
-      "reason": "スコア78。配当3.7%。RSI25。"
-    },
-    {
-      "date": "2026-02-24",
-      "action": "buy",
-      "code": "7172",
-      "name": "ジャパンインベストメントアドバイザー",
-      "price": 1963.0,
-      "shares": 500.0,
-      "amount": 981500,
-      "reason": "スコア76。配当5.5%。RSI35。"
     }
   ],
   "daily_nav": [
     {
       "date": "2026-02-24",
-      "nav": 8110000,
-      "cash": 6453700,
-      "positions_value": 1656300,
-      "nikkei": 56826.0
+      "nav": 10000000,
+      "cash": 8109400,
+      "positions_value": 1890600,
+      "nikkei": 38026
     }
   ],
   "rules": {
