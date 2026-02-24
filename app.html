@@ -305,20 +305,50 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .trend-badge.hot{background:rgba(208,2,27,0.1);color:var(--up);border:1px solid rgba(208,2,27,0.2);}
 .trend-badge.warm{background:rgba(148,101,0,0.08);color:var(--amber);border:1px solid rgba(148,101,0,0.15);}
 
-/* ── STYLE TABS ── */
-.style-tabs-wrap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:12px;}
-.style-tab{
-  background:var(--bg2);border:2px solid var(--border);border-radius:var(--r);
-  padding:14px 16px;cursor:pointer;display:flex;align-items:center;gap:12px;transition:all 0.15s;
+/* ── 3 TABS (セクター/上昇/割安) ── */
+.t5-tabs{display:flex;gap:0;margin-bottom:14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.t5-tab{
+  flex:1;padding:10px 4px;text-align:center;cursor:pointer;
+  font-family:var(--fh);font-size:12px;font-weight:700;color:var(--text3);
+  border-right:1px solid var(--border);transition:all 0.15s;
 }
-.style-tab:hover{border-color:var(--navy);background:var(--bg3);}
-.style-tab.active{border-color:var(--navy);background:var(--navy);}
-.style-tab-ico{font-size:24px;flex-shrink:0;}
-.style-tab-title{font-family:var(--fh);font-size:13px;font-weight:800;color:var(--text2);}
-.style-tab.active .style-tab-title{color:#fff;}
-.style-tab-desc{font-size:10px;color:var(--text3);margin-top:2px;}
-.style-tab.active .style-tab-desc{color:rgba(255,255,255,0.6);}
-@media(max-width:640px){.style-tabs-wrap{grid-template-columns:1fr;}.style-tab{padding:10px 12px;}}
+.t5-tab:last-child{border-right:none;}
+.t5-tab.active{color:#fff;background:var(--navy);}
+.t5-tab:hover:not(.active){background:var(--bg3);}
+
+/* ── TOP10 CARDS ── */
+.top10-cards{display:flex;flex-direction:column;gap:8px;}
+.top10-card{
+  display:flex;align-items:center;gap:12px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  padding:12px 14px;cursor:pointer;transition:background 0.15s;
+}
+.top10-card:hover{background:var(--bg3);}
+.top10-rank{font-family:var(--fn);font-size:16px;font-weight:800;color:var(--navy);min-width:22px;text-align:center;}
+.top10-info{flex:1;min-width:0;}
+.top10-name{font-size:13px;font-weight:700;color:var(--text1);}
+.top10-meta{font-size:10px;color:var(--text3);margin-top:2px;}
+.top10-right{text-align:right;min-width:55px;}
+.top10-score{font-family:var(--fn);font-size:15px;font-weight:800;}
+.top10-score.hi{color:var(--dn);} .top10-score.mid{color:var(--amber);}
+.top10-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;margin-top:2px;}
+.top10-badge.div{background:rgba(78,170,135,0.12);color:var(--dn);}
+.top10-badge.mom{background:rgba(0,82,204,0.1);color:var(--navy);}
+
+/* ── SECTOR BARS ── */
+.sec-bars{display:flex;flex-direction:column;gap:6px;}
+.sec-bar-row{display:flex;align-items:center;gap:8px;cursor:pointer;padding:6px 8px;border-radius:var(--r2);transition:background 0.1s;}
+.sec-bar-row:hover{background:var(--bg3);}
+.sec-bar-name{font-size:12px;font-weight:600;color:var(--text2);min-width:80px;}
+.sec-bar-wrap{flex:1;height:18px;background:var(--bg3);border-radius:3px;overflow:hidden;}
+.sec-bar-fill{height:100%;border-radius:3px;transition:width 0.3s;}
+.sec-bar-val{font-family:var(--fn);font-size:11px;font-weight:700;min-width:35px;text-align:right;}
+.sec-back-btn{
+  display:inline-flex;align-items:center;gap:4px;padding:6px 12px;margin-bottom:10px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);
+  font-size:11px;font-weight:700;color:var(--text3);cursor:pointer;
+}
+.sec-back-btn:hover{background:var(--border);}
 
 /* ── TREND WARNING ── */
 .trend-warning{
@@ -516,55 +546,23 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <!-- STANCE -->
     <div id="stanceBox"></div>
 
-    <!-- STYLE TABS -->
-    <div class="style-tabs-wrap">
-      <div class="style-tab active" id="tab-stable" onclick="setStyleTab('stable',this)">
-        <div class="style-tab-ico">🏦</div>
-        <div class="style-tab-body">
-          <div class="style-tab-title">押し目 × 高配当</div>
-          <div class="style-tab-desc">配当3%以上・大型優遇・長期保有向け</div>
-        </div>
-      </div>
-      <div class="style-tab" id="tab-growth" onclick="setStyleTab('growth',this)">
-        <div class="style-tab-ico">🌱</div>
-        <div class="style-tab-body">
-          <div class="style-tab-title">グロース押し目</div>
-          <div class="style-tab-desc">小型・新興株・売られすぎ水準で仕込む</div>
-        </div>
-      </div>
-      <div class="style-tab" id="tab-trend" onclick="setStyleTab('trend',this)">
-        <div class="style-tab-ico">🔥</div>
-        <div class="style-tab-body">
-          <div class="style-tab-title">話題株</div>
-          <div class="style-tab-desc">出来高急増・今日熱い銘柄・短期参考</div>
-        </div>
-      </div>
+    <!-- 3 TABS -->
+    <div class="t5-tabs">
+      <div class="t5-tab active" id="t5TabSec" onclick="setTop5Tab('sector')">📊 セクター</div>
+      <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">📈 上昇</div>
+      <div class="t5-tab" id="t5TabDip" onclick="setTop5Tab('dip')">📉 割安</div>
     </div>
 
-    <!-- FILTER BAR -->
-    <div class="filter-bar">
-      <span class="filter-label">表示：</span>
-      <div class="filter-tabs">
-        <div class="filter-tab active" id="disp-10" onclick="setDispCount(10,this)">TOP10</div>
-        <div class="filter-tab" id="disp-30" onclick="setDispCount(30,this)">TOP30</div>
-        <div class="filter-tab" id="disp-all" onclick="setDispCount(999,this)">全件</div>
-      </div>
-      <div class="filter-count" id="filterCount"></div>
-      <div id="styleNote" style="font-size:10px;color:var(--amber);margin-left:auto;"></div>
-    </div>
-
-    <!-- STOCK TABLE -->
-    <div class="stock-table-wrap" id="tableWrap">
+    <!-- TAB CONTENT -->
+    <div id="top5Body">
       <div style="padding:20px;text-align:center">
-        <div class="skel-row skeleton"></div>
         <div class="skel-row skeleton"></div>
         <div class="skel-row skeleton"></div>
         <div style="font-size:11px;color:var(--text3);margin-top:8px">データ読み込み中...</div>
       </div>
     </div>
 
-    <!-- DANGER SECTION -->
-    <!-- 📊 かぶのすけの投資日記 -->
+    <!-- 📊 投資日記 -->
     <div class="sec-wrap" id="portfolioSection">
       <div class="sec-head">
         <div class="sec-head-title">📊 かぶのすけの投資日記</div>
@@ -575,6 +573,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
       </div>
     </div>
 
+    <!-- DISCLAIMER -->
     <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
 
   </div><!-- /panel-home -->
@@ -696,14 +695,16 @@ let STOCKS=[...SAMPLE_STOCKS];
 let processed=[];
 let dataSource='sample';
 let currentMode='dividend';
-let currentStyleTab='stable'; // 'stable' or 'growth'
-let dispCount=10;
+let currentTab='sector'; // 'sector','mom','dip'
+let activeSector=null;
+let sectorScoresData={};
 let sortKey='score'; let sortDir='desc';
 let expandedCode=null;
 let watchlist=[];
 let scanHistory=[];
 let settings={mode:'dividend',count:10,mindiv:0,zone:'all'};
 let trendRankingData=[];
+let portfolioData=null;
 let marketData={
   nikkei_price:null,nikkei_ma25:null,nikkei_1d_chg:null,
   nasdaq_1d_chg:null,vix:null,usdjpy:null,us10y:null,
@@ -738,7 +739,7 @@ try{
 function dv(p,m){return m?Math.round((p-m)/m*1000)/10:0;}
 
 function calcScore(s){
-  return currentStyleTab==='stable' ? calcScoreStable(s) : calcScoreGrowth(s);
+  return calcScoreStable(s);
 }
 function calcScoreStable(s){
   const d25=dv(s.price,s.ma25);
@@ -823,29 +824,25 @@ function processStocks(){
   const minDiv=settings.mindiv||0;
   const zoneFilter=settings.zone||'all';
 
-  // スタイルタブに応じてスコアキーを切り替え
-  const scoreKey = currentStyleTab==='stable' ? 'score_stable' : 'score_growth';
-
   let list=STOCKS.filter(s=>{
-    if(currentStyleTab==='stable'){
-      const minD=minDiv>0?minDiv:3;
-      if((s.dividend||0)<minD) return false;
-      // 大型・中型のみ（売買代金10億以上）
-      if((s.turnover_avg5||0) < 10 && (s.turnover_avg5||0) > 0) return false;
-    } else if(currentStyleTab==='growth'){
-      if(minDiv>0&&(s.dividend||0)<minDiv) return false;
-      // 小型株のみ（売買代金20億未満 or データなし）
-      if((s.turnover_avg5||0) >= 20) return false;
-    }
+    if(minDiv>0&&(s.dividend||0)<minDiv) return false;
     return true;
   });
 
   processed=list.map(s=>{
     const d25=dv(s.price,s.ma25);
-    // スコアはJSONから取得（再計算しない → 高速化）
-    const score = calcScore(s); // currentStyleTabに応じてStable/Growthを自動切替
+    const score = calcScore(s);
     const zone=getZone(score);
-    return{...s,d25,score,zone};
+    const ma75d = s.ma75_dev||0;
+    const mc = s.market_cap_b||0;
+    const div = s.dividend||0;
+    let _type='neutral';
+    if(ma75d < -8) _type='falling';
+    else if(ma75d < -2 && mc >= 3000 && div >= 2.5) _type='value_dip';
+    else if(-5 <= ma75d && ma75d <= 3 && d25 < -1) _type='dip';
+    else if(ma75d > 0 && d25 > 0 && mc >= 1000) _type='momentum';
+    else if(ma75d >= -2 && d25 > 0) _type='bounce';
+    return{...s,d25,score,zone,_type};
   });
 
   if(zoneFilter==='buy')processed=processed.filter(s=>s.zone.cls==='buy');
@@ -1020,258 +1017,123 @@ function renderStance(){
 }
 
 // ═══════════════════════════════════════
-// RENDER: TABLE
+// 3-TAB SYSTEM: セクター / 上昇 / 割安
 // ═══════════════════════════════════════
-// ── 注目度バッジ生成 ──
-function trendBadge(s){
-  const vr = s.vol_ratio_1d;
-  const ret= s.ret_1d;
-  if(!vr || vr < 1.3) return '';
-  const tag = vr>=3.0 ? '🔥祭り' : vr>=2.0 ? '🔥流行り' : '📈注目';
-  const volTxt = `出来高${vr}x`;
-  const retTxt = ret!=null && ret!==0 ? ` / ${ret>0?'+':''}${ret}%` : '';
-  const cls = vr>=2.0 ? 'hot' : 'warm';
-  return '<span class="trend-badge '+cls+'" title="'+volTxt+retTxt+'">'+tag+'</span>';
+function setTop5Tab(tab){
+  currentTab=tab;
+  activeSector=null;
+  document.querySelectorAll('.t5-tab').forEach(t=>t.classList.remove('active'));
+  const tabEl={sector:'t5TabSec',mom:'t5TabMom',dip:'t5TabDip'}[tab];
+  if(tabEl)document.getElementById(tabEl).classList.add('active');
+  // セクタータブラベルをリセット
+  document.getElementById('t5TabSec').textContent='📊 セクター';
+  renderTop10();
+  gaEvent('tab_changed',{tab});
 }
 
-function renderTable(){
-  const limit=dispCount;
-  const list=processed.slice(0,limit);
-  const total=processed.length;
-  document.getElementById('filterCount').textContent=`${total}銘柄中 ${list.length}件表示`;
+function renderTop10(){
+  if(currentTab==='sector'){
+    if(activeSector) showSectorStocks(activeSector);
+    else renderSectorTrend();
+  } else if(currentTab==='mom'){
+    const moms=processed.filter(s=>s._type==='momentum'||(s._type==='bounce'&&(s.market_cap_b||0)>=1000))
+      .sort((a,b)=>b.score-a.score).slice(0,10);
+    renderTop10Items(moms,'上昇中 TOP10');
+  } else {
+    const dips=processed.filter(s=>(s._type==='dip'||s._type==='value_dip')&&(s.dividend||0)>=2.5&&(s.market_cap_b||0)>=1000)
+      .sort((a,b)=>b.score-a.score).slice(0,10);
+    renderTop10Items(dips,'割安チャンス TOP10');
+  }
+}
 
-  if(!list.length){
-    document.getElementById('tableWrap').innerHTML='<div class="empty-msg">条件に一致する銘柄がありません</div>';
+function renderSectorTrend(){
+  const body=document.getElementById('top5Body');
+  const entries=Object.entries(sectorScoresData);
+  if(!entries.length){
+    // セクタースコアがなければJSで計算
+    const secMap={};
+    processed.forEach(s=>{
+      const sec=s.sector||'その他';
+      if(!secMap[sec])secMap[sec]={scores:[],count:0};
+      secMap[sec].scores.push(s.score);
+      secMap[sec].count++;
+    });
+    Object.entries(secMap).forEach(([name,data])=>{
+      const avg=data.scores.reduce((a,b)=>a+b,0)/data.scores.length;
+      sectorScoresData[name]={score:Math.round(avg*10)/10,count:data.count};
+    });
+  }
+  const sorted=Object.entries(sectorScoresData).sort((a,b)=>(b[1].score||0)-(a[1].score||0));
+  const maxScore=sorted.length?sorted[0][1].score||1:1;
+
+  body.innerHTML=`<div class="sec-bars fadein">${sorted.map(([name,data])=>{
+    const pct=Math.round((data.score||0)/maxScore*100);
+    const color=data.score>=6?'var(--green)':data.score>=4?'var(--amber)':'var(--up)';
+    return`<div class="sec-bar-row" onclick="showSectorStocks('${name}')">
+      <div class="sec-bar-name">${name}</div>
+      <div class="sec-bar-wrap"><div class="sec-bar-fill" style="width:${pct}%;background:${color}"></div></div>
+      <div class="sec-bar-val" style="color:${color}">${(data.score||0).toFixed(1)}</div>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+function showSectorStocks(secName){
+  activeSector=secName;
+  document.getElementById('t5TabSec').textContent=secName+' ✕';
+  const stocks=processed.filter(s=>(s.sector||'')==secName).sort((a,b)=>b.score-a.score).slice(0,10);
+  const body=document.getElementById('top5Body');
+  const backBtn=`<div class="sec-back-btn" onclick="activeSector=null;setTop5Tab('sector')">← セクター一覧に戻る</div>`;
+  if(!stocks.length){
+    body.innerHTML=backBtn+'<div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">該当なし</div>';
     return;
   }
-
-  const thClick=(key,label)=>{
-    const isCurrent=sortKey===key;
-    const cls=isCurrent?(sortDir==='desc'?'sort-desc':'sort-asc'):'';
-    return`<th class="${cls}" onclick="setSort('${key}')">${label}</th>`;
-  };
-
-  const rows=list.map((s,i)=>{
-    const sc=s.score>=60?'hi':s.score>=35?'md':'lo';
-    const d25cls=s.d25<0?'dn':'up';
-    const isExpanded=expandedCode===s.code;
-
-    const detailRow=isExpanded?`
-      <tr class="detail-row" id="detail-${s.code}">
-        <td colspan="9">
-          ${buildDetailBox(s)}
-        </td>
-      </tr>`:'';
-
-    return`
-      <tr class="tbl-row ${isExpanded?'expanded':''}" onclick="toggleDetail('${s.code}')">
-        <td><span class="tbl-rank ${i<3?'top':''}">${i+1}</span></td>
-        <td>
-          <a class="tbl-name-link" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation();gaEvent('click_yahoo',{code:s.code})">${s.name}</a>
-          <div style="display:flex;align-items:center;gap:5px;margin-top:2px;flex-wrap:wrap">
-            <div class="tbl-code">${s.code}・${s.sector}</div>
-            ${trendBadge(s)}
-          </div>
-        </td>
-        <td><span class="tbl-zone ${s.zone.cls}">${s.zone.label}</span></td>
-        <td><span class="tbl-score ${sc}">${s.score}</span></td>
-        <td class="tbl-num">${s.dividend}%</td>
-        <td class="tbl-num ${d25cls}">${s.d25>0?'+':''}${s.d25}%</td>
-        <td class="tbl-num ${s.rsi<=30?'dn':''}">${s.rsi}</td>
-        <td class="tbl-num">${s.turnover_avg5?s.turnover_avg5+'億':'—'}</td>
-        <td style="font-size:10px;color:var(--text3);text-align:right;white-space:nowrap">${s.sector||'—'}</td>
-      </tr>
-      ${detailRow}`;
-  }).join('');
-
-  // DOMへの書き込みを1回にまとめる（reflow最小化）
-  const wrap = document.getElementById('tableWrap');
-  wrap.innerHTML=`
-    <table class="stock-table">
-      <thead>
-        <tr>
-          <th style="text-align:left;width:28px">#</th>
-          ${thClick('name','銘柄')}
-          <th>ゾーン</th>
-          ${thClick('score','スコア')}
-          ${thClick('dividend','配当%')}
-          ${thClick('d25','MA乖離')}
-          ${thClick('rsi','RSI')}
-          ${thClick('turnover_avg5','売買代金')}
-          <th>セクター</th>
-        </tr>
-      </thead>
-      <tbody>${rows}</tbody>
-    </table>`;
+  body.innerHTML=backBtn+`<div class="top10-cards fadein">${stocks.map((s,i)=>renderCard(s,i+1)).join('')}</div>`;
 }
 
-function buildDetailBox(s){
-  const d25=s.d25;
-  const reasons=buildReasons(s,d25);
-  const bd=calcBreakdown(s,currentMode);
-  const isFav=watchlist.includes(s.code);
-
-  const whyHtml=reasons.length?reasons.map(w=>`
-    <div class="why-item ${w.cls}">
-      <div class="why-rank-badge ${w.cls}">${w.rank}</div>
-      <div class="why-val">${w.val}</div>
-      <div class="why-label">${w.label}</div>
-      <div class="why-note-text">${w.note}</div>
-      <div class="why-desc">${w.desc}</div>
-    </div>`).join('')
-    :'<div style="font-size:11px;color:var(--text3)">現時点で明確な買いシグナルはありません</div>';
-
-  const bdHtml=bd.map(item=>`
-    <div class="bd-row">
-      <div class="bd-l">${item.l}</div>
-      <div class="bd-bar"><div class="bd-fill" style="width:${Math.min(Math.abs(item.v)/item.max*100,100)}%;background:${item.pos?'var(--green)':'var(--up)'}"></div></div>
-      <div class="bd-v ${item.pos?'pos':'neg'}">${item.v>0?'+':''}${item.v}点</div>
-    </div>`).join('');
-
-  return`<div class="detail-box fadein">
-    <div class="detail-grid">
-      <div>
-        <div class="detail-section-title">選ばれた理由</div>
-        <div class="why-items">${whyHtml}</div>
-      </div>
-      <div>
-        <div class="detail-section-title">スコア内訳（${s.score}点）</div>
-        <div class="score-breakdown">${bdHtml}</div>
-        <table style="width:100%;border-collapse:collapse;font-size:11px;margin-top:12px">
-          <tr>
-            <th style="background:var(--bg3);padding:5px 8px;text-align:left;font-size:10px;color:var(--text3)">指標</th>
-            <th style="background:var(--bg3);padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">値</th>
-            <th style="background:var(--bg3);padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">目安</th>
-          </tr>
-          <tr><td style="padding:5px 8px;font-size:11px">現在値</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">¥${s.price.toLocaleString()}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">—</td></tr>
-          <tr><td style="padding:5px 8px;font-size:11px">25MA乖離</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px;color:${s.d25<0?'var(--up)':'var(--dn)'}">${s.d25>0?'+':''}${s.d25}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">-5%以下が目安</td></tr>
-          <tr><td style="padding:5px 8px;font-size:11px">RSI</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.rsi}</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">30以下が強い</td></tr>
-          <tr><td style="padding:5px 8px;font-size:11px">配当利回り</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.dividend}%</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">3%以上が高配当</td></tr>
-          <tr><td style="padding:5px 8px;font-size:11px">PBR</td><td style="padding:5px 8px;text-align:right;font-family:var(--fn);font-size:11px">${s.pbr}倍</td><td style="padding:5px 8px;text-align:right;font-size:10px;color:var(--text3)">1倍以下が割安</td></tr>
-        </table>
-        <div style="display:flex;gap:6px;margin-top:12px;flex-wrap:wrap">
-          <button class="detail-fav-btn ${isFav?'active':''}" onclick="event.stopPropagation();toggleFav('${s.code}')">
-            ${isFav?'★ ウォッチ済み':'☆ ウォッチ追加'}
-          </button>
-          <a class="detail-link-btn" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation();gaEvent('click_yahoo',{code:'${s.code}'})">Yahoo株価 ↗</a>
-          <a class="detail-link-btn" href="https://kabutan.jp/stock/?code=${s.code}" target="_blank" rel="noopener" onclick="event.stopPropagation();gaEvent('click_kabutan',{code:'${s.code}'})">株探 ↗</a>
-        </div>
-      </div>
+function renderCard(s,rank){
+  const sc=s.score>=60?'hi':'mid';
+  const divBadge=(s.dividend||0)>=2.5?`<span class="top10-badge div">💰${s.dividend}%</span>`:'';
+  const momBadge=s._type==='momentum'?`<span class="top10-badge mom">↗上昇</span>`:'';
+  const mc=s.market_cap_b?(s.market_cap_b>=10000?(s.market_cap_b/10000).toFixed(1)+'兆':Math.round(s.market_cap_b)+'億'):'';
+  const d75=s.ma75_dev!=null?`75日線${s.ma75_dev>0?'+':''}${s.ma75_dev.toFixed(1)}%`:'';
+  return`<div class="top10-card" onclick="window.open('https://finance.yahoo.co.jp/quote/${s.code}.T','_blank')">
+    <div class="top10-rank">${rank}</div>
+    <div class="top10-info">
+      <div class="top10-name">${s.name}</div>
+      <div class="top10-meta">${s.code} ・ ${s.sector||''} ・ ${mc}${d75?' ・ '+d75:''}</div>
+    </div>
+    <div class="top10-right">
+      <div class="top10-score ${sc}">${s.score}pt</div>
+      ${divBadge}${momBadge}
     </div>
   </div>`;
 }
 
-function toggleDetail(code){
-  expandedCode=expandedCode===code?null:code;
-  renderTable();
-  if(expandedCode){
-    gaEvent('open_stock_detail',{stock_code:code});
-  }
-}
-
-function setSort(key){
-  if(sortKey===key){sortDir=sortDir==='desc'?'asc':'desc';}
-  else{sortKey=key;sortDir='desc';}
-  processed.sort((a,b)=>{
-    let av=a[key]??0,bv=b[key]??0;
-    return sortDir==='asc'?av-bv:bv-av;
-  });
-  renderTable();
-  gaEvent('sort_table',{key,dir:sortDir});
-}
-
-// ═══════════════════════════════════════
-// RENDER: DANGER SECTION
-// ═══════════════════════════════════════
-// ── 話題株タブ描画 ──
-function renderTrendTab(){
-  const wrap = document.getElementById('tableWrap');
-  const countEl = document.getElementById('filterCount');
-
-  // trendRankingDataがあればそれを使う、なければSTOCKSから計算
-  let trendList = [];
-  if(trendRankingData && trendRankingData.length > 0){
-    trendList = trendRankingData;
-  } else {
-    // フォールバック：vol_ratio_1dで計算
-    trendList = STOCKS
-      .filter(s => (s.vol_ratio_1d||0) >= 1.5)
-      .sort((a,b) => (b.trend_score||0) - (a.trend_score||0))
-      .slice(0, 20);
-  }
-
-  if(!trendList.length){
-    wrap.innerHTML = '<div class="empty-msg">本日は出来高急増銘柄がありません</div>';
-    countEl.textContent = '';
+function renderTop10Items(items,title){
+  const body=document.getElementById('top5Body');
+  if(!items.length){
+    body.innerHTML=`<div style="padding:20px;text-align:center;font-size:12px;color:var(--text3)">該当する銘柄がありません</div>`;
     return;
   }
-
-  countEl.textContent = trendList.length + '銘柄';
-
-  const rows = trendList.map((s,i) => {
-    const vr = s.vol_ratio_1d || 0;
-    const ret = s.ret_1d || 0;
-    const vrTag = vr>=3?'🔥祭り':vr>=2?'🔥急騰':'📈注目';
-    const retColor = ret>=0 ? 'var(--up)' : 'var(--dn)';
-    const retSign = ret>=0 ? '+' : '';
-    // 押し目×高配当と重複するか（avoidリストと照合）
-    const isAvoid = processed.some(p => p.code === s.code && p.zone && p.zone.cls === 'buy' && (s.vol_ratio_1d||0) >= 1.5);
-    const warnBadge = isAvoid ? '<span style="color:var(--up);font-size:9px;font-weight:700">⚠避けたい</span>' : '';
-
-    return `<tr>
-      <td style="color:var(--text3);font-size:11px;text-align:left">${i+1}</td>
-      <td>
-        <a class="tbl-name-link" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation()">${s.name||s.code}</a>
-        <div style="display:flex;align-items:center;gap:5px;margin-top:2px;flex-wrap:wrap">
-          <div class="tbl-code">${s.code}・${s.sector||''}</div>
-          ${warnBadge}
-        </div>
-      </td>
-      <td><span style="font-size:13px">${vrTag}</span></td>
-      <td class="tbl-num" style="font-weight:800;color:var(--navy)">${vr}x</td>
-      <td class="tbl-num" style="color:${retColor};font-weight:700">${retSign}${ret}%</td>
-      <td class="tbl-num">${s.range_pct||'—'}%</td>
-      <td class="tbl-num">${s.dividend ? s.dividend+'%' : '—'}</td>
-    </tr>`;
-  }).join('');
-
-  wrap.innerHTML = `
-    <div class="trend-warning">⚠ 短期投機向け・損失リスク高・参考情報として利用してください</div>
-    <table class="stock-table">
-      <thead>
-        <tr>
-          <th style="text-align:left;width:28px">#</th>
-          <th style="text-align:right">銘柄</th>
-          <th>注目度</th>
-          <th class="tbl-num">出来高倍率</th>
-          <th class="tbl-num">前日比</th>
-          <th class="tbl-num">値幅%</th>
-          <th class="tbl-num">配当%</th>
-        </tr>
-      </thead>
-      <tbody>${rows}</tbody>
-    </table>`;
+  body.innerHTML=`<div class="top10-cards fadein">${items.map((s,i)=>renderCard(s,i+1)).join('')}</div>`;
 }
 
 // ═══════════════════════════════════════
-// RENDER: PORTFOLIO DIARY
+// PORTFOLIO DIARY
 // ═══════════════════════════════════════
-let portfolioData = null;
-
-async function loadPortfolio() {
-  try {
-    const res = await fetch('portfolio.json?t=' + Date.now());
-    if (res.ok) portfolioData = await res.json();
-  } catch (e) { console.log('portfolio.json not found'); }
+async function loadPortfolio(){
+  try{
+    const res=await fetch('portfolio.json?t='+Date.now());
+    if(res.ok)portfolioData=await res.json();
+  }catch(e){console.log('portfolio.json not found');}
   renderPortfolio();
 }
 
-function renderPortfolio() {
-  const body = document.getElementById('portfolioBody');
-  if (!body) return;
-
-  if (!portfolioData || !portfolioData.daily_nav || portfolioData.daily_nav.length <= 1) {
-    body.innerHTML = `<div style="padding:20px;text-align:center">
+function renderPortfolio(){
+  const body=document.getElementById('portfolioBody');
+  if(!body)return;
+  if(!portfolioData||!portfolioData.daily_nav||portfolioData.daily_nav.length<=1){
+    body.innerHTML=`<div style="padding:20px;text-align:center">
       <div style="font-size:32px;margin-bottom:8px">🚀</div>
       <div style="font-size:13px;font-weight:700;color:var(--text1);margin-bottom:4px">1000万円で運用開始</div>
       <div style="font-size:11px;color:var(--text3);margin-bottom:12px">AIがスコアに基づいて自動売買。毎日更新します。</div>
@@ -1279,62 +1141,49 @@ function renderPortfolio() {
     </div>`;
     return;
   }
+  const pf=portfolioData;
+  const nav=pf.daily_nav[pf.daily_nav.length-1];
+  const currentNav=nav.nav;
+  const pnl=currentNav-pf.initial_capital;
+  const pnlPct=(pnl/pf.initial_capital*100).toFixed(2);
+  const dayCount=pf.daily_nav.length;
+  const posCount=(pf.positions||[]).length;
+  const cashPct=Math.round(pf.cash/currentNav*100);
+  const stockPct=100-cashPct;
+  const pnlCls=pnl>=0?'up':'dn';
+  const pnlSign=pnl>=0?'+':'';
 
-  const pf = portfolioData;
-  const nav = pf.daily_nav[pf.daily_nav.length - 1];
-  const currentNav = nav.nav;
-  const pnl = currentNav - pf.initial_capital;
-  const pnlPct = (pnl / pf.initial_capital * 100).toFixed(2);
-  const dayCount = pf.daily_nav.length;
-  const posCount = (pf.positions || []).length;
-  const cashPct = Math.round(pf.cash / currentNav * 100);
-  const stockPct = 100 - cashPct;
-  const pnlCls = pnl >= 0 ? 'up' : 'dn';
-  const pnlSign = pnl >= 0 ? '+' : '';
-
-  const holdingsHtml = posCount
-    ? (pf.positions || []).map(p => {
-        const pc = (p.pnl_pct||0) >= 0 ? 'up' : 'dn';
-        const ps = (p.pnl_pct||0) >= 0 ? '+' : '';
-        return `<div class="pf-hold">
-          <div style="flex:1">
-            <div class="pf-hold-name">${p.name}</div>
-            <div style="font-size:10px;color:var(--text3)">${p.code} ・ ${p.shares}株</div>
-          </div>
+  const holdingsHtml=posCount
+    ?(pf.positions||[]).map(p=>{
+        const pc=(p.pnl_pct||0)>=0?'up':'dn';
+        const ps=(p.pnl_pct||0)>=0?'+':'';
+        return`<div class="pf-hold">
+          <div style="flex:1"><div class="pf-hold-name">${p.name}</div><div style="font-size:10px;color:var(--text3)">${p.code} ・ ${p.shares}株</div></div>
           <div class="pf-hold-pnl ${pc}">${ps}${(p.pnl_pct||0).toFixed(1)}%</div>
-        </div>`;
-      }).join('')
-    : '<div style="font-size:11px;color:var(--text3);padding:4px 0">現金待機中 🔍</div>';
+        </div>`;}).join('')
+    :'<div style="font-size:11px;color:var(--text3);padding:4px 0">現金待機中 🔍</div>';
 
-  let chartHtml = '';
-  if (pf.daily_nav.length >= 3) {
-    const vals = pf.daily_nav.map(d => d.nav);
-    const mn = Math.min(...vals), mx = Math.max(...vals), rng = mx - mn || 1;
-    const w = 280, h = 40;
-    const pts = vals.map((v,i) => `${(i/(vals.length-1))*w},${h-((v-mn)/rng)*h*0.8-h*0.1}`).join(' ');
-    const clr = vals[vals.length-1] >= pf.initial_capital ? 'var(--dn)' : 'var(--up)';
-    chartHtml = `<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:40px;margin:6px 0">
+  let chartHtml='';
+  if(pf.daily_nav.length>=3){
+    const vals=pf.daily_nav.map(d=>d.nav);
+    const mn=Math.min(...vals),mx=Math.max(...vals),rng=mx-mn||1;
+    const w=280,h=40;
+    const pts=vals.map((v,i)=>`${(i/(vals.length-1))*w},${h-((v-mn)/rng)*h*0.8-h*0.1}`).join(' ');
+    const clr=vals[vals.length-1]>=pf.initial_capital?'var(--dn)':'var(--up)';
+    chartHtml=`<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:40px;margin:6px 0">
       <line x1="0" y1="${h-((pf.initial_capital-mn)/rng)*h*0.8-h*0.1}" x2="${w}" y2="${h-((pf.initial_capital-mn)/rng)*h*0.8-h*0.1}" stroke="var(--text3)" stroke-dasharray="3,3" stroke-width="0.5" opacity="0.5"/>
       <polyline points="${pts}" fill="none" stroke="${clr}" stroke-width="1.5"/>
     </svg>`;
   }
 
-  body.innerHTML = `
-    <div class="pf-hero">
-      <div class="pf-nav">¥${currentNav.toLocaleString()}</div>
-      <div class="pf-pnl ${pnlCls}">${pnlSign}${pnlPct}%</div>
-      <div class="pf-day">Day ${dayCount}</div>
-    </div>
-    <div class="pf-bars">
-      <div class="pf-bar cash" style="flex:${cashPct}">💴 現金 ${cashPct}%</div>
-      ${posCount ? `<div class="pf-bar stock" style="flex:${stockPct}">📈 株式 ${stockPct}%</div>` : ''}
-    </div>
+  body.innerHTML=`
+    <div class="pf-hero"><div class="pf-nav">¥${currentNav.toLocaleString()}</div><div class="pf-pnl ${pnlCls}">${pnlSign}${pnlPct}%</div><div class="pf-day">Day ${dayCount}</div></div>
+    <div class="pf-bars"><div class="pf-bar cash" style="flex:${cashPct}">💴 現金 ${cashPct}%</div>${posCount?`<div class="pf-bar stock" style="flex:${stockPct}">📈 株式 ${stockPct}%</div>`:''}</div>
     ${chartHtml}
     <div style="font-size:11px;font-weight:700;color:var(--text2);margin:8px 0 4px">📋 保有 ${posCount}銘柄</div>
     <div class="pf-holdings">${holdingsHtml}</div>
     <a class="pf-note-link" href="https://note.com/kabunosuke_navi" target="_blank" rel="noopener">📝 投資日記をnoteで読む →</a>
-    <div style="font-size:9px;color:var(--text3);margin-top:8px;text-align:center">※仮想投資です。実際の売買ではありません。</div>
-  `;
+    <div style="font-size:9px;color:var(--text3);margin-top:8px;text-align:center">※仮想投資です。実際の売買ではありません。</div>`;
 }
 
 // ═══════════════════════════════════════
@@ -1351,34 +1200,6 @@ function setMode(m,el){
   gaEvent('mode_changed',{mode:m});
 }
 
-function setStyleTab(tab,el){
-  currentStyleTab=tab;
-  document.querySelectorAll('.style-tab').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
-  const note=document.getElementById('styleNote');
-  if(tab==='growth'){
-    note.textContent='⚠ 値動きの大きい小型株も含まれます';
-    note.style.color='var(--amber)';
-  } else if(tab==='trend'){
-    note.textContent='⚠ 短期投機向け・損失リスク高・参考情報として利用';
-    note.style.color='var(--up)';
-  } else {
-    note.textContent='';
-  }
-  if(tab==='trend'){
-    renderTrendTab();
-  } else {
-    run();
-  }
-  gaEvent('style_tab_changed',{tab});
-}
-
-function setDispCount(n,el){
-  dispCount=n;
-  document.querySelectorAll('.filter-tab[id^="disp-"]').forEach(t=>t.classList.remove('active'));
-  el.classList.add('active');
-  renderTable();
-}
 
 // ═══════════════════════════════════════
 // SETTINGS
@@ -1436,8 +1257,7 @@ function toggleFav(code){
   }
   try{localStorage.setItem('kbs_watch',JSON.stringify(watchlist));}catch(e){}
   updateWatchCount();
-  // 展開中の詳細を再描画
-  if(expandedCode)renderTable();
+  // 再描画
   renderWatchlist();
 }
 
@@ -1459,7 +1279,7 @@ function renderWatchlist(){
     const score=calcScore(s,currentMode);
     const sc=score>=60?'hi':score>=35?'md':'lo';
     const d25=dv(s.price,s.ma25);
-    return`<div class="watch-row" onclick="switchTab('home');setTimeout(()=>{expandedCode='${code}';run();},100)">
+    return`<div class="watch-row" onclick="window.open('https://finance.yahoo.co.jp/quote/${code}.T','_blank')">
       <div class="watch-code">${code}</div>
       <div class="watch-name">${s.name}</div>
       <div style="text-align:right">
@@ -1522,6 +1342,7 @@ async function loadRealData(){
       mFields.forEach(k=>{if(j[k]!==undefined)marketData[k]=j[k];});
       if(j.vol_ranking&&j.vol_ranking.length)volRankingData=j.vol_ranking;
       if(j.trend_ranking&&j.trend_ranking.length)trendRankingData=j.trend_ranking;
+      if(j.sector_scores)sectorScoresData=j.sector_scores;
       // 信頼バー
       document.getElementById('trustText').innerHTML=`<span class="hi">${j.updated_at}</span> 更新 · ${j.total}銘柄スキャン済み`;
       document.getElementById('trustDot').style.background='var(--green)';
@@ -1545,13 +1366,11 @@ function run(){
   processStocks();
   renderHeroStats();
   renderPulse();
-  // テーブルを最優先で描画
-  renderTable();
-  // スタンスは少し遅らせてもOK（体感速度改善）
+  renderTop10();
   requestAnimationFrame(()=>{
     renderStance();
   });
-  gaEvent('scan_executed',{mode:currentMode,buy_count:processed.filter(s=>s.zone.cls==='buy').length,data_source:dataSource});
+  gaEvent('scan_executed',{mode:currentMode,data_source:dataSource});
 }
 
 async function init(){
