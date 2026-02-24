@@ -270,26 +270,14 @@ a{color:var(--blue-m);text-decoration:none;}
 <!-- HERO CONCLUSION -->
 <div class="hero" id="heroBox"></div>
 
-<!-- SECTOR TREND -->
-<div class="t5-sec" id="sectorSection" style="display:none">
-  <div style="padding:16px;background:var(--card);border-bottom:1px solid var(--border)">
-    <div style="font-weight:700;font-size:15px;margin-bottom:8px">📈 セクタートレンド</div>
-    <div style="font-size:11px;color:var(--text3);margin-bottom:12px">配当×リターン×出来高から自動算出。毎日更新。</div>
-    <div id="sectorBars"></div>
-    <div id="sectorTheme" style="margin-top:12px;font-size:12px;color:var(--text2)"></div>
-  </div>
-</div>
-
-<!-- TOP10 -->
+<!-- TOP10 (3タブ: セクター / 上昇 / 割安) -->
 <div class="t5-sec" id="top5Section" style="display:none">
   <div class="t5-tabs">
-    <div class="t5-tab active" id="t5TabDip" onclick="setTop5Tab('dip')">📉 割安チャンス TOP10</div>
-    <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">📈 上昇中 TOP10</div>
+    <div class="t5-tab active" id="t5TabSec" onclick="setTop5Tab('sector')">📊 セクター</div>
+    <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">📈 上昇中</div>
+    <div class="t5-tab" id="t5TabDip" onclick="setTop5Tab('dip')">📉 割安</div>
   </div>
-  <div id="t5Subtitle" style="padding:8px 16px;font-size:11px;color:var(--text3);background:var(--card);border-bottom:1px solid var(--border);line-height:1.5">
-    <span id="t5SubText">📉 値下がりした今が買い時の株。75日平均（買いライン）に近づいた割安銘柄です</span>
-    <div style="margin-top:4px;font-size:10px;color:var(--blue)">👇 気になる銘柄をタップして詳細を見てみよう</div>
-  </div>
+  <div id="t5Subtitle" style="padding:8px 16px;font-size:11px;color:var(--text3);background:var(--card);border-bottom:1px solid var(--border);line-height:1.5"></div>
   <div class="t5-body" id="top5Body"></div>
 </div>
 
@@ -391,7 +379,7 @@ const SECTOR_MAP={"銀行業":"🏦 銀行","メガバンク":"🏦 メガバン
 const TREND_LABEL={"dip":"📉 割安","momentum":"📈 上昇中","falling":"⚠ 下落中","bounce":"🔄 反発","neutral":"😐 様子見","avoid":"🚫 対象外","value_dip":"💎 逆張りチャンス"};
 let RAW=[],processed=[],EVENTS=[];
 let histYesterday=null,histDayBefore=null;
-let settings={mindiv:0,style:'trend',disp:10,zone:'all',sort:'score',sortDir:-1,sector:'all',top5tab:'dip'};
+let settings={mindiv:0,style:'trend',disp:10,zone:'all',sort:'score',sortDir:-1,sector:'all',top5tab:'sector'};
 let favorites=JSON.parse(localStorage.getItem('kbn_fav')||'[]');
 
 
@@ -825,102 +813,101 @@ function getVolBadge(s){
   return '';
 }
 
+let activeSector=null;  // セクター詳細表示中のセクター名
+
 function renderSectorTrend(){
-  const sec=document.getElementById('sectorSection');
-  if(!sectorScores||!Object.keys(sectorScores).length){sec.style.display='none';return;}
-  sec.style.display='';
-  const bars=document.getElementById('sectorBars');
+  // top5Bodyにセクターバーを描画（タブが'sector'の時に呼ばれる）
+  const body=document.getElementById('top5Body');
+  if(!sectorScores||!Object.keys(sectorScores).length){
+    body.innerHTML='<div style="padding:24px;text-align:center;color:var(--text3)">セクターデータなし</div>';return;
+  }
   const entries=Object.entries(sectorScores).slice(0,8);
   const maxSc=Math.max(...entries.map(e=>e[1].score));
-  let html='';
+  let html='<div style="padding:16px">';
   entries.forEach(([name,d],i)=>{
     const pct=Math.round(d.score/maxSc*100);
     const medal=i===0?'🏆':i===1?'🥈':i===2?'🥉':'';
     const barColor=d.score>=7?'var(--green)':d.score>=5?'var(--blue)':'var(--amber)';
-    html+=`<div onclick="showSectorStocks('${name}')" style="display:flex;align-items:center;gap:8px;margin-bottom:6px;cursor:pointer;padding:4px 0;border-radius:6px;transition:background .15s" onmouseover="this.style.background='var(--border)'" onmouseout="this.style.background='transparent'">
-      <div style="width:14px;text-align:center;font-size:11px">${medal||i+1}</div>
-      <div style="width:80px;font-size:12px;font-weight:600;white-space:nowrap;overflow:hidden">${name}</div>
-      <div style="flex:1;background:var(--border);border-radius:4px;height:18px;position:relative">
+    html+=`<div onclick="showSectorStocks('${name}')" style="display:flex;align-items:center;gap:8px;margin-bottom:8px;cursor:pointer;padding:6px 4px;border-radius:8px;transition:background .15s" onmouseover="this.style.background='var(--border)'" onmouseout="this.style.background='transparent'">
+      <div style="width:18px;text-align:center;font-size:12px">${medal||(i+1)}</div>
+      <div style="width:90px;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden">${name}</div>
+      <div style="flex:1;background:var(--border);border-radius:4px;height:20px;position:relative">
         <div style="width:${pct}%;background:${barColor};height:100%;border-radius:4px;transition:width .5s"></div>
-        <span style="position:absolute;right:6px;top:1px;font-size:10px;font-weight:700;color:var(--text)">${d.score}</span>
+        <span style="position:absolute;right:6px;top:2px;font-size:10px;font-weight:700;color:var(--text)">${d.score}</span>
       </div>
       <div style="width:55px;font-size:10px;color:var(--text3);text-align:right">配当${d.avg_dividend}%</div>
-      <div style="width:16px;font-size:10px;color:var(--text3)">›</div>
+      <div style="width:16px;font-size:12px;color:var(--text3)">›</div>
     </div>`;
   });
-  bars.innerHTML=html;
   const top3=entries.slice(0,3).map(e=>e[0]);
-  document.getElementById('sectorTheme').innerHTML=
-    `<span style="color:var(--blue);font-weight:600">📌 注目セクター：</span>${top3.join('、')}<div style="margin-top:4px;font-size:10px;color:var(--text3)">👆 セクターをタップで銘柄一覧</div>`;
+  html+=`<div style="margin-top:12px;font-size:12px;color:var(--text2)">
+    <span style="color:var(--blue);font-weight:600">📌 注目セクター：</span>${top3.join('、')}
+  </div></div>`;
+  body.innerHTML=html;
 }
 
-
-// セクタータップ→銘柄一覧（JSONのcodes配列で直接引く。マッチング不要）
+// セクタータップ→同じエリアにセクター内TOP10を表示
 function showSectorStocks(secName){
-  try{
-    const secData=sectorScores[secName];
-    const codes=secData&&secData.codes?secData.codes:[];
-    if(!codes.length){alert(secName+': 銘柄データがありません');return;}
-    const codeSet=new Set(codes);
-    const matches=RAW.filter(s=>codeSet.has(s.code)).map(s=>{
-      const {score,type}=calcScoreTrend(s);
-      return {...s,score,trend_type:type};
-    }).sort((a,b)=>b.score-a.score).slice(0,15);
+  activeSector=secName;
+  const secData=sectorScores[secName];
+  const codes=secData&&secData.codes?secData.codes:[];
+  const codeSet=new Set(codes);
+  const items=RAW.filter(s=>codeSet.has(s.code)).map(s=>{
+    const {score,type}=calcScoreTrend(s);
+    return {...s,score,trend_type:type};
+  }).sort((a,b)=>b.score-a.score).slice(0,10);
 
-    const old=document.getElementById('secModal');
-    if(old)old.remove();
-    let html=`<div id="secModal" onclick="if(event.target.id==='secModal')this.remove()" style="position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);z-index:999;display:flex;align-items:center;justify-content:center;padding:16px">
-      <div style="background:var(--bg);max-width:480px;width:100%;max-height:80vh;border-radius:16px;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3)">
-        <div style="padding:16px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg);z-index:1;border-radius:16px 16px 0 0">
-          <div><div style="font-weight:700;font-size:16px">${secName} セクター</div>
-          <div style="font-size:11px;color:var(--text3);margin-top:2px">${matches.length}銘柄 ・ スコア順</div></div>
-          <div onclick="document.getElementById('secModal').remove()" style="font-size:16px;cursor:pointer;padding:8px 12px;color:var(--text3);background:var(--border);border-radius:8px;font-weight:700">✕</div>
-        </div>`;
+  // タブ表示を更新
+  document.getElementById('t5TabSec').innerHTML=`${secName} ✕`;
+  document.getElementById('t5TabSec').classList.add('active');
+  document.getElementById('t5TabMom').classList.remove('active');
+  document.getElementById('t5TabDip').classList.remove('active');
+  document.getElementById('t5Subtitle').textContent=`${secName}セクター TOP10 ・ スコア順（割安も上昇も混合）`;
 
-    if(!matches.length){
-      html+='<div style="padding:32px;text-align:center;color:var(--text3)">該当銘柄がありません</div>';
-    } else {
-      matches.forEach(s=>{
-        const typeLabel=s.trend_type==='value_dip'?'💎逆張り':s.trend_type==='dip'?'📉割安':
-          s.trend_type==='momentum'?'📈上昇中':s.trend_type==='bounce'?'🔄反発':'—';
-        const typeColor=s.trend_type==='momentum'?'var(--green)':s.trend_type==='dip'||s.trend_type==='value_dip'?'var(--blue)':'var(--text3)';
-        const divBadge=(s.dividend||0)>=2?`<span style="background:#ECFDF5;color:#059669;padding:1px 6px;border-radius:8px;font-size:10px;font-weight:600">💰${(s.dividend||0).toFixed(1)}%</span>`:'';
-        const scoreColor=s.score>=60?'var(--green)':s.score>=40?'var(--amber)':'var(--red)';
-        html+=`<div style="padding:12px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px">
-          <div style="flex:1;min-width:0">
-            <div style="font-weight:700;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${s.name}</div>
-            <div style="font-size:11px;color:var(--text3);margin-top:2px">${s.code} ${divBadge}</div>
-          </div>
-          <div style="text-align:center">
-            <div style="font-size:11px;color:${typeColor};font-weight:600">${typeLabel}</div>
-          </div>
-          <div style="text-align:right;min-width:50px">
-            <div style="font-size:20px;font-weight:800;color:${scoreColor}">${s.score}</div>
-            <div style="font-size:9px;color:var(--text3)">/100</div>
-          </div>
-        </div>`;
-      });
-    }
-    html+='</div></div>';
-    document.body.insertAdjacentHTML('beforeend',html);
-  }catch(e){alert('エラー: '+e.message);}
+  // 既存カードUIで描画
+  renderTop10Items(items, secName);
+  document.getElementById('top5Section').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 
 function renderTop10(){
   const sec=document.getElementById('top5Section');
   sec.style.display='';
+  const tab=settings.top5tab;
+
+  // セクタータブ：セクター一覧 or セクター内TOP10
+  if(tab==='sector'){
+    if(activeSector){
+      showSectorStocks(activeSector);
+    } else {
+      renderSectorTrend();
+    }
+    return;
+  }
+
+  // 上昇/割安タブ
+  const body=document.getElementById('top5Body');
+  const items=processed.filter(s=>tab==='dip'?(s.trend_type==='dip'||s.trend_type==='value_dip'):(s.trend_type==='momentum'&&(s.market_cap_b||0)>=1000)).slice(0,10);
+  renderTop10Items(items, null);
+}
+
+function renderTop10Items(items, sectorName){
   const body=document.getElementById('top5Body');
   const tab=settings.top5tab;
-  const items=processed.filter(s=>tab==='dip'?(s.trend_type==='dip'||s.trend_type==='value_dip'):(s.trend_type==='momentum'&&(s.market_cap_b||0)>=1000)).slice(0,10);
   if(!items.length){body.innerHTML='<div style="padding:24px;text-align:center;color:var(--text3);font-size:13px">該当する銘柄がありません</div>';return;}
-  let html='<div class="t5-grid">';
+
+  let html='';
+  // セクター内表示の場合は「← 戻る」ボタン
+  if(sectorName){
+    html+=`<div onclick="activeSector=null;document.getElementById('t5TabSec').innerHTML='📊 セクター';setTop5Tab('sector')" style="padding:10px 16px;font-size:13px;color:var(--blue);cursor:pointer;font-weight:600;background:var(--card);border-bottom:1px solid var(--border)">← セクター一覧に戻る</div>`;
+  }
+  html+='<div class="t5-grid">';
   items.forEach((s,i)=>{
     const hasSpark=s.closes_60d&&s.closes_60d.length>10;
     const isOpen=expandedCode===s.code;
     const divBadge=(s.dividend||0)>=2?`<span class="div-badge">💰 ${(s.dividend||0).toFixed(1)}%</span>`:`配当${(s.dividend||0).toFixed(1)}%`;
     const gaugeColor=s.score>=60?'var(--green)':s.score>=40?'var(--amber)':'var(--red)';
-    const rankBadge=getRankBadge(s.code,tab);
+    const rankBadge=sectorName?'':getRankBadge(s.code,tab);
     const volBadge=getVolBadge(s);
     html+=`<div class="t5-item${i===0?' first-place':''}" onclick="toggleExpand('${s.code}')" style="${isOpen?'background:var(--blue-l)':''}">
       <div class="t5-rank${i===0?' gold':i===1?' silver':i===2?' bronze':''}">${i===0?'👑':i===1?'🥈':i===2?'🥉':i+1}</div>
@@ -942,14 +929,13 @@ function renderTop10(){
   });
   html+='</div>';
   body.innerHTML=html;
-  // Draw sparklines
+  // sparklines
   items.forEach(s=>{
     if(s.closes_60d&&s.closes_60d.length>10){
       const el=body.querySelector(`[data-spark="${s.code}"]`);
       if(el)drawSpark(el,s.closes_60d,120,44);
     }
   });
-  // Draw detail chart
   if(expandedCode){
     setTimeout(()=>{
       const s=items.find(x=>x.code===expandedCode);
@@ -1132,12 +1118,20 @@ function buildExpand(s){
 
 function setTop5Tab(tab){
   expandedCode=null;
+  if(tab==='sector') activeSector=null;
   settings.top5tab=tab;
-  document.getElementById('t5TabDip').classList.toggle('active',tab==='dip');
+  document.getElementById('t5TabSec').classList.toggle('active',tab==='sector');
+  document.getElementById('t5TabSec').innerHTML=tab==='sector'&&!activeSector?'📊 セクター':(activeSector?activeSector+' ✕':'📊 セクター');
   document.getElementById('t5TabMom').classList.toggle('active',tab==='mom');
-  document.getElementById('t5SubText').textContent=tab==='dip'
-    ?'📉 値下がりした今が買い時の株。75日平均（買いライン）に近づいた割安銘柄です'
-    :'📈 勢いよく上がっている株。流れに乗って利益を狙う銘柄です';
+  document.getElementById('t5TabDip').classList.toggle('active',tab==='dip');
+  const sub=document.getElementById('t5Subtitle');
+  if(tab==='sector'&&!activeSector){
+    sub.innerHTML='📊 セクター別の強さ。タップで銘柄一覧を見る<div style="margin-top:4px;font-size:10px;color:var(--blue)">👇 気になるセクターをタップしてみよう</div>';
+  } else if(tab==='mom'){
+    sub.textContent='📈 勢いよく上がっている株。流れに乗って利益を狙う銘柄です';
+  } else if(tab==='dip'){
+    sub.textContent='📉 値下がりした今が買い時の株。75日平均に近づいた割安銘柄です';
+  }
   renderTop10();
   document.getElementById('top5Section').scrollIntoView({behavior:'smooth',block:'start'});
 }
@@ -1216,7 +1210,6 @@ function run(){
   processStocks();
   renderMarketMode();
   renderHero();
-  renderSectorTrend();
   renderTop10();
   renderDanger();
   // Show history section if data exists
