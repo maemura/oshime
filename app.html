@@ -7,8 +7,8 @@
 <meta name="description" content="東証プライム1,600銘柄を毎朝自動スキャン。押し目スコアで今日の買い場を即検出。">
 <meta property="og:title" content="かぶのすけ — 高配当株の買い場を毎朝スキャン">
 <meta property="og:description" content="東証プライム1,600銘柄を毎朝7:30に自動スキャン。6ヶ月トレンド×MA75で今日の押し目TOP5を即表示。">
-<meta property="og:image" content="https://oshime.vercel.app/ogp.png">
-<meta property="og:url" content="https://oshime.vercel.app/app.html">
+<meta property="og:image" content="https://kabunosuke-navi.vercel.app/ogp.png">
+<meta property="og:url" content="https://kabunosuke-navi.vercel.app/app.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@kabunosuke_navi">
@@ -338,7 +338,7 @@ a{color:var(--blue-m);text-decoration:none;}
 <div class="footer">
   ※ 本サイトは投資助言ではありません。投資判断は自己責任でお願いします。<br>
   かぶのすけ = 東証プライム全銘柄をAIスキャン。セクター×テクニカルで押し目・上昇を自動検出<br>
-  かぶのすけ v8.4 · 毎朝7:30自動更新<br>
+  かぶのすけ v8.5 · 毎朝7:30自動更新<br>
   <a href="#" onclick="openLogic();return false" style="color:var(--blue-m);text-decoration:none;font-weight:600">📐 スコアの仕組みを見る</a>
 </div>
 
@@ -1182,23 +1182,23 @@ function shareX(){
   let text;
   if(tab==='mom'){
     const top=processed.filter(s=>s.trend_type==='momentum'&&(s.market_cap_b||0)>=1000).slice(0,3);
-    text=`📈 かぶのすけ 上昇中TOP3\n${top.map((s,i)=>`${i+1}. ${s.name}（${s.score}pt）`).join('\n')}\nhttps://oshime.vercel.app/app.html`;
+    text=`📈 かぶのすけ 上昇中TOP3\n${top.map((s,i)=>`${i+1}. ${s.name}（${s.score}pt）`).join('\n')}\nhttps://kabunosuke-navi.vercel.app/app.html`;
   } else if(activeSector){
-    text=`📊 かぶのすけ ${activeSector}セクター分析中！\nhttps://oshime.vercel.app/app.html`;
+    text=`📊 かぶのすけ ${activeSector}セクター分析中！\nhttps://kabunosuke-navi.vercel.app/app.html`;
   } else {
     const top=processed.filter(s=>s.trend_type==='dip'||s.trend_type==='value_dip').slice(0,3);
-    text=`📉 かぶのすけ 今日の割安TOP3\n${top.map((s,i)=>`${i+1}. ${s.name}（${s.score}pt）`).join('\n')}\nhttps://oshime.vercel.app/app.html`;
+    text=`📉 かぶのすけ 今日の割安TOP3\n${top.map((s,i)=>`${i+1}. ${s.name}（${s.score}pt）`).join('\n')}\nhttps://kabunosuke-navi.vercel.app/app.html`;
   }
   window.open('https://twitter.com/intent/tweet?text='+encodeURIComponent(text),'_blank');
   gaEvent('share',{platform:'x'});
 }
 function shareLine(){
-  const text='かぶのすけ - 今日の押し目チェック https://oshime.vercel.app/app.html';
+  const text='かぶのすけ - 今日の押し目チェック https://kabunosuke-navi.vercel.app/app.html';
   window.open('https://line.me/R/msg/text/?'+encodeURIComponent(text),'_blank');
   gaEvent('share',{platform:'line'});
 }
 function copyLink(){
-  navigator.clipboard.writeText('https://oshime.vercel.app/app.html').then(()=>alert('リンクをコピーしました'));
+  navigator.clipboard.writeText('https://kabunosuke-navi.vercel.app/app.html').then(()=>alert('リンクをコピーしました'));
   gaEvent('share',{platform:'copy'});
 }
 
@@ -1368,8 +1368,8 @@ async function init(){
   await loadHistory();
   run();
   loadPortfolio(); // 投資日記（非同期、ブロックしない）
-  gaEvent('page_view',{version:'v8.1'});
-  console.log('🟢 かぶのすけ v8.1 loaded');
+  gaEvent('page_view',{version:'v8.5'});
+  console.log('🟢 かぶのすけ v8.5 loaded');
 }
 
 init();
