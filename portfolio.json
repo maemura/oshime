@@ -1,10 +1,73 @@
 {
   "start_date": "2026-02-24",
   "initial_capital": 10000000,
-  "cash": 10000000,
-  "positions": [],
-  "history": [],
+  "cash": 8003500,
+  "positions": [
+    {
+      "code": "4676",
+      "name": "フジ・メディア・ホールディングス",
+      "buy_date": "2026-02-24",
+      "buy_price": 3285,
+      "shares": 300,
+      "cost": 985500,
+      "current_price": 3285,
+      "pnl_pct": 0.0,
+      "thesis": "スコア78全体1位。RSI25売られすぎ。25MA乖離-9.7%で深い押し目。配当3.7%。",
+      "stop_loss": 2792,
+      "take_profit": 3942,
+      "type": "守り"
+    },
+    {
+      "code": "7270",
+      "name": "SUBARU",
+      "buy_date": "2026-02-24",
+      "buy_price": 3370,
+      "shares": 300,
+      "cost": 1011000,
+      "current_price": 3370,
+      "pnl_pct": 0.0,
+      "thesis": "スコア73。時価2.1兆大型。75日線-10.5%の大幅乖離でリバウンド狙い。配当3.8%。",
+      "stop_loss": 2865,
+      "take_profit": 4044,
+      "type": "攻め"
+    }
+  ],
+  "history": [
+    {
+      "date": "2026-02-24",
+      "action": "buy",
+      "code": "4676",
+      "name": "フジ・メディア・ホールディングス",
+      "price": 3285,
+      "shares": 300,
+      "amount": 985500,
+      "reason": "スコア全体1位・RSI25売られすぎ・配当3.7%"
+    },
+    {
+      "date": "2026-02-24",
+      "action": "buy",
+      "code": "7270",
+      "name": "SUBARU",
+      "price": 3370,
+      "shares": 300,
+      "amount": 1011000,
+      "reason": "75日線-10.5%乖離のリバウンド狙い・配当3.8%"
+    }
+  ],
   "daily_nav": [
-    {"date": "2026-02-24", "nav": 10000000, "cash": 10000000, "positions_value": 0, "nikkei": null}
-  ]
+    {
+      "date": "2026-02-24",
+      "nav": 10000000,
+      "cash": 8003500,
+      "positions_value": 1996500,
+      "nikkei": 56826
+    }
+  ],
+  "rules": {
+    "stop_loss_pct": -15,
+    "take_profit_pct": 20,
+    "max_positions": 10,
+    "per_stock_max": 1000000,
+    "style": "攻め守り半々"
+  }
 }
