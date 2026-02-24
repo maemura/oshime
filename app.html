@@ -253,6 +253,26 @@ a{color:var(--blue-m);text-decoration:none;}
 .sector-inner{display:flex;gap:5px;}
 .s-chip{white-space:nowrap;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600;cursor:pointer;color:var(--text2);background:var(--card);border:1px solid var(--border);transition:all .15s;}
 .s-chip:hover{border-color:var(--blue-m);}.s-chip.active{background:var(--blue);color:#fff;border-color:var(--blue);}
+
+/* ── PORTFOLIO DIARY ── */
+.diary-wrap{background:var(--card);border-radius:var(--r);padding:16px;border:1px solid var(--border);}
+.diary-head{font-family:var(--fh);font-size:14px;font-weight:800;color:var(--text1);}
+.diary-sub{font-size:10px;color:var(--text3);margin-top:2px;margin-bottom:12px;}
+.pf-hero{display:flex;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);margin-bottom:10px;}
+.pf-nav{font-family:var(--fn);font-size:22px;font-weight:800;color:var(--text1);}
+.pf-pnl{font-family:var(--fn);font-size:13px;font-weight:700;}
+.pf-pnl.up{color:var(--green);} .pf-pnl.dn{color:var(--red);}
+.pf-day{font-size:10px;color:var(--text3);}
+.pf-bars{display:flex;gap:4px;margin-bottom:8px;}
+.pf-bar{flex:1;text-align:center;font-size:10px;padding:4px 0;border-radius:4px;}
+.pf-bar.cash{background:rgba(59,130,246,0.08);color:var(--blue);}
+.pf-bar.stock{background:rgba(16,185,129,0.08);color:var(--green);}
+.pf-hold{display:flex;align-items:center;gap:8px;padding:6px 10px;background:var(--bg);border-radius:var(--r2);margin-bottom:4px;}
+.pf-hold-name{flex:1;font-size:11px;font-weight:600;color:var(--text2);}
+.pf-hold-pnl{font-family:var(--fn);font-size:12px;font-weight:700;}
+.pf-hold-pnl.up{color:var(--green);} .pf-hold-pnl.dn{color:var(--red);}
+.pf-note-link{display:block;text-align:center;padding:10px;background:var(--blue);color:#fff;border-radius:var(--r);font-size:12px;font-weight:700;text-decoration:none;margin-top:10px;}
+.pf-note-link:hover{opacity:0.85;}
 </style>
 </head>
 <body>
@@ -281,16 +301,18 @@ a{color:var(--blue-m);text-decoration:none;}
   <div class="t5-body" id="top5Body"></div>
 </div>
 
-<!-- DANGER -->
-<div id="dangerSection" style="max-width:720px;margin:0 auto"></div>
+<!-- DANGER (非表示) -->
+<div id="dangerSection" style="display:none"></div>
 
-<!-- HISTORY -->
-<div class="hist-sec" id="histSection" style="display:none">
-  <div class="hist-toggle" onclick="toggleHistory()">
-    <span>📅 昨日・一昨日のランキング</span>
-    <span class="hist-arrow" id="histArrow">▼</span>
+<!-- 📊 投資日記 -->
+<div class="diary-sec" style="max-width:720px;margin:10px auto;padding:0 12px">
+  <div class="diary-wrap" id="portfolioSection">
+    <div class="diary-head">📊 かぶのすけの投資日記</div>
+    <div class="diary-sub">AI × 1000万円 ／ 2026.2.24スタート</div>
+    <div id="portfolioBody">
+      <div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div>
+    </div>
   </div>
-  <div class="hist-body" id="histBody" style="display:none"></div>
 </div>
 
 <!-- SHARE -->
@@ -1246,6 +1268,68 @@ async function loadHistory(){
   }
 }
 
+// ═══════════════════════════════════════
+// PORTFOLIO DIARY
+// ═══════════════════════════════════════
+async function loadPortfolio(){
+  try{
+    const res=await fetch('portfolio.json?t='+Date.now());
+    if(res.ok){const d=await res.json();renderPortfolio(d);}
+    else renderPortfolio(null);
+  }catch(e){renderPortfolio(null);}
+}
+
+function renderPortfolio(pf){
+  const body=document.getElementById('portfolioBody');
+  if(!body)return;
+
+  if(!pf||!pf.daily_nav||pf.daily_nav.length<=1){
+    body.innerHTML=`<div style="text-align:center">
+      <div style="font-size:28px;margin-bottom:6px">🚀</div>
+      <div style="font-size:13px;font-weight:700;color:var(--text1);margin-bottom:4px">1000万円で運用開始</div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:10px">AIがスコアに基づいて自動売買。毎日更新します。</div>
+      <a class="pf-note-link" href="https://note.com/kabunosuke_navi" target="_blank" rel="noopener">📝 投資日記をnoteで読む →</a>
+    </div>`;
+    return;
+  }
+
+  const nav=pf.daily_nav[pf.daily_nav.length-1];
+  const currentNav=nav.nav;
+  const pnl=currentNav-pf.initial_capital;
+  const pnlPct=(pnl/pf.initial_capital*100).toFixed(2);
+  const dayCount=pf.daily_nav.length;
+  const posCount=(pf.positions||[]).length;
+  const cashPct=currentNav>0?Math.round(pf.cash/currentNav*100):100;
+  const stockPct=100-cashPct;
+  const pnlCls=pnl>=0?'up':'dn';
+  const pnlSign=pnl>=0?'+':'';
+
+  const holdingsHtml=posCount
+    ?(pf.positions||[]).map(p=>{
+        const pc=(p.pnl_pct||0)>=0?'up':'dn';
+        const ps=(p.pnl_pct||0)>=0?'+':'';
+        return`<div class="pf-hold">
+          <div style="flex:1"><div class="pf-hold-name">${p.name||p.code}</div><div style="font-size:9px;color:var(--text3)">${p.code} · ${p.shares||0}株</div></div>
+          <div class="pf-hold-pnl ${pc}">${ps}${(p.pnl_pct||0).toFixed(1)}%</div>
+        </div>`;}).join('')
+    :'<div style="font-size:11px;color:var(--text3);padding:4px 0">現金待機中 🔍</div>';
+
+  body.innerHTML=`
+    <div class="pf-hero">
+      <div class="pf-nav">¥${currentNav.toLocaleString()}</div>
+      <div class="pf-pnl ${pnlCls}">${pnlSign}${pnlPct}%</div>
+      <div class="pf-day">Day ${dayCount}</div>
+    </div>
+    <div class="pf-bars">
+      <div class="pf-bar cash" style="flex:${cashPct}">💴 現金 ${cashPct}%</div>
+      ${posCount?`<div class="pf-bar stock" style="flex:${stockPct}">📈 株式 ${stockPct}%</div>`:''}
+    </div>
+    <div style="font-size:11px;font-weight:700;color:var(--text2);margin:6px 0 4px">📋 保有 ${posCount}銘柄</div>
+    <div>${holdingsHtml}</div>
+    <a class="pf-note-link" href="https://note.com/kabunosuke_navi" target="_blank" rel="noopener">📝 投資日記をnoteで読む →</a>
+    <div style="font-size:9px;color:var(--text3);margin-top:6px;text-align:center">※仮想投資です。実際の売買ではありません。</div>`;
+}
+
 async function init(){
   renderTicker();
   try{
@@ -1283,6 +1367,7 @@ async function init(){
   }
   await loadHistory();
   run();
+  loadPortfolio(); // 投資日記（非同期、ブロックしない）
   gaEvent('page_view',{version:'v8.1'});
   console.log('🟢 かぶのすけ v8.1 loaded');
 }
