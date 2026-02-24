@@ -56,7 +56,7 @@ jobs:
       - name: portfolio.json をコミット & プッシュ
         if: success()
         run: |
-          git add portfolio.json
+          git add portfolio.json note_today.txt x_today.txt
           if git diff --cached --quiet; then
             echo "ポートフォリオ変更なし。"
           else

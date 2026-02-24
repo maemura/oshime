@@ -1,320 +1,569 @@
 #!/usr/bin/env python3
 """
-かぶのすけ 仮想ポートフォリオ管理
-stocks_data.json を読み、portfolio.json を更新
+かぶのすけ ポートフォリオ自動管理
+- 保有銘柄の初値取得→評価更新
+- 損切り(-15%) / 利確(+20%半分)
+- 新規銘柄の自動選定
+- daily_nav更新
+- note/X投稿テキスト生成
 """
-import json
-import os
-from datetime import datetime
 
-TODAY = datetime.now().strftime("%Y-%m-%d")
+import json, os, sys, datetime, urllib.request, urllib.error, time
 
-# ─── スコア計算（JS側と同等） ───
-def calc_score(s):
-    score = 0
-    mc = s.get("market_cap_b", 0) or 0
-    if mc >= 30000: score += 18
-    elif mc >= 10000: score += 15
-    elif mc >= 5000: score += 12
-    elif mc >= 3000: score += 9
-    elif mc >= 1000: score += 6
-    elif mc >= 500: score += 3
+TODAY = datetime.date.today().strftime("%Y-%m-%d")
+TODAY_SHORT = datetime.date.today().strftime("%Y/%m/%d")
+WEEKDAY = datetime.date.today().weekday()  # 0=Mon ... 6=Sun
 
-    div = s.get("dividend", 0) or 0
-    if div >= 4: score += 15
-    elif div >= 3.5: score += 13
-    elif div >= 3: score += 11
-    elif div >= 2.5: score += 8
-    elif div >= 2: score += 5
+# ── パス ──
+BASE = os.path.dirname(os.path.abspath(__file__))
+PF_PATH = os.path.join(BASE, "portfolio.json")
+STOCKS_PATH = os.path.join(BASE, "stocks_data.json")
+NOTE_PATH = os.path.join(BASE, "note_today.txt")
+X_PATH = os.path.join(BASE, "x_today.txt")
 
-    ma75d = round((s.get("price",0) - s.get("ma75", s.get("price",0))) / (s.get("ma75", s.get("price",0)) or 1) * 100, 1)
-    if -3 <= ma75d <= 0: score += 15
-    elif -5 <= ma75d < -3: score += 12
-    elif 0 < ma75d <= 3: score += 10
-    elif -8 <= ma75d < -5: score += 7
+# ── ルール ──
+STOP_LOSS_PCT = -15
+TAKE_PROFIT_PCT = 20
+MAX_POSITIONS = 10
+PER_STOCK_MAX = 1000000
+MIN_CASH_RATIO = 0.50  # 現金比率50%以上で新規買い
+MIN_SCORE_BUY = 70     # スコア70以上で買い候補
+MAX_BUY_PER_DAY = 2    # 1日最大2銘柄新規
 
-    ma25d = round((s.get("price",0) - s.get("ma25", s.get("price",0))) / (s.get("ma25", s.get("price",0)) or 1) * 100, 1)
-    if -3 <= ma25d <= 0: score += 10
-    elif -5 <= ma25d < -3: score += 7
-    elif 0 < ma25d <= 2: score += 5
+# ══════════════════════════════════════
+# YAHOO FINANCE 初値取得
+# ══════════════════════════════════════
+def fetch_opening_price(code):
+    """Yahoo Finance JPから初値を取得"""
+    url = f"https://finance.yahoo.co.jp/quote/{code}.T"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as res:
+            html = res.read().decode("utf-8", errors="ignore")
+        # 始値を探す（HTMLパース）
+        # パターン: "始値" の後に数字
+        import re
+        # 始値のパターンを探す
+        patterns = [
+            r'始値[^0-9]*?([0-9,]+\.?[0-9]*)',
+            r'open["\s:]+([0-9,]+\.?[0-9]*)',
+        ]
+        for pat in patterns:
+            m = re.search(pat, html)
+            if m:
+                val = m.group(1).replace(",", "")
+                return float(val)
+    except Exception as e:
+        print(f"  ⚠ {code} 初値取得失敗: {e}")
+    return None
 
-    ret120 = s.get("ret120", 0) or 0
-    if ret120 >= 15: score += 10
-    elif ret120 >= 8: score += 8
-    elif ret120 >= 3: score += 6
-    elif ret120 >= 0: score += 4
 
-    ret60 = s.get("ret60", 0) or 0
-    if ret60 >= 10: score += 8
-    elif ret60 >= 5: score += 6
-    elif ret60 >= 0: score += 4
+def fetch_opening_price_stooq(code):
+    """Stooq APIで初値を取得（バックアップ）"""
+    url = f"https://stooq.com/q/l/?s={code}.jp&f=o&e=csv"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as res:
+            text = res.read().decode("utf-8").strip()
+        lines = text.split("\n")
+        if len(lines) >= 2:
+            val = lines[1].strip()
+            if val and val != "N/D":
+                return float(val)
+    except Exception as e:
+        print(f"  ⚠ {code} Stooq取得失敗: {e}")
+    return None
 
-    ret20 = s.get("ret20", 0) or 0
-    if ret20 >= 5: score += 5
-    elif ret20 >= 0: score += 3
 
-    return min(score, 100)
+def get_opening_price(code):
+    """初値取得（Yahoo → Stooq フォールバック）"""
+    price = fetch_opening_price(code)
+    if price and price > 0:
+        return price
+    time.sleep(0.5)
+    price = fetch_opening_price_stooq(code)
+    if price and price > 0:
+        return price
+    return None
 
-def get_trend_type(s):
-    ma75d = round((s.get("price",0) - s.get("ma75", s.get("price",0))) / (s.get("ma75", s.get("price",0)) or 1) * 100, 1)
-    ma25d = round((s.get("price",0) - s.get("ma25", s.get("price",0))) / (s.get("ma25", s.get("price",0)) or 1) * 100, 1)
-    mc = s.get("market_cap_b", 0) or 0
-    div = s.get("dividend", 0) or 0
 
-    if ma75d < -8:
-        return "falling"
-    elif ma75d < -2 and mc >= 3000 and div >= 2.5:
-        return "value_dip"
-    elif -5 <= ma75d <= 3 and ma25d < -1:
-        return "dip"
-    elif ma75d > 0 and ma25d > 0 and mc >= 1000:
-        return "momentum"
-    elif ma75d >= -2 and ma25d > 0:
-        return "bounce"
-    else:
-        return "neutral"
+# ══════════════════════════════════════
+# PORTFOLIO OPERATIONS
+# ══════════════════════════════════════
+def load_json(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
 
-# ─── 売買ルール ───
-# 【買い】スコア60以上、時価総額3000億以上、配当2.5%以上、最大10銘柄、1銘柄100万円
-# 【損切り】買値から-15% or 75日線割れ5日連続
-# 【利確】+20%で半分売却
-# 【ナンピン】保有が-5%以上下落＆75日線上 → 追加50万
 
-def run():
-    # データ読み込み
-    if not os.path.exists("stocks_data.json"):
-        print("❌ stocks_data.json なし")
-        return
-    if not os.path.exists("portfolio.json"):
-        print("❌ portfolio.json なし")
-        return
+def save_json(path, data):
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
 
-    with open("stocks_data.json") as f:
-        stock_data = json.load(f)
-    with open("portfolio.json") as f:
-        pf = json.load(f)
 
-    stocks = stock_data.get("stocks", [])
-    if not stocks:
-        print("❌ 銘柄データなし")
-        return
-
-    # 既に今日処理済みなら最終NAVだけ更新
-    if pf["daily_nav"] and pf["daily_nav"][-1]["date"] == TODAY:
-        print(f"📅 {TODAY} は処理済み。NAV更新のみ。")
-
-    # 全銘柄にスコア付与
-    stock_map = {}
-    for s in stocks:
-        s["_score"] = calc_score(s)
-        s["_type"] = get_trend_type(s)
-        stock_map[s["code"]] = s
-
-    actions = []
-    cash = pf["cash"]
-    positions = pf["positions"]
-    held_codes = {p["code"] for p in positions}
-
-    # ── 売り判定 ──
-    new_positions = []
-    for p in positions:
-        s = stock_map.get(p["code"])
-        if not s:
-            new_positions.append(p)
-            continue
-
-        current_price = s.get("price", p["buy_price"])
-        p["current_price"] = current_price
-        pnl_pct = (current_price - p["buy_price"]) / p["buy_price"] * 100
-
-        # 損切り: -15%
-        if pnl_pct <= -15:
-            sell_amount = current_price * p["shares"]
-            cash += sell_amount
-            actions.append({
-                "date": TODAY, "action": "sell_loss", "code": p["code"],
-                "name": p["name"], "price": current_price, "shares": p["shares"],
-                "pnl_pct": round(pnl_pct, 1),
-                "reason": f"損切り {pnl_pct:.1f}%。ルール通り。"
-            })
-            held_codes.discard(p["code"])
-            continue
-
-        # 75日線割れ（ma75乖離 < -5%が5日以上）
-        ma75d = round((s.get("price",0) - s.get("ma75", s.get("price",0))) / (s.get("ma75", s.get("price",0)) or 1) * 100, 1)
-        if ma75d < -5:
-            p["below_ma75_days"] = p.get("below_ma75_days", 0) + 1
-            if p["below_ma75_days"] >= 5:
-                sell_amount = current_price * p["shares"]
-                cash += sell_amount
-                actions.append({
-                    "date": TODAY, "action": "sell_loss", "code": p["code"],
-                    "name": p["name"], "price": current_price, "shares": p["shares"],
-                    "pnl_pct": round(pnl_pct, 1),
-                    "reason": f"75日線割れ{p['below_ma75_days']}日。撤退。"
-                })
-                held_codes.discard(p["code"])
-                continue
+def update_positions(pf):
+    """保有銘柄の株価更新"""
+    print("\n📡 保有銘柄の初値取得中...")
+    for pos in pf.get("positions", []):
+        code = pos["code"]
+        price = get_opening_price(code)
+        if price:
+            pos["current_price"] = price
+            pos["pnl_pct"] = round((price - pos["buy_price"]) / pos["buy_price"] * 100, 2)
+            print(f"  ✅ {pos['name']}({code}): ¥{price:,.0f} ({pos['pnl_pct']:+.2f}%)")
         else:
-            p["below_ma75_days"] = 0
+            print(f"  ⚠ {pos['name']}({code}): 取得失敗、前回値維持")
+        time.sleep(1)  # レート制限対策
 
+
+def check_stop_loss_take_profit(pf):
+    """損切り・利確判定"""
+    sells = []
+    remaining = []
+    
+    for pos in pf.get("positions", []):
+        pnl = pos.get("pnl_pct", 0)
+        
+        # 損切り: -15%
+        if pnl <= STOP_LOSS_PCT:
+            sells.append({
+                "action": "sell",
+                "type": "stop_loss",
+                "code": pos["code"],
+                "name": pos["name"],
+                "price": pos["current_price"],
+                "shares": pos["shares"],
+                "amount": pos["current_price"] * pos["shares"],
+                "pnl_pct": pnl,
+                "reason": f"損切り（{pnl:.1f}%）。ルール通りです。"
+            })
+            pf["cash"] += pos["current_price"] * pos["shares"]
+            print(f"  🔴 損切り: {pos['name']} {pnl:.1f}%")
+            
         # 利確: +20%で半分売却
-        if pnl_pct >= 20 and not p.get("half_sold"):
-            half = p["shares"] // 2
-            if half > 0:
-                sell_amount = current_price * half
-                cash += sell_amount
-                p["shares"] -= half
-                p["half_sold"] = True
-                actions.append({
-                    "date": TODAY, "action": "sell_profit", "code": p["code"],
-                    "name": p["name"], "price": current_price, "shares": half,
-                    "pnl_pct": round(pnl_pct, 1),
-                    "reason": f"+{pnl_pct:.1f}%達成。半分利確。残りホールド。"
+        elif pnl >= TAKE_PROFIT_PCT:
+            sell_shares = pos["shares"] // 2
+            if sell_shares > 0:
+                sells.append({
+                    "action": "sell",
+                    "type": "take_profit",
+                    "code": pos["code"],
+                    "name": pos["name"],
+                    "price": pos["current_price"],
+                    "shares": sell_shares,
+                    "amount": pos["current_price"] * sell_shares,
+                    "pnl_pct": pnl,
+                    "reason": f"利確（{pnl:.1f}%）。+20%で半分売却。"
                 })
+                pf["cash"] += pos["current_price"] * sell_shares
+                pos["shares"] -= sell_shares
+                pos["cost"] = pos["buy_price"] * pos["shares"]
+                print(f"  🟢 利確: {pos['name']} {pnl:.1f}% → {sell_shares}株売却")
+                remaining.append(pos)
+            else:
+                remaining.append(pos)
+        else:
+            remaining.append(pos)
+    
+    pf["positions"] = remaining
+    return sells
 
-        p["pnl_pct"] = round(pnl_pct, 1)
-        new_positions.append(p)
 
-    positions = new_positions
-
-    # ── 買い判定 ──
-    if len(positions) < 10:
-        candidates = [s for s in stocks if
-                      s["_score"] >= 60 and
-                      (s.get("market_cap_b", 0) or 0) >= 3000 and
-                      (s.get("dividend", 0) or 0) >= 2.5 and
-                      s["code"] not in held_codes and
-                      s["_type"] in ("dip", "value_dip")]
-        candidates.sort(key=lambda x: -x["_score"])
-
-        for s in candidates[:3]:  # 1日最大3銘柄
-            if len(positions) >= 10:
-                break
-            if cash < 500000:  # 最低50万は残す
-                break
-
-            price = s.get("price", 0)
-            if price <= 0:
-                continue
-
-            # 1銘柄100万円まで。100株単位
-            budget = min(1000000, cash - 500000)
-            shares = (budget // (price * 100)) * 100
-            if shares <= 0:
-                # 高い株は1単元(100株)で
-                if price * 100 <= budget:
-                    shares = 100
-                else:
-                    continue
-
-            cost = price * shares
-            if cost > cash:
-                continue
-
-            cash -= cost
-            positions.append({
-                "code": s["code"],
-                "name": s.get("name", s["code"]),
-                "buy_date": TODAY,
-                "buy_price": price,
-                "shares": shares,
-                "cost": cost,
-                "current_price": price,
-                "pnl_pct": 0,
-                "below_ma75_days": 0,
-                "half_sold": False,
-            })
-            held_codes.add(s["code"])
-            div_str = f"配当{s.get('dividend',0):.1f}%" if s.get("dividend") else ""
-            actions.append({
-                "date": TODAY, "action": "buy", "code": s["code"],
-                "name": s.get("name", s["code"]),
-                "price": price, "shares": shares,
-                "reason": f"スコア{s['_score']}。{div_str}。{s['_type']}。"
-            })
-
-    # ── ナンピン判定 ──
-    for p in positions:
-        s = stock_map.get(p["code"])
-        if not s:
+def select_new_buys(pf, stocks_data):
+    """新規銘柄の自動選定"""
+    buys = []
+    
+    # 現金比率チェック
+    nav = calc_nav(pf)
+    cash_ratio = pf["cash"] / nav if nav > 0 else 1
+    if cash_ratio < MIN_CASH_RATIO:
+        print(f"  💰 現金比率 {cash_ratio:.0%} < {MIN_CASH_RATIO:.0%} → 新規買いなし")
+        return buys
+    
+    # 保有銘柄コードリスト
+    held_codes = {p["code"] for p in pf.get("positions", [])}
+    
+    # ポジション数チェック
+    if len(held_codes) >= MAX_POSITIONS:
+        print(f"  📊 保有{len(held_codes)}銘柄 ≥ {MAX_POSITIONS} → 新規買いなし")
+        return buys
+    
+    # stocks_data.jsonからスコア上位を取得
+    candidates = []
+    for s in stocks_data.get("stocks", []):
+        code = s.get("code", "")
+        if code in held_codes:
             continue
-        pnl_pct = p.get("pnl_pct", 0)
-        ma75d = round((s.get("price",0) - s.get("ma75", s.get("price",0))) / (s.get("ma75", s.get("price",0)) or 1) * 100, 1)
-        if pnl_pct <= -5 and ma75d > -5 and not p.get("nanpin_done") and cash >= 500000:
-            price = s.get("price", p["buy_price"])
-            budget = min(500000, cash - 300000)
-            shares = (budget // (price * 100)) * 100
-            if shares >= 100:
-                cost = price * shares
-                # 平均買い付け価格を再計算
-                total_shares = p["shares"] + shares
-                avg_price = (p["buy_price"] * p["shares"] + price * shares) / total_shares
-                p["buy_price"] = round(avg_price)
-                p["shares"] = total_shares
-                p["cost"] += cost
-                p["nanpin_done"] = True
-                cash -= cost
-                actions.append({
-                    "date": TODAY, "action": "nanpin", "code": p["code"],
-                    "name": p["name"], "price": price, "shares": shares,
-                    "reason": f"{pnl_pct:.1f}%下落でナンピン。75日線上。"
-                })
+        
+        score = s.get("score", 0)
+        if score < MIN_SCORE_BUY:
+            continue
+        
+        # 基本フィルター
+        div = s.get("dividend", 0) or 0
+        pbr = s.get("pbr", 999) or 999
+        rsi = s.get("rsi", 50) or 50
+        price = s.get("price", 0) or 0
+        
+        if div < 2.0:  # 配当2%未満は除外
+            continue
+        if price <= 0:
+            continue
+            
+        candidates.append({
+            "code": code,
+            "name": s.get("name", ""),
+            "score": score,
+            "price": price,
+            "dividend": div,
+            "pbr": pbr,
+            "rsi": rsi,
+            "sector": s.get("sector", ""),
+            "ma25_dev": round((price - (s.get("ma25", price) or price)) / ((s.get("ma25", price) or price) or 1) * 100, 1),
+        })
+    
+    # スコア順にソート
+    candidates.sort(key=lambda x: x["score"], reverse=True)
+    
+    # 上位から買い判断
+    buy_count = 0
+    for c in candidates:
+        if buy_count >= MAX_BUY_PER_DAY:
+            break
+        
+        # 1銘柄あたりの投資額を計算（100万円上限）
+        shares_unit = 100  # 基本100株単位
+        invest_amount = c["price"] * shares_unit
+        
+        # 100万円以内で最大株数
+        max_shares = (PER_STOCK_MAX // c["price"]) // 100 * 100
+        if max_shares < 100:
+            max_shares = 100
+        invest_amount = c["price"] * max_shares
+        
+        if invest_amount > pf["cash"] * 0.3:  # 残り現金の30%以上は1銘柄に使わない
+            max_shares = (int(pf["cash"] * 0.3) // c["price"]) // 100 * 100
+            if max_shares < 100:
+                continue
+            invest_amount = c["price"] * max_shares
+        
+        if invest_amount > pf["cash"]:
+            continue
+        
+        # 買いの攻め/守り判定
+        buy_type = "守り" if c["dividend"] >= 3.5 else "攻め"
+        
+        # 購入実行
+        buy_info = {
+            "action": "buy",
+            "code": c["code"],
+            "name": c["name"],
+            "price": c["price"],
+            "shares": max_shares,
+            "amount": invest_amount,
+            "score": c["score"],
+            "reason": f"スコア{c['score']}。配当{c['dividend']}%。RSI{c['rsi']}。",
+            "type": buy_type
+        }
+        
+        # ポートフォリオに追加
+        pf["positions"].append({
+            "code": c["code"],
+            "name": c["name"],
+            "buy_date": TODAY,
+            "buy_price": c["price"],
+            "shares": max_shares,
+            "cost": invest_amount,
+            "current_price": c["price"],
+            "pnl_pct": 0.0,
+            "thesis": buy_info["reason"],
+            "stop_loss": round(c["price"] * (1 + STOP_LOSS_PCT / 100)),
+            "take_profit": round(c["price"] * (1 + TAKE_PROFIT_PCT / 100)),
+            "type": buy_type
+        })
+        
+        pf["cash"] -= invest_amount
+        buys.append(buy_info)
+        held_codes.add(c["code"])
+        buy_count += 1
+        
+        print(f"  🆕 新規購入: {c['name']}({c['code']}) {max_shares}株 @¥{c['price']:,.0f} [{buy_type}]")
+    
+    return buys
 
-    # ── NAV計算 ──
-    positions_value = sum(
-        (stock_map.get(p["code"], {}).get("price", p.get("current_price", p["buy_price"])) * p["shares"])
-        for p in positions
-    )
-    nav = cash + positions_value
 
-    nikkei = stock_data.get("nikkei_price")
+def calc_nav(pf):
+    """純資産計算"""
+    pos_value = sum(p.get("current_price", p["buy_price"]) * p["shares"] for p in pf.get("positions", []))
+    return pf["cash"] + pos_value
 
-    # ── 保存 ──
-    pf["cash"] = round(cash)
-    pf["positions"] = positions
-    pf["history"] = pf.get("history", []) + actions
 
-    # daily_nav追加（同日なら上書き）
-    nav_entry = {
+def update_daily_nav(pf, stocks_data):
+    """daily_navに今日の行を追加"""
+    nav = calc_nav(pf)
+    pos_value = nav - pf["cash"]
+    nikkei = stocks_data.get("nikkei_price", 0)
+    
+    # 既に今日のエントリがあれば上書き
+    pf["daily_nav"] = [d for d in pf.get("daily_nav", []) if d["date"] != TODAY]
+    
+    pf["daily_nav"].append({
         "date": TODAY,
         "nav": round(nav),
-        "cash": round(cash),
-        "positions_value": round(positions_value),
-        "nikkei": nikkei,
-    }
-    if pf["daily_nav"] and pf["daily_nav"][-1]["date"] == TODAY:
-        pf["daily_nav"][-1] = nav_entry
+        "cash": round(pf["cash"]),
+        "positions_value": round(pos_value),
+        "nikkei": nikkei
+    })
+
+
+# ══════════════════════════════════════
+# 記事テキスト生成
+# ══════════════════════════════════════
+def generate_note_text(pf, sells, buys, stocks_data, prev_nav_entry):
+    """note記事テキストを自動生成"""
+    nav = calc_nav(pf)
+    pnl = nav - pf["initial_capital"]
+    pnl_pct = pnl / pf["initial_capital"] * 100
+    day_count = len(pf["daily_nav"])
+    pos_count = len(pf["positions"])
+    cash_pct = round(pf["cash"] / nav * 100) if nav > 0 else 100
+    stock_pct = 100 - cash_pct
+    nikkei = stocks_data.get("nikkei_price", 0)
+    nikkei_chg = stocks_data.get("nikkei_1d_chg", 0)
+    
+    # 昨日のNAV
+    prev_nav = prev_nav_entry.get("nav", pf["initial_capital"]) if prev_nav_entry else pf["initial_capital"]
+    day_pnl = nav - prev_nav
+    day_pnl_pct = day_pnl / prev_nav * 100 if prev_nav > 0 else 0
+    
+    pnl_sign = "+" if pnl >= 0 else ""
+    day_sign = "+" if day_pnl >= 0 else ""
+    
+    lines = []
+    lines.append(f"📊 かぶのすけ投資日記 Day {day_count}（{TODAY_SHORT}）")
+    lines.append("")
+    lines.append("━━━━━━━━━━━━━━━━")
+    lines.append("")
+    lines.append(f"お疲れ様です！かぶのすけです 📊")
+    lines.append("")
+    
+    # 資産サマリー
+    lines.append(f"■ 資産：¥{nav:,.0f}（{pnl_sign}{pnl_pct:.2f}%）")
+    lines.append(f"　前日比：{day_sign}¥{day_pnl:,.0f}（{day_sign}{day_pnl_pct:.2f}%）")
+    lines.append("")
+    
+    # 昨日の結果
+    lines.append("━━━━━━━━━━━━━━━━")
+    lines.append("")
+    lines.append("■ 昨日の結果")
+    lines.append("")
+    for pos in pf["positions"]:
+        pnl_s = "+" if pos["pnl_pct"] >= 0 else ""
+        lines.append(f"・{pos['name']}（{pos['code']}）：{pnl_s}{pos['pnl_pct']:.1f}%")
+    lines.append(f"・日経平均：{nikkei:,.0f}円（{'+' if nikkei_chg >= 0 else ''}{nikkei_chg:.2f}%）")
+    lines.append("")
+    
+    # 今日の売買
+    if sells or buys:
+        lines.append("━━━━━━━━━━━━━━━━")
+        lines.append("")
+        lines.append("■ 今日の売買")
+        lines.append("")
+        
+        for s in sells:
+            emoji = "🔴" if s["type"] == "stop_loss" else "🟢"
+            lines.append(f"{emoji} 売却：{s['name']}（{s['code']}）")
+            lines.append(f"　{s['shares']}株 × @{s['price']:,.0f}円 ＝ ¥{s['amount']:,.0f}")
+            lines.append(f"　{s['reason']}")
+            lines.append("")
+        
+        for b in buys:
+            emoji = "🛡" if b.get("type") == "守り" else "⚔"
+            lines.append(f"{emoji} {'守り' if b.get('type')=='守り' else '攻め'}枠：{b['name']}（{b['code']}）")
+            lines.append(f"　{b['shares']}株 × @{b['price']:,.0f}円 ＝ ¥{b['amount']:,.0f}")
+            lines.append(f"　{b['reason']}")
+            lines.append("")
     else:
-        pf["daily_nav"].append(nav_entry)
+        lines.append("━━━━━━━━━━━━━━━━")
+        lines.append("")
+        lines.append("■ 今日の売買")
+        lines.append("売買なし。静観です 🔍")
+        lines.append("")
+    
+    # 保有銘柄
+    lines.append("━━━━━━━━━━━━━━━━")
+    lines.append("")
+    lines.append(f"■ 保有銘柄（{pos_count}銘柄）")
+    lines.append("")
+    for pos in pf["positions"]:
+        pnl_s = "+" if pos["pnl_pct"] >= 0 else ""
+        lines.append(f"・{pos['name']}（{pos['code']}）{pos['shares']}株 @{pos['buy_price']:,.0f} → {pnl_s}{pos['pnl_pct']:.1f}% [{pos.get('type','—')}]")
+    lines.append("")
+    lines.append(f"💴 現金：¥{pf['cash']:,.0f}（{cash_pct}%）")
+    lines.append(f"📈 株式：¥{round(nav - pf['cash']):,.0f}（{stock_pct}%）")
+    lines.append(f"📊 合計：¥{nav:,.0f}")
+    lines.append("")
+    
+    # かぶのすけの一言
+    lines.append("━━━━━━━━━━━━━━━━")
+    lines.append("")
+    lines.append("■ かぶのすけの一言")
+    lines.append("")
+    if sells:
+        if any(s["type"] == "stop_loss" for s in sells):
+            lines.append("すみません、読み間違えました…。でもルールは守りました。")
+            lines.append("損切りは失敗じゃないです。次に活かします。")
+        else:
+            lines.append("やった…！利確できました ✨ でも、欲張らない。残りはホールドです。")
+    elif buys:
+        lines.append("新しい銘柄を仕込みました 💪 データが揃った瞬間は、行くしかないです。")
+    elif day_pnl > 0:
+        lines.append("今日はプラスでした。でも一喜一憂しません。ルール通りにいきます 📊")
+    elif day_pnl < 0:
+        lines.append("今日はマイナス…でも慌てません。損切りラインまでは耐えます。配当は裏切らないんですよね。")
+    else:
+        lines.append("弾は残す。チャンスは必ず来ます 🔍")
+    lines.append("")
+    
+    # フッター
+    lines.append("━━━━━━━━━━━━━━━━")
+    lines.append(f"📱 無料スキャナー：https://kabunosuke-navi.vercel.app/app.html")
+    lines.append(f"🐦 X：https://x.com/kabunosuke_navi")
+    lines.append("")
+    lines.append("#かぶのすけ #投資日記 #AI投資 #高配当 #押し目買い")
+    
+    return "\n".join(lines)
 
-    with open("portfolio.json", "w") as f:
-        json.dump(pf, f, ensure_ascii=False, indent=2)
 
-    # ── レポート ──
+def generate_x_text(pf, sells, buys):
+    """X投稿テキスト生成"""
+    nav = calc_nav(pf)
+    pnl = nav - pf["initial_capital"]
+    pnl_pct = pnl / pf["initial_capital"] * 100
+    day_count = len(pf["daily_nav"])
+    pnl_sign = "+" if pnl >= 0 else ""
+    
+    lines = []
+    lines.append(f"📊 Day {day_count}｜¥{nav:,.0f}（{pnl_sign}{pnl_pct:.2f}%）")
+    lines.append("")
+    
+    # 保有銘柄の状況
+    for pos in pf["positions"]:
+        emoji = "🛡" if pos.get("type") == "守り" else "⚔"
+        pnl_s = "+" if pos["pnl_pct"] >= 0 else ""
+        lines.append(f"{emoji} {pos['name']} {pnl_s}{pos['pnl_pct']:.1f}%")
+    
+    # 売買があれば
+    if sells:
+        for s in sells:
+            emoji = "🔴" if s["type"] == "stop_loss" else "🟢"
+            lines.append(f"{emoji} {s['name']} {'損切り' if s['type']=='stop_loss' else '利確'}")
+    if buys:
+        for b in buys:
+            lines.append(f"🆕 {b['name']} @{b['price']:,.0f}")
+    
+    lines.append("")
+    lines.append("#かぶのすけ #AI投資 #株クラ")
+    
+    return "\n".join(lines)
+
+
+# ══════════════════════════════════════
+# MAIN
+# ══════════════════════════════════════
+def main():
+    print("=" * 50)
+    print(f"📊 かぶのすけ ポートフォリオ管理 {TODAY}")
+    print("=" * 50)
+    
+    # 土日は休み
+    if WEEKDAY >= 5:
+        print("📅 土日のため処理スキップ")
+        return
+    
+    # ファイル読み込み
+    if not os.path.exists(PF_PATH):
+        print("❌ portfolio.json が見つかりません")
+        sys.exit(1)
+    
+    pf = load_json(PF_PATH)
+    
+    stocks_data = {}
+    if os.path.exists(STOCKS_PATH):
+        stocks_data = load_json(STOCKS_PATH)
+    
+    # 昨日のNAVエントリ取得
+    daily_nav = pf.get("daily_nav", [])
+    prev_nav_entry = daily_nav[-1] if daily_nav else None
+    
+    # ① 保有銘柄の株価更新
+    update_positions(pf)
+    
+    # ② 損切り・利確判定
+    print("\n📋 損切り・利確チェック...")
+    sells = check_stop_loss_take_profit(pf)
+    if not sells:
+        print("  → 該当なし")
+    
+    # ③ 新規銘柄選定
+    print("\n🔍 新規銘柄スキャン...")
+    buys = select_new_buys(pf, stocks_data)
+    if not buys:
+        print("  → 新規買いなし")
+    
+    # ④ daily_nav更新
+    update_daily_nav(pf, stocks_data)
+    
+    # ⑤ 売買履歴に追加
+    history = pf.get("history", [])
+    for s in sells:
+        history.append({
+            "date": TODAY,
+            "action": "sell",
+            "code": s["code"],
+            "name": s["name"],
+            "price": s["price"],
+            "shares": s["shares"],
+            "amount": round(s["amount"]),
+            "reason": s["reason"]
+        })
+    for b in buys:
+        history.append({
+            "date": TODAY,
+            "action": "buy",
+            "code": b["code"],
+            "name": b["name"],
+            "price": b["price"],
+            "shares": b["shares"],
+            "amount": round(b["amount"]),
+            "reason": b["reason"]
+        })
+    pf["history"] = history
+    
+    # ⑥ portfolio.json保存
+    save_json(PF_PATH, pf)
+    print(f"\n✅ portfolio.json 更新完了")
+    
+    # ⑦ NAVサマリー
+    nav = calc_nav(pf)
     pnl = nav - pf["initial_capital"]
     pnl_pct = pnl / pf["initial_capital"] * 100
     print(f"\n{'='*50}")
-    print(f"📊 かぶのすけ投資日記 Day {len(pf['daily_nav'])}")
+    print(f"💰 NAV: ¥{nav:,.0f} ({'+' if pnl>=0 else ''}{pnl_pct:.2f}%)")
+    print(f"💴 現金: ¥{pf['cash']:,.0f}")
+    print(f"📊 保有: {len(pf['positions'])}銘柄")
     print(f"{'='*50}")
-    print(f"💰 資産: ¥{nav:,.0f}（{'+' if pnl>=0 else ''}{pnl_pct:.2f}%）")
-    print(f"   現金: ¥{cash:,.0f} / 株式: ¥{positions_value:,.0f}")
-    print(f"📋 保有: {len(positions)}銘柄")
-    for p in positions:
-        pct = p.get("pnl_pct", 0)
-        print(f"   {p['name']}({p['code']}) {'+' if pct>=0 else ''}{pct:.1f}% @¥{p['buy_price']:,} x{p['shares']}株")
+    
+    # ⑧ 記事テキスト生成
+    note_text = generate_note_text(pf, sells, buys, stocks_data, prev_nav_entry)
+    with open(NOTE_PATH, "w", encoding="utf-8") as f:
+        f.write(note_text)
+    print(f"📝 note記事 → {NOTE_PATH}")
+    
+    x_text = generate_x_text(pf, sells, buys)
+    with open(X_PATH, "w", encoding="utf-8") as f:
+        f.write(x_text)
+    print(f"🐦 X投稿 → {X_PATH}")
 
-    if actions:
-        print(f"\n🔔 今日の売買:")
-        for a in actions:
-            icon = "🟢" if a["action"] == "buy" else "🔴" if "sell" in a["action"] else "🟡"
-            label = {"buy":"買い","sell_loss":"損切り","sell_profit":"利確","nanpin":"ナンピン"}.get(a["action"], a["action"])
-            print(f"   {icon} {label} {a['name']} @¥{a['price']:,} x{a['shares']}株")
-            print(f"     → {a['reason']}")
-    else:
-        print(f"\n😴 今日の売買: なし（様子見）")
-
-    print(f"{'='*50}")
 
 if __name__ == "__main__":
-    run()
+    main()
