@@ -4,17 +4,17 @@ on:
   schedule:
     # 毎朝 7:30 JST = UTC 22:30（前日）月〜金
     - cron: '30 22 * * 0-4'
-    # 後場後 16:00 JST = UTC 7:00 月〜金
+    # 大引け後 16:00 JST = UTC 7:00 月〜金
     - cron: '0 7 * * 1-5'
-  workflow_dispatch:  # GitHubのUIから手動実行できるボタン
+  workflow_dispatch:  # 手動実行ボタン
 
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 90  # 最大90分（2,000銘柄で約40分）
+    timeout-minutes: 90
 
     permissions:
-      contents: write   # stocks_data.json をコミットするために必要
+      contents: write
 
     steps:
       - name: リポジトリをチェックアウト
@@ -35,22 +35,41 @@ jobs:
         env:
           TZ: Asia/Tokyo
 
-      - name: validate.py を実行（推薦検証）
-        run: python3 validate.py || echo "検証スキップ（データ不足）"
-        env:
-          TZ: Asia/Tokyo
-
-      - name: stocks_data.json + 履歴をコミット & プッシュ
+      - name: stocks_data.json をコミット & プッシュ
         run: |
           git config user.name  "かぶのすけBot"
           git config user.email "bot@kabunosuke.app"
           git add stocks_data.json
-          git add history/ || true
-          git add weights.json || true
-          # 変更がある場合だけコミット（変更なければスキップ）
           if git diff --cached --quiet; then
             echo "データに変更なし。スキップ。"
           else
             git commit -m "📊 自動更新 $(TZ=Asia/Tokyo date '+%Y/%m/%d %H:%M JST')"
             git push
           fi
+
+      - name: ポートフォリオ自動売買
+        if: success()
+        run: python3 manage_portfolio.py
+        env:
+          TZ: Asia/Tokyo
+
+      - name: portfolio.json をコミット & プッシュ
+        if: success()
+        run: |
+          git add portfolio.json
+          if git diff --cached --quiet; then
+            echo "ポートフォリオ変更なし。"
+          else
+            git commit -m "📊 投資日記更新 $(TZ=Asia/Tokyo date '+%Y/%m/%d %H:%M JST')"
+            git push
+          fi
+
+      - name: X（Twitter）に自動投稿
+        if: success()
+        run: python3 post_x.py
+        env:
+          TZ: Asia/Tokyo
+          X_API_KEY: ${{ secrets.X_API_KEY }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
