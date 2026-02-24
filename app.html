@@ -833,7 +833,7 @@ function processStocks(){
     const d25=dv(s.price,s.ma25);
     const score = calcScore(s);
     const zone=getZone(score);
-    const ma75d = s.ma75_dev||0;
+    const ma75d = s.ma75 ? dv(s.price, s.ma75) : 0;
     const mc = s.market_cap_b||0;
     const div = s.dividend||0;
     let _type='neutral';
@@ -842,7 +842,7 @@ function processStocks(){
     else if(-5 <= ma75d && ma75d <= 3 && d25 < -1) _type='dip';
     else if(ma75d > 0 && d25 > 0 && mc >= 1000) _type='momentum';
     else if(ma75d >= -2 && d25 > 0) _type='bounce';
-    return{...s,d25,score,zone,_type};
+    return{...s,d25,score,zone,_type,ma75d};
   });
 
   if(zoneFilter==='buy')processed=processed.filter(s=>s.zone.cls==='buy');
@@ -1036,50 +1036,77 @@ function renderTop10(){
     if(activeSector) showSectorStocks(activeSector);
     else renderSectorTrend();
   } else if(currentTab==='mom'){
-    const moms=processed.filter(s=>s._type==='momentum'||(s._type==='bounce'&&(s.market_cap_b||0)>=1000))
-      .sort((a,b)=>b.score-a.score).slice(0,10);
+    // 上昇トレンド or 75日線上の大型株
+    const moms=processed.filter(s=>{
+      const m75=s.ma75d||0;
+      return (m75 > -2 && s.d25 > -2 && (s.market_cap_b||0)>=500 && s.score>=20);
+    }).sort((a,b)=>b.score-a.score).slice(0,10);
     renderTop10Items(moms,'上昇中 TOP10');
   } else {
-    const dips=processed.filter(s=>(s._type==='dip'||s._type==='value_dip')&&(s.dividend||0)>=2.5&&(s.market_cap_b||0)>=1000)
-      .sort((a,b)=>b.score-a.score).slice(0,10);
+    // 割安：配当2%以上の押し目銘柄
+    const dips=processed.filter(s=>{
+      return (s.d25 < -2 && (s.dividend||0)>=2.0 && (s.market_cap_b||0)>=500 && s.score>=20);
+    }).sort((a,b)=>b.score-a.score).slice(0,10);
     renderTop10Items(dips,'割安チャンス TOP10');
   }
 }
 
 function renderSectorTrend(){
   const body=document.getElementById('top5Body');
-  const entries=Object.entries(sectorScoresData);
-  if(!entries.length){
-    // セクタースコアがなければJSで計算
-    const secMap={};
-    processed.forEach(s=>{
-      const sec=s.sector||'その他';
-      if(!secMap[sec])secMap[sec]={scores:[],count:0};
-      secMap[sec].scores.push(s.score);
-      secMap[sec].count++;
-    });
-    Object.entries(secMap).forEach(([name,data])=>{
-      const avg=data.scores.reduce((a,b)=>a+b,0)/data.scores.length;
-      sectorScoresData[name]={score:Math.round(avg*10)/10,count:data.count};
-    });
-  }
-  const sorted=Object.entries(sectorScoresData).sort((a,b)=>(b[1].score||0)-(a[1].score||0));
-  const maxScore=sorted.length?sorted[0][1].score||1:1;
+  // 日本語セクター名マッピング
+  const SEC_JP={'Technology':'テクノロジー','Financial Services':'金融','Communication Services':'通信',
+    'Consumer Cyclical':'消費（景気敏感）','Industrials':'産業・資本財','Consumer Defensive':'消費（安定）',
+    'Energy':'エネルギー','Basic Materials':'素材','Healthcare':'ヘルスケア','Utilities':'公益',
+    'Real Estate':'不動産','その他':'その他'};
 
-  body.innerHTML=`<div class="sec-bars fadein">${sorted.map(([name,data])=>{
-    const pct=Math.round((data.score||0)/maxScore*100);
-    const color=data.score>=6?'var(--green)':data.score>=4?'var(--amber)':'var(--up)';
-    return`<div class="sec-bar-row" onclick="showSectorStocks('${name}')">
-      <div class="sec-bar-name">${name}</div>
+  // 全銘柄からセクター集計（score>0のみ）
+  const secMap={};
+  processed.forEach(s=>{
+    const sec=s.sector||'その他';
+    if(!secMap[sec])secMap[sec]={scores:[],count:0,buyCount:0};
+    secMap[sec].count++;
+    if(s.score>0)secMap[sec].scores.push(s.score);
+    if(s.zone&&s.zone.cls==='buy')secMap[sec].buyCount++;
+  });
+
+  const sorted=Object.entries(secMap)
+    .map(([name,data])=>({
+      name,
+      jpName:SEC_JP[name]||name,
+      avg:data.scores.length?Math.round(data.scores.reduce((a,b)=>a+b,0)/data.scores.length*10)/10:0,
+      count:data.count,
+      buyCount:data.buyCount
+    }))
+    .filter(d=>d.count>=3) // 3銘柄以上のセクターのみ
+    .sort((a,b)=>b.avg-a.avg);
+
+  const maxScore=sorted.length?sorted[0].avg||1:1;
+
+  if(!sorted.length){
+    body.innerHTML='<div style="padding:20px;text-align:center;font-size:12px;color:var(--text3)">セクターデータなし</div>';
+    return;
+  }
+
+  body.innerHTML=`<div class="sec-bars fadein">${sorted.map(d=>{
+    const pct=Math.round(d.avg/maxScore*100);
+    const color=d.avg>=50?'var(--green)':d.avg>=30?'var(--amber)':'var(--up)';
+    return`<div class="sec-bar-row" onclick="showSectorStocks('${d.name}')">
+      <div class="sec-bar-name">${d.jpName}</div>
       <div class="sec-bar-wrap"><div class="sec-bar-fill" style="width:${pct}%;background:${color}"></div></div>
-      <div class="sec-bar-val" style="color:${color}">${(data.score||0).toFixed(1)}</div>
+      <div class="sec-bar-val" style="color:${color}">${d.avg}</div>
     </div>`;
-  }).join('')}</div>`;
+  }).join('')}</div>
+  <div style="font-size:10px;color:var(--text3);margin-top:8px;text-align:center">セクターをタップして銘柄を見る</div>`;
 }
 
 function showSectorStocks(secName){
   activeSector=secName;
-  document.getElementById('t5TabSec').textContent=secName+' ✕';
+  const SEC_JP={'Technology':'テクノロジー','Financial Services':'金融','Communication Services':'通信',
+    'Consumer Cyclical':'消費（景気敏感）','Industrials':'産業・資本財','Consumer Defensive':'消費（安定）',
+    'Energy':'エネルギー','Basic Materials':'素材','Healthcare':'ヘルスケア','Utilities':'公益',
+    'Real Estate':'不動産'};
+  const jpName=SEC_JP[secName]||secName;
+  document.getElementById('t5TabSec').textContent=jpName+' ✕';
   const stocks=processed.filter(s=>(s.sector||'')==secName).sort((a,b)=>b.score-a.score).slice(0,10);
   const body=document.getElementById('top5Body');
   const backBtn=`<div class="sec-back-btn" onclick="activeSector=null;setTop5Tab('sector')">← セクター一覧に戻る</div>`;
@@ -1095,7 +1122,7 @@ function renderCard(s,rank){
   const divBadge=(s.dividend||0)>=2.5?`<span class="top10-badge div">💰${s.dividend}%</span>`:'';
   const momBadge=s._type==='momentum'?`<span class="top10-badge mom">↗上昇</span>`:'';
   const mc=s.market_cap_b?(s.market_cap_b>=10000?(s.market_cap_b/10000).toFixed(1)+'兆':Math.round(s.market_cap_b)+'億'):'';
-  const d75=s.ma75_dev!=null?`75日線${s.ma75_dev>0?'+':''}${s.ma75_dev.toFixed(1)}%`:'';
+  const d75=s.ma75d!=null?`75日線${s.ma75d>0?'+':''}${s.ma75d.toFixed(1)}%`:'';
   return`<div class="top10-card" onclick="window.open('https://finance.yahoo.co.jp/quote/${s.code}.T','_blank')">
     <div class="top10-rank">${rank}</div>
     <div class="top10-info">

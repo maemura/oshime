@@ -27,13 +27,13 @@ def calc_score(s):
     elif div >= 2.5: score += 8
     elif div >= 2: score += 5
 
-    ma75d = s.get("ma75_dev", 0) or 0
+    ma75d = round((s.get("price",0) - s.get("ma75", s.get("price",0))) / (s.get("ma75", s.get("price",0)) or 1) * 100, 1)
     if -3 <= ma75d <= 0: score += 15
     elif -5 <= ma75d < -3: score += 12
     elif 0 < ma75d <= 3: score += 10
     elif -8 <= ma75d < -5: score += 7
 
-    ma25d = s.get("ma25_dev", 0) or 0
+    ma25d = round((s.get("price",0) - s.get("ma25", s.get("price",0))) / (s.get("ma25", s.get("price",0)) or 1) * 100, 1)
     if -3 <= ma25d <= 0: score += 10
     elif -5 <= ma25d < -3: score += 7
     elif 0 < ma25d <= 2: score += 5
@@ -56,8 +56,8 @@ def calc_score(s):
     return min(score, 100)
 
 def get_trend_type(s):
-    ma75d = s.get("ma75_dev", 0) or 0
-    ma25d = s.get("ma25_dev", 0) or 0
+    ma75d = round((s.get("price",0) - s.get("ma75", s.get("price",0))) / (s.get("ma75", s.get("price",0)) or 1) * 100, 1)
+    ma25d = round((s.get("price",0) - s.get("ma25", s.get("price",0))) / (s.get("ma25", s.get("price",0)) or 1) * 100, 1)
     mc = s.get("market_cap_b", 0) or 0
     div = s.get("dividend", 0) or 0
 
@@ -140,8 +140,8 @@ def run():
             held_codes.discard(p["code"])
             continue
 
-        # 75日線割れ（ma75_dev < -5が5日以上）
-        ma75d = s.get("ma75_dev", 0) or 0
+        # 75日線割れ（ma75乖離 < -5%が5日以上）
+        ma75d = round((s.get("price",0) - s.get("ma75", s.get("price",0))) / (s.get("ma75", s.get("price",0)) or 1) * 100, 1)
         if ma75d < -5:
             p["below_ma75_days"] = p.get("below_ma75_days", 0) + 1
             if p["below_ma75_days"] >= 5:
@@ -240,7 +240,7 @@ def run():
         if not s:
             continue
         pnl_pct = p.get("pnl_pct", 0)
-        ma75d = s.get("ma75_dev", 0) or 0
+        ma75d = round((s.get("price",0) - s.get("ma75", s.get("price",0))) / (s.get("ma75", s.get("price",0)) or 1) * 100, 1)
         if pnl_pct <= -5 and ma75d > -5 and not p.get("nanpin_done") and cash >= 500000:
             price = s.get("price", p["buy_price"])
             budget = min(500000, cash - 300000)
