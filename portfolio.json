@@ -61,6 +61,13 @@
       "cash": 8109400,
       "positions_value": 1890600,
       "nikkei": 56826.0
+    },
+    {
+      "date": "2026-02-25",
+      "nav": 10000000,
+      "cash": 8109400,
+      "positions_value": 1890600,
+      "nikkei": 56826.0
     }
   ],
   "rules": {
