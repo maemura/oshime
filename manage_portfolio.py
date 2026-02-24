@@ -8,7 +8,7 @@
 - note/X投稿テキスト生成
 """
 
-import json, os, sys, datetime, urllib.request, urllib.error, time, re
+import json, os, sys, datetime, urllib.request, urllib.error, time
 
 TODAY = datetime.date.today().strftime("%Y-%m-%d")
 TODAY_SHORT = datetime.date.today().strftime("%Y/%m/%d")
@@ -31,56 +31,51 @@ MIN_SCORE_BUY = 70     # スコア70以上で買い候補
 MAX_BUY_PER_DAY = 2    # 1日最大2銘柄新規
 
 # ══════════════════════════════════════
-# YAHOO FINANCE 初値取得
+# 株価取得（yfinance → stocks_data.jsonフォールバック）
 # ══════════════════════════════════════
-def fetch_opening_price(code):
-    """Yahoo Finance JPから初値を取得"""
-    url = f"https://finance.yahoo.co.jp/quote/{code}.T"
+def fetch_price_yfinance(code):
+    """yfinanceで現在値を取得"""
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as res:
-            html = res.read().decode("utf-8", errors="ignore")
-        # 始値を探す（HTMLパース）
-        # 始値のパターンを探す
-        patterns = [
-            r'始値[^0-9]*?([0-9,]+\.?[0-9]*)',
-            r'open["\s:]+([0-9,]+\.?[0-9]*)',
-        ]
-        for pat in patterns:
-            m = re.search(pat, html)
-            if m:
-                val = m.group(1).replace(",", "")
-                return float(val)
+        import yfinance as yf
+        ticker = yf.Ticker(f"{code}.T")
+        info = ticker.fast_info
+        price = info.get("lastPrice", 0) or info.get("last_price", 0)
+        if price and price > 10:
+            return float(price)
+        # fast_infoがダメならhistoryから
+        hist = ticker.history(period="1d")
+        if not hist.empty:
+            return float(hist["Close"].iloc[-1])
     except Exception as e:
-        print(f"  ⚠ {code} 初値取得失敗: {e}")
+        print(f"  ⚠ {code} yfinance取得失敗: {e}")
     return None
 
 
-def fetch_opening_price_stooq(code):
-    """Stooq APIで初値を取得（バックアップ）"""
-    url = f"https://stooq.com/q/l/?s={code}.jp&f=o&e=csv"
+def fetch_price_from_stocks_data(code):
+    """stocks_data.jsonから前日終値を取得（フォールバック）"""
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
-        with urllib.request.urlopen(req, timeout=10) as res:
-            text = res.read().decode("utf-8").strip()
-        lines = text.split("\n")
-        if len(lines) >= 2:
-            val = lines[1].strip()
-            if val and val != "N/D":
-                return float(val)
+        if os.path.exists(STOCKS_PATH):
+            with open(STOCKS_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            for s in data.get("stocks", []):
+                if s.get("code") == code:
+                    price = s.get("price", 0)
+                    if price and price > 10:
+                        print(f"  📂 {code}: stocks_data.jsonから ¥{price:,.0f}")
+                        return float(price)
     except Exception as e:
-        print(f"  ⚠ {code} Stooq取得失敗: {e}")
+        print(f"  ⚠ {code} stocks_data取得失敗: {e}")
     return None
 
 
 def get_opening_price(code):
-    """初値取得（Yahoo → Stooq フォールバック）"""
-    price = fetch_opening_price(code)
-    if price and price > 0:
+    """株価取得（yfinance → stocks_data.json フォールバック）"""
+    price = fetch_price_yfinance(code)
+    if price and price > 10:
         return price
     time.sleep(0.5)
-    price = fetch_opening_price_stooq(code)
-    if price and price > 0:
+    price = fetch_price_from_stocks_data(code)
+    if price and price > 10:
         return price
     return None
 
@@ -569,7 +564,11 @@ def check_human_trigger(pf, sells, buys):
     if weekday == 4:
         return "今週お疲れ様でした！中の人の今週の成績はどうでしたか？📊"
 
-    # 月初（1〜3日）
+    # 月初1日 → キャラ棚卸し＋成績比較
+    if datetime.date.today().day == 1:
+        return "📋 **月次レビューの日です！**\n① Claudeに『今月のキャラレビューして』と言ってください\n② diary/の今月分を振り返り→キャラ設定の微調整\n③ 中の人 vs AI 月間成績比較\n④ ロジック変更があれば整合性チェック"
+
+    # 月初（2〜3日）→ 成績比較
     if datetime.date.today().day <= 3:
         return "月初です！先月の中の人 vs AI、成績比較しませんか？🏆"
 
