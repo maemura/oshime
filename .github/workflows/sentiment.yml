@@ -31,6 +31,6 @@ jobs:
         run: |
           git config user.name "kabunosuke-bot"
           git config user.email "bot@kabunosuke.dev"
-          git add sentiment_data/
+          git add sentiment_data/ sentiment_latest.json
           git diff --staged --quiet || git commit -m "sentiment: $(date +%Y-%m-%d) データ収集"
           git push

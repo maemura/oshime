@@ -254,6 +254,54 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    # Brain Scanner用のサマリーも出力
+    brain_data = {
+        "date": today,
+        "mode": output["mode"],
+        "macro": [],
+        "institutional": [],
+        "retail": [],
+    }
+    # エントリからBrain用データ生成
+    topic_agg = {}
+    for e in all_entries:
+        t = e["topic"]
+        if t not in topic_agg:
+            topic_agg[t] = {"topic": t, "category": e["category"], "sentiments": [], "channels": set(), "count": 0}
+        topic_agg[t]["sentiments"].append(e["sentiment"])
+        topic_agg[t]["channels"].add(e["channel"])
+        topic_agg[t]["count"] += 1
+
+    for t, d in sorted(topic_agg.items(), key=lambda x: -x[1]["count"]):
+        most = Counter(d["sentiments"]).most_common(1)[0][0]
+        size = "xl" if d["count"] >= 5 else "lg" if d["count"] >= 3 else "md" if d["count"] >= 2 else "sm"
+        mood_map = {"bullish": "greed", "bearish": "fear", "hype": "hype", "fear": "fear", "neutral": "calm"}
+        mood = mood_map.get(most, "calm")
+
+        item = {"word": d["topic"], "size": size, "mood": mood, "count": d["count"], "sources": len(d["channels"])}
+
+        if d["category"] == "macro":
+            brain_data["macro"].append(item)
+        elif d["category"] in ("sector", "event"):
+            brain_data["institutional"].append(item)
+        else:
+            brain_data["retail"].append(item)
+
+    # 層が少なすぎる場合、再配分
+    if len(brain_data["macro"]) < 3:
+        # institutionalから溢れた分をmacroに
+        overflow = brain_data["institutional"][8:]
+        brain_data["macro"].extend(overflow)
+        brain_data["institutional"] = brain_data["institutional"][:8]
+    if len(brain_data["retail"]) < 3:
+        overflow = brain_data["institutional"][6:]
+        brain_data["retail"].extend(overflow)
+        brain_data["institutional"] = brain_data["institutional"][:6]
+
+    with open("sentiment_latest.json", "w", encoding="utf-8") as f:
+        json.dump(brain_data, f, ensure_ascii=False, indent=2)
+    print(f"🧠 Brain Scanner データ出力: sentiment_latest.json")
+
     print(f"\n{'='*50}")
     print(f"✅ 完了: {len(all_entries)}件収集 / {video_count}本処理")
     if hot_words: print(f"🔥 ホットワード: {', '.join(hot_words[:5])}")
