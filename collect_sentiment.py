@@ -206,7 +206,8 @@ def main():
             video_count += 1
             transcript = fetch_transcript(v["video_id"])
             if not transcript:
-                print("    → 字幕なし、スキップ"); continue
+                print("    → 字幕なし、タイトルから抽出")
+                transcript = v["title"]  # タイトルをテキストとして使う
             print(f"    → 字幕OK（{len(transcript)}文字）")
 
             result = None
