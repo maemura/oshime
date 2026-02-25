@@ -660,7 +660,7 @@ function sMap(s,code){if(code&&CODE_SECTOR[code])return CODE_SECTOR[code];return
 function processStocks(){
   let out=RAW.map(s=>{
     const {score,type}=calcScoreTrend(s);
-    s.score=score;s.trend_type=type;s.zone=getZone(score);
+    s.score=s.score||score;s.trend_type=type;s.zone=getZone(s.score);
     return s;
   });
   if(settings.mindiv>0)out=out.filter(s=>(s.dividend||0)>=settings.mindiv);
