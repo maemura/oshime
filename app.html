@@ -1247,7 +1247,7 @@ function run(){
   renderDanger();
   // Show history section if data exists
   const histSec=document.getElementById('histSection');
-  if(histYesterday&&histYesterday.version)histSec.style.display='';
+  if(histSec&&histYesterday&&histYesterday.version)histSec.style.display='';
   try{localStorage.setItem('kbn_settings',JSON.stringify({mindiv:settings.mindiv}));}catch(e){}
 }
 
