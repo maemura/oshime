@@ -1,10 +1,10 @@
 {
   "date": "2026-02-25",
-  "collected_at": "2026-02-25 14:50",
+  "collected_at": "2026-02-25 14:54",
   "mode": "keywords",
   "channels_checked": 7,
-  "videos_processed": 33,
-  "entry_count": 42,
+  "videos_processed": 25,
+  "entry_count": 34,
   "entries": [
     {
       "source": "youtube",
@@ -283,94 +283,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ベイカレント-１5％急落。NEC急落。富士通急落。銀行株急落。セキュリティ関連急落。アンソロピック関連S安発生！2026年２月２４日（火）～明日上がる株最新の日",
-      "video_url": "https://www.youtube.com/watch?v=Ixe19jtHp7s",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ベイカレント-１5％急落。NEC急落。富士通急落。銀行株急落。セキュリティ関連急落。アンソロピック関連S安発生！2026年２月２４日（火）～明日上がる株最新の日",
-      "video_url": "https://www.youtube.com/watch?v=Ixe19jtHp7s",
-      "topic": "銀行",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 銀行"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "トランプ関税に違憲判決、代替関税発動、相場影響。2/25警戒ファンCEO会見。あす急落しそうな３銘柄。好決算なのに下げてる5銘柄。今週注目の決算。2/23月曜祝",
-      "video_url": "https://www.youtube.com/watch?v=04PozMDfvig",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "トランプ関税に違憲判決、代替関税発動、相場影響。2/25警戒ファンCEO会見。あす急落しそうな３銘柄。好決算なのに下げてる5銘柄。今週注目の決算。2/23月曜祝",
-      "video_url": "https://www.youtube.com/watch?v=04PozMDfvig",
-      "topic": "トランプ",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: トランプ"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "３月の高配当株。３％以上が７３２銘柄、４％以上の高配当銘柄が２３２銘柄、５％以上の超高配当銘柄が３３銘柄～あす上がる株。最新の日本株情報。高配当株の株価やデイト",
-      "video_url": "https://www.youtube.com/watch?v=-9nbndEFDYw",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "高市首相レジ指示。防衛３社受注。プライベートクレジット不安発生。Fundnote新銘柄大量保有。住友ファーマ１５％超急落。～あす上がる株　2026年２月２４日（",
-      "video_url": "https://www.youtube.com/watch?v=ktP3D5jcKo0",
-      "topic": "防衛",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 防衛"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "【再集録】世界初、IPS細胞製品承認、関連銘柄の動き。住友ファーマ １３％急落。クオリプス17%急落。中東緊迫！2026年２月２０日（金）～明日上がる株最新の日",
-      "video_url": "https://www.youtube.com/watch?v=Gh8yJf7Eod0",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "対米投融資の第２弾は「次世代型原子炉」、前場の出遅れ銘柄。マーケットE KDDIと連携。住友電工対米投資関連。2026年２月１９日（木）～明日上がる株最新の日本",
-      "video_url": "https://www.youtube.com/watch?v=Yf37uRrGUvk",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "トレードラボ",
       "video_title": "日経平均最高値でも、まだ利回り4%超えてる３銘柄",
       "video_url": "https://www.youtube.com/watch?v=dM0hT0ZGxOo",
@@ -476,7 +388,7 @@
         "bear": 6
       },
       "株リアルライブ": {
-        "bull": 10,
+        "bull": 3,
         "bear": 2
       },
       "ひげづら株ちゃんねる": {
@@ -545,19 +457,18 @@
         ]
       },
       "決算": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "株リアルライブ"
+          "Sho's投資情報局"
         ]
       },
       "SaaS": {
         "count": 2,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "たばたの投資ch"
+          "たばたの投資ch",
+          "Sho's投資情報局"
         ]
       },
       "円高": {
@@ -568,7 +479,7 @@
         ]
       },
       "高配当": {
-        "count": 8,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
           "優待ライダー",
@@ -589,27 +500,18 @@
           "株リアルライブ"
         ]
       },
-      "銀行": {
-        "count": 2,
-        "sentiment": "bullish",
-        "sources": [
-          "優待ライダー",
-          "株リアルライブ"
-        ]
-      },
       "トランプ": {
-        "count": 3,
+        "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "株リアルライブ",
           "ばっちゃまの投資チャンネル"
         ]
       },
-      "防衛": {
+      "銀行": {
         "count": 1,
-        "sentiment": "neutral",
+        "sentiment": "bearish",
         "sources": [
-          "株リアルライブ"
+          "優待ライダー"
         ]
       },
       "配当": {
@@ -635,21 +537,21 @@
       }
     },
     "hot_words": [
-      "高配当",
       "日経平均",
+      "高配当",
       "半導体",
       "AI関連",
       "ナスダック",
-      "決算",
-      "トランプ",
       "エヌビディア",
       "日銀",
+      "決算",
       "SaaS",
-      "銀行",
+      "トランプ",
       "円高",
       "円安",
       "イビデン",
-      "防衛"
+      "銀行",
+      "配当"
     ]
   }
 }
