@@ -659,7 +659,7 @@ function sMap(s,code){if(code&&CODE_SECTOR[code])return CODE_SECTOR[code];return
 // ═══════════════════════════════════════
 function processStocks(){
   let out=RAW.map(s=>{
-    const {score,type}=calcScoreTrend(s);
+    const {score:jsScore,type}=calcScoreTrend(s);
     s.score=s.score||score;s.trend_type=type;s.zone=getZone(s.score);
     return s;
   });
@@ -876,9 +876,9 @@ function showSectorStocks(secName){
   const secData=sectorScores[secName];
   const codes=secData&&secData.codes?secData.codes:[];
   const codeSet=new Set(codes);
-  const items=RAW.filter(s=>codeSet.has(s.code)).map(s=>{
-    const {score,type}=calcScoreTrend(s);
-    return {...s,score,trend_type:type};
+  const items=RAW.filter(s=>codeSet.has(s.code)||sMap(s.sector,s.code)===secName).map(s=>{
+    const {score:jsScore,type}=calcScoreTrend(s);
+    return {...s,score:s.score||jsScore,trend_type:type};
   }).sort((a,b)=>b.score-a.score).slice(0,10);
 
   // タブ表示を更新
