@@ -630,7 +630,7 @@ function calcScoreTrend(s){
   // ── 大型逆張りバリュー ──
   // 大型高配当（時価総額3000億+配当2.5%+）が浅い下落中 → 逆張りチャンス
   const isLargeCap=mc>=3000&&div>=2.5;
-  const shallowDip=ma75d>=-8&&ma75d<=-2;  // -2%〜-8%の浅い下落のみ
+  const shallowDip=ma75d>=-15&&ma75d<=-2;  // -2%〜-8%の浅い下落のみ
   const secBonus=getSectorBonus(s.sector,s.code);  // セクターボーナス
 
   if(type==='falling'&&isLargeCap&&shallowDip){
