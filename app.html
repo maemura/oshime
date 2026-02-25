@@ -1264,7 +1264,7 @@ async function loadHistory(){
       const data=await r.json();
       if(!histYesterday){histYesterday=data;}
       else if(!histDayBefore){histDayBefore=data;break;}
-    }catch(e){continue;}
+    }catch(e){ console.error("init error:",e);continue;}
   }
 }
 
@@ -1276,7 +1276,7 @@ async function loadPortfolio(){
     const res=await fetch('portfolio.json?t='+Date.now());
     if(res.ok){const d=await res.json();renderPortfolio(d);}
     else renderPortfolio(null);
-  }catch(e){renderPortfolio(null);}
+  }catch(e){ console.error("init error:",e);renderPortfolio(null);}
 }
 
 function renderPortfolio(pf){
@@ -1360,8 +1360,8 @@ async function init(){
       tItems[2].querySelector('.ticker-chg').textContent=(uc>=0?'+':'')+uc+'円';
       tItems[2].querySelector('.ticker-chg').style.color=uc>=0?'#6EE7B7':'#FCA5A5';
     }
-  }catch(e){
-    RAW=SAMPLE_STOCKS;
+  }catch(e){ console.error("init error:",e);
+    if(RAW.length===0) RAW=SAMPLE_STOCKS;
     window._updatedAt='サンプルデータ';
     window._stockData={};
   }
