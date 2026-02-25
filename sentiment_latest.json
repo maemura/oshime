@@ -1,0 +1,129 @@
+{
+  "date": "2026-02-25",
+  "mode": "claude",
+  "macro": [
+    {
+      "word": "日経平均",
+      "size": "lg",
+      "mood": "greed",
+      "count": 4,
+      "sources": 2
+    },
+    {
+      "word": "ナスダック",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "日銀",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "トランプ",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "円高",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ダウ",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    }
+  ],
+  "institutional": [
+    {
+      "word": "半導体",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "AI関連",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "高配当",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "決算",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "SaaS",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "銀行",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    }
+  ],
+  "retail": [
+    {
+      "word": "エヌビディア",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "イビデン",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    }
+  ]
+}
