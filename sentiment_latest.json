@@ -3,52 +3,10 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "日経平均",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "日本株信用買い",
-      "size": "md",
-      "mood": "hype",
-      "count": 2,
-      "sources": 1
-    },
-    {
       "word": "日銀利上げ",
       "size": "md",
-      "mood": "greed",
+      "mood": "calm",
       "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "ナスダック",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "仮想通貨",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "日本株情報",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "米国株",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
       "sources": 1
     },
     {
@@ -82,7 +40,7 @@
     {
       "word": "空売り機関",
       "size": "sm",
-      "mood": "hype",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
@@ -94,70 +52,21 @@
       "sources": 1
     },
     {
-      "word": "トランプ関税違憲判決",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "代替関税発動",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "プライベートクレジット",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "中東情勢",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "対米投融資第2弾",
+      "word": "機関投資家",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "海外投資家動向",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "対米投資関連",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "機関投資家の動向",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "米国株式市場全体",
+      "word": "米国株市場全体",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "トランプ・グローバル関税",
+      "word": "トランプ政権グローバル関税",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -171,49 +80,35 @@
       "sources": 1
     },
     {
-      "word": "市場全体暴落",
+      "word": "市場全体の暴落",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "投資資金不足",
+      "word": "ナンピン投資戦略",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "市場暴落",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "日経平均株価",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "高市総理の利上げ発言",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "NYダウ",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "損切り戦略",
+      "word": "全体相場動向",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "リスク管理",
+      "word": "個人投資家の投資判断",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -224,7 +119,7 @@
     {
       "word": "AI関連株",
       "size": "lg",
-      "mood": "greed",
+      "mood": "hype",
       "count": 3,
       "sources": 1
     },
@@ -236,31 +131,10 @@
       "sources": 1
     },
     {
-      "word": "アンソロピック関連",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "銀行株",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "高配当株",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
-      "sources": 1
-    },
-    {
       "word": "エヌビディア決算",
-      "size": "sm",
+      "size": "md",
       "mood": "greed",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
@@ -271,7 +145,7 @@
       "sources": 1
     },
     {
-      "word": "SaaS関連",
+      "word": "SaaS関連株",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -285,65 +159,16 @@
       "sources": 1
     },
     {
-      "word": "セキュリティ関連",
+      "word": "アンソロピック関連",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "2/25ファンCEO会見",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "今週注目決算",
+      "word": "水曜日の重要イベント",
       "size": "sm",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "3月の高配当株",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "高市首相レジ指示",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "防衛3社",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "IPS細胞製品承認",
-      "size": "sm",
-      "mood": "hype",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "次世代型原子炉",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日本株全般",
-      "size": "sm",
-      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -355,6 +180,13 @@
       "sources": 1
     },
     {
+      "word": "銀行株",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "優待新設",
       "size": "sm",
       "mood": "greed",
@@ -362,16 +194,37 @@
       "sources": 1
     },
     {
-      "word": "ナンピン買い",
+      "word": "ナンピン戦略",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "権利確定日",
+      "word": "配当権利確定",
       "size": "sm",
       "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "3月権利確定株主優待",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "2月権利確定",
+      "size": "sm",
+      "mood": "hype",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "高配当銘柄",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
@@ -381,39 +234,46 @@
       "mood": "hype",
       "count": 1,
       "sources": 1
-    },
-    {
-      "word": "SaaS銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": [
     {
-      "word": "NEC",
+      "word": "日経平均",
+      "size": "lg",
+      "mood": "greed",
+      "count": 4,
+      "sources": 2
+    },
+    {
+      "word": "日本株信用買い",
+      "size": "md",
+      "mood": "hype",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "ナスダック",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "仮想通貨",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "富士通",
+      "word": "日本株",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "住友ファーマ",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "エヌビディア",
+      "word": "米国株",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -462,6 +322,20 @@
       "sources": 1
     },
     {
+      "word": "NEC",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "富士通",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "イビデン",
       "size": "sm",
       "mood": "fear",
@@ -472,118 +346,6 @@
       "word": "高島屋",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ベイカレント",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "急落予想3銘柄",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "好決算下落5銘柄",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "3%以上配当銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "4%以上高配当銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "5%以上超高配当銘柄",
-      "size": "sm",
-      "mood": "hype",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "デイトレ情報",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "下げ過ぎの好業績６銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "あす上がる株",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "Fundnote",
-      "size": "sm",
-      "mood": "hype",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "クオリプス",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "アドバンテスト",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "サクサ",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "KDDI",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "住友電工",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "前場出遅れ銘柄",
-      "size": "sm",
-      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -602,6 +364,13 @@
       "sources": 1
     },
     {
+      "word": "30万円投資銘柄選定",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "配当利回り4%超え優良株",
       "size": "sm",
       "mood": "greed",
@@ -609,14 +378,7 @@
       "sources": 1
     },
     {
-      "word": "日本株全体",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "言及される3銘柄",
+      "word": "3つの特定銘柄",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -624,6 +386,41 @@
     },
     {
       "word": "累進配当銘柄",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "厳選優待銘柄",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "厳選銘柄10選",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "昨年来安値更新銘柄",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "個人投資成績",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "メタプラネット",
       "size": "sm",
       "mood": "fear",
       "count": 1,
