@@ -12,68 +12,8 @@
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@kabunosuke_navi">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWW0W11P5T">
-);
-
-  // 中層: INSTITUTIONAL
-  const instiEl=document.getElementById('brInsti');
-  const iItems=d.institutional||[];
-  const iR=115,iCx=130,iCy=130;
-  iItems.slice(0,10).forEach((item,i)=>{
-    const angle=(i/Math.min(iItems.length,10))*2*Math.PI-Math.PI*0.45;
-    const el=document.createElement('span');
-    el.className='bw-mid bw-'+item.mood;
-    el.textContent=item.word;
-    el.style.left=(iCx+iR*Math.cos(angle))+'px';
-    el.style.top=(iCy+iR*Math.sin(angle))+'px';
-    el.style.animationDelay=(1+i*0.1)+'s';
-    instiEl.appendChild(el);
-  });
-
-  // 内層: RETAIL
-  const retailEl=document.getElementById('brRetail');
-  const rItems=(d.retail||[]).sort(()=>Math.random()-0.5);
-  rItems.slice(0,12).forEach((item,i)=>{
-    const el=document.createElement('span');
-    el.className='bw-inner '+item.size+' bw-'+item.mood;
-    el.textContent=item.word;
-    el.style.animationDelay=(1.5+i*0.08)+'s';
-    retailEl.appendChild(el);
-  });
-}
-
-</script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DWW0W11P5T');function gaEvent(n,p){if(typeof gtag!=='undefined')gtag('event',n,p||{});}
-);
-
-  // 中層: INSTITUTIONAL
-  const instiEl=document.getElementById('brInsti');
-  const iItems=d.institutional||[];
-  const iR=115,iCx=130,iCy=130;
-  iItems.slice(0,10).forEach((item,i)=>{
-    const angle=(i/Math.min(iItems.length,10))*2*Math.PI-Math.PI*0.45;
-    const el=document.createElement('span');
-    el.className='bw-mid bw-'+item.mood;
-    el.textContent=item.word;
-    el.style.left=(iCx+iR*Math.cos(angle))+'px';
-    el.style.top=(iCy+iR*Math.sin(angle))+'px';
-    el.style.animationDelay=(1+i*0.1)+'s';
-    instiEl.appendChild(el);
-  });
-
-  // 内層: RETAIL
-  const retailEl=document.getElementById('brRetail');
-  const rItems=(d.retail||[]).sort(()=>Math.random()-0.5);
-  rItems.slice(0,12).forEach((item,i)=>{
-    const el=document.createElement('span');
-    el.className='bw-inner '+item.size+' bw-'+item.mood;
-    el.textContent=item.word;
-    el.style.animationDelay=(1.5+i*0.08)+'s';
-    retailEl.appendChild(el);
-  });
-}
-
-</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWW0W11P5T"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-DWW0W11P5T');function gaEvent(n,p){if(typeof gtag!=='undefined')gtag('event',n,p||{});}</script>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
@@ -333,62 +273,9 @@ a{color:var(--blue-m);text-decoration:none;}
 .pf-hold-pnl.up{color:var(--green);} .pf-hold-pnl.dn{color:var(--red);}
 .pf-note-link{display:block;text-align:center;padding:10px;background:var(--blue);color:#fff;border-radius:var(--r);font-size:12px;font-weight:700;text-decoration:none;margin-top:10px;}
 .pf-note-link:hover{opacity:0.85;}
-to{opacity:1;transform:scale(1)}}
-
-/* ── Brain Scanner ── */
-.brain-section{padding:20px 0;margin-bottom:16px}
-.brain-header{font-size:11px;letter-spacing:3px;color:var(--blue);opacity:0.6;text-align:center;text-transform:uppercase;font-weight:600}
-.brain-sub{font-size:11px;color:var(--text3);text-align:center;margin:4px 0 16px}
-.brain-wrap{position:relative;width:100%;max-width:420px;height:420px;margin:0 auto}
-.brain-guide{position:absolute;border-radius:50%;border:1px solid rgba(100,140,200,0.08)}
-.brain-guide.outer{top:0;left:50%;transform:translateX(-50%);width:400px;height:400px}
-.brain-guide.mid{top:70px;left:50%;transform:translateX(-50%);width:260px;height:260px;border-style:dashed;border-color:rgba(100,140,200,0.06)}
-.brain-guide.inner{top:135px;left:50%;transform:translateX(-50%);width:150px;height:150px;background:radial-gradient(circle,rgba(140,120,220,0.04) 0%,transparent 70%)}
-.brain-tag{position:absolute;font-size:7px;letter-spacing:2px;text-transform:uppercase;opacity:0.25;left:50%;transform:translateX(-50%)}
-.brain-tag.t1{top:8px;color:var(--blue)}.brain-tag.t2{top:60px;color:#4aeaaa}.brain-tag.t3{top:125px;color:#a78bfa}
-.brain-ring{position:absolute}
-.brain-ring.outer{top:0;left:50%;transform:translateX(-50%);width:400px;height:400px}
-.brain-ring.mid{top:70px;left:50%;transform:translateX(-50%);width:260px;height:260px}
-.brain-core{position:absolute;top:140px;left:50%;transform:translateX(-50%);width:140px;height:140px;border-radius:50%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px 3px;padding:18px 10px;overflow:hidden}
-.brain-scan{position:absolute;border-radius:50%;border:1.5px solid transparent;pointer-events:none}
-.brain-scan.s1{top:0;left:50%;transform:translateX(-50%);width:400px;height:400px;border-top-color:rgba(100,160,255,0.12);animation:bspin 6s linear infinite}
-.brain-scan.s2{top:70px;left:50%;transform:translateX(-50%);width:260px;height:260px;border-right-color:rgba(74,234,170,0.1);animation:bspin 8s linear infinite reverse}
-.bw-outer{position:absolute;font-size:9px;letter-spacing:0.3px;white-space:nowrap;opacity:0;animation:bfade .6s ease forwards;cursor:default;transition:transform .2s,text-shadow .2s;transform:translate(-50%,-50%)}
-.bw-outer:hover{transform:translate(-50%,-50%) scale(1.15);text-shadow:0 0 10px currentColor;z-index:10}
-.bw-mid{position:absolute;font-size:8.5px;white-space:nowrap;opacity:0;animation:bfade .6s ease forwards;cursor:default;transition:transform .2s;transform:translate(-50%,-50%)}
-.bw-mid:hover{transform:translate(-50%,-50%) scale(1.15);text-shadow:0 0 10px currentColor;z-index:10}
-.bw-inner{display:inline-block;padding:1px 3px;font-weight:700;white-space:nowrap;opacity:0;animation:bpop .4s ease forwards;cursor:default;transition:transform .2s}
-.bw-inner:hover{transform:scale(1.25);text-shadow:0 0 8px currentColor}
-.bw-inner.xl{font-size:14px}.bw-inner.lg{font-size:11px}.bw-inner.md{font-size:9px}.bw-inner.sm{font-size:7.5px;opacity:.6}
-.bw-greed{color:#4aeaaa}.bw-fear{color:#ff6b7a}.bw-hype{color:#ff9f43}.bw-buzz{color:#a78bfa}.bw-calm{color:#6b9fff}
-.brain-legend{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:16px}
-.brain-legend-card{padding:6px 10px;background:var(--card);border:1px solid var(--border);border-radius:6px;font-size:8px}
-.brain-legend-title{font-size:7px;letter-spacing:1.5px;opacity:0.4;margin-bottom:3px;font-weight:600}
-.brain-legend-items{display:flex;gap:6px}
-.brain-legend-item{display:flex;align-items:center;gap:3px;color:var(--text3)}
-.brain-legend-dot{width:5px;height:5px;border-radius:1px}
-.brain-note{text-align:center;font-size:7.5px;color:var(--text3);opacity:0.4;margin-top:8px;letter-spacing:1px}
-.brain-loading{text-align:center;color:var(--text3);font-size:11px;padding:40px 0}
-@keyframes bspin{to{transform:translateX(-50%) rotate(360deg)}}
-@keyframes bfade{from{opacity:0;transform:translate(-50%,-50%) scale(.7)}to{opacity:.85;transform:translate(-50%,-50%) scale(1)}}
-@keyframes bpop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
-
 </style>
 </head>
 <body>
-<!-- BRAIN SCANNER -->
-<div class="brain-section" id="brainSection">
-  <div class="brain-header">MARKET BRAIN SCANNER</div>
-  <div class="brain-sub">みんなの頭の中、今日はこんな感じ</div>
-  <div id="brainContent"><div class="brain-loading">📡 センチメントデータ読み込み中...</div></div>
-  <div class="brain-legend">
-    <div class="brain-legend-card"><div class="brain-legend-title" style="color:var(--blue)">MACRO</div><div class="brain-legend-items"><div class="brain-legend-item"><div class="brain-legend-dot" style="background:#4aeaaa"></div>追い風</div><div class="brain-legend-item"><div class="brain-legend-dot" style="background:#ff6b7a"></div>リスク</div><div class="brain-legend-item"><div class="brain-legend-dot" style="background:#ff9f43"></div>注目</div></div></div>
-    <div class="brain-legend-card"><div class="brain-legend-title" style="color:#4aeaaa">INSTITUTIONAL</div><div class="brain-legend-items"><div class="brain-legend-item"><div class="brain-legend-dot" style="background:#4aeaaa"></div>買い</div><div class="brain-legend-item"><div class="brain-legend-dot" style="background:#ff6b7a"></div>売り</div></div></div>
-    <div class="brain-legend-card"><div class="brain-legend-title" style="color:#a78bfa">RETAIL</div><div class="brain-legend-items"><div class="brain-legend-item"><div class="brain-legend-dot" style="background:#4aeaaa"></div>強気</div><div class="brain-legend-item"><div class="brain-legend-dot" style="background:#ff6b7a"></div>不安</div><div class="brain-legend-item"><div class="brain-legend-dot" style="background:#ff9f43"></div>過熱</div></div></div>
-  </div>
-  <div class="brain-note">AUTO-UPDATED DAILY — MULTI-SOURCE SENTIMENT ANALYSIS</div>
-</div>
-
 
 <!-- LOGO + TICKER -->
 <div class="logo-bar">
@@ -1478,65 +1365,6 @@ async function init(){
 }
 
 init();
-);
-
-  // 中層: INSTITUTIONAL
-  const instiEl=document.getElementById('brInsti');
-  const iItems=d.institutional||[];
-  const iR=115,iCx=130,iCy=130;
-  iItems.slice(0,10).forEach((item,i)=>{
-    const angle=(i/Math.min(iItems.length,10))*2*Math.PI-Math.PI*0.45;
-    const el=document.createElement('span');
-    el.className='bw-mid bw-'+item.mood;
-    el.textContent=item.word;
-    el.style.left=(iCx+iR*Math.cos(angle))+'px';
-    el.style.top=(iCy+iR*Math.sin(angle))+'px';
-    el.style.animationDelay=(1+i*0.1)+'s';
-    instiEl.appendChild(el);
-  });
-
-  // 内層: RETAIL
-  const retailEl=document.getElementById('brRetail');
-  const rItems=(d.retail||[]).sort(()=>Math.random()-0.5);
-  rItems.slice(0,12).forEach((item,i)=>{
-    const el=document.createElement('span');
-    el.className='bw-inner '+item.size+' bw-'+item.mood;
-    el.textContent=item.word;
-    el.style.animationDelay=(1.5+i*0.08)+'s';
-    retailEl.appendChild(el);
-  });
-}
-
-
-// ── Brain Scanner ──
-async function loadBrainScanner(){
-  try{
-    const r=await fetch('sentiment_latest.json');
-    if(!r.ok){document.getElementById('brainContent').innerHTML='<div class="brain-loading">📡 センチメントデータ準備中</div>';return;}
-    const d=await r.json();
-    renderBrain(d);
-  }catch(e){
-    document.getElementById('brainContent').innerHTML='<div class="brain-loading">📡 次回更新をお待ちください</div>';
-  }
-}
-function renderBrain(d){
-  const wrap=document.createElement('div');
-  wrap.className='brain-wrap';
-  wrap.innerHTML='<div class="brain-guide outer"></div><div class="brain-guide mid"></div><div class="brain-guide inner"></div><div class="brain-tag t1">MACRO — 世界の潮流</div><div class="brain-tag t2">INSTITUTIONAL — セクター動向</div><div class="brain-tag t3">RETAIL — 個人の声</div><div class="brain-ring outer" id="brMacro"></div><div class="brain-ring mid" id="brInsti"></div><div class="brain-core" id="brRetail"></div><div class="brain-scan s1"></div><div class="brain-scan s2"></div>';
-  document.getElementById('brainContent').innerHTML='';
-  document.getElementById('brainContent').appendChild(wrap);
-  const macroEl=document.getElementById('brMacro');
-  const mItems=d.macro||[];const mR=185,mCx=200,mCy=200;
-  mItems.slice(0,12).forEach((item,i)=>{const angle=(i/Math.min(mItems.length,12))*2*Math.PI-Math.PI*0.55;const el=document.createElement('span');el.className='bw-outer bw-'+item.mood;el.textContent=item.word;const sc=item.size==='xl'?1.1:item.size==='lg'?1:item.size==='md'?.9:.8;el.style.fontSize=(9*sc)+'px';el.style.left=(mCx+mR*Math.cos(angle))+'px';el.style.top=(mCy+mR*Math.sin(angle))+'px';el.style.animationDelay=(0.3+i*0.1)+'s';macroEl.appendChild(el);});
-  const instiEl=document.getElementById('brInsti');
-  const iItems=d.institutional||[];const iR=115,iCx=130,iCy=130;
-  iItems.slice(0,10).forEach((item,i)=>{const angle=(i/Math.min(iItems.length,10))*2*Math.PI-Math.PI*0.45;const el=document.createElement('span');el.className='bw-mid bw-'+item.mood;el.textContent=item.word;el.style.left=(iCx+iR*Math.cos(angle))+'px';el.style.top=(iCy+iR*Math.sin(angle))+'px';el.style.animationDelay=(1+i*0.1)+'s';instiEl.appendChild(el);});
-  const retailEl=document.getElementById('brRetail');
-  const rItems=(d.retail||[]).sort(()=>Math.random()-0.5);
-  rItems.slice(0,12).forEach((item,i)=>{const el=document.createElement('span');el.className='bw-inner '+item.size+' bw-'+item.mood;el.textContent=item.word;el.style.animationDelay=(1.5+i*0.08)+'s';retailEl.appendChild(el);});
-}
-loadBrainScanner();
-
 </script>
 </body>
 </html>
