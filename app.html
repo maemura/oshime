@@ -873,10 +873,8 @@ function renderSectorTrend(){
 // セクタータップ→同じエリアにセクター内TOP10を表示
 function showSectorStocks(secName){
   activeSector=secName;
-  const secData=sectorScores[secName];
-  const codes=secData&&secData.codes?secData.codes:[];
-  const codeSet=new Set(codes);
-  const items=RAW.filter(s=>codeSet.has(s.code)||sMap(s.sector,s.code)===secName).map(s=>{
+  const secBase=secName.split('(')[0];
+  const items=RAW.filter(s=>{const m=sMap(s.sector,s.code);return m===secName||m===secBase||m.startsWith(secBase);}).map(s=>{
     const {score:jsScore,type}=calcScoreTrend(s);
     return {...s,score:s.score||jsScore,trend_type:type};
   }).sort((a,b)=>b.score-a.score).slice(0,10);
