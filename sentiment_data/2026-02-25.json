@@ -1,27 +1,490 @@
 {
   "date": "2026-02-25",
-  "collected_at": "2026-02-25 14:42",
+  "collected_at": "2026-02-25 14:50",
   "mode": "keywords",
   "channels_checked": 7,
-  "videos_processed": 25,
-  "entry_count": 0,
-  "entries": [],
+  "videos_processed": 33,
+  "entry_count": 42,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=k5ZPqb6acmE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=k5ZPqb6acmE",
+      "topic": "エヌビディア",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: エヌビディア"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=k5ZPqb6acmE",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=k5ZPqb6acmE",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=k5ZPqb6acmE",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=k5ZPqb6acmE",
+      "topic": "日銀",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日銀"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=k5ZPqb6acmE",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=waioXV2L1tE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=waioXV2L1tE",
+      "topic": "エヌビディア",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: エヌビディア"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=waioXV2L1tE",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=waioXV2L1tE",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=waioXV2L1tE",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=waioXV2L1tE",
+      "topic": "日銀",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日銀"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/25【日本株信用買い爆増‼️】AI関連、半導体株急騰で日経平均最高値更新。エヌビディア決算期待、日銀利上げ後退が追い風。米国株、ナスダック上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=waioXV2L1tE",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/24【日本株に異常な値動き】日経平均４９５円高→AI関連、ハイテク株爆騰、SaaS関連大暴落の超２極化相場。高市首相利上げ難色でドル円156円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=MXMJz__1BDw",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/24【日本株に異常な値動き】日経平均４９５円高→AI関連、ハイテク株爆騰、SaaS関連大暴落の超２極化相場。高市首相利上げ難色でドル円156円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=MXMJz__1BDw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/24【日本株に異常な値動き】日経平均４９５円高→AI関連、ハイテク株爆騰、SaaS関連大暴落の超２極化相場。高市首相利上げ難色でドル円156円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=MXMJz__1BDw",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/24【日本株に異常な値動き】日経平均４９５円高→AI関連、ハイテク株爆騰、SaaS関連大暴落の超２極化相場。高市首相利上げ難色でドル円156円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=MXMJz__1BDw",
+      "topic": "SaaS",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: SaaS"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/24【日本株に異常な値動き】日経平均４９５円高→AI関連、ハイテク株爆騰、SaaS関連大暴落の超２極化相場。高市首相利上げ難色でドル円156円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=MXMJz__1BDw",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "2/24【日本株に異常な値動き】日経平均４９５円高→AI関連、ハイテク株爆騰、SaaS関連大暴落の超２極化相場。高市首相利上げ難色でドル円156円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=MXMJz__1BDw",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "フジクラ株式分割。円安で先物上昇。ＪＸ金属が東邦チタニウム子会社化。さくらインターネット下方修正。～あす上がる株　2026年２月２６日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=NzZeVATbdqE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "フジクラ株式分割。円安で先物上昇。ＪＸ金属が東邦チタニウム子会社化。さくらインターネット下方修正。～あす上がる株　2026年２月２６日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=NzZeVATbdqE",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "空売り機関キオクシア急落。深夜３時にディスカウントTOB発表。日本製鉄が急落、CB発行。アンソロピック関連反発。2026年２月２５日（水）～明日上がる株最新の日",
+      "video_url": "https://www.youtube.com/watch?v=VC3tKKFY7mw",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "中国が対日輸出規制発動。NEC富士通ダブルパンチで急落。イビデン株式売り出し。高島屋赤字下方修正。～あす上がる株　2026年２月２５日（水）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=evNbZMB86_U",
+      "topic": "イビデン",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: イビデン"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "中国が対日輸出規制発動。NEC富士通ダブルパンチで急落。イビデン株式売り出し。高島屋赤字下方修正。～あす上がる株　2026年２月２５日（水）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=evNbZMB86_U",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ベイカレント-１5％急落。NEC急落。富士通急落。銀行株急落。セキュリティ関連急落。アンソロピック関連S安発生！2026年２月２４日（火）～明日上がる株最新の日",
+      "video_url": "https://www.youtube.com/watch?v=Ixe19jtHp7s",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ベイカレント-１5％急落。NEC急落。富士通急落。銀行株急落。セキュリティ関連急落。アンソロピック関連S安発生！2026年２月２４日（火）～明日上がる株最新の日",
+      "video_url": "https://www.youtube.com/watch?v=Ixe19jtHp7s",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "トランプ関税に違憲判決、代替関税発動、相場影響。2/25警戒ファンCEO会見。あす急落しそうな３銘柄。好決算なのに下げてる5銘柄。今週注目の決算。2/23月曜祝",
+      "video_url": "https://www.youtube.com/watch?v=04PozMDfvig",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "トランプ関税に違憲判決、代替関税発動、相場影響。2/25警戒ファンCEO会見。あす急落しそうな３銘柄。好決算なのに下げてる5銘柄。今週注目の決算。2/23月曜祝",
+      "video_url": "https://www.youtube.com/watch?v=04PozMDfvig",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "３月の高配当株。３％以上が７３２銘柄、４％以上の高配当銘柄が２３２銘柄、５％以上の超高配当銘柄が３３銘柄～あす上がる株。最新の日本株情報。高配当株の株価やデイト",
+      "video_url": "https://www.youtube.com/watch?v=-9nbndEFDYw",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "高市首相レジ指示。防衛３社受注。プライベートクレジット不安発生。Fundnote新銘柄大量保有。住友ファーマ１５％超急落。～あす上がる株　2026年２月２４日（",
+      "video_url": "https://www.youtube.com/watch?v=ktP3D5jcKo0",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "【再集録】世界初、IPS細胞製品承認、関連銘柄の動き。住友ファーマ １３％急落。クオリプス17%急落。中東緊迫！2026年２月２０日（金）～明日上がる株最新の日",
+      "video_url": "https://www.youtube.com/watch?v=Gh8yJf7Eod0",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "対米投融資の第２弾は「次世代型原子炉」、前場の出遅れ銘柄。マーケットE KDDIと連携。住友電工対米投資関連。2026年２月１９日（木）～明日上がる株最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=Yf37uRrGUvk",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "日経平均最高値でも、まだ利回り4%超えてる３銘柄",
+      "video_url": "https://www.youtube.com/watch?v=dM0hT0ZGxOo",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 2/25】速報、トランプ大統領「歴史的な大転換」",
+      "video_url": "https://www.youtube.com/watch?v=yv2-Ttc7mec",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 2/21】速報、トランプがグローバル関税を発動しました",
+      "video_url": "https://www.youtube.com/watch?v=3PIgEpY9odM",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "株価暴落中も優待新設で注目！銀行株がヤバい",
+      "video_url": "https://www.youtube.com/watch?v=L3qRnL-PkcU",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "権利目前も直近急落中！注目累進配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=hSv1TjBL0tA",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "２月権利目前最後はアレか！急落高配当も",
+      "video_url": "https://www.youtube.com/watch?v=hg3VqDuLO54",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経58000円にタッチ！高市総理が利上げに難色で、！NYダウ反発370ドル高　「SaaS銘柄」に買い",
+      "video_url": "https://www.youtube.com/watch?v=o7OFek_7_ws",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経58000円にタッチ！高市総理が利上げに難色で、！NYダウ反発370ドル高　「SaaS銘柄」に買い",
+      "video_url": "https://www.youtube.com/watch?v=o7OFek_7_ws",
+      "topic": "SaaS",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: SaaS"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経58000円にタッチ！高市総理が利上げに難色で、！NYダウ反発370ドル高　「SaaS銘柄」に買い",
+      "video_url": "https://www.youtube.com/watch?v=o7OFek_7_ws",
+      "topic": "ダウ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ダウ"
+    }
+  ],
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 0,
-        "bear": 0
+        "bull": 14,
+        "bear": 6
       },
       "株リアルライブ": {
-        "bull": 0,
-        "bear": 0
+        "bull": 10,
+        "bear": 2
       },
       "ひげづら株ちゃんねる": {
         "bull": 0,
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 0,
+        "bull": 1,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -30,14 +493,163 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 0
+        "bear": 2
       },
       "たばたの投資ch": {
-        "bull": 0,
+        "bull": 3,
         "bear": 0
       }
     },
-    "by_topic": {},
-    "hot_words": []
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ",
+          "Sho's投資情報局"
+        ]
+      },
+      "エヌビディア": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "AI関連": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "日銀": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "決算": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "株リアルライブ"
+        ]
+      },
+      "SaaS": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局",
+          "たばたの投資ch"
+        ]
+      },
+      "円高": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 8,
+        "sentiment": "bullish",
+        "sources": [
+          "優待ライダー",
+          "株リアルライブ"
+        ]
+      },
+      "円安": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "イビデン": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "銀行": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "優待ライダー",
+          "株リアルライブ"
+        ]
+      },
+      "トランプ": {
+        "count": 3,
+        "sentiment": "neutral",
+        "sources": [
+          "株リアルライブ",
+          "ばっちゃまの投資チャンネル"
+        ]
+      },
+      "防衛": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "配当": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "優待ライダー"
+        ]
+      },
+      "日経": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "ダウ": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "日経平均",
+      "半導体",
+      "AI関連",
+      "ナスダック",
+      "決算",
+      "トランプ",
+      "エヌビディア",
+      "日銀",
+      "SaaS",
+      "銀行",
+      "円高",
+      "円安",
+      "イビデン",
+      "防衛"
+    ]
   }
 }
