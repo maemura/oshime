@@ -345,22 +345,16 @@ a{color:var(--blue-m);text-decoration:none;}
 <!-- LOGIC MODAL -->
 <div class="modal-bg" id="logicModal" onclick="if(event.target===this)this.classList.remove('open')">
   <div class="modal">
-    <h3>📐 スコアリングロジック v8</h3>
-    <p><strong style="color:var(--text)">コンセプト：</strong>大型安定株を「安い時に買い、上昇に乗る」。セクターの強さも加味</p>
-    <table style="width:100%;font-size:11px;border-collapse:collapse;margin:8px 0">
-      <tr style="background:var(--blue);color:#fff"><th style="padding:6px 8px;text-align:left">要素</th><th style="padding:6px 8px;text-align:right">配点</th><th style="padding:6px 8px;text-align:left">意味</th></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">時価総額</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)"><strong>18点</strong></td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">大型株ほど安心・安定</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">配当利回り</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)"><strong>15点</strong></td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">高配当=下支えの安心感</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">75日線との距離</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)"><strong>15点</strong></td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">サポートライン付近＝買い場</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">25日線との距離</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">10点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">短期の調整度合い</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">120日リターン</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">10点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">半年の長期トレンド</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">60日リターン</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">8点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">中期トレンド</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">20日リターン</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">5点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">直近の方向性</td></tr>
-      <tr><td style="padding:5px 8px;border-bottom:1px solid var(--border)">セクターボーナス</td><td style="padding:5px 8px;text-align:right;border-bottom:1px solid var(--border)">最大8点</td><td style="padding:5px 8px;border-bottom:1px solid var(--border)">強いセクターに属する銘柄を加点</td></tr>
-      <tr><td style="padding:5px 8px">トレンド一貫性</td><td style="padding:5px 8px;text-align:right">±10点</td><td style="padding:5px 8px">上昇の信頼性・逆張りボーナス</td></tr>
-    </table>
+    <h3>📐 かぶのすけスコアについて</h3>
+    <p style="line-height:1.8;font-size:12px;color:var(--text2)">かぶのすけは独自のAIスコアリングで<br>毎朝 <strong style="color:var(--text)">1,500銘柄以上</strong> を自動スキャンしています。</p>
+    <p style="line-height:1.8;font-size:12px;color:var(--text2);margin-top:10px">ファンダメンタル・テクニカル・市場センチメントを<br>総合評価し、0〜100のスコアで表示します。</p>
+    <div style="margin:16px 0;padding:12px;background:var(--card);border-radius:8px;font-size:11px;line-height:1.9">
+      <div>📊 <strong>ファンダメンタル</strong> — 配当・割安度・収益性</div>
+      <div>📈 <strong>テクニカル</strong> — トレンド・移動平均・RSI</div>
+      <div>📡 <strong>センチメント</strong> — 市場の温度感・資金の流れ</div>
+    </div>
     <p><strong style="color:var(--text)">🏷 タイプ自動判定：</strong></p>
-    <p>📉 割安 — 75日線付近で短期調整中 = 買いチャンス<br>📈 上昇中 — 上昇トレンド全開 = 流れに乗る<br>💎 逆張り — 大型高配当が一時下落 = 拾い場<br>⚠ 下落中 — 75日線割れ = 今は触らない<br>🔄 反発 — 下落後に持ち直しの兆し</p>
+    <p style="font-size:11px;line-height:1.9">📉 割安 — 調整中の買いチャンス<br>📈 上昇中 — トレンドに乗る<br>💎 逆張り — 大型高配当の拾い場<br>⚠ 下落中 — 今は様子見<br>🔄 反発 — 持ち直しの兆し</p>
     <button class="close-btn" onclick="document.getElementById('logicModal').classList.remove('open')">✕ 閉じる</button>
   </div>
 </div>
