@@ -1,10 +1,10 @@
 {
   "date": "2026-02-25",
-  "collected_at": "2026-02-25 14:54",
+  "collected_at": "2026-02-25 14:58",
   "mode": "keywords",
   "channels_checked": 7,
-  "videos_processed": 25,
-  "entry_count": 34,
+  "videos_processed": 21,
+  "entry_count": 33,
   "entries": [
     {
       "source": "youtube",
@@ -338,17 +338,6 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "２月権利目前最後はアレか！急落高配当も",
-      "video_url": "https://www.youtube.com/watch?v=hg3VqDuLO54",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "たばたの投資ch",
       "video_title": "日経58000円にタッチ！高市総理が利上げに難色で、！NYダウ反発370ドル高　「SaaS銘柄」に買い",
       "video_url": "https://www.youtube.com/watch?v=o7OFek_7_ws",
@@ -417,8 +406,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "トレードラボ"
         ]
       },
       "エヌビディア": {
@@ -467,8 +456,8 @@
         "count": 2,
         "sentiment": "bearish",
         "sources": [
-          "たばたの投資ch",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "たばたの投資ch"
         ]
       },
       "円高": {
@@ -479,10 +468,9 @@
         ]
       },
       "高配当": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "優待ライダー",
           "株リアルライブ"
         ]
       },
@@ -538,10 +526,10 @@
     },
     "hot_words": [
       "日経平均",
-      "高配当",
       "半導体",
       "AI関連",
       "ナスダック",
+      "高配当",
       "エヌビディア",
       "日銀",
       "決算",
