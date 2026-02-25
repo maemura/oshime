@@ -1,13 +1,42 @@
 {
   "date": "2026-02-25",
-  "collected_at": "2026-02-25 14:30",
+  "collected_at": "2026-02-25 14:42",
   "mode": "keywords",
-  "channels_checked": 5,
-  "videos_processed": 1,
+  "channels_checked": 7,
+  "videos_processed": 25,
   "entry_count": 0,
   "entries": [],
   "summary": {
-    "by_source": {},
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 0,
+        "bear": 0
+      },
+      "株リアルライブ": {
+        "bull": 0,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
     "by_topic": {},
     "hot_words": []
   }
