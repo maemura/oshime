@@ -145,8 +145,8 @@
     "💊 医薬": {
       "score": 3.1,
       "avg_dividend": 2.26,
-      "avg_return_60d": NaN,
-      "avg_return_120d": NaN,
+      "avg_return_60d": null,
+      "avg_return_120d": null,
       "avg_volume_ratio": 1.03,
       "count": 96
     }
