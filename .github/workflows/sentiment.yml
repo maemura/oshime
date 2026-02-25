@@ -1,0 +1,34 @@
+name: センチメント収集
+
+on:
+  schedule:
+    - cron: '30 21 * * 0-4'  # JST 6:30（月〜金）※スキャン前に実行
+  workflow_dispatch:          # 手動実行も可能
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install youtube-transcript-api
+
+      - name: Collect sentiment
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: python collect_sentiment.py
+
+      - name: Commit sentiment data
+        run: |
+          git config user.name "kabunosuke-bot"
+          git config user.email "bot@kabunosuke.dev"
+          git add sentiment_data/
+          git diff --staged --quiet || git commit -m "sentiment: $(date +%Y-%m-%d) データ収集"
+          git push
