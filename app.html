@@ -821,7 +821,7 @@ function getRankBadge(code,tab){
   const yIdx=yList.findIndex(s=>s.code===code);
   if(yIdx<0)return '<span class="rank-chg new">🆕</span>';
   // 今日の順位を取得
-  const todayList=processed.filter(s=>tab==='dip'?(s.trend_type==='dip'||s.trend_type==='value_dip'):(s.trend_type==='momentum'&&(s.market_cap_b||0)>=1000)).slice(0,10);
+  const todayList=processed.filter(s=>tab==='dip'?(s.trend_type==='dip'||s.trend_type==='value_dip'):(s.trend_type==='momentum'&&(s.market_cap_b||0)>=1000)).sort((a,b)=>b.score-a.score).slice(0,10);
   const tIdx=todayList.findIndex(s=>s.code===code);
   if(tIdx<0)return '';
   const diff=yIdx-tIdx; // positive = moved up
@@ -910,7 +910,7 @@ function renderTop10(){
 
   // 上昇/割安タブ
   const body=document.getElementById('top5Body');
-  const items=processed.filter(s=>tab==='dip'?(s.trend_type==='dip'||s.trend_type==='value_dip'):(s.trend_type==='momentum'&&(s.market_cap_b||0)>=1000)).slice(0,10);
+  const items=processed.filter(s=>tab==='dip'?(s.trend_type==='dip'||s.trend_type==='value_dip'):(s.trend_type==='momentum'&&(s.market_cap_b||0)>=1000)).sort((a,b)=>b.score-a.score).slice(0,10);
   renderTop10Items(items, null);
 }
 
