@@ -874,8 +874,8 @@ function renderSectorTrend(){
 function showSectorStocks(secName){
   activeSector=secName;
   const secBase=secName.split('(')[0];
-  const stripEmoji=t=>(t||'').replace(/[^　-鿿 -~a-zA-Z()（）]/g,'').trim();
-  const items=RAW.filter(s=>{const m=sMap(s.sector,s.code);const ms=stripEmoji(m),ns=stripEmoji(secName),bs=stripEmoji(secBase);return ms===ns||ms===bs||ms.startsWith(bs);}).map(s=>{
+  const textOnly=t=>(t||'').replace(/^[^ ]+ /,'');
+  const items=RAW.filter(s=>{const m=sMap(s.sector,s.code);return textOnly(m)===textOnly(secName)||textOnly(m)===textOnly(secBase)||textOnly(m).startsWith(textOnly(secBase));}).map(s=>{
     const {score:jsScore,type}=calcScoreTrend(s);
     return {...s,score:s.score||jsScore,trend_type:type};
   }).sort((a,b)=>b.score-a.score).slice(0,10);
