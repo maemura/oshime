@@ -943,6 +943,37 @@ def calc_score(s, mode="dividend"):
     return max(0,min(score,100))
 
 
+
+def calc_trend_type(s):
+    """trend_type と zone を算出"""
+    mc = s.get("market_cap_b", 0) or 0
+    price = s.get("price", 0) or 0
+    ma75 = s.get("ma75", price) or price
+    ma25 = s.get("ma25", price) or price
+    div = s.get("dividend", 0) or 0
+    ma75d = round((price - ma75) / ma75 * 100, 2) if ma75 else 0
+    ma25d = round((price - ma25) / ma25 * 100, 2) if ma25 else 0
+    r120 = s.get("ret120", 0) or 0
+    r60 = s.get("ret60", 0) or 0
+    r20 = s.get("ret20", 0) or 0
+    pc = sum(1 for r in [r120, r60, r20] if r > 0)
+    if ma75d >= 0 and ma25d >= 0 and pc >= 2:
+        tt = "momentum"
+    elif ma75d >= 0 and ma25d < 0 and pc >= 2:
+        tt = "dip"
+    elif ma75d < 0 and ma25d < 0:
+        tt = "falling"
+    elif ma75d < 0 and ma25d >= 0:
+        tt = "bounce"
+    else:
+        tt = "neutral"
+    if tt == "falling" and mc >= 3000 and div >= 2.5 and -15 <= ma75d <= -2:
+        tt = "value_dip"
+    score = s.get("score", 0)
+    zone = "buy" if score >= 60 else "watch" if score >= 40 else "hold"
+    return tt, zone
+
+
 def main():
     start = time.time()
     print("="*58)
@@ -1024,12 +1055,28 @@ def main():
         s["score_stable"]   = calc_score_stable(s)
         s["score_growth"]   = calc_score_growth(s)
         s["score"]          = s["score_stable"]
+        tt, zn = calc_trend_type(s)
+        s["trend_type"] = tt
+        s["zone"] = zn
     results.sort(key=lambda x:-x["score"])
 
     prev_scores={}
     if os.path.exists("stocks_data.json"):
         try:
-            with open("stocks_data.json",encoding="utf-8") as f:
+        
+    # NaN/Inf を None に変換
+    import math
+    def sanitize(obj):
+        if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
+            return None
+        if isinstance(obj, dict):
+            return {k: sanitize(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [sanitize(v) for v in obj]
+        return obj
+    output = sanitize(output)
+
+    with open("stocks_data.json",encoding="utf-8") as f:
                 prev=json.load(f)
             for s in prev.get("stocks",[]):
                 prev_scores[s["code"]]=s.get("score",0)
@@ -1099,7 +1146,7 @@ def main():
             "pbr","per","vol_r","vol_ratio_1d","ret_1d","range_pct","trend_score",
             "score_dividend","score_value","score_rebound",
             "score_stable","score_growth","score","prev_score","market_cap_b",
-            "trend_type","ma75_dev","ma25_dev","roe","closes_60d",
+            "trend_type","zone","ma75_dev","ma25_dev","roe","closes_60d",
             "ret120","ret20","ret60","volatility"}
     # ── セクタースコア自動算出 ──
     SECTOR_JP = {
@@ -1177,10 +1224,10 @@ def main():
     SECTOR_JP = {
         "Financial Services": "金融", "Basic Materials": "素材",
         "Energy": "エネルギー", "Industrials": "産業",
-        "Real Estate": "不動産", "Consumer Cyclical": "消費（景気敏感）",
-        "Consumer Defensive": "消費（安定）", "Healthcare": "医薬・ヘルスケア",
-        "Technology": "テック", "Communication Services": "通信・メディア",
-        "Utilities": "電力・ガス",
+        "Real Estate": "不動産", "Consumer Cyclical": "消費(景気敏感)",
+        "Consumer Defensive": "消費(安定)", "Healthcare": "医薬",
+        "Technology": "テック", "Communication Services": "通信",
+        "Utilities": "電力ガス",
     }
     sector_scores_jp = {}
     for sec, sc in sector_scores.items():
@@ -1251,6 +1298,19 @@ def main():
         print(f"  📰 ニュースDB追記: {today_str}（{len(headlines)}件）")
     except Exception as e:
         print(f"  ⚠ ニュースDB保存失敗: {e}")
+
+
+    # NaN/Inf を None に変換
+    import math
+    def sanitize(obj):
+        if isinstance(obj, float) and (math.isnan(obj) or math.isinf(obj)):
+            return None
+        if isinstance(obj, dict):
+            return {k: sanitize(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [sanitize(v) for v in obj]
+        return obj
+    output = sanitize(output)
 
     with open("stocks_data.json","w",encoding="utf-8") as f:
         json.dump(output,f,ensure_ascii=False,indent=2)
