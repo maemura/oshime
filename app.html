@@ -462,25 +462,60 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .skel-row{height:40px;margin-bottom:4px;border-radius:4px;}
 
 /* ── CHART & DETAIL EXPAND ── */
-/* ── BRAIN SCANNER ── */
-.brain-wrap{background:#0a0e17;border-radius:var(--r);padding:16px;margin-bottom:14px;border:1px solid #1a2744;box-shadow:0 0 20px rgba(0,255,136,0.05);}
-.brain-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
-.brain-title{font-family:var(--fn);font-size:13px;font-weight:700;color:#00ff88;letter-spacing:1px;text-shadow:0 0 8px rgba(0,255,136,0.3);}
-.brain-sub{font-size:9px;color:#4a6a8a;}
-.brain-circle-wrap{position:relative;width:100%;max-width:340px;margin:0 auto 14px;aspect-ratio:1/1;}
-.brain-circle{position:absolute;inset:0;border-radius:50%;border:2px solid #1a2744;background:radial-gradient(circle at 40% 35%,#141c2e,#0a0e17 70%);overflow:hidden;box-shadow:inset 0 0 30px rgba(0,255,136,0.03),0 0 15px rgba(0,255,136,0.05);}
-.brain-word{position:absolute;font-family:var(--fn);font-weight:700;white-space:nowrap;transition:opacity 0.3s;}
-.brain-word.greed,.brain-word.bullish{color:#00ff88;text-shadow:0 0 6px rgba(0,255,136,0.4);}
-.brain-word.hype{color:#ff9f43;text-shadow:0 0 6px rgba(255,159,67,0.4);}
-.brain-word.fear,.brain-word.bearish,.brain-word.cautious{color:#ff4757;text-shadow:0 0 6px rgba(255,71,87,0.4);}
-.brain-word.calm{color:#4a9eff;text-shadow:0 0 6px rgba(74,158,255,0.4);}
-.brain-word.lg{font-size:15px;}.brain-word.md{font-size:12px;}.brain-word.sm{font-size:10px;opacity:0.8;}
-.brain-legend{display:flex;justify-content:center;gap:14px;margin-top:10px;flex-wrap:wrap;}
-.brain-leg{display:flex;align-items:center;gap:4px;font-size:10px;color:#8899aa;}
-.brain-leg-dot{width:8px;height:8px;border-radius:50%;}
-.brain-summary-bar{display:flex;height:6px;border-radius:3px;overflow:hidden;margin-top:10px;background:#1a2744;}
-.brain-summary-seg{height:100%;transition:width 0.5s;}
-.brain-date{font-size:8px;color:#3a4a5a;text-align:right;margin-top:6px;}
+/* ── BRAIN SCANNER 3層同心円 ── */
+.brain-wrap{background:#060a14;border-radius:var(--r);padding:16px 8px;margin-bottom:14px;border:1px solid #1a2744;position:relative;overflow:hidden;}
+.brain-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(74,170,255,0.03) 0%,transparent 60%),linear-gradient(rgba(74,170,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(74,170,255,0.012) 1px,transparent 1px);background-size:100% 100%,28px 28px,28px 28px;pointer-events:none;}
+.brain-head{text-align:center;margin-bottom:4px;position:relative;z-index:1;}
+.brain-title{font-family:var(--fn);font-size:10px;font-weight:700;color:#4af;letter-spacing:5px;text-transform:uppercase;opacity:0.6;}
+.brain-sub{font-size:11px;color:#445;margin-top:4px;}
+.brain-container{position:relative;width:100%;max-width:380px;aspect-ratio:1/1;margin:0 auto;}
+/* 3つの同心円ガイド */
+.brain-guide{position:absolute;border-radius:50%;left:50%;transform:translateX(-50%);}
+.brain-guide.outer{top:0;width:100%;height:100%;border:1px solid rgba(74,170,255,0.08);}
+.brain-guide.mid{top:17%;width:66%;height:66%;border:1px solid rgba(74,170,255,0.07);}
+.brain-guide.inner{top:33%;width:34%;height:34%;border:1px solid rgba(167,139,250,0.08);background:radial-gradient(circle,rgba(167,139,250,0.03) 0%,transparent 70%);}
+/* 層ラベル */
+.brain-tag{position:absolute;font-family:var(--fn);font-size:7px;letter-spacing:2px;text-transform:uppercase;opacity:0.3;left:50%;transform:translateX(-50%);pointer-events:none;white-space:nowrap;}
+.brain-tag.t1{top:2%;color:#4af;}
+.brain-tag.t2{top:15%;color:#4aeaaa;}
+.brain-tag.t3{top:31%;color:#a78bfa;}
+/* 各層のリング */
+.brain-ring{position:absolute;left:50%;transform:translateX(-50%);}
+.brain-ring.outer{top:0;width:100%;height:100%;}
+.brain-ring.mid{top:17%;width:66%;height:66%;}
+/* 内側ワードクラウド */
+.brain-core{position:absolute;top:34%;left:50%;transform:translateX(-50%);width:32%;height:32%;border-radius:50%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1px 3px;padding:12px 8px;overflow:hidden;}
+/* スキャンリング */
+.brain-scan{position:absolute;border-radius:50%;border:1.5px solid transparent;pointer-events:none;left:50%;transform:translateX(-50%);}
+.brain-scan.s1{top:0;width:100%;height:100%;border-top-color:rgba(74,170,255,0.15);animation:bspin 6s linear infinite;}
+.brain-scan.s2{top:17%;width:66%;height:66%;border-right-color:rgba(74,234,170,0.12);animation:bspin 8s linear infinite reverse;}
+/* 外側ワード */
+.bw-outer{position:absolute;font-family:var(--fn);font-size:9px;letter-spacing:0.3px;white-space:nowrap;opacity:0;animation:bfade .6s ease forwards;cursor:default;transition:transform .2s,text-shadow .2s;transform:translate(-50%,-50%);}
+.bw-outer:hover{transform:translate(-50%,-50%) scale(1.15);text-shadow:0 0 12px currentColor;z-index:10;}
+/* 中間ワード */
+.bw-mid{position:absolute;font-family:var(--fn);font-size:8.5px;white-space:nowrap;opacity:0;animation:bfade .6s ease forwards;cursor:default;transition:transform .2s;transform:translate(-50%,-50%);}
+.bw-mid:hover{transform:translate(-50%,-50%) scale(1.15);text-shadow:0 0 10px currentColor;z-index:10;}
+/* 内側ワード */
+.bw-inner{display:inline-block;padding:1px 3px;font-weight:700;white-space:nowrap;opacity:0;animation:bpop .4s ease forwards;cursor:default;transition:transform .2s;}
+.bw-inner:hover{transform:scale(1.25);text-shadow:0 0 8px currentColor;}
+.bw-inner.xl{font-size:13px;}.bw-inner.lg{font-size:10px;}.bw-inner.md{font-size:8px;}.bw-inner.sm{font-size:7px;opacity:.6;}
+/* 色（ネオン発光） */
+.bw-greed{color:#4aeaaa;text-shadow:0 0 4px rgba(74,234,170,0.3);}.bw-fear{color:#ff6b7a;text-shadow:0 0 4px rgba(255,107,122,0.3);}
+.bw-hype{color:#ff9f43;text-shadow:0 0 4px rgba(255,159,67,0.3);}.bw-buzz{color:#a78bfa;text-shadow:0 0 4px rgba(167,139,250,0.3);}
+.bw-calm{color:#4a9eff;text-shadow:0 0 4px rgba(74,158,255,0.3);}.bw-bull{color:#4aeaaa;text-shadow:0 0 4px rgba(74,234,170,0.3);}
+.bw-bear{color:#ff6b7a;text-shadow:0 0 4px rgba(255,107,122,0.3);}.bw-note{color:#6b9fff;text-shadow:0 0 4px rgba(107,159,255,0.3);}
+.bw-risk{color:#ff6b7a;}.bw-tail{color:#4aeaaa;}.bw-event{color:#ffb347;}.bw-data{color:#6b9fff;}
+/* 凡例 */
+.brain-legend{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:10px;position:relative;z-index:1;}
+.brain-leg-card{padding:6px 10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.04);border-radius:6px;}
+.brain-leg-title{font-family:var(--fn);font-size:7px;letter-spacing:1.5px;opacity:0.4;margin-bottom:3px;font-weight:600;}
+.brain-leg-items{display:flex;gap:6px;}
+.brain-leg-item{display:flex;align-items:center;gap:3px;font-size:8.5px;color:#556;}
+.brain-leg-dot{width:5px;height:5px;border-radius:1px;}
+.brain-date{text-align:center;font-size:7.5px;color:#334;margin-top:6px;letter-spacing:1px;position:relative;z-index:1;}
+@keyframes bspin{to{transform:translateX(-50%) rotate(360deg);}}
+@keyframes bfade{from{opacity:0;transform:translate(-50%,-50%) scale(.7);}to{opacity:.85;transform:translate(-50%,-50%) scale(1);}}
+@keyframes bpop{from{opacity:0;transform:scale(.4);}to{opacity:1;transform:scale(1);}}
 
 /* ── CHART & DETAIL EXPAND ── */
 .t5-spark{width:100px;height:36px;flex-shrink:0;}
@@ -599,13 +634,39 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <!-- STANCE -->
     <div id="stanceBox"></div>
 
-    <!-- 📡 BRAIN SCANNER -->
+    <!-- 📡 BRAIN SCANNER 3層同心円 -->
     <div class="brain-wrap" id="brainSection" style="display:none">
       <div class="brain-head">
-        <div class="brain-title">📡 BRAIN SCANNER</div>
-        <div class="brain-sub">YouTube 7ch AI解析</div>
+        <div class="brain-title">MARKET BRAIN SCANNER</div>
+        <div class="brain-sub">みんなの頭の中、今日はこんな感じ</div>
       </div>
       <div id="brainBody"></div>
+      <div class="brain-legend">
+        <div class="brain-leg-card">
+          <div class="brain-leg-title" style="color:#4af">マクロ（外側）</div>
+          <div class="brain-leg-items">
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>追い風</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>リスク</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ffb347"></div>注目</div>
+          </div>
+        </div>
+        <div class="brain-leg-card">
+          <div class="brain-leg-title" style="color:#4aeaaa">機関（中間）</div>
+          <div class="brain-leg-items">
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>買い</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>売り</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#6b9fff"></div>分析</div>
+          </div>
+        </div>
+        <div class="brain-leg-card">
+          <div class="brain-leg-title" style="color:#a78bfa">個人（内側）</div>
+          <div class="brain-leg-items">
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>強気</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>不安</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff9f43"></div>過熱</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 3 TABS -->
@@ -1668,7 +1729,7 @@ function run(){
 }
 
 // ═══════════════════════════════════════
-// BRAIN SCANNER
+// BRAIN SCANNER 3層同心円
 // ═══════════════════════════════════════
 async function loadBrainScanner(){
   try{
@@ -1676,63 +1737,101 @@ async function loadBrainScanner(){
     if(!res.ok) throw new Error('not found');
     const data=await res.json();
     document.getElementById('brainSection').style.display='';
-    
-    const allItems=[...(data.macro||[]),...(data.institutional||[]),...(data.retail||[])];
-    let greedN=0,fearN=0,hypeN=0,calmN=0;
-    allItems.forEach(t=>{
-      if(t.mood==='greed'||t.mood==='bullish')greedN++;
-      else if(t.mood==='fear'||t.mood==='bearish'||t.mood==='cautious')fearN++;
-      else if(t.mood==='hype')hypeN++;
-      else calmN++;
-    });
-    const total=allItems.length||1;
-    
-    // 円内にキーワード配置（脳内メーカー風）
-    // 重複除去してシャッフル
-    const seen=new Set();
-    const unique=allItems.filter(t=>{if(seen.has(t.word))return false;seen.add(t.word);return true;});
-    // シードベースのシャッフル（毎回同じ配置）
-    const shuffled=[...unique].sort((a,b)=>(a.word+a.mood).charCodeAt(0)-(b.word+b.mood).charCodeAt(0));
-    
-    let wordsHtml='';
-    shuffled.forEach((t,i)=>{
-      // 円内にランダム風配置（中心から離れすぎない）
-      const angle=(i/shuffled.length)*Math.PI*2+(i%3)*0.5;
-      const r=18+Math.min(i*1.8,28)+(i%3)*5;
-      const x=50+r*Math.cos(angle);
-      const y=50+r*Math.sin(angle);
-      const rot=(i%5-2)*8;
-      const mood=t.mood||'calm';
-      const size=t.size||'sm';
-      wordsHtml+=`<div class="brain-word ${mood} ${size}" style="left:${x}%;top:${y}%;transform:translate(-50%,-50%) rotate(${rot}deg)">${t.word}</div>`;
-    });
-    
-    const gPct=Math.round(greedN/total*100);
-    const hPct=Math.round(hypeN/total*100);
-    const fPct=Math.round(fearN/total*100);
-    const cPct=100-gPct-hPct-fPct;
-    
-    document.getElementById('brainBody').innerHTML=`
-      <div class="brain-circle-wrap">
-        <div class="brain-circle">${wordsHtml}</div>
-      </div>
-      <div class="brain-summary-bar">
-        <div class="brain-summary-seg" style="width:${gPct}%;background:#00ff88"></div>
-        <div class="brain-summary-seg" style="width:${hPct}%;background:#ff9f43"></div>
-        <div class="brain-summary-seg" style="width:${fPct}%;background:#ff4757"></div>
-        <div class="brain-summary-seg" style="width:${cPct}%;background:#4a9eff"></div>
-      </div>
-      <div class="brain-legend">
-        <div class="brain-leg"><div class="brain-leg-dot" style="background:#00ff88;box-shadow:0 0 4px #00ff88"></div>強気 ${greedN}</div>
-        <div class="brain-leg"><div class="brain-leg-dot" style="background:#ff9f43;box-shadow:0 0 4px #ff9f43"></div>過熱 ${hypeN}</div>
-        <div class="brain-leg"><div class="brain-leg-dot" style="background:#ff4757;box-shadow:0 0 4px #ff4757"></div>警戒 ${fearN}</div>
-        <div class="brain-leg"><div class="brain-leg-dot" style="background:#4a9eff;box-shadow:0 0 4px #4a9eff"></div>中立 ${calmN}</div>
-      </div>
-      ${data.date?`<div class="brain-date">データ: ${data.date}</div>`:''}`;
+    renderBrain3(data);
   }catch(e){
     console.log('Brain Scanner:',e);
     document.getElementById('brainSection').style.display='none';
   }
+}
+
+function renderBrain3(d){
+  const el=document.getElementById('brainBody');
+  // mood正規化
+  const normMood=(m)=>{
+    if(m==='greed'||m==='bullish') return 'greed';
+    if(m==='fear'||m==='bearish'||m==='cautious') return 'fear';
+    if(m==='hype') return 'hype';
+    return 'calm';
+  };
+  // macroカテゴリ用mood→外側色クラス
+  const macroClass=(m)=>{
+    const nm=normMood(m);
+    if(nm==='greed') return 'tail';
+    if(nm==='fear') return 'risk';
+    if(nm==='hype') return 'event';
+    return 'data';
+  };
+  // institutionalカテゴリ用mood→中間色クラス
+  const instiClass=(m)=>{
+    const nm=normMood(m);
+    if(nm==='greed') return 'bull';
+    if(nm==='fear') return 'bear';
+    return 'note';
+  };
+
+  el.innerHTML=`
+    <div class="brain-container">
+      <div class="brain-guide outer"></div>
+      <div class="brain-guide mid"></div>
+      <div class="brain-guide inner"></div>
+      <div class="brain-tag t1">MACRO — 世界の潮流</div>
+      <div class="brain-tag t2">INSTITUTIONAL — 機関の動き</div>
+      <div class="brain-tag t3">RETAIL — 個人の声</div>
+      <div class="brain-ring outer" id="brMacro"></div>
+      <div class="brain-ring mid" id="brInsti"></div>
+      <div class="brain-core" id="brRetail"></div>
+      <div class="brain-scan s1"></div>
+      <div class="brain-scan s2"></div>
+    </div>
+    ${d.date?`<div class="brain-date">毎朝自動更新 — ${d.date}</div>`:''}`;
+
+  // コンテナサイズ取得
+  const container=el.querySelector('.brain-container');
+  const W=container.offsetWidth||380;
+
+  // ── 外層: MACRO ──
+  const macroEl=document.getElementById('brMacro');
+  const mItems=(d.macro||[]).slice(0,10);
+  const mR=W*0.46, mCx=W*0.5, mCy=W*0.5;
+  mItems.forEach((item,i)=>{
+    const angle=(i/mItems.length)*2*Math.PI-Math.PI*0.55;
+    const sp=document.createElement('span');
+    sp.className='bw-outer bw-'+macroClass(item.mood);
+    sp.textContent=item.word;
+    const sc=item.size==='lg'?1.05:item.size==='md'?.95:.85;
+    sp.style.fontSize=(9*sc)+'px';
+    sp.style.left=(mCx+mR*Math.cos(angle))+'px';
+    sp.style.top=(mCy+mR*Math.sin(angle))+'px';
+    sp.style.animationDelay=(0.3+i*0.1)+'s';
+    macroEl.appendChild(sp);
+  });
+
+  // ── 中層: INSTITUTIONAL ──
+  const instiEl=document.getElementById('brInsti');
+  const iItems=(d.institutional||[]).slice(0,10);
+  const iW=W*0.66, iR=iW*0.42, iCx=iW*0.5, iCy=iW*0.5;
+  iItems.forEach((item,i)=>{
+    const angle=(i/iItems.length)*2*Math.PI-Math.PI*0.45;
+    const sp=document.createElement('span');
+    sp.className='bw-mid bw-'+instiClass(item.mood);
+    sp.textContent=item.word;
+    sp.style.left=(iCx+iR*Math.cos(angle))+'px';
+    sp.style.top=(iCy+iR*Math.sin(angle))+'px';
+    sp.style.animationDelay=(1+i*0.1)+'s';
+    instiEl.appendChild(sp);
+  });
+
+  // ── 内層: RETAIL ──
+  const retailEl=document.getElementById('brRetail');
+  const rItems=(d.retail||[]).sort(()=>Math.random()-0.5).slice(0,14);
+  rItems.forEach((item,i)=>{
+    const sp=document.createElement('span');
+    const nm=normMood(item.mood);
+    sp.className='bw-inner '+(item.size||'sm')+' bw-'+nm;
+    sp.textContent=item.word;
+    sp.style.animationDelay=(1.5+i*0.08)+'s';
+    retailEl.appendChild(sp);
+  });
 }
 
 async function init(){
