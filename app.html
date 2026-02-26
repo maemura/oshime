@@ -14,23 +14,21 @@
   function gaEvent(n,p){if(typeof gtag!=='undefined')gtag('event',n,p||{});}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0d1117; --navy2:#151b26;
-  --orange:#ff6b00; --orange2:#ff8533; --orange-lt:rgba(255,107,0,0.1);
-  --up:#ff4757; --dn:#4a9eff;
-  --green:#00d68f; --green-lt:rgba(0,214,143,0.1);
-  --amber:#f0a500; --amber-lt:rgba(240,165,0,0.1);
-  --bg:#eef2f7; --bg2:#151b26; --bg3:#1a2233;
-  --border:#2a3352; --border-lt:#d0d8e8;
-  --text:#c9d1d9; --text2:#e6edf3; --text3:#6b7b8d;
-  --text-page:#4a5568;
+  --navy:#0a2540; --navy2:#0d3060;
+  --orange:#e8541e; --orange2:#ff6b35; --orange-lt:#fff3ee;
+  --up:#d0021b; --dn:#0055cc;
+  --green:#00875a; --green-lt:#e3fcef;
+  --amber:#946500; --amber-lt:#fffae6;
+  --bg:#f0f4f8; --bg2:#ffffff; --bg3:#f7f9fc;
+  --border:#e2e8f0;
+  --text:#2d3748; --text2:#1a202c; --text3:#718096;
   --r:8px; --r2:5px;
-  --fn:'JetBrains Mono','Outfit',monospace;
+  --fn:'DM Mono','Outfit',monospace;
   --fh:'Outfit','Noto Sans JP',sans-serif;
   --fb:'Noto Sans JP',sans-serif;
-  --shadow:0 2px 8px rgba(0,0,0,0.15),0 1px 3px rgba(0,0,0,0.1);
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html{font-size:15px;}
@@ -39,9 +37,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 /* ── TOPBAR ── */
 .topbar{
   position:sticky;top:0;z-index:300;
-  background:var(--navy);border-bottom:2px solid var(--orange);
-  height:50px;display:flex;align-items:center;padding:0 20px;
-  box-shadow:0 2px 12px rgba(0,0,0,0.2);
+  background:var(--navy);border-bottom:3px solid var(--orange);
+  height:54px;display:flex;align-items:center;padding:0 20px;
 }
 .topbar-inner{width:100%;max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
 .logo-name{font-family:var(--fh);font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.3px;}
@@ -66,38 +63,41 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 
 /* ── HERO (compact) ── */
 .hero{
-  background:var(--bg2);border:1px solid var(--border);
-  border-radius:var(--r);padding:12px 16px;margin-bottom:12px;
-  box-shadow:var(--shadow);
+  background:linear-gradient(135deg,var(--navy) 0%,#0e2f5a 100%);
+  border-radius:var(--r);padding:20px 24px;margin-bottom:14px;
+  position:relative;overflow:hidden;
 }
-.hero::before{display:none;}
+.hero::before{
+  content:'';position:absolute;right:-40px;top:-40px;
+  width:180px;height:180px;border-radius:50%;
+  background:rgba(232,84,30,0.08);pointer-events:none;
+}
 .hero-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
 .hero-left{}
 .hero-eyebrow{
   display:inline-flex;align-items:center;gap:6px;
-  font-family:var(--fh);font-size:10px;color:var(--text3);
-  margin-bottom:4px;
+  font-family:var(--fh);font-size:10px;color:rgba(255,255,255,0.5);
+  margin-bottom:8px;
 }
 .hero-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0;animation:blink 2s ease-in-out infinite;}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
-.hero-title{font-family:var(--fh);font-size:15px;font-weight:800;color:var(--text2);line-height:1.2;letter-spacing:-0.3px;}
-.hero-title span{color:var(--orange);}
-@media(max-width:480px){.hero-title{font-size:13px;}}
-.hero-stats{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap;}
+.hero-title{font-family:var(--fh);font-size:22px;font-weight:800;color:#fff;line-height:1.2;letter-spacing:-0.3px;}
+.hero-title span{color:var(--orange2);}
+@media(max-width:480px){.hero-title{font-size:18px;}}
+.hero-stats{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
 .hero-stat{
-  background:rgba(255,255,255,0.05);border:1px solid var(--border);
-  border-radius:var(--r2);padding:6px 12px;
+  background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--r2);padding:8px 14px;
 }
-.hero-stat-val{font-family:var(--fn);font-size:15px;color:var(--text2);line-height:1;}
-.hero-stat-val.buy{color:var(--orange);}
-.hero-stat-label{font-size:8px;color:var(--text3);font-family:var(--fh);margin-top:1px;}
+.hero-stat-val{font-family:var(--fn);font-size:20px;color:#fff;line-height:1;}
+.hero-stat-val.buy{color:var(--orange2);}
+.hero-stat-label{font-size:9px;color:rgba(255,255,255,0.4);font-family:var(--fh);margin-top:2px;}
 
 /* ── TRUST BAR ── */
 .trust-bar{
   background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--amber);
   border-radius:var(--r);padding:8px 14px;margin-bottom:12px;
   display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
-  box-shadow:var(--shadow);
 }
 .trust-left{display:flex;align-items:center;gap:8px;}
 .trust-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;}
@@ -110,8 +110,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   border-radius:4px;padding:2px 8px;font-size:10px;color:var(--text3);
   font-family:var(--fh);
 }
-.tbadge.link{cursor:pointer;color:var(--orange);border-color:var(--orange);}
-.tbadge.link:hover{background:var(--orange);color:#fff;}
+.tbadge.link{cursor:pointer;color:var(--navy);border-color:var(--navy);}
+.tbadge.link:hover{background:var(--navy);color:#fff;}
 
 /* ── MARKET PULSE ── */
 .pulse{
@@ -132,7 +132,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .stance{
   background:var(--bg2);border:1px solid var(--border);border-left:4px solid var(--border);
   border-radius:var(--r);padding:16px 18px;margin-bottom:14px;
-  box-shadow:var(--shadow);
 }
 .stance.bull{border-left-color:var(--up);}
 .stance.neutral{border-left-color:var(--amber);}
@@ -148,7 +147,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .stance-badge.neutral{background:var(--amber-lt);color:var(--amber);border-color:rgba(148,101,0,0.2);}
 .stance-badge.bear{background:rgba(0,85,204,0.07);color:var(--dn);border-color:rgba(0,85,204,0.2);}
 .stance-reason{font-size:12px;color:var(--text);line-height:1.85;margin-bottom:12px;}
-.stance-reason strong{color:var(--orange);font-weight:700;}
+.stance-reason strong{color:var(--navy);font-weight:700;}
 .stance-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
 .stance-chip{
   border:1px solid var(--border);border-radius:var(--r2);
@@ -182,7 +181,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
   padding:12px 14px;margin-bottom:12px;
   display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-  box-shadow:var(--shadow);
 }
 .filter-label{font-family:var(--fh);font-size:11px;color:var(--text3);font-weight:600;}
 .filter-tabs{display:flex;gap:4px;flex-wrap:wrap;}
@@ -191,7 +189,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   font-family:var(--fh);font-size:11px;font-weight:600;color:var(--text3);
   cursor:pointer;background:var(--bg3);white-space:nowrap;
 }
-.filter-tab.active{background:var(--orange);color:#fff;border-color:var(--orange);}
+.filter-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
 .filter-sep{width:1px;height:20px;background:var(--border);}
 .filter-count{font-family:var(--fn);font-size:11px;color:var(--text3);margin-left:auto;}
 
@@ -199,7 +197,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .stock-table-wrap{
   background:var(--bg2);border:1px solid var(--border);
   border-radius:var(--r);overflow:hidden;margin-bottom:14px;
-  box-shadow:var(--shadow);
 }
 .stock-table{width:100%;border-collapse:collapse;}
 .stock-table th{
@@ -209,7 +206,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   white-space:nowrap;cursor:pointer;user-select:none;
 }
 .stock-table th:first-child{text-align:left;}
-.stock-table th:hover{color:var(--orange);}
+.stock-table th:hover{color:var(--navy);}
 .stock-table th.sort-asc::after{content:' ▲';}
 .stock-table th.sort-desc::after{content:' ▼';}
 .stock-table td{
@@ -221,7 +218,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .stock-table tr:last-child td{border-bottom:none;}
 .stock-table tr.tbl-row{cursor:pointer;transition:background 0.1s;}
 .stock-table tr.tbl-row:hover{background:var(--bg3);}
-.stock-table tr.tbl-row.expanded{background:rgba(255,107,0,0.05);}
+.stock-table tr.tbl-row.expanded{background:#f0f7ff;}
 .tbl-rank{
   font-family:var(--fn);font-size:11px;font-weight:700;
   width:28px;text-align:center;
@@ -229,7 +226,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .tbl-rank.top{color:var(--orange);}
 .tbl-name{font-weight:600;color:var(--text2);font-size:12px;}
 .tbl-name-link{font-weight:600;color:var(--text2);font-size:12px;text-decoration:none;display:block;}
-.tbl-name-link:hover{color:var(--orange);text-decoration:underline;}
+.tbl-name-link:hover{color:var(--navy);text-decoration:underline;}
 .tbl-code{font-family:var(--fn);font-size:10px;color:var(--text3);}
 .tbl-zone{
   display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;
@@ -249,8 +246,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .tbl-prev.up{color:var(--up);}
 .tbl-prev.dn{color:var(--dn);}
 /* 展開詳細行 */
-.detail-row td{padding:0;background:rgba(255,107,0,0.03);}
-.detail-box{padding:14px 16px;border-top:1px solid var(--border);}
+.detail-row td{padding:0;background:#f0f7ff;}
+.detail-box{padding:14px 16px;border-top:1px solid #d0e4f7;}
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
 @media(max-width:600px){.detail-grid{grid-template-columns:1fr;}}
 .detail-section-title{font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.5px;margin-bottom:8px;}
@@ -259,8 +256,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r2);
   padding:8px 12px;position:relative;
 }
-.why-item.strong{border-color:rgba(255,71,87,0.4);background:rgba(255,71,87,0.08);}
-.why-item.mid{border-color:rgba(240,165,0,0.4);background:rgba(240,165,0,0.08);}
+.why-item.strong{border-color:rgba(208,2,27,0.25);background:rgba(208,2,27,0.03);}
+.why-item.mid{border-color:rgba(148,101,0,0.25);background:var(--amber-lt);}
 .why-rank-badge{
   position:absolute;top:8px;right:8px;
   width:16px;height:16px;border-radius:50%;
@@ -293,10 +290,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .detail-link-btn{
   padding:7px 14px;border-radius:var(--r2);
   font-family:var(--fh);font-size:11px;font-weight:700;
-  border:1.5px solid var(--border);background:var(--bg3);color:var(--text2);
+  border:1.5px solid var(--border);background:var(--bg3);color:var(--navy);
   text-decoration:none;display:inline-flex;align-items:center;
 }
-.detail-link-btn:hover{background:var(--orange);color:#fff;border-color:var(--orange);}
+.detail-link-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
 
 /* ── TREND BADGES ── */
 .trend-badge{
@@ -316,7 +313,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   border-right:1px solid var(--border);transition:all 0.15s;
 }
 .t5-tab:last-child{border-right:none;}
-.t5-tab.active{color:#fff;background:var(--orange);}
+.t5-tab.active{color:#fff;background:var(--navy);}
 .t5-tab:hover:not(.active){background:var(--bg3);}
 
 /* ── TOP10 CARDS ── */
@@ -327,7 +324,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   padding:12px 14px;cursor:pointer;transition:background 0.15s;
 }
 .top10-card:hover{background:var(--bg3);}
-.top10-rank{font-family:var(--fn);font-size:16px;font-weight:800;color:var(--orange);min-width:22px;text-align:center;}
+.top10-rank{font-family:var(--fn);font-size:16px;font-weight:800;color:var(--navy);min-width:22px;text-align:center;}
 .top10-info{flex:1;min-width:0;}
 .top10-name{font-size:13px;font-weight:700;color:var(--text1);}
 .top10-meta{font-size:10px;color:var(--text3);margin-top:2px;}
@@ -336,7 +333,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .top10-score.hi{color:var(--dn);} .top10-score.mid{color:var(--amber);}
 .top10-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;margin-top:2px;}
 .top10-badge.div{background:rgba(78,170,135,0.12);color:var(--dn);}
-.top10-badge.mom{background:rgba(74,158,255,0.12);color:var(--dn);}
+.top10-badge.mom{background:rgba(0,82,204,0.1);color:var(--navy);}
 
 /* ── SECTOR GRID ── */
 .sec-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;}
@@ -345,7 +342,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
   padding:12px 8px;text-align:center;cursor:pointer;transition:all 0.15s;
 }
-.sec-tile:hover{border-color:var(--orange);background:var(--bg3);}
+.sec-tile:hover{border-color:var(--navy);background:var(--bg3);}
 .sec-tile-ico{font-size:22px;margin-bottom:4px;}
 .sec-tile-name{font-family:var(--fh);font-size:11px;font-weight:700;color:var(--text2);}
 .sec-tile-sub{font-family:var(--fn);font-size:10px;color:var(--text3);margin-top:2px;}
@@ -371,14 +368,14 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .pf-day{font-size:11px;color:var(--text3);}
 .pf-bars{display:flex;gap:4px;margin-bottom:10px;}
 .pf-bar{flex:1;text-align:center;font-size:10px;padding:4px 0;border-radius:4px;}
-.pf-bar.cash{background:rgba(74,158,255,0.12);color:var(--dn);}
+.pf-bar.cash{background:rgba(0,82,204,0.08);color:var(--navy);}
 .pf-bar.stock{background:rgba(78,170,135,0.08);color:var(--dn);}
 .pf-holdings{display:flex;flex-direction:column;gap:5px;margin-bottom:10px;}
 .pf-hold{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);}
 .pf-hold-name{flex:1;font-size:12px;font-weight:600;color:var(--text2);}
 .pf-hold-pnl{font-family:var(--fn);font-size:13px;font-weight:700;min-width:50px;text-align:right;}
 .pf-hold-pnl.up{color:var(--dn);} .pf-hold-pnl.dn{color:var(--up);}
-.pf-note-link{display:block;text-align:center;padding:12px;background:var(--orange);color:#fff;border-radius:var(--r);font-size:13px;font-weight:700;text-decoration:none;margin-top:10px;transition:opacity 0.15s;}
+.pf-note-link{display:block;text-align:center;padding:12px;background:var(--navy);color:#fff;border-radius:var(--r);font-size:13px;font-weight:700;text-decoration:none;margin-top:10px;transition:opacity 0.15s;}
 .pf-note-link:hover{opacity:0.85;}
 
 /* ── WATCHLIST / HISTORY ── */
@@ -419,7 +416,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   font-family:var(--fh);font-size:11px;font-weight:600;color:var(--text);
   cursor:pointer;background:var(--bg3);
 }
-.setting-opt.active{background:var(--orange);color:#fff;border-color:var(--orange);}
+.setting-opt.active{background:var(--navy);color:#fff;border-color:var(--navy);}
 .settings-save{
   width:100%;padding:12px;margin-top:8px;
   background:var(--orange);color:#fff;border:none;border-radius:var(--r);
@@ -438,7 +435,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   border-right:1px solid var(--border);position:relative;
 }
 .nav-tab:last-child{border-right:none;}
-.nav-tab.active{background:var(--orange);color:#fff;}
+.nav-tab.active{color:var(--navy);background:var(--navy);color:#fff;}
 
 /* ── BOTTOM NAV (mobile) ── */
 .bottom-nav{
@@ -451,7 +448,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;
   background:none;border:none;cursor:pointer;color:var(--text3);padding:4px;
 }
-.nav-item.active{color:var(--orange);}
+.nav-item.active{color:var(--navy);}
 .nav-ico{font-size:18px;}
 .nav-label{font-size:9px;font-family:var(--fh);font-weight:700;}
 
@@ -460,15 +457,15 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .panel.active{display:block;}
 
 /* ── SKELETON ── */
-.skeleton{background:var(--border);border-radius:4px;animation:shimmer 1.5s infinite linear;background:linear-gradient(90deg,var(--border) 25%,#2a3352 50%,var(--border) 75%);background-size:200% 100%;}
+.skeleton{background:var(--border);border-radius:4px;animation:shimmer 1.5s infinite linear;background:linear-gradient(90deg,var(--border) 25%,#e8edf2 50%,var(--border) 75%);background-size:200% 100%;}
 @keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
 .skel-row{height:40px;margin-bottom:4px;border-radius:4px;}
 
 /* ── MISC ── */
 .fadein{animation:fi 0.3s ease;}
 @keyframes fi{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
-.disclaimer{font-size:10px;color:#718096;text-align:center;padding:12px 0;line-height:1.8;}
-.sec-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:14px;box-shadow:var(--shadow);}
+.disclaimer{font-size:10px;color:var(--text3);text-align:center;padding:12px 0;line-height:1.8;}
+.sec-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:14px;}
 .empty-msg{text-align:center;padding:20px;font-size:12px;color:var(--text3);}
 
 /* ── LOGIC MODAL ── */
@@ -483,27 +480,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .logic-tbl td{padding:7px 10px;border-bottom:1px solid var(--border);color:var(--text);}
 .logic-tbl .pts{text-align:right;font-family:var(--fn);font-weight:700;}
 .logic-note{background:var(--bg3);border-radius:var(--r2);padding:12px;font-size:11px;color:var(--text);line-height:1.9;margin-bottom:14px;}
-.btn-logic-close{width:100%;padding:10px;background:var(--orange);color:#fff;border:none;border-radius:var(--r);font-family:var(--fh);font-size:13px;font-weight:700;cursor:pointer;}
-
-/* ── BRAIN SCANNER ── */
-.brain-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
-@media(max-width:640px){.brain-grid{grid-template-columns:1fr;}}
-.brain-col-title{font-family:var(--fn);font-size:10px;font-weight:700;letter-spacing:1px;padding:4px 0 6px;border-bottom:1px solid var(--border);margin-bottom:6px;}
-.brain-col-title.macro{color:var(--dn);}
-.brain-col-title.inst{color:var(--amber);}
-.brain-col-title.retail{color:var(--green);}
-.brain-item{display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:11px;border-bottom:1px solid rgba(42,51,82,0.5);}
-.brain-item:last-child{border-bottom:none;}
-.brain-topic{color:var(--text);max-width:70%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.brain-score{font-family:var(--fn);font-size:11px;font-weight:700;min-width:36px;text-align:right;}
-.brain-score.pos{color:var(--green);}.brain-score.neg{color:var(--up);}.brain-score.neu{color:var(--text3);}
-.brain-overall{display:flex;align-items:center;gap:10px;padding:8px 10px;margin-bottom:8px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--r2);}
-.brain-overall-label{font-size:10px;color:var(--text3);}
-.brain-overall-val{font-family:var(--fn);font-size:18px;font-weight:700;}
-.brain-overall-val.pos{color:var(--green);}.brain-overall-val.neg{color:var(--up);}.brain-overall-val.neu{color:var(--amber);}
-.brain-overall-bar{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden;}
-.brain-overall-fill{height:100%;border-radius:2px;transition:width 0.5s;}
-.brain-summary{margin-top:8px;padding:8px 10px;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:var(--r2);font-size:11px;color:var(--text);line-height:1.6;}
+.btn-logic-close{width:100%;padding:10px;background:var(--navy);color:#fff;border:none;border-radius:var(--r);font-family:var(--fh);font-size:13px;font-weight:700;cursor:pointer;}
 
 @media(max-width:600px){
   .stock-table th:nth-child(n+7),.stock-table td:nth-child(n+7){display:none;}
@@ -536,23 +513,44 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   <!-- ══ HOME PANEL ══ -->
   <div class="panel active" id="panel-home">
 
-    <!-- ① MARKET PULSE -->
-    <div class="pulse" style="box-shadow:var(--shadow)"><div class="pulse-row" id="pulseBar"></div></div>
-
-    <!-- ② STANCE -->
-    <div id="stanceBox"></div>
-
-    <!-- ③ BRAIN SCANNER -->
-    <div class="sec-wrap" id="brainSection" style="display:none">
-      <div class="sec-head">
-        <div class="sec-head-title">📡 BRAIN SCANNER</div>
-        <div class="sec-head-sub">YouTube 7ch AI解析</div>
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-eyebrow" id="heroEyebrow">
+        <span class="hero-dot"></span>押し目 × 高配当 — 毎朝8:30自動更新
       </div>
-      <div id="brainBody"><div style="padding:12px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div></div>
+      <div class="hero-top">
+        <div class="hero-left">
+          <div class="hero-title">今日の<span>押し目候補</span>を即表示</div>
+        </div>
+      </div>
+      <div class="hero-stats" id="heroStats">
+        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏の銘柄数</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
+      </div>
     </div>
 
-    <!-- ④ 3 TABS -->
-    <div class="t5-tabs" style="box-shadow:var(--shadow)">
+    <!-- TRUST BAR -->
+    <div class="trust-bar" id="trustBanner">
+      <div class="trust-left">
+        <div class="trust-dot" id="trustDot"></div>
+        <div class="trust-text" id="trustText">データ確認中...</div>
+      </div>
+      <div class="trust-badges">
+        <span class="tbadge" id="totalCountBadge">東証プライム</span>
+        <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
+      </div>
+    </div>
+
+    <!-- MARKET PULSE -->
+    <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
+
+    <!-- STANCE -->
+    <div id="stanceBox"></div>
+
+    <!-- 3 TABS -->
+    <div class="t5-tabs">
       <div class="t5-tab active" id="t5TabSec" onclick="setTop5Tab('sector')">📊 セクター</div>
       <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">📈 上昇</div>
       <div class="t5-tab" id="t5TabDip" onclick="setTop5Tab('dip')">📉 割安</div>
@@ -567,10 +565,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
       </div>
     </div>
 
-    <!-- ⑤ 投資日記（差別化スタイル） -->
-    <div class="sec-wrap" id="portfolioSection" style="border-left:4px solid var(--orange);background:linear-gradient(135deg,#151b26,#1a1f2e);">
+    <!-- 📊 投資日記 -->
+    <div class="sec-wrap" id="portfolioSection">
       <div class="sec-head">
-        <div class="sec-head-title">🐻 かぶのすけの投資日記</div>
+        <div class="sec-head-title">📊 かぶのすけの投資日記</div>
         <div class="sec-head-sub">AI × 1000万円 ／ 2026.2.24スタート</div>
       </div>
       <div id="portfolioBody">
@@ -578,33 +576,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
       </div>
     </div>
 
-    <!-- ⑥ HERO STATS (小さく下に) -->
-    <div class="hero">
-      <div class="hero-eyebrow" id="heroEyebrow">
-        <span class="hero-dot"></span>押し目 × 高配当 — 毎朝8:30自動更新
-      </div>
-      <div class="hero-stats" id="heroStats">
-        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">1位スコア</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン数</div></div>
-      </div>
-    </div>
-
-    <!-- ⑦ TRUST BAR (小さく下に) -->
-    <div class="trust-bar" id="trustBanner">
-      <div class="trust-left">
-        <div class="trust-dot" id="trustDot"></div>
-        <div class="trust-text" id="trustText">データ確認中...</div>
-      </div>
-      <div class="trust-badges">
-        <span class="tbadge" id="totalCountBadge">東証プライム</span>
-        <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
-      </div>
-    </div>
-
     <!-- DISCLAIMER -->
-    <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。投資判断はご自身の責任で。元本割れリスクがあります。</div>
+    <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
 
   </div><!-- /panel-home -->
 
@@ -1154,133 +1127,22 @@ function showSectorStocks(secName){
   body.innerHTML=backBtn+`<div class="top10-cards fadein">${stocks.map((s,i)=>renderCard(s,i+1)).join('')}</div>`;
 }
 
-function toggleDetail(code,evt){
-  if(evt)evt.stopPropagation();
-  const el=document.getElementById('detail-'+code);
-  if(!el)return;
-  const row=el.previousElementSibling;
-  if(el.style.display==='none'||!el.style.display){
-    // close others
-    document.querySelectorAll('.card-detail').forEach(d=>{d.style.display='none';d.previousElementSibling?.classList.remove('expanded');});
-    el.style.display='block';
-    row?.classList.add('expanded');
-    expandedCode=code;
-    gaEvent('stock_expand',{code});
-  }else{
-    el.style.display='none';
-    row?.classList.remove('expanded');
-    expandedCode=null;
-  }
-}
-
-function miniSvgChart(s){
-  // 簡易トレンド表示（d25とma75dからトレンド推定）
-  const d25=s.d25||0;
-  const d75=s.ma75d||0;
-  const isDown=d25<-2;
-  const color=isDown?'var(--up)':'var(--green)';
-  // SVGで簡易スパークライン
-  const pts=[];
-  const base=50;
-  // 過去5ポイントをシミュレーション（d75→d25→現在の流れ）
-  const p0=base-(d75||d25)*2;
-  const p1=base-(d75||d25)*1.5;
-  const p2=base-((d75||0)+(d25||0))/2*1.2;
-  const p3=base-d25*1;
-  const p4=base-d25*0.5;
-  [p0,p1,p2,p3,p4].forEach((y,i)=>{
-    pts.push(`${i*25},${Math.max(5,Math.min(55,y))}`);
-  });
-  return `<svg width="100" height="36" viewBox="0 0 100 60" style="display:block">
-    <polyline points="${pts.join(' ')}" fill="none" stroke="${color}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="100" cy="${Math.max(5,Math.min(55,base-d25*0.5))}" r="3" fill="${color}"/>
-  </svg>`;
-}
-
 function renderCard(s,rank){
-  const sc=s.score>=60?'hi':s.score>=40?'mid':'lo';
+  const sc=s.score>=60?'hi':'mid';
   const divBadge=(s.dividend||0)>=2.5?`<span class="top10-badge div">💰${s.dividend}%</span>`:'';
   const momBadge=s._type==='momentum'?`<span class="top10-badge mom">↗上昇</span>`:'';
   const mc=s.market_cap_b?(s.market_cap_b>=10000?(s.market_cap_b/10000).toFixed(1)+'兆':Math.round(s.market_cap_b)+'億'):'';
   const d75=s.ma75d!=null?`75日線${s.ma75d>0?'+':''}${s.ma75d.toFixed(1)}%`:'';
-  const d25=s.d25||0;
-  const trendColor=d25<-2?'var(--up)':d25>2?'var(--green)':'var(--text3)';
-  const trendArrow=d25<-2?'▼':d25>2?'▲':'—';
-  
-  // ── スコア内訳を計算 ──
-  const divPt=Math.min(30,(s.dividend||0)>=5?30:(s.dividend||0)>=4?25:(s.dividend||0)>=3?15:(s.dividend||0)>=2?8:0);
-  const maPt=Math.min(28,d25<=-8?28:d25<=-5?20:d25<=-3?12:d25<=-1?5:0);
-  const rsiPt=Math.min(22,(s.rsi||50)<=28?22:(s.rsi||50)<=35?16:(s.rsi||50)<=42?8:0);
-  const pbrPt=Math.min(18,(s.pbr||99)<=0.7?18:(s.pbr||99)<=1.0?12:(s.pbr||99)<=1.5?6:0);
-  const perPt=Math.min(12,(s.per||99)<=9?12:(s.per||99)<=13?8:(s.per||99)<=16?4:0);
-  
-  // ── 買い理由生成 ──
-  const reasons=[];
-  if((s.dividend||0)>=4) reasons.push({str:'strong',text:`配当${s.dividend}%は高水準`,val:`${s.dividend}%`,label:'配当利回り'});
-  else if((s.dividend||0)>=3) reasons.push({str:'mid',text:`配当${s.dividend}%`,val:`${s.dividend}%`,label:'配当利回り'});
-  if(d25<=-5) reasons.push({str:'strong',text:`25MA乖離${d25.toFixed(1)}%で強い押し目水準`,val:`${d25.toFixed(1)}%`,label:'25MA乖離'});
-  else if(d25<=-2) reasons.push({str:'mid',text:`25MA乖離${d25.toFixed(1)}%で押し目`,val:`${d25.toFixed(1)}%`,label:'25MA乖離'});
-  if((s.rsi||50)<=30) reasons.push({str:'strong',text:`RSI${(s.rsi||0).toFixed(0)}で売られすぎ圏`,val:`${(s.rsi||0).toFixed(0)}`,label:'RSI'});
-  else if((s.rsi||50)<=42) reasons.push({str:'mid',text:`RSI${(s.rsi||0).toFixed(0)}で弱め`,val:`${(s.rsi||0).toFixed(0)}`,label:'RSI'});
-  if((s.pbr||99)<=0.8) reasons.push({str:'strong',text:`PBR${s.pbr}倍は割安`,val:`${s.pbr}倍`,label:'PBR'});
-  else if((s.pbr||99)<=1.2) reasons.push({str:'mid',text:`PBR${s.pbr}倍`,val:`${s.pbr}倍`,label:'PBR'});
-
-  const zone=s.zone||{cls:'hold',label:'様子見'};
-  const zoneCls=zone.cls||'hold';
-  
-  const detailHtml=`
-    <div class="detail-grid">
-      <div>
-        <div class="detail-section-title">📊 トレンド & スコア内訳</div>
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:10px">
-          ${miniSvgChart(s)}
-          <div>
-            <div style="font-family:var(--fn);font-size:13px;color:${trendColor}">${trendArrow} 25MA ${d25>0?'+':''}${d25.toFixed(1)}%</div>
-            ${s.ma75d!=null?`<div style="font-size:10px;color:var(--text3)">75MA ${s.ma75d>0?'+':''}${s.ma75d.toFixed(1)}%</div>`:''}
-            <div style="font-size:10px;color:var(--text3)">RSI ${(s.rsi||0).toFixed(0)}</div>
-          </div>
-        </div>
-        <div class="score-breakdown">
-          <div class="bd-row"><div class="bd-l">配当</div><div class="bd-bar"><div class="bd-fill" style="width:${divPt/30*100}%;background:var(--orange)"></div></div><div class="bd-v ${divPt>=15?'pos':''}">${divPt}/30</div></div>
-          <div class="bd-row"><div class="bd-l">MA乖離</div><div class="bd-bar"><div class="bd-fill" style="width:${maPt/28*100}%;background:var(--up)"></div></div><div class="bd-v ${maPt>=12?'pos':''}">${maPt}/28</div></div>
-          <div class="bd-row"><div class="bd-l">RSI</div><div class="bd-bar"><div class="bd-fill" style="width:${rsiPt/22*100}%;background:var(--dn)"></div></div><div class="bd-v ${rsiPt>=8?'pos':''}">${rsiPt}/22</div></div>
-          <div class="bd-row"><div class="bd-l">PBR</div><div class="bd-bar"><div class="bd-fill" style="width:${pbrPt/18*100}%;background:var(--green)"></div></div><div class="bd-v ${pbrPt>=6?'pos':''}">${pbrPt}/18</div></div>
-          <div class="bd-row"><div class="bd-l">PER</div><div class="bd-bar"><div class="bd-fill" style="width:${perPt/12*100}%;background:var(--amber)"></div></div><div class="bd-v ${perPt>=4?'pos':''}">${perPt}/12</div></div>
-        </div>
-      </div>
-      <div>
-        <div class="detail-section-title">💡 注目ポイント</div>
-        <div class="why-items">
-          ${reasons.length?reasons.map(r=>`
-            <div class="why-item ${r.str}">
-              <div class="why-val">${r.val}</div>
-              <div class="why-label">${r.label}</div>
-              <div class="why-note-text">${r.text}</div>
-            </div>`).join(''):`<div style="font-size:11px;color:var(--text3);padding:8px">特筆すべきシグナルなし</div>`}
-        </div>
-        <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
-          <button class="detail-fav-btn ${watchlist.includes(s.code)?'active':''}" onclick="event.stopPropagation();toggleFav('${s.code}')">${watchlist.includes(s.code)?'★ ウォッチ中':'☆ ウォッチ追加'}</button>
-          <a class="detail-link-btn" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation()">Yahoo!ファイナンス →</a>
-        </div>
-      </div>
-    </div>`;
-
-  return`<div class="top10-card${expandedCode===s.code?' expanded':''}" onclick="toggleDetail('${s.code}',event)">
+  return`<div class="top10-card" onclick="window.open('https://finance.yahoo.co.jp/quote/${s.code}.T','_blank')">
     <div class="top10-rank">${rank}</div>
     <div class="top10-info">
-      <div class="top10-name">${s.name} <span class="tbl-zone ${zoneCls}" style="font-size:9px;padding:1px 5px;margin-left:4px">${zone.label||zoneCls}</span></div>
+      <div class="top10-name">${s.name}</div>
       <div class="top10-meta">${s.code} ・ ${s.sector||''} ・ ${mc}${d75?' ・ '+d75:''}</div>
     </div>
-    <div class="top10-right" style="display:flex;align-items:center;gap:8px">
-      <div style="color:${trendColor};font-size:14px">${trendArrow}</div>
-      <div>
-        <div class="top10-score ${sc}">${s.score}pt</div>
-        ${divBadge}${momBadge}
-      </div>
+    <div class="top10-right">
+      <div class="top10-score ${sc}">${s.score}pt</div>
+      ${divBadge}${momBadge}
     </div>
-  </div>
-  <div class="card-detail" id="detail-${s.code}" style="display:${expandedCode===s.code?'block':'none'};background:var(--bg3);border:1px solid var(--border);border-top:none;border-radius:0 0 var(--r) var(--r);padding:14px 16px;margin-top:-8px;margin-bottom:8px;box-shadow:var(--shadow)">
-    ${detailHtml}
   </div>`;
 }
 
@@ -1548,117 +1410,15 @@ function run(){
   gaEvent('scan_executed',{mode:currentMode,data_source:dataSource});
 }
 
-// ═══════════════════════════════════════
-// BRAIN SCANNER
-// ═══════════════════════════════════════
-async function loadBrainScanner(){
-  try{
-    const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/sentiment_latest.json');
-    if(!res.ok) throw new Error('not found');
-    const data=await res.json();
-    document.getElementById('brainSection').style.display='';
-    
-    const overall=data.overall_sentiment||0;
-    const cls=overall>0.15?'pos':overall<-0.15?'neg':'neu';
-    const pct=Math.round((overall+1)/2*100);
-    const barColor=cls==='pos'?'var(--green)':cls==='neg'?'var(--up)':'var(--amber)';
-    
-    const cats={macro:[],institutional:[],retail:[]};
-    (data.topics||[]).forEach(t=>{
-      const cat=t.category||'retail';
-      if(cats[cat])cats[cat].push(t);
-    });
-    
-    const renderItems=(items)=>items.slice(0,5).map(t=>{
-      const s=t.sentiment||0;
-      const sc=s>0.15?'pos':s<-0.15?'neg':'neu';
-      const val=s>0?'+'+s.toFixed(2):s.toFixed(2);
-      return `<div class="brain-item"><span class="brain-topic">${t.topic||''}</span><span class="brain-score ${sc}">${val}</span></div>`;
-    }).join('');
-    
-    let html=`
-      <div class="brain-overall">
-        <div class="brain-overall-label">総合<br>センチメント</div>
-        <div class="brain-overall-val ${cls}">${overall>0?'+':''}${overall.toFixed(2)}</div>
-        <div class="brain-overall-bar"><div class="brain-overall-fill" style="width:${pct}%;background:${barColor}"></div></div>
-      </div>
-      <div class="brain-grid">
-        <div><div class="brain-col-title macro">🌏 MACRO</div>${renderItems(cats.macro)}</div>
-        <div><div class="brain-col-title inst">🏦 INSTITUTIONAL</div>${renderItems(cats.institutional)}</div>
-        <div><div class="brain-col-title retail">👥 RETAIL</div>${renderItems(cats.retail)}</div>
-      </div>`;
-    
-    if(data.summary){
-      html+=`<div class="brain-summary">💬 ${data.summary}</div>`;
-    }
-    if(data.generated_at){
-      html+=`<div style="text-align:right;font-size:9px;color:var(--text3);margin-top:4px">更新: ${new Date(data.generated_at).toLocaleString('ja-JP')}</div>`;
-    }
-    
-    document.getElementById('brainBody').innerHTML=html;
-  }catch(e){
-    console.log('Brain Scanner data not available:',e);
-    document.getElementById('brainSection').style.display='none';
-  }
-}
-
 async function init(){
   updateWatchCount();
   await loadRealData();
   run();
   loadPortfolio();
-  loadBrainScanner();
   gaEvent('view_app',{data_source:dataSource});
 }
 
 init();
-
-// ═══════════════════════════════════════
-// ON-SCREEN DEBUG CONSOLE
-// ═══════════════════════════════════════
-(function(){
-  const div=document.createElement('div');
-  div.id='dbgConsole';
-  div.style.cssText='position:fixed;bottom:60px;left:0;right:0;max-height:40vh;overflow-y:auto;background:rgba(0,0,0,0.92);color:#0f0;font-family:monospace;font-size:11px;z-index:9999;padding:8px 10px;display:none;border-top:2px solid #ff6b00;';
-  document.body.appendChild(div);
-
-  const btn=document.createElement('button');
-  btn.textContent='🖥 Console';
-  btn.style.cssText='position:fixed;bottom:60px;right:8px;z-index:10000;background:#ff6b00;color:#fff;border:none;border-radius:6px;padding:5px 10px;font-size:10px;font-weight:700;cursor:pointer;opacity:0.8;';
-  btn.onclick=()=>{div.style.display=div.style.display==='none'?'block':'none';};
-  document.body.appendChild(btn);
-
-  const clearBtn=document.createElement('button');
-  clearBtn.textContent='✕ Clear';
-  clearBtn.style.cssText='position:sticky;top:0;float:right;background:#333;color:#fff;border:1px solid #555;border-radius:3px;padding:2px 8px;font-size:10px;cursor:pointer;margin-bottom:4px;';
-  clearBtn.onclick=()=>{div.innerHTML='';div.appendChild(clearBtn);};
-  div.appendChild(clearBtn);
-
-  function addLine(msg,color){
-    const t=new Date();
-    const ts=String(t.getHours()).padStart(2,'0')+':'+String(t.getMinutes()).padStart(2,'0')+':'+String(t.getSeconds()).padStart(2,'0');
-    const line=document.createElement('div');
-    line.style.cssText='border-bottom:1px solid #222;padding:2px 0;word-break:break-all;color:'+color;
-    line.textContent='['+ts+'] '+msg;
-    div.appendChild(line);
-    div.scrollTop=div.scrollHeight;
-  }
-
-  const origLog=console.log, origErr=console.error, origWarn=console.warn, origInfo=console.info;
-  console.log=function(){origLog.apply(console,arguments);addLine(Array.from(arguments).map(a=>typeof a==='object'?JSON.stringify(a):String(a)).join(' '),'#0f0');};
-  console.error=function(){origErr.apply(console,arguments);addLine('❌ '+Array.from(arguments).map(a=>typeof a==='object'?JSON.stringify(a):String(a)).join(' '),'#ff4757');};
-  console.warn=function(){origWarn.apply(console,arguments);addLine('⚠️ '+Array.from(arguments).map(a=>typeof a==='object'?JSON.stringify(a):String(a)).join(' '),'#f0a500');};
-  console.info=function(){origInfo.apply(console,arguments);addLine('ℹ️ '+Array.from(arguments).map(a=>typeof a==='object'?JSON.stringify(a):String(a)).join(' '),'#4a9eff');};
-
-  window.addEventListener('error',function(e){
-    addLine('❌ UNCAUGHT: '+e.message+' @ '+e.filename+':'+e.lineno,'#ff4757');
-  });
-  window.addEventListener('unhandledrejection',function(e){
-    addLine('❌ PROMISE: '+(e.reason?.message||e.reason||'unknown'),'#ff4757');
-  });
-
-  console.log('🖥 Debug console ready');
-})();
 </script>
 </body>
 </html>
