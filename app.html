@@ -1266,19 +1266,31 @@ function renderTop10(){
 function renderSectorTrend(){
   const body=document.getElementById('top5Body');
   const SEC_MAP={
-    'Technology':       {jp:'テクノロジー',ico:'💻'},
-    'Financial Services':{jp:'金融',ico:'🏦'},
-    'Communication Services':{jp:'通信',ico:'📡'},
-    'Consumer Cyclical': {jp:'消費（景気敏感）',ico:'🛒'},
-    'Industrials':       {jp:'産業・資本財',ico:'🏭'},
-    'Consumer Defensive':{jp:'消費（安定）',ico:'🍙'},
-    'Energy':            {jp:'エネルギー',ico:'⛽'},
-    'Basic Materials':   {jp:'素材',ico:'🧱'},
-    'Healthcare':        {jp:'ヘルスケア',ico:'💊'},
-    'Utilities':         {jp:'公益',ico:'💡'},
-    'Real Estate':       {jp:'不動産',ico:'🏠'},
+    '銀行':       {ico:'🏦'},
+    '通信':       {ico:'📡'},
+    '自動車':     {ico:'🚗'},
+    '電力':       {ico:'💡'},
+    '鉄鋼':       {ico:'⚙️'},
+    '化学':       {ico:'🧪'},
+    '商社':       {ico:'🌐'},
+    '建設':       {ico:'🏗'},
+    '不動産':     {ico:'🏠'},
+    '食品':       {ico:'🍙'},
+    '医薬品':     {ico:'💊'},
+    '保険':       {ico:'🛡'},
+    'IT':         {ico:'💻'},
+    '機械':       {ico:'🏭'},
+    '石油':       {ico:'⛽'},
+    '小売':       {ico:'🛒'},
+    'サービス':   {ico:'🎯'},
+    '海運':       {ico:'🚢'},
+    '証券':       {ico:'📈'},
+    '電機':       {ico:'⚡'},
+    '運輸':       {ico:'🚃'},
+    '精密':       {ico:'🔬'},
+    'リース':     {ico:'💳'},
+    'ゴム':       {ico:'🛞'},
   };
-
   // セクター集計：買い圏の銘柄数で並べる
   const secMap={};
   processed.forEach(s=>{
