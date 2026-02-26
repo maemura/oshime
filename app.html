@@ -461,6 +461,35 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 @keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
 .skel-row{height:40px;margin-bottom:4px;border-radius:4px;}
 
+/* ── CHART & DETAIL EXPAND ── */
+.t5-spark{width:100px;height:36px;flex-shrink:0;}
+.t5-expand{background:var(--bg3);padding:18px;border-top:1px solid var(--border);border-left:4px solid var(--orange);animation:fi .25s ease;}
+.d-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+@media(min-width:640px){.d-grid{grid-template-columns:1fr 1fr;}}
+.d-sec-ttl{font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px;display:flex;align-items:center;gap:5px;}
+.d-chart-box{background:var(--bg3);border-radius:8px;padding:10px 8px 6px;border:1px solid var(--border);overflow:hidden;}
+.d-chart-svg{width:100%;height:auto;display:block;overflow:hidden;aspect-ratio:400/160;}
+.d-ma{display:flex;flex-direction:column;gap:5px;margin-top:14px;padding:10px;background:var(--bg2);border-radius:8px;border:1px solid var(--border);}
+.d-ma-row{display:flex;align-items:center;gap:6px;font-size:11px;margin-top:4px;}
+.d-ma-lbl{min-width:90px;color:var(--text);font-weight:500;font-size:10px;}
+.d-ma-bar{flex:1;height:16px;background:var(--border);border-radius:3px;position:relative;overflow:hidden;}
+.d-ma-ctr{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--text3);opacity:0.3;}
+.d-ma-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.2);}
+.d-ma-val{min-width:48px;text-align:right;font-family:var(--fn);font-size:11px;font-weight:700;}
+.d-ma-val.up{color:var(--dn);}.d-ma-val.dn{color:var(--up);}
+.d-ma-tag{font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:3px;}
+.d-ma-tag.near{background:rgba(148,101,0,0.15);color:var(--amber);}
+.d-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px;}
+.d-card{text-align:center;padding:12px 6px;background:var(--bg2);border-radius:8px;border:1px solid var(--border);}
+.d-card b{font-family:var(--fn);font-size:16px;font-weight:800;display:block;color:var(--text2);}
+.d-card small{font-size:9px;color:var(--text3);}
+.d-signal{background:rgba(232,84,30,0.06);border-radius:8px;padding:12px;margin-top:10px;border:1px solid rgba(232,84,30,0.15);}
+.d-signal b{font-size:10px;font-weight:700;color:var(--orange);display:block;margin-bottom:4px;}
+.d-signal p{font-size:11px;color:var(--text);line-height:1.7;margin:0;}
+.d-btns{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
+.d-btn{padding:6px 14px;border-radius:8px;font-size:11px;font-weight:600;border:1px solid var(--border);background:var(--bg2);color:var(--text2);cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;text-decoration:none;}
+.d-btn:hover{border-color:var(--orange);color:var(--orange);}
+
 /* ── MISC ── */
 .fadein{animation:fi 0.3s ease;}
 @keyframes fi{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
@@ -737,6 +766,92 @@ try{
 }catch(e){}
 
 // ═══════════════════════════════════════
+// CHART FUNCTIONS
+// ═══════════════════════════════════════
+function calcMA(prices,period){
+  return prices.map((v,i)=>{
+    if(i<period-1)return null;
+    let s=0;for(let j=i-period+1;j<=i;j++)s+=prices[j];return s/period;
+  });
+}
+function toPath(vals,w,h,pad,mn,mx){
+  const pts=[];const rng=mx-mn||1;
+  vals.forEach((v,i)=>{
+    if(v===null)return;
+    const x=pad+(i/(vals.length-1))*(w-2*pad);
+    const y=pad+(1-(v-mn)/rng)*(h-2*pad);
+    pts.push(`${pts.length?'L':'M'}${x.toFixed(1)},${y.toFixed(1)}`);
+  });
+  return pts.join(' ');
+}
+function drawSpark(el,closes,w,h){
+  if(!closes||!closes.length||!el)return;
+  const pad=2;
+  const ma=calcMA(closes,20);
+  const all=closes.concat(ma.filter(v=>v!==null));
+  const mn=Math.min(...all),mx=Math.max(...all);
+  const pp=toPath(closes,w,h,pad,mn,mx);
+  const mp=toPath(ma,w,h,pad,mn,mx);
+  const lastX=pad+((closes.length-1)/(closes.length-1))*(w-2*pad);
+  const isUp=closes[closes.length-1]>=closes[0];
+  const col=isUp?'#059669':'#DC2626';
+  const id='sg_'+Math.random().toString(36).substr(2,6);
+  el.innerHTML=`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${col}" stop-opacity="0.15"/><stop offset="100%" stop-color="${col}" stop-opacity="0.01"/></linearGradient></defs>`+
+    `<path d="${pp} L${lastX},${h-pad} L${pad},${h-pad} Z" fill="url(#${id})"/>`+
+    `<path d="${mp}" fill="none" stroke="#059669" stroke-width="1" opacity="0.5"/>`+
+    `<path d="${pp}" fill="none" stroke="${col}" stroke-width="1.5"/>`;
+}
+function drawDetailChart(el,closes,ma25v,ma75v){
+  if(!closes||!closes.length||!el)return;
+  const W=400,H=160,P=6,PR=45;
+  const ma25calc=calcMA(closes,25);
+  const allVals=[...closes,...ma25calc.filter(v=>v!==null)];
+  if(ma75v&&ma75v>0)allVals.push(ma75v);
+  if(ma25v&&ma25v>0)allVals.push(ma25v);
+  let mn=Math.min(...allVals),mx=Math.max(...allVals);
+  const range=mx-mn||1;
+  mn-=range*0.06;mx+=range*0.06;
+  const rng=mx-mn||1;
+  function niceStep(r){
+    const raw=r/4;const mag=Math.pow(10,Math.floor(Math.log10(raw)));const norm=raw/mag;
+    if(norm<=1.5)return mag;if(norm<=3.5)return 2.5*mag;if(norm<=7.5)return 5*mag;return 10*mag;
+  }
+  const step=niceStep(rng);const gridStart=Math.ceil(mn/step)*step;
+  let gridLines='';
+  for(let v=gridStart;v<=mx;v+=step){
+    const y=P+(1-(v-mn)/rng)*(H-2*P);
+    if(y<P+2||y>H-P-10)continue;
+    gridLines+=`<line x1="${P}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#E2E8F0" stroke-width="0.8"/>`;
+    let label;
+    if(v>=10000)label=`¥${(v/1000).toFixed(v%1000===0?0:1)}k`;
+    else label=`¥${Math.round(v).toLocaleString()}`;
+    gridLines+=`<text x="${W-PR+4}" y="${y+3}" font-size="8" fill="#94A3B8" font-family="sans-serif">${label}</text>`;
+  }
+  const CW=W-PR;
+  const pp=toPath(closes,CW,H,P,mn,mx);
+  const lastX=P+((closes.length-1)/(closes.length-1))*(CW-2*P);
+  const lastY=P+(1-(closes[closes.length-1]-mn)/rng)*(H-2*P);
+  const id='dg_'+Math.random().toString(36).substr(2,6);
+  let ma75line='';
+  if(ma75v&&ma75v>0){
+    let y75=P+(1-(ma75v-mn)/rng)*(H-2*P);
+    y75=Math.max(P+2,Math.min(H-P-2,y75));
+    ma75line=`<line x1="${P}" y1="${y75}" x2="${CW-P}" y2="${y75}" stroke="#059669" stroke-width="1.2" opacity="0.5"/>`;
+  }
+  const ma25path=toPath(ma25calc,CW,H,P,mn,mx);
+  el.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  el.innerHTML=`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B6AC9" stop-opacity="0.10"/><stop offset="100%" stop-color="#1B6AC9" stop-opacity="0.01"/></linearGradient></defs>`+
+    gridLines+
+    `<path d="${pp} L${lastX},${H-P} L${P},${H-P} Z" fill="url(#${id})"/>`+
+    ma75line+
+    `<path d="${ma25path}" fill="none" stroke="#F59E0B" stroke-width="1.2" opacity="0.6"/>`+
+    `<path d="${pp}" fill="none" stroke="#1A1A1A" stroke-width="2.2"/>`+
+    `<circle cx="${lastX}" cy="${lastY}" r="4" fill="#DC2626" stroke="#fff" stroke-width="2"/>`+
+    `<text x="${P}" y="${H-1}" font-size="9" fill="#B0B8C4" font-family="sans-serif">60日前</text>`+
+    `<text x="${CW-P}" y="${H-1}" font-size="9" fill="#B0B8C4" text-anchor="end" font-family="sans-serif">今日</text>`;
+}
+
+// ═══════════════════════════════════════
 // CALC
 // ═══════════════════════════════════════
 function dv(p,m){return m?Math.round((p-m)/m*1000)/10:0;}
@@ -782,8 +897,6 @@ function calcScoreGrowth(s){
   if((s.vol_r||1)>=2.0) score-=15;
   return Math.max(0,Math.min(score,100));
 }
-
-function dv(p,m){return m?Math.round((p-m)/m*1000)/10:0;}
 
 
 function getZone(sc){
@@ -1125,25 +1238,123 @@ function showSectorStocks(secName){
     return;
   }
   body.innerHTML=backBtn+`<div class="top10-cards fadein">${stocks.map((s,i)=>renderCard(s,i+1)).join('')}</div>`;
+  // Draw sparklines
+  stocks.forEach(s=>{
+    if(s.closes_60d&&s.closes_60d.length>10){
+      const el=body.querySelector(`[data-spark="${s.code}"]`);
+      if(el)drawSpark(el,s.closes_60d,120,44);
+    }
+  });
+  if(expandedCode){
+    setTimeout(()=>{
+      const s=stocks.find(x=>x.code===expandedCode);
+      if(s&&s.closes_60d&&s.closes_60d.length>10){
+        const el=document.querySelector(`[data-dchart="${expandedCode}"]`);
+        if(el)drawDetailChart(el,s.closes_60d,s.ma25,s.ma75);
+      }
+    },50);
+  }
+}
+
+function toggleExpand(code){
+  expandedCode=expandedCode===code?null:code;
+  renderTop10();
+  if(expandedCode){
+    setTimeout(()=>{
+      const el=document.querySelector(`[data-dchart="${code}"]`);
+      if(el)el.scrollIntoView({behavior:'smooth',block:'nearest'});
+    },100);
+    gaEvent('detail_open',{code});
+  }
+}
+
+function buildExpand(s){
+  const hasSpark=s.closes_60d&&s.closes_60d.length>10;
+  const ma75pct=Math.max(5,Math.min(95,50+(s.ma75d||0)*3));
+  const ma25pct=Math.max(5,Math.min(95,50+(s.d25||0)*3));
+  const ma75col=(s.ma75d||0)>=0?'var(--dn)':'var(--up)';
+  const ma25col=(s.d25||0)>=0?'var(--dn)':'var(--up)';
+  let signal='';
+  if(s._type==='value_dip'){
+    signal=`<strong>💎 大型高配当株の逆張りチャンス。</strong>一時的な下落で割安に。配当${(s.dividend||0).toFixed(1)}%をもらいながら回復を待てる局面。`;
+  }else if(s._type==='dip'){
+    signal=`長期では上昇トレンド。短期的に調整中で<strong>買いやすい価格帯に接近中</strong>。`;
+  }else if(s._type==='momentum'){
+    signal=`短期・長期ともに上昇中。<strong>勢いに乗っている状態</strong>。高値掴みに注意しつつ、流れに乗るタイミング。`;
+  }else{
+    signal=`現在は方向感が読みにくい状況。無理せず様子見がおすすめ。`;
+  }
+  let ma75tag='';
+  if((s.ma75d||99)>=0&&(s.ma75d||99)<=3)ma75tag='<span class="d-ma-tag near">接近中!</span>';
+
+  return `<div class="t5-expand">
+  <div class="d-grid">
+    <div>
+      <div class="d-sec-ttl">📊 値動きチャート（60日）</div>
+      ${hasSpark?`<div class="d-chart-box">
+        <svg class="d-chart-svg" viewBox="0 0 400 160" overflow="hidden" data-dchart="${s.code}"></svg>
+      </div>
+      <div style="display:flex;gap:14px;padding:10px 0 2px;flex-wrap:wrap;font-size:11px;color:var(--text)">
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#1A1A1A"></div>株価 <b>¥${(s.price||0).toLocaleString()}</b></div>
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#F59E0B"></div>25日平均 <b style="color:#F59E0B">¥${(s.ma25||0).toLocaleString()}</b></div>
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#059669"></div>75日平均 <b style="color:#059669">¥${(s.ma75||0).toLocaleString()}</b></div>
+      </div>
+      `:`<div style="padding:12px;text-align:center;background:var(--bg2);border-radius:8px;border:1px solid var(--border);font-size:12px;color:var(--text)">株価 ¥${(s.price||0).toLocaleString()} / 25日平均 ¥${(s.ma25||0).toLocaleString()} / 75日平均 ¥${(s.ma75||0).toLocaleString()}</div>`}
+      <div class="d-ma">
+        <div style="font-size:10px;font-weight:700;color:var(--text2);margin-bottom:4px">📏 今の株価の位置</div>
+        <div class="d-ma-row">
+          <div class="d-ma-lbl">25日平均との差</div>
+          <div class="d-ma-bar"><div class="d-ma-ctr"></div><div class="d-ma-dot" style="left:${ma25pct}%;background:${ma25col}"></div></div>
+          <div class="d-ma-val ${(s.d25||0)>=0?'up':'dn'}">${(s.d25||0)>=0?'+':''}${(s.d25||0).toFixed(1)}%</div>
+        </div>
+        <div class="d-ma-row">
+          <div class="d-ma-lbl">75日平均との差</div>
+          <div class="d-ma-bar"><div class="d-ma-ctr"></div><div class="d-ma-dot" style="left:${ma75pct}%;background:${ma75col}"></div></div>
+          <div class="d-ma-val ${(s.ma75d||0)>=0?'up':'dn'}">${(s.ma75d||0)>=0?'+':''}${(s.ma75d||0).toFixed(1)}%</div>
+          ${ma75tag}
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="d-sec-ttl">📈 この銘柄のポイント</div>
+      <div style="padding:10px 14px;margin-bottom:10px;background:rgba(0,135,90,0.06);border-radius:8px;border:1px solid rgba(0,135,90,0.15);font-size:13px;color:var(--text)">
+        💰 購入に必要な金額 → <b style="font-size:16px;color:var(--green)">約${((s.price||0)*100)>=10000?Math.round((s.price||0)*100/10000)+'万':Math.round((s.price||0)*100/1000)+'千'}円</b><span style="font-size:10px;color:var(--text3)">（100株 × ¥${(s.price||0).toLocaleString()}）</span>
+      </div>
+      <div class="d-cards">
+        <div class="d-card"><b>${(s.dividend||0).toFixed(1)}%</b><small>配当利回り</small></div>
+        <div class="d-card"><b>${(s.pbr||0).toFixed(2)}倍</b><small>PBR(割安度)</small></div>
+        <div class="d-card"><b>${(s.per||0)>0?(s.per||0).toFixed(0)+'倍':'—'}</b><small>PER</small></div>
+      </div>
+      <div class="d-signal"><b>📝 かぶのすけの判定</b><p>${signal}</p></div>
+      <div class="d-btns">
+        <a class="d-btn" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation()">Yahoo!ファイナンス →</a>
+        <a class="d-btn" href="https://kabutan.jp/stock/?code=${s.code}" target="_blank" rel="noopener" onclick="event.stopPropagation()">株探で詳しく →</a>
+      </div>
+    </div>
+  </div></div>`;
 }
 
 function renderCard(s,rank){
-  const sc=s.score>=60?'hi':'mid';
+  const sc=s.score>=60?'hi':s.score>=40?'mid':'lo';
   const divBadge=(s.dividend||0)>=2.5?`<span class="top10-badge div">💰${s.dividend}%</span>`:'';
   const momBadge=s._type==='momentum'?`<span class="top10-badge mom">↗上昇</span>`:'';
   const mc=s.market_cap_b?(s.market_cap_b>=10000?(s.market_cap_b/10000).toFixed(1)+'兆':Math.round(s.market_cap_b)+'億'):'';
   const d75=s.ma75d!=null?`75日線${s.ma75d>0?'+':''}${s.ma75d.toFixed(1)}%`:'';
-  return`<div class="top10-card" onclick="window.open('https://finance.yahoo.co.jp/quote/${s.code}.T','_blank')">
+  const hasSpark=s.closes_60d&&s.closes_60d.length>10;
+  const isOpen=expandedCode===s.code;
+  return`<div class="top10-card${isOpen?' expanded':''}" onclick="toggleExpand('${s.code}')" style="${isOpen?'border-color:var(--orange)':''}">
     <div class="top10-rank">${rank}</div>
     <div class="top10-info">
       <div class="top10-name">${s.name}</div>
       <div class="top10-meta">${s.code} ・ ${s.sector||''} ・ ${mc}${d75?' ・ '+d75:''}</div>
     </div>
+    ${hasSpark?`<svg class="t5-spark" viewBox="0 0 120 44" data-spark="${s.code}"></svg>`:''}
     <div class="top10-right">
       <div class="top10-score ${sc}">${s.score}pt</div>
       ${divBadge}${momBadge}
+      <div style="font-size:9px;color:var(--text3);margin-top:2px">${isOpen?'▲ 閉じる':'▼ 詳細'}</div>
     </div>
-  </div>`;
+  </div>${isOpen?buildExpand(s):''}`;
 }
 
 function renderTop10Items(items,title){
@@ -1153,6 +1364,23 @@ function renderTop10Items(items,title){
     return;
   }
   body.innerHTML=`<div class="top10-cards fadein">${items.map((s,i)=>renderCard(s,i+1)).join('')}</div>`;
+  // Draw sparklines
+  items.forEach(s=>{
+    if(s.closes_60d&&s.closes_60d.length>10){
+      const el=body.querySelector(`[data-spark="${s.code}"]`);
+      if(el)drawSpark(el,s.closes_60d,120,44);
+    }
+  });
+  // Draw detail chart if expanded
+  if(expandedCode){
+    setTimeout(()=>{
+      const s=items.find(x=>x.code===expandedCode);
+      if(s&&s.closes_60d&&s.closes_60d.length>10){
+        const el=document.querySelector(`[data-dchart="${expandedCode}"]`);
+        if(el)drawDetailChart(el,s.closes_60d,s.ma25,s.ma75);
+      }
+    },50);
+  }
 }
 
 // ═══════════════════════════════════════
