@@ -462,6 +462,26 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .skel-row{height:40px;margin-bottom:4px;border-radius:4px;}
 
 /* ── CHART & DETAIL EXPAND ── */
+.brain-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+@media(max-width:640px){.brain-grid{grid-template-columns:1fr;}}
+.brain-col-title{font-family:var(--fn);font-size:10px;font-weight:700;letter-spacing:1px;padding:4px 0 6px;border-bottom:1px solid var(--border);margin-bottom:6px;}
+.brain-col-title.macro{color:var(--dn);}
+.brain-col-title.inst{color:var(--amber);}
+.brain-col-title.retail{color:var(--green);}
+.brain-item{display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:11px;border-bottom:1px solid rgba(226,232,240,0.5);}
+.brain-item:last-child{border-bottom:none;}
+.brain-topic{color:var(--text);max-width:70%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.brain-score{font-family:var(--fn);font-size:11px;font-weight:700;min-width:36px;text-align:right;}
+.brain-score.pos{color:var(--green);}.brain-score.neg{color:var(--up);}.brain-score.neu{color:var(--text3);}
+.brain-overall{display:flex;align-items:center;gap:10px;padding:8px 10px;margin-bottom:8px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);}
+.brain-overall-label{font-size:10px;color:var(--text3);}
+.brain-overall-val{font-family:var(--fn);font-size:18px;font-weight:700;}
+.brain-overall-val.pos{color:var(--green);}.brain-overall-val.neg{color:var(--up);}.brain-overall-val.neu{color:var(--amber);}
+.brain-overall-bar{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden;}
+.brain-overall-fill{height:100%;border-radius:2px;transition:width 0.5s;}
+.brain-summary{margin-top:8px;padding:8px 10px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);font-size:11px;color:var(--text);line-height:1.6;}
+
+/* ── CHART & DETAIL EXPAND ── */
 .t5-spark{width:100px;height:36px;flex-shrink:0;}
 .t5-expand{background:var(--bg3);padding:18px;border-top:1px solid var(--border);border-left:4px solid var(--orange);animation:fi .25s ease;}
 .d-grid{display:grid;grid-template-columns:1fr;gap:14px;}
@@ -578,6 +598,15 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <!-- STANCE -->
     <div id="stanceBox"></div>
 
+    <!-- 📡 BRAIN SCANNER -->
+    <div class="sec-wrap" id="brainSection" style="display:none">
+      <div class="sec-head">
+        <div class="sec-head-title">📡 BRAIN SCANNER</div>
+        <div class="sec-head-sub">YouTube 7ch AI解析</div>
+      </div>
+      <div id="brainBody"><div style="padding:12px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div></div>
+    </div>
+
     <!-- 3 TABS -->
     <div class="t5-tabs">
       <div class="t5-tab active" id="t5TabSec" onclick="setTop5Tab('sector')">📊 セクター</div>
@@ -684,21 +713,20 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 <div class="logic-overlay" id="logicModal" onclick="closeLogicModal(event)">
   <div class="logic-box">
     <div class="modal-handle"></div>
-    <div class="logic-title">スコアロジック（100点満点）</div>
-    <div class="logic-sub">5指標を合計しモード別ボーナスを適用。高配当モードでは配当0.5%未満の銘柄は実質除外。</div>
-    <table class="logic-tbl">
-      <tr><th>指標</th><th>条件</th><th style="text-align:right">最大点</th></tr>
-      <tr><td>配当利回り</td><td>2.5%〜5%以上</td><td class="pts">30pt</td></tr>
-      <tr><td>25MA乖離</td><td>-2%〜-8%以下</td><td class="pts">28pt</td></tr>
-      <tr><td>RSI</td><td>42以下〜28以下</td><td class="pts">22pt</td></tr>
-      <tr><td>PBR</td><td>1.5倍以下〜0.7倍以下</td><td class="pts">18pt</td></tr>
-      <tr><td>PER</td><td>15倍以下〜9倍以下</td><td class="pts">12pt</td></tr>
-      <tr><td>⚠ペナルティ</td><td>出来高1.5倍超 / 配当なし投機株</td><td class="pts" style="color:var(--up)">-20〜-30pt</td></tr>
-    </table>
+    <div class="logic-title">📊 スコアリングの考え方</div>
+    <div class="logic-sub">複数の指標をAIが総合的に判定し、100点満点でスコアリングしています。</div>
     <div class="logic-note">
-      💰 高配当モード → 配当点×1.4倍<br>
-      🛡 バリューモード → PBR・PER点×1.6倍<br>
-      ⚡ 押し目モード → MA乖離・RSI点×1.5倍
+      <b>5つの評価軸</b><br>
+      💰 配当利回り — 高配当ほど加点<br>
+      📉 移動平均乖離 — 押し目が深いほど加点<br>
+      📊 RSI — 売られすぎ水準で加点<br>
+      🛡 PBR — 割安ほど加点<br>
+      📈 PER — 収益性に対して割安なら加点<br><br>
+      <b>3つのスキャンモード</b><br>
+      💰 安定高配当 → 配当重視<br>
+      🛡 割安バリュー → PBR・PER重視<br>
+      ⚡ 強押し目 → テクニカル重視<br><br>
+      <span style="font-size:10px;color:var(--text3)">※ 出来高急騰銘柄や超小型株にはペナルティを適用しています。</span>
     </div>
     <button class="btn-logic-close" onclick="closeLogicModal()">閉じる</button>
   </div>
@@ -1638,11 +1666,69 @@ function run(){
   gaEvent('scan_executed',{mode:currentMode,data_source:dataSource});
 }
 
+// ═══════════════════════════════════════
+// BRAIN SCANNER
+// ═══════════════════════════════════════
+async function loadBrainScanner(){
+  try{
+    const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/sentiment_latest.json?t='+Date.now());
+    if(!res.ok) throw new Error('not found');
+    const data=await res.json();
+    document.getElementById('brainSection').style.display='';
+    
+    const moodColor={bullish:'var(--green)',calm:'var(--amber)',bearish:'var(--up)',cautious:'var(--up)'};
+    const moodLabel={bullish:'強気',calm:'中立',bearish:'弱気',cautious:'警戒'};
+    const sizeMap={lg:'★★★',md:'★★',sm:'★'};
+    
+    // 全体のムード集計
+    const allItems=[...(data.macro||[]),...(data.institutional||[]),...(data.retail||[])];
+    let bull=0,bear=0;
+    allItems.forEach(t=>{
+      if(t.mood==='bullish')bull++;
+      else if(t.mood==='bearish'||t.mood==='cautious')bear++;
+    });
+    const total=allItems.length||1;
+    const overallPct=Math.round((bull/total)*100);
+    const cls=bull>bear?'pos':bear>bull?'neg':'neu';
+    const overallLabel=bull>bear?'やや強気':bear>bull?'やや弱気':'中立';
+    
+    const renderItems=(items)=>(items||[]).slice(0,6).map(t=>{
+      const col=moodColor[t.mood]||'var(--text3)';
+      const label=moodLabel[t.mood]||t.mood;
+      const stars=sizeMap[t.size]||'★';
+      return `<div class="brain-item"><span class="brain-topic">${stars} ${t.word}</span><span class="brain-score" style="color:${col}">${label}</span></div>`;
+    }).join('');
+    
+    let html=`
+      <div class="brain-overall">
+        <div class="brain-overall-label">総合<br>センチメント</div>
+        <div class="brain-overall-val ${cls}">${overallLabel}</div>
+        <div class="brain-overall-bar"><div class="brain-overall-fill" style="width:${overallPct}%;background:${cls==='pos'?'var(--green)':cls==='neg'?'var(--up)':'var(--amber)'}"></div></div>
+        <div style="font-size:9px;color:var(--text3)">強気${bull} / 弱気${bear} / 計${total}件</div>
+      </div>
+      <div class="brain-grid">
+        <div><div class="brain-col-title macro">🌏 MACRO</div>${renderItems(data.macro)}</div>
+        <div><div class="brain-col-title inst">🏦 INSTITUTIONAL</div>${renderItems(data.institutional)}</div>
+        <div><div class="brain-col-title retail">👥 RETAIL</div>${renderItems(data.retail)}</div>
+      </div>`;
+    
+    if(data.date){
+      html+=`<div style="text-align:right;font-size:9px;color:var(--text3);margin-top:4px">データ: ${data.date}</div>`;
+    }
+    
+    document.getElementById('brainBody').innerHTML=html;
+  }catch(e){
+    console.log('Brain Scanner data not available:',e);
+    document.getElementById('brainSection').style.display='none';
+  }
+}
+
 async function init(){
   updateWatchCount();
   await loadRealData();
   run();
   loadPortfolio();
+  loadBrainScanner();
   gaEvent('view_app',{data_source:dataSource});
 }
 
