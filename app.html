@@ -1676,41 +1676,44 @@ async function loadBrainScanner(){
     const data=await res.json();
     document.getElementById('brainSection').style.display='';
     
-    const overall=data.overall_sentiment||0;
-    const cls=overall>0.15?'pos':overall<-0.15?'neg':'neu';
-    const pct=Math.round((overall+1)/2*100);
-    const barColor=cls==='pos'?'var(--green)':cls==='neg'?'var(--up)':'var(--amber)';
+    const moodColor={bullish:'var(--green)',calm:'var(--amber)',bearish:'var(--up)',cautious:'var(--up)'};
+    const moodLabel={bullish:'強気',calm:'中立',bearish:'弱気',cautious:'警戒'};
+    const sizeMap={lg:'★★★',md:'★★',sm:'★'};
     
-    const cats={macro:[],institutional:[],retail:[]};
-    (data.topics||[]).forEach(t=>{
-      const cat=t.category||'retail';
-      if(cats[cat])cats[cat].push(t);
+    // 全体のムード集計
+    const allItems=[...(data.macro||[]),...(data.institutional||[]),...(data.retail||[])];
+    let bull=0,bear=0;
+    allItems.forEach(t=>{
+      if(t.mood==='bullish')bull++;
+      else if(t.mood==='bearish'||t.mood==='cautious')bear++;
     });
+    const total=allItems.length||1;
+    const overallPct=Math.round((bull/total)*100);
+    const cls=bull>bear?'pos':bear>bull?'neg':'neu';
+    const overallLabel=bull>bear?'やや強気':bear>bull?'やや弱気':'中立';
     
-    const renderItems=(items)=>items.slice(0,5).map(t=>{
-      const s=t.sentiment||0;
-      const sc=s>0.15?'pos':s<-0.15?'neg':'neu';
-      const val=s>0?'+'+s.toFixed(2):s.toFixed(2);
-      return `<div class="brain-item"><span class="brain-topic">${t.topic||''}</span><span class="brain-score ${sc}">${val}</span></div>`;
+    const renderItems=(items)=>(items||[]).slice(0,6).map(t=>{
+      const col=moodColor[t.mood]||'var(--text3)';
+      const label=moodLabel[t.mood]||t.mood;
+      const stars=sizeMap[t.size]||'★';
+      return `<div class="brain-item"><span class="brain-topic">${stars} ${t.word}</span><span class="brain-score" style="color:${col}">${label}</span></div>`;
     }).join('');
     
     let html=`
       <div class="brain-overall">
         <div class="brain-overall-label">総合<br>センチメント</div>
-        <div class="brain-overall-val ${cls}">${overall>0?'+':''}${overall.toFixed(2)}</div>
-        <div class="brain-overall-bar"><div class="brain-overall-fill" style="width:${pct}%;background:${barColor}"></div></div>
+        <div class="brain-overall-val ${cls}">${overallLabel}</div>
+        <div class="brain-overall-bar"><div class="brain-overall-fill" style="width:${overallPct}%;background:${cls==='pos'?'var(--green)':cls==='neg'?'var(--up)':'var(--amber)'}"></div></div>
+        <div style="font-size:9px;color:var(--text3)">強気${bull} / 弱気${bear} / 計${total}件</div>
       </div>
       <div class="brain-grid">
-        <div><div class="brain-col-title macro">🌏 MACRO</div>${renderItems(cats.macro)||'<div style="font-size:10px;color:var(--text3)">データなし</div>'}</div>
-        <div><div class="brain-col-title inst">🏦 INSTITUTIONAL</div>${renderItems(cats.institutional)||'<div style="font-size:10px;color:var(--text3)">データなし</div>'}</div>
-        <div><div class="brain-col-title retail">👥 RETAIL</div>${renderItems(cats.retail)||'<div style="font-size:10px;color:var(--text3)">データなし</div>'}</div>
+        <div><div class="brain-col-title macro">🌏 MACRO</div>${renderItems(data.macro)}</div>
+        <div><div class="brain-col-title inst">🏦 INSTITUTIONAL</div>${renderItems(data.institutional)}</div>
+        <div><div class="brain-col-title retail">👥 RETAIL</div>${renderItems(data.retail)}</div>
       </div>`;
     
-    if(data.summary){
-      html+=`<div class="brain-summary">💬 ${data.summary}</div>`;
-    }
-    if(data.generated_at){
-      html+=`<div style="text-align:right;font-size:9px;color:var(--text3);margin-top:4px">更新: ${new Date(data.generated_at).toLocaleString('ja-JP')}</div>`;
+    if(data.date){
+      html+=`<div style="text-align:right;font-size:9px;color:var(--text3);margin-top:4px">データ: ${data.date}</div>`;
     }
     
     document.getElementById('brainBody').innerHTML=html;
