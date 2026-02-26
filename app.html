@@ -462,24 +462,43 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .skel-row{height:40px;margin-bottom:4px;border-radius:4px;}
 
 /* ── CHART & DETAIL EXPAND ── */
-.brain-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;}
+/* ── BRAIN SCANNER ── */
+.brain-wrap{background:#0a0e17;border-radius:var(--r);padding:16px;margin-bottom:14px;border:1px solid #1a2744;box-shadow:0 0 20px rgba(0,255,136,0.05);}
+.brain-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;}
+.brain-title{font-family:var(--fn);font-size:13px;font-weight:700;color:#00ff88;letter-spacing:1px;text-shadow:0 0 8px rgba(0,255,136,0.3);}
+.brain-sub{font-size:9px;color:#4a6a8a;}
+.brain-ring-wrap{display:flex;align-items:center;gap:16px;margin-bottom:14px;padding:12px;background:#0d1320;border-radius:8px;border:1px solid #1a2744;}
+.brain-ring{position:relative;width:80px;height:80px;flex-shrink:0;}
+.brain-ring svg{transform:rotate(-90deg);}
+.brain-ring-label{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.brain-ring-val{font-family:var(--fn);font-size:14px;font-weight:800;}
+.brain-ring-val.pos{color:#00ff88;text-shadow:0 0 10px rgba(0,255,136,0.4);}
+.brain-ring-val.neg{color:#ff4757;text-shadow:0 0 10px rgba(255,71,87,0.4);}
+.brain-ring-val.neu{color:#ff9f43;text-shadow:0 0 10px rgba(255,159,67,0.4);}
+.brain-ring-sub{font-size:8px;color:#4a6a8a;margin-top:1px;}
+.brain-stats{display:flex;flex-direction:column;gap:4px;flex:1;}
+.brain-stat-row{display:flex;align-items:center;gap:6px;font-size:11px;}
+.brain-stat-dot{width:6px;height:6px;border-radius:50%;}
+.brain-stat-label{color:#8899aa;flex:1;}
+.brain-stat-val{font-family:var(--fn);font-weight:700;min-width:24px;text-align:right;}
+.brain-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;}
 @media(max-width:640px){.brain-grid{grid-template-columns:1fr;}}
-.brain-col-title{font-family:var(--fn);font-size:10px;font-weight:700;letter-spacing:1px;padding:4px 0 6px;border-bottom:1px solid var(--border);margin-bottom:6px;}
-.brain-col-title.macro{color:var(--dn);}
-.brain-col-title.inst{color:var(--amber);}
-.brain-col-title.retail{color:var(--green);}
-.brain-item{display:flex;justify-content:space-between;align-items:center;padding:4px 0;font-size:11px;border-bottom:1px solid rgba(226,232,240,0.5);}
-.brain-item:last-child{border-bottom:none;}
-.brain-topic{color:var(--text);max-width:70%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-.brain-score{font-family:var(--fn);font-size:11px;font-weight:700;min-width:36px;text-align:right;}
-.brain-score.pos{color:var(--green);}.brain-score.neg{color:var(--up);}.brain-score.neu{color:var(--text3);}
-.brain-overall{display:flex;align-items:center;gap:10px;padding:8px 10px;margin-bottom:8px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);}
-.brain-overall-label{font-size:10px;color:var(--text3);}
-.brain-overall-val{font-family:var(--fn);font-size:18px;font-weight:700;}
-.brain-overall-val.pos{color:var(--green);}.brain-overall-val.neg{color:var(--up);}.brain-overall-val.neu{color:var(--amber);}
-.brain-overall-bar{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden;}
-.brain-overall-fill{height:100%;border-radius:2px;transition:width 0.5s;}
-.brain-summary{margin-top:8px;padding:8px 10px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);font-size:11px;color:var(--text);line-height:1.6;}
+.brain-col{background:#0d1320;border-radius:8px;padding:10px;border:1px solid #1a2744;}
+.brain-col-title{font-family:var(--fn);font-size:9px;font-weight:700;letter-spacing:1.5px;padding-bottom:6px;margin-bottom:6px;border-bottom:1px solid #1a2744;}
+.brain-col-title.macro{color:#4a9eff;text-shadow:0 0 6px rgba(74,158,255,0.3);}
+.brain-col-title.inst{color:#ff9f43;text-shadow:0 0 6px rgba(255,159,67,0.3);}
+.brain-col-title.retail{color:#00ff88;text-shadow:0 0 6px rgba(0,255,136,0.3);}
+.brain-item{display:flex;justify-content:space-between;align-items:center;padding:3px 0;font-size:11px;}
+.brain-word{color:#c0d0e0;font-size:11px;}
+.brain-mood{font-family:var(--fn);font-size:9px;font-weight:700;padding:1px 6px;border-radius:3px;}
+.brain-mood.greed{background:rgba(0,255,136,0.12);color:#00ff88;}
+.brain-mood.hype{background:rgba(255,159,67,0.12);color:#ff9f43;}
+.brain-mood.fear{background:rgba(255,71,87,0.12);color:#ff4757;}
+.brain-mood.calm{background:rgba(74,158,255,0.12);color:#4a9eff;}
+.brain-mood.bullish{background:rgba(0,255,136,0.12);color:#00ff88;}
+.brain-mood.bearish{background:rgba(255,71,87,0.12);color:#ff4757;}
+.brain-mood.cautious{background:rgba(255,159,67,0.12);color:#ff9f43;}
+.brain-date{font-size:8px;color:#3a4a5a;text-align:right;margin-top:6px;}
 
 /* ── CHART & DETAIL EXPAND ── */
 .t5-spark{width:100px;height:36px;flex-shrink:0;}
@@ -599,12 +618,12 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <div id="stanceBox"></div>
 
     <!-- 📡 BRAIN SCANNER -->
-    <div class="sec-wrap" id="brainSection" style="display:none">
-      <div class="sec-head">
-        <div class="sec-head-title">📡 BRAIN SCANNER</div>
-        <div class="sec-head-sub">YouTube 7ch AI解析</div>
+    <div class="brain-wrap" id="brainSection" style="display:none">
+      <div class="brain-head">
+        <div class="brain-title">📡 BRAIN SCANNER</div>
+        <div class="brain-sub">YouTube 7ch AI解析</div>
       </div>
-      <div id="brainBody"><div style="padding:12px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div></div>
+      <div id="brainBody"></div>
     </div>
 
     <!-- 3 TABS -->
@@ -1676,49 +1695,63 @@ async function loadBrainScanner(){
     const data=await res.json();
     document.getElementById('brainSection').style.display='';
     
-    const moodColor={bullish:'var(--green)',calm:'var(--amber)',bearish:'var(--up)',cautious:'var(--up)'};
-    const moodLabel={bullish:'強気',calm:'中立',bearish:'弱気',cautious:'警戒'};
-    const sizeMap={lg:'★★★',md:'★★',sm:'★'};
-    
-    // 全体のムード集計
+    const moodMap={greed:'強気',hype:'過熱',fear:'警戒',calm:'中立',bullish:'強気',bearish:'弱気',cautious:'警戒'};
     const allItems=[...(data.macro||[]),...(data.institutional||[]),...(data.retail||[])];
-    let bull=0,bear=0;
+    let greedN=0,fearN=0,hypeN=0,calmN=0;
     allItems.forEach(t=>{
-      if(t.mood==='bullish')bull++;
-      else if(t.mood==='bearish'||t.mood==='cautious')bear++;
+      if(t.mood==='greed'||t.mood==='bullish')greedN++;
+      else if(t.mood==='fear'||t.mood==='bearish'||t.mood==='cautious')fearN++;
+      else if(t.mood==='hype')hypeN++;
+      else calmN++;
     });
     const total=allItems.length||1;
-    const overallPct=Math.round((bull/total)*100);
-    const cls=bull>bear?'pos':bear>bull?'neg':'neu';
-    const overallLabel=bull>bear?'やや強気':bear>bull?'やや弱気':'中立';
+    const bullPct=Math.round((greedN+hypeN)/total*100);
+    const cls=greedN+hypeN>fearN?'pos':fearN>greedN+hypeN?'neg':'neu';
+    const overallLabel=cls==='pos'?'BULLISH':cls==='neg'?'BEARISH':'NEUTRAL';
+    
+    // SVG Ring
+    const R=34,C=2*Math.PI*R;
+    const greedArc=(greedN/total)*C;
+    const hypeArc=(hypeN/total)*C;
+    const fearArc=(fearN/total)*C;
+    const calmArc=(calmN/total)*C;
+    const ringSvg=`<svg width="80" height="80" viewBox="0 0 80 80">
+      <circle cx="40" cy="40" r="${R}" fill="none" stroke="#1a2744" stroke-width="8"/>
+      <circle cx="40" cy="40" r="${R}" fill="none" stroke="#00ff88" stroke-width="8" stroke-dasharray="${greedArc} ${C}" stroke-dashoffset="0" style="filter:drop-shadow(0 0 4px rgba(0,255,136,0.4))"/>
+      <circle cx="40" cy="40" r="${R}" fill="none" stroke="#ff9f43" stroke-width="8" stroke-dasharray="${hypeArc} ${C}" stroke-dashoffset="${-greedArc}"/>
+      <circle cx="40" cy="40" r="${R}" fill="none" stroke="#ff4757" stroke-width="8" stroke-dasharray="${fearArc} ${C}" stroke-dashoffset="${-(greedArc+hypeArc)}"/>
+      <circle cx="40" cy="40" r="${R}" fill="none" stroke="#4a9eff" stroke-width="8" stroke-dasharray="${calmArc} ${C}" stroke-dashoffset="${-(greedArc+hypeArc+fearArc)}"/>
+    </svg>`;
     
     const renderItems=(items)=>(items||[]).slice(0,6).map(t=>{
-      const col=moodColor[t.mood]||'var(--text3)';
-      const label=moodLabel[t.mood]||t.mood;
-      const stars=sizeMap[t.size]||'★';
-      return `<div class="brain-item"><span class="brain-topic">${stars} ${t.word}</span><span class="brain-score" style="color:${col}">${label}</span></div>`;
+      const stars=t.size==='lg'?'◆':t.size==='md'?'◇':'·';
+      return `<div class="brain-item"><span class="brain-word">${stars} ${t.word}</span><span class="brain-mood ${t.mood}">${moodMap[t.mood]||t.mood}</span></div>`;
     }).join('');
     
-    let html=`
-      <div class="brain-overall">
-        <div class="brain-overall-label">総合<br>センチメント</div>
-        <div class="brain-overall-val ${cls}">${overallLabel}</div>
-        <div class="brain-overall-bar"><div class="brain-overall-fill" style="width:${overallPct}%;background:${cls==='pos'?'var(--green)':cls==='neg'?'var(--up)':'var(--amber)'}"></div></div>
-        <div style="font-size:9px;color:var(--text3)">強気${bull} / 弱気${bear} / 計${total}件</div>
+    document.getElementById('brainBody').innerHTML=`
+      <div class="brain-ring-wrap">
+        <div class="brain-ring">
+          ${ringSvg}
+          <div class="brain-ring-label">
+            <div class="brain-ring-val ${cls}">${bullPct}%</div>
+            <div class="brain-ring-sub">${overallLabel}</div>
+          </div>
+        </div>
+        <div class="brain-stats">
+          <div class="brain-stat-row"><div class="brain-stat-dot" style="background:#00ff88;box-shadow:0 0 4px #00ff88"></div><div class="brain-stat-label">GREED</div><div class="brain-stat-val" style="color:#00ff88">${greedN}</div></div>
+          <div class="brain-stat-row"><div class="brain-stat-dot" style="background:#ff9f43;box-shadow:0 0 4px #ff9f43"></div><div class="brain-stat-label">HYPE</div><div class="brain-stat-val" style="color:#ff9f43">${hypeN}</div></div>
+          <div class="brain-stat-row"><div class="brain-stat-dot" style="background:#ff4757;box-shadow:0 0 4px #ff4757"></div><div class="brain-stat-label">FEAR</div><div class="brain-stat-val" style="color:#ff4757">${fearN}</div></div>
+          <div class="brain-stat-row"><div class="brain-stat-dot" style="background:#4a9eff;box-shadow:0 0 4px #4a9eff"></div><div class="brain-stat-label">CALM</div><div class="brain-stat-val" style="color:#4a9eff">${calmN}</div></div>
+        </div>
       </div>
       <div class="brain-grid">
-        <div><div class="brain-col-title macro">🌏 MACRO</div>${renderItems(data.macro)}</div>
-        <div><div class="brain-col-title inst">🏦 INSTITUTIONAL</div>${renderItems(data.institutional)}</div>
-        <div><div class="brain-col-title retail">👥 RETAIL</div>${renderItems(data.retail)}</div>
-      </div>`;
-    
-    if(data.date){
-      html+=`<div style="text-align:right;font-size:9px;color:var(--text3);margin-top:4px">データ: ${data.date}</div>`;
-    }
-    
-    document.getElementById('brainBody').innerHTML=html;
+        <div class="brain-col"><div class="brain-col-title macro">🌏 MACRO</div>${renderItems(data.macro)}</div>
+        <div class="brain-col"><div class="brain-col-title inst">🏦 INST</div>${renderItems(data.institutional)}</div>
+        <div class="brain-col"><div class="brain-col-title retail">👥 RETAIL</div>${renderItems(data.retail)}</div>
+      </div>
+      ${data.date?`<div class="brain-date">DATA: ${data.date}</div>`:''}`;
   }catch(e){
-    console.log('Brain Scanner data not available:',e);
+    console.log('Brain Scanner:',e);
     document.getElementById('brainSection').style.display='none';
   }
 }
