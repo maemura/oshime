@@ -774,7 +774,7 @@
     },
     {
       "code": "9504",
-      "name": "CHUGOKU ELECTRIC POWER CO INC",
+      "name": "中国電力",
       "sector": "電力",
       "price": 1061.0,
       "ma25": 1020.8,
@@ -851,7 +851,7 @@
     },
     {
       "code": "9505",
-      "name": "HOKURIKU ELECTRIC POWER CO",
+      "name": "北陸電力",
       "sector": "電力",
       "price": 1077.5,
       "ma25": 1021.5,
@@ -928,7 +928,7 @@
     },
     {
       "code": "9506",
-      "name": "TOHOKU ELECTRIC POWER CO INC",
+      "name": "東北電力",
       "sector": "電力",
       "price": 1272.0,
       "ma25": 1191.1,
@@ -1005,7 +1005,7 @@
     },
     {
       "code": "9509",
-      "name": "HOKKAIDO ELECTRIC POWER CO INC",
+      "name": "北海道電力",
       "sector": "電力",
       "price": 1212.0,
       "ma25": 1115.7,
@@ -1390,7 +1390,7 @@
     },
     {
       "code": "9507",
-      "name": "SHIKOKU ELECTRIC POWER CO INC",
+      "name": "四国電力",
       "sector": "電力",
       "price": 1729.0,
       "ma25": 1645.1,
