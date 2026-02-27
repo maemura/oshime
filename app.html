@@ -2013,6 +2013,7 @@ function buildRanking(){
       ma25d:d25>=0?'+'+d25.toFixed(1)+'%':d25.toFixed(1)+'%',
       div:((s.dividend||0)).toFixed(1)+'%',
       score:s.score||0,
+      kokusaku:s.kokusaku||'',
       cmt:cmt
     };
   });
@@ -2024,9 +2025,10 @@ function buildRanking(){
     var sign=s.chg>0?'+':'';
     var nm=s.name.length>7?s.name.substring(0,7)+'…':s.name;
     var hasCmt=s.cmt?' has-comment':'';
+    var kokMini=s.kokusaku?'<span style="font-size:7px;margin-left:2px" title="国策:'+s.kokusaku+'">🏛️</span>':'';
     return'<div class="rank-row'+hasCmt+'" data-ridx="'+idx+'" onclick="showRankDetail('+idx+')">'+
       '<div class="rank-row-main">'+
-      '<div class="rank-name">'+nm+'</div>'+
+      '<div class="rank-name">'+nm+kokMini+'</div>'+
       '<div class="rank-chg '+rankChgClass(s.chg)+'">'+sign+s.chg.toFixed(1)+'%</div>'+
       '<div class="rank-cap">'+s.cap+'</div>'+
       '</div></div>';
@@ -2104,9 +2106,11 @@ function showRankDetail(idx){
       '<div class="detail-cmt-sources">'+autoSrc+'</div></div>';
   }
 
+  var kokBadge=s.kokusaku?'<span style="display:inline-block;background:linear-gradient(135deg,#d4af37,#f0d060);color:#1a1a2e;font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;margin-left:6px">🏛️ 国策:'+s.kokusaku+'</span>':'';
+
   panel.innerHTML=
     '<div class="detail-top">'+
-      '<div class="detail-info"><div class="detail-name">'+s.name+'</div>'+
+      '<div class="detail-info"><div class="detail-name">'+s.name+kokBadge+'</div>'+
       '<div class="detail-meta">'+s.code+' ・ '+s.sector+' ・ '+s.cap+'</div></div>'+
       '<div class="detail-chg-big '+chgCls+'">'+sign+s.chg.toFixed(1)+'%</div>'+
       '<button class="detail-close" onclick="showRankDetail('+idx+')">✕</button></div>'+
