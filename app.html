@@ -674,6 +674,22 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <!-- MARKET PULSE -->
     <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
 
+    <!-- 🤖 AIコメント + 騰落ランキング -->
+    <div class="mkt-card" id="mktCommentSection" style="display:none">
+      <div class="mkt-header">
+        <div class="mkt-avatar">🤖</div>
+        <div>
+          <div class="mkt-who">かぶのすけの今日の見立て</div>
+          <div class="mkt-when" id="mktCommentDate"></div>
+        </div>
+      </div>
+      <div class="mkt-body">
+        <div class="mkt-comment" id="mktCommentBody"></div>
+        <div class="mkt-tags" id="mktCommentTags"></div>
+        <div class="mkt-sources" id="mktCommentSources"></div>
+      </div>
+    </div>
+
     <!-- 📡 BRAIN SCANNER 3層同心円 -->
     <div class="brain-wrap" id="brainSection" style="display:none">
       <div class="brain-head">
@@ -706,22 +722,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
             <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff9f43"></div>過熱</div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- 🤖 AIコメント + 騰落ランキング -->
-    <div class="mkt-card" id="mktCommentSection" style="display:none">
-      <div class="mkt-header">
-        <div class="mkt-avatar">🤖</div>
-        <div>
-          <div class="mkt-who">かぶのすけの今日の見立て</div>
-          <div class="mkt-when" id="mktCommentDate"></div>
-        </div>
-      </div>
-      <div class="mkt-body">
-        <div class="mkt-comment" id="mktCommentBody"></div>
-        <div class="mkt-tags" id="mktCommentTags"></div>
-        <div class="mkt-sources" id="mktCommentSources"></div>
       </div>
     </div>
 
