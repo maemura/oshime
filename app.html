@@ -473,7 +473,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .brain-guide{position:absolute;border-radius:50%;left:50%;transform:translateX(-50%);}
 .brain-guide.outer{top:0;width:100%;height:100%;border:1px solid rgba(74,170,255,0.08);}
 .brain-guide.mid{top:17%;width:66%;height:66%;border:1px solid rgba(74,170,255,0.07);}
-.brain-guide.inner{top:33%;width:34%;height:34%;border:1px solid rgba(167,139,250,0.08);background:radial-gradient(circle,rgba(167,139,250,0.03) 0%,transparent 70%);}
+.brain-guide.inner{top:30%;width:38%;height:38%;border:1px solid rgba(167,139,250,0.08);background:radial-gradient(circle,rgba(167,139,250,0.03) 0%,transparent 70%);}
 /* 層ラベル */
 .brain-tag{position:absolute;font-family:var(--fn);font-size:7px;letter-spacing:2px;text-transform:uppercase;opacity:0.3;left:50%;transform:translateX(-50%);pointer-events:none;white-space:nowrap;}
 .brain-tag.t1{top:2%;color:#4af;}
@@ -484,7 +484,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .brain-ring.outer{top:0;width:100%;height:100%;}
 .brain-ring.mid{top:17%;width:66%;height:66%;}
 /* 内側ワードクラウド */
-.brain-core{position:absolute;top:34%;left:50%;transform:translateX(-50%);width:32%;height:32%;border-radius:50%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1px 3px;padding:12px 8px;overflow:hidden;}
+.brain-core{position:absolute;top:30%;left:50%;transform:translateX(-50%);width:38%;height:38%;border-radius:50%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px 4px;padding:14px 10px;overflow:hidden;}
 /* スキャンリング */
 .brain-scan{position:absolute;border-radius:50%;border:1.5px solid transparent;pointer-events:none;left:50%;transform:translateX(-50%);}
 .brain-scan.s1{top:0;width:100%;height:100%;border-top-color:rgba(74,170,255,0.15);animation:bspin 6s linear infinite;}
@@ -671,42 +671,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
   <!-- ══ HOME PANEL ══ -->
   <div class="panel active" id="panel-home">
 
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-eyebrow" id="heroEyebrow">
-        <span class="hero-dot"></span>押し目 × 高配当 — 毎朝8:30自動更新
-      </div>
-      <div class="hero-top">
-        <div class="hero-left">
-          <div class="hero-title">今日の<span>押し目候補</span>を即表示</div>
-        </div>
-      </div>
-      <div class="hero-stats" id="heroStats">
-        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏の銘柄数</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
-      </div>
-    </div>
-
-    <!-- TRUST BAR -->
-    <div class="trust-bar" id="trustBanner">
-      <div class="trust-left">
-        <div class="trust-dot" id="trustDot"></div>
-        <div class="trust-text" id="trustText">データ確認中...</div>
-      </div>
-      <div class="trust-badges">
-        <span class="tbadge" id="totalCountBadge">東証プライム</span>
-        <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
-      </div>
-    </div>
-
-    <!-- MARKET PULSE -->
-    <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
-
-    <!-- STANCE -->
-    <div id="stanceBox"></div>
-
     <!-- 📡 BRAIN SCANNER 3層同心円 -->
     <div class="brain-wrap" id="brainSection" style="display:none">
       <div class="brain-head">
@@ -742,6 +706,69 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
       </div>
     </div>
 
+    <!-- 🤖 AIコメント + 騰落ランキング -->
+    <div class="mkt-card" id="mktCommentSection" style="display:none">
+      <div class="mkt-header">
+        <div class="mkt-avatar">🤖</div>
+        <div>
+          <div class="mkt-who">かぶのすけの今日の見立て</div>
+          <div class="mkt-when" id="mktCommentDate"></div>
+        </div>
+      </div>
+      <div class="mkt-body">
+        <div class="mkt-comment" id="mktCommentBody"></div>
+        <div class="mkt-tags" id="mktCommentTags"></div>
+        <div class="mkt-sources" id="mktCommentSources"></div>
+      </div>
+    </div>
+
+    <div class="rank-card" id="rankSection" style="display:none">
+      <div class="rank-header">
+        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
+        <div class="rank-header-sub">前日比 ・ タップで詳細</div>
+      </div>
+      <div class="rank-grid" id="rankGrid"></div>
+      <div class="rank-footer" id="rankFooter"></div>
+    </div>
+
+    <div class="detail-panel" id="detailPanel"></div>
+
+    <!-- MARKET PULSE -->
+    <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-eyebrow" id="heroEyebrow">
+        <span class="hero-dot"></span>押し目 × 高配当 — 毎朝8:30自動更新
+      </div>
+      <div class="hero-top">
+        <div class="hero-left">
+          <div class="hero-title">今日の<span>押し目候補</span>を即表示</div>
+        </div>
+      </div>
+      <div class="hero-stats" id="heroStats">
+        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏の銘柄数</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
+      </div>
+    </div>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar" id="trustBanner">
+      <div class="trust-left">
+        <div class="trust-dot" id="trustDot"></div>
+        <div class="trust-text" id="trustText">データ確認中...</div>
+      </div>
+      <div class="trust-badges">
+        <span class="tbadge" id="totalCountBadge">東証プライム</span>
+        <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
+      </div>
+    </div>
+
+    <!-- STANCE -->
+    <div id="stanceBox"></div>
+
     <!-- 3 TABS -->
     <div class="t5-tabs">
       <div class="t5-tab active" id="t5TabSec" onclick="setTop5Tab('sector')">📊 セクター</div>
@@ -768,33 +795,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
         <div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div>
       </div>
     </div>
-
-    <!-- 🤖 AIコメント + 騰落ランキング -->
-    <div class="mkt-card" id="mktCommentSection" style="display:none">
-      <div class="mkt-header">
-        <div class="mkt-avatar">🤖</div>
-        <div>
-          <div class="mkt-who">かぶのすけの今日の見立て</div>
-          <div class="mkt-when" id="mktCommentDate"></div>
-        </div>
-      </div>
-      <div class="mkt-body">
-        <div class="mkt-comment" id="mktCommentBody"></div>
-        <div class="mkt-tags" id="mktCommentTags"></div>
-        <div class="mkt-sources" id="mktCommentSources"></div>
-      </div>
-    </div>
-
-    <div class="rank-card" id="rankSection" style="display:none">
-      <div class="rank-header">
-        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">主要株の騰落</span></div>
-        <div class="rank-header-sub">時価総額 TOP30 ・ 前日比 ・ タップで詳細</div>
-      </div>
-      <div class="rank-grid" id="rankGrid"></div>
-      <div class="rank-footer" id="rankFooter"></div>
-    </div>
-
-    <div class="detail-panel" id="detailPanel"></div>
 
     <!-- DISCLAIMER -->
     <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
@@ -1941,7 +1941,7 @@ function renderBrain3(d){
 
   // ── 内層: RETAIL ──
   const retailEl=document.getElementById('brRetail');
-  const rItems=(d.retail||[]).sort(()=>Math.random()-0.5).slice(0,14);
+  const rItems=(d.retail||[]).sort(()=>Math.random()-0.5).slice(0,10);
   rItems.forEach((item,i)=>{
     const sp=document.createElement('span');
     const nm=normMood(item.mood);
