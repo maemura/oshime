@@ -551,23 +551,80 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 @keyframes fi{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
 .disclaimer{font-size:10px;color:var(--text3);text-align:center;padding:12px 0;line-height:1.8;}
 .sec-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:14px;}
-/* かぶのすけ投資日記 専用スタイル */
-.kabu-wrap{background:linear-gradient(135deg,#0a1628 0%,#162040 50%,#1a1040 100%);border:1px solid rgba(100,140,255,0.15);border-radius:16px;padding:18px 18px 14px;margin-bottom:14px;position:relative;overflow:hidden;}
-.kabu-wrap::before{content:"";position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(100,160,255,0.08) 0%,transparent 70%);pointer-events:none;}
-.kabu-wrap::after{content:"";position:absolute;bottom:-30px;left:-30px;width:100px;height:100px;background:radial-gradient(circle,rgba(160,100,255,0.06) 0%,transparent 70%);pointer-events:none;}
-.kabu-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
-.kabu-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#4a90d9,#7c5cbf);display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;box-shadow:0 2px 8px rgba(74,144,217,0.3);}
-.kabu-title{font-family:var(--fh);font-size:14px;font-weight:800;color:#e8ecf4;letter-spacing:0.5px;}
-.kabu-sub{font-size:10px;color:rgba(180,195,220,0.7);margin-top:1px;}
-.kabu-wrap .pf-hero{border-bottom-color:rgba(100,140,255,0.12);}
-.kabu-wrap .pf-nav{color:#e8ecf4;}
-.kabu-wrap .pf-day{color:rgba(180,195,220,0.6);}
-.kabu-wrap .pf-bar.cash{background:rgba(74,144,217,0.15);color:#7ab3f0;}
-.kabu-wrap .pf-bar.stock{background:rgba(78,170,135,0.15);color:#5ec4a0;}
-.kabu-wrap .pf-hold{background:rgba(255,255,255,0.04);border-color:rgba(100,140,255,0.1);}
-.kabu-wrap .pf-hold-name{color:#d0d8e8;}
-.kabu-wrap .pf-note-link{background:linear-gradient(135deg,#4a6cf7,#7c5cbf);border:none;}
-.kabu-wrap .pf-note-link:hover{opacity:0.9;}.empty-msg{text-align:center;padding:20px;font-size:12px;color:var(--text3);}
+.empty-msg{text-align:center;padding:20px;font-size:12px;color:var(--text3);}
+
+/* ══ MARKET COMMENT (A) ══ */
+.mkt-card{background:linear-gradient(145deg,#141e2e 0%,#1a2540 100%);border:1px solid rgba(80,120,200,0.12);border-radius:var(--r);overflow:hidden;margin-bottom:14px;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
+.mkt-header{display:flex;align-items:center;gap:10px;padding:14px 16px 10px;}
+.mkt-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#4a90d9,#7c5cbf);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;box-shadow:0 2px 8px rgba(74,144,217,0.3);}
+.mkt-who{font-size:12px;font-weight:900;color:#e0e6f0;}
+.mkt-when{font-size:9px;color:rgba(160,180,210,0.4);font-family:var(--fn);}
+.mkt-body{padding:0 16px 14px;}
+.mkt-comment{font-size:12.5px;line-height:1.75;color:#c0cce0;}
+.mkt-comment strong{color:#e8ecf4;}
+.mkt-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
+.mkt-tag{font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;}
+.mkt-tag.bullish{background:rgba(74,234,170,0.12);color:#4aeaaa;}
+.mkt-tag.bearish{background:rgba(255,107,122,0.12);color:#ff7a85;}
+.mkt-tag.hot{background:rgba(255,159,67,0.12);color:#ff9f43;}
+.mkt-tag.neutral{background:rgba(150,180,220,0.1);color:#a0b4d8;}
+.mkt-sources{display:flex;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(100,150,255,0.06);}
+.mkt-src{font-size:9px;color:rgba(140,165,210,0.35);display:flex;align-items:center;gap:3px;}
+
+/* ══ RANKING TABLE (B) ══ */
+.rank-card{background:linear-gradient(145deg,#141e2e 0%,#1a2540 100%);border:1px solid rgba(80,120,200,0.12);border-radius:var(--r);overflow:hidden;margin-bottom:14px;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
+.rank-header{background:linear-gradient(135deg,#1e3a5f 0%,#2a1f4e 100%);padding:12px 16px;text-align:center;border-bottom:1px solid rgba(100,150,255,0.1);}
+.rank-header-title{font-size:15px;font-weight:900;color:#e8ecf4;letter-spacing:1px;}
+.rank-header-sub{font-size:9px;color:rgba(180,200,230,0.4);margin-top:2px;font-family:var(--fn);}
+.rank-grid{display:grid;grid-template-columns:1fr 1fr;}
+.rank-col{display:flex;flex-direction:column;}
+.rank-col+.rank-col{border-left:1px solid rgba(100,150,255,0.06);}
+.rank-row{border-bottom:1px solid rgba(100,150,255,0.05);cursor:pointer;transition:background 0.15s;}
+.rank-row:hover{background:rgba(100,150,255,0.04);}
+.rank-row:last-child{border-bottom:none;}
+.rank-row.active{background:rgba(74,144,217,0.08);}
+.rank-row-main{display:flex;align-items:center;padding:7px 10px;gap:5px;}
+.rank-name{flex:1;font-size:11px;font-weight:700;color:#c8d4e4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.has-comment .rank-name::after{content:' 💬';font-size:7px;opacity:0.5;}
+.rank-chg{font-family:var(--fn);font-size:11px;font-weight:500;padding:2px 6px;border-radius:4px;min-width:50px;text-align:center;}
+.rank-chg.r-up{background:rgba(42,157,106,0.2);color:#4aeaaa;}
+.rank-chg.r-dn{background:rgba(255,90,100,0.15);color:#ff7a85;}
+.rank-chg.r-flat{background:rgba(150,150,150,0.1);color:rgba(180,200,230,0.4);}
+.rank-chg.r-big-up{background:rgba(42,157,106,0.35);color:#4aeaaa;font-weight:700;}
+.rank-chg.r-big-dn{background:rgba(255,90,100,0.3);color:#ff7a85;font-weight:700;}
+.rank-cap{font-family:var(--fn);font-size:9px;color:rgba(150,175,210,0.3);min-width:34px;text-align:right;}
+.rank-footer{padding:8px 12px;text-align:center;font-size:9px;color:rgba(150,175,210,0.25);border-top:1px solid rgba(100,150,255,0.06);font-family:var(--fn);}
+
+/* ══ DETAIL PANEL (C) ══ */
+.detail-panel{display:none;background:linear-gradient(145deg,#141e2e 0%,#1a2540 100%);border:1px solid rgba(100,150,255,0.15);border-radius:var(--r);overflow:hidden;margin-bottom:14px;box-shadow:0 4px 24px rgba(0,0,0,0.2);animation:rankSlide 0.25s ease;}
+.detail-panel.show{display:block;}
+@keyframes rankSlide{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
+.detail-top{padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(100,150,255,0.08);}
+.detail-close{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.06);border:none;color:rgba(180,200,230,0.5);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.15s;}
+.detail-close:hover{background:rgba(255,255,255,0.1);}
+.detail-info{flex:1;}
+.detail-name{font-size:15px;font-weight:900;color:#e8ecf4;}
+.detail-meta{font-size:10px;color:rgba(160,180,210,0.4);font-family:var(--fn);margin-top:1px;}
+.detail-chg-big{font-family:var(--fn);font-size:18px;font-weight:700;padding:4px 12px;border-radius:6px;flex-shrink:0;}
+.detail-chg-big.r-up{background:rgba(42,157,106,0.25);color:#4aeaaa;}
+.detail-chg-big.r-dn{background:rgba(255,90,100,0.2);color:#ff7a85;}
+.detail-stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(100,150,255,0.06);}
+.detail-stat{text-align:center;padding:10px 4px;border-right:1px solid rgba(100,150,255,0.05);}
+.detail-stat:last-child{border-right:none;}
+.detail-stat-val{font-family:var(--fn);font-size:13px;font-weight:700;color:#d0daf0;}
+.detail-stat-label{font-size:8px;color:rgba(150,175,210,0.4);margin-top:2px;font-weight:700;}
+.detail-cmt{padding:14px 16px;}
+.detail-cmt-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.detail-cmt-avatar{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#4a90d9,#7c5cbf);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.detail-cmt-label{font-size:11px;font-weight:800;color:rgba(180,200,230,0.6);}
+.detail-cmt-body{font-size:12px;line-height:1.75;color:#b0c4e0;background:rgba(74,144,217,0.05);border-radius:10px;padding:12px 14px;border:1px solid rgba(74,144,217,0.08);}
+.detail-cmt-body strong{color:#d0e0f4;}
+.detail-cmt-sources{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap;}
+.src-tag{font-size:8px;font-weight:700;padding:2px 7px;border-radius:10px;}
+.src-tag.yt{background:rgba(255,0,0,0.12);color:#ff6b6b;}
+.src-tag.news{background:rgba(100,180,255,0.1);color:#7ab8f0;}
+.src-tag.tech{background:rgba(255,200,50,0.1);color:#ddb840;}
+.src-tag.score{background:rgba(74,234,170,0.1);color:#4aeaaa;}
 
 /* ── LOGIC MODAL ── */
 .logic-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.4);display:none;align-items:flex-end;justify-content:center;}
@@ -702,15 +759,42 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     </div>
 
     <!-- 📊 投資日記 -->
-    <div class="kabu-wrap" id="portfolioSection">
-      <div class="kabu-head">
-        <div class="kabu-avatar">🤖</div><div><div class="kabu-title">かぶのすけの投資日記</div>
-        <div class="kabu-sub">AI × 1000万円 ／ 2026.2.24スタート</div></div>
+    <div class="sec-wrap" id="portfolioSection">
+      <div class="sec-head">
+        <div class="sec-head-title">📊 かぶのすけの投資日記</div>
+        <div class="sec-head-sub">AI × 1000万円 ／ 2026.2.24スタート</div>
       </div>
       <div id="portfolioBody">
         <div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div>
       </div>
     </div>
+
+    <!-- 🤖 AIコメント + 騰落ランキング -->
+    <div class="mkt-card" id="mktCommentSection" style="display:none">
+      <div class="mkt-header">
+        <div class="mkt-avatar">🤖</div>
+        <div>
+          <div class="mkt-who">かぶのすけの今日の見立て</div>
+          <div class="mkt-when" id="mktCommentDate"></div>
+        </div>
+      </div>
+      <div class="mkt-body">
+        <div class="mkt-comment" id="mktCommentBody"></div>
+        <div class="mkt-tags" id="mktCommentTags"></div>
+        <div class="mkt-sources" id="mktCommentSources"></div>
+      </div>
+    </div>
+
+    <div class="rank-card" id="rankSection" style="display:none">
+      <div class="rank-header">
+        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">主要株の騰落</span></div>
+        <div class="rank-header-sub">時価総額 TOP30 ・ 前日比 ・ タップで詳細</div>
+      </div>
+      <div class="rank-grid" id="rankGrid"></div>
+      <div class="rank-footer" id="rankFooter"></div>
+    </div>
+
+    <div class="detail-panel" id="detailPanel"></div>
 
     <!-- DISCLAIMER -->
     <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
@@ -1282,31 +1366,19 @@ function renderTop10(){
 function renderSectorTrend(){
   const body=document.getElementById('top5Body');
   const SEC_MAP={
-    '銀行':       {ico:'🏦'},
-    '通信':       {ico:'📡'},
-    '自動車':     {ico:'🚗'},
-    '電力':       {ico:'💡'},
-    '鉄鋼':       {ico:'⚙️'},
-    '化学':       {ico:'🧪'},
-    '商社':       {ico:'🌐'},
-    '建設':       {ico:'🏗'},
-    '不動産':     {ico:'🏠'},
-    '食品':       {ico:'🍙'},
-    '医薬品':     {ico:'💊'},
-    '保険':       {ico:'🛡'},
-    'IT':         {ico:'💻'},
-    '機械':       {ico:'🏭'},
-    '石油':       {ico:'⛽'},
-    '小売':       {ico:'🛒'},
-    'サービス':   {ico:'🎯'},
-    '海運':       {ico:'🚢'},
-    '証券':       {ico:'📈'},
-    '電機':       {ico:'⚡'},
-    '運輸':       {ico:'🚃'},
-    '精密':       {ico:'🔬'},
-    'リース':     {ico:'💳'},
-    'ゴム':       {ico:'🛞'},
+    'Technology':       {jp:'テクノロジー',ico:'💻'},
+    'Financial Services':{jp:'金融',ico:'🏦'},
+    'Communication Services':{jp:'通信',ico:'📡'},
+    'Consumer Cyclical': {jp:'消費（景気敏感）',ico:'🛒'},
+    'Industrials':       {jp:'産業・資本財',ico:'🏭'},
+    'Consumer Defensive':{jp:'消費（安定）',ico:'🍙'},
+    'Energy':            {jp:'エネルギー',ico:'⛽'},
+    'Basic Materials':   {jp:'素材',ico:'🧱'},
+    'Healthcare':        {jp:'ヘルスケア',ico:'💊'},
+    'Utilities':         {jp:'公益',ico:'💡'},
+    'Real Estate':       {jp:'不動産',ico:'🏠'},
   };
+
   // セクター集計：買い圏の銘柄数で並べる
   const secMap={};
   processed.forEach(s=>{
@@ -1723,6 +1795,7 @@ async function loadRealData(){
       const mFields=['nikkei_price','nikkei_ma25','nikkei_1d_chg','nasdaq_1d_chg',
                      'vix','usdjpy','us10y','geo_risk','rate_cut_flag','prev_buy_count'];
       mFields.forEach(k=>{if(j[k]!==undefined)marketData[k]=j[k];});
+      if(j.updated_at)marketData.updated_at=j.updated_at;
       if(j.vol_ranking&&j.vol_ranking.length)volRankingData=j.vol_ranking;
       if(j.trend_ranking&&j.trend_ranking.length)trendRankingData=j.trend_ranking;
       if(j.sector_scores)sectorScoresData=j.sector_scores;
@@ -1862,12 +1935,178 @@ function renderBrain3(d){
   });
 }
 
+// ═══════════════════════════════════════
+// 騰落ランキング + AIコメント
+// ═══════════════════════════════════════
+var rankStocks=[];
+var commentaryData=null;
+var activeRankIdx=-1;
+
+function formatCap(b){
+  if(!b||b<=0)return'—';
+  if(b>=10000)return (b/10000).toFixed(1)+'兆';
+  return Math.round(b)+'億';
+}
+
+function rankChgClass(v){
+  if(v>=3)return'r-big-up';
+  if(v>0.05)return'r-up';
+  if(v<=-2)return'r-big-dn';
+  if(v<-0.05)return'r-dn';
+  return'r-flat';
+}
+
+function buildRanking(){
+  if(!STOCKS||!STOCKS.length)return;
+  // TOP30 by market_cap_b
+  var top=STOCKS.filter(function(s){return s.market_cap_b&&s.market_cap_b>0;})
+    .sort(function(a,b){return(b.market_cap_b||0)-(a.market_cap_b||0);})
+    .slice(0,30);
+  if(top.length<10)return;
+
+  // calc daily change from closes_60d
+  rankStocks=top.map(function(s){
+    var c=s.closes_60d||[];
+    var chg=0;
+    if(c.length>=2)chg=((c[c.length-1]-c[c.length-2])/c[c.length-2])*100;
+    var d25=s.ma25?((s.price/s.ma25)-1)*100:0;
+    // find commentary if available
+    var cmt=null;
+    if(commentaryData&&commentaryData.stocks){
+      cmt=commentaryData.stocks[s.code]||null;
+    }
+    return{
+      name:s.name||s.code,code:s.code,sector:s.sector||'',
+      chg:Math.round(chg*100)/100,
+      cap:formatCap(s.market_cap_b),capB:s.market_cap_b||0,
+      price:s.price||0,rsi:s.rsi||0,
+      ma25d:d25>=0?'+'+d25.toFixed(1)+'%':d25.toFixed(1)+'%',
+      div:((s.dividend||0)).toFixed(1)+'%',
+      score:s.score||0,
+      cmt:cmt
+    };
+  });
+
+  // Build grid
+  var grid=document.getElementById('rankGrid');
+  var half=Math.ceil(rankStocks.length/2);
+  function makeRow(s,idx){
+    var sign=s.chg>0?'+':'';
+    var nm=s.name.length>7?s.name.substring(0,7)+'…':s.name;
+    var hasCmt=s.cmt?' has-comment':'';
+    return'<div class="rank-row'+hasCmt+'" data-ridx="'+idx+'" onclick="showRankDetail('+idx+')">'+
+      '<div class="rank-row-main">'+
+      '<div class="rank-name">'+nm+'</div>'+
+      '<div class="rank-chg '+rankChgClass(s.chg)+'">'+sign+s.chg.toFixed(1)+'%</div>'+
+      '<div class="rank-cap">'+s.cap+'</div>'+
+      '</div></div>';
+  }
+  var left=rankStocks.slice(0,half);
+  var right=rankStocks.slice(half);
+  grid.innerHTML='<div class="rank-col">'+left.map(function(s,i){return makeRow(s,i);}).join('')+'</div>'+
+    '<div class="rank-col">'+right.map(function(s,i){return makeRow(s,i+half);}).join('')+'</div>';
+
+  // Footer with date
+  var dt=commentaryData&&commentaryData.date?commentaryData.date:(marketData.updated_at||'');
+  document.getElementById('rankFooter').textContent=dt+' 終値 ・ かぶのすけ';
+
+  document.getElementById('rankSection').style.display='';
+}
+
+function showRankDetail(idx){
+  var panel=document.getElementById('detailPanel');
+  var s=rankStocks[idx];
+  if(!s)return;
+
+  // Toggle off
+  if(activeRankIdx===idx){
+    panel.classList.remove('show');
+    var rows=document.querySelectorAll('.rank-row');
+    for(var i=0;i<rows.length;i++)rows[i].classList.remove('active');
+    activeRankIdx=-1;
+    return;
+  }
+  activeRankIdx=idx;
+  var rows=document.querySelectorAll('.rank-row');
+  for(var i=0;i<rows.length;i++)rows[i].classList.remove('active');
+  var target=document.querySelector('.rank-row[data-ridx="'+idx+'"]');
+  if(target)target.classList.add('active');
+
+  var sign=s.chg>0?'+':'';
+  var chgCls=s.chg>=0?'r-up':'r-dn';
+
+  // Comment section
+  var cmtHtml;
+  if(s.cmt&&s.cmt.text){
+    var srcLabels={yt:'📺 YouTube',news:'📰 ニュース',tech:'📊 テクニカル',score:'⭐ スコア'};
+    var srcTags=(s.cmt.sources||[]).map(function(t){
+      return'<span class="src-tag '+t+'">'+(srcLabels[t]||t)+'</span>';
+    }).join('');
+    cmtHtml='<div class="detail-cmt">'+
+      '<div class="detail-cmt-head">'+
+      '<div class="detail-cmt-avatar">🤖</div>'+
+      '<div class="detail-cmt-label">かぶのすけの分析</div></div>'+
+      '<div class="detail-cmt-body">'+s.cmt.text+'</div>'+
+      '<div class="detail-cmt-sources">'+srcTags+'</div></div>';
+  }else{
+    cmtHtml='<div class="detail-cmt"><div style="text-align:center;padding:8px;font-size:11px;color:rgba(160,180,210,0.3)">'+
+      '💬 AIコメントは近日公開</div></div>';
+  }
+
+  panel.innerHTML=
+    '<div class="detail-top">'+
+      '<div class="detail-info"><div class="detail-name">'+s.name+'</div>'+
+      '<div class="detail-meta">'+s.code+' ・ '+s.sector+' ・ '+s.cap+'</div></div>'+
+      '<div class="detail-chg-big '+chgCls+'">'+sign+s.chg.toFixed(1)+'%</div>'+
+      '<button class="detail-close" onclick="showRankDetail('+idx+')">✕</button></div>'+
+    '<div class="detail-stats">'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+s.rsi+'</div><div class="detail-stat-label">RSI</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+s.ma25d+'</div><div class="detail-stat-label">25MA乖離</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+s.div+'</div><div class="detail-stat-label">配当利回り</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+s.score+'pt</div><div class="detail-stat-label">スコア</div></div>'+
+    '</div>'+cmtHtml;
+
+  panel.classList.remove('show');
+  void panel.offsetWidth;
+  panel.classList.add('show');
+  setTimeout(function(){panel.scrollIntoView({behavior:'smooth',block:'nearest'});},50);
+}
+
+async function loadCommentary(){
+  try{
+    var res=await fetch('commentary.json?t='+Date.now());
+    if(!res.ok)throw new Error('not found');
+    commentaryData=await res.json();
+    // Render market comment (A)
+    if(commentaryData.market){
+      var m=commentaryData.market;
+      document.getElementById('mktCommentBody').innerHTML=m.text||'';
+      document.getElementById('mktCommentDate').textContent=commentaryData.date||'';
+      // Tags
+      var tagsHtml=(m.tags||[]).map(function(t){
+        return'<span class="mkt-tag '+(t.type||'neutral')+'">'+t.label+'</span>';
+      }).join('');
+      document.getElementById('mktCommentTags').innerHTML=tagsHtml;
+      // Sources
+      var srcHtml=(m.sources||[]).map(function(s){
+        return'<span class="mkt-src">'+s+'</span>';
+      }).join('');
+      document.getElementById('mktCommentSources').innerHTML=srcHtml;
+      document.getElementById('mktCommentSection').style.display='';
+    }
+  }catch(e){
+    console.log('commentary.json not available yet');
+  }
+}
+
 async function init(){
   updateWatchCount();
   await loadRealData();
   run();
   loadPortfolio();
   loadBrainScanner();
+  await loadCommentary();
+  buildRanking();
   gaEvent('view_app',{data_source:dataSource});
 }
 
