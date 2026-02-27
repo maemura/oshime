@@ -1154,7 +1154,7 @@ function processStocks(){
     else if(-5 <= ma75d && ma75d <= 3 && d25 < -1) _type='dip';
     else if(ma75d > 0 && d25 > 0 && mc >= 1000) _type='momentum';
     else if(ma75d >= -2 && d25 > 0) _type='bounce';
-    return{...s,d25,score,zone,_type,ma75d};
+    return{...s,name:NAME_JP[s.code]||s.name||s.code,d25,score,zone,_type,ma75d};
   });
 
   if(zoneFilter==='buy')processed=processed.filter(s=>s.zone.cls==='buy');
