@@ -1,0 +1,82 @@
+{
+  "market": {
+    "text": "日経平均は微増も、<strong>YouTube投資界隈では温度差が鮮明</strong>ですね。仮想通貨やドル円はgreed状態で盛り上がる一方、<strong>日本株需給にはfear</strong>が漂っています。AI関連はfearが多いものの、SaaS関連はgreedと二極化。僕が好きな<strong>高配当株はcalm</strong>で、まさに冷静な投資家向けの相場環境といえそうです。",
+    "tags": [
+      {
+        "type": "neutral",
+        "label": "⚪ 市場は小動き"
+      },
+      {
+        "type": "hot",
+        "label": "🟠 YouTube二極化"
+      },
+      {
+        "type": "bullish",
+        "label": "🟢 高配当株冷静"
+      },
+      {
+        "type": "bearish",
+        "label": "🔴 AI関連fear"
+      }
+    ],
+    "sources": [
+      "📺 YouTube分析",
+      "📊 テクニカル指標"
+    ]
+  },
+  "stocks": {
+    "6758": {
+      "text": "<strong>前日比+7.2%の急騰</strong>が目を引きますね。RSI63.0とまだ過熱感は限定的。配当74%は物足りませんが、この勢いは注目です。",
+      "sources": [
+        "tech"
+      ]
+    },
+    "9432": {
+      "text": "<strong>配当346%、スコア54pt</strong>と僕好みの銘柄。前日比+0.8%と堅実な動き。RSI44.6で割安感もあり、高配当×割安の理想形ですね。",
+      "sources": [
+        "score",
+        "tech"
+      ]
+    },
+    "2914": {
+      "text": "<strong>配当404%</strong>の高配当王も前日比-0.4%と軟調。それでもRSI52.5で中立圏、PBR2.6と割安感は健在。長期保有向きの安定株です。",
+      "sources": [
+        "tech"
+      ]
+    },
+    "4502": {
+      "text": "<strong>配当349%の製薬大手</strong>が+1.5%上昇。RSI64.5でやや過熱気味も、PBR1.2の割安感が魅力。高配当×割安の組み合わせが光ります。",
+      "sources": [
+        "tech"
+      ]
+    },
+    "8725": {
+      "text": "<strong>スコア53ptの高評価</strong>で+2.0%上昇。配当274%、PBR1.4と僕の好む割安×高配当。RSI73.1とやや熱いですが注目株ですね。",
+      "sources": [
+        "score",
+        "tech"
+      ]
+    },
+    "6702": {
+      "text": "<strong>スコア70ptの最高評価</strong>も、YouTubeではfear状態。RSI37.1、25MA乖離-8.7%と売られすぎ感。逆張り狙いには面白い水準です。",
+      "sources": [
+        "yt",
+        "score",
+        "tech"
+      ]
+    },
+    "8031": {
+      "text": "商社株が<strong>+2.9%と好調</strong>。RSI72.3で過熱気味も、配当204%、PBR1.99と割安感あり。総合商社の底堅さが光る展開ですね。",
+      "sources": [
+        "tech"
+      ]
+    },
+    "8058": {
+      "text": "<strong>RSI77.4と過熱気味</strong>ながら+2.5%上昇。配当208%、PBR2.15で割安感は残存。25MA乖離+14.0%は少し気になる水準です。",
+      "sources": [
+        "tech"
+      ]
+    }
+  },
+  "date": "2026/02/28 07:41 自動生成"
+}
