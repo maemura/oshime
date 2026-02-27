@@ -1,47 +1,39 @@
-name: かぶのすけ 自動スキャン
+name: Stock Scan + Commentary
 
 on:
   schedule:
-    # 毎朝 7:30 JST = UTC 22:30（前日）月〜金
-    - cron: '30 22 * * 0-4'
-    # 大引け後 16:00 JST = UTC 7:00 月〜金
-    - cron: '0 7 * * 1-5'
-  workflow_dispatch:  # 手動実行ボタン
+    - cron: '30 22 * * 0-4'   # JST 7:30 月-金
+    - cron: '0 7 * * 1-5'     # JST 16:00 月-金
+  workflow_dispatch:
 
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 90
-
-    permissions:
-      contents: write
-
     steps:
-      - name: リポジトリをチェックアウト
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Python 3.11 セットアップ
-        uses: actions/setup-python@v5
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      - name: 依存パッケージをインストール
-        run: |
-          pip install yfinance pandas numpy requests xlrd openpyxl
+      - name: Install dependencies
+        run: pip install yfinance numpy pandas anthropic
 
-      - name: fetch_stocks.py を実行
-        run: python3 fetch_stocks.py
+      - name: Run stock scan
+        run: python fetch_stocks.py
+
+      - name: Patch Japanese names
+        run: python patch_names.py
+
+      - name: Generate AI commentary
         env:
-          TZ: Asia/Tokyo
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python generate_commentary.py
 
-      - name: stocks_data.json をコミット & プッシュ
+      - name: Commit & Push
         run: |
-          git config user.name  "かぶのすけBot"
-          git config user.email "bot@kabunosuke.app"
-          git add stocks_data.json
-          if git diff --cached --quiet; then
-            echo "データに変更なし。スキップ。"
-          else
-            git commit -m "📊 自動更新 $(TZ=Asia/Tokyo date '+%Y/%m/%d %H:%M JST')"
-            git push
-          fi
+          git config user.name "kabunosuke-bot"
+          git config user.email "bot@kabunosuke.ai"
+          git add stocks_data.json commentary.json
+          git diff --cached --quiet || git commit -m "📊 scan + 🤖 commentary $(date +%Y-%m-%d)"
+          git push
