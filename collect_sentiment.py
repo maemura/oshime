@@ -20,6 +20,8 @@ CHANNELS = {
     "@bacchama":      "ばっちゃまの投資チャンネル",
     "@yutai_rider":   "優待ライダー",
     "@tabbata":       "たばたの投資ch",
+    "@Tsubame104":    "つばめ投資顧問",
+    "@stockvoice":    "STOCKVOICE",
 }
 
 MAX_AGE_DAYS = 7
