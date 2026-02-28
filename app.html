@@ -3,32 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>かぶのすけ — 今日の押し目候補</title>
+<title>かぶのすけNavi — AI × 高配当・割安株</title>
 <meta name="description" content="東証プライム全銘柄を毎朝自動スキャン。地合い判定×高配当×割安で今日の買い場を即表示。">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-DWW0W11P5T"></script>
 <script>
   window.dataLayer=window.dataLayer||[];
   function gtag(){dataLayer.push(arguments);}
   gtag('js',new Date());
-  gtag('config','G-DWW0W11P5T',{page_title:'かぶのすけ'});
+  gtag('config','G-DWW0W11P5T',{page_title:'かぶのすけNavi'});
   function gaEvent(n,p){if(typeof gtag!=='undefined')gtag('event',n,p||{});}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --navy:#0a2540; --navy2:#0d3060;
-  --orange:#e8541e; --orange2:#ff6b35; --orange-lt:#fff3ee;
-  --up:#d0021b; --dn:#0055cc;
-  --green:#00875a; --green-lt:#e3fcef;
-  --amber:#946500; --amber-lt:#fffae6;
-  --bg:#f0f4f8; --bg2:#ffffff; --bg3:#f7f9fc;
-  --border:#e2e8f0;
-  --text:#2d3748; --text2:#1a202c; --text3:#718096;
-  --r:8px; --r2:5px;
-  --fn:'DM Mono','Outfit',monospace;
-  --fh:'Outfit','Noto Sans JP',sans-serif;
-  --fb:'Noto Sans JP',sans-serif;
+  --navy:#000000; --navy2:#0a0a0a;
+  --orange:#00DC82; --orange2:#00FF96; --orange-lt:rgba(0,220,130,0.06);
+  --up:#00DC82; --dn:#FF4D4D;
+  --green:#00DC82; --green-lt:rgba(0,220,130,0.08);
+  --amber:#FFAA00; --amber-lt:rgba(255,170,0,0.08);
+  --bg:#000000; --bg2:#0a0a0a; --bg3:#0f0f0f;
+  --border:rgba(255,255,255,0.05);
+  --text:#e0e0e0; --text2:#ffffff; --text3:#555555;
+  --r:14px; --r2:8px;
+  --fn:'JetBrains Mono','DM Mono',monospace;
+  --fh:'DM Sans','Noto Sans JP',sans-serif;
+  --fb:'DM Sans','Noto Sans JP',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
 html{font-size:15px;}
@@ -646,6 +646,204 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 @media(max-width:480px){
   .stock-table th:nth-child(n+6),.stock-table td:nth-child(n+6){display:none;}
 }
+/* ═══════════════════════════════════════
+   ROBINHOOD DARK THEME OVERRIDES
+   ═══════════════════════════════════════ */
+html{font-size:15px;background:#000}
+body{background:#000;color:#e0e0e0}
+
+/* ── Topbar ── */
+.topbar{background:rgba(0,0,0,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.05)}
+.logo-name{color:#fff}
+.logo-tag{color:#555;font-size:9px}
+.btn-topbar{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);color:#888}
+.btn-topbar:hover{background:rgba(255,255,255,0.08)}
+
+/* ── Hero ── */
+.hero{background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);border-radius:14px;margin:8px 12px}
+.hero-eyebrow{color:#555}
+.hero-dot{background:var(--green);box-shadow:0 0 6px var(--green)}
+.hero-title{color:#fff}
+.hero-title span{color:var(--green)}
+.hero-stat{background:rgba(255,255,255,0.02);border-radius:10px}
+.hero-stat-val{color:#fff;font-family:var(--fn)}
+.hero-stat-val.buy{color:var(--green)}
+.hero-stat-label{color:#555}
+
+/* ── Trust Bar ── */
+.trust-bar{background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);border-radius:14px;margin:8px 12px}
+.trust-text{color:#888}
+.tbadge{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.08);color:#888}
+.tbadge.link{color:var(--green)}
+
+/* ── Pulse ── */
+.pulse{background:transparent;padding:8px 12px;margin:0}
+.pulse-row{gap:6px;display:flex}
+.pulse-item{background:#0a0a0a!important;border:1px solid rgba(255,255,255,0.04)!important;border-radius:12px!important;color:#fff}
+.pulse-item .p-label,.pulse-item .label{color:#555!important;font-size:8px!important}
+.pulse-item .p-val,.pulse-item .val{font-family:var(--fn)!important;color:#fff!important;font-weight:800!important}
+
+/* ── Stance ── */
+.stance-card,.stance-box{background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);border-radius:14px}
+
+/* ── Brain Scanner ── */
+.brain-wrap{background:#0a0a0a!important;border:1px solid rgba(255,255,255,0.04)!important;border-radius:16px!important;margin:8px 12px}
+.brain-wrap::before{background:radial-gradient(ellipse at 50% 45%,rgba(0,220,130,0.015) 0%,transparent 55%),none!important}
+.brain-title{color:#555!important;font-size:10px!important;letter-spacing:2px!important}
+.brain-sub{color:#444!important}
+.brain-guide{border-color:rgba(255,255,255,0.04)!important}
+.brain-guide.inner{border-color:rgba(0,220,130,0.06)!important;background:radial-gradient(circle,rgba(0,220,130,0.025) 0%,transparent 70%)!important}
+.brain-scan.s1{border-top-color:rgba(0,220,130,0.12)!important}
+.brain-scan.s2{border-right-color:rgba(0,220,130,0.08)!important}
+.brain-tag{color:#333!important}
+.brain-leg-card{background:rgba(255,255,255,0.02)!important;border-color:rgba(255,255,255,0.04)!important}
+.brain-leg-title{opacity:0.5}
+.brain-leg-item{color:#555!important}
+.brain-date{color:#333!important}
+.bw-outer,.bw-mid,.bw-inner{text-shadow:0 2px 12px rgba(0,0,0,0.9)!important}
+.bw-greed,.bw-bull{color:var(--green)!important}
+.bw-fear,.bw-bear,.bw-risk{color:var(--dn)!important}
+.bw-hype,.bw-buzz,.bw-event{color:var(--amber)!important}
+.bw-calm,.bw-data,.bw-tail,.bw-note{color:#888!important}
+.brain-core{background:none!important}
+
+/* ── AI Commentary Card ── */
+.mkt-card{background:#0a0a0a!important;border:1px solid rgba(255,255,255,0.04)!important;border-radius:16px!important;margin:8px 12px!important;position:relative;overflow:hidden}
+.mkt-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,220,130,0.15),transparent)}
+.mkt-avatar{font-size:20px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(0,220,130,0.08);border-radius:12px;border:1px solid rgba(0,220,130,0.15)}
+.mkt-who{color:#fff!important;font-weight:700!important}
+.mkt-when{color:#444!important;font-family:var(--fn)!important}
+.mkt-comment{color:#999!important;line-height:1.85!important}
+.mkt-comment strong{color:#fff!important}
+.mkt-tag{border-radius:8px!important}
+.mkt-tag.bull,.mkt-tag.bullish{background:rgba(0,220,130,0.08)!important;color:var(--green)!important;border-color:rgba(0,220,130,0.12)!important}
+.mkt-tag.bear,.mkt-tag.bearish{background:rgba(255,77,77,0.08)!important;color:var(--dn)!important;border-color:rgba(255,77,77,0.12)!important}
+.mkt-source{color:#555!important}
+
+/* ── Ranking ── */
+.rank-card{background:#0a0a0a!important;border:1px solid rgba(255,255,255,0.04)!important;border-radius:16px!important;margin:8px 12px!important}
+.rank-header-title{color:#fff!important;font-weight:800!important}
+.rank-header-sub{color:#444!important}
+.rank-row{border-bottom-color:rgba(255,255,255,0.03)!important}
+.rank-name{color:#999!important;font-weight:600!important}
+.rank-chg{font-family:var(--fn)!important;font-weight:700!important}
+.rank-chg.up{color:var(--green)!important}
+.rank-chg.dn{color:var(--dn)!important}
+.rank-footer{border-top-color:rgba(255,255,255,0.04)!important;color:#444!important}
+
+/* ── Detail Panel ── */
+.detail-panel{background:#0a0a0a;border:1px solid rgba(255,255,255,0.04);border-radius:16px;margin:8px 12px}
+.detail-name{color:#fff!important}
+.detail-close{color:#555!important}
+.detail-section-title{color:#555!important}
+.detail-chg-big.up{color:var(--green)!important}
+.detail-chg-big.dn{color:var(--dn)!important}
+.detail-box{background:rgba(255,255,255,0.02)!important;border-color:rgba(255,255,255,0.04)!important;border-radius:10px!important}
+.detail-cmt{background:rgba(0,220,130,0.04)!important;border:1px solid rgba(0,220,130,0.08)!important;border-radius:12px!important}
+.detail-cmt-body{color:#999!important}
+.detail-fav-btn{border-color:rgba(255,255,255,0.08)!important;color:#888!important}
+.detail-fav-btn.active{border-color:rgba(0,220,130,0.3)!important;color:var(--green)!important;background:rgba(0,220,130,0.06)!important}
+.d-btn{background:rgba(255,255,255,0.04)!important;border-color:rgba(255,255,255,0.06)!important;color:var(--green)!important;border-radius:8px!important}
+.d-card{background:rgba(255,255,255,0.02)!important;border-color:rgba(255,255,255,0.04)!important;border-radius:10px!important}
+.d-card label{color:#999!important}
+.d-card .val,.d-card .value{color:#fff!important}
+.d-sec-ttl{color:#555!important}
+.d-signal{border-radius:8px!important}
+.d-ma-row{border-bottom-color:rgba(255,255,255,0.03)!important}
+.d-ma-lbl{color:#888!important}
+.d-ma-val{color:#fff!important;font-family:var(--fn)!important}
+.d-ma-tag{border-radius:6px!important}
+.d-chart-box{background:rgba(255,255,255,0.02)!important;border-radius:10px!important}
+
+/* ── 3 Tabs ── */
+.t5-tabs{background:#0a0a0a;border-radius:12px;margin:8px 12px;padding:3px;display:flex;gap:0;border:1px solid rgba(255,255,255,0.04)}
+.t5-tab{background:transparent!important;color:#555!important;border-radius:10px!important;font-weight:700!important}
+.t5-tab.active{background:#000!important;color:var(--green)!important;box-shadow:0 2px 8px rgba(0,0,0,0.4)!important}
+
+/* ── Tab Content Cards ── */
+#top5Body{margin:0 12px}
+.top10-card,.sec-card{background:#0a0a0a!important;border:1px solid rgba(255,255,255,0.04)!important;border-radius:14px!important}
+.top10-name{color:#fff!important}
+.top10-score{font-family:var(--fn)!important}
+.top10-score.hi{color:var(--green)!important}
+.top10-meta{color:#555!important}
+.sec-back-btn{color:var(--green)!important}
+
+/* ── Sector Section ── */
+.sec-wrap{background:#0a0a0a!important;border:1px solid rgba(255,255,255,0.04)!important;border-radius:16px!important;margin:8px 12px!important}
+.sec-head-title{color:#fff!important;font-weight:800!important}
+.sec-head-sub{color:#444!important}
+
+/* ── Portfolio/Diary ── */
+.pf-hero{background:rgba(0,220,130,0.04)!important;border-radius:12px!important}
+.pf-total{color:#fff!important;font-family:var(--fn)!important}
+.pf-chg.up{color:var(--green)!important}
+.pf-chg.dn{color:var(--dn)!important}
+.pf-stat{background:rgba(255,255,255,0.02)!important;border-radius:8px!important}
+.pf-stat-val{color:#fff!important;font-family:var(--fn)!important}
+.pf-stat-label{color:#555!important}
+.pf-stock{border-bottom-color:rgba(255,255,255,0.03)!important}
+.pf-stock-name{color:#fff!important}
+.pf-stock-chg.up{color:var(--green)!important}
+.pf-stock-chg.dn{color:var(--dn)!important}
+.pf-note-link{color:var(--green)!important;background:rgba(0,220,130,0.06)!important;border-radius:8px!important}
+.pf-note-link:hover{background:rgba(0,220,130,0.1)!important}
+
+/* ── Score badge colors ── */
+.zone-badge.buy{background:rgba(0,220,130,0.1)!important;color:var(--green)!important;border:1px solid rgba(0,220,130,0.2)!important}
+.zone-badge.watch{background:rgba(255,170,0,0.1)!important;color:var(--amber)!important;border:1px solid rgba(255,170,0,0.2)!important}
+.zone-badge.hold{background:rgba(255,255,255,0.04)!important;color:#888!important;border:1px solid rgba(255,255,255,0.08)!important}
+
+/* ── Bottom Nav ── */
+.bottom-nav{background:rgba(0,0,0,0.92)!important;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,0.05)!important}
+.bottom-nav .nav-item{color:#555!important}
+.bottom-nav .nav-item.active{color:var(--green)!important}
+
+/* ── Settings / Logic Modal ── */
+.settings-panel{background:#0a0a0a!important;border-color:rgba(255,255,255,0.04)!important}
+.settings-panel h2,.settings-panel h3{color:#fff!important}
+.settings-panel label{color:#888!important}
+.logic-overlay{background:rgba(0,0,0,0.85)!important}
+.logic-modal{background:#0a0a0a!important;border:1px solid rgba(255,255,255,0.06)!important;border-radius:16px!important;color:#999!important}
+.logic-modal h2{color:#fff!important}
+.logic-title{color:var(--green)!important}
+.btn-logic-close{background:rgba(255,255,255,0.06)!important;color:#fff!important;border-radius:10px!important}
+
+/* ── Watch Panel ── */
+.watch-empty{color:#555!important}
+.watch-card{background:#0a0a0a!important;border:1px solid rgba(255,255,255,0.04)!important;border-radius:14px!important}
+.watch-name{color:#fff!important}
+.watch-score{font-family:var(--fn)!important}
+.watch-meta{color:#555!important}
+
+/* ── Disclaimer ── */
+.disclaimer{color:#333!important;border:none!important;background:transparent!important}
+
+/* ── Kokusaku Badge ── */
+.kok-badge{background:rgba(0,220,130,0.08)!important;color:var(--green)!important;border:1px solid rgba(0,220,130,0.15)!important;border-radius:6px!important}
+
+/* ── Skeleton ── */
+.skeleton,.skel-row{background:rgba(255,255,255,0.04)!important}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px}
+
+/* ── Axis/Score bars ── */
+.axis-bar{background:rgba(255,255,255,0.04)!important;border-radius:4px!important;overflow:hidden}
+.axis-seg{border-radius:0!important}
+.axis-name{color:#888!important}
+.axis-score{color:#555!important}
+.axis-total{color:#fff!important}
+
+/* ── Filter bar ── */
+.filter-btn{background:rgba(255,255,255,0.04)!important;border-color:rgba(255,255,255,0.06)!important;color:#888!important;border-radius:8px!important}
+.filter-btn.active{background:rgba(0,220,130,0.1)!important;border-color:rgba(0,220,130,0.2)!important;color:var(--green)!important}
+
+/* ── Global accent override ── */
+a{color:var(--green)}
+::selection{background:rgba(0,220,130,0.2);color:#fff}
 </style>
 </head>
 <body>
@@ -654,8 +852,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 <div class="topbar">
   <div class="topbar-inner">
     <div>
-      <span class="logo-name">かぶのすけ</span>
-      <span class="logo-tag">高配当・割安株の買い場を毎日スキャン</span>
+      <span class="logo-name">かぶのすけ<span style="color:var(--orange)">Navi</span></span>
+      <span class="logo-tag" id="lastUpdate">📡 更新確認中...</span>
     </div>
     <div class="topbar-right">
       <button class="btn-topbar" onclick="switchTab('watch')">
@@ -679,7 +877,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
       <div class="mkt-header">
         <div class="mkt-avatar">🤖</div>
         <div>
-          <div class="mkt-who">かぶのすけの今日の見立て</div>
+          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
           <div class="mkt-when" id="mktCommentDate"></div>
         </div>
       </div>
@@ -693,8 +891,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <!-- 📡 BRAIN SCANNER 3層同心円 -->
     <div class="brain-wrap" id="brainSection" style="display:none">
       <div class="brain-head">
-        <div class="brain-title">MARKET BRAIN SCANNER</div>
-        <div class="brain-sub">みんなの頭の中、今日はこんな感じ</div>
+        <div class="brain-title">投資家の話題マップ</div>
+        <div class="brain-sub">YouTubeやSNSで今日話題のキーワード</div>
       </div>
       <div id="brainBody"></div>
       <div class="brain-legend">
@@ -728,7 +926,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <div class="rank-card" id="rankSection" style="display:none">
       <div class="rank-header">
         <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
-        <div class="rank-header-sub">前日比 ・ タップで詳細</div>
+        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ タップで詳細</div>
       </div>
       <div class="rank-grid" id="rankGrid"></div>
       <div class="rank-footer" id="rankFooter"></div>
@@ -739,7 +937,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <!-- HERO -->
     <div class="hero">
       <div class="hero-eyebrow" id="heroEyebrow">
-        <span class="hero-dot"></span>押し目 × 高配当 — 毎朝8:30自動更新
+        <span class="hero-dot"></span>AI × 高配当 × 割安 — 毎朝8:30自動更新
       </div>
       <div class="hero-top">
         <div class="hero-left">
@@ -788,7 +986,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
     <!-- 📊 投資日記 -->
     <div class="sec-wrap" id="portfolioSection">
       <div class="sec-head">
-        <div class="sec-head-title">📊 かぶのすけの投資日記</div>
+        <div class="sec-head-title">📊 かぶのすけ（AI）の投資日記</div>
         <div class="sec-head-sub">AI × 1000万円 ／ 2026.2.24スタート</div>
       </div>
       <div id="portfolioBody">
@@ -1532,7 +1730,7 @@ function buildExpand(s){
         <div class="d-card"><b>${(s.pbr||0).toFixed(2)}倍</b><small>PBR(割安度)</small></div>
         <div class="d-card"><b>${(s.per||0)>0?(s.per||0).toFixed(0)+'倍':'—'}</b><small>PER</small></div>
       </div>
-      <div class="d-signal"><b>📝 かぶのすけの判定</b><p>${signal}</p></div>
+      <div class="d-signal"><b>📝 かぶのすけ（AI）の判定</b><p>${signal}</p></div>
       <div class="d-btns">
         <a class="d-btn" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation()">Yahoo!ファイナンス →</a>
         <a class="d-btn" href="https://kabutan.jp/stock/?code=${s.code}" target="_blank" rel="noopener" onclick="event.stopPropagation()">株探で詳しく →</a>
@@ -1818,6 +2016,7 @@ async function loadRealData(){
       if(j.sector_scores)sectorScoresData=j.sector_scores;
       // 信頼バー
       document.getElementById('trustText').innerHTML=`<span class="hi">${j.updated_at}</span> 更新 · ${j.total}銘柄スキャン済み`;
+      document.getElementById('lastUpdate').textContent='📡 '+j.updated_at+' 更新';
       document.getElementById('trustDot').style.background='var(--green)';
       document.getElementById('trustBanner').style.borderLeftColor='var(--green)';
       document.getElementById('totalCountBadge').textContent=j.total+'銘柄';
@@ -2078,7 +2277,9 @@ function buildRanking(){
 
   // Footer with date
   var dt=commentaryData&&commentaryData.date?commentaryData.date:(marketData.updated_at||'');
-  document.getElementById('rankFooter').textContent=dt+' 終値 ・ かぶのすけ';
+  document.getElementById('rankFooter').textContent=dt+' 終値 ・ かぶのすけNavi';
+  var rdEl=document.getElementById('rankDate');
+  if(rdEl&&marketData.updated_at)rdEl.textContent=marketData.updated_at.split(' ')[0]+' 終値 ・ ';
 
   document.getElementById('rankSection').style.display='';
 }
@@ -2115,7 +2316,7 @@ function showRankDetail(idx){
     cmtHtml='<div class="detail-cmt">'+
       '<div class="detail-cmt-head">'+
       '<div class="detail-cmt-avatar">🤖</div>'+
-      '<div class="detail-cmt-label">かぶのすけの分析</div></div>'+
+      '<div class="detail-cmt-label">かぶのすけ（AI）の分析</div></div>'+
       '<div class="detail-cmt-body">'+s.cmt.text+'</div>'+
       '<div class="detail-cmt-sources">'+srcTags+'</div></div>';
   }else{
@@ -2139,7 +2340,7 @@ function showRankDetail(idx){
     cmtHtml='<div class="detail-cmt">'+
       '<div class="detail-cmt-head">'+
       '<div class="detail-cmt-avatar">🤖</div>'+
-      '<div class="detail-cmt-label">かぶのすけの分析</div></div>'+
+      '<div class="detail-cmt-label">かぶのすけ（AI）の分析</div></div>'+
       '<div class="detail-cmt-body">'+autoText+'</div>'+
       '<div class="detail-cmt-sources">'+autoSrc+'</div></div>';
   }
