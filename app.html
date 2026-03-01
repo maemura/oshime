@@ -22,9 +22,9 @@
   --up:#00DC82; --dn:#FF4D4D;
   --green:#00DC82; --green-lt:rgba(0,220,130,0.08);
   --amber:#FFAA00; --amber-lt:rgba(255,170,0,0.08);
-  --bg:#000000; --bg2:#0a0a0a; --bg3:#0f0f0f;
-  --border:rgba(255,255,255,0.05);
-  --text:#e0e0e0; --text2:#ffffff; --text3:#555555;
+  --bg:#0a0a0a; --bg2:#141414; --bg3:#1a1a1a;
+  --border:rgba(255,255,255,0.08);
+  --text:#e0e0e0; --text2:#ffffff; --text3:#666666;
   --r:14px; --r2:8px;
   --fn:'JetBrains Mono','DM Mono',monospace;
   --fh:'DM Sans','Noto Sans JP',sans-serif;
@@ -124,9 +124,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .pc:last-child{border-right:none;}
 .pc-l{font-size:9px;color:var(--text3);font-family:var(--fh);margin-bottom:2px;}
 .pc-v{font-family:var(--fn);font-size:13px;color:var(--text2);}
-.pc-v.up{color:var(--up);}  .pc-v.dn{color:var(--dn);}
+.pc-v.up{color:var(--dn);}  .pc-v.dn{color:var(--up);}
 .pc-c{font-family:var(--fn);font-size:10px;color:var(--text3);}
-.pc-c.up{color:var(--up);}  .pc-c.dn{color:var(--dn);}
+.pc-c.up{color:var(--dn);}  .pc-c.dn{color:var(--up);}
 
 /* ── STANCE ── */
 .stance{
@@ -243,8 +243,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .tbl-num.dn{color:var(--up);}   /* 乖離マイナス=赤=買い場 */
 .tbl-num.up{color:var(--dn);}
 .tbl-prev{font-family:var(--fn);font-size:10px;}
-.tbl-prev.up{color:var(--up);}
-.tbl-prev.dn{color:var(--dn);}
+.tbl-prev.up{color:var(--dn);}
+.tbl-prev.dn{color:var(--up);}
 /* 展開詳細行 */
 .detail-row td{padding:0;background:#f0f7ff;}
 .detail-box{padding:14px 16px;border-top:1px solid #d0e4f7;}
@@ -587,11 +587,11 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .rank-name{flex:1;font-size:11px;font-weight:700;color:#c8d4e4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .has-comment .rank-name::after{content:' 💬';font-size:7px;opacity:0.5;}
 .rank-chg{font-family:var(--fn);font-size:11px;font-weight:500;padding:2px 6px;border-radius:4px;min-width:50px;text-align:center;}
-.rank-chg.r-up{background:rgba(42,157,106,0.2);color:#4aeaaa;}
-.rank-chg.r-dn{background:rgba(255,90,100,0.15);color:#ff7a85;}
+.rank-chg.r-up{background:rgba(255,77,77,0.15);color:#ff7a85;}
+.rank-chg.r-dn{background:rgba(42,157,106,0.15);color:#4aeaaa;}
 .rank-chg.r-flat{background:rgba(150,150,150,0.1);color:rgba(180,200,230,0.4);}
-.rank-chg.r-big-up{background:rgba(42,157,106,0.35);color:#4aeaaa;font-weight:700;}
-.rank-chg.r-big-dn{background:rgba(255,90,100,0.3);color:#ff7a85;font-weight:700;}
+.rank-chg.r-big-up{background:rgba(255,77,77,0.3);color:#ff7a85;font-weight:700;}
+.rank-chg.r-big-dn{background:rgba(42,157,106,0.3);color:#4aeaaa;font-weight:700;}
 .rank-cap{font-family:var(--fn);font-size:9px;color:rgba(150,175,210,0.3);min-width:34px;text-align:right;}
 .rank-footer{padding:8px 12px;text-align:center;font-size:9px;color:rgba(150,175,210,0.25);border-top:1px solid rgba(100,150,255,0.06);font-family:var(--fn);}
 
@@ -606,8 +606,8 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .detail-name{font-size:15px;font-weight:900;color:#e8ecf4;}
 .detail-meta{font-size:10px;color:rgba(160,180,210,0.4);font-family:var(--fn);margin-top:1px;}
 .detail-chg-big{font-family:var(--fn);font-size:18px;font-weight:700;padding:4px 12px;border-radius:6px;flex-shrink:0;}
-.detail-chg-big.r-up{background:rgba(42,157,106,0.25);color:#4aeaaa;}
-.detail-chg-big.r-dn{background:rgba(255,90,100,0.2);color:#ff7a85;}
+.detail-chg-big.r-up{background:rgba(255,77,77,0.2);color:#ff7a85;}
+.detail-chg-big.r-dn{background:rgba(42,157,106,0.2);color:#4aeaaa;}
 .detail-stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(100,150,255,0.06);}
 .detail-stat{text-align:center;padding:10px 4px;border-right:1px solid rgba(100,150,255,0.05);}
 .detail-stat:last-child{border-right:none;}
@@ -649,18 +649,18 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 /* ═══════════════════════════════════════
    ROBINHOOD DARK THEME OVERRIDES
    ═══════════════════════════════════════ */
-html{font-size:15px;background:#000}
-body{background:#000;color:#e0e0e0}
+html{font-size:15px;background:#0a0a0a}
+body{background:#0a0a0a;color:#e0e0e0}
 
 /* ── Topbar ── */
-.topbar{background:rgba(0,0,0,0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.05)}
+.topbar{background:rgba(10,10,10,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.05)}
 .logo-name{color:#fff}
 .logo-tag{color:#555;font-size:9px}
 .btn-topbar{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.15);color:#ccc}
 .btn-topbar:hover{background:rgba(255,255,255,0.16)}
 
 /* ── Hero ── */
-.hero{background:#181818;border:1px solid rgba(255,255,255,0.07);border-radius:14px;margin:8px 12px}
+.hero{background:#1e1e1e;border:1px solid rgba(255,255,255,0.10);border-radius:14px;margin:8px 12px}
 .hero-eyebrow{color:#555}
 .hero-dot{background:var(--green);box-shadow:0 0 6px var(--green)}
 .hero-title{color:#fff}
@@ -671,7 +671,7 @@ body{background:#000;color:#e0e0e0}
 .hero-stat-label{color:#555}
 
 /* ── Trust Bar ── */
-.trust-bar{background:#181818;border:1px solid rgba(255,255,255,0.07);border-radius:14px;margin:8px 12px}
+.trust-bar{background:#1e1e1e;border:1px solid rgba(255,255,255,0.10);border-radius:14px;margin:8px 12px}
 .trust-text{color:#888}
 .tbadge{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:#aaa}
 .tbadge.link{color:var(--green)}
@@ -679,15 +679,15 @@ body{background:#000;color:#e0e0e0}
 /* ── Pulse ── */
 .pulse{background:transparent;padding:8px 12px;margin:0}
 .pulse-row{gap:6px;display:flex}
-.pulse-item{background:#181818!important;border:1px solid rgba(255,255,255,0.07)!important;border-radius:12px!important;color:#fff}
+.pulse-item{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.07)!important;border-radius:12px!important;color:#fff}
 .pulse-item .p-label,.pulse-item .label{color:#555!important;font-size:8px!important}
 .pulse-item .p-val,.pulse-item .val{font-family:var(--fn)!important;color:#fff!important;font-weight:800!important}
 
 /* ── Stance ── */
-.stance-card,.stance-box{background:#181818;border:1px solid rgba(255,255,255,0.07);border-radius:14px}
+.stance-card,.stance-box{background:#181818;border:1px solid rgba(255,255,255,0.10);border-radius:14px}
 
 /* ── Brain Scanner ── */
-.brain-wrap{background:#181818!important;border:1px solid rgba(255,255,255,0.07)!important;border-radius:16px!important;margin:8px 12px}
+.brain-wrap{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:16px!important;margin:8px 12px}
 .brain-wrap::before{background:radial-gradient(ellipse at 50% 45%,rgba(0,220,130,0.015) 0%,transparent 55%),none!important}
 .brain-title{color:#555!important;font-size:10px!important;letter-spacing:2px!important}
 .brain-sub{color:#444!important}
@@ -708,7 +708,7 @@ body{background:#000;color:#e0e0e0}
 .brain-core{background:none!important}
 
 /* ── AI Commentary Card ── */
-.mkt-card{background:#181818!important;border:1px solid rgba(255,255,255,0.07)!important;border-radius:16px!important;margin:8px 12px!important;position:relative;overflow:hidden}
+.mkt-card{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:16px!important;margin:8px 12px!important;position:relative;overflow:hidden}
 .mkt-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,220,130,0.15),transparent)}
 .mkt-avatar{font-size:20px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(0,220,130,0.08);border-radius:12px;border:1px solid rgba(0,220,130,0.15)}
 .mkt-who{color:#fff!important;font-weight:700!important}
@@ -721,23 +721,23 @@ body{background:#000;color:#e0e0e0}
 .mkt-source{color:#555!important}
 
 /* ── Ranking ── */
-.rank-card{background:#181818!important;border:1px solid rgba(255,255,255,0.07)!important;border-radius:16px!important;margin:8px 12px!important}
+.rank-card{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:16px!important;margin:8px 12px!important}
 .rank-header-title{color:#fff!important;font-weight:800!important}
 .rank-header-sub{color:#444!important}
 .rank-row{border-bottom-color:rgba(255,255,255,0.03)!important}
 .rank-name{color:#999!important;font-weight:600!important}
 .rank-chg{font-family:var(--fn)!important;font-weight:700!important}
-.rank-chg.up{color:var(--green)!important}
-.rank-chg.dn{color:var(--dn)!important}
+.rank-chg.up{color:var(--dn)!important}
+.rank-chg.dn{color:var(--green)!important}
 .rank-footer{border-top-color:rgba(255,255,255,0.04)!important;color:#444!important}
 
 /* ── Detail Panel ── */
-.detail-panel{background:#181818;border:1px solid rgba(255,255,255,0.07);border-radius:16px;margin:8px 12px}
+.detail-panel{background:#1e1e1e;border:1px solid rgba(255,255,255,0.07);border-radius:16px;margin:8px 12px}
 .detail-name{color:#fff!important}
 .detail-close{color:#555!important}
 .detail-section-title{color:#555!important}
-.detail-chg-big.up{color:var(--green)!important}
-.detail-chg-big.dn{color:var(--dn)!important}
+.detail-chg-big.up{color:var(--dn)!important}
+.detail-chg-big.dn{color:var(--green)!important}
 .detail-box{background:rgba(255,255,255,0.02)!important;border-color:rgba(255,255,255,0.04)!important;border-radius:10px!important}
 .detail-cmt{background:rgba(0,220,130,0.04)!important;border:1px solid rgba(0,220,130,0.08)!important;border-radius:12px!important}
 .detail-cmt-body{color:#999!important}
@@ -756,13 +756,13 @@ body{background:#000;color:#e0e0e0}
 .d-chart-box{background:rgba(255,255,255,0.02)!important;border-radius:10px!important}
 
 /* ── 3 Tabs ── */
-.t5-tabs{background:#0f0f0f;border-radius:12px;margin:8px 12px;padding:3px;display:flex;gap:0;border:1px solid rgba(255,255,255,0.08)}
+.t5-tabs{background:#141414;border-radius:12px;margin:8px 12px;padding:3px;display:flex;gap:0;border:1px solid rgba(255,255,255,0.08)}
 .t5-tab{background:transparent!important;color:#888!important;border-radius:10px!important;font-weight:700!important}
-.t5-tab.active{background:#1a1a1a!important;color:var(--green)!important;box-shadow:0 2px 8px rgba(0,0,0,0.4)!important}
+.t5-tab.active{background:#252525!important;color:var(--green)!important;box-shadow:0 2px 8px rgba(0,0,0,0.4)!important}
 
 /* ── Tab Content Cards ── */
 #top5Body{margin:0 12px}
-.top10-card,.sec-card{background:#181818!important;border:1px solid rgba(255,255,255,0.07)!important;border-radius:14px!important}
+.top10-card,.sec-card{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:14px!important}
 .top10-name{color:#fff!important}
 .top10-score{font-family:var(--fn)!important}
 .top10-score.hi{color:var(--green)!important}
@@ -770,22 +770,22 @@ body{background:#000;color:#e0e0e0}
 .sec-back-btn{color:var(--green)!important}
 
 /* ── Sector Section ── */
-.sec-wrap{background:#181818!important;border:1px solid rgba(255,255,255,0.07)!important;border-radius:16px!important;margin:8px 12px!important}
+.sec-wrap{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:16px!important;margin:8px 12px!important}
 .sec-head-title{color:#fff!important;font-weight:800!important}
 .sec-head-sub{color:#444!important}
 
 /* ── Portfolio/Diary ── */
 .pf-hero{background:rgba(0,220,130,0.04)!important;border-radius:12px!important}
 .pf-total{color:#fff!important;font-family:var(--fn)!important}
-.pf-chg.up{color:var(--green)!important}
-.pf-chg.dn{color:var(--dn)!important}
+.pf-chg.up{color:var(--dn)!important}
+.pf-chg.dn{color:var(--green)!important}
 .pf-stat{background:rgba(255,255,255,0.02)!important;border-radius:8px!important}
 .pf-stat-val{color:#fff!important;font-family:var(--fn)!important}
 .pf-stat-label{color:#555!important}
 .pf-stock{border-bottom-color:rgba(255,255,255,0.03)!important}
 .pf-stock-name{color:#fff!important}
-.pf-stock-chg.up{color:var(--green)!important}
-.pf-stock-chg.dn{color:var(--dn)!important}
+.pf-stock-chg.up{color:var(--dn)!important}
+.pf-stock-chg.dn{color:var(--green)!important}
 .pf-note-link{color:var(--green)!important;background:rgba(0,220,130,0.1)!important;border-radius:8px!important}
 .pf-note-link:hover{background:rgba(0,220,130,0.15)!important}
 
@@ -800,18 +800,18 @@ body{background:#000;color:#e0e0e0}
 .bottom-nav .nav-item.active{color:var(--green)!important}
 
 /* ── Settings / Logic Modal ── */
-.settings-panel{background:#181818!important;border-color:rgba(255,255,255,0.04)!important}
+.settings-panel{background:#1e1e1e!important;border-color:rgba(255,255,255,0.04)!important}
 .settings-panel h2,.settings-panel h3{color:#fff!important}
 .settings-panel label{color:#888!important}
 .logic-overlay{background:rgba(0,0,0,0.85)!important}
-.logic-modal{background:#181818!important;border:1px solid rgba(255,255,255,0.06)!important;border-radius:16px!important;color:#999!important}
+.logic-modal{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.06)!important;border-radius:16px!important;color:#999!important}
 .logic-modal h2{color:#fff!important}
 .logic-title{color:var(--green)!important}
 .btn-logic-close{background:rgba(255,255,255,0.06)!important;color:#fff!important;border-radius:10px!important}
 
 /* ── Watch Panel ── */
 .watch-empty{color:#555!important}
-.watch-card{background:#181818!important;border:1px solid rgba(255,255,255,0.07)!important;border-radius:14px!important}
+.watch-card{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:14px!important}
 .watch-name{color:#fff!important}
 .watch-score{font-family:var(--fn)!important}
 .watch-meta{color:#555!important}
@@ -844,6 +844,68 @@ body{background:#000;color:#e0e0e0}
 /* ── Global accent override ── */
 a{color:var(--green)}
 ::selection{background:rgba(0,220,130,0.2);color:#fff}
+
+/* ═══════════════════════════════════════
+   CLICKABILITY IMPROVEMENTS
+   ═══════════════════════════════════════ */
+
+/* ── クリッカブルカードに hover エフェクト ── */
+.top10-card:hover{background:#252525!important;border-color:rgba(0,220,130,0.2)!important;transform:translateY(-1px);transition:all 0.15s ease}
+.top10-card{transition:all 0.15s ease}
+
+.sec-tile:hover{background:#252525!important;border-color:rgba(0,220,130,0.2)!important;transform:translateY(-1px);transition:all 0.15s ease}
+.sec-tile{transition:all 0.15s ease}
+
+.rank-row:hover{background:rgba(0,220,130,0.04)!important}
+.rank-row.active{background:rgba(0,220,130,0.08)!important}
+
+/* ── ボタン類を目立たせる ── */
+.btn-topbar{border:1px solid rgba(0,220,130,0.2)!important;color:var(--green)!important;font-weight:700!important;transition:all 0.15s ease}
+.btn-topbar:hover{background:rgba(0,220,130,0.12)!important;border-color:rgba(0,220,130,0.35)!important}
+
+.d-btn{border:1px solid rgba(0,220,130,0.2)!important;transition:all 0.15s ease}
+.d-btn:hover{background:rgba(0,220,130,0.1)!important;border-color:rgba(0,220,130,0.35)!important;transform:translateY(-1px)}
+
+.pf-note-link{transition:all 0.15s ease}
+.pf-note-link:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,220,130,0.15)!important}
+
+/* ── タブに hover インジケータ ── */
+.t5-tab{transition:all 0.15s ease}
+.t5-tab:hover:not(.active){background:rgba(255,255,255,0.05)!important;color:#aaa!important}
+
+.nav-tab{transition:all 0.15s ease}
+.nav-tab:hover:not(.active){background:rgba(255,255,255,0.04)}
+
+.nav-item{transition:color 0.15s ease}
+.nav-item:hover:not(.active){color:#888!important}
+
+/* ── ランキング行にクリック可能感 ── */
+.rank-row{transition:background 0.1s ease;position:relative}
+.rank-row::after{content:'▸';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:9px;color:rgba(255,255,255,0.1);transition:color 0.15s}
+.rank-row:hover::after{color:rgba(0,220,130,0.4)}
+
+/* ── TOP10カードの展開インジケータを見やすく ── */
+.top10-card .top10-right div[style*="詳細"]{color:var(--green)!important;opacity:0.6}
+.top10-card:hover .top10-right div[style*="詳細"]{opacity:1}
+
+/* ── ウォッチリスト行 ── */
+.watch-row{transition:all 0.15s ease}
+.watch-row:hover{background:#252525!important;border-color:rgba(0,220,130,0.15)!important}
+
+/* ── 設定ボタン ── */
+.setting-opt{transition:all 0.12s ease}
+.setting-opt:hover:not(.active){border-color:rgba(255,255,255,0.2)!important;background:rgba(255,255,255,0.06)!important}
+.settings-save{transition:all 0.15s ease}
+.settings-save:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,220,130,0.2)}
+
+/* ── テーブル行のhover ── */
+.stock-table tr.tbl-row:hover{background:#1e1e1e!important}
+.stock-table tr.tbl-row{cursor:pointer;transition:background 0.1s}
+
+/* ── フィルター設定 ── */
+.filter-tab{transition:all 0.12s ease}
+.filter-tab:hover:not(.active){border-color:rgba(255,255,255,0.15);background:rgba(255,255,255,0.06)}
+
 </style>
 </head>
 <body>
