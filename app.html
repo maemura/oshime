@@ -579,7 +579,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 .rank-grid{display:grid;grid-template-columns:1fr 1fr;}
 .rank-col{display:flex;flex-direction:column;}
 .rank-col+.rank-col{border-left:1px solid rgba(100,150,255,0.06);}
-.rank-row{border-bottom:1px solid rgba(100,150,255,0.05);cursor:pointer;transition:background 0.15s;}
+.rank-row{border-bottom:1px solid rgba(100,150,255,0.05);cursor:pointer;transition:all 0.15s;position:relative;}
 .rank-row:hover{background:rgba(100,150,255,0.04);}
 .rank-row:last-child{border-bottom:none;}
 .rank-row.active{background:rgba(74,144,217,0.08);}
@@ -757,8 +757,8 @@ body{background:#0a0a0a;color:#e0e0e0}
 
 /* ── 3 Tabs ── */
 .t5-tabs{background:#141414;border-radius:12px;margin:8px 12px;padding:3px;display:flex;gap:0;border:1px solid rgba(255,255,255,0.08)}
-.t5-tab{background:transparent!important;color:#888!important;border-radius:10px!important;font-weight:700!important}
-.t5-tab.active{background:#252525!important;color:var(--green)!important;box-shadow:0 2px 8px rgba(0,0,0,0.4)!important}
+.t5-tab{background:transparent!important;color:#888!important;border-radius:10px!important;font-weight:700!important;font-size:13px!important;padding:12px 6px!important;transition:all 0.15s ease}
+.t5-tab.active{background:#252525!important;color:var(--green)!important;box-shadow:0 2px 8px rgba(0,0,0,0.4),inset 0 -2px 0 var(--green)!important}
 
 /* ── Tab Content Cards ── */
 #top5Body{margin:0 12px}
@@ -817,7 +817,7 @@ body{background:#0a0a0a;color:#e0e0e0}
 .watch-meta{color:#555!important}
 
 /* ── Disclaimer ── */
-.disclaimer{color:#333!important;border:none!important;background:transparent!important}
+.disclaimer{color:#555!important;border:none!important;background:rgba(255,255,255,0.02)!important;border-top:1px solid rgba(255,255,255,0.06)!important;padding:16px 12px!important;margin-top:20px!important}
 
 /* ── Kokusaku Badge ── */
 .kok-badge{background:rgba(0,220,130,0.08)!important;color:var(--green)!important;border:1px solid rgba(0,220,130,0.15)!important;border-radius:6px!important}
@@ -906,6 +906,42 @@ a{color:var(--green)}
 .filter-tab{transition:all 0.12s ease}
 .filter-tab:hover:not(.active){border-color:rgba(255,255,255,0.15);background:rgba(255,255,255,0.06)}
 
+
+/* R2: CLICKABILITY */
+.top10-card{transition:all 0.15s ease!important}
+.top10-card:hover{background:#262626!important;border-color:rgba(0,220,130,0.2)!important;transform:translateY(-1px)}
+.sec-tile{transition:all 0.15s ease!important}
+.sec-tile:hover{background:#262626!important;border-color:rgba(0,220,130,0.2)!important;transform:translateY(-1px)}
+.rank-row::after{content:'▸';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:10px;color:rgba(255,255,255,0.08);transition:color 0.15s}
+.rank-row:hover::after{color:var(--green)}
+.rank-row:hover .rank-name{color:#fff!important}
+.d-btn-primary{background:rgba(0,220,130,0.12)!important;border-color:rgba(0,220,130,0.25)!important;font-weight:700!important}
+.d-btn-primary:hover{background:rgba(0,220,130,0.2)!important;transform:translateY(-1px)}
+.d-btn{transition:all 0.15s ease!important}
+.d-btn:hover{border-color:rgba(0,220,130,0.3)!important;transform:translateY(-1px)}
+.btn-topbar{border:1px solid rgba(0,220,130,0.15)!important;color:var(--green)!important;transition:all 0.15s}
+.btn-topbar:hover{background:rgba(0,220,130,0.1)!important;border-color:rgba(0,220,130,0.3)!important}
+.t5-tab:hover:not(.active){background:rgba(255,255,255,0.04)!important;color:#bbb!important}
+.stock-table tr.tbl-row{transition:background 0.1s}
+.stock-table tr.tbl-row:hover{background:#1e1e1e!important}
+.watch-row{transition:all 0.15s!important}
+.watch-row:hover{background:#262626!important;border-color:rgba(0,220,130,0.15)!important}
+.setting-opt{transition:all 0.12s}
+.setting-opt:hover:not(.active){border-color:rgba(255,255,255,0.2)!important;background:rgba(255,255,255,0.05)!important}
+.pf-note-link{transition:all 0.15s}
+.pf-note-link:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,220,130,0.15)!important}
+
+
+/* R3: CONSISTENCY */
+.hero,.trust-bar,.pulse,.mkt-card,.brain-wrap,.rank-card,.t5-tabs,.sec-wrap{margin-bottom:16px!important}
+.hero{position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,220,130,0.2),transparent)}
+.rank-card{position:relative;overflow:hidden}
+.rank-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,220,130,0.12),transparent)}
+#portfolioSection{border-left:3px solid var(--green)!important}
+.brain-wrap{opacity:0.92}
+.detail-stats{grid-template-columns:repeat(auto-fit,minmax(60px,1fr))!important}
+
 </style>
 </head>
 <body>
@@ -931,6 +967,36 @@ a{color:var(--green)}
   <!-- ══ HOME PANEL ══ -->
   <div class="panel active" id="panel-home">
 
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-eyebrow" id="heroEyebrow">
+        <span class="hero-dot"></span>AI × 高配当 × 割安 — 毎朝8:30自動更新
+      </div>
+      <div class="hero-top">
+        <div class="hero-left">
+          <div class="hero-title">今日の<span>押し目候補</span>を即表示</div>
+        </div>
+      </div>
+      <div class="hero-stats" id="heroStats">
+        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏の銘柄数</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
+      </div>
+    </div>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar" id="trustBanner">
+      <div class="trust-left">
+        <div class="trust-dot" id="trustDot"></div>
+        <div class="trust-text" id="trustText">データ確認中...</div>
+      </div>
+      <div class="trust-badges">
+        <span class="tbadge" id="totalCountBadge">東証プライム</span>
+        <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
+      </div>
+    </div>
+
     <!-- MARKET PULSE -->
     <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
 
@@ -947,6 +1013,47 @@ a{color:var(--green)}
         <div class="mkt-comment" id="mktCommentBody"></div>
         <div class="mkt-tags" id="mktCommentTags"></div>
         <div class="mkt-sources" id="mktCommentSources"></div>
+      </div>
+    </div>
+
+    <div class="rank-card" id="rankSection" style="display:none">
+      <div class="rank-header">
+        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
+        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ <span style="color:var(--green);font-weight:700">タップで詳細 ▸</span></div>
+      </div>
+      <div class="rank-grid" id="rankGrid"></div>
+      <div class="rank-footer" id="rankFooter"></div>
+    </div>
+
+    <div class="detail-panel" id="detailPanel"></div>
+
+    <!-- 3 TABS -->
+    <div class="t5-tabs">
+      <div class="t5-tab active" id="t5TabSec" onclick="setTop5Tab('sector')">📊 セクター</div>
+      <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">📈 上昇</div>
+      <div class="t5-tab" id="t5TabDip" onclick="setTop5Tab('dip')">📉 割安</div>
+    </div>
+
+    <!-- TAB CONTENT -->
+    <div id="top5Body">
+      <div style="padding:20px;text-align:center">
+        <div class="skel-row skeleton"></div>
+        <div class="skel-row skeleton"></div>
+        <div style="font-size:11px;color:var(--text3);margin-top:8px">データ読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- STANCE -->
+    <div id="stanceBox"></div>
+
+    <!-- 📊 投資日記 -->
+    <div class="sec-wrap" id="portfolioSection">
+      <div class="sec-head">
+        <div class="sec-head-title">📊 かぶのすけ（AI）の投資日記</div>
+        <div class="sec-head-sub">AI × 1000万円 ／ 2026.2.24スタート</div>
+      </div>
+      <div id="portfolioBody">
+        <div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div>
       </div>
     </div>
 
@@ -982,77 +1089,6 @@ a{color:var(--green)}
             <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff9f43"></div>過熱</div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="rank-card" id="rankSection" style="display:none">
-      <div class="rank-header">
-        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
-        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ タップで詳細</div>
-      </div>
-      <div class="rank-grid" id="rankGrid"></div>
-      <div class="rank-footer" id="rankFooter"></div>
-    </div>
-
-    <div class="detail-panel" id="detailPanel"></div>
-
-    <!-- HERO -->
-    <div class="hero">
-      <div class="hero-eyebrow" id="heroEyebrow">
-        <span class="hero-dot"></span>AI × 高配当 × 割安 — 毎朝8:30自動更新
-      </div>
-      <div class="hero-top">
-        <div class="hero-left">
-          <div class="hero-title">今日の<span>押し目候補</span>を即表示</div>
-        </div>
-      </div>
-      <div class="hero-stats" id="heroStats">
-        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏の銘柄数</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
-      </div>
-    </div>
-
-    <!-- TRUST BAR -->
-    <div class="trust-bar" id="trustBanner">
-      <div class="trust-left">
-        <div class="trust-dot" id="trustDot"></div>
-        <div class="trust-text" id="trustText">データ確認中...</div>
-      </div>
-      <div class="trust-badges">
-        <span class="tbadge" id="totalCountBadge">東証プライム</span>
-        <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
-      </div>
-    </div>
-
-    <!-- STANCE -->
-    <div id="stanceBox"></div>
-
-    <!-- 3 TABS -->
-    <div class="t5-tabs">
-      <div class="t5-tab active" id="t5TabSec" onclick="setTop5Tab('sector')">📊 セクター</div>
-      <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">📈 上昇</div>
-      <div class="t5-tab" id="t5TabDip" onclick="setTop5Tab('dip')">📉 割安</div>
-    </div>
-
-    <!-- TAB CONTENT -->
-    <div id="top5Body">
-      <div style="padding:20px;text-align:center">
-        <div class="skel-row skeleton"></div>
-        <div class="skel-row skeleton"></div>
-        <div style="font-size:11px;color:var(--text3);margin-top:8px">データ読み込み中...</div>
-      </div>
-    </div>
-
-    <!-- 📊 投資日記 -->
-    <div class="sec-wrap" id="portfolioSection">
-      <div class="sec-head">
-        <div class="sec-head-title">📊 かぶのすけ（AI）の投資日記</div>
-        <div class="sec-head-sub">AI × 1000万円 ／ 2026.2.24スタート</div>
-      </div>
-      <div id="portfolioBody">
-        <div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div>
       </div>
     </div>
 
