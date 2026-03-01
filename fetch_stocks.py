@@ -344,14 +344,26 @@ def fetch_stock_data(code, retries=2):
             # ファンダメンタル
             dividend = info.get("dividendYield")
             if dividend and dividend > 0:
-                dividend = round(dividend * 100, 2)  # yfinance returns as decimal
+                # yfinanceは通常小数(0.044=4.4%)で返すが、
+                # 日本株で稀にパーセント値(4.4)で返る場合がある
+                if dividend > 1:
+                    dividend = round(dividend, 2)
+                else:
+                    dividend = round(dividend * 100, 2)
             else:
                 # フォールバック: trailingAnnualDividendYield
                 dividend = info.get("trailingAnnualDividendYield")
                 if dividend and dividend > 0:
-                    dividend = round(dividend * 100, 2)
+                    if dividend > 1:
+                        dividend = round(dividend, 2)
+                    else:
+                        dividend = round(dividend * 100, 2)
                 else:
                     dividend = 0.0
+
+            # 最終サニティチェック: 現実的に配当利回り20%超はありえない
+            if dividend > 20:
+                dividend = round(dividend / 100, 2) if dividend > 100 else 0.0
 
             pbr = info.get("priceToBook")
             if pbr:

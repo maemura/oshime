@@ -1724,6 +1724,7 @@ function buildExpand(s){
       <div class="d-sec-ttl">📈 この銘柄のポイント</div>
       <div style="padding:10px 14px;margin-bottom:10px;background:rgba(0,135,90,0.06);border-radius:8px;border:1px solid rgba(0,135,90,0.15);font-size:13px;color:var(--text)">
         💰 購入に必要な金額 → <b style="font-size:16px;color:var(--green)">約${((s.price||0)*100)>=10000?Math.round((s.price||0)*100/10000)+'万':Math.round((s.price||0)*100/1000)+'千'}円</b><span style="font-size:10px;color:var(--text3)">（100株 × ¥${(s.price||0).toLocaleString()}）</span>
+        ${(s.dividend||0)>0?`<br>📦 年間配当金 → <b style="font-size:16px;color:var(--green)">約¥${Math.round((s.price||0)*100*(s.dividend||0)/100).toLocaleString()}</b><span style="font-size:10px;color:var(--text3)">（税引前・100株保有時）</span>`:''}
       </div>
       <div class="d-cards">
         <div class="d-card"><b>${(s.dividend||0).toFixed(1)}%</b><small>配当利回り</small></div>
@@ -2004,7 +2005,11 @@ async function loadRealData(){
     if(!r.ok)throw new Error('fetch failed');
     const j=await r.json();
     if(j.stocks&&j.stocks.length>0){
-      STOCKS=j.stocks;
+      STOCKS=j.stocks.map(s=>{
+        // 配当利回りサニティチェック（yfinanceの返り値ブレ対応）
+        if(s.dividend>20) s.dividend=s.dividend>100?Math.round(s.dividend/100*100)/100:0;
+        return s;
+      });
       dataSource='real';
       // 市場データ
       const mFields=['nikkei_price','nikkei_ma25','nikkei_1d_chg','nasdaq_1d_chg',
