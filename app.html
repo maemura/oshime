@@ -2254,6 +2254,12 @@ function buildRanking(){
       price:s.price||0,rsi:s.rsi||0,
       ma25d:d25>=0?'+'+d25.toFixed(1)+'%':d25.toFixed(1)+'%',
       div:((s.dividend||0)).toFixed(1)+'%',
+      divNum:s.dividend||0,
+      pbr:s.pbr||null,
+      per:s.per||null,
+      ma25:s.ma25||0,
+      ma75:s.ma75||0,
+      closes_60d:s.closes_60d||[],
       score:s.score||0,
       kokusaku:s.kokusaku||'',
       cmt:cmt
@@ -2325,21 +2331,49 @@ function showRankDetail(idx){
       '<div class="detail-cmt-body">'+s.cmt.text+'</div>'+
       '<div class="detail-cmt-sources">'+srcTags+'</div></div>';
   }else{
-    // Auto-generate comment from data
+    // Auto-generate comment from data（リッチ版）
     var autoText='';
     var rsi=s.rsi||0;
     var divN=parseFloat(s.div)||0;
     var sc=s.score||0;
-    if(rsi<=30)autoText+='<strong>RSI'+rsi+'で売られすぎ水準</strong>。押し目チャンスかも。';
-    else if(rsi>=70)autoText+='RSI'+rsi+'で過熱気味。利確タイミングに注意。';
-    else autoText+='RSI'+rsi+'で中立圏。';
-    if(divN>=4)autoText+='配当'+s.div+'は魅力的な高配当水準だね。';
+    var d25val=parseFloat(s.ma25d)||0;
+    var pbrV=s.pbr||0;
+    var perV=s.per||0;
+    var chgV=s.chg||0;
+
+    // 1. 値動きの状況
+    if(chgV>=3)autoText+='<strong>前日比+'+chgV.toFixed(1)+'%と大幅上昇</strong>。材料が出た可能性あり。';
+    else if(chgV<=-3)autoText+='<strong>前日比'+chgV.toFixed(1)+'%と大幅下落</strong>。ネガティブ材料に注意…ただし押し目の可能性も。';
+    else if(chgV>=1)autoText+='前日比+'+chgV.toFixed(1)+'%と堅調。';
+    else if(chgV<=-1)autoText+='前日比'+chgV.toFixed(1)+'%とやや軟調。';
+
+    // 2. テクニカル分析（RSI + MA乖離を組合せ）
+    if(rsi<=30&&d25val<=-5)autoText+='RSI'+rsi+'×25MA乖離'+d25val.toFixed(1)+'%で<strong>ダブルの売られすぎシグナル</strong>。反発狙いには面白い水準。';
+    else if(rsi<=30)autoText+='RSI'+rsi+'で売られすぎ水準。自律反発に期待できるゾーン。';
+    else if(rsi>=70)autoText+='RSI'+rsi+'で過熱圏。短期的な利確売りに注意。';
+    else if(d25val<=-5)autoText+='25MA乖離'+d25val.toFixed(1)+'%で移動平均から大きく下振れ。反発候補。';
+    else if(d25val>=5)autoText+='25MAを+'+d25val.toFixed(1)+'%上回り上昇トレンド継続中。';
+
+    // 3. ファンダメンタル（配当+PBR+PERを組合せ）
+    if(divN>=4.5&&pbrV>0&&pbrV<=1.0)autoText+='配当'+s.div+'×PBR'+pbrV.toFixed(2)+'倍の<strong>高配当×割安の好条件</strong>。下値は限定的。';
+    else if(divN>=4)autoText+='配当'+s.div+'は高配当水準。長期保有でインカム狙いなら◎。';
     else if(divN>=2.5)autoText+='配当'+s.div+'で安定感あり。';
-    if(sc>=60)autoText+='スコア'+sc+'ptは僕の基準クリア✨';
-    else if(sc>=45)autoText+='スコア'+sc+'ptでまずまず。もう少し押したら面白い。';
-    else autoText+='スコア'+sc+'pt。今は様子見かな。';
-    var autoSrc=['tech','score'].map(function(t){
-      var srcLabels={tech:'📊 テクニカル',score:'⭐ スコア'};
+    if(pbrV>0&&pbrV<=0.7&&divN<4)autoText+='PBR'+pbrV.toFixed(2)+'倍で<strong>解散価値割れ</strong>。理論上の下値は固い。';
+    if(perV>0&&perV<=10)autoText+='PER'+perV.toFixed(0)+'倍は割安水準。';
+
+    // 4. 総合判定
+    if(sc>=60)autoText+='総合'+sc+'ptで<strong>僕の基準をしっかりクリア</strong>✨';
+    else if(sc>=45)autoText+='総合'+sc+'pt。あと一押しで狙い目に。';
+    else if(sc>=30)autoText+='総合'+sc+'pt。今は様子見が無難かな。';
+    else autoText+='総合'+sc+'pt。積極的には動きにくい水準。';
+
+    // 国策テーマ
+    if(s.kokusaku)autoText+='<br>🏛️ 国策テーマ「'+s.kokusaku+'」関連で中長期の追い風あり。';
+
+    var autoSources=['tech','score'];
+    if(divN>=2.5)autoSources.push('yt');
+    var autoSrc=autoSources.map(function(t){
+      var srcLabels={tech:'📊 テクニカル',score:'⭐ スコア',yt:'📺 データ分析'};
       return'<span class="src-tag '+t+'">'+(srcLabels[t]||t)+'</span>';
     }).join('');
     cmtHtml='<div class="detail-cmt">'+
@@ -2352,18 +2386,56 @@ function showRankDetail(idx){
 
   var kokBadge=s.kokusaku?'<span style="display:inline-block;background:linear-gradient(135deg,#d4af37,#f0d060);color:#1a1a2e;font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;margin-left:6px">🏛️ 国策:'+s.kokusaku+'</span>':'';
 
+  // 購入金額・配当金額
+  var buyAmt=(s.price||0)*100;
+  var buyStr=buyAmt>=10000?'約'+Math.round(buyAmt/10000)+'万円':'約'+Math.round(buyAmt/1000)+'千円';
+  var annDiv=Math.round(buyAmt*(s.divNum||0)/100);
+  var divAmtStr=annDiv>0?'約¥'+annDiv.toLocaleString():'—';
+
+  // チャート
+  var hasSpark=s.closes_60d&&s.closes_60d.length>10;
+  var chartHtml=hasSpark?
+    '<div style="padding:8px 12px;background:var(--bg2);border-radius:8px;margin-bottom:8px">'+
+    '<div style="font-size:10px;font-weight:700;color:var(--text2);margin-bottom:6px">📊 60日チャート</div>'+
+    '<svg class="rank-detail-chart" viewBox="0 0 320 100" style="width:100%;height:100px" data-rchart="'+s.code+'"></svg>'+
+    '<div style="display:flex;gap:10px;margin-top:4px;font-size:9px;color:var(--text3)">'+
+    '<span>株価 ¥'+(s.price||0).toLocaleString()+'</span>'+
+    '<span style="color:#F59E0B">25日線 ¥'+(s.ma25||0).toLocaleString()+'</span>'+
+    '<span style="color:#059669">75日線 ¥'+(s.ma75||0).toLocaleString()+'</span>'+
+    '</div></div>':'';
+
+  // PBR/PER
+  var pbrStr=s.pbr?s.pbr.toFixed(2)+'倍':'—';
+  var perStr=s.per?s.per.toFixed(0)+'倍':'—';
+
   panel.innerHTML=
     '<div class="detail-top">'+
       '<div class="detail-info"><div class="detail-name">'+s.name+kokBadge+'</div>'+
       '<div class="detail-meta">'+s.code+' ・ '+s.sector+' ・ '+s.cap+'</div></div>'+
       '<div class="detail-chg-big '+chgCls+'">'+sign+s.chg.toFixed(1)+'%</div>'+
       '<button class="detail-close" onclick="showRankDetail('+idx+')">✕</button></div>'+
+    chartHtml+
+    '<div style="padding:8px 12px;margin-bottom:8px;background:rgba(0,135,90,0.06);border-radius:8px;border:1px solid rgba(0,135,90,0.15);font-size:12px;color:var(--text)">'+
+      '💰 購入に必要な金額 → <b style="font-size:15px;color:var(--green)">'+buyStr+'</b>'+
+      '<span style="font-size:9px;color:var(--text3)">（100株 × ¥'+(s.price||0).toLocaleString()+'）</span>'+
+      (annDiv>0?'<br>📦 年間配当金 → <b style="font-size:15px;color:var(--green)">'+divAmtStr+'</b><span style="font-size:9px;color:var(--text3)">（税引前・100株保有時）</span>':'')+
+    '</div>'+
     '<div class="detail-stats">'+
       '<div class="detail-stat"><div class="detail-stat-val">'+s.rsi+'</div><div class="detail-stat-label">RSI</div></div>'+
       '<div class="detail-stat"><div class="detail-stat-val">'+s.ma25d+'</div><div class="detail-stat-label">25MA乖離</div></div>'+
       '<div class="detail-stat"><div class="detail-stat-val">'+s.div+'</div><div class="detail-stat-label">配当利回り</div></div>'+
       '<div class="detail-stat"><div class="detail-stat-val">'+s.score+'pt</div><div class="detail-stat-label">スコア</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+pbrStr+'</div><div class="detail-stat-label">PBR</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+perStr+'</div><div class="detail-stat-label">PER</div></div>'+
     '</div>'+cmtHtml;
+
+  // Draw chart if available
+  if(hasSpark){
+    setTimeout(function(){
+      var el=document.querySelector('[data-rchart="'+s.code+'"]');
+      if(el)drawDetailChart(el,s.closes_60d,s.ma25,s.ma75);
+    },50);
+  }
 
   panel.classList.remove('show');
   void panel.offsetWidth;
