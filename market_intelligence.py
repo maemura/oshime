@@ -20,7 +20,9 @@ result = {
     "fear_greed": {},
     "kabutan_news": [],
     "tradingview_signals": [],
-    "yahoo_board": []
+    "yahoo_board": [],
+    "tdnet_disclosures": [],
+    "google_news": []
 }
 
 # ─── 1. note トレンド（#日本株 + #株式投資） ───
@@ -237,6 +239,63 @@ for code in MINKABU_CODES:
     except Exception as e:
         result["yahoo_board"].append({"code": code, "error": str(e)[:50]})
 print(f"  ✅ {len(result['yahoo_board'])}銘柄取得")
+
+
+# ─── 7. TDnet 適時開示 ───
+print("📋 TDnet適時開示収集中...")
+try:
+    import re as re_td
+    today_str = NOW.strftime("%Y%m%d")
+    url = f"https://www.release.tdnet.info/inbs/I_list_001_{today_str}.html"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        html = resp.read().decode("utf-8", errors="ignore")
+    links = re_td.findall(r'href="([^"]+\.pdf)"[^>]*>([^<]+)<', html)
+    keywords = ["決算", "業績", "配当", "修正", "株式", "自己株", "買付", "合併", "分割", "増資"]
+    for url_path, title in links:
+        title = title.strip()
+        if len(title) > 10 and any(k in title for k in keywords):
+            result["tdnet_disclosures"].append({
+                "title": title[:80],
+                "url": f"https://www.release.tdnet.info/inbs/{url_path}"
+            })
+            if len(result["tdnet_disclosures"]) >= 15:
+                break
+    print(f"  ✅ {len(result['tdnet_disclosures'])}件取得（全{len(links)}件中）")
+except Exception as e:
+    print(f"  ⚠ TDnet取得失敗: {e}")
+
+
+# ─── 8. Google News（日本株関連） ───
+print("📰 Google News収集中...")
+GNEWS_QUERIES = [
+    "%E6%97%A5%E6%9C%AC%E6%A0%AA",
+    "%E6%97%A5%E7%B5%8C%E5%B9%B3%E5%9D%87",
+]
+seen_titles = set()
+for q in GNEWS_QUERIES:
+    try:
+        url = f"https://news.google.com/rss/search?q={q}&hl=ja&gl=JP&ceid=JP:ja"
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            tree = ET.parse(resp)
+        for item in list(tree.findall(".//item"))[:10]:
+            title_el = item.find("title")
+            link_el = item.find("link")
+            pub_el = item.find("pubDate")
+            if title_el is not None and title_el.text:
+                t = title_el.text.strip()[:80]
+                if t not in seen_titles:
+                    seen_titles.add(t)
+                    result["google_news"].append({
+                        "title": t,
+                        "url": link_el.text if link_el is not None else "",
+                        "published": pub_el.text if pub_el is not None else ""
+                    })
+    except Exception as e:
+        print(f"  ⚠ Google News取得失敗: {e}")
+result["google_news"] = result["google_news"][:15]
+print(f"  ✅ {len(result['google_news'])}件取得")
 
 
 # ─── 保存 ───
