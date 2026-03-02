@@ -19,13 +19,22 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: pip install anthropic
+
       - name: Collect market intelligence
         run: python market_intelligence.py
+
+      - name: Summarize articles (morning only)
+        if: github.event.schedule == '0 21 * * 0-4' || github.event_name == 'workflow_dispatch'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python summarize_articles.py
 
       - name: Commit & Push
         run: |
           git config user.name "kabunosuke-bot"
           git config user.email "bot@kabunosuke.ai"
-          git add market_intelligence.json intelligence_data/
+          git add market_intelligence.json intelligence_data/ article_summaries/ article_summaries_latest.json
           git diff --cached --quiet || git commit -m "🧠 マーケットインテリジェンス $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
           git pull --rebase -X theirs && git push
