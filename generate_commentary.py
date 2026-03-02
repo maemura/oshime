@@ -9,7 +9,7 @@ Claude API で市場全体コメント＋個別銘柄コメントを生成。
 GitHub Actions で fetch_stocks.py の後に実行。
 """
 
-import json, os, sys, datetime
+import json, os, sys, datetime, datetime
 
 # ─── Anthropic SDK ───
 try:
@@ -87,9 +87,49 @@ def build_prompt(stocks_data, sentiment_data):
         sentiment_text = "\n".join(parts)
 
     # コメント対象の銘柄コード（TOP30から注目度が高そうな10銘柄を選ぶ指示）
+    # ── 曜日で出力モードを切り替え ──
+    now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
+    weekday = now.weekday()  # 0=月 ... 6=日
+    is_weekend = weekday >= 5  # 土=5, 日=6
+
+    if is_weekend and weekday == 5:
+        mode_instruction = """
+## 今日は【土曜日】です。「今週の振り返り」モードで出力してください。
+
+### market.text の書き方（200-250文字）
+- 今週の市場全体の動きを振り返る（日経・為替・VIXの週間推移）
+- YouTubeの投資家たちが今週何に注目していたかを総括する
+- 来週に向けた注意点を1つ挙げる
+- 「今週は○○な1週間でした」のような書き出しで始める
+
+### stocks の書き方
+- 今週の値動きが大きかった銘柄を中心に選ぶ
+- 「今週+○%」のような週間パフォーマンス目線でコメント
+- 週間で見た時のトレンド変化に言及する
+"""
+    elif is_weekend and weekday == 6:
+        mode_instruction = """
+## 今日は【日曜日】です。「来週の展望」モードで出力してください。
+
+### market.text の書き方（200-250文字）
+- 来週の注目イベント（経済指標・決算・政治）に言及する
+- YouTubeの投資家たちの来週への温度感を伝える
+- 地政学リスクがあればそれも必ず触れる
+- 「来週は○○に注目ですね」のような書き出しで始める
+
+### stocks の書き方
+- 来週イベントがある銘柄（決算・権利日など）を優先
+- テクニカル的に来週動きそうな銘柄（RSI極端・MA乖離大）
+- 「来週は○○に注目」目線でコメント
+"""
+    else:
+        mode_instruction = """
+## 今日は【平日】です。通常の「今日の見立て」モードで出力してください。
+"""
+
     prompt = f"""あなたは「かぶのすけ」というAI投資キャラクターです。
 性格: データ重視、冷静、高配当×割安が好き、でも少しユーモアあり。一人称は「僕」。
-
+{mode_instruction}
 以下のデータを元に、2つのコメントを生成してください。
 
 ## 市場データ
@@ -105,7 +145,7 @@ def build_prompt(stocks_data, sentiment_data):
 
 {{
   "market": {{
-    "text": "全体コメント（150-200文字。HTMLの<strong>タグで重要部分を強調。YouTubeの空気感にも必ず言及。）",
+    "text": "全体コメント（平日:150-200文字、週末:200-250文字。HTMLの<strong>タグで重要部分を強調。YouTubeの空気感にも必ず言及。）",
     "tags": [
       {{"type": "bullish|bearish|hot|neutral", "label": "🟢|🔴|🟠|⚪ 短いラベル"}}
     ],
@@ -135,13 +175,7 @@ def build_prompt(stocks_data, sentiment_data):
 - 「買い」「売り」の断定はせず、「面白い水準」「注意が必要」のようにヒントを出す
 - 同じフレーズの使い回しを避ける。銘柄ごとに切り口を変える
 
-## 重要: 個別銘柄コメントの質について
-- テンプレ的な「RSI○○で売られすぎ」だけの分析はNG。もっと踏み込む
-- 「なぜこの銘柄が今注目か」を1文で説明すること（業績、テーマ、需給、イベントなど）
-- YouTubeセンチメントに関連する銘柄があれば、投資家の温度感を必ず織り交ぜる
-- 複数の指標を組み合わせた分析をする（例:「RSI30×配当4.5%×PBR0.8倍のトリプル好条件」）
-- 「買い」「売り」の断定はせず、「面白い水準」「注意が必要」のようにヒントを出す
-- 同じフレーズの使い回しを避ける。銘柄ごとに切り口を変える"""
+"""
 
     return prompt
 
