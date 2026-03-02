@@ -9,7 +9,7 @@ Claude API で市場全体コメント＋個別銘柄コメントを生成。
 GitHub Actions で fetch_stocks.py の後に実行。
 """
 
-import json, os, sys, datetime, datetime, datetime
+import json, os, sys, datetime, datetime, datetime, datetime
 
 # ─── Anthropic SDK ───
 try:
