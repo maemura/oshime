@@ -9,7 +9,7 @@ Claude API で市場全体コメント＋個別銘柄コメントを生成。
 GitHub Actions で fetch_stocks.py の後に実行。
 """
 
-import json, os, sys, datetime, datetime, datetime, datetime
+import json, os, sys, datetime
 
 # ─── Anthropic SDK ───
 try:
@@ -86,6 +86,26 @@ def build_prompt(stocks_data, sentiment_data):
                 parts.append(f"{layer_jp.get(layer, layer)}: {', '.join(words)}")
         sentiment_text = "\n".join(parts)
 
+    # ── マーケットインテリジェンス読み込み ──
+    intel_data = load_json("market_intelligence.json")
+    intel_parts = []
+    if intel_data:
+        # noteトレンド
+        notes = intel_data.get("note_trends", [])[:5]
+        if notes:
+            note_lines = [f"  ♥{n['likes']} {n['title'][:50]}" for n in notes]
+            intel_parts.append("noteトレンド（#日本株 人気記事）:\n" + "\n".join(note_lines))
+        # 日経見出し
+        headlines = intel_data.get("nikkei_headlines", [])[:8]
+        if headlines:
+            hl_lines = [f"  [{h['category']}] {h['title'][:50]}" for h in headlines]
+            intel_parts.append("日経ニュース見出し:\n" + "\n".join(hl_lines))
+        # 恐怖指数
+        fg = intel_data.get("fear_greed", {})
+        if fg.get("vix"):
+            intel_parts.append(f"恐怖指数: VIX={fg['vix']} → {fg.get('rating_jp','不明')}（{fg.get('score',50)}pt）")
+    intelligence_text = "\n\n".join(intel_parts) if intel_parts else "データなし"
+
     # コメント対象の銘柄コード（TOP30から注目度が高そうな10銘柄を選ぶ指示）
     # ── 曜日で出力モードを切り替え ──
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
@@ -137,6 +157,9 @@ def build_prompt(stocks_data, sentiment_data):
 
 ## YouTube投資チャンネルの空気感
 {sentiment_text}
+
+## マーケットインテリジェンス（noteトレンド・日経見出し・恐怖指数）
+{intelligence_text}
 
 ## 時価総額TOP30の株価データ
 {stock_summary}
