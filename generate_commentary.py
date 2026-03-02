@@ -104,6 +104,21 @@ def build_prompt(stocks_data, sentiment_data):
         fg = intel_data.get("fear_greed", {})
         if fg.get("vix"):
             intel_parts.append(f"恐怖指数: VIX={fg['vix']} → {fg.get('rating_jp','不明')}（{fg.get('score',50)}pt）")
+        # 株探ニュース
+        kabutan = intel_data.get("kabutan_news", [])[:5]
+        if kabutan:
+            kb_lines = [f"  {n['title'][:50]}" for n in kabutan]
+            intel_parts.append("株探ニュース:\n" + "\n".join(kb_lines))
+        # TradingViewシグナル
+        tv = intel_data.get("tradingview_signals", [])
+        if tv:
+            tv_lines = [f"  {s['code']}: {s['signal_jp']}（{s['score']:+.3f}）" for s in tv[:10]]
+            intel_parts.append("TradingViewテクニカル:\n" + "\n".join(tv_lines))
+        # みんかぶ予想
+        mk = [b for b in intel_data.get("yahoo_board", []) if "error" not in b]
+        if mk:
+            mk_lines = [f"  {b['code']}: 目標{b.get('target_price','?')}円 個人={b.get('individual_rating','?')} アナリスト={b.get('analyst_rating','?')}" for b in mk]
+            intel_parts.append("みんかぶ予想:\n" + "\n".join(mk_lines))
     intelligence_text = "\n\n".join(intel_parts) if intel_parts else "データなし"
 
     # コメント対象の銘柄コード（TOP30から注目度が高そうな10銘柄を選ぶ指示）
