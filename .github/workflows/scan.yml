@@ -36,4 +36,4 @@ jobs:
           git config user.email "bot@kabunosuke.ai"
           git add stocks_data.json commentary.json
           git diff --cached --quiet || git commit -m "📊 scan + 🤖 commentary $(date +%Y-%m-%d)"
-          git push
+          git pull --rebase && git push
