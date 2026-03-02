@@ -26,6 +26,6 @@ jobs:
         run: |
           git config user.name "kabunosuke-bot"
           git config user.email "bot@kabunosuke.ai"
-          git add market_intelligence.json
+          git add market_intelligence.json intelligence_data/
           git diff --cached --quiet || git commit -m "🧠 マーケットインテリジェンス $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
           git pull --rebase -X theirs && git push
