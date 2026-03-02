@@ -302,6 +302,14 @@ print(f"  ✅ {len(result['google_news'])}件取得")
 with open("market_intelligence.json", "w", encoding="utf-8") as f:
     json.dump(result, f, ensure_ascii=False, indent=2)
 
+# 日付別アーカイブ保存
+import os
+os.makedirs("intelligence_data", exist_ok=True)
+archive_path = f"intelligence_data/{DATE_STR}.json"
+with open(archive_path, "w", encoding="utf-8") as f:
+    json.dump(result, f, ensure_ascii=False, indent=2)
+print(f"📁 アーカイブ保存: {archive_path}")
+
 print(f"\n🎉 market_intelligence.json 保存完了！")
 print(f"   note: {len(result['note_trends'])}件")
 print(f"   日経: {len(result['nikkei_headlines'])}件")
