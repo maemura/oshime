@@ -3,6 +3,13 @@
   "mode": "claude",
   "macro": [
     {
+      "word": "イラン攻撃",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 3
+    },
+    {
       "word": "ドル円",
       "size": "lg",
       "mood": "calm",
@@ -10,30 +17,16 @@
       "sources": 1
     },
     {
-      "word": "イラン攻撃",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 3
-    },
-    {
-      "word": "ビットコイン",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "株式市場全体",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
-    },
-    {
       "word": "日本株需給",
       "size": "sm",
       "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "仮想通貨",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -45,16 +38,16 @@
       "sources": 1
     },
     {
-      "word": "イラン情勢（ハメネイ師死亡）",
+      "word": "イラン攻撃・ハメネイ師死亡",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "機関投資家の資金流入",
+      "word": "日本株全体",
       "size": "sm",
-      "mood": "greed",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
@@ -66,23 +59,65 @@
       "sources": 1
     },
     {
-      "word": "米国株市場",
+      "word": "日本株市場",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "企業の大量解雇",
+      "word": "大量解雇",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "株式市場への影響",
+      "word": "株式市場",
       "size": "sm",
       "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "業績下方修正",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "株価暴落",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "市場全体の暴落",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "投資資金不足",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "米国株式市場",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "VIX指数",
+      "size": "sm",
+      "mood": "hype",
       "count": 1,
       "sources": 1
     },
@@ -101,30 +136,9 @@
       "sources": 1
     },
     {
-      "word": "ホルムズ海峡",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日経平均5.9万円突破",
-      "size": "sm",
-      "mood": "hype",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "株価実力論",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "日経平均株価",
       "size": "sm",
-      "mood": "greed",
+      "mood": "hype",
       "count": 1,
       "sources": 1
     },
@@ -138,7 +152,7 @@
     {
       "word": "対米投融資",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -152,6 +166,13 @@
   ],
   "institutional": [
     {
+      "word": "AI関連株",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 2
+    },
+    {
       "word": "イラン情勢",
       "size": "md",
       "mood": "fear",
@@ -160,13 +181,6 @@
     },
     {
       "word": "半導体株",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "AI関連株",
       "size": "md",
       "mood": "fear",
       "count": 2,
@@ -187,6 +201,13 @@
       "sources": 1
     },
     {
+      "word": "ホルムズ海峡封鎖",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 1
+    },
+    {
       "word": "エヌビディア決算",
       "size": "sm",
       "mood": "fear",
@@ -203,19 +224,12 @@
     {
       "word": "SaaS関連銘柄",
       "size": "sm",
-      "mood": "hype",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "金融セクター",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "今週の決算発表",
+      "word": "今週の注目決算",
       "size": "sm",
       "mood": "hype",
       "count": 1,
@@ -224,84 +238,105 @@
     {
       "word": "3月株式分割銘柄",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
       "word": "株式分割",
       "size": "sm",
-      "mood": "calm",
+      "mood": "hype",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "来週金曜日の相場",
+      "word": "来週の金曜日の動向",
       "size": "sm",
       "mood": "calm",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "日本株全般",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "広瀬隆雄氏の警告",
+      "word": "緊急速報・広瀬隆雄氏の警告",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "イスラエル・イラン情勢",
+      "word": "イスラエル・イラン紛争",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "3月権利確定株主優待銘柄",
+      "word": "株主優待投資",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "下方修正",
+      "word": "2月権利落ち",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "権利落ち",
+      "word": "株主優待銘柄",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "優待新設",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "銀行株",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "トランプのイラン攻撃",
+      "word": "配当権利確定",
       "size": "sm",
-      "mood": "fear",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "ホルムズ海峡封鎖リスク",
+      "word": "石油・エネルギーセクター",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "中東情勢",
+      "word": "防衛関連株",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "金・貴金属",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "エネルギーセクター",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -309,13 +344,6 @@
       "word": "日本株",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "AIバブル懸念",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     },
@@ -330,10 +358,10 @@
   "retail": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "米国株",
@@ -343,21 +371,21 @@
       "sources": 1
     },
     {
-      "word": "ナスダック",
+      "word": "ビットコイン",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "米国株・ナスダック",
+      "word": "ナスダック",
       "size": "sm",
-      "mood": "greed",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "仮想通貨",
+      "word": "米国株・ナスダック",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -385,16 +413,16 @@
       "sources": 1
     },
     {
-      "word": "急落予想銘柄",
+      "word": "急落予想４銘柄",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "好決算割安銘柄",
+      "word": "好決算下落銘柄",
       "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },
@@ -406,7 +434,14 @@
       "sources": 1
     },
     {
-      "word": "圧倒的首位株",
+      "word": "バーゲン状態の圧倒的首位株",
+      "size": "sm",
+      "mood": "hype",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "●●株",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -420,21 +455,49 @@
       "sources": 1
     },
     {
-      "word": "国内最強株",
+      "word": "国内最強株（具体的銘柄名不明）",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "日本株4銘柄",
+      "word": "高配当株投資",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "3月権利確定株主優待銘柄",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "権利落ち株主優待銘柄",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "優待銘柄",
+      "word": "権利落ち急落銘柄",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ナンピン投資",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "累進配当銘柄",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -451,13 +514,6 @@
       "word": "任天堂",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "松井証券",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
