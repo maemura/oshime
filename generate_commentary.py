@@ -119,6 +119,16 @@ def build_prompt(stocks_data, sentiment_data):
         if mk:
             mk_lines = [f"  {b['code']}: 目標{b.get('target_price','?')}円 個人={b.get('individual_rating','?')} アナリスト={b.get('analyst_rating','?')}" for b in mk]
             intel_parts.append("みんかぶ予想:\n" + "\n".join(mk_lines))
+        # TDnet適時開示
+        tdnet = intel_data.get("tdnet_disclosures", [])[:5]
+        if tdnet:
+            td_lines = [f"  {d['title'][:50]}" for d in tdnet]
+            intel_parts.append("TDnet適時開示（注目）:\n" + "\n".join(td_lines))
+        # Google News
+        gnews = intel_data.get("google_news", [])[:5]
+        if gnews:
+            gn_lines = [f"  {n['title'][:50]}" for n in gnews]
+            intel_parts.append("Google News（日本株関連）:\n" + "\n".join(gn_lines))
     intelligence_text = "\n\n".join(intel_parts) if intel_parts else "データなし"
 
     # コメント対象の銘柄コード（TOP30から注目度が高そうな10銘柄を選ぶ指示）
