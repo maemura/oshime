@@ -1,0 +1,31 @@
+name: マーケットインテリジェンス収集
+
+on:
+  schedule:
+    - cron: '0 21 * * 0-4'    # JST 6:00（月〜金）※センチメントより前
+    - cron: '0 9 * * 1-5'     # JST 18:00（月〜金）
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Collect market intelligence
+        run: python market_intelligence.py
+
+      - name: Commit & Push
+        run: |
+          git config user.name "kabunosuke-bot"
+          git config user.email "bot@kabunosuke.ai"
+          git add market_intelligence.json
+          git diff --cached --quiet || git commit -m "🧠 マーケットインテリジェンス $(TZ=Asia/Tokyo date '+%Y-%m-%d %H:%M')"
+          git pull --rebase -X theirs && git push
