@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>かぶのすけ朝ブリーフィング</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Press+Start+2P&display=swap');
+
+:root {
+  --bg: #0a0e1a;
+  --panel: #111827;
+  --border: #1e3a5f;
+  --accent-green: #00ff88;
+  --accent-red: #ff4444;
+  --accent-yellow: #ffd700;
+  --accent-cyan: #00e5ff;
+  --accent-purple: #b388ff;
+  --text: #e0e0e0;
+  --text-dim: #8892a4;
+  --crt-line: rgba(0, 255, 136, 0.03);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DotGothic16', monospace;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* CRT scanline overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--crt-line) 2px,
+    var(--crt-line) 4px
+  );
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(180deg, #1a1a2e 0%, var(--bg) 100%);
+  border-bottom: 2px solid var(--accent-green);
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: var(--accent-green);
+  text-shadow: 0 0 10px var(--accent-green);
+  letter-spacing: 2px;
+}
+
+.header-date {
+  color: var(--accent-cyan);
+  font-size: 13px;
+}
+
+.header-status {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+/* Main Grid */
+.main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 900px) {
+  .main { grid-template-columns: 1fr; }
+}
+
+/* Panel Base */
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-green), transparent);
+}
+
+.panel-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  color: var(--accent-yellow);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.panel-full { grid-column: 1 / -1; }
+
+/* Fear & Greed Meter */
+.fear-greed {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 0;
+}
+
+.fg-meter {
+  flex: 1;
+  height: 24px;
+  background: linear-gradient(90deg, #ff0000, #ff4444, #ffaa00, #88cc00, #00ff88);
+  border-radius: 12px;
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.fg-needle {
+  position: absolute;
+  top: -4px;
+  width: 4px;
+  height: 32px;
+  background: white;
+  border-radius: 2px;
+  transition: left 1s ease;
+  box-shadow: 0 0 8px white;
+}
+
+.fg-label {
+  font-size: 20px;
+  font-weight: bold;
+  min-width: 60px;
+  text-align: center;
+}
+
+.fg-text {
+  font-size: 13px;
+  color: var(--text-dim);
+  min-width: 80px;
+}
+
+/* Market Summary */
+.market-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+.market-item {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.market-item-label {
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+.market-item-value {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.market-item-change {
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.up { color: var(--accent-red); }
+.down { color: var(--accent-green); }
+.neutral { color: var(--text-dim); }
+
+/* Signal Cards */
+.signal-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.signal-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  border-left: 3px solid var(--border);
+}
+
+.signal-item.buy { border-left-color: var(--accent-red); }
+.signal-item.sell { border-left-color: var(--accent-green); }
+.signal-item.strong-buy { border-left-color: #ff0066; }
+.signal-item.strong-sell { border-left-color: #00ff00; }
+
+.signal-code { font-weight: bold; min-width: 50px; }
+.signal-name { flex: 1; font-size: 12px; color: var(--text-dim); margin: 0 8px; }
+.signal-badge {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.signal-badge.buy { background: rgba(255, 68, 68, 0.2); color: var(--accent-red); }
+.signal-badge.sell { background: rgba(0, 255, 136, 0.2); color: var(--accent-green); }
+.signal-badge.neutral { background: rgba(136, 146, 164, 0.2); color: var(--text-dim); }
+
+/* News List */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.news-item {
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  border-left: 2px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.news-item:hover {
+  background: rgba(0, 229, 255, 0.05);
+  border-left-color: var(--accent-cyan);
+}
+
+.news-source {
+  font-size: 10px;
+  color: var(--accent-purple);
+  margin-right: 6px;
+}
+
+.news-item a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* Summary Cards */
+.summary-item {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border-left: 2px solid var(--accent-cyan);
+}
+
+.summary-title {
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: var(--accent-cyan);
+}
+
+.summary-text {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--text-dim);
+}
+
+/* Minkabu Table */
+.minkabu-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.minkabu-table th {
+  text-align: left;
+  padding: 6px 8px;
+  color: var(--accent-yellow);
+  font-size: 11px;
+  border-bottom: 1px solid var(--border);
+}
+
+.minkabu-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(30, 58, 95, 0.3);
+}
+
+/* Sentiment */
+.sentiment-layer {
+  margin-bottom: 10px;
+}
+
+.sentiment-label {
+  font-size: 11px;
+  color: var(--accent-purple);
+  margin-bottom: 4px;
+}
+
+.sentiment-words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.word-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  border: 1px solid;
+}
+
+.word-tag.greed { border-color: var(--accent-red); color: var(--accent-red); }
+.word-tag.fear { border-color: var(--accent-green); color: var(--accent-green); }
+.word-tag.neutral { border-color: var(--text-dim); color: var(--text-dim); }
+
+/* Commentary */
+.commentary-box {
+  background: rgba(0, 229, 255, 0.05);
+  border: 1px solid var(--accent-cyan);
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.commentary-avatar {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  text-align: center;
+  line-height: 32px;
+  margin-right: 8px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
+/* TDnet */
+.tdnet-item {
+  padding: 6px 8px;
+  font-size: 12px;
+  border-bottom: 1px solid rgba(30, 58, 95, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tdnet-badge {
+  font-size: 9px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: rgba(255, 215, 0, 0.2);
+  color: var(--accent-yellow);
+  white-space: nowrap;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-dim);
+}
+
+.loading::after {
+  content: '...';
+  animation: dots 1.5s infinite;
+}
+
+@keyframes dots {
+  0% { content: '.'; }
+  33% { content: '..'; }
+  66% { content: '...'; }
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-dim);
+  font-size: 11px;
+  border-top: 1px solid var(--border);
+  margin-top: 20px;
+}
+
+.back-link {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  font-size: 13px;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div>
+    <div class="header-title">KABUNOSUKE BRIEFING</div>
+    <div class="header-date" id="headerDate">Loading...</div>
+  </div>
+  <div class="header-status">
+    <span style="font-size:12px; color: var(--text-dim)" id="updateTime"></span>
+    <div class="status-dot"></div>
+    <span style="font-size:11px; color: var(--accent-green)">LIVE</span>
+  </div>
+</div>
+
+<div class="main" id="mainContent">
+  <div class="loading">データ読み込み中</div>
+</div>
+
+<div class="footer">
+  <a href="app.html" class="back-link">← Brain Scanner に戻る</a>
+  <br><br>
+  かぶのすけ投資ナビ | 10ソース自動収集 | 毎朝6:00更新
+</div>
+
+<script>
+const BASE = '';
+
+async function loadJSON(path) {
+  try {
+    const res = await fetch(path + '?t=' + Date.now());
+    if (!res.ok) return null;
+    return await res.json();
+  } catch { return null; }
+}
+
+function escapeHtml(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+async function init() {
+  const [intel, summaries, sentiment, stocks, commentary] = await Promise.all([
+    loadJSON('market_intelligence.json'),
+    loadJSON('article_summaries_latest.json'),
+    loadJSON('sentiment_latest.json'),
+    loadJSON('stocks_data.json'),
+    loadJSON('commentary.json')
+  ]);
+
+  if (!intel) {
+    document.getElementById('mainContent').innerHTML = '<div class="loading">データが見つかりません</div>';
+    return;
+  }
+
+  document.getElementById('headerDate').textContent = intel.date || '';
+  document.getElementById('updateTime').textContent = (intel.updated_at || '') + ' 更新';
+
+  let html = '';
+
+  // ── 1. 恐怖指数 + 市場サマリー（フル幅） ──
+  const fg = intel.fear_greed || {};
+  const needlePos = fg.score || 50;
+  const fgColor = needlePos < 30 ? 'var(--accent-green)' : needlePos > 70 ? 'var(--accent-red)' : 'var(--accent-yellow)';
+
+  let marketHtml = '';
+  if (stocks) {
+    const items = [
+      { label: '日経平均', value: stocks.nikkei_price, change: stocks.nikkei_1d_chg },
+      { label: 'USD/JPY', value: stocks.usdjpy, change: null },
+      { label: 'VIX', value: stocks.vix, change: null },
+      { label: '米10年債', value: stocks.us10y ? stocks.us10y + '%' : '-', change: null }
+    ];
+    marketHtml = items.map(i => {
+      const chgClass = i.change > 0 ? 'up' : i.change < 0 ? 'down' : 'neutral';
+      const chgText = i.change != null ? `<div class="market-item-change ${chgClass}">${i.change > 0 ? '+' : ''}${i.change}%</div>` : '';
+      return `<div class="market-item">
+        <div class="market-item-label">${i.label}</div>
+        <div class="market-item-value">${i.value || '-'}</div>
+        ${chgText}
+      </div>`;
+    }).join('');
+  }
+
+  html += `<div class="panel panel-full">
+    <div class="panel-title">📊 MARKET STATUS</div>
+    <div class="fear-greed">
+      <div class="fg-text">😱 恐怖</div>
+      <div class="fg-meter">
+        <div class="fg-needle" style="left: ${needlePos}%"></div>
+      </div>
+      <div class="fg-text" style="text-align:right">🤑 強欲</div>
+      <div class="fg-label" style="color:${fgColor}">${fg.score || '?'}</div>
+      <div class="fg-text" style="color:${fgColor}">${fg.rating_jp || '?'}</div>
+    </div>
+    <div class="market-grid">${marketHtml}</div>
+  </div>`;
+
+  // ── 2. かぶのすけのコメント（フル幅） ──
+  if (commentary && commentary.market) {
+    html += `<div class="panel panel-full">
+      <div class="panel-title">💬 KABUNOSUKE COMMENT</div>
+      <div class="commentary-box">
+        <span class="commentary-avatar">📊</span>
+        ${escapeHtml(commentary.market.text || '')}
+      </div>
+    </div>`;
+  }
+
+  // ── 3. TradingView シグナル（左） ──
+  const signals = intel.tradingview_signals || [];
+  if (signals.length) {
+    const signalHtml = signals.slice(0, 10).map(s => {
+      let cls = 'neutral';
+      if (s.signal_jp === '買い' || s.signal_jp === '強い買い') cls = 'buy';
+      if (s.signal_jp === '売り' || s.signal_jp === '強い売り') cls = 'sell';
+      return `<div class="signal-item ${cls}">
+        <span class="signal-code">${s.code}</span>
+        <span class="signal-badge ${cls}">${s.signal_jp} (${s.score > 0 ? '+' : ''}${s.score})</span>
+      </div>`;
+    }).join('');
+    html += `<div class="panel">
+      <div class="panel-title">📈 TRADING SIGNALS</div>
+      <div class="signal-list">${signalHtml}</div>
+    </div>`;
+  }
+
+  // ── 4. みんかぶ予想（右） ──
+  const minkabu = (intel.yahoo_board || []).filter(b => !b.error);
+  if (minkabu.length) {
+    const mkRows = minkabu.map(b => {
+      const indCls = b.individual_rating === '買い' ? 'up' : b.individual_rating === '売り' ? 'down' : 'neutral';
+      const anaCls = b.analyst_rating === '買い' ? 'up' : b.analyst_rating === '売り' ? 'down' : 'neutral';
+      return `<tr>
+        <td>${b.code}</td>
+        <td>${b.target_price || '-'}円</td>
+        <td class="${indCls}">${b.individual_rating || '-'}</td>
+        <td class="${anaCls}">${b.analyst_rating || '-'}</td>
+      </tr>`;
+    }).join('');
+    html += `<div class="panel">
+      <div class="panel-title">🎯 MINKABU FORECAST</div>
+      <table class="minkabu-table">
+        <tr><th>コード</th><th>目標株価</th><th>個人</th><th>アナリスト</th></tr>
+        ${mkRows}
+      </table>
+    </div>`;
+  }
+
+  // ── 5. 記事要約（フル幅） ──
+  if (summaries && summaries.articles && summaries.articles.length) {
+    const sumHtml = summaries.articles.slice(0, 6).map(a => {
+      return `<div class="summary-item">
+        <div class="summary-title"><span class="news-source">[${a.source}]</span>${escapeHtml(a.title.slice(0, 50))}</div>
+        <div class="summary-text">${escapeHtml(a.summary)}</div>
+      </div>`;
+    }).join('');
+    html += `<div class="panel panel-full">
+      <div class="panel-title">📰 AI ARTICLE SUMMARY</div>
+      ${sumHtml}
+    </div>`;
+  }
+
+  // ── 6. Google News + 日経見出し（左） ──
+  const gnews = intel.google_news || [];
+  const nikkei = intel.nikkei_headlines || [];
+  const allNews = [
+    ...gnews.slice(0, 5).map(n => ({ source: 'Google', title: n.title, url: n.url })),
+    ...nikkei.slice(0, 5).map(n => ({ source: n.category, title: n.title, url: n.url }))
+  ];
+  if (allNews.length) {
+    const newsHtml = allNews.map(n => {
+      const link = n.url ? `<a href="${n.url}" target="_blank">${escapeHtml(n.title.slice(0, 60))}</a>` : escapeHtml(n.title.slice(0, 60));
+      return `<div class="news-item"><span class="news-source">[${n.source}]</span>${link}</div>`;
+    }).join('');
+    html += `<div class="panel">
+      <div class="panel-title">🗞 NEWS HEADLINES</div>
+      <div class="news-list">${newsHtml}</div>
+    </div>`;
+  }
+
+  // ── 7. TDnet適時開示（右） ──
+  const tdnet = intel.tdnet_disclosures || [];
+  if (tdnet.length) {
+    const tdHtml = tdnet.slice(0, 8).map(d => {
+      let badge = '';
+      if (d.title.includes('決算')) badge = '決算';
+      else if (d.title.includes('配当')) badge = '配当';
+      else if (d.title.includes('修正')) badge = '修正';
+      else if (d.title.includes('株式')) badge = '株式';
+      else badge = '開示';
+      return `<div class="tdnet-item">
+        <span class="tdnet-badge">${badge}</span>
+        <span>${escapeHtml(d.title.slice(0, 50))}</span>
+      </div>`;
+    }).join('');
+    html += `<div class="panel">
+      <div class="panel-title">📋 TDNET DISCLOSURE</div>
+      ${tdHtml}
+    </div>`;
+  }
+
+  // ── 8. YouTubeセンチメント（左） ──
+  if (sentiment) {
+    const layers = { macro: 'マクロ', institutional: '機関投資家', retail: '個人投資家' };
+    let sentHtml = '';
+    for (const [key, label] of Object.entries(layers)) {
+      const words = sentiment[key] || [];
+      if (words.length) {
+        const tags = words.slice(0, 8).map(w => {
+          const cls = w.mood === 'greed' ? 'greed' : w.mood === 'fear' ? 'fear' : 'neutral';
+          return `<span class="word-tag ${cls}">${w.word}</span>`;
+        }).join('');
+        sentHtml += `<div class="sentiment-layer">
+          <div class="sentiment-label">${label}</div>
+          <div class="sentiment-words">${tags}</div>
+        </div>`;
+      }
+    }
+    if (sentHtml) {
+      html += `<div class="panel">
+        <div class="panel-title">🎙 YOUTUBE SENTIMENT</div>
+        ${sentHtml}
+      </div>`;
+    }
+  }
+
+  // ── 9. note トレンド（右） ──
+  const notes = intel.note_trends || [];
+  if (notes.length) {
+    const noteHtml = notes.slice(0, 8).map(n => {
+      const priceTag = n.price > 0 ? `<span style="color:var(--accent-yellow);font-size:10px">¥${n.price}</span>` : '';
+      return `<div class="news-item">
+        <span style="color:var(--accent-red);font-size:11px">♥${n.likes}</span>
+        <a href="${n.url}" target="_blank" style="margin-left:6px">${escapeHtml(n.title.slice(0, 45))}</a>
+        ${priceTag}
+      </div>`;
+    }).join('');
+    html += `<div class="panel">
+      <div class="panel-title">📝 NOTE TRENDS</div>
+      <div class="news-list">${noteHtml}</div>
+    </div>`;
+  }
+
+  // ── 10. 株探ニュース ──
+  const kabutan = intel.kabutan_news || [];
+  if (kabutan.length) {
+    const kbHtml = kabutan.slice(0, 6).map(n => {
+      return `<div class="news-item">
+        <a href="${n.url}" target="_blank">${escapeHtml(n.title.slice(0, 55))}</a>
+      </div>`;
+    }).join('');
+    html += `<div class="panel">
+      <div class="panel-title">📊 KABUTAN NEWS</div>
+      <div class="news-list">${kbHtml}</div>
+    </div>`;
+  }
+
+  document.getElementById('mainContent').innerHTML = html;
+}
+
+init();
+</script>
+</body>
+</html>
