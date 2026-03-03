@@ -3,24 +3,38 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "イラン攻撃",
-      "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 3
-    },
-    {
       "word": "ドル円",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
+      "size": "xl",
+      "mood": "greed",
+      "count": 9,
       "sources": 1
     },
     {
       "word": "ビットコイン",
+      "size": "xl",
+      "mood": "fear",
+      "count": 6,
+      "sources": 1
+    },
+    {
+      "word": "仮想通貨",
+      "size": "xl",
+      "mood": "greed",
+      "count": 5,
+      "sources": 1
+    },
+    {
+      "word": "日本株需給",
       "size": "lg",
       "mood": "fear",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "WTI原油",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
       "sources": 1
     },
     {
@@ -31,35 +45,84 @@
       "sources": 1
     },
     {
-      "word": "円安",
+      "word": "日本株信用買い",
       "size": "md",
-      "mood": "fear",
+      "mood": "greed",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "ホルムズ海峡封鎖",
+      "word": "日銀利上げ",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "地政学リスク",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 2
     },
     {
-      "word": "米国株市場",
+      "word": "長期投資",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "日経平均株価",
+      "word": "原油価格",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "金融政策",
       "size": "md",
       "mood": "greed",
       "count": 2,
       "sources": 2
     },
     {
-      "word": "英仏独のイラン攻撃示唆",
+      "word": "ビットコイン(BTC)",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ドル円156円",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "利上げ政策",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "英仏独イラン情勢",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ホルムズ海峡",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -73,14 +136,14 @@
       "sources": 1
     },
     {
-      "word": "10年ぶりの下げ幅",
+      "word": "機関投資家",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "日本株市場",
+      "word": "10年ぶりの下げ幅",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -94,7 +157,7 @@
       "sources": 1
     },
     {
-      "word": "市場暴落",
+      "word": "株式市場暴落",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -108,14 +171,21 @@
       "sources": 1
     },
     {
-      "word": "イラン政治体制",
+      "word": "日経先物",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "中東情勢",
+      "word": "日経平均株価",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "イラン政治体制",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -124,7 +194,7 @@
     {
       "word": "VIX指数",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -136,28 +206,140 @@
       "sources": 1
     },
     {
-      "word": "原油価格",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "インフレ",
+      "word": "地政学的リスク",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "金融政策",
+      "word": "株式市場全般",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "押し目買い戦略",
       "size": "sm",
       "mood": "calm",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "経済成長",
+      "word": "相場全体の上昇トレンド",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "貧富の格差",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "貧困層の特徴",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "負け組のポートフォリオ",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "インフレ対策",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "TOPIX",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "投資マインドセット",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "投資格差の拡大",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日本銀行",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日銀審議委員",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経平均5.9万円突破",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "株価実力評価",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "先物取引",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "信用取引",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "デリバティブ市場",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "物価上昇",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "経済全体",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -166,18 +348,32 @@
   ],
   "institutional": [
     {
-      "word": "イラン情勢",
-      "size": "lg",
+      "word": "半導体株",
+      "size": "xl",
       "mood": "fear",
-      "count": 4,
+      "count": 8,
+      "sources": 1
+    },
+    {
+      "word": "AI関連株",
+      "size": "xl",
+      "mood": "fear",
+      "count": 8,
+      "sources": 1
+    },
+    {
+      "word": "イラン情勢",
+      "size": "xl",
+      "mood": "fear",
+      "count": 7,
       "sources": 2
     },
     {
-      "word": "半導体株",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 1
+      "word": "イラン攻撃",
+      "size": "xl",
+      "mood": "fear",
+      "count": 7,
+      "sources": 3
     },
     {
       "word": "銀行株",
@@ -187,23 +383,93 @@
       "sources": 2
     },
     {
-      "word": "AI関連株",
+      "word": "SaaS関連銘柄",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "ホルムズ海峡封鎖",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 2
+    },
+    {
+      "word": "SaaS関連株",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "エヌビディア決算",
       "size": "md",
       "mood": "calm",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "ノンバンク破綻",
+      "word": "半導体・AI関連銘柄",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "高配当株",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "米軍イラン攻撃",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "エネルギーセクター",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "SaaS関連",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "半導体セクター",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "SaaS関連",
+      "word": "AI関連銘柄",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ハイテク株",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ナスダック半導体株",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
@@ -222,14 +488,7 @@
       "sources": 1
     },
     {
-      "word": "高配当株",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "来週金曜日の重要性",
+      "word": "日本株全体",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -243,35 +502,49 @@
       "sources": 1
     },
     {
-      "word": "広瀬隆雄氏による警告",
+      "word": "広瀬隆雄氏の警告",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "イスラエル・イラン情勢",
+      "word": "イスラエル・イラン攻撃",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "株主優待投資",
+      "word": "米国株市場",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "3月権利確定株主優待",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "イラン最高指導者ハメネイ師死亡",
+      "word": "イラン戦争",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "石油株",
+      "word": "イラン最高指導者ハメネイ師死亡",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "石油関連株",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -285,16 +558,65 @@
       "sources": 1
     },
     {
-      "word": "AIセクター",
+      "word": "トランプ政権のイラン軍事攻撃",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "防衛関連セクター",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "中山ショート戦略",
       "size": "sm",
       "mood": "hype",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "エネルギーセクター",
+      "word": "AYAとの株バトル",
+      "size": "sm",
+      "mood": "hype",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "選挙",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "増資",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "高市経済安保相",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "レアアース関連銘柄",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "AIバブル",
+      "size": "sm",
+      "mood": "hype",
       "count": 1,
       "sources": 1
     },
@@ -311,28 +633,49 @@
       "word": "日経平均",
       "size": "xl",
       "mood": "fear",
-      "count": 5,
+      "count": 14,
       "sources": 3
     },
     {
       "word": "ナスダック",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
+      "count": 8,
       "sources": 1
     },
     {
       "word": "米国株",
-      "size": "md",
+      "size": "xl",
       "mood": "fear",
-      "count": 2,
+      "count": 6,
+      "sources": 2
+    },
+    {
+      "word": "米国株・ナスダック",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
       "sources": 1
     },
     {
-      "word": "日本株",
-      "size": "md",
+      "word": "エヌビディア",
+      "size": "lg",
+      "mood": "hype",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "楽天銀行",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
+      "count": 3,
+      "sources": 2
+    },
+    {
+      "word": "日本株",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
       "sources": 2
     },
     {
@@ -343,10 +686,17 @@
       "sources": 1
     },
     {
-      "word": "楽天銀行",
+      "word": "NVIDIA",
       "size": "md",
       "mood": "fear",
       "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "日本株・日経平均",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
       "sources": 1
     },
     {
@@ -371,28 +721,49 @@
       "sources": 1
     },
     {
-      "word": "大手株（15％下落銘柄）",
+      "word": "大手株（株価15％下落から反発）",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "圧倒的首位株",
+      "word": "バーゲン状態の首位株",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "バーゲン状態",
+      "word": "●●株",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "超優良株（2銘柄）",
+      "word": "大手株",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "元手30万円での株式投資",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "株価70%下落した超優良株",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "2銘柄の投資機会",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -420,7 +791,70 @@
       "sources": 1
     },
     {
-      "word": "3月権利確定株主優待銘柄",
+      "word": "株主優待投資",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "1570（日経レバETF）",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "含み損の発生",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "メタプラネット",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経Wレバ",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "地盤ネットHD",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "JAPEX",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "東洋エンジニアリング",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "住友金属鉱山",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "大同特殊鋼",
       "size": "sm",
       "mood": "greed",
       "count": 1,
