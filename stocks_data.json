@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026/03/03 17:49",
+  "updated_at": "2026/03/03 17:55",
   "total": 164,
   "stocks": [
     {
@@ -4773,7 +4773,7 @@
       "pbr": 1.08,
       "per": 29.8,
       "vol_r": 1.05,
-      "market_cap_b": 5123.0,
+      "market_cap_b": 5095.0,
       "closes_60d": [
         1064.5,
         1057.0,
@@ -13145,8 +13145,8 @@
   "nikkei_1d_chg": -3.06,
   "nikkei_ma25": 55891.0,
   "nasdaq_1d_chg": 0.36,
-  "vix": 24.8,
-  "usdjpy": 157.54,
+  "vix": 25.1,
+  "usdjpy": 157.52,
   "us10y": 4.05,
   "geo_risk": 0,
   "rate_cut_flag": 0,
