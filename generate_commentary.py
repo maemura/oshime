@@ -140,6 +140,15 @@ def build_prompt(stocks_data, sentiment_data):
             sum_lines = [f"[{a['source']}] {a['title'][:40]}\n  {a['summary'][:100]}" for a in articles]
             summaries_text = "\n\n".join(sum_lines)
 
+    # ── 記事要約読み込み ──
+    summaries_data = load_json("article_summaries_latest.json")
+    summaries_text = "データなし"
+    if summaries_data:
+        articles = summaries_data.get("articles", [])[:8]
+        if articles:
+            sum_lines = [f"[{a['source']}] {a['title'][:40]}\n  {a['summary'][:100]}" for a in articles]
+            summaries_text = "\n\n".join(sum_lines)
+
     # コメント対象の銘柄コード（TOP30から注目度が高そうな10銘柄を選ぶ指示）
     # ── 曜日で出力モードを切り替え ──
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
@@ -194,6 +203,9 @@ def build_prompt(stocks_data, sentiment_data):
 
 ## マーケットインテリジェンス（noteトレンド・日経見出し・恐怖指数）
 {intelligence_text}
+
+## 記事要約（株探・note等の最新記事）
+{summaries_text}
 
 ## 記事要約（株探・note等の最新記事）
 {summaries_text}
