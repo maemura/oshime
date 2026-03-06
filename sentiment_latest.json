@@ -1,5 +1,5 @@
 {
-  "date": "2026-03-05",
+  "date": "2026-03-06",
   "mode": "claude",
   "macro": [
     {
@@ -31,51 +31,30 @@
       "sources": 1
     },
     {
-      "word": "原油",
-      "size": "md",
+      "word": "日本株急反発",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
-      "word": "先物",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "word": "ダウ先物下落",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "株価急落",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "中東情勢",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "イラン米国タンカー攻撃",
+      "word": "個人投資家のマインド",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ダウ先物",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "個人投資家",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     },
@@ -87,30 +66,9 @@
       "sources": 1
     },
     {
-      "word": "韓国株",
+      "word": "個人投資家の買い",
       "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日本株式市場",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "韓国株式市場",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "為替市場",
-      "size": "sm",
-      "mood": "fear",
+      "mood": "hype",
       "count": 1,
       "sources": 1
     },
@@ -129,37 +87,79 @@
       "sources": 1
     },
     {
-      "word": "相場全体",
+      "word": "日本株全体",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "歴史的暴落",
+      "word": "先物市場",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "米ドル",
+      "word": "暴落後の反発",
+      "size": "sm",
+      "mood": "hype",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "米イラン戦争",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "地政学リスク",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ホルムズ海峡封鎖",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "石油価格",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "ユーロ",
+      "word": "日経VI",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "トランプ関税",
+      "word": "株式市場暴落",
       "size": "sm",
       "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "デリバティブ市場",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "米国市場",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -170,6 +170,20 @@
       "size": "md",
       "mood": "fear",
       "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "イラン攻撃",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "中東情勢",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
       "sources": 1
     },
     {
@@ -187,35 +201,56 @@
       "sources": 1
     },
     {
-      "word": "米国株市場全体",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "米大使館攻撃事件",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "全力買い",
+      "word": "買われているセクター",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "イラン攻撃",
+      "word": "イラン米国タンカー攻撃",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "NAND特需",
+      "word": "イラン生物兵器",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "タンカー爆発・原油流出",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "国内大型株市場",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "エネルギーセクター",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "NAND型フラッシュメモリ",
+      "size": "sm",
+      "mood": "hype",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "半導体市場",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -229,23 +264,30 @@
       "sources": 1
     },
     {
-      "word": "ブラック・スワン",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "グレー・リノ",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "デリバティブ",
+      "word": "AIバブル",
       "size": "sm",
       "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "中東戦争",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "グロース材料株",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "新興市場",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
@@ -253,10 +295,10 @@
   "retail": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "米国株",
@@ -266,11 +308,11 @@
       "sources": 1
     },
     {
-      "word": "日本株",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 3
+      "word": "高配当株",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 1
     },
     {
       "word": "キオクシア",
@@ -280,7 +322,21 @@
       "sources": 2
     },
     {
+      "word": "日経平均株価",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "ナスダック",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "スシロー",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -315,37 +371,9 @@
       "sources": 1
     },
     {
-      "word": "高配当株",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "三菱重工",
+      "word": "戻り遅れ銘柄",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "IHI",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "内田洋行",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "協和キリン",
-      "size": "sm",
-      "mood": "fear",
       "count": 1,
       "sources": 1
     },
@@ -371,14 +399,14 @@
       "sources": 1
     },
     {
-      "word": "株価70%下落銘柄",
+      "word": "超優良株（70%OFF銘柄）",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "超優良株",
+      "word": "注目2銘柄",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -386,6 +414,20 @@
     },
     {
       "word": "国内最強株",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "米国株急落時の買い銘柄",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "韓国株",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -406,35 +448,14 @@
       "sources": 1
     },
     {
+      "word": "全力買い",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "本日購入銘柄",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "リアルゲイト",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ヒット銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "割安株投資",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "HALO銘柄",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -465,20 +486,6 @@
       "word": "大同特殊鋼",
       "size": "sm",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "違憲判決関連銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "連続最高益9銘柄",
-      "size": "sm",
-      "mood": "greed",
       "count": 1,
       "sources": 1
     }
