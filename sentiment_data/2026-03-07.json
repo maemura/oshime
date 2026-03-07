@@ -1,10 +1,10 @@
 {
   "date": "2026-03-07",
-  "collected_at": "2026-03-07 09:50",
+  "collected_at": "2026-03-07 21:41",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 49,
-  "entry_count": 136,
+  "videos_processed": 27,
+  "entry_count": 78,
   "entries": [
     {
       "source": "youtube",
@@ -14,8 +14,8 @@
       "topic": "日経平均先物",
       "category": "stock",
       "sentiment": "fear",
-      "confidence": 0.95,
-      "summary": "1600円の大幅暴落で緊急事態"
+      "confidence": 0.9,
+      "summary": "1600円の大幅暴落"
     },
     {
       "source": "youtube",
@@ -24,20 +24,9 @@
       "video_url": "https://www.youtube.com/watch?v=vgEFeB1AkGY",
       "topic": "中東情勢",
       "category": "macro",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "情勢緊迫化で市場に悪影響"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/7【緊急事態】日経平均先物が1600円暴落‼中東情勢緊迫で日本株投げ売り加速か⁉WTI原油90ドルに急騰。MSQ控えVIX急騰。米国株、ナスダック、半導体株",
-      "video_url": "https://www.youtube.com/watch?v=vgEFeB1AkGY",
-      "topic": "日本株",
-      "category": "stock",
       "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "投げ売り加速の懸念"
+      "confidence": 0.8,
+      "summary": "情勢緊迫化で市場不安拡大"
     },
     {
       "source": "youtube",
@@ -47,7 +36,7 @@
       "topic": "WTI原油",
       "category": "macro",
       "sentiment": "hype",
-      "confidence": 0.85,
+      "confidence": 0.8,
       "summary": "90ドルに急騰"
     },
     {
@@ -58,8 +47,19 @@
       "topic": "VIX",
       "category": "macro",
       "sentiment": "fear",
-      "confidence": 0.8,
-      "summary": "MSQ控え急騰"
+      "confidence": 0.9,
+      "summary": "恐怖指数が急騰"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/7【緊急事態】日経平均先物が1600円暴落‼中東情勢緊迫で日本株投げ売り加速か⁉WTI原油90ドルに急騰。MSQ控えVIX急騰。米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=vgEFeB1AkGY",
+      "topic": "MSQ",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.7,
+      "summary": "控えており市場変動要因"
     },
     {
       "source": "youtube",
@@ -69,8 +69,8 @@
       "topic": "米国株",
       "category": "stock",
       "sentiment": "bearish",
-      "confidence": 0.85,
-      "summary": "急落局面"
+      "confidence": 0.8,
+      "summary": "全体的に急落"
     },
     {
       "source": "youtube",
@@ -80,8 +80,8 @@
       "topic": "ナスダック",
       "category": "stock",
       "sentiment": "bearish",
-      "confidence": 0.85,
-      "summary": "急落で弱い展開"
+      "confidence": 0.8,
+      "summary": "大幅下落"
     },
     {
       "source": "youtube",
@@ -102,8 +102,8 @@
       "topic": "仮想通貨",
       "category": "macro",
       "sentiment": "bearish",
-      "confidence": 0.75,
-      "summary": "弱い動き"
+      "confidence": 0.7,
+      "summary": "弱い動き継続"
     },
     {
       "source": "youtube",
@@ -125,7 +125,7 @@
       "category": "macro",
       "sentiment": "fear",
       "confidence": 0.9,
-      "summary": "緊迫化により週末上値重い展開"
+      "summary": "情勢緊迫化で市場に不安材料"
     },
     {
       "source": "youtube",
@@ -134,9 +134,9 @@
       "video_url": "https://www.youtube.com/watch?v=UgfzIOgwy1g",
       "topic": "ドル円",
       "category": "macro",
-      "sentiment": "bullish",
+      "sentiment": "neutral",
       "confidence": 0.7,
-      "summary": "157円まで上昇"
+      "summary": "157円水準で推移"
     },
     {
       "source": "youtube",
@@ -154,22 +154,11 @@
       "channel": "Sho's投資情報局",
       "video_title": "3/6【日経平均騙し上げか⁉日本株信用投げ売り】イラン情勢緊迫で週末上値重い。ドル円157円、WTI原油急騰止まらない。米国株、ナスダック半導体株、仮想通貨上昇",
       "video_url": "https://www.youtube.com/watch?v=UgfzIOgwy1g",
-      "topic": "米国株",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.6,
-      "summary": "上昇が弱い"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/6【日経平均騙し上げか⁉日本株信用投げ売り】イラン情勢緊迫で週末上値重い。ドル円157円、WTI原油急騰止まらない。米国株、ナスダック半導体株、仮想通貨上昇",
-      "video_url": "https://www.youtube.com/watch?v=UgfzIOgwy1g",
       "topic": "ナスダック半導体株",
       "category": "sector",
       "sentiment": "bearish",
       "confidence": 0.7,
-      "summary": "上昇が弱い"
+      "summary": "上昇力が弱い"
     },
     {
       "source": "youtube",
@@ -179,8 +168,8 @@
       "topic": "仮想通貨",
       "category": "macro",
       "sentiment": "neutral",
-      "confidence": 0.5,
-      "summary": "上昇するも勢い弱い"
+      "confidence": 0.6,
+      "summary": "上昇しているが弱い動き"
     },
     {
       "source": "youtube",
@@ -202,7 +191,7 @@
       "category": "macro",
       "sentiment": "fear",
       "confidence": 0.9,
-      "summary": "緊迫化で週末上値重い展開"
+      "summary": "情勢緊迫化で市場上値重い"
     },
     {
       "source": "youtube",
@@ -246,7 +235,7 @@
       "category": "sector",
       "sentiment": "bearish",
       "confidence": 0.6,
-      "summary": "上昇弱い展開"
+      "summary": "上昇が弱い"
     },
     {
       "source": "youtube",
@@ -257,7 +246,51 @@
       "category": "macro",
       "sentiment": "neutral",
       "confidence": 0.5,
-      "summary": "上昇弱いが一部上昇も見られる"
+      "summary": "上昇するも弱い動き"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "月曜の日本は急落っぽい、米株急落パンチ４発。４月の株式分割と高配当株。2026年３月７日（土）#４月株式分割、#４月高配当株～あす上がる株。最新の日本株情報。高",
+      "video_url": "https://www.youtube.com/watch?v=Qc98PvIgQLo",
+      "topic": "月曜日の日本市場",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.8,
+      "summary": "月曜の日本市場は急落予想"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "月曜の日本は急落っぽい、米株急落パンチ４発。４月の株式分割と高配当株。2026年３月７日（土）#４月株式分割、#４月高配当株～あす上がる株。最新の日本株情報。高",
+      "video_url": "https://www.youtube.com/watch?v=Qc98PvIgQLo",
+      "topic": "米国株市場",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.9,
+      "summary": "米株急落で4つの悪材料発生"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "月曜の日本は急落っぽい、米株急落パンチ４発。４月の株式分割と高配当株。2026年３月７日（土）#４月株式分割、#４月高配当株～あす上がる株。最新の日本株情報。高",
+      "video_url": "https://www.youtube.com/watch?v=Qc98PvIgQLo",
+      "topic": "4月株式分割銘柄",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.7,
+      "summary": "4月に実施される株式分割に注目"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "月曜の日本は急落っぽい、米株急落パンチ４発。４月の株式分割と高配当株。2026年３月７日（土）#４月株式分割、#４月高配当株～あす上がる株。最新の日本株情報。高",
+      "video_url": "https://www.youtube.com/watch?v=Qc98PvIgQLo",
+      "topic": "高配当株",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.6,
+      "summary": "高配当株の投資機会を検討"
     },
     {
       "source": "youtube",
@@ -268,7 +301,7 @@
       "category": "stock",
       "sentiment": "bullish",
       "confidence": 0.8,
-      "summary": "ローム買収で注目"
+      "summary": "ローム買収でポジティブ材料"
     },
     {
       "source": "youtube",
@@ -278,8 +311,8 @@
       "topic": "ローム",
       "category": "stock",
       "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "デンソーに買収される"
+      "confidence": 0.7,
+      "summary": "デンソーによる買収対象"
     },
     {
       "source": "youtube",
@@ -289,8 +322,8 @@
       "topic": "清水建設",
       "category": "stock",
       "sentiment": "bearish",
-      "confidence": 0.7,
-      "summary": "株式売り出しで下落懸念"
+      "confidence": 0.6,
+      "summary": "株式売り出しで需給悪化懸念"
     },
     {
       "source": "youtube",
@@ -300,8 +333,8 @@
       "topic": "日経先物",
       "category": "macro",
       "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "急落中で市場不安"
+      "confidence": 0.8,
+      "summary": "急落で市場全体に懸念"
     },
     {
       "source": "youtube",
@@ -311,8 +344,8 @@
       "topic": "原油",
       "category": "macro",
       "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "82ドル突破で上昇"
+      "confidence": 0.9,
+      "summary": "82ドル突破で上昇継続"
     },
     {
       "source": "youtube",
@@ -322,8 +355,8 @@
       "topic": "地盤HD",
       "category": "stock",
       "sentiment": "bullish",
-      "confidence": 0.6,
-      "summary": "買い進み推奨"
+      "confidence": 0.7,
+      "summary": "買い進み推奨銘柄"
     },
     {
       "source": "youtube",
@@ -333,19 +366,19 @@
       "topic": "Kaihou",
       "category": "stock",
       "sentiment": "bullish",
-      "confidence": 0.6,
-      "summary": "買い進み推奨"
+      "confidence": 0.7,
+      "summary": "買い進み推奨銘柄"
     },
     {
       "source": "youtube",
       "channel": "株リアルライブ",
       "video_title": "いま大きく買われているセクター。スシロー、寄生虫で急落。イラン指導者候補にNG。2026年３月６日（金）～明日上がる株最新の日本株情報。高配当株の株価やデイトレ",
       "video_url": "https://www.youtube.com/watch?v=f82NdZ1zo3g",
-      "topic": "大きく買われているセクター",
+      "topic": "注目セクター",
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.7,
-      "summary": "特定セクターが大きく買われている"
+      "summary": "いま大きく買われているセクターがある"
     },
     {
       "source": "youtube",
@@ -356,18 +389,18 @@
       "category": "stock",
       "sentiment": "bearish",
       "confidence": 0.9,
-      "summary": "寄生虫問題で急落"
+      "summary": "寄生虫問題で株価急落"
     },
     {
       "source": "youtube",
       "channel": "株リアルライブ",
       "video_title": "いま大きく買われているセクター。スシロー、寄生虫で急落。イラン指導者候補にNG。2026年３月６日（金）～明日上がる株最新の日本株情報。高配当株の株価やデイトレ",
       "video_url": "https://www.youtube.com/watch?v=f82NdZ1zo3g",
-      "topic": "イラン指導者候補",
+      "topic": "イラン情勢",
       "category": "macro",
       "sentiment": "fear",
       "confidence": 0.6,
-      "summary": "指導者候補にNG判定"
+      "summary": "指導者候補にNG、地政学リスク"
     },
     {
       "source": "youtube",
@@ -378,7 +411,7 @@
       "category": "stock",
       "sentiment": "neutral",
       "confidence": 0.5,
-      "summary": "高配当株の株価情報"
+      "summary": "高配当株の最新情報"
     },
     {
       "source": "youtube",
@@ -386,87 +419,32 @@
       "video_title": "いま大きく買われているセクター。スシロー、寄生虫で急落。イラン指導者候補にNG。2026年３月６日（金）～明日上がる株最新の日本株情報。高配当株の株価やデイトレ",
       "video_url": "https://www.youtube.com/watch?v=f82NdZ1zo3g",
       "topic": "デイトレ",
-      "category": "event",
+      "category": "stock",
       "sentiment": "hype",
       "confidence": 0.6,
-      "summary": "デイトレード情報提供"
+      "summary": "デイトレード関連情報"
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "日経平均、キオクシアとパンパシ採用、GSユアサとカシオ除外。積水ハウス減益。イラン米国タンカー攻撃～あす上がる株　2026年３月６日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=npBWf4I4T-k",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.7,
-      "summary": "構成銘柄の変更による影響"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "日経平均、キオクシアとパンパシ採用、GSユアサとカシオ除外。積水ハウス減益。イラン米国タンカー攻撃～あす上がる株　2026年３月６日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=npBWf4I4T-k",
-      "topic": "キオクシア",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "日経平均採用でポジティブ"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "日経平均、キオクシアとパンパシ採用、GSユアサとカシオ除外。積水ハウス減益。イラン米国タンカー攻撃～あす上がる株　2026年３月６日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=npBWf4I4T-k",
-      "topic": "パンパシ",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "日経平均採用でポジティブ"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "日経平均、キオクシアとパンパシ採用、GSユアサとカシオ除外。積水ハウス減益。イラン米国タンカー攻撃～あす上がる株　2026年３月６日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=npBWf4I4T-k",
-      "topic": "GSユアサ",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.7,
-      "summary": "日経平均除外でネガティブ"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "日経平均、キオクシアとパンパシ採用、GSユアサとカシオ除外。積水ハウス減益。イラン米国タンカー攻撃～あす上がる株　2026年３月６日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=npBWf4I4T-k",
-      "topic": "カシオ",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.7,
-      "summary": "日経平均除外でネガティブ"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "日経平均、キオクシアとパンパシ採用、GSユアサとカシオ除外。積水ハウス減益。イラン米国タンカー攻撃～あす上がる株　2026年３月６日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=npBWf4I4T-k",
-      "topic": "積水ハウス",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "減益でネガティブ材料"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "日経平均、キオクシアとパンパシ採用、GSユアサとカシオ除外。積水ハウス減益。イラン米国タンカー攻撃～あす上がる株　2026年３月６日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=npBWf4I4T-k",
-      "topic": "イラン米国タンカー攻撃",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "来週の日本株またブラックマンデー！？急落ならこんな銘柄に注目する",
+      "video_url": "https://www.youtube.com/watch?v=EMkQ6qAcXkA",
+      "topic": "ブラックマンデー",
       "category": "event",
       "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "地政学リスクの高まり"
+      "confidence": 0.8,
+      "summary": "来週の日本株市場で急落の可能性を警戒"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "来週の日本株またブラックマンデー！？急落ならこんな銘柄に注目する",
+      "video_url": "https://www.youtube.com/watch?v=EMkQ6qAcXkA",
+      "topic": "日本株",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.7,
+      "summary": "来週の相場展開に対して慎重な見方"
     },
     {
       "source": "youtube",
@@ -475,9 +453,9 @@
       "video_url": "https://www.youtube.com/watch?v=-v2eKioWk6M",
       "topic": "4連最高益の国内大手株",
       "category": "stock",
-      "sentiment": "fear",
+      "sentiment": "bearish",
       "confidence": 0.9,
-      "summary": "最高益更新中の大手株が6ヶ月で半値に暴落"
+      "summary": "最高益更新中の大手株が6か月で半値まで暴落"
     },
     {
       "source": "youtube",
@@ -486,75 +464,53 @@
       "video_url": "https://www.youtube.com/watch?v=tIHMY7mpFWs",
       "topic": "株価急落",
       "category": "macro",
-      "sentiment": "bearish",
+      "sentiment": "fear",
       "confidence": 0.9,
-      "summary": "株価が急落している状況"
+      "summary": "市場全体が急落している状況"
     },
     {
       "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "株価急落のいま個人投資家に勇気を与えたい",
       "video_url": "https://www.youtube.com/watch?v=tIHMY7mpFWs",
-      "topic": "個人投資家の心理",
+      "topic": "個人投資家",
       "category": "macro",
-      "sentiment": "fear",
+      "sentiment": "neutral",
       "confidence": 0.8,
-      "summary": "個人投資家が不安を抱えている状態"
+      "summary": "個人投資家への励ましとアドバイス"
     },
     {
       "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "あの株価15％下落の有名大手株が反発中！●●関連で注目しておけ",
-      "video_url": "https://www.youtube.com/watch?v=mLxcRSMYu64",
-      "topic": "大手株",
+      "channel": "トレードラボ",
+      "video_title": "まだ配当利回り4%超えてる優良株３選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=s-1cQgd7H8s",
+      "topic": "高配当利回り銘柄",
       "category": "stock",
       "sentiment": "bullish",
       "confidence": 0.8,
-      "summary": "15％下落後に反発中の有名大手株"
-    },
-    {
-      "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "あの株価15％下落の有名大手株が反発中！●●関連で注目しておけ",
-      "video_url": "https://www.youtube.com/watch?v=mLxcRSMYu64",
-      "topic": "注目関連銘柄",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.7,
-      "summary": "特定の関連銘柄に注目を促している"
+      "summary": "配当利回り4%超えの優良株を紹介"
     },
     {
       "source": "youtube",
       "channel": "トレードラボ",
       "video_title": "３月権利の高配当株、今から仕込むならこの５銘柄",
       "video_url": "https://www.youtube.com/watch?v=xHkLJoeOP9A",
-      "topic": "３月権利高配当株",
-      "category": "sector",
+      "topic": "3月権利の高配当株",
+      "category": "stock",
       "sentiment": "bullish",
       "confidence": 0.8,
-      "summary": "３月権利確定の高配当株への投資推奨"
+      "summary": "3月権利確定の高配当株への投資推奨"
     },
     {
       "source": "youtube",
       "channel": "トレードラボ",
       "video_title": "株価70%OFFまで叩き売られた超優良株、ついに大上昇フェーズへ【2銘柄】",
       "video_url": "https://www.youtube.com/watch?v=x5QqwqeRy3w",
-      "topic": "超優良株（2銘柄）",
+      "topic": "株価70%下落した超優良株2銘柄",
       "category": "stock",
       "sentiment": "bullish",
-      "confidence": 0.9,
-      "summary": "70%下落後に大上昇フェーズ入り"
-    },
-    {
-      "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "あの33％暴落した国内最強株、さらに10年ぶりの下げ幅#shorts",
-      "video_url": "https://www.youtube.com/watch?v=KYZQAsrfAto",
-      "topic": "国内最強株",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "33％暴落し10年ぶりの下げ幅を記録"
+      "confidence": 0.8,
+      "summary": "大幅下落後に上昇フェーズ入りの銘柄"
     },
     {
       "source": "youtube",
@@ -565,7 +521,7 @@
       "category": "sector",
       "sentiment": "bearish",
       "confidence": 0.9,
-      "summary": "広瀬隆雄氏が酷い状況と警鐘"
+      "summary": "広瀬隆雄氏が「酷かった」と警鐘"
     },
     {
       "source": "youtube",
@@ -580,6 +536,39 @@
     },
     {
       "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 3/5】今後急落が来ればこれ買います。",
+      "video_url": "https://www.youtube.com/watch?v=OKr1NSYorX0",
+      "topic": "米国株の今後の急落",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.8,
+      "summary": "急落局面に備えた投資戦略を議論"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "暴落相場到来！利回り上昇中、厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=eSdywGEYga8",
+      "topic": "暴落相場",
+      "category": "macro",
+      "sentiment": "fear",
+      "confidence": 0.9,
+      "summary": "相場全体が下落している状況"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "暴落相場到来！利回り上昇中、厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=eSdywGEYga8",
+      "topic": "高配当株",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.8,
+      "summary": "利回り上昇で魅力的な投資機会"
+    },
+    {
+      "source": "youtube",
       "channel": "優待ライダー",
       "video_title": "大幅増配と優待新設で注目！急落優待銘柄も",
       "video_url": "https://www.youtube.com/watch?v=4qOnYRq36BI",
@@ -587,7 +576,7 @@
       "category": "stock",
       "sentiment": "bullish",
       "confidence": 0.8,
-      "summary": "大幅な配当増加で投資魅力が向上"
+      "summary": "大幅増配による株価上昇期待"
     },
     {
       "source": "youtube",
@@ -597,8 +586,8 @@
       "topic": "優待新設銘柄",
       "category": "stock",
       "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "新たな株主優待制度で注目度アップ"
+      "confidence": 0.7,
+      "summary": "新たな株主優待制度で注目集める"
     },
     {
       "source": "youtube",
@@ -608,19 +597,30 @@
       "topic": "急落優待銘柄",
       "category": "stock",
       "sentiment": "bearish",
-      "confidence": 0.7,
-      "summary": "優待銘柄の株価が大幅下落"
+      "confidence": 0.6,
+      "summary": "優待銘柄の株価急落で買い場か"
     },
     {
       "source": "youtube",
       "channel": "優待ライダー",
       "video_title": "決算増配も急落中で注目！ビビりナンピンも",
       "video_url": "https://www.youtube.com/watch?v=Y_fMnklfkrw",
-      "topic": "決算増配銘柄",
-      "category": "stock",
-      "sentiment": "bullish",
+      "topic": "決算発表",
+      "category": "event",
+      "sentiment": "neutral",
       "confidence": 0.7,
-      "summary": "決算で増配発表も株価急落で注目"
+      "summary": "決算発表と増配の発表があった"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "決算増配も急落中で注目！ビビりナンピンも",
+      "video_url": "https://www.youtube.com/watch?v=Y_fMnklfkrw",
+      "topic": "急落銘柄",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.8,
+      "summary": "増配発表にも関わらず株価が急落"
     },
     {
       "source": "youtube",
@@ -628,54 +628,10 @@
       "video_title": "決算増配も急落中で注目！ビビりナンピンも",
       "video_url": "https://www.youtube.com/watch?v=Y_fMnklfkrw",
       "topic": "ナンピン投資",
-      "category": "event",
+      "category": "stock",
       "sentiment": "cautious",
       "confidence": 0.6,
-      "summary": "ビビりながらのナンピン買い検討"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "決算増配も急落中で注目！ビビりナンピンも",
-      "video_url": "https://www.youtube.com/watch?v=Y_fMnklfkrw",
-      "topic": "株価急落",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "好材料にも関わらず株価下落継続"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "1000万円消滅！震撼地獄暴落。涙の全力買い",
-      "video_url": "https://www.youtube.com/watch?v=D83okYbUAlQ",
-      "topic": "1000万円消滅",
-      "category": "macro",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "大幅な損失発生"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "1000万円消滅！震撼地獄暴落。涙の全力買い",
-      "video_url": "https://www.youtube.com/watch?v=D83okYbUAlQ",
-      "topic": "地獄暴落",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.95,
-      "summary": "株式市場の大幅下落"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "1000万円消滅！震撼地獄暴落。涙の全力買い",
-      "video_url": "https://www.youtube.com/watch?v=D83okYbUAlQ",
-      "topic": "全力買い",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "暴落局面での積極投資"
+      "summary": "慎重にナンピン買いを検討"
     },
     {
       "source": "youtube",
@@ -686,7 +642,7 @@
       "category": "stock",
       "sentiment": "bullish",
       "confidence": 0.8,
-      "summary": "隠れ高市銘柄として注目される"
+      "summary": "隠れ高市銘柄として注目株"
     },
     {
       "source": "youtube",
@@ -697,7 +653,7 @@
       "category": "sector",
       "sentiment": "hype",
       "confidence": 0.7,
-      "summary": "政治テーマ関連の投資機会"
+      "summary": "政治テーマ関連の注目セクター"
     },
     {
       "source": "youtube",
@@ -708,7 +664,7 @@
       "category": "macro",
       "sentiment": "bullish",
       "confidence": 0.9,
-      "summary": "合理的な投資手法として推奨"
+      "summary": "最も合理的な投資手法として推奨"
     },
     {
       "source": "youtube",
@@ -719,7 +675,7 @@
       "category": "stock",
       "sentiment": "neutral",
       "confidence": 0.7,
-      "summary": "趣味として位置づけ、メインではない"
+      "summary": "趣味として楽しむものと位置づけ"
     },
     {
       "source": "youtube",
@@ -730,18 +686,18 @@
       "category": "macro",
       "sentiment": "neutral",
       "confidence": 0.8,
-      "summary": "250億円の実績を持つ投資家の考え方"
+      "summary": "250億円運用者の投資スタンス"
     },
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
       "video_title": "イラン攻撃で日経急落！暴落直後の反発に飛びついてはいけない理由",
       "video_url": "https://www.youtube.com/watch?v=R_l7ZAFhKWQ",
-      "topic": "イランの攻撃",
+      "topic": "イラン攻撃",
       "category": "event",
       "sentiment": "fear",
       "confidence": 0.9,
-      "summary": "イランの攻撃により地政学リスクが高まった"
+      "summary": "地政学リスクによる市場急落要因"
     },
     {
       "source": "youtube",
@@ -752,590 +708,51 @@
       "category": "macro",
       "sentiment": "bearish",
       "confidence": 0.8,
-      "summary": "日経平均が急落した"
+      "summary": "イラン情勢を受けて急落"
     },
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
       "video_title": "イラン攻撃で日経急落！暴落直後の反発に飛びついてはいけない理由",
       "video_url": "https://www.youtube.com/watch?v=R_l7ZAFhKWQ",
-      "topic": "暴落後の反発",
+      "topic": "暴落後反発",
       "category": "macro",
       "sentiment": "hype",
       "confidence": 0.7,
-      "summary": "暴落後の反発に飛びつくのは危険"
+      "summary": "急落直後の反発局面"
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【緊急】「イラン戦争 長期化リスク」を株価がまだ織り込み不足な件について警告します。",
-      "video_url": "https://www.youtube.com/watch?v=BBvY722FpgM",
-      "topic": "イラン戦争リスク",
-      "category": "macro",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "戦争長期化による市場への影響懸念"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【緊急】「イラン戦争 長期化リスク」を株価がまだ織り込み不足な件について警告します。",
-      "video_url": "https://www.youtube.com/watch?v=BBvY722FpgM",
-      "topic": "地政学リスク",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "中東情勢不安定化による株価下落圧力"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【緊急】「イラン戦争 長期化リスク」を株価がまだ織り込み不足な件について警告します。",
-      "video_url": "https://www.youtube.com/watch?v=BBvY722FpgM",
-      "topic": "株価織り込み不足",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "市場がリスクを過小評価している可能性"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【イラン攻撃】長期化は避けられないか？イラン側がホルムズ海峡封鎖で「石油を一滴も通さない構え」",
-      "video_url": "https://www.youtube.com/watch?v=T4psZGtqB6w",
-      "topic": "イラン攻撃情勢",
-      "category": "macro",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "イラン攻撃による地政学リスクの高まり"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【イラン攻撃】長期化は避けられないか？イラン側がホルムズ海峡封鎖で「石油を一滴も通さない構え」",
-      "video_url": "https://www.youtube.com/watch?v=T4psZGtqB6w",
-      "topic": "ホルムズ海峡封鎖",
-      "category": "event",
-      "sentiment": "fear",
-      "confidence": 0.95,
-      "summary": "ホルムズ海峡封鎖で石油供給に重大な懸念"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【イラン攻撃】長期化は避けられないか？イラン側がホルムズ海峡封鎖で「石油を一滴も通さない構え」",
-      "video_url": "https://www.youtube.com/watch?v=T4psZGtqB6w",
-      "topic": "石油市場",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.85,
-      "summary": "供給不安により石油価格上昇要因"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【イラン攻撃】長期化は避けられないか？イラン側がホルムズ海峡封鎖で「石油を一滴も通さない構え」",
-      "video_url": "https://www.youtube.com/watch?v=T4psZGtqB6w",
-      "topic": "エネルギー危機",
+      "channel": "つばめ投資顧問",
+      "video_title": "今投資家が知るべきリスクとは？（イラン/クレジット/AI）",
+      "video_url": "https://www.youtube.com/watch?v=I85cAftSSmM",
+      "topic": "イランリスク",
       "category": "macro",
       "sentiment": "fear",
       "confidence": 0.8,
-      "summary": "世界的なエネルギー供給危機の可能性"
+      "summary": "地政学的リスクが市場に与える影響"
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物が急落！原油80ドル突破・イランが湾岸全域で報復・戦争長期化で",
-      "video_url": "https://www.youtube.com/watch?v=0O4fHxUlnRw",
-      "topic": "日経先物",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "日経先物が急落"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物が急落！原油80ドル突破・イランが湾岸全域で報復・戦争長期化で",
-      "video_url": "https://www.youtube.com/watch?v=0O4fHxUlnRw",
-      "topic": "原油",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "原油価格が80ドルを突破"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物が急落！原油80ドル突破・イランが湾岸全域で報復・戦争長期化で",
-      "video_url": "https://www.youtube.com/watch?v=0O4fHxUlnRw",
-      "topic": "中東情勢",
-      "category": "event",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "イランが湾岸全域で報復、戦争長期化"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "親子上場の会社の落とし穴を教えます。",
-      "video_url": "https://www.youtube.com/watch?v=zbBbHFEzPxY",
-      "topic": "親子上場企業",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "親子上場の構造的な問題とリスクについて"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で荒れる相場の中での勝ち筋は銘柄とは？",
-      "video_url": "https://www.youtube.com/watch?v=ZQ0SxMay_II",
-      "topic": "イラン攻撃",
-      "category": "event",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "地政学的リスクで相場が不安定化"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で荒れる相場の中での勝ち筋は銘柄とは？",
-      "video_url": "https://www.youtube.com/watch?v=ZQ0SxMay_II",
-      "topic": "相場全体",
+      "channel": "つばめ投資顧問",
+      "video_title": "今投資家が知るべきリスクとは？（イラン/クレジット/AI）",
+      "video_url": "https://www.youtube.com/watch?v=I85cAftSSmM",
+      "topic": "クレジットリスク",
       "category": "macro",
       "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "攻撃の影響で市場が荒れている"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で荒れる相場の中での勝ち筋は銘柄とは？",
-      "video_url": "https://www.youtube.com/watch?v=ZQ0SxMay_II",
-      "topic": "勝ち筋銘柄",
-      "category": "stock",
-      "sentiment": "bullish",
       "confidence": 0.7,
-      "summary": "荒れ相場でも有望な投資対象を模索"
+      "summary": "信用リスクの高まりに警戒が必要"
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日本株暴落の中で爆上げしたヒット！！その理由とは",
-      "video_url": "https://www.youtube.com/watch?v=Z2YjLjqDoRU",
-      "topic": "日本株市場",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "日本株全体が暴落している状況"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日本株暴落の中で爆上げしたヒット！！その理由とは",
-      "video_url": "https://www.youtube.com/watch?v=Z2YjLjqDoRU",
-      "topic": "爆上げした個別銘柄",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "市場暴落の中で大幅上昇した銘柄"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "地味な&quot;割安株&quot;投資の最大の落とし穴を教えます",
-      "video_url": "https://www.youtube.com/watch?v=tiPgzCLRixY",
-      "topic": "割安株投資",
-      "category": "stock",
+      "channel": "つばめ投資顧問",
+      "video_title": "今投資家が知るべきリスクとは？（イラン/クレジット/AI）",
+      "video_url": "https://www.youtube.com/watch?v=I85cAftSSmM",
+      "topic": "AIセクター",
+      "category": "sector",
       "sentiment": "cautious",
-      "confidence": 0.9,
-      "summary": "割安株投資には最大の落とし穴がある"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物2000円反発リバ戻し！25日移動平均の付近へ",
-      "video_url": "https://www.youtube.com/watch?v=nBm5kEjtWvg",
-      "topic": "日経先物",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.9,
-      "summary": "2000円の大幅反発で25日移動平均付近まで戻し"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物2000円反発リバ戻し！25日移動平均の付近へ",
-      "video_url": "https://www.youtube.com/watch?v=nBm5kEjtWvg",
-      "topic": "25日移動平均線",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.8,
-      "summary": "重要な技術的節目として注目されている"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン戦争で最も値下がりする資産が「ドバイ不動産」になる理由を解説します。",
-      "video_url": "https://www.youtube.com/watch?v=P_QiRjyf9To",
-      "topic": "イラン戦争",
-      "category": "event",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "地政学リスクが高まる中東情勢"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン戦争で最も値下がりする資産が「ドバイ不動産」になる理由を解説します。",
-      "video_url": "https://www.youtube.com/watch?v=P_QiRjyf9To",
-      "topic": "ドバイ不動産",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.85,
-      "summary": "戦争リスクで最も下落する資産"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経暴落で一瞬で50万円の損...損切りの大切さを教えます。",
-      "video_url": "https://www.youtube.com/watch?v=hbR3uZNBevk",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "暴落により大きな損失が発生"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経暴落で一瞬で50万円の損...損切りの大切さを教えます。",
-      "video_url": "https://www.youtube.com/watch?v=hbR3uZNBevk",
-      "topic": "損切り戦略",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.8,
-      "summary": "リスク管理の重要性を解説"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で株価がみるみる下がり…2日で4000円も暴落、どこまで下がるのか？",
-      "video_url": "https://www.youtube.com/watch?v=rdybMuqcEPE",
-      "topic": "イラン攻撃による地政学リスク",
-      "category": "event",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "イラン攻撃で株価が2日で4000円も暴落"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で株価がみるみる下がり…2日で4000円も暴落、どこまで下がるのか？",
-      "video_url": "https://www.youtube.com/watch?v=rdybMuqcEPE",
-      "topic": "日経平均株価",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "2日間で4000円の大幅下落"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "バフェットの長期投資をマネしても資産は増えない!?250億円投資家・片山晃氏に聞いてみた",
-      "video_url": "https://www.youtube.com/watch?v=1LBZ7zPTs34",
-      "topic": "バフェット流長期投資",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "単純に真似しても資産増加は困難"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "バフェットの長期投資をマネしても資産は増えない!?250億円投資家・片山晃氏に聞いてみた",
-      "video_url": "https://www.youtube.com/watch?v=1LBZ7zPTs34",
-      "topic": "片山晃氏の投資手法",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.7,
-      "summary": "250億円投資家の見解を紹介"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【日経が急反発の後に再び急落】　トランプ「米海軍がタンカー護衛し、米政府が保険提供」の発言でどうなる日本株？",
-      "video_url": "https://www.youtube.com/watch?v=jI5UGdi_B_c",
-      "topic": "日経平均株価",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "急反発後に再び急落の不安定な値動き"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【日経が急反発の後に再び急落】　トランプ「米海軍がタンカー護衛し、米政府が保険提供」の発言でどうなる日本株？",
-      "video_url": "https://www.youtube.com/watch?v=jI5UGdi_B_c",
-      "topic": "トランプ政策",
-      "category": "macro",
-      "sentiment": "hype",
-      "confidence": 0.9,
-      "summary": "米海軍タンカー護衛と政府保険提供発言"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【日経が急反発の後に再び急落】　トランプ「米海軍がタンカー護衛し、米政府が保険提供」の発言でどうなる日本株？",
-      "video_url": "https://www.youtube.com/watch?v=jI5UGdi_B_c",
-      "topic": "日本株全体",
-      "category": "stock",
-      "sentiment": "neutral",
       "confidence": 0.6,
-      "summary": "トランプ発言の影響を受けて方向性不透明"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【日経が急反発の後に再び急落】　トランプ「米海軍がタンカー護衛し、米政府が保険提供」の発言でどうなる日本株？",
-      "video_url": "https://www.youtube.com/watch?v=jI5UGdi_B_c",
-      "topic": "海運・エネルギー",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.7,
-      "summary": "タンカー護衛政策で関連セクターに注目"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経平均 2日で4000円も暴落！日本株の今後はホルムズ海峡にかかっている？！なぜ、ちょっと遅れてが暴落来たのかを解説しました。",
-      "video_url": "https://www.youtube.com/watch?v=NqLo0ujbt3M",
-      "topic": "日経平均",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "2日で4000円の大暴落"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経平均 2日で4000円も暴落！日本株の今後はホルムズ海峡にかかっている？！なぜ、ちょっと遅れてが暴落来たのかを解説しました。",
-      "video_url": "https://www.youtube.com/watch?v=NqLo0ujbt3M",
-      "topic": "日本株",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "今後の動向が不透明"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経平均 2日で4000円も暴落！日本株の今後はホルムズ海峡にかかっている？！なぜ、ちょっと遅れてが暴落来たのかを解説しました。",
-      "video_url": "https://www.youtube.com/watch?v=NqLo0ujbt3M",
-      "topic": "ホルムズ海峡",
-      "category": "macro",
-      "sentiment": "fear",
-      "confidence": 0.7,
-      "summary": "日本株の今後を左右する要因"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "本当の&quot;株の暴落&quot;は、3日では終わりません!!",
-      "video_url": "https://www.youtube.com/watch?v=sGOA0sA0_oI",
-      "topic": "株の暴落",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "本当の暴落は3日では終わらない"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【緊急】日経先物が4000円近い暴落！。イラン戦争が長期化の懸念で。",
-      "video_url": "https://www.youtube.com/watch?v=2kThAlwrYeM",
-      "topic": "日経先物",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "4000円近い暴落"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【緊急】日経先物が4000円近い暴落！。イラン戦争が長期化の懸念で。",
-      "video_url": "https://www.youtube.com/watch?v=2kThAlwrYeM",
-      "topic": "イラン情勢",
-      "category": "macro",
-      "sentiment": "fear",
-      "confidence": 0.8,
-      "summary": "戦争長期化への懸念"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "ホルムズ海峡が事実上の封鎖で今後、日本の海上自衛隊が活躍か！？",
-      "video_url": "https://www.youtube.com/watch?v=CBIBFH5sndo",
-      "topic": "ホルムズ海峡封鎖",
-      "category": "macro",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "ホルムズ海峡が事実上封鎖される可能性"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "ホルムズ海峡が事実上の封鎖で今後、日本の海上自衛隊が活躍か！？",
-      "video_url": "https://www.youtube.com/watch?v=CBIBFH5sndo",
-      "topic": "海上自衛隊",
-      "category": "event",
-      "sentiment": "hype",
-      "confidence": 0.8,
-      "summary": "日本の海上自衛隊の活躍が期待される"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "ホルムズ海峡が事実上の封鎖で今後、日本の海上自衛隊が活躍か！？",
-      "video_url": "https://www.youtube.com/watch?v=CBIBFH5sndo",
-      "topic": "防衛関連セクター",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.7,
-      "summary": "防衛関連銘柄への影響が予想される"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経平均が6万円に到達するのはいつか？ちょる子に聞いてみた",
-      "video_url": "https://www.youtube.com/watch?v=ZWEnLmSPap0",
-      "topic": "日経平均株価",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "6万円到達時期について議論"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で日経平均株価一時1500円超下、今後の値動きの影響とは！？",
-      "video_url": "https://www.youtube.com/watch?v=fu4F1-C8vXk",
-      "topic": "イラン攻撃",
-      "category": "event",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "地政学的リスクによる市場への影響"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で日経平均株価一時1500円超下、今後の値動きの影響とは！？",
-      "video_url": "https://www.youtube.com/watch?v=fu4F1-C8vXk",
-      "topic": "日経平均株価",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.9,
-      "summary": "一時1500円超の大幅下落"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン最高指導者のハメネイ師死亡で今後のイラン体制はどうなるのか!?",
-      "video_url": "https://www.youtube.com/watch?v=vYC1kmwUBsg",
-      "topic": "イラン最高指導者ハメネイ師死亡",
-      "category": "event",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "イラン最高指導者の死亡による地政学的リスク"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン最高指導者のハメネイ師死亡で今後のイラン体制はどうなるのか!?",
-      "video_url": "https://www.youtube.com/watch?v=vYC1kmwUBsg",
-      "topic": "中東地政学リスク",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "イラン体制変化による中東情勢不安定化"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン最高指導者のハメネイ師死亡で今後のイラン体制はどうなるのか!?",
-      "video_url": "https://www.youtube.com/watch?v=vYC1kmwUBsg",
-      "topic": "原油価格",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.7,
-      "summary": "中東情勢緊迫化による原油価格上昇圧力"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "VIX指数が21まで低下しUS市場は不思議な落ち着き。イラン情勢は織り込み不十分？",
-      "video_url": "https://www.youtube.com/watch?v=7TASwqKLlbQ",
-      "topic": "VIX指数",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "21まで低下し市場の落ち着きを示す"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "VIX指数が21まで低下しUS市場は不思議な落ち着き。イラン情勢は織り込み不十分？",
-      "video_url": "https://www.youtube.com/watch?v=7TASwqKLlbQ",
-      "topic": "US市場",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.7,
-      "summary": "不思議な落ち着きを見せている"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "VIX指数が21まで低下しUS市場は不思議な落ち着き。イラン情勢は織り込み不十分？",
-      "video_url": "https://www.youtube.com/watch?v=7TASwqKLlbQ",
-      "topic": "イラン情勢",
-      "category": "event",
-      "sentiment": "fear",
-      "confidence": 0.6,
-      "summary": "地政学リスクの織り込み不十分"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で石油・海運株が急騰！今後どう動くのか!?",
-      "video_url": "https://www.youtube.com/watch?v=5z6CcBHAeZU",
-      "topic": "イラン攻撃",
-      "category": "event",
-      "sentiment": "fear",
-      "confidence": 0.9,
-      "summary": "地政学的リスクが市場に影響"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で石油・海運株が急騰！今後どう動くのか!?",
-      "video_url": "https://www.youtube.com/watch?v=5z6CcBHAeZU",
-      "topic": "石油株",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "地政学的リスクで急騰"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "イラン攻撃で石油・海運株が急騰！今後どう動くのか!?",
-      "video_url": "https://www.youtube.com/watch?v=5z6CcBHAeZU",
-      "topic": "海運株",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.8,
-      "summary": "石油価格上昇で恩恵"
+      "summary": "AI関連投資のリスク要因を検討"
     },
     {
       "source": "youtube",
@@ -1344,31 +761,20 @@
       "video_url": "https://www.youtube.com/watch?v=QCTF7CP5YqM",
       "topic": "キオクシア",
       "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.9,
-      "summary": "株価10倍の急騰で注目される半導体企業"
-    },
-    {
-      "source": "youtube",
-      "channel": "つばめ投資顧問",
-      "video_title": "【キオクシア】なぜ株価10倍に？知られざる「NAND特需」のカラクリ",
-      "video_url": "https://www.youtube.com/watch?v=QCTF7CP5YqM",
-      "topic": "NAND",
-      "category": "sector",
       "sentiment": "hype",
-      "confidence": 0.8,
-      "summary": "特需により大幅な需要拡大が発生"
+      "confidence": 0.9,
+      "summary": "株価10倍の急騰銘柄として注目"
     },
     {
       "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "【キオクシア】なぜ株価10倍に？知られざる「NAND特需」のカラクリ",
       "video_url": "https://www.youtube.com/watch?v=QCTF7CP5YqM",
-      "topic": "半導体セクター",
+      "topic": "NAND型フラッシュメモリ",
       "category": "sector",
       "sentiment": "bullish",
-      "confidence": 0.7,
-      "summary": "メモリー分野での好調な市況"
+      "confidence": 0.8,
+      "summary": "特需による市場拡大が背景"
     },
     {
       "source": "youtube",
@@ -1378,63 +784,8 @@
       "topic": "HALO銘柄",
       "category": "stock",
       "sentiment": "neutral",
-      "confidence": 0.7,
-      "summary": "HALO銘柄の概念について解説"
-    },
-    {
-      "source": "youtube",
-      "channel": "つばめ投資顧問",
-      "video_title": "レアアース銘柄の本当の買い時（JAPEX/東洋エンジ/住友金属/大同特殊鋼）",
-      "video_url": "https://www.youtube.com/watch?v=lYX7eZa_pjY",
-      "topic": "レアアース銘柄",
-      "category": "sector",
-      "sentiment": "neutral",
       "confidence": 0.8,
-      "summary": "適切な買い時を見極める必要"
-    },
-    {
-      "source": "youtube",
-      "channel": "つばめ投資顧問",
-      "video_title": "レアアース銘柄の本当の買い時（JAPEX/東洋エンジ/住友金属/大同特殊鋼）",
-      "video_url": "https://www.youtube.com/watch?v=lYX7eZa_pjY",
-      "topic": "JAPEX",
-      "category": "stock",
-      "sentiment": "neutral",
-      "confidence": 0.7,
-      "summary": "レアアース関連銘柄として注目"
-    },
-    {
-      "source": "youtube",
-      "channel": "つばめ投資顧問",
-      "video_title": "レアアース銘柄の本当の買い時（JAPEX/東洋エンジ/住友金属/大同特殊鋼）",
-      "video_url": "https://www.youtube.com/watch?v=lYX7eZa_pjY",
-      "topic": "東洋エンジ",
-      "category": "stock",
-      "sentiment": "neutral",
-      "confidence": 0.7,
-      "summary": "レアアース関連銘柄として注目"
-    },
-    {
-      "source": "youtube",
-      "channel": "つばめ投資顧問",
-      "video_title": "レアアース銘柄の本当の買い時（JAPEX/東洋エンジ/住友金属/大同特殊鋼）",
-      "video_url": "https://www.youtube.com/watch?v=lYX7eZa_pjY",
-      "topic": "住友金属",
-      "category": "stock",
-      "sentiment": "neutral",
-      "confidence": 0.7,
-      "summary": "レアアース関連銘柄として注目"
-    },
-    {
-      "source": "youtube",
-      "channel": "つばめ投資顧問",
-      "video_title": "レアアース銘柄の本当の買い時（JAPEX/東洋エンジ/住友金属/大同特殊鋼）",
-      "video_url": "https://www.youtube.com/watch?v=lYX7eZa_pjY",
-      "topic": "大同特殊鋼",
-      "category": "stock",
-      "sentiment": "neutral",
-      "confidence": 0.7,
-      "summary": "レアアース関連銘柄として注目"
+      "summary": "新しい投資用語・銘柄分類の説明"
     },
     {
       "source": "youtube",
@@ -1445,7 +796,18 @@
       "category": "macro",
       "sentiment": "fear",
       "confidence": 0.9,
-      "summary": "60%超えで歴史的暴落の可能性を示唆"
+      "summary": "60%超えで歴史的水準に到達"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "日経VI60%超え 歴史的暴落の再来か【本日のデリバティブ】3月6日 ブライトンリサーチ 堀川秀樹さん",
+      "video_url": "https://www.youtube.com/watch?v=TvZJdgTya6E",
+      "topic": "株式市場暴落",
+      "category": "macro",
+      "sentiment": "fear",
+      "confidence": 0.8,
+      "summary": "歴史的暴落の再来可能性を警戒"
     },
     {
       "source": "youtube",
@@ -1455,8 +817,8 @@
       "topic": "デリバティブ市場",
       "category": "macro",
       "sentiment": "bearish",
-      "confidence": 0.8,
-      "summary": "市場の恐怖指数が異常な水準に到達"
+      "confidence": 0.7,
+      "summary": "恐怖指数の急上昇で市場混乱"
     },
     {
       "source": "youtube",
@@ -1464,7 +826,7 @@
       "video_title": "新・中東戦争と米国市場の行方【ゲスト】3月6日 マリン・ストラテジーズ 香川睦さん",
       "video_url": "https://www.youtube.com/watch?v=Yx9HtDQqeK4",
       "topic": "中東戦争",
-      "category": "event",
+      "category": "macro",
       "sentiment": "fear",
       "confidence": 0.8,
       "summary": "地政学的リスクが市場に影響"
@@ -1478,7 +840,7 @@
       "category": "macro",
       "sentiment": "cautious",
       "confidence": 0.7,
-      "summary": "中東情勢を受けて慎重な見方"
+      "summary": "中東情勢の影響を注視"
     },
     {
       "source": "youtube",
@@ -1489,7 +851,7 @@
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.8,
-      "summary": "グロース関連銘柄に資金流入の動き"
+      "summary": "グロース材料株に資金が流入している"
     },
     {
       "source": "youtube",
@@ -1500,46 +862,46 @@
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.7,
-      "summary": "新興市場全体で注目材料が増加"
+      "summary": "新興市場が注目されている"
     }
   ],
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 5,
-        "bear": 16
+        "bull": 4,
+        "bear": 15
       },
       "株リアルライブ": {
         "bull": 9,
-        "bear": 8
+        "bear": 6
       },
       "ひげづら株ちゃんねる": {
-        "bull": 2,
-        "bear": 3
-      },
-      "トレードラボ": {
-        "bull": 2,
-        "bear": 1
-      },
-      "ばっちゃまの投資チャンネル": {
-        "bull": 1,
-        "bear": 1
-      },
-      "優待ライダー": {
-        "bull": 4,
+        "bull": 0,
         "bear": 4
       },
-      "たばたの投資ch": {
-        "bull": 18,
-        "bear": 34
-      },
-      "つばめ投資顧問": {
+      "トレードラボ": {
         "bull": 3,
         "bear": 0
       },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 1,
+        "bear": 2
+      },
+      "優待ライダー": {
+        "bull": 3,
+        "bear": 3
+      },
+      "たばたの投資ch": {
+        "bull": 4,
+        "bear": 2
+      },
+      "つばめ投資顧問": {
+        "bull": 2,
+        "bear": 2
+      },
       "STOCKVOICE": {
         "bull": 2,
-        "bear": 3
+        "bear": 4
       }
     },
     "by_topic": {
@@ -1551,19 +913,10 @@
         ]
       },
       "中東情勢": {
-        "count": 2,
-        "sentiment": "fear",
-        "sources": [
-          "Sho's投資情報局",
-          "たばたの投資ch"
-        ]
-      },
-      "日本株": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "たばたの投資ch"
+          "Sho's投資情報局"
         ]
       },
       "WTI原油": {
@@ -1580,8 +933,15 @@
           "Sho's投資情報局"
         ]
       },
+      "MSQ": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
       "米国株": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -1591,8 +951,8 @@
         "count": 2,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "ばっちゃまの投資チャンネル"
+          "ばっちゃまの投資チャンネル",
+          "Sho's投資情報局"
         ]
       },
       "半導体株": {
@@ -1610,25 +970,24 @@
         ]
       },
       "日経平均": {
-        "count": 6,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "株リアルライブ",
-          "たばたの投資ch"
+          "たばたの投資ch",
+          "Sho's投資情報局"
         ]
       },
       "イラン情勢": {
-        "count": 4,
+        "count": 3,
         "sentiment": "fear",
         "sources": [
-          "Sho's投資情報局",
-          "たばたの投資ch"
+          "株リアルライブ",
+          "Sho's投資情報局"
         ]
       },
       "ドル円": {
         "count": 2,
-        "sentiment": "bullish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
@@ -1638,6 +997,35 @@
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
+        ]
+      },
+      "月曜日の日本市場": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "米国株市場": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "4月株式分割銘柄": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "高配当株": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "優待ライダー",
+          "株リアルライブ"
         ]
       },
       "デンソー": {
@@ -1662,19 +1050,17 @@
         ]
       },
       "日経先物": {
-        "count": 4,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
-          "株リアルライブ",
-          "たばたの投資ch"
+          "株リアルライブ"
         ]
       },
       "原油": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "たばたの投資ch"
+          "株リアルライブ"
         ]
       },
       "地盤HD": {
@@ -1691,7 +1077,7 @@
           "株リアルライブ"
         ]
       },
-      "大きく買われているセクター": {
+      "注目セクター": {
         "count": 1,
         "sentiment": "bullish",
         "sources": [
@@ -1705,20 +1091,6 @@
           "株リアルライブ"
         ]
       },
-      "イラン指導者候補": {
-        "count": 1,
-        "sentiment": "fear",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "高配当株": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
       "デイトレ": {
         "count": 1,
         "sentiment": "hype",
@@ -1726,112 +1098,81 @@
           "株リアルライブ"
         ]
       },
-      "キオクシア": {
-        "count": 2,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ",
-          "つばめ投資顧問"
-        ]
-      },
-      "パンパシ": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "GSユアサ": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "カシオ": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "積水ハウス": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "イラン米国タンカー攻撃": {
+      "ブラックマンデー": {
         "count": 1,
         "sentiment": "fear",
         "sources": [
-          "株リアルライブ"
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "日本株": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "ひげづら株ちゃんねる"
         ]
       },
       "4連最高益の国内大手株": {
         "count": 1,
-        "sentiment": "fear",
+        "sentiment": "bearish",
         "sources": [
           "ひげづら株ちゃんねる"
         ]
       },
       "株価急落": {
-        "count": 2,
-        "sentiment": "bearish",
-        "sources": [
-          "優待ライダー",
-          "ひげづら株ちゃんねる"
-        ]
-      },
-      "個人投資家の心理": {
         "count": 1,
         "sentiment": "fear",
         "sources": [
           "ひげづら株ちゃんねる"
         ]
       },
-      "大手株": {
+      "個人投資家": {
         "count": 1,
-        "sentiment": "bullish",
+        "sentiment": "neutral",
         "sources": [
           "ひげづら株ちゃんねる"
         ]
       },
-      "注目関連銘柄": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "ひげづら株ちゃんねる"
-        ]
-      },
-      "３月権利高配当株": {
+      "高配当利回り銘柄": {
         "count": 1,
         "sentiment": "bullish",
         "sources": [
           "トレードラボ"
         ]
       },
-      "超優良株（2銘柄）": {
+      "3月権利の高配当株": {
         "count": 1,
         "sentiment": "bullish",
         "sources": [
           "トレードラボ"
         ]
       },
-      "国内最強株": {
+      "株価70%下落した超優良株2銘柄": {
         "count": 1,
-        "sentiment": "bearish",
+        "sentiment": "bullish",
         "sources": [
           "トレードラボ"
         ]
       },
       "原油価格": {
-        "count": 2,
+        "count": 1,
         "sentiment": "hype",
         "sources": [
-          "ばっちゃまの投資チャンネル",
-          "たばたの投資ch"
+          "ばっちゃまの投資チャンネル"
+        ]
+      },
+      "米国株の今後の急落": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "ばっちゃまの投資チャンネル"
+        ]
+      },
+      "暴落相場": {
+        "count": 1,
+        "sentiment": "fear",
+        "sources": [
+          "優待ライダー"
         ]
       },
       "大幅増配銘柄": {
@@ -1855,9 +1196,16 @@
           "優待ライダー"
         ]
       },
-      "決算増配銘柄": {
+      "決算発表": {
         "count": 1,
-        "sentiment": "bullish",
+        "sentiment": "neutral",
+        "sources": [
+          "優待ライダー"
+        ]
+      },
+      "急落銘柄": {
+        "count": 1,
+        "sentiment": "bearish",
         "sources": [
           "優待ライダー"
         ]
@@ -1865,27 +1213,6 @@
       "ナンピン投資": {
         "count": 1,
         "sentiment": "cautious",
-        "sources": [
-          "優待ライダー"
-        ]
-      },
-      "1000万円消滅": {
-        "count": 1,
-        "sentiment": "fear",
-        "sources": [
-          "優待ライダー"
-        ]
-      },
-      "地獄暴落": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "優待ライダー"
-        ]
-      },
-      "全力買い": {
-        "count": 1,
-        "sentiment": "bullish",
         "sources": [
           "優待ライダー"
         ]
@@ -1925,273 +1252,49 @@
           "たばたの投資ch"
         ]
       },
-      "イランの攻撃": {
+      "イラン攻撃": {
         "count": 1,
         "sentiment": "fear",
         "sources": [
           "たばたの投資ch"
         ]
       },
-      "暴落後の反発": {
+      "暴落後反発": {
         "count": 1,
         "sentiment": "hype",
         "sources": [
           "たばたの投資ch"
         ]
       },
-      "イラン戦争リスク": {
+      "イランリスク": {
         "count": 1,
         "sentiment": "fear",
         "sources": [
-          "たばたの投資ch"
+          "つばめ投資顧問"
         ]
       },
-      "地政学リスク": {
+      "クレジットリスク": {
         "count": 1,
         "sentiment": "bearish",
         "sources": [
-          "たばたの投資ch"
+          "つばめ投資顧問"
         ]
       },
-      "株価織り込み不足": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "イラン攻撃情勢": {
-        "count": 1,
-        "sentiment": "fear",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "ホルムズ海峡封鎖": {
-        "count": 2,
-        "sentiment": "fear",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "石油市場": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "エネルギー危機": {
-        "count": 1,
-        "sentiment": "fear",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "親子上場企業": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "イラン攻撃": {
-        "count": 3,
-        "sentiment": "fear",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "相場全体": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "勝ち筋銘柄": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "日本株市場": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "爆上げした個別銘柄": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "割安株投資": {
+      "AIセクター": {
         "count": 1,
         "sentiment": "cautious",
         "sources": [
-          "たばたの投資ch"
+          "つばめ投資顧問"
         ]
       },
-      "25日移動平均線": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "イラン戦争": {
-        "count": 1,
-        "sentiment": "fear",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "ドバイ不動産": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "損切り戦略": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "イラン攻撃による地政学リスク": {
-        "count": 1,
-        "sentiment": "fear",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "日経平均株価": {
-        "count": 4,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "バフェット流長期投資": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "片山晃氏の投資手法": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "トランプ政策": {
-        "count": 1,
-        "sentiment": "hype",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "日本株全体": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "海運・エネルギー": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "ホルムズ海峡": {
-        "count": 1,
-        "sentiment": "fear",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "株の暴落": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "海上自衛隊": {
-        "count": 1,
-        "sentiment": "hype",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "防衛関連セクター": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "イラン最高指導者ハメネイ師死亡": {
-        "count": 1,
-        "sentiment": "fear",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "中東地政学リスク": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "VIX指数": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "US市場": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "石油株": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "海運株": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "NAND": {
+      "キオクシア": {
         "count": 1,
         "sentiment": "hype",
         "sources": [
           "つばめ投資顧問"
         ]
       },
-      "半導体セクター": {
+      "NAND型フラッシュメモリ": {
         "count": 1,
         "sentiment": "bullish",
         "sources": [
@@ -2205,42 +1308,14 @@
           "つばめ投資顧問"
         ]
       },
-      "レアアース銘柄": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "つばめ投資顧問"
-        ]
-      },
-      "JAPEX": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "つばめ投資顧問"
-        ]
-      },
-      "東洋エンジ": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "つばめ投資顧問"
-        ]
-      },
-      "住友金属": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "つばめ投資顧問"
-        ]
-      },
-      "大同特殊鋼": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "つばめ投資顧問"
-        ]
-      },
       "日経VI": {
+        "count": 1,
+        "sentiment": "fear",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      },
+      "株式市場暴落": {
         "count": 1,
         "sentiment": "fear",
         "sources": [
@@ -2284,21 +1359,21 @@
       }
     },
     "hot_words": [
+      "WTI原油",
+      "仮想通貨",
       "日経平均",
       "イラン情勢",
-      "日経先物",
-      "日経平均株価",
-      "WTI原油",
+      "高配当株",
       "米国株",
-      "仮想通貨",
-      "イラン攻撃",
-      "中東情勢",
-      "日本株",
       "ナスダック",
       "ドル円",
       "ナスダック半導体株",
-      "原油",
-      "キオクシア"
+      "日経平均先物",
+      "中東情勢",
+      "VIX",
+      "MSQ",
+      "半導体株",
+      "月曜日の日本市場"
     ]
   }
 }
