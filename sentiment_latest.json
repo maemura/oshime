@@ -3,447 +3,97 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "WTI原油",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "仮想通貨",
-      "size": "lg",
+      "word": "日経平均",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "イラン情勢",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
+      "count": 13,
       "sources": 3
     },
     {
-      "word": "中東情勢",
-      "size": "md",
+      "word": "ナスダック",
+      "size": "xl",
       "mood": "fear",
-      "count": 2,
+      "count": 12,
+      "sources": 2
+    },
+    {
+      "word": "ドル円",
+      "size": "xl",
+      "mood": "calm",
+      "count": 5,
       "sources": 1
     },
     {
-      "word": "原油価格",
+      "word": "円安",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 1
+    },
+    {
+      "word": "日経",
       "size": "md",
-      "mood": "greed",
+      "mood": "fear",
       "count": 2,
       "sources": 2
     },
     {
-      "word": "VIX指数",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "VIX",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ドル円",
+      "word": "ダウ",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "月曜日の日本株市場",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "米国株式市場",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日経先物",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "来週の日本株市場",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "株式市場急落",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "株価急落",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "個人投資家",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ポートフォリオ見直し",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "暴落相場",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "インデックス投資",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "片山晃氏の投資哲学",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "クレジットリスク",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日経VI",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "株式市場暴落",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "デリバティブ市場",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "米国市場",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
   ],
   "institutional": [
     {
-      "word": "高配当株",
-      "size": "lg",
+      "word": "高配当",
+      "size": "xl",
       "mood": "greed",
-      "count": 3,
-      "sources": 2
+      "count": 14,
+      "sources": 3
     },
     {
-      "word": "半導体株",
-      "size": "md",
+      "word": "半導体",
+      "size": "xl",
       "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "MSQ",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ナスダック半導体株",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "4月株式分割銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "大きく買われているセクター",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "特定セクター（詳細不明）",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
+      "count": 11,
       "sources": 1
     },
     {
       "word": "AI関連",
+      "size": "xl",
+      "mood": "fear",
+      "count": 6,
+      "sources": 1
+    },
+    {
+      "word": "銀行",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 2
+    },
+    {
+      "word": "決算",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "配当",
       "size": "sm",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "NAND型フラッシュメモリ",
-      "size": "sm",
-      "mood": "hype",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "半導体セクター",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "中東戦争",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "グロース材料株",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "新興市場",
-      "size": "sm",
-      "mood": "greed",
       "count": 1,
       "sources": 1
     }
   ],
   "retail": [
     {
-      "word": "ナスダック",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "日経平均先物",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "米国株",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "日本株",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日経平均",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "デンソー・ローム買収",
+      "word": "任天堂",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "清水建設",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "地盤HD",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "Kaihou",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "スシロー",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "注目銘柄",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "国内大手株",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当利回り4%超えの優良株",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "3月権利高配当株",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "超優良株（2銘柄）",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "Alpha Picks",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "厳選10銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "大幅増配銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "優待新設銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "急落優待銘柄",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "決算増配銘柄",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ナンピン投資",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "パランティア",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "個別株投資",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "キオクシア",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "HALO銘柄",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
