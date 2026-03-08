@@ -1,5 +1,5 @@
 {
-  "date": "2026-03-07",
+  "date": "2026-03-08",
   "mode": "claude",
   "macro": [
     {
@@ -12,7 +12,7 @@
     {
       "word": "仮想通貨",
       "size": "lg",
-      "mood": "calm",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
@@ -21,17 +21,24 @@
       "size": "lg",
       "mood": "fear",
       "count": 3,
-      "sources": 2
+      "sources": 3
     },
     {
-      "word": "ドル円",
+      "word": "中東情勢",
       "size": "md",
-      "mood": "calm",
+      "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "中東情勢",
+      "word": "原油価格",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "VIX指数",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -45,14 +52,21 @@
       "sources": 1
     },
     {
-      "word": "月曜日の日本市場",
+      "word": "ドル円",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "月曜日の日本株市場",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "米国株市場",
+      "word": "米国株式市場",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -66,14 +80,14 @@
       "sources": 1
     },
     {
-      "word": "原油",
+      "word": "来週の日本株市場",
       "size": "sm",
-      "mood": "greed",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "日本株",
+      "word": "株式市場急落",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -94,16 +108,9 @@
       "sources": 1
     },
     {
-      "word": "原油価格",
+      "word": "ポートフォリオ見直し",
       "size": "sm",
-      "mood": "hype",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "米国株の今後の急落",
-      "size": "sm",
-      "mood": "fear",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },
@@ -125,20 +132,6 @@
       "word": "片山晃氏の投資哲学",
       "size": "sm",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "暴落後反発",
-      "size": "sm",
-      "mood": "hype",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "イランリスク",
-      "size": "sm",
-      "mood": "fear",
       "count": 1,
       "sources": 1
     },
@@ -171,13 +164,6 @@
       "sources": 1
     },
     {
-      "word": "中東戦争",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "米国市場",
       "size": "sm",
       "mood": "calm",
@@ -194,7 +180,7 @@
       "sources": 2
     },
     {
-      "word": "ナスダック半導体株",
+      "word": "半導体株",
       "size": "md",
       "mood": "fear",
       "count": 2,
@@ -208,7 +194,7 @@
       "sources": 1
     },
     {
-      "word": "半導体株",
+      "word": "ナスダック半導体株",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -222,42 +208,21 @@
       "sources": 1
     },
     {
-      "word": "注目セクター",
+      "word": "大きく買われているセクター",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "ブラックマンデー",
+      "word": "特定セクター（詳細不明）",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "決算発表",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "高市銘柄",
-      "size": "sm",
-      "mood": "hype",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "イラン攻撃",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "AIセクター",
+      "word": "AI関連",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -266,7 +231,21 @@
     {
       "word": "NAND型フラッシュメモリ",
       "size": "sm",
+      "mood": "hype",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "半導体セクター",
+      "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "中東戦争",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
@@ -287,11 +266,18 @@
   ],
   "retail": [
     {
-      "word": "日経平均",
+      "word": "ナスダック",
       "size": "lg",
       "mood": "fear",
       "count": 3,
       "sources": 2
+    },
+    {
+      "word": "日経平均先物",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 1
     },
     {
       "word": "米国株",
@@ -301,28 +287,21 @@
       "sources": 1
     },
     {
-      "word": "ナスダック",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "日経平均先物",
+      "word": "日本株",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "デンソー",
+      "word": "日経平均",
       "size": "sm",
-      "mood": "greed",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "ローム",
+      "word": "デンソー・ローム買収",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -357,35 +336,49 @@
       "sources": 1
     },
     {
-      "word": "デイトレ",
+      "word": "注目銘柄",
       "size": "sm",
-      "mood": "hype",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "4連最高益の国内大手株",
+      "word": "国内大手株",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "高配当利回り銘柄",
+      "word": "配当利回り4%超えの優良株",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "3月権利の高配当株",
+      "word": "3月権利高配当株",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "株価70%下落した超優良株2銘柄",
+      "word": "超優良株（2銘柄）",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "Alpha Picks",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "厳選10銘柄",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -413,9 +406,9 @@
       "sources": 1
     },
     {
-      "word": "急落銘柄",
+      "word": "決算増配銘柄",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -443,7 +436,7 @@
     {
       "word": "キオクシア",
       "size": "sm",
-      "mood": "hype",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
