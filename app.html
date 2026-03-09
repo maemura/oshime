@@ -1548,6 +1548,53 @@ function renderPulse(){
     </div>`).join('');
 }
 
+
+// =======================================
+// RENDER: FOCUS
+// =======================================
+function renderFocus(){
+  var md=marketData;
+  var title='',body='',color='var(--green)';
+  if(md.vix&&md.vix>=25){title='\u26a0\ufe0f \u30ea\u30b9\u30af\u8b66\u6212';color='var(--dn)';body='VIX\u304c'+md.vix+'\u3002\u6050\u6016\u6307\u6570\u304c25\u8d85\u3048\u3002\u65b0\u898f\u8cfc\u5165\u306f\u63a7\u3048\u3081\u306b\u3002';}
+  else if(md.wti_oil&&md.wti_oil>=100){title='\ud83d\udee2 \u539f\u6cb9\u9ad8\u9a30';color='var(--amber)';body='\u539f\u6cb9$'+md.wti_oil+'\u3002\u30a8\u30cd\u30eb\u30ae\u30fc\u306b\u8ffd\u3044\u98a8\u3001\u81ea\u52d5\u8eca\u306b\u9006\u98a8\u3002';}
+  else if(md.nikkei_1d_chg&&md.nikkei_1d_chg<=-3){title='\ud83d\udcc9 \u6025\u843d';color='var(--dn)';body='\u65e5\u7d4c'+md.nikkei_1d_chg+'%\u3002\u30d1\u30cb\u30c3\u30af\u58f2\u308a\u7981\u7269\u3002';}
+  else if(md.nikkei_1d_chg&&md.nikkei_1d_chg>=2){title='\ud83d\udcc8 \u6025\u9a30';color='var(--up)';body='\u65e5\u7d4c+'+md.nikkei_1d_chg+'%\u3002\u30ea\u30d0\u30a6\u30f3\u30c9\u304b\u3002';}
+  else if(md.vix&&md.vix<18){title='\ud83d\udfe2 \u5e73\u7a4f';color='var(--green)';body='VIX'+md.vix+'\u3002\u5b89\u5b9a\u3002\u8cb7\u3044\u691c\u8a0e\u53ef\u3002';}
+  else{title='\ud83d\udcca \u901a\u5e38';color='var(--amber)';body='\u7279\u6bb5\u306e\u7570\u5e38\u306a\u3057\u3002';}
+  var mc=[];
+  if(md.nikkei_price)mc.push('\u65e5\u7d4c '+md.nikkei_price.toLocaleString());
+  if(md.vix)mc.push('VIX '+md.vix);
+  if(md.wti_oil)mc.push('\u539f\u6cb9 $'+md.wti_oil);
+  if(md.usdjpy)mc.push('\xa5/$ '+md.usdjpy);
+  if(md.us10y)mc.push('\u7c7310Y '+md.us10y+'%');
+  if(md.ny_dow)mc.push('NYDow '+md.ny_dow.toLocaleString());
+  if(md.sp500)mc.push('S&P '+md.sp500.toLocaleString());
+  var ms=mc.length?'<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">'+mc.map(function(m){return '<span style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:3px 8px;font-family:var(--fn);font-size:11px;color:var(--text)">'+m+'</span>';}).join('')+'</div>':'';
+  document.getElementById('focusBody').innerHTML='<div style="border-left:3px solid '+color+';padding-left:12px;"><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--text2);margin-bottom:6px;">'+title+'</div><div style="font-size:12px;color:var(--text);line-height:1.7;">'+body+'</div></div>'+ms;
+  document.getElementById('focusDate').textContent=marketData.updated_at||'';
+}
+var intelligenceData=null;
+async function loadIntelligence(){try{var r=await fetch('market_intelligence.json?t='+Date.now());if(r.ok)intelligenceData=await r.json();}catch(e){}}
+function renderNews(){
+  if(!intelligenceData){document.getElementById('newsBody').innerHTML='<div style="padding:14px;font-size:11px;color:var(--text3)">No data</div>';return;}
+  var items=[],sources=[{key:'nikkei_headlines',icon:'\ud83d\udcf0',name:'\u65e5\u7d4c'},{key:'kabutan_news',icon:'\ud83d\udcca',name:'\u682a\u63a2'},{key:'google_news',icon:'\ud83c\udf10',name:'Google'},{key:'tdnet_disclosures',icon:'\ud83d\udccb',name:'TDnet'}];
+  sources.forEach(function(s){(intelligenceData[s.key]||[]).slice(0,3).forEach(function(a){items.push({icon:s.icon,src:s.name,title:a.title||'',url:a.url||''});});});
+  items=items.slice(0,12);
+  if(!items.length){document.getElementById('newsBody').innerHTML='<div style="padding:14px;font-size:11px;color:var(--text3)">No news</div>';return;}
+  document.getElementById('newsBody').innerHTML=items.map(function(it){return '<a href="'+it.url+'" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text);"><span style="flex-shrink:0">'+it.icon+'</span><div><div style="font-size:12px;line-height:1.5;color:var(--text)">'+it.title+'</div><div style="font-size:9px;color:var(--text3);margin-top:2px">'+it.src+'</div></div></a>';}).join('');
+}
+var sentimentData=null;
+async function loadSentiment(){try{var r=await fetch('sentiment_latest.json?t='+Date.now());if(r.ok)sentimentData=await r.json();}catch(e){}}
+function renderSentiment(){
+  if(!sentimentData||!sentimentData.channels){document.getElementById('sentimentBody').innerHTML='<div style="font-size:11px;color:var(--text3)">No data</div>';return;}
+  var html=sentimentData.channels.map(function(ch){
+    var s=ch.sentiment||'neutral',c=s==='bullish'?'var(--up)':s==='bearish'?'var(--dn)':'var(--amber)',l=s==='bullish'?'\u5f37\u6c17':s==='bearish'?'\u5f31\u6c17':'\u4e2d\u7acb';
+    var t=(ch.top_topics||[]).slice(0,3).join(', ');
+    return '<div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);"><div style="width:8px;height:8px;border-radius:50%;background:'+c+';flex-shrink:0;"></div><div style="flex:1;min-width:0;"><div style="font-size:12px;color:var(--text2);font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+ch.channel_name+'</div><div style="font-size:10px;color:var(--text3);margin-top:1px;">'+t+'</div></div><div style="font-size:11px;font-weight:700;color:'+c+';flex-shrink:0;">'+l+'</div></div>';
+  }).join('');
+  document.getElementById('sentimentBody').innerHTML=html;
+}
+
 // ═══════════════════════════════════════
 // RENDER: STANCE
 // ═══════════════════════════════════════
