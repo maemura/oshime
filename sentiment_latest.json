@@ -6,8 +6,8 @@
       "word": "日経平均",
       "size": "xl",
       "mood": "fear",
-      "count": 5,
-      "sources": 3
+      "count": 6,
+      "sources": 4
     },
     {
       "word": "ナスダック",
@@ -18,15 +18,22 @@
     },
     {
       "word": "円安",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
+      "count": 3,
       "sources": 2
     },
     {
       "word": "日経",
-      "size": "sm",
+      "size": "lg",
       "mood": "fear",
+      "count": 3,
+      "sources": 3
+    },
+    {
+      "word": "ドル円",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -34,10 +41,10 @@
   "institutional": [
     {
       "word": "高配当",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "半導体",
@@ -52,6 +59,13 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
@@ -59,6 +73,13 @@
       "word": "任天堂",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ソニー",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
