@@ -305,7 +305,12 @@ def main():
         print("⚠ sentiment_latest.json なし。YouTube情報なしで生成します。")
 
     # 生成
-    result = generate(stocks_data, sentiment_data)
+    try:
+        result = generate(stocks_data, sentiment_data)
+    except Exception as e:
+        print(f'⚠️ API呼び出し失敗（クレジット不足？）: {e}')
+        print('📝 コメンタリー生成をスキップします')
+        import sys; sys.exit(0)
     if not result:
         print("❌ 生成失敗")
         sys.exit(1)

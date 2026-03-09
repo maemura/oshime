@@ -469,6 +469,39 @@ def fetch_market_data():
     except:
         pass
 
+    try:
+        # WTI原油
+        oil = yf.Ticker("CL=F")
+        oil_hist = oil.history(period="5d")
+        if not oil_hist.empty:
+            market["wti_oil"] = round(float(oil_hist["Close"].dropna().values[-1]), 2)
+    except:
+        pass
+
+    try:
+        # NYダウ
+        dji = yf.Ticker("^DJI")
+        dji_hist = dji.history(period="5d")
+        if not dji_hist.empty:
+            dji_closes = dji_hist["Close"].dropna().values
+            market["ny_dow"] = round(float(dji_closes[-1]), 2)
+            if len(dji_closes) >= 2:
+                market["ny_dow_1d_chg"] = round(((dji_closes[-1] / dji_closes[-2]) - 1) * 100, 2)
+    except:
+        pass
+
+    try:
+        # S&P500
+        sp = yf.Ticker("^GSPC")
+        sp_hist = sp.history(period="5d")
+        if not sp_hist.empty:
+            sp_closes = sp_hist["Close"].dropna().values
+            market["sp500"] = round(float(sp_closes[-1]), 2)
+            if len(sp_closes) >= 2:
+                market["sp500_1d_chg"] = round(((sp_closes[-1] / sp_closes[-2]) - 1) * 100, 2)
+    except:
+        pass
+
     # デフォルト値
     market.setdefault("geo_risk", 0)
     market.setdefault("rate_cut_flag", 0)
