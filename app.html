@@ -1546,12 +1546,12 @@ function renderPulse(){
 function renderFocus(){
   var md=marketData;
   var title='',body='',color='var(--green)';
-  if(md.vix&&md.vix>=25){title='\u26a0\ufe0f \u30ea\u30b9\u30af\u8b66\u6212';color='var(--dn)';body='VIX\u304c'+md.vix+'\u3002\u6050\u6016\u6307\u6570\u304c25\u8d85\u3048\u3002\u65b0\u898f\u8cfc\u5165\u306f\u63a7\u3048\u3081\u306b\u3002';}
+  if(md.vix&&md.vix>=28){title='\u26a0\ufe0f \u30ea\u30b9\u30af\u8b66\u6212';color='var(--dn)';body='VIX\u304c'+md.vix+'\u3002\u6050\u6016\u6307\u6570\u304c25\u8d85\u3048\u3002\u65b0\u898f\u8cfc\u5165\u306f\u63a7\u3048\u3081\u306b\u3002';}
   else if(md.wti_oil&&md.wti_oil>=100){title='\ud83d\udee2 \u539f\u6cb9\u9ad8\u9a30';color='var(--amber)';body='\u539f\u6cb9$'+md.wti_oil+'\u3002\u30a8\u30cd\u30eb\u30ae\u30fc\u306b\u8ffd\u3044\u98a8\u3001\u81ea\u52d5\u8eca\u306b\u9006\u98a8\u3002';}
   else if(md.nikkei_1d_chg&&md.nikkei_1d_chg<=-3){title='\ud83d\udcc9 \u6025\u843d';color='var(--dn)';body='\u65e5\u7d4c'+md.nikkei_1d_chg+'%\u3002\u30d1\u30cb\u30c3\u30af\u58f2\u308a\u7981\u7269\u3002';}
   else if(md.nikkei_1d_chg&&md.nikkei_1d_chg>=2){title='\ud83d\udcc8 \u6025\u9a30';color='var(--up)';body='\u65e5\u7d4c+'+md.nikkei_1d_chg+'%\u3002\u30ea\u30d0\u30a6\u30f3\u30c9\u304b\u3002';}
-  else if(md.vix&&md.vix<18){title='\ud83d\udfe2 \u5e73\u7a4f';color='var(--green)';body='VIX'+md.vix+'\u3002\u5b89\u5b9a\u3002\u8cb7\u3044\u691c\u8a0e\u53ef\u3002';}
-  else{title='\ud83d\udcca \u901a\u5e38';color='var(--amber)';body='\u7279\u6bb5\u306e\u7570\u5e38\u306a\u3057\u3002';}
+  else if(md.vix&&md.vix<16){title='\ud83d\udfe2 \u5e73\u7a4f';color='var(--green)';body='VIX'+md.vix+'\u3002\u5b89\u5b9a\u3002\u8cb7\u3044\u691c\u8a0e\u53ef\u3002';}
+  else if(md.vix&&md.vix>=20){title='\ud83d\udfe1 \u69d8子見';color='var(--amber)';body='VIX'+md.vix+'。警戒寄り。新規購入は慎重に。';}else{title='\ud83d\udcca \u901a\u5e38';color='var(--amber)';body='\u7279\u6bb5\u306e\u7570\u5e38\u306a\u3057\u3002';}
   var mc=[];
   if(md.nikkei_price)mc.push('\u65e5\u7d4c '+md.nikkei_price.toLocaleString());
   if(md.vix)mc.push('VIX '+md.vix);
