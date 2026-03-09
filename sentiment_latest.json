@@ -1,46 +1,32 @@
 {
-  "date": "2026-03-08",
+  "date": "2026-03-09",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "xl",
       "mood": "fear",
-      "count": 13,
+      "count": 5,
       "sources": 3
     },
     {
       "word": "ナスダック",
-      "size": "xl",
-      "mood": "fear",
-      "count": 12,
-      "sources": 2
-    },
-    {
-      "word": "ドル円",
-      "size": "xl",
-      "mood": "calm",
-      "count": 5,
-      "sources": 1
-    },
-    {
-      "word": "円安",
       "size": "lg",
       "mood": "fear",
       "count": 4,
-      "sources": 1
+      "sources": 2
     },
     {
-      "word": "日経",
+      "word": "円安",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 2
     },
     {
-      "word": "ダウ",
+      "word": "日経",
       "size": "sm",
-      "mood": "greed",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -50,41 +36,20 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 14,
+      "count": 5,
       "sources": 3
     },
     {
       "word": "半導体",
-      "size": "xl",
-      "mood": "fear",
-      "count": 11,
-      "sources": 1
-    },
-    {
-      "word": "AI関連",
-      "size": "xl",
-      "mood": "fear",
-      "count": 6,
-      "sources": 1
-    },
-    {
-      "word": "銀行",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "決算",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
