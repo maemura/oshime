@@ -2069,19 +2069,19 @@ async function loadRealData(){
       if(j.trend_ranking&&j.trend_ranking.length)trendRankingData=j.trend_ranking;
       if(j.sector_scores)sectorScoresData=j.sector_scores;
       // 信頼バー
-      document.getElementById('trustText').innerHTML=`<span class="hi">${j.updated_at}</span> 更新 · ${j.total}銘柄スキャン済み`;
+      if(document.getElementById('trustText')) document.getElementById('trustText').innerHTML=`<span class="hi">${j.updated_at}</span> 更新 · ${j.total}銘柄スキャン済み`;
       document.getElementById('lastUpdate').textContent='📡 '+j.updated_at+' 更新';
-      document.getElementById('trustDot').style.background='var(--green)';
-      document.getElementById('trustBanner').style.borderLeftColor='var(--green)';
+      if(document.getElementById('trustDot')) document.getElementById('trustDot').style.background='var(--green)';
+      if(document.getElementById('trustBanner')) document.getElementById('trustBanner').style.borderLeftColor='var(--green)';
       document.getElementById('totalCountBadge').textContent=j.total+'銘柄';
       document.getElementById('heroEyebrow').innerHTML='<span class="hero-dot"></span>📡 実データ読込済み — 押し目 × 高配当 — 毎朝8:30自動更新';
     }else throw new Error('no stocks');
   }catch{
     dataSource='sample';
     STOCKS=[...SAMPLE_STOCKS];
-    document.getElementById('trustText').innerHTML='<span class="warn">サンプルデータ表示中</span> — 実データは毎朝8:30更新';
-    document.getElementById('trustDot').style.background='var(--amber)';
-    document.getElementById('trustBanner').style.borderLeftColor='var(--amber)';
+    if(document.getElementById('trustText')) if(document.getElementById('trustText')) document.getElementById('trustText').innerHTML='<span class="warn">サンプルデータ表示中</span> — 実データは毎朝8:30更新';
+    if(document.getElementById('trustDot')) document.getElementById('trustDot').style.background='var(--amber)';
+    if(document.getElementById('trustBanner')) document.getElementById('trustBanner').style.borderLeftColor='var(--amber)';
   }
 }
 
