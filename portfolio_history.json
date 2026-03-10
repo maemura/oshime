@@ -1,0 +1,15 @@
+{
+  "history": [
+    {"day": 1, "date": "2026-02-24", "total": 10000000, "stock": 1891050, "cash": 8108950, "nikkei": 59332, "holdings": 2},
+    {"day": 2, "date": "2026-02-25", "total": 9978000, "stock": 1869050, "cash": 8108950, "nikkei": 58530, "holdings": 2},
+    {"day": 3, "date": "2026-02-26", "total": 10025000, "stock": 1916050, "cash": 8108950, "nikkei": 58905, "holdings": 2},
+    {"day": 4, "date": "2026-02-27", "total": 10056000, "stock": 1947050, "cash": 8108950, "nikkei": 59332, "holdings": 2},
+    {"day": 5, "date": "2026-02-28", "total": 10034000, "stock": 2908050, "cash": 7126000, "nikkei": 58532, "holdings": 4},
+    {"day": 6, "date": "2026-03-03", "total": 9894000, "stock": 3994650, "cash": 5899350, "nikkei": 56737, "holdings": 6},
+    {"day": 7, "date": "2026-03-04", "total": 9794000, "stock": 5606650, "cash": 4187350, "nikkei": 54690, "holdings": 7},
+    {"day": 8, "date": "2026-03-05", "total": 9870000, "stock": 5682650, "cash": 4187350, "nikkei": 55728, "holdings": 7},
+    {"day": 9, "date": "2026-03-06", "total": 10183430, "stock": 5996080, "cash": 4187350, "nikkei": 55621, "holdings": 7},
+    {"day": 10, "date": "2026-03-09", "total": 10050970, "stock": 6463620, "cash": 3587350, "nikkei": 52728, "holdings": 7},
+    {"day": 11, "date": "2026-03-10", "total": 10078150, "stock": 6446145, "cash": 3632005, "nikkei": 54248, "holdings": 23}
+  ]
+}
