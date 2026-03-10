@@ -1614,6 +1614,7 @@ function renderTop10(){
 }
 
 function renderSectorTrend(){
+  if(!document.getElementById("sectorBody")) return;
   const body=document.getElementById('top5Body');
   const SEC_MAP={
     '銀行':   {jp:'銀行',ico:'🏦'},
