@@ -206,6 +206,20 @@ def calc_rsi(prices, period=14):
 # GX: グリーントランスフォーメーション、水素・アンモニア
 # DX: デジタル田園都市、マイナンバー基盤
 # インバウンド・観光: 観光立国推進
+
+# ── AI・半導体テーマ銘柄リスト ──
+AI_CODES = {
+    "8035", "6857", "6920", "6146", "6723", "4063", "3436", "6526",
+    "6758", "9984", "9613", "5803", "5801", "285A", "6701", "3778",
+    "9434", "2802", "4062", "6227",
+}
+AI_SECTORS = {"半導体", "AI", "DX"}
+
+# ── トレンド・話題株リスト（毎週更新）──
+TREND_CODES = {
+    "7974", "8136", "7832", "3350", "7936", "8050", "6072", "6740", "4661",
+}
+
 KOKUSAKU_THEMES = {
     # 半導体・AI
     "8035": "半導体",  # 東京エレクトロン
@@ -308,6 +322,97 @@ def calc_score(s):
 
     return max(0, min(score, 100))
 
+
+
+def calc_ai_score(s):
+    """🤖 AI・半導体スコア（100点満点）"""
+    code = s.get("code", "")
+    kokusaku = s.get("kokusaku", "")
+    score = 0
+    if code in AI_CODES or kokusaku in AI_SECTORS:
+        score += 30
+    rsi = s.get("rsi") or 50
+    if rsi <= 25: score += 25
+    elif rsi <= 30: score += 20
+    elif rsi <= 38: score += 15
+    elif rsi <= 45: score += 8
+    elif rsi <= 50: score += 3
+    d25 = ((s.get("price", 0) / s.get("ma25", 1)) - 1) * 100 if s.get("ma25") else 0
+    if d25 <= -10: score += 25
+    elif d25 <= -7: score += 20
+    elif d25 <= -5: score += 15
+    elif d25 <= -3: score += 8
+    elif d25 <= -1: score += 3
+    vol_r = s.get("vol_r") or 1
+    if vol_r >= 3.0: score += 10
+    elif vol_r >= 2.0: score += 7
+    elif vol_r >= 1.5: score += 3
+    mc = s.get("market_cap_b") or 0
+    if mc >= 5000: score += 10
+    elif mc >= 1000: score += 7
+    elif mc >= 500: score += 3
+    if code not in AI_CODES and kokusaku not in AI_SECTORS:
+        score = min(score, 10)
+    return max(0, min(score, 100))
+
+
+def calc_kokusaku_score(s):
+    """🏛️ 国策・エネルギースコア（100点満点）"""
+    kokusaku = s.get("kokusaku", "")
+    score = 0
+    if kokusaku in ("防衛", "GX"): score += 25
+    elif kokusaku: score += 10
+    div = s.get("dividend", 0) or 0
+    if div >= 4: score += 20
+    elif div >= 3.5: score += 15
+    elif div >= 3: score += 10
+    elif div >= 2: score += 5
+    pbr = s.get("pbr") or 99
+    if pbr <= 0.8: score += 15
+    elif pbr <= 1.0: score += 10
+    elif pbr <= 1.3: score += 5
+    rsi = s.get("rsi") or 50
+    if rsi <= 30: score += 15
+    elif rsi <= 38: score += 10
+    elif rsi <= 45: score += 5
+    d25 = ((s.get("price", 0) / s.get("ma25", 1)) - 1) * 100 if s.get("ma25") else 0
+    if d25 <= -8: score += 15
+    elif d25 <= -5: score += 10
+    elif d25 <= -3: score += 5
+    vol_r = s.get("vol_r") or 1
+    if vol_r >= 2.0: score += 10
+    elif vol_r >= 1.5: score += 5
+    if not kokusaku:
+        score = min(score, 10)
+    return max(0, min(score, 100))
+
+
+def calc_trend_score(s):
+    """🔥 トレンド・話題株スコア（100点満点）"""
+    code = s.get("code", "")
+    score = 0
+    if code in TREND_CODES: score += 30
+    vol_r = s.get("vol_r") or 1
+    if vol_r >= 5.0: score += 25
+    elif vol_r >= 3.0: score += 20
+    elif vol_r >= 2.0: score += 15
+    elif vol_r >= 1.5: score += 10
+    elif vol_r >= 1.2: score += 5
+    rsi = s.get("rsi") or 50
+    if 40 <= rsi <= 60: score += 15
+    elif 30 <= rsi < 40: score += 10
+    elif 60 < rsi <= 70: score += 5
+    d25 = ((s.get("price", 0) / s.get("ma25", 1)) - 1) * 100 if s.get("ma25") else 0
+    if d25 >= 10: score += 15
+    elif d25 >= 5: score += 10
+    elif d25 >= 2: score += 5
+    elif d25 <= -5: score += 8
+    mc = s.get("market_cap_b") or 0
+    if 100 <= mc < 1000: score += 15
+    elif 1000 <= mc < 5000: score += 10
+    elif 50 <= mc < 100: score += 8
+    elif mc >= 5000: score += 3
+    return max(0, min(score, 100))
 
 def fetch_stock_data(code, retries=2):
     """1銘柄のデータを取得"""
@@ -538,6 +643,9 @@ def main():
         if data:
             # スコア計算
             data["score"] = calc_score(data)
+            data["ai_score"] = calc_ai_score(data)
+            data["kokusaku_score"] = calc_kokusaku_score(data)
+            data["trend_score"] = calc_trend_score(data)
             stocks.append(data)
         else:
             errors += 1
@@ -604,11 +712,19 @@ def main():
     file_size = os.path.getsize("stocks_data.json") / 1024
     print(f"\n📁 stocks_data.json 出力完了 ({file_size:.0f} KB)")
 
-    # サマリー
-    top5 = stocks[:5]
-    print("\n🏆 スコア TOP5:")
-    for s in top5:
-        print(f"   {s['code']} {s['name'][:10]:　<10} スコア:{s['score']} 配当:{s['dividend']}% RSI:{s['rsi']}")
+    # サマリー（4カテゴリー）
+    print("\n🏆 💰高配当 TOP5:")
+    for s in sorted(stocks, key=lambda x: x.get("score",0), reverse=True)[:5]:
+        print(f"   {s['code']} {s['name'][:10]}  スコア:{s['score']} 配当:{s.get('dividend',0)}% RSI:{s.get('rsi',0)}")
+    print("\n🤖 AI TOP5:")
+    for s in sorted(stocks, key=lambda x: x.get("ai_score",0), reverse=True)[:5]:
+        print(f"   {s['code']} {s['name'][:10]}  AI:{s.get('ai_score',0)} RSI:{s.get('rsi',0)}")
+    print("\n🏛️ 国策 TOP5:")
+    for s in sorted(stocks, key=lambda x: x.get("kokusaku_score",0), reverse=True)[:5]:
+        print(f"   {s['code']} {s['name'][:10]}  国策:{s.get('kokusaku_score',0)} テーマ:{s.get('kokusaku','')}")
+    print("\n🔥 トレンド TOP5:")
+    for s in sorted(stocks, key=lambda x: x.get("trend_score",0), reverse=True)[:5]:
+        print(f"   {s['code']} {s['name'][:10]}  トレンド:{s.get('trend_score',0)} 出来高比:{s.get('vol_r',1):.1f}x")
 
     buy_count = len([s for s in stocks if s.get("score", 0) >= 60])
     print(f"\n📊 買い圏: {buy_count}銘柄 / 注意圏: {len([s for s in stocks if 35 <= s.get('score',0) < 60])}銘柄")
