@@ -995,6 +995,185 @@ a{color:var(--green)}
     <!-- MARKET PULSE -->
     <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
 
+    <!-- 🤖 AIコメント + 騰落ランキング -->
+    <div class="mkt-card" id="mktCommentSection" style="display:none">
+      <div class="mkt-header">
+        <div class="mkt-avatar">🤖</div>
+        <div>
+          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
+          <div class="mkt-when" id="mktCommentDate"></div>
+        </div>
+      </div>
+      <div class="mkt-body">
+        <div class="mkt-comment" id="mktCommentBody"></div>
+        <div class="mkt-tags" id="mktCommentTags"></div>
+        <div class="mkt-sources" id="mktCommentSources"></div>
+      </div>
+    </div>
+
+    <div class="rank-card" id="rankSection" style="display:none">
+      <div class="rank-header">
+        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
+        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ <span style="color:var(--green);font-weight:700">タップで詳細 ▸</span></div>
+      </div>
+      <div id="rankBody"></div>
+    </div>
+
+    <!-- STANCE（3軸スコア） -->
+    <div class="sec-wrap" id="stanceSection">
+      <div class="stance-day" id="stanceDay"></div>
+      <div class="stance-hint" id="stanceHint" style="font-size:13px;color:var(--text2)"></div>
+      <div class="stance-axes" id="stanceAxes"></div>
+      <div class="stance-summary" id="stanceSummary"></div>
+    </div>
+
+    <!-- 🔥 今日のフォーカス -->
+    <div class="sec-wrap" id="focusSection" style="display:none">
+      <div class="sec-head">
+        <div class="sec-head-title">🔥 今日のフォーカス</div>
+        <div class="sec-head-sub" id="focusDate"></div>
+      </div>
+      <div id="focusBody" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;">
+        <div style="font-size:11px;color:var(--text3)">読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- 🎯 4つの問い -->
+    <div class="sec-wrap" id="questionsSection">
+      <div class="sec-head">
+        <div class="sec-head-title">🎯 今日のかぶのすけ</div>
+        <div class="sec-head-sub">4つのテーマで考える</div>
+      </div>
+      <div id="questionsBody" style="display:flex;flex-direction:column;gap:12px">
+        <div class="q-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-left:4px solid #ffd700">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-size:14px;font-weight:700;color:var(--text1)">💰 今日、守るべき？</div>
+            <div style="font-size:11px;color:var(--text3)" id="qDividendCount">—銘柄</div>
+          </div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:10px" id="qDividendComment">配当利回りの高い割安株を毎朝スキャンしています</div>
+          <div id="qDividendHoldings" style="font-size:11px;color:var(--text3);margin-bottom:8px"></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+            <img src="https://raw.githubusercontent.com/maemura/oshime/main/images/kk_thinking.png" alt="かぶ子" style="width:28px;height:28px;border-radius:50%;object-fit:cover">
+            <div style="font-size:11px;color:var(--accent)" id="qDividendRec">かぶ子の推し：読み込み中…</div>
+          </div>
+        </div>
+        <div class="q-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-left:4px solid #4a90e2">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-size:14px;font-weight:700;color:var(--text1)">🤖 今日、仕込むべき？</div>
+            <div style="font-size:11px;color:var(--text3)" id="qAiCount">—銘柄</div>
+          </div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:10px" id="qAiComment">AI・半導体関連の売られすぎをスキャンしています</div>
+          <div id="qAiHoldings" style="font-size:11px;color:var(--text3);margin-bottom:8px"></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+            <img src="https://raw.githubusercontent.com/maemura/oshime/main/images/kk_excited.png" alt="かぶ子" style="width:28px;height:28px;border-radius:50%;object-fit:cover">
+            <div style="font-size:11px;color:var(--accent)" id="qAiRec">かぶ子の推し：読み込み中…</div>
+          </div>
+        </div>
+        <div class="q-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-left:4px solid #4aeaaa">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-size:14px;font-weight:700;color:var(--text1)">🏛️ 今日、国策に乗るべき？</div>
+            <div style="font-size:11px;color:var(--text3)" id="qKokusakuCount">—銘柄</div>
+          </div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:10px" id="qKokusakuComment">防衛・エネルギー・国策テーマをスキャンしています</div>
+          <div id="qKokusakuHoldings" style="font-size:11px;color:var(--text3);margin-bottom:8px"></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+            <img src="https://raw.githubusercontent.com/maemura/oshime/main/images/kk_patient.png" alt="かぶ子" style="width:28px;height:28px;border-radius:50%;object-fit:cover">
+            <div style="font-size:11px;color:var(--accent)" id="qKokusakuRec">かぶ子の推し：読み込み中…</div>
+          </div>
+        </div>
+        <div class="q-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-left:4px solid #ff6b7a">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-size:14px;font-weight:700;color:var(--text1)">🔥 今日、波に乗るべき？</div>
+            <div style="font-size:11px;color:var(--text3)" id="qTrendCount">—銘柄</div>
+          </div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:10px" id="qTrendComment">SNS・YouTubeで話題の銘柄をスキャンしています</div>
+          <div id="qTrendHoldings" style="font-size:11px;color:var(--text3);margin-bottom:8px"></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+            <img src="https://raw.githubusercontent.com/maemura/oshime/main/images/kk_excited.png" alt="かぶ子" style="width:28px;height:28px;border-radius:50%;object-fit:cover">
+            <div style="font-size:11px;color:var(--accent)" id="qTrendRec">かぶ子の推し：読み込み中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📰 マーケットニュース -->
+    <div class="sec-wrap" id="newsSection" style="display:none">
+      <div class="sec-head">
+        <div class="sec-head-title">📰 マーケットニュース</div>
+        <div class="sec-head-sub">自動収集 10ソース</div>
+      </div>
+      <div id="newsBody" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;">
+        <div style="font-size:11px;color:var(--text3)">読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- 📊 かぶのすけポートフォリオ -->
+    <div class="sec-wrap" id="portfolioSection">
+      <div class="sec-head">
+        <div class="sec-head-title">📊 かぶのすけのポートフォリオ</div>
+        <div class="sec-head-sub">AI × 1000万円 ／ 4テーマ運用中</div>
+      </div>
+      <div id="portfolioBody">
+        <div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- 📡 BRAIN SCANNER 3層同心円 -->
+    <div class="brain-wrap" id="brainSection" style="display:none">
+      <div class="brain-head">
+        <div class="brain-title">投資家の話題マップ</div>
+        <div class="brain-sub">YouTubeやSNSで今日話題のキーワード</div>
+      </div>
+      <div id="brainBody"></div>
+      <div class="brain-legend">
+        <div class="brain-leg-card">
+          <div class="brain-leg-title" style="color:#4af">マクロ（外側）</div>
+          <div class="brain-leg-items">
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>追い風</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>リスク</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ffb347"></div>注目</div>
+          </div>
+        </div>
+        <div class="brain-leg-card">
+          <div class="brain-leg-title" style="color:#4aeaaa">機関（中間）</div>
+          <div class="brain-leg-items">
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>買い</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>売り</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#6b9fff"></div>分析</div>
+          </div>
+        </div>
+        <div class="brain-leg-card">
+          <div class="brain-leg-title" style="color:#a78bfa">個人（内側）</div>
+          <div class="brain-leg-items">
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>強気</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>不安</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff9f43"></div>過熱</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOP10 スコアランキング -->
+    <div class="sec-wrap" id="top10Section">
+      <div class="t5-tabs" id="t5tabs"></div>
+      <div id="top10Body"></div>
+    </div>
+
+    <!-- 🔗 つながる -->
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:14px;text-align:center">
+      <div style="font-size:13px;font-weight:600;color:var(--text1);margin-bottom:12px">📢 かぶのすけをフォローする</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <a href="https://note.com/kabunosuke_navi" target="_blank" style="display:block;padding:10px;background:var(--bg1);border:1px solid var(--border);border-radius:8px;color:var(--accent);text-decoration:none;font-size:12px">📝 noteで投資日記を読む →</a>
+        <a href="https://www.youtube.com/@kabuko_screening" target="_blank" style="display:block;padding:10px;background:var(--bg1);border:1px solid var(--border);border-radius:8px;color:var(--accent);text-decoration:none;font-size:12px">📺 かぶ子のYouTubeを見る →</a>
+        <a href="https://x.com/kabunosuke_navi" target="_blank" style="display:block;padding:10px;background:var(--bg1);border:1px solid var(--border);border-radius:8px;color:var(--accent);text-decoration:none;font-size:12px">🐦 Xでフォローする →</a>
+      </div>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
+
+  </div><!-- /panel-home -->
+
   <!-- ══ WATCH PANEL ══ -->
   <div class="panel" id="panel-watch">
     <div class="sec-wrap">
