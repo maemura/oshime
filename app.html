@@ -1016,11 +1016,11 @@ a{color:var(--green)}
         <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
         <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ <span style="color:var(--green);font-weight:700">タップで詳細 ▸</span></div>
       </div>
-      <div id="rankBody"></div>
+      <div id="rankBody"><div id="rankGrid"></div><div id="rankFooter"></div></div>
     </div>
 
     <!-- STANCE（3軸スコア） -->
-    <div class="sec-wrap" id="stanceSection">
+    <div class="sec-wrap" id="stanceBox">
       <div class="stance-day" id="stanceDay"></div>
       <div class="stance-hint" id="stanceHint" style="font-size:13px;color:var(--text2)"></div>
       <div class="stance-axes" id="stanceAxes"></div>
@@ -1156,6 +1156,8 @@ a{color:var(--green)}
     <!-- TOP10 スコアランキング -->
     <div class="sec-wrap" id="top10Section">
       <div class="t5-tabs" id="t5tabs"></div>
+      <div id="t5TabSec"></div>
+      <div id="top5Body"></div>
       <div id="top10Body"></div>
     </div>
 
@@ -1190,6 +1192,11 @@ a{color:var(--green)}
     </div>
   </div>
 
+
+    <!-- DETAIL PANEL -->
+    <div class="detail-overlay" id="detailPanel" style="display:none" onclick="closeDetail(event)">
+      <div class="detail-box" id="detailBox"></div>
+    </div>
 </div><!-- /page -->
 
 <!-- BOTTOM NAV -->
@@ -1630,7 +1637,7 @@ function renderNews(){
 var sentimentData=null;
 async function loadSentiment(){try{var r=await fetch('sentiment_latest.json?t='+Date.now());if(r.ok)sentimentData=await r.json();}catch(e){}}
 function renderSentiment(){
-  if(!sentimentData){document.getElementById('sentimentBody').innerHTML='<div style="font-size:11px;color:var(--text3)">No data</div>';return;}
+  if(!sentimentData){(document.getElementById('sentimentBody')||{}).innerHTML='<div style="font-size:11px;color:var(--text3)">No data</div>';return;}
   var sections=[{key:'macro',label:'\ud83c\udf0d \u30de\u30af\u30ed'},{key:'institutional',label:'\ud83c\udfe6 \u6a5f\u95a2'},{key:'retail',label:'\ud83d\udc64 \u500b\u4eba'}];
   var html=sections.map(function(sec){
     var words=sentimentData[sec.key]||[];
@@ -1642,7 +1649,7 @@ function renderSentiment(){
     }).join('');
     return '<div style="margin-bottom:10px;"><div style="font-size:10px;color:var(--text3);margin-bottom:4px;">'+sec.label+'</div><div style="display:flex;flex-wrap:wrap;">'+tags+'</div></div>';
   }).join('');
-  document.getElementById('sentimentBody').innerHTML=html||'<div style="font-size:11px;color:var(--text3)">No data</div>';
+  (document.getElementById('sentimentBody')||{}).innerHTML=html||'<div style="font-size:11px;color:var(--text3)">No data</div>';
 }
 
 // ═══════════════════════════════════════
@@ -2256,7 +2263,7 @@ async function loadRealData(){
       document.getElementById('lastUpdate').textContent='📡 '+j.updated_at+' 更新';
       if(document.getElementById('trustDot')) document.getElementById('trustDot').style.background='var(--green)';
       if(document.getElementById('trustBanner')) document.getElementById('trustBanner').style.borderLeftColor='var(--green)';
-      document.getElementById('totalCountBadge').textContent=j.total+'銘柄';
+      (document.getElementById('totalCountBadge')||{}).textContent=j.total+'銘柄';
       document.getElementById('heroEyebrow').innerHTML='<span class="hero-dot"></span>📡 実データ読込済み — 押し目 × 高配当 — 毎朝8:30自動更新';
     }else throw new Error('no stocks');
   }catch{
