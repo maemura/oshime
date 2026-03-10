@@ -86,6 +86,22 @@ def build_prompt(stocks_data, sentiment_data):
                 parts.append(f"{layer_jp.get(layer, layer)}: {', '.join(words)}")
         sentiment_text = "\n".join(parts)
 
+    # ── ポートフォリオ読み込み（4テーマ） ──
+    portfolio_data = load_json("portfolio.json")
+    portfolio_text = "データなし"
+    if portfolio_data:
+        theme_names = {
+            "dividend": "💰高配当大手株",
+            "ai": "🤖AI・半導体", 
+            "kokusaku": "🏛️国策・エネルギー",
+            "trend": "🔥トレンド・話題株"
+        }
+        pf_lines = []
+        for h in portfolio_data.get("holdings", []):
+            theme = theme_names.get(h.get("theme", ""), "?")
+            pf_lines.append(f"  {h['code']} {h['name']} {h['shares']}株 @{h['buy_price']} [{theme}]{'S株' if h.get('s_stock') else ''}")
+        portfolio_text = f"現金: ¥{portfolio_data.get('cash',0):,}（{portfolio_data.get('cash',0)/portfolio_data.get('total_asset',1)*100:.0f}%）\n保有{len(portfolio_data.get('holdings',[]))}銘柄:\n" + "\n".join(pf_lines)
+
     # ── マーケットインテリジェンス読み込み ──
     intel_data = load_json("market_intelligence.json")
     intel_parts = []
@@ -213,6 +229,15 @@ def build_prompt(stocks_data, sentiment_data):
 ## 時価総額TOP30の株価データ
 {stock_summary}
 
+## かぶのすけのポートフォリオ（4テーマ制）
+{portfolio_text}
+
+## 4テーマ別の運用ルール
+- 💰高配当: 利確+20%/損切-15%/入れ替えほぼなし
+- 🤖AI: 利確+15%/損切-10%/四半期決算で見直し（S株で勉強中）
+- 🏛️国策: 利確+20%/損切-15%/月1回テーマ見直し
+- 🔥トレンド: 利確+10%/損切-8%/毎週入れ替え可能
+
 ## 出力形式（JSONのみ出力。```json は不要）
 
 {{
@@ -223,6 +248,24 @@ def build_prompt(stocks_data, sentiment_data):
     ],
     "sources": ["📺 YouTube分析", "📰 ニュース", "📊 テクニカル指標"]
   }},
+  "themes": {
+    "dividend": {
+      "question": "今日、守るべき？の問いへの回答（50-80文字。高配当株の今日の状況）",
+      "recommendation": "推し銘柄コード（💰高配当カテゴリーのスコアTOP1）"
+    },
+    "ai": {
+      "question": "今日、仕込むべき？の問いへの回答（50-80文字。AI半導体の今日の状況）",
+      "recommendation": "推し銘柄コード（🤖AIカテゴリーのスコアTOP1）"
+    },
+    "kokusaku": {
+      "question": "今日、国策に乗るべき？の問いへの回答（50-80文字。防衛エネルギーの今日の状況）",
+      "recommendation": "推し銘柄コード（🏛️国策カテゴリーのスコアTOP1）"
+    },
+    "trend": {
+      "question": "今日、波に乗るべき？の問いへの回答（50-80文字。話題株の今日の状況）",
+      "recommendation": "推し銘柄コード（🔥トレンドカテゴリーのスコアTOP1）"
+    }
+  },
   "stocks": {{
     "証券コード": {{
       "text": "個別コメント（80-120文字。<strong>で強調。YouTubeの話題やRSI・配当・スコアを織り交ぜる）",
@@ -236,7 +279,10 @@ def build_prompt(stocks_data, sentiment_data):
 2. stocksは注目度が高い8-12銘柄を選ぶ（前日比が大きい、RSIが極端、YouTubeで話題、スコアが高いなど）
 3. 全銘柄にコメントを書く必要はない。書かない銘柄はstocksに含めない
 4. sourcesは実際にコメント内で言及したソースのみ（yt=YouTube, news=ニュース, tech=テクニカル, score=スコア）
-5. かぶのすけ口調で書く。丁寧すぎず、データに基づいた分析。時々「…」や「ですね」を使う
+5. themesの各questionは「3つの問い」としてサイトに表示される。かぶのすけ口調で、その日の状況に応じた一言を書く
+6. recommendationには、そのテーマの4スコア（score/ai_score/kokusaku_score/trend_score）が最も高い銘柄のコードを入れる
+7. かぶのすけのポートフォリオにある銘柄が利確/損切りラインに近い場合は必ずstocksで言及する
+8. かぶのすけ口調で書く。丁寧すぎず、データに基づいた分析。時々「…」や「ですね」を使う
 6. JSONのみ出力。それ以外のテキストは一切不要
 
 ## 重要: 個別銘柄コメントの質について
