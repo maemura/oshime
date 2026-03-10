@@ -5,22 +5,15 @@
     {
       "word": "日経平均",
       "size": "xl",
-      "mood": "calm",
-      "count": 6,
-      "sources": 4
+      "mood": "greed",
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "fear",
+      "mood": "greed",
       "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "円安",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
       "sources": 2
     },
     {
@@ -28,10 +21,17 @@
       "size": "md",
       "mood": "greed",
       "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
       "sources": 2
     },
     {
-      "word": "トランプ",
+      "word": "日経",
       "size": "md",
       "mood": "greed",
       "count": 2,
@@ -45,9 +45,9 @@
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "トランプ",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
@@ -55,30 +55,16 @@
   "institutional": [
     {
       "word": "高配当",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
+      "count": 4,
       "sources": 2
     },
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "決算",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
+      "mood": "greed",
+      "count": 3,
       "sources": 1
     }
   ],
