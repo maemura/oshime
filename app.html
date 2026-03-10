@@ -970,11 +970,16 @@ a{color:var(--green)}
     <!-- HERO -->
     <div class="hero">
       <div class="hero-eyebrow" id="heroEyebrow">
-        <span class="hero-dot"></span>AI × 高配当 × 割安 — 毎朝8:30自動更新
+        <span class="hero-dot"></span>かぶのすけ｜AIに1000万円任せてみた
       </div>
       <div class="hero-top">
-        <div class="hero-left">
-          <div class="hero-title">今日の<span>押し目候補</span>を即表示</div>
+        <div class="hero-left" style="display:flex;align-items:center;gap:12px">
+          <img id="kabunosukeImg" src="https://raw.githubusercontent.com/maemura/oshime/main/images/kn_cautious.png" alt="かぶのすけ" style="width:64px;height:64px;border-radius:50%;object-fit:cover;">
+          <div>
+            <div class="hero-title" id="kabunosukeComment">今日は慎重にいきます…</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:4px" id="heroDay">Day 11 ・ 2026/3/10</div>
+          </div>
+        </div>
         </div>
       </div>
       <div class="hero-stats" id="heroStats">
@@ -985,141 +990,7 @@ a{color:var(--green)}
       </div>
     </div>
 
-    <!-- TRUST BAR -->
-    <div class="trust-bar" id="trustBanner">
-      <div class="trust-left">
-        <div class="trust-dot" id="trustDot"></div>
-        <div class="trust-text" id="trustText">データ確認中...</div>
-      </div>
-      <div class="trust-badges">
-        <span class="tbadge" id="totalCountBadge">東証プライム</span>
-        <span class="tbadge link" onclick="openLogicModal()">スコア計算式 ▶</span>
-      </div>
-    </div>
-
-    <!-- MARKET PULSE -->
-    <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
-
-    <!-- 🤖 AIコメント + 騰落ランキング -->
-    <div class="mkt-card" id="mktCommentSection" style="display:none">
-      <div class="mkt-header">
-        <div class="mkt-avatar">🤖</div>
-        <div>
-          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
-          <div class="mkt-when" id="mktCommentDate"></div>
-        </div>
-      </div>
-      <div class="mkt-body">
-        <div class="mkt-comment" id="mktCommentBody"></div>
-        <div class="mkt-tags" id="mktCommentTags"></div>
-        <div class="mkt-sources" id="mktCommentSources"></div>
-      </div>
-    </div>
-
-    <div class="rank-card" id="rankSection" style="display:none">
-      <div class="rank-header">
-        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
-        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ <span style="color:var(--green);font-weight:700">タップで詳細 ▸</span></div>
-      </div>
-      <div class="rank-grid" id="rankGrid"></div>
-      <div class="rank-footer" id="rankFooter"></div>
-    </div>
-
-    <div class="detail-panel" id="detailPanel"></div>
-
-    <!-- 3 TABS -->
-    <div class="t5-tabs">
-      <div class="t5-tab active" id="t5TabSec" onclick="setTop5Tab('sector')">📊 セクター</div>
-      <div class="t5-tab" id="t5TabMom" onclick="setTop5Tab('mom')">📈 上昇</div>
-      <div class="t5-tab" id="t5TabDip" onclick="setTop5Tab('dip')">📉 割安</div>
-    </div>
-
-    <!-- TAB CONTENT -->
-    <div id="top5Body">
-      <div style="padding:20px;text-align:center">
-        <div class="skel-row skeleton"></div>
-        <div class="skel-row skeleton"></div>
-        <div style="font-size:11px;color:var(--text3);margin-top:8px">データ読み込み中...</div>
-      </div>
-    </div>
-
-    <!-- STANCE -->
-    <div id="stanceBox"></div>
-
-    <!-- 🔥 今日のフォーカス -->
-    <div class="sec-wrap" id="focusSection">
-      <div class="sec-head">
-        <div class="sec-head-title">🔥 今日のフォーカス</div>
-        <div class="sec-head-sub" id="focusDate"></div>
-      </div>
-      <div id="focusBody" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;">
-        <div style="font-size:11px;color:var(--text3)">読み込み中...</div>
-      </div>
-    </div>
-
-    <!-- 📰 マーケットニュース -->
-    <div class="sec-wrap" id="newsSection">
-      <div class="sec-head">
-        <div class="sec-head-title">📰 マーケットニュース</div>
-        <div class="sec-head-sub">自動収集 10ソース</div>
-      </div>
-      <div id="newsBody" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;">
-        <div style="padding:14px;font-size:11px;color:var(--text3)">読み込み中...</div>
-      </div>
-    </div>
-
-    <!-- 🧠 センチメント -->
-
-    <!-- 📊 投資日記 -->
-    <div class="sec-wrap" id="portfolioSection">
-      <div class="sec-head">
-        <div class="sec-head-title">📊 かぶのすけ（AI）の投資日記</div>
-        <div class="sec-head-sub">AI × 1000万円 ／ 2026.2.24スタート</div>
-      </div>
-      <div id="portfolioBody">
-        <div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div>
-      </div>
-    </div>
-
-    <!-- 📡 BRAIN SCANNER 3層同心円 -->
-    <div class="brain-wrap" id="brainSection" style="display:none">
-      <div class="brain-head">
-        <div class="brain-title">投資家の話題マップ</div>
-        <div class="brain-sub">YouTubeやSNSで今日話題のキーワード</div>
-      </div>
-      <div id="brainBody"></div>
-      <div class="brain-legend">
-        <div class="brain-leg-card">
-          <div class="brain-leg-title" style="color:#4af">マクロ（外側）</div>
-          <div class="brain-leg-items">
-            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>追い風</div>
-            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>リスク</div>
-            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ffb347"></div>注目</div>
-          </div>
-        </div>
-        <div class="brain-leg-card">
-          <div class="brain-leg-title" style="color:#4aeaaa">機関（中間）</div>
-          <div class="brain-leg-items">
-            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>買い</div>
-            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>売り</div>
-            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#6b9fff"></div>分析</div>
-          </div>
-        </div>
-        <div class="brain-leg-card">
-          <div class="brain-leg-title" style="color:#a78bfa">個人（内側）</div>
-          <div class="brain-leg-items">
-            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>強気</div>
-            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>不安</div>
-            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff9f43"></div>過熱</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- DISCLAIMER -->
-    <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
-
-  </div><!-- /panel-home -->
+    <!-- TRUST BAR removed -->
 
   <!-- ══ WATCH PANEL ══ -->
   <div class="panel" id="panel-watch">
@@ -2226,6 +2097,107 @@ function run(){
     renderStance();
   });
   gaEvent('scan_executed',{mode:currentMode,data_source:dataSource});
+}
+
+
+// ═══════════════════════════════════════
+// 4つの問い + かぶのすけ画像切り替え
+// ═══════════════════════════════════════
+async function loadQuestions(){
+  try{
+    const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/stocks_data.json?t='+Date.now());
+    if(!res.ok) return;
+    const data=await res.json();
+    const stocks=data.stocks||[];
+
+    // 4スコアでTOP5を表示
+    const themes=[
+      {key:'score',prefix:'qDividend',label:'高配当',filter:s=>s.dividend>=3},
+      {key:'ai_score',prefix:'qAi',label:'AI',filter:s=>s.ai_score>=30},
+      {key:'kokusaku_score',prefix:'qKokusaku',label:'国策',filter:s=>s.kokusaku_score>=25},
+      {key:'trend_score',prefix:'qTrend',label:'トレンド',filter:s=>s.trend_score>=30}
+    ];
+
+    themes.forEach(t=>{
+      const filtered=stocks.filter(t.filter).sort((a,b)=>(b[t.key]||0)-(a[t.key]||0));
+      const countEl=document.getElementById(t.prefix+'Count');
+      if(countEl) countEl.textContent=filtered.length+'銘柄';
+      const recEl=document.getElementById(t.prefix+'Rec');
+      if(recEl && filtered.length>0){
+        const top=filtered[0];
+        recEl.textContent='かぶ子の推し：'+top.name+'（'+t.label+'スコア:'+top[t.key]+')';
+      }
+    });
+
+    // かぶのすけ画像切り替え
+    const vix=data.vix||25;
+    const score=Math.round(((data.nikkei_1d_chg||0)>0?1:0)+((vix<20)?2:(vix<28)?1:0)+((stocks.filter(s=>s.score>=60).length>=10)?3:2));
+    const img=document.getElementById('kabunosukeImg');
+    const comment=document.getElementById('kabunosukeComment');
+    if(img&&comment){
+      if(vix>=28||score<=3){
+        img.src='https://raw.githubusercontent.com/maemura/oshime/main/images/kn_alert.png';
+        comment.textContent='VIX'+vix.toFixed(0)+'…怖いですけど、ルールに従います';
+      }else if(vix<=20&&score>=7){
+        img.src='https://raw.githubusercontent.com/maemura/oshime/main/images/kn_positive.png';
+        comment.textContent='今日は良い日になりそうです！';
+      }else{
+        img.src='https://raw.githubusercontent.com/maemura/oshime/main/images/kn_cautious.png';
+        comment.textContent='VIX'+vix.toFixed(0)+'。慎重にいきます…';
+      }
+    }
+  }catch(e){console.log('Questions:',e)}
+}
+
+async function loadPortfolioThemes(){
+  try{
+    const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/portfolio.json?t='+Date.now());
+    if(!res.ok) return;
+    const pf=await res.json();
+    const el=document.getElementById('portfolioBody');
+    if(!el) return;
+
+    const themeNames={dividend:'💰 高配当大手株',ai:'🤖 AI・半導体',kokusaku:'🏛️ 国策・エネルギー',trend:'🔥 トレンド・話題株'};
+    const themeColors={dividend:'#ffd700',ai:'#4a90e2',kokusaku:'#4aeaaa',trend:'#ff6b7a'};
+    const themeRules=pf.themes||{};
+
+    let html='<div style="padding:12px 16px">';
+    // 総資産
+    html+='<div style="text-align:center;margin-bottom:16px">';
+    html+='<div style="font-size:22px;font-weight:700;color:var(--text1)">¥'+pf.total_asset.toLocaleString()+'</div>';
+    html+='<div style="font-size:12px;color:'+(pf.pnl_pct>=0?'var(--green)':'var(--red)')+'">開始来 '+(pf.pnl_pct>=0?'+':'')+pf.pnl_pct+'%</div>';
+    html+='<div style="display:flex;justify-content:center;gap:16px;margin-top:8px;font-size:11px;color:var(--text3)">';
+    html+='<span>Day '+pf.day+'</span>';
+    html+='<span>💴 現金 '+Math.round(pf.cash/pf.total_asset*100)+'%</span>';
+    html+='<span>📈 株式 '+Math.round((1-pf.cash/pf.total_asset)*100)+'%</span>';
+    html+='<span>📋 保有 '+pf.holdings.length+'銘柄</span>';
+    html+='</div></div>';
+
+    // テーマ別表示
+    ['dividend','ai','kokusaku','trend'].forEach(theme=>{
+      const holdings=pf.holdings.filter(h=>h.theme===theme);
+      if(holdings.length===0) return;
+      const rule=themeRules[theme]||{};
+      html+='<div style="border-left:3px solid '+themeColors[theme]+';padding:8px 12px;margin-bottom:12px;background:var(--bg1);border-radius:0 var(--r) var(--r) 0">';
+      html+='<div style="font-size:12px;font-weight:600;color:var(--text1);margin-bottom:6px">'+themeNames[theme]+'</div>';
+      holdings.forEach(h=>{
+        html+='<div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text2);padding:2px 0">';
+        html+='<span>'+h.name+(h.s_stock?' <span style=\'font-size:9px;color:var(--text3)\'>S株</span>':'')+'</span>';
+        html+='<span>'+h.shares+'株 @'+h.buy_price.toLocaleString()+'</span>';
+        html+='</div>';
+      });
+      if(rule.take_profit){
+        html+='<div style="font-size:10px;color:var(--text3);margin-top:4px">利確+'+rule.take_profit+'% / 損切'+rule.stop_loss+'%</div>';
+      }
+      html+='</div>';
+    });
+
+    // noteリンク
+    html+='<a href="https://note.com/kabunosuke_navi" target="_blank" style="display:block;text-align:center;padding:10px;margin-top:8px;color:var(--accent);font-size:12px;text-decoration:none;border:1px solid var(--border);border-radius:var(--r)">📝 投資日記をnoteで読む →</a>';
+    html+='<div style="font-size:10px;color:var(--text3);text-align:center;margin-top:8px">※仮想投資です。実際の売買ではありません。</div>';
+    html+='</div>';
+    el.innerHTML=html;
+  }catch(e){console.log('Portfolio:',e)}
 }
 
 // ═══════════════════════════════════════
