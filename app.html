@@ -598,6 +598,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100
 /* ══ DETAIL PANEL (C) ══ */
 .detail-panel{display:none;background:linear-gradient(145deg,#141e2e 0%,#1a2540 100%);border:1px solid rgba(100,150,255,0.15);border-radius:var(--r);overflow:hidden;margin-bottom:14px;box-shadow:0 4px 24px rgba(0,0,0,0.2);animation:rankSlide 0.25s ease;}
 .detail-panel.show{display:block;}
+.detail-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.7);overflow-y:auto;padding:20px 16px 40px;}
+.detail-overlay.show{display:flex;align-items:flex-end;justify-content:center;}
+.detail-overlay .detail-box{background:linear-gradient(145deg,#141e2e 0%,#1a2540 100%);border:1px solid rgba(100,150,255,0.15);border-radius:var(--r);overflow:hidden;width:100%;max-width:680px;box-shadow:0 8px 40px rgba(0,0,0,0.5);animation:rankSlide 0.25s ease;}
 @keyframes rankSlide{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
 .detail-top{padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(100,150,255,0.08);}
 .detail-close{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.06);border:none;color:rgba(180,200,230,0.5);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.15s;}
@@ -2748,7 +2751,7 @@ function showRankDetail(idx){
   var pbrStr=s.pbr?s.pbr.toFixed(2)+'倍':'—';
   var perStr=s.per?s.per.toFixed(0)+'倍':'—';
 
-  panel.innerHTML=
+  document.getElementById('detailBox').innerHTML=
     '<div class="detail-top">'+
       '<div class="detail-info"><div class="detail-name">'+s.name+kokBadge+'</div>'+
       '<div class="detail-meta">'+s.code+' ・ '+s.sector+' ・ '+s.cap+'</div></div>'+
@@ -2767,7 +2770,12 @@ function showRankDetail(idx){
       '<div class="detail-stat"><div class="detail-stat-val">'+s.score+'pt</div><div class="detail-stat-label">スコア</div></div>'+
       '<div class="detail-stat"><div class="detail-stat-val">'+pbrStr+'</div><div class="detail-stat-label">PBR</div></div>'+
       '<div class="detail-stat"><div class="detail-stat-val">'+perStr+'</div><div class="detail-stat-label">PER</div></div>'+
-    '</div>'+cmtHtml;
+    '</div>'+cmtHtml+
+    '<div style="display:flex;gap:8px;padding:8px 12px 4px;flex-wrap:wrap;">'+
+      '<a href="https://finance.yahoo.co.jp/quote/'+s.code+'.T" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(255,100,0,0.12);border:1px solid rgba(255,100,0,0.25);border-radius:6px;color:#ff8c42;font-size:11px;font-weight:700;text-decoration:none;">📊 Yahoo株価</a>'+
+      '<a href="https://kabutan.jp/stock/?code='+s.code+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(0,180,100,0.12);border:1px solid rgba(0,180,100,0.25);border-radius:6px;color:#00c878;font-size:11px;font-weight:700;text-decoration:none;">🔍 株探</a>'+
+      '<a href="https://minkabu.jp/stock/'+s.code+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(100,150,255,0.12);border:1px solid rgba(100,150,255,0.25);border-radius:6px;color:#7aa0ff;font-size:11px;font-weight:700;text-decoration:none;">📈 みんかぶ</a>'+
+    '</div>';
 
   // Draw chart if available
   if(hasSpark){
@@ -2780,7 +2788,15 @@ function showRankDetail(idx){
   panel.classList.remove('show');
   void panel.offsetWidth;
   panel.classList.add('show');
-  setTimeout(function(){panel.scrollIntoView({behavior:'smooth',block:'nearest'});},50);
+}
+
+function closeDetail(e){
+  if(e&&e.target!==document.getElementById('detailPanel'))return;
+  var panel=document.getElementById('detailPanel');
+  panel.classList.remove('show');
+  activeRankIdx=-1;
+  var rows=document.querySelectorAll('.rank-row');
+  for(var i=0;i<rows.length;i++)rows[i].classList.remove('active');
 }
 
 async function loadCommentary(){
