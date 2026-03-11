@@ -1,15 +1,59 @@
 {
   "date": "2026-03-11",
-  "collected_at": "2026-03-11 10:04",
+  "collected_at": "2026-03-11 21:52",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 27,
-  "entry_count": 27,
+  "videos_processed": 58,
+  "entry_count": 46,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
       "video_title": "3/11【日経平均ここ警戒‼️】日本株信用害大量発生、MSQ狙われるかドル円158円。WTI原油急落、中東情勢懸念後退で米国株、ナスダック、半導体自立反発。BT",
+      "video_url": "https://www.youtube.com/watch?v=JbabkJMKqWk",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/11【日経平均ここ警戒‼️】日本株信用害大量発生、MSQ狙われるかドル円158円。WTI原油急落、中東情勢懸念後退で米国株、ナスダック、半導体自立反発。BT",
+      "video_url": "https://www.youtube.com/watch?v=JbabkJMKqWk",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/11【日経平均ここ警戒‼️】日本株信用害大量発生、MSQ狙われるかドル円158円。WTI原油急落、中東情勢懸念後退で米国株、ナスダック、半導体自立反発。BT",
+      "video_url": "https://www.youtube.com/watch?v=JbabkJMKqWk",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/11【日経平均ここ警戒‼️】日本株信用害大量発生、MSQ狙われるかドル円158円。WTI原油急落、中東情勢懸念後退で米国株、ナスダック、半導体自立反発。BT",
+      "video_url": "https://www.youtube.com/watch?v=JbabkJMKqWk",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/11【日経平均ここ警戒‼️】日本株信用害大量発生、MSQ狙われるかドル円158円。WTI原油急落、中東情勢懸念後退で米国株、ナスダック、半導体自立反発。BT",
       "video_url": "https://www.youtube.com/watch?v=B9PNrqtkxgI",
       "topic": "日経平均",
       "category": "macro",
@@ -96,47 +140,14 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/10【日経平均急落終了か⁉️日本株信用買いまた爆増‼️】中東情勢懸念後退、WTI原油急落で米国株、ナスダック、半導体株急反発。ドル円157円。BTC上昇。",
-      "video_url": "https://www.youtube.com/watch?v=aDF1ABB0A7Y",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/10【日経平均急落終了か⁉️日本株信用買いまた爆増‼️】中東情勢懸念後退、WTI原油急落で米国株、ナスダック、半導体株急反発。ドル円157円。BTC上昇。",
-      "video_url": "https://www.youtube.com/watch?v=aDF1ABB0A7Y",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "商船三井が損傷、イラン攻撃。エニーカラー下方修正。 京都フィナンシャル配当３倍。ニデックOasis～あす上がる株　2026年３月１２日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=1yJz5SO22Ug",
+      "topic": "配当",
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/10【日経平均急落終了か⁉️日本株信用買いまた爆増‼️】中東情勢懸念後退、WTI原油急落で米国株、ナスダック、半導体株急反発。ドル円157円。BTC上昇。",
-      "video_url": "https://www.youtube.com/watch?v=aDF1ABB0A7Y",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/10【日経平均急落終了か⁉️日本株信用買いまた爆増‼️】中東情勢懸念後退、WTI原油急落で米国株、ナスダック、半導体株急反発。ドル円157円。BTC上昇。",
-      "video_url": "https://www.youtube.com/watch?v=aDF1ABB0A7Y",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
+      "summary": "キーワード: 配当"
     },
     {
       "source": "youtube",
@@ -217,6 +228,127 @@
     },
     {
       "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イラン要因での急落銘柄TOP２０。村田製作所不正アクセス発生。ジャパンディスプレイ９６％急騰。～あす上がる株　2026年３月１０日（火）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=EnbPc0kQFPI",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イラン情勢で急落中の２０銘柄。INPEX上昇。原油 １１６ドル突破。イランの新指導者決定、原油 １１６ドル突破。2026年３月９日（月）～明日上がる株最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=clu2raVW20I",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "あすの市場はどうなる？イラン・アメリカ最新動向。任天堂がアメリカを提訴。あす急落しそうな３銘柄。好決算なのに下げてる銘柄。今週注目の決算６銘柄。３月８日:日曜版",
+      "video_url": "https://www.youtube.com/watch?v=VTXu4_j2IuU",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "あすの市場はどうなる？イラン・アメリカ最新動向。任天堂がアメリカを提訴。あす急落しそうな３銘柄。好決算なのに下げてる銘柄。今週注目の決算６銘柄。３月８日:日曜版",
+      "video_url": "https://www.youtube.com/watch?v=VTXu4_j2IuU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "月曜の日本は急落っぽい、米株急落パンチ４発。４月の株式分割と高配当株。2026年３月７日（土）#４月株式分割、#４月高配当株～あす上がる株。最新の日本株情報。高",
+      "video_url": "https://www.youtube.com/watch?v=Qc98PvIgQLo",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "デンソーがローム買収。清水建設株式売り出し。先物急落中！原油８２ドル突破！地盤HDKaihou買い進～あす上がる株　2026年３月９日（月）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=FgjPPMeJU1U",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "いま大きく買われているセクター。スシロー、寄生虫で急落。イラン指導者候補にNG。2026年３月６日（金）～明日上がる株最新の日本株情報。高配当株の株価やデイトレ",
+      "video_url": "https://www.youtube.com/watch?v=f82NdZ1zo3g",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日経平均、キオクシアとパンパシ採用、GSユアサとカシオ除外。積水ハウス減益。イラン米国タンカー攻撃～あす上がる株　2026年３月６日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=npBWf4I4T-k",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日経平均、キオクシアとパンパシ採用、GSユアサとカシオ除外。積水ハウス減益。イラン米国タンカー攻撃～あす上がる株　2026年３月６日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=npBWf4I4T-k",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日本株急反発！戻り遅れ全２０銘柄リスト。ダウ先物下落中！イランが生物兵器使用へ。爆発でタンカー原油流出。2026年３月５日（木）～明日上がる株最新の日本株情報。",
+      "video_url": "https://www.youtube.com/watch?v=WNW1EFMHBIQ",
+      "topic": "ダウ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ダウ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日本株急反発！戻り遅れ全２０銘柄リスト。ダウ先物下落中！イランが生物兵器使用へ。爆発でタンカー原油流出。2026年３月５日（木）～明日上がる株最新の日本株情報。",
+      "video_url": "https://www.youtube.com/watch?v=WNW1EFMHBIQ",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "日経平均が一時4200円安！でも日本株の底打ちも近い？この大型株買ってみた",
       "video_url": "https://www.youtube.com/watch?v=HPeV_ZDr7XI",
@@ -239,17 +371,6 @@
     },
     {
       "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "日経平均が最高値の裏で大口が売り抜けた日本株4銘柄#shorts",
-      "video_url": "https://www.youtube.com/watch?v=KhNX1RhPl7s",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
       "channel": "ばっちゃまの投資チャンネル",
       "video_title": "【米国株 3/11】速報、トランプが警告しています。",
       "video_url": "https://www.youtube.com/watch?v=VytmCKj42D0",
@@ -262,8 +383,74 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
-      "video_title": "日経先物暴落！原油高でピンチ。注目高配当優待銘柄",
-      "video_url": "https://www.youtube.com/watch?v=G0SdPbeGkcs",
+      "video_title": "任天堂復活！ナンピン地獄からの卒業！海運株が強い！高利回り優待も",
+      "video_url": "https://www.youtube.com/watch?v=OE6NuliX7KY",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "トランプ「戦争ほぼ終結」発言で日経一時5万4000円台まで回復、今後のシナリオは？",
+      "video_url": "https://www.youtube.com/watch?v=cwVzwShN8WE",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "トランプ「戦争ほぼ終結」発言で日経一時5万4000円台まで回復、今後のシナリオは？",
+      "video_url": "https://www.youtube.com/watch?v=cwVzwShN8WE",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "トランプ「イラン戦争はほぼ終結」発言で株価急騰、どこまで上がる？",
+      "video_url": "https://www.youtube.com/watch?v=Ios-gJ3tsOQ",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "トランプ「戦争ほぼ終了」発言で原油80ドル台に急落、株は急反発",
+      "video_url": "https://www.youtube.com/watch?v=Xi1hKVmgVqo",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経平均が暴落すると、なぜオリエンタルランド株は上がるのか？",
+      "video_url": "https://www.youtube.com/watch?v=Sfx8FPU8bGo",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "原油110ドル突破で日経4200円暴落でもイラン戦争はすぐ終わりそうにない理由を解説します。スタグフレーションになるかも！？",
+      "video_url": "https://www.youtube.com/watch?v=1cyZNA3NRhQ",
       "topic": "日経",
       "category": "macro",
       "sentiment": "bearish",
@@ -272,14 +459,36 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "日経先物暴落！原油高でピンチ。注目高配当優待銘柄",
-      "video_url": "https://www.youtube.com/watch?v=G0SdPbeGkcs",
-      "topic": "高配当",
-      "category": "sector",
+      "channel": "たばたの投資ch",
+      "video_title": "イラン攻撃”泥沼化”原油100ドル突破！日経平均大幅下落で日本株はお先真っ暗か！？",
+      "video_url": "https://www.youtube.com/watch?v=KvtcwTXn_Rs",
+      "topic": "日経平均",
+      "category": "macro",
       "sentiment": "bearish",
       "confidence": 0.4,
-      "summary": "キーワード: 高配当"
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経平均が4200円暴落で5万2千円割れ。原油100ドル突破！イラン最高指導者にハメネイ次男で徹底抗戦へ",
+      "video_url": "https://www.youtube.com/watch?v=77Lst-X_JcU",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "イラン攻撃で日経急落！暴落直後の反発に飛びついてはいけない理由",
+      "video_url": "https://www.youtube.com/watch?v=R_l7ZAFhKWQ",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
     },
     {
       "source": "youtube",
@@ -307,11 +516,11 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 8,
+        "bull": 4,
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 7,
+        "bull": 19,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -328,11 +537,11 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 2
+        "bear": 0
       },
       "たばたの投資ch": {
-        "bull": 0,
-        "bear": 0
+        "bull": 1,
+        "bear": 5
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -345,24 +554,25 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 5,
+        "count": 8,
         "sentiment": "neutral",
         "sources": [
+          "株リアルライブ",
           "ひげづら株ちゃんねる",
           "Sho's投資情報局",
-          "トレードラボ"
+          "たばたの投資ch"
         ]
       },
       "半導体": {
         "count": 3,
-        "sentiment": "bullish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ナスダック": {
         "count": 3,
-        "sentiment": "bullish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
@@ -375,34 +585,49 @@
           "Sho's投資情報局"
         ]
       },
-      "任天堂": {
+      "配当": {
         "count": 1,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ"
         ]
       },
+      "任天堂": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "優待ライダー"
+        ]
+      },
       "ダウ": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ"
         ]
       },
       "高配当": {
-        "count": 4,
+        "count": 10,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー"
+          "株リアルライブ"
         ]
       },
       "日経": {
+        "count": 4,
+        "sentiment": "bearish",
+        "sources": [
+          "株リアルライブ",
+          "たばたの投資ch"
+        ]
+      },
+      "決算": {
         "count": 2,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
-          "優待ライダー"
+          "STOCKVOICE"
         ]
       },
       "円安": {
@@ -413,32 +638,27 @@
         ]
       },
       "トランプ": {
-        "count": 1,
+        "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "ばっちゃまの投資チャンネル"
-        ]
-      },
-      "決算": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "STOCKVOICE"
+          "ばっちゃまの投資チャンネル",
+          "たばたの投資ch"
         ]
       }
     },
     "hot_words": [
+      "高配当",
       "日経平均",
       "ドル円",
-      "高配当",
+      "日経",
+      "トランプ",
       "半導体",
       "ナスダック",
-      "ダウ",
-      "日経",
       "任天堂",
-      "円安",
-      "トランプ",
-      "決算"
+      "ダウ",
+      "決算",
+      "配当",
+      "円安"
     ]
   }
 }
