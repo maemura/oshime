@@ -998,38 +998,6 @@ a{color:var(--green)}
     <!-- MARKET PULSE -->
     <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
 
-    <!-- 🤖 AIコメント + 騰落ランキング -->
-    <div class="mkt-card" id="mktCommentSection" style="display:none">
-      <div class="mkt-header">
-        <div class="mkt-avatar">🤖</div>
-        <div>
-          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
-          <div class="mkt-when" id="mktCommentDate"></div>
-        </div>
-      </div>
-      <div class="mkt-body">
-        <div class="mkt-comment" id="mktCommentBody"></div>
-        <div class="mkt-tags" id="mktCommentTags"></div>
-        <div class="mkt-sources" id="mktCommentSources"></div>
-      </div>
-    </div>
-
-    <div class="rank-card" id="rankSection" style="display:none">
-      <div class="rank-header">
-        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
-        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ <span style="color:var(--green);font-weight:700">タップで詳細 ▸</span></div>
-      </div>
-      <div id="rankBody"><div id="rankGrid"></div><div id="rankFooter"></div></div>
-    </div>
-
-    <!-- STANCE（3軸スコア） -->
-    <div class="sec-wrap" id="stanceBox">
-      <div class="stance-day" id="stanceDay"></div>
-      <div class="stance-hint" id="stanceHint" style="font-size:13px;color:var(--text2)"></div>
-      <div class="stance-axes" id="stanceAxes"></div>
-      <div class="stance-summary" id="stanceSummary"></div>
-    </div>
-
     <!-- 🔥 今日のフォーカス -->
     <div class="sec-wrap" id="focusSection" style="display:none">
       <div class="sec-head">
@@ -1037,6 +1005,17 @@ a{color:var(--green)}
         <div class="sec-head-sub" id="focusDate"></div>
       </div>
       <div id="focusBody" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;">
+        <div style="font-size:11px;color:var(--text3)">読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- 📰 マーケットニュース -->
+    <div class="sec-wrap" id="newsSection" style="display:none">
+      <div class="sec-head">
+        <div class="sec-head-title">📰 マーケットニュース</div>
+        <div class="sec-head-sub">自動収集 10ソース</div>
+      </div>
+      <div id="newsBody" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;">
         <div style="font-size:11px;color:var(--text3)">読み込み中...</div>
       </div>
     </div>
@@ -1099,17 +1078,6 @@ a{color:var(--green)}
       </div>
     </div>
 
-    <!-- 📰 マーケットニュース -->
-    <div class="sec-wrap" id="newsSection" style="display:none">
-      <div class="sec-head">
-        <div class="sec-head-title">📰 マーケットニュース</div>
-        <div class="sec-head-sub">自動収集 10ソース</div>
-      </div>
-      <div id="newsBody" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;">
-        <div style="font-size:11px;color:var(--text3)">読み込み中...</div>
-      </div>
-    </div>
-
     <!-- 📊 かぶのすけポートフォリオ -->
     <div class="sec-wrap" id="portfolioSection">
       <div class="sec-head">
@@ -1119,6 +1087,38 @@ a{color:var(--green)}
       <div id="portfolioBody">
         <div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div>
       </div>
+    </div>
+
+    <!-- 🤖 AIコメント + 騰落ランキング -->
+    <div class="mkt-card" id="mktCommentSection" style="display:none">
+      <div class="mkt-header">
+        <div class="mkt-avatar">🤖</div>
+        <div>
+          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
+          <div class="mkt-when" id="mktCommentDate"></div>
+        </div>
+      </div>
+      <div class="mkt-body">
+        <div class="mkt-comment" id="mktCommentBody"></div>
+        <div class="mkt-tags" id="mktCommentTags"></div>
+        <div class="mkt-sources" id="mktCommentSources"></div>
+      </div>
+    </div>
+
+    <div class="rank-card" id="rankSection" style="display:none">
+      <div class="rank-header">
+        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
+        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ <span style="color:var(--green);font-weight:700">タップで詳細 ▸</span></div>
+      </div>
+      <div id="rankBody"><div id="rankGrid"></div><div id="rankFooter"></div></div>
+    </div>
+
+    <!-- STANCE（3軸スコア） -->
+    <div class="sec-wrap" id="stanceBox">
+      <div class="stance-day" id="stanceDay"></div>
+      <div class="stance-hint" id="stanceHint" style="font-size:13px;color:var(--text2)"></div>
+      <div class="stance-axes" id="stanceAxes"></div>
+      <div class="stance-summary" id="stanceSummary"></div>
     </div>
 
     <!-- 📡 BRAIN SCANNER 3層同心円 -->
