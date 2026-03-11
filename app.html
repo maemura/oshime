@@ -998,6 +998,30 @@ a{color:var(--green)}
     <!-- MARKET PULSE -->
     <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
 
+    <!-- 🤖 AIコメント + 騰落ランキング -->
+    <div class="mkt-card" id="mktCommentSection" style="display:none">
+      <div class="mkt-header">
+        <div class="mkt-avatar">🤖</div>
+        <div>
+          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
+          <div class="mkt-when" id="mktCommentDate"></div>
+        </div>
+      </div>
+      <div class="mkt-body">
+        <div class="mkt-comment" id="mktCommentBody"></div>
+        <div class="mkt-tags" id="mktCommentTags"></div>
+        <div class="mkt-sources" id="mktCommentSources"></div>
+      </div>
+    </div>
+
+    <div class="rank-card" id="rankSection" style="display:none">
+      <div class="rank-header">
+        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
+        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ <span style="color:var(--green);font-weight:700">タップで詳細 ▸</span></div>
+      </div>
+      <div id="rankBody"><div id="rankGrid"></div><div id="rankFooter"></div></div>
+    </div>
+
     <!-- 🔥 今日のフォーカス -->
     <div class="sec-wrap" id="focusSection" style="display:none">
       <div class="sec-head">
@@ -1089,30 +1113,6 @@ a{color:var(--green)}
       </div>
     </div>
 
-    <!-- 🤖 AIコメント + 騰落ランキング -->
-    <div class="mkt-card" id="mktCommentSection" style="display:none">
-      <div class="mkt-header">
-        <div class="mkt-avatar">🤖</div>
-        <div>
-          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
-          <div class="mkt-when" id="mktCommentDate"></div>
-        </div>
-      </div>
-      <div class="mkt-body">
-        <div class="mkt-comment" id="mktCommentBody"></div>
-        <div class="mkt-tags" id="mktCommentTags"></div>
-        <div class="mkt-sources" id="mktCommentSources"></div>
-      </div>
-    </div>
-
-    <div class="rank-card" id="rankSection" style="display:none">
-      <div class="rank-header">
-        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
-        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ <span style="color:var(--green);font-weight:700">タップで詳細 ▸</span></div>
-      </div>
-      <div id="rankBody"><div id="rankGrid"></div><div id="rankFooter"></div></div>
-    </div>
-
     <!-- STANCE（3軸スコア） -->
     <div class="sec-wrap" id="stanceBox">
       <div class="stance-day" id="stanceDay"></div>
@@ -1197,7 +1197,7 @@ a{color:var(--green)}
 
 
     <!-- DETAIL PANEL -->
-    <div class="detail-overlay" id="detailPanel" style="display:none" onclick="closeDetail(event)">
+    <div class="detail-overlay" id="detailPanel" onclick="closeDetail(event)">
       <div class="detail-box" id="detailBox"></div>
     </div>
 </div><!-- /page -->
