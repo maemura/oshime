@@ -248,24 +248,35 @@ def build_prompt(stocks_data, sentiment_data):
     ],
     "sources": ["📺 YouTube分析", "📰 ニュース", "📊 テクニカル指標"]
   }},
-  "themes": {
-    "dividend": {
+  "themes": {{
+    "dividend": {{
       "question": "今日、守るべき？の問いへの回答（50-80文字。高配当株の今日の状況）",
       "recommendation": "推し銘柄コード（💰高配当カテゴリーのスコアTOP1）"
-    },
-    "ai": {
+    }},
+    "ai": {{
       "question": "今日、仕込むべき？の問いへの回答（50-80文字。AI半導体の今日の状況）",
       "recommendation": "推し銘柄コード（🤖AIカテゴリーのスコアTOP1）"
-    },
-    "kokusaku": {
+    }},
+    "kokusaku": {{
       "question": "今日、国策に乗るべき？の問いへの回答（50-80文字。防衛エネルギーの今日の状況）",
       "recommendation": "推し銘柄コード（🏛️国策カテゴリーのスコアTOP1）"
-    },
-    "trend": {
+    }},
+    "trend": {{
       "question": "今日、波に乗るべき？の問いへの回答（50-80文字。話題株の今日の状況）",
       "recommendation": "推し銘柄コード（🔥トレンドカテゴリーのスコアTOP1）"
-    }
-  },
+    }}
+  }},
+  "daily_feel": {{
+    "facts": ["今日の重要ファクト1（ニュース/数値）", "ファクト2", "ファクト3"],
+    "kabu_voice": "ファクトを受けてかぶのすけが自分の保有株への影響を人間らしく語る（100-150文字。怖さ・期待・安心を素直に。一人称は「僕」。かぶのすけ口調で。）",
+    "theme_judge": {{
+      "dividend": "ok|wait|ng",
+      "ai": "ok|wait|ng",
+      "kokusaku": "ok|wait|ng",
+      "trend": "ok|wait|ng"
+    }},
+    "judge_reason": "4テーマ判定の根拠を一言で（VIX・原油・地政学リスクのルールに基づいて。40-60文字）"
+  }},
   "stocks": {{
     "証券コード": {{
       "text": "個別コメント（80-120文字。<strong>で強調。YouTubeの話題やRSI・配当・スコアを織り交ぜる）",
@@ -284,6 +295,10 @@ def build_prompt(stocks_data, sentiment_data):
 7. かぶのすけのポートフォリオにある銘柄が利確/損切りラインに近い場合は必ずstocksで言及する
 8. かぶのすけ口調で書く。丁寧すぎず、データに基づいた分析。時々「…」や「ですね」を使う
 6. JSONのみ出力。それ以外のテキストは一切不要
+9. daily_feel.factsは今日のニュース・数値から最重要な3つを短く抽出（例:「トランプ関税発言」「原油$89」「SBG+7%」）
+10. daily_feel.kabu_voiceは「自分の保有株への影響」を語ること。みずほ/SBG/任天堂など保有銘柄名を出してOK。感情を素直に出す
+11. theme_judgeのルール: VIX20以下→全ok / VIX20-28→dividendのみok、他はwait / VIX28以上→全ng / 原油100ドル超→kokusaku以外はwait
+12. judge_reasonはルールを人間らしく一言で（「VIX24なので高配当だけ動きます」など）
 
 ## 重要: 個別銘柄コメントの質について
 - テンプレ的な「RSI○○で売られすぎ」だけの分析はNG。もっと踏み込む
