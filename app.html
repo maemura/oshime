@@ -2311,38 +2311,34 @@ async function loadQuestions(){
       {key:'trend_score',prefix:'qTrend',label:'トレンド',filter:s=>s.trend_score>=30}
     ];
 
-    // portfolio.jsonから保有銘柄を取得
-    let pfHoldings=[];
-    try{
-      const pfRes=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/portfolio.json?t='+Date.now());
-      if(pfRes.ok){const pfData=await pfRes.json();pfHoldings=pfData.holdings||[];}
-    }catch(e){}
-
-    const themeMap={qDividend:'dividend',qAi:'ai',qKokusaku:'kokusaku',qTrend:'trend'};
-
     themes.forEach(t=>{
       const filtered=stocks.filter(t.filter).sort((a,b)=>(b[t.key]||0)-(a[t.key]||0));
+
+      // 件数
       const countEl=document.getElementById(t.prefix+'Count');
       if(countEl) countEl.textContent=filtered.length+'銘柄';
+
+      // かぶ子の推し = TOP1リンク
       const recEl=document.getElementById(t.prefix+'Rec');
       if(recEl && filtered.length>0){
         const top=filtered[0];
-        recEl.textContent='かぶ子の推し：'+top.name+'（'+t.label+'スコア:'+top[t.key]+')';
+        recEl.innerHTML='かぶ子の推し：<a href="https://finance.yahoo.co.jp/quote/'+top.code+'.T" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;font-weight:700">'+top.name+'</a>（'+t.label+'スコア:'+top[t.key]+')';
       }
-      // 保有銘柄をリンク付きで表示
+
+      // TOP3をリンク付きで表示
       const holdingsEl=document.getElementById(t.prefix+'Holdings');
       if(holdingsEl){
-        const theme=themeMap[t.prefix];
-        const myHoldings=pfHoldings.filter(h=>h.theme===theme);
-        if(myHoldings.length>0){
+        const top3=filtered.slice(0,3);
+        if(top3.length>0){
           let hHtml='<div style="display:flex;flex-wrap:wrap;gap:5px;margin-bottom:4px">';
-          myHoldings.forEach(h=>{
-            hHtml+='<a href="https://finance.yahoo.co.jp/quote/'+h.code+'.T" target="_blank" rel="noopener" '+
-              'style="display:inline-flex;align-items:center;gap:3px;padding:3px 8px;'+
+          top3.forEach((s,i)=>{
+            const medal=i===0?'🥇':i===1?'🥈':'🥉';
+            hHtml+='<a href="https://finance.yahoo.co.jp/quote/'+s.code+'.T" target="_blank" rel="noopener" '+
+              'style="display:inline-flex;align-items:center;gap:3px;padding:4px 10px;'+
               'background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);'+
-              'border-radius:4px;color:var(--text2);text-decoration:none;font-size:10px;font-weight:600">'+
-              h.name+
-              '<span style="color:var(--text3);font-size:9px">'+h.shares+'株</span>'+
+              'border-radius:6px;color:var(--text2);text-decoration:none;font-size:11px;font-weight:600">'+
+              medal+' '+s.name+
+              '<span style="color:var(--text3);font-size:9px;margin-left:2px">'+s[t.key]+'pt</span>'+
               '</a>';
           });
           hHtml+='</div>';
