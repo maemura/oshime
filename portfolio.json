@@ -1,9 +1,9 @@
 {
-  "day": 11,
-  "date": "2026-03-10",
-  "total_asset": 10078150,
-  "cash": 3632005,
-  "pnl_pct": 0.78,
+  "day": 12,
+  "date": "2026-03-11",
+  "total_asset": 10206800,
+  "cash": 3674448,
+  "pnl_pct": 2.07,
   "holdings": [
     {"code": "8411", "name": "みずほFG", "shares": 100, "buy_price": 6382, "theme": "dividend", "s_stock": false},
     {"code": "8306", "name": "三菱UFJ", "shares": 200, "buy_price": 2715, "theme": "dividend", "s_stock": false},
@@ -42,12 +42,5 @@
     "min_cash_peacetime": 0.10,
     "max_per_stock": 0.08
   },
-  "sold_today": [
-    {"code": "4676", "name": "フジ・メディアHD", "shares": 300, "buy_price": 3351, "sell_price": 3664, "pnl_pct": 9.3},
-    {"code": "3668", "name": "コロプラ", "shares": 2300, "buy_price": 425, "sell_price": 454, "pnl_pct": 6.8},
-    {"code": "2181", "name": "パーソルHD", "shares": 4100, "buy_price": 240.5, "sell_price": 241.5, "pnl_pct": 0.4},
-    {"code": "4331", "name": "テイクアンドギヴ", "shares": 1300, "buy_price": 721, "sell_price": 715, "pnl_pct": -0.8},
-    {"code": "7172", "name": "JIA", "shares": 500, "buy_price": 1966, "sell_price": 1960, "pnl_pct": -0.3},
-    {"code": "7270", "name": "SUBARU", "shares": 300, "buy_price": 2951, "sell_price": 2698.5, "pnl_pct": -8.6}
-  ]
+  "sold_today": []
 }
