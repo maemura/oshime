@@ -945,6 +945,19 @@ a{color:var(--green)}
 .brain-wrap{opacity:0.92}
 .detail-stats{grid-template-columns:repeat(auto-fit,minmax(60px,1fr))!important}
 
+/* ── 天気モード ── */
+.hero{transition:background 1.2s ease;}
+.hero.weather-sunny{background:linear-gradient(135deg,#0a3d6b 0%,#0d5fa3 55%,#1a7fd4 100%)!important;}
+.hero.weather-sunny::before{background:radial-gradient(ellipse at 72% 18%,rgba(255,230,80,0.20),transparent 58%)!important;}
+.hero.weather-sunset{background:linear-gradient(135deg,#1a1430 0%,#4a2450 50%,#8b3a18 100%)!important;}
+.hero.weather-sunset::before{background:radial-gradient(ellipse at 80% 12%,rgba(255,120,40,0.28),transparent 55%)!important;}
+.hero.weather-storm{background:linear-gradient(135deg,#080812 0%,#141428 50%,#1a1a38 100%)!important;}
+.hero.weather-storm::before{background:radial-gradient(ellipse at 50% 50%,rgba(60,60,140,0.22),transparent 68%)!important;}
+/* キャラクター常駐 */
+.hero-chars{position:absolute;bottom:0;left:0;right:0;pointer-events:none;}
+.hero-char-kn{position:absolute;bottom:0;left:8px;width:68px;height:68px;border-radius:50%;object-fit:cover;opacity:0.88;box-shadow:0 0 16px rgba(0,220,200,0.35);}
+.hero-char-kk{position:absolute;bottom:0;right:8px;width:52px;object-fit:contain;opacity:0.88;box-shadow:0 0 12px rgba(255,120,200,0.30);}
+.hero-weather-badge{position:absolute;top:10px;right:10px;font-size:22px;line-height:1;transition:opacity 0.8s;}
 </style>
 </head>
 <body>
@@ -991,6 +1004,16 @@ a{color:var(--green)}
         <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
         <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
       </div>
+      <!-- キャラクター常駐 -->
+      <div class="hero-chars">
+        <img class="hero-char-kn" id="heroCharKN"
+          src="https://raw.githubusercontent.com/maemura/oshime/main/images/kn_cautious.png"
+          alt="かぶのすけ">
+        <img class="hero-char-kk" id="heroCharKK"
+          src="https://raw.githubusercontent.com/maemura/oshime/main/images/kabuko_full.png"
+          alt="かぶ子">
+      </div>
+      <div class="hero-weather-badge" id="weatherBadge">🌇</div>
     </div>
 
     <!-- TRUST BAR removed -->
@@ -2824,6 +2847,27 @@ function closeDetail(e){
   for(var i=0;i<rows.length;i++)rows[i].classList.remove('active');
 }
 
+/* ── 天気モード ── */
+function applyWeatherMode(judge){
+  var hero=document.querySelector('.hero');
+  var badge=document.getElementById('weatherBadge');
+  if(!hero)return;
+  hero.classList.remove('weather-sunny','weather-sunset','weather-storm');
+  var vals=judge?Object.values(judge):[];
+  var okCount=vals.filter(function(v){return v==='ok';}).length;
+  var ngCount=vals.filter(function(v){return v==='ng';}).length;
+  var mode,icon;
+  if(ngCount>=3||(judge&&judge.dividend==='ng')){
+    mode='weather-storm';icon='⛈️';
+  }else if(okCount>=3){
+    mode='weather-sunny';icon='☀️';
+  }else{
+    mode='weather-sunset';icon='🌇';
+  }
+  hero.classList.add(mode);
+  if(badge)badge.textContent=icon;
+}
+
 async function loadCommentary(){
   try{
     var res=await fetch('commentary.json?t='+Date.now());
@@ -2846,8 +2890,11 @@ async function loadCommentary(){
       document.getElementById('mktCommentSources').innerHTML=srcHtml;
       document.getElementById('mktCommentSection').style.display='';
     }
+    var judge=(commentaryData.daily_feel&&commentaryData.daily_feel.theme_judge)||null;
+    applyWeatherMode(judge);
   }catch(e){
     console.log('commentary.json not available yet');
+    applyWeatherMode(null);
   }
 }
 
