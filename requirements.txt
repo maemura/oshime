@@ -4,3 +4,4 @@ numpy
 requests
 xlrd
 openpyxl
+google-generativeai
