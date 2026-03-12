@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>かぶのすけNavi — AI × 高配当・割安株</title>
 <meta name="description" content="東証プライム全銘柄を毎朝自動スキャン。地合い判定×高配当×割安で今日の買い場を即表示。">
@@ -962,9 +963,114 @@ a{color:var(--green)}
 .hero-scanline{position:absolute;inset:0;pointer-events:none;z-index:2;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,0.18) 2px,rgba(0,0,0,0.18) 3px);}
 /* 天気バッジ */
 .hero-weather-badge{position:absolute;top:10px;right:12px;font-size:28px;line-height:1;filter:drop-shadow(0 0 8px rgba(255,255,255,0.4));transition:all 0.8s;z-index:2;}
+/* ══════════════════════════════════
+   RETRO THEME v4 — global override
+   ══════════════════════════════════ */
+
+/* CSS変数上書き */
+:root{
+  --bg:   #04020e;
+  --bg2:  rgba(8,4,28,0.82);
+  --bg3:  rgba(14,8,38,0.75);
+  --text: #ddd8f8;
+  --text2:#b0a8d8;
+  --text3:#776688;
+  --border:rgba(120,80,255,0.22);
+  --navy: #0a0520;
+  --neon-cyan:#00f5ff;
+  --neon-pink:#ff2d78;
+  --neon-gold:#ffd700;
+  --neon-grn:#39ff14;
+  --orange:#ff2d78;
+  --orange2:#ffd700;
+  --up:   #39ff14;
+  --dn:   #ff2d78;
+  --green:#39ff14;
+  --green-lt:rgba(57,255,20,0.07);
+  --amber:#ffd700;
+  --amber-lt:rgba(255,215,0,0.07);
+  --fn:   "Share Tech Mono",monospace;
+  --fh:   "Press Start 2P",monospace;
+}
+
+/* body背景 */
+body{background:var(--bg)!important;}
+
+/* 固定背景レイヤー */
+.retro-sky{
+  position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 120% 50% at 50% -5%,rgba(110,0,210,0.50) 0%,transparent 65%),
+    radial-gradient(ellipse 60% 40% at 85% 95%,rgba(0,200,255,0.18) 0%,transparent 55%),
+    radial-gradient(ellipse 55% 40% at 15% 90%,rgba(255,45,120,0.15) 0%,transparent 55%),
+    linear-gradient(180deg,#09031a 0%,#06011a 55%,#04020e 100%);
+}
+.retro-grid{
+  position:fixed;bottom:0;left:0;right:0;height:42%;z-index:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(0,245,255,0.08) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,245,255,0.08) 1px,transparent 1px);
+  background-size:48px 48px;
+  transform:perspective(380px) rotateX(32deg);
+  transform-origin:bottom;
+  mask-image:linear-gradient(to top,rgba(0,0,0,0.8) 0%,transparent 85%);
+}
+.retro-scanlines{
+  position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(0,0,0,0.07) 3px,rgba(0,0,0,0.07) 4px);
+}
+.retro-ground{
+  position:fixed;bottom:0;left:0;right:0;height:2px;z-index:3;pointer-events:none;
+  background:linear-gradient(90deg,transparent 0%,var(--neon-cyan) 25%,var(--neon-pink) 75%,transparent 100%);
+  box-shadow:0 0 18px var(--neon-cyan),0 -2px 30px rgba(0,245,255,0.25);
+}
+
+/* ページコンテンツをz-index:10に */
+.topbar,.page{position:relative;z-index:10;}
+
+/* topbar */
+.topbar{background:rgba(4,2,14,0.92)!important;border-bottom:1px solid rgba(0,245,255,0.20)!important;backdrop-filter:blur(12px);}
+.logo-name{font-family:"Press Start 2P",monospace!important;font-size:11px!important;
+  background:linear-gradient(135deg,var(--neon-gold),var(--neon-pink),var(--neon-cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  filter:drop-shadow(0 0 10px rgba(255,215,0,0.4));
+}
+
+/* カード全般 */
+.hero,.mkt-card,.pulse,.sec-card,.pf-section,
+div[class*="card"],div[id*="Section"],
+.top10-card,.focus-card,.news-card{
+  background:rgba(8,4,28,0.82)!important;
+  border-color:rgba(120,80,255,0.22)!important;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+
+/* セクション見出し（カードタイトル）ネオン化 */
+.sec-title,.ct,.mkt-who,
+h2,h3{color:var(--neon-cyan)!important;text-shadow:0 0 10px rgba(0,245,255,0.4);}
+
+/* ボタン */
+.btn-topbar{
+  background:rgba(0,245,255,0.06)!important;
+  border:1px solid rgba(0,245,255,0.25)!important;
+  color:var(--neon-cyan)!important;
+}
+.btn-topbar:hover{background:rgba(0,245,255,0.14)!important;}
+
+/* パルスバー */
+.pulse{border-left:3px solid var(--neon-cyan)!important;box-shadow:0 0 20px rgba(0,245,255,0.08);}
+
+/* hero */
+.hero{box-shadow:0 0 40px rgba(110,0,210,0.15);}
+
 </style>
 </head>
 <body>
+<div class="retro-sky"></div>
+<div class="retro-grid"></div>
+<div class="retro-scanlines"></div>
+<div class="retro-ground"></div>
 
 <!-- TOPBAR -->
 <div class="topbar">
