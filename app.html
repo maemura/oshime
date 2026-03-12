@@ -947,16 +947,13 @@ a{color:var(--green)}
 
 /* ── 天気モード ── */
 .hero{transition:background 1.2s ease;}
-.hero.weather-sunny{background:linear-gradient(135deg,#0a3d6b 0%,#0d5fa3 55%,#1a7fd4 100%)!important;}
+.hero.weather-sunny{background:linear-gradient(135deg,#0d5fa3 0%,#1a8fe0 50%,#38b8f2 100%)!important;}
 .hero.weather-sunny::before{background:radial-gradient(ellipse at 72% 18%,rgba(255,230,80,0.20),transparent 58%)!important;}
-.hero.weather-sunset{background:linear-gradient(135deg,#1a1430 0%,#4a2450 50%,#8b3a18 100%)!important;}
-.hero.weather-sunset::before{background:radial-gradient(ellipse at 80% 12%,rgba(255,120,40,0.28),transparent 55%)!important;}
-.hero.weather-storm{background:linear-gradient(135deg,#080812 0%,#141428 50%,#1a1a38 100%)!important;}
+.hero.weather-sunset{background:linear-gradient(135deg,#2d1640 0%,#7a3060 45%,#c45a18 80%,#e07820 100%)!important;}
+.hero.weather-sunset::before{background:radial-gradient(ellipse at 80% 15%,rgba(255,160,60,0.40),transparent 55%)!important;}
+.hero.weather-storm{background:linear-gradient(135deg,#0e0e20 0%,#1c1c3a 50%,#252545 100%)!important;}
 .hero.weather-storm::before{background:radial-gradient(ellipse at 50% 50%,rgba(60,60,140,0.22),transparent 68%)!important;}
-/* キャラクター常駐 */
-.hero-chars{position:absolute;bottom:0;left:0;right:0;pointer-events:none;}
-.hero-char-kn{position:absolute;bottom:0;left:8px;width:68px;height:68px;border-radius:50%;object-fit:cover;opacity:0.88;box-shadow:0 0 16px rgba(0,220,200,0.35);}
-.hero-char-kk{position:absolute;bottom:0;right:8px;width:52px;object-fit:contain;opacity:0.88;box-shadow:0 0 12px rgba(255,120,200,0.30);}
+
 .hero-weather-badge{position:absolute;top:10px;right:10px;font-size:22px;line-height:1;transition:opacity 0.8s;}
 </style>
 </head>
@@ -1003,15 +1000,6 @@ a{color:var(--green)}
         <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
         <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
         <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
-      </div>
-      <!-- キャラクター常駐 -->
-      <div class="hero-chars">
-        <img class="hero-char-kn" id="heroCharKN"
-          src="https://raw.githubusercontent.com/maemura/oshime/main/images/kn_cautious.png"
-          alt="かぶのすけ">
-        <img class="hero-char-kk" id="heroCharKK"
-          src="https://raw.githubusercontent.com/maemura/oshime/main/images/kabuko_full.png"
-          alt="かぶ子">
       </div>
       <div class="hero-weather-badge" id="weatherBadge">🌇</div>
     </div>
