@@ -1,0 +1,2849 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>かぶのすけNavi — AI × 高配当・割安株</title>
+<meta name="description" content="東証プライム全銘柄を毎朝自動スキャン。地合い判定×高配当×割安で今日の買い場を即表示。">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DWW0W11P5T"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js',new Date());
+  gtag('config','G-DWW0W11P5T',{page_title:'かぶのすけNavi'});
+  function gaEvent(n,p){if(typeof gtag!=='undefined')gtag('event',n,p||{});}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#000000; --navy2:#0a0a0a;
+  --orange:#00DC82; --orange2:#00FF96; --orange-lt:rgba(0,220,130,0.06);
+  --up:#00DC82; --dn:#FF4D4D;
+  --green:#00DC82; --green-lt:rgba(0,220,130,0.08);
+  --amber:#FFAA00; --amber-lt:rgba(255,170,0,0.08);
+  --bg:#0a0a0a; --bg2:#141414; --bg3:#1a1a1a;
+  --border:rgba(255,255,255,0.08);
+  --text:#e0e0e0; --text2:#ffffff; --text3:#666666;
+  --r:14px; --r2:8px;
+  --fn:'JetBrains Mono','DM Mono',monospace;
+  --fh:'DM Sans','Noto Sans JP',sans-serif;
+  --fb:'DM Sans','Noto Sans JP',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html{font-size:15px;}
+body{background:var(--bg);color:var(--text);font-family:var(--fb);min-height:100vh;overflow-x:hidden;}
+
+/* ── TOPBAR ── */
+.topbar{
+  position:sticky;top:0;z-index:300;
+  background:var(--navy);border-bottom:3px solid var(--orange);
+  height:54px;display:flex;align-items:center;padding:0 20px;
+}
+.topbar-inner{width:100%;max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;}
+.logo-name{font-family:var(--fh);font-size:17px;font-weight:800;color:#fff;letter-spacing:-0.3px;}
+.logo-tag{font-size:9px;color:rgba(255,255,255,0.4);font-family:var(--fh);margin-left:8px;}
+.topbar-right{display:flex;align-items:center;gap:8px;}
+.btn-topbar{
+  background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);
+  border-radius:var(--r2);padding:5px 12px;color:#fff;cursor:pointer;
+  font-family:var(--fh);font-size:11px;font-weight:600;
+  display:flex;align-items:center;gap:5px;
+}
+.btn-topbar:hover{background:rgba(255,255,255,0.18);}
+.watch-count{
+  background:var(--orange);color:#fff;border-radius:10px;
+  padding:1px 5px;font-size:9px;font-weight:700;display:none;
+}
+.watch-count.show{display:inline-block;}
+
+/* ── LAYOUT ── */
+.page{max-width:1300px;margin:0 auto;padding:20px 20px 100px;}
+@media(max-width:480px){.page{padding:12px 12px 90px;}}
+
+/* ── HERO (compact) ── */
+.hero{
+  background:linear-gradient(135deg,var(--navy) 0%,#0e2f5a 100%);
+  border-radius:var(--r);padding:20px 24px;margin-bottom:14px;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;right:-40px;top:-40px;
+  width:180px;height:180px;border-radius:50%;
+  background:rgba(232,84,30,0.08);pointer-events:none;
+}
+.hero-top{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.hero-left{}
+.hero-eyebrow{
+  display:inline-flex;align-items:center;gap:6px;
+  font-family:var(--fh);font-size:10px;color:rgba(255,255,255,0.5);
+  margin-bottom:8px;
+}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:var(--orange);flex-shrink:0;animation:blink 2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.hero-title{font-family:var(--fh);font-size:22px;font-weight:800;color:#fff;line-height:1.2;letter-spacing:-0.3px;}
+.hero-title span{color:var(--orange2);}
+@media(max-width:480px){.hero-title{font-size:18px;}}
+.hero-stats{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap;}
+.hero-stat{
+  background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);
+  border-radius:var(--r2);padding:8px 14px;
+}
+.hero-stat-val{font-family:var(--fn);font-size:20px;color:#fff;line-height:1;}
+.hero-stat-val.buy{color:var(--orange2);}
+.hero-stat-label{font-size:9px;color:rgba(255,255,255,0.4);font-family:var(--fh);margin-top:2px;}
+
+/* ── TRUST BAR ── */
+.trust-bar{
+  background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--amber);
+  border-radius:var(--r);padding:8px 14px;margin-bottom:12px;
+  display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;
+}
+.trust-left{display:flex;align-items:center;gap:8px;}
+.trust-dot{width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;}
+.trust-text{font-size:11px;color:var(--text3);}
+.trust-text .hi{color:var(--green);font-weight:700;}
+.trust-text .warn{color:var(--amber);font-weight:700;}
+.trust-badges{display:flex;gap:6px;flex-wrap:wrap;}
+.tbadge{
+  background:var(--bg3);border:1px solid var(--border);
+  border-radius:4px;padding:2px 8px;font-size:10px;color:var(--text3);
+  font-family:var(--fh);
+}
+.tbadge.link{cursor:pointer;color:var(--navy);border-color:var(--navy);}
+.tbadge.link:hover{background:var(--navy);color:#fff;}
+
+/* ── MARKET PULSE ── */
+.pulse{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--r);margin-bottom:12px;overflow:hidden;
+}
+.pulse-row{display:flex;overflow-x:auto;scrollbar-width:none;}
+.pulse-row::-webkit-scrollbar{display:none;}
+.pc{flex-shrink:0;padding:9px 14px;border-right:1px solid var(--border);min-width:88px;text-align:center;}
+.pc:last-child{border-right:none;}
+.pc-l{font-size:9px;color:var(--text3);font-family:var(--fh);margin-bottom:2px;}
+.pc-v{font-family:var(--fn);font-size:13px;color:var(--text2);}
+.pc-v.up{color:var(--dn);}  .pc-v.dn{color:var(--up);}
+.pc-c{font-family:var(--fn);font-size:10px;color:var(--text3);}
+.pc-c.up{color:var(--dn);}  .pc-c.dn{color:var(--up);}
+
+/* ── STANCE ── */
+.stance{
+  background:var(--bg2);border:1px solid var(--border);border-left:4px solid var(--border);
+  border-radius:var(--r);padding:16px 18px;margin-bottom:14px;
+}
+.stance.bull{border-left-color:var(--up);}
+.stance.neutral{border-left-color:var(--amber);}
+.stance.bear{border-left-color:var(--dn);}
+.stance-head{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+.stance-title{font-family:var(--fh);font-size:16px;font-weight:800;color:var(--text2);}
+.stance-date{font-size:10px;color:var(--text3);font-family:var(--fh);margin-top:2px;}
+.stance-badge{
+  flex-shrink:0;padding:4px 12px;border-radius:20px;
+  font-family:var(--fh);font-size:11px;font-weight:700;border:1px solid;
+}
+.stance-badge.bull{background:rgba(208,2,27,0.07);color:var(--up);border-color:rgba(208,2,27,0.2);}
+.stance-badge.neutral{background:var(--amber-lt);color:var(--amber);border-color:rgba(148,101,0,0.2);}
+.stance-badge.bear{background:rgba(0,85,204,0.07);color:var(--dn);border-color:rgba(0,85,204,0.2);}
+.stance-reason{font-size:12px;color:var(--text);line-height:1.85;margin-bottom:12px;}
+.stance-reason strong{color:var(--navy);font-weight:700;}
+.stance-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.stance-chip{
+  border:1px solid var(--border);border-radius:var(--r2);
+  padding:6px 10px;text-align:center;flex:1;min-width:70px;background:var(--bg3);
+}
+.stance-chip.buy{background:var(--green-lt);border-color:rgba(0,135,90,0.2);}
+.stance-chip.warn{background:var(--amber-lt);border-color:rgba(148,101,0,0.2);}
+.stance-chip-val{font-family:var(--fn);font-size:15px;color:var(--text2);}
+.stance-chip-label{font-size:9px;color:var(--text3);}
+.stance-axes{display:flex;flex-direction:column;gap:5px;margin-bottom:10px;}
+.axis-row{display:flex;align-items:center;gap:8px;font-size:11px;}
+.axis-name{min-width:110px;color:var(--text3);}
+.axis-bar{display:flex;gap:3px;}
+.axis-seg{width:24px;height:6px;border-radius:3px;background:var(--border);}
+.axis-seg.on.hi{background:var(--up);}
+.axis-seg.on.mid{background:var(--amber);}
+.axis-score{font-family:var(--fn);font-size:10px;color:var(--text3);}
+.axis-total{font-size:11px;font-weight:700;color:var(--text3);padding-top:4px;border-top:1px solid var(--border);}
+.stance-note{font-size:10px;color:var(--text3);background:var(--bg3);padding:6px 10px;border-radius:var(--r2);line-height:1.6;}
+
+/* ── SECTION HEADER ── */
+.sec-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:10px;
+}
+.sec-head-title{font-family:var(--fh);font-size:13px;font-weight:700;color:var(--text2);}
+.sec-head-sub{font-size:10px;color:var(--text3);}
+
+/* ── FILTER BAR ── */
+.filter-bar{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  padding:12px 14px;margin-bottom:12px;
+  display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+}
+.filter-label{font-family:var(--fh);font-size:11px;color:var(--text3);font-weight:600;}
+.filter-tabs{display:flex;gap:4px;flex-wrap:wrap;}
+.filter-tab{
+  border:1px solid var(--border);border-radius:4px;padding:4px 10px;
+  font-family:var(--fh);font-size:11px;font-weight:600;color:var(--text3);
+  cursor:pointer;background:var(--bg3);white-space:nowrap;
+}
+.filter-tab.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.filter-sep{width:1px;height:20px;background:var(--border);}
+.filter-count{font-family:var(--fn);font-size:11px;color:var(--text3);margin-left:auto;}
+
+/* ── STOCK TABLE ── */
+.stock-table-wrap{
+  background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--r);overflow:hidden;margin-bottom:14px;
+}
+.stock-table{width:100%;border-collapse:collapse;}
+.stock-table th{
+  background:var(--bg3);padding:8px 10px;
+  font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);
+  text-align:right;border-bottom:2px solid var(--border);
+  white-space:nowrap;cursor:pointer;user-select:none;
+}
+.stock-table th:first-child{text-align:left;}
+.stock-table th:hover{color:var(--navy);}
+.stock-table th.sort-asc::after{content:' ▲';}
+.stock-table th.sort-desc::after{content:' ▼';}
+.stock-table td{
+  padding:9px 10px;border-bottom:1px solid var(--border);
+  font-size:12px;text-align:right;color:var(--text);
+  vertical-align:middle;
+}
+.stock-table td:first-child{text-align:left;}
+.stock-table tr:last-child td{border-bottom:none;}
+.stock-table tr.tbl-row{cursor:pointer;transition:background 0.1s;}
+.stock-table tr.tbl-row:hover{background:var(--bg3);}
+.stock-table tr.tbl-row.expanded{background:#f0f7ff;}
+.tbl-rank{
+  font-family:var(--fn);font-size:11px;font-weight:700;
+  width:28px;text-align:center;
+}
+.tbl-rank.top{color:var(--orange);}
+.tbl-name{font-weight:600;color:var(--text2);font-size:12px;}
+.tbl-name-link{font-weight:600;color:var(--text2);font-size:12px;text-decoration:none;display:block;}
+.tbl-name-link:hover{color:var(--navy);text-decoration:underline;}
+.tbl-code{font-family:var(--fn);font-size:10px;color:var(--text3);}
+.tbl-zone{
+  display:inline-flex;align-items:center;padding:2px 7px;border-radius:4px;
+  font-family:var(--fh);font-size:10px;font-weight:700;white-space:nowrap;
+}
+.tbl-zone.buy{background:var(--green-lt);color:var(--green);}
+.tbl-zone.watch{background:var(--amber-lt);color:var(--amber);}
+.tbl-zone.hold{background:var(--bg3);color:var(--text3);}
+.tbl-score{font-family:var(--fn);font-size:13px;font-weight:700;}
+.tbl-score.hi{color:var(--up);}
+.tbl-score.md{color:var(--amber);}
+.tbl-score.lo{color:var(--text3);}
+.tbl-num{font-family:var(--fn);font-size:12px;}
+.tbl-num.dn{color:var(--up);}   /* 乖離マイナス=赤=買い場 */
+.tbl-num.up{color:var(--dn);}
+.tbl-prev{font-family:var(--fn);font-size:10px;}
+.tbl-prev.up{color:var(--dn);}
+.tbl-prev.dn{color:var(--up);}
+/* 展開詳細行 */
+.detail-row td{padding:0;background:#f0f7ff;}
+.detail-box{padding:14px 16px;border-top:1px solid #d0e4f7;}
+.detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+@media(max-width:600px){.detail-grid{grid-template-columns:1fr;}}
+.detail-section-title{font-family:var(--fh);font-size:10px;font-weight:700;color:var(--text3);letter-spacing:0.5px;margin-bottom:8px;}
+.why-items{display:flex;flex-direction:column;gap:6px;}
+.why-item{
+  background:var(--bg2);border:1.5px solid var(--border);border-radius:var(--r2);
+  padding:8px 12px;position:relative;
+}
+.why-item.strong{border-color:rgba(208,2,27,0.25);background:rgba(208,2,27,0.03);}
+.why-item.mid{border-color:rgba(148,101,0,0.25);background:var(--amber-lt);}
+.why-rank-badge{
+  position:absolute;top:8px;right:8px;
+  width:16px;height:16px;border-radius:50%;
+  font-family:var(--fh);font-size:8px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+}
+.why-rank-badge.strong{background:rgba(208,2,27,0.1);color:var(--up);}
+.why-rank-badge.mid{background:rgba(148,101,0,0.1);color:var(--amber);}
+.why-val{font-family:var(--fn);font-size:18px;color:var(--text2);}
+.why-item.strong .why-val{color:var(--up);}
+.why-item.mid .why-val{color:var(--amber);}
+.why-label{font-size:9px;color:var(--text3);}
+.why-note-text{font-size:11px;font-weight:700;margin-top:2px;}
+.why-item.strong .why-note-text{color:var(--up);}
+.why-item.mid .why-note-text{color:var(--amber);}
+.why-desc{font-size:10px;color:var(--text3);line-height:1.6;margin-top:2px;}
+.score-breakdown{display:flex;flex-direction:column;gap:5px;}
+.bd-row{display:flex;align-items:center;gap:8px;}
+.bd-l{font-size:10px;color:var(--text3);min-width:70px;}
+.bd-bar{flex:1;height:5px;background:var(--border);border-radius:3px;overflow:hidden;}
+.bd-fill{height:100%;border-radius:3px;transition:width 0.4s ease;}
+.bd-v{font-family:var(--fn);font-size:10px;min-width:38px;text-align:right;}
+.bd-v.pos{color:var(--green);}  .bd-v.neg{color:var(--up);}
+.detail-fav-btn{
+  padding:7px 16px;border-radius:var(--r2);
+  font-family:var(--fh);font-size:11px;font-weight:700;cursor:pointer;
+  border:1.5px solid var(--border);background:var(--bg2);color:var(--text2);
+}
+.detail-fav-btn.active{background:var(--orange);color:#fff;border-color:var(--orange);}
+.detail-link-btn{
+  padding:7px 14px;border-radius:var(--r2);
+  font-family:var(--fh);font-size:11px;font-weight:700;
+  border:1.5px solid var(--border);background:var(--bg3);color:var(--navy);
+  text-decoration:none;display:inline-flex;align-items:center;
+}
+.detail-link-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+
+/* ── TREND BADGES ── */
+.trend-badge{
+  display:inline-flex;align-items:center;
+  padding:1px 6px;border-radius:3px;
+  font-size:9px;font-weight:700;font-family:var(--fh);
+  white-space:nowrap;cursor:default;
+}
+.trend-badge.hot{background:rgba(208,2,27,0.1);color:var(--up);border:1px solid rgba(208,2,27,0.2);}
+.trend-badge.warm{background:rgba(148,101,0,0.08);color:var(--amber);border:1px solid rgba(148,101,0,0.15);}
+
+/* ── 3 TABS (セクター/上昇/割安) ── */
+.t5-tabs{display:flex;gap:0;margin-bottom:14px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;}
+.t5-tab{
+  flex:1;padding:10px 4px;text-align:center;cursor:pointer;
+  font-family:var(--fh);font-size:12px;font-weight:700;color:var(--text3);
+  border-right:1px solid var(--border);transition:all 0.15s;
+}
+.t5-tab:last-child{border-right:none;}
+.t5-tab.active{color:#fff;background:var(--navy);}
+.t5-tab:hover:not(.active){background:var(--bg3);}
+
+/* ── TOP10 CARDS ── */
+.top10-cards{display:flex;flex-direction:column;gap:8px;}
+.top10-card{
+  display:flex;align-items:center;gap:12px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  padding:12px 14px;cursor:pointer;transition:background 0.15s;
+}
+.top10-card:hover{background:var(--bg3);}
+.top10-rank{font-family:var(--fn);font-size:16px;font-weight:800;color:var(--navy);min-width:22px;text-align:center;}
+.top10-info{flex:1;min-width:0;}
+.top10-name{font-size:13px;font-weight:700;color:var(--text1);}
+.top10-meta{font-size:10px;color:var(--text3);margin-top:2px;}
+.top10-right{text-align:right;min-width:55px;}
+.top10-score{font-family:var(--fn);font-size:15px;font-weight:800;}
+.top10-score.hi{color:var(--dn);} .top10-score.mid{color:var(--amber);}
+.top10-badge{display:inline-block;font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;margin-top:2px;}
+.top10-badge.div{background:rgba(78,170,135,0.12);color:var(--dn);}
+.top10-badge.mom{background:rgba(0,82,204,0.1);color:var(--navy);}
+
+/* ── SECTOR GRID ── */
+.sec-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:8px;}
+@media(max-width:640px){.sec-grid{grid-template-columns:1fr 1fr;}}
+.sec-tile{
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);
+  padding:12px 8px;text-align:center;cursor:pointer;transition:all 0.15s;
+}
+.sec-tile:hover{border-color:var(--navy);background:var(--bg3);}
+.sec-tile-ico{font-size:22px;margin-bottom:4px;}
+.sec-tile-name{font-family:var(--fh);font-size:11px;font-weight:700;color:var(--text2);}
+.sec-tile-sub{font-family:var(--fn);font-size:10px;color:var(--text3);margin-top:2px;}
+.sec-back-btn{
+  display:inline-flex;align-items:center;gap:4px;padding:6px 12px;margin-bottom:10px;
+  background:var(--bg3);border:1px solid var(--border);border-radius:var(--r2);
+  font-size:11px;font-weight:700;color:var(--text3);cursor:pointer;
+}
+.sec-back-btn:hover{background:var(--border);}
+
+/* ── TREND WARNING ── */
+.trend-warning{
+  background:rgba(208,2,27,0.06);border:1px solid rgba(208,2,27,0.2);
+  border-radius:var(--r2);padding:8px 14px;margin-bottom:12px;
+  font-size:11px;font-weight:700;color:var(--up);
+}
+
+/* ── PORTFOLIO DIARY ── */
+.pf-hero{display:flex;align-items:baseline;gap:12px;padding:12px 0;border-bottom:1px solid var(--border);margin-bottom:12px;}
+.pf-nav{font-family:var(--fn);font-size:24px;font-weight:800;color:var(--text1);}
+.pf-pnl{font-family:var(--fn);font-size:14px;font-weight:700;}
+.pf-pnl.up{color:var(--dn);} .pf-pnl.dn{color:var(--up);}
+.pf-day{font-size:11px;color:var(--text3);}
+.pf-bars{display:flex;gap:4px;margin-bottom:10px;}
+.pf-bar{flex:1;text-align:center;font-size:10px;padding:4px 0;border-radius:4px;}
+.pf-bar.cash{background:rgba(0,82,204,0.08);color:var(--navy);}
+.pf-bar.stock{background:rgba(78,170,135,0.08);color:var(--dn);}
+.pf-holdings{display:flex;flex-direction:column;gap:5px;margin-bottom:10px;}
+.pf-hold{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r2);}
+.pf-hold-name{flex:1;font-size:12px;font-weight:600;color:var(--text2);}
+.pf-hold-pnl{font-family:var(--fn);font-size:13px;font-weight:700;min-width:50px;text-align:right;}
+.pf-hold-pnl.up{color:var(--dn);} .pf-hold-pnl.dn{color:var(--up);}
+.pf-note-link{display:block;text-align:center;padding:12px;background:var(--navy);color:#fff;border-radius:var(--r);font-size:13px;font-weight:700;text-decoration:none;margin-top:10px;transition:opacity 0.15s;}
+.pf-note-link:hover{opacity:0.85;}
+
+/* ── WATCHLIST / HISTORY ── */
+.watch-empty{padding:20px;text-align:center;font-size:12px;color:var(--text3);}
+.watch-list{display:flex;flex-direction:column;gap:6px;}
+.watch-row{
+  display:flex;align-items:center;gap:10px;padding:10px 14px;
+  background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);cursor:pointer;
+}
+.watch-row:hover{background:var(--bg3);}
+.watch-code{font-family:var(--fn);font-size:11px;color:var(--text3);min-width:36px;}
+.watch-name{flex:1;font-size:12px;font-weight:600;color:var(--text2);}
+.watch-score{font-family:var(--fn);font-size:13px;font-weight:700;}
+.watch-score.hi{color:var(--up);} .watch-score.md{color:var(--amber);} .watch-score.lo{color:var(--text3);}
+.watch-remove{background:none;border:none;cursor:pointer;color:var(--text3);font-size:14px;padding:4px;}
+.hist-table{width:100%;border-collapse:collapse;font-size:11px;}
+.hist-table th{background:var(--bg3);padding:6px 10px;text-align:left;font-family:var(--fh);font-size:10px;color:var(--text3);border-bottom:1px solid var(--border);}
+.hist-table td{padding:7px 10px;border-bottom:1px solid var(--border);color:var(--text);}
+.hist-table tr:last-child td{border-bottom:none;}
+
+/* ── SETTINGS PANEL ── */
+.settings-overlay{
+  position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.4);
+  display:none;align-items:flex-end;justify-content:center;
+}
+.settings-overlay.open{display:flex;}
+.settings-box{
+  background:var(--bg2);border-radius:16px 16px 0 0;
+  padding:20px;width:100%;max-width:600px;max-height:85vh;overflow-y:auto;
+}
+.settings-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 16px;}
+.settings-title{font-family:var(--fh);font-size:15px;font-weight:800;color:var(--text2);margin-bottom:16px;}
+.setting-row{margin-bottom:14px;}
+.setting-label{font-family:var(--fh);font-size:11px;font-weight:700;color:var(--text3);margin-bottom:6px;letter-spacing:0.5px;}
+.setting-opts{display:flex;gap:6px;flex-wrap:wrap;}
+.setting-opt{
+  border:1.5px solid var(--border);border-radius:var(--r2);padding:6px 12px;
+  font-family:var(--fh);font-size:11px;font-weight:600;color:var(--text);
+  cursor:pointer;background:var(--bg3);
+}
+.setting-opt.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.settings-save{
+  width:100%;padding:12px;margin-top:8px;
+  background:var(--orange);color:#fff;border:none;border-radius:var(--r);
+  font-family:var(--fh);font-size:13px;font-weight:700;cursor:pointer;
+}
+.settings-save:hover{background:var(--orange2);}
+
+/* ── NAV TABS ── */
+.nav-tabs{
+  display:flex;background:var(--bg2);border:1px solid var(--border);
+  border-radius:var(--r);margin-bottom:14px;overflow:hidden;
+}
+.nav-tab{
+  flex:1;padding:10px;text-align:center;cursor:pointer;
+  font-family:var(--fh);font-size:11px;font-weight:700;color:var(--text3);
+  border-right:1px solid var(--border);position:relative;
+}
+.nav-tab:last-child{border-right:none;}
+.nav-tab.active{color:var(--navy);background:var(--navy);color:#fff;}
+
+/* ── BOTTOM NAV (mobile) ── */
+.bottom-nav{
+  display:none;position:fixed;bottom:0;left:0;right:0;z-index:200;
+  background:var(--bg2);border-top:1px solid var(--border);
+  padding:6px 0 8px;
+}
+@media(max-width:768px){.bottom-nav{display:flex;}}
+.nav-item{
+  flex:1;display:flex;flex-direction:column;align-items:center;gap:2px;
+  background:none;border:none;cursor:pointer;color:var(--text3);padding:4px;
+}
+.nav-item.active{color:var(--navy);}
+.nav-ico{font-size:18px;}
+.nav-label{font-size:9px;font-family:var(--fh);font-weight:700;}
+
+/* ── PANELS ── */
+.panel{display:none;}
+.panel.active{display:block;}
+
+/* ── SKELETON ── */
+.skeleton{background:var(--border);border-radius:4px;animation:shimmer 1.5s infinite linear;background:linear-gradient(90deg,var(--border) 25%,#e8edf2 50%,var(--border) 75%);background-size:200% 100%;}
+@keyframes shimmer{0%{background-position:200% 0;}100%{background-position:-200% 0;}}
+.skel-row{height:40px;margin-bottom:4px;border-radius:4px;}
+
+/* ── CHART & DETAIL EXPAND ── */
+/* ── BRAIN SCANNER 3層同心円 ── */
+.brain-wrap{background:#060a14;border-radius:var(--r);padding:16px 8px;margin-bottom:14px;border:1px solid #1a2744;position:relative;overflow:hidden;}
+.brain-wrap::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 40%,rgba(74,170,255,0.03) 0%,transparent 60%),linear-gradient(rgba(74,170,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(74,170,255,0.012) 1px,transparent 1px);background-size:100% 100%,28px 28px,28px 28px;pointer-events:none;}
+.brain-head{text-align:center;margin-bottom:4px;position:relative;z-index:1;}
+.brain-title{font-family:var(--fn);font-size:10px;font-weight:700;color:#4af;letter-spacing:5px;text-transform:uppercase;opacity:0.6;}
+.brain-sub{font-size:11px;color:#445;margin-top:4px;}
+.brain-container{position:relative;width:100%;max-width:380px;aspect-ratio:1/1;margin:0 auto;}
+/* 3つの同心円ガイド */
+.brain-guide{position:absolute;border-radius:50%;left:50%;transform:translateX(-50%);}
+.brain-guide.outer{top:0;width:100%;height:100%;border:1px solid rgba(74,170,255,0.08);}
+.brain-guide.mid{top:17%;width:66%;height:66%;border:1px solid rgba(74,170,255,0.07);}
+.brain-guide.inner{top:30%;width:38%;height:38%;border:1px solid rgba(167,139,250,0.08);background:radial-gradient(circle,rgba(167,139,250,0.03) 0%,transparent 70%);}
+/* 層ラベル */
+.brain-tag{position:absolute;font-family:var(--fn);font-size:7px;letter-spacing:2px;text-transform:uppercase;opacity:0.3;left:50%;transform:translateX(-50%);pointer-events:none;white-space:nowrap;}
+.brain-tag.t1{top:2%;color:#4af;}
+.brain-tag.t2{top:15%;color:#4aeaaa;}
+.brain-tag.t3{top:31%;color:#a78bfa;}
+/* 各層のリング */
+.brain-ring{position:absolute;left:50%;transform:translateX(-50%);}
+.brain-ring.outer{top:0;width:100%;height:100%;}
+.brain-ring.mid{top:17%;width:66%;height:66%;}
+/* 内側ワードクラウド */
+.brain-core{position:absolute;top:30%;left:50%;transform:translateX(-50%);width:38%;height:38%;border-radius:50%;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:2px 4px;padding:14px 10px;overflow:hidden;}
+/* スキャンリング */
+.brain-scan{position:absolute;border-radius:50%;border:1.5px solid transparent;pointer-events:none;left:50%;transform:translateX(-50%);}
+.brain-scan.s1{top:0;width:100%;height:100%;border-top-color:rgba(74,170,255,0.15);animation:bspin 6s linear infinite;}
+.brain-scan.s2{top:17%;width:66%;height:66%;border-right-color:rgba(74,234,170,0.12);animation:bspin 8s linear infinite reverse;}
+/* 外側ワード */
+.bw-outer{position:absolute;font-family:var(--fn);font-size:9px;letter-spacing:0.3px;white-space:nowrap;opacity:0;animation:bfade .6s ease forwards;cursor:default;transition:transform .2s,text-shadow .2s;transform:translate(-50%,-50%);}
+.bw-outer:hover{transform:translate(-50%,-50%) scale(1.15);text-shadow:0 0 12px currentColor;z-index:10;}
+/* 中間ワード */
+.bw-mid{position:absolute;font-family:var(--fn);font-size:8.5px;white-space:nowrap;opacity:0;animation:bfade .6s ease forwards;cursor:default;transition:transform .2s;transform:translate(-50%,-50%);}
+.bw-mid:hover{transform:translate(-50%,-50%) scale(1.15);text-shadow:0 0 10px currentColor;z-index:10;}
+/* 内側ワード */
+.bw-inner{display:inline-block;padding:1px 3px;font-weight:700;white-space:nowrap;opacity:0;animation:bpop .4s ease forwards;cursor:default;transition:transform .2s;}
+.bw-inner:hover{transform:scale(1.25);text-shadow:0 0 8px currentColor;}
+.bw-inner.xl{font-size:13px;}.bw-inner.lg{font-size:10px;}.bw-inner.md{font-size:8px;}.bw-inner.sm{font-size:7px;opacity:.6;}
+/* 色（ネオン発光） */
+.bw-greed{color:#4aeaaa;text-shadow:0 0 4px rgba(74,234,170,0.3);}.bw-fear{color:#ff6b7a;text-shadow:0 0 4px rgba(255,107,122,0.3);}
+.bw-hype{color:#ff9f43;text-shadow:0 0 4px rgba(255,159,67,0.3);}.bw-buzz{color:#a78bfa;text-shadow:0 0 4px rgba(167,139,250,0.3);}
+.bw-calm{color:#4a9eff;text-shadow:0 0 4px rgba(74,158,255,0.3);}.bw-bull{color:#4aeaaa;text-shadow:0 0 4px rgba(74,234,170,0.3);}
+.bw-bear{color:#ff6b7a;text-shadow:0 0 4px rgba(255,107,122,0.3);}.bw-note{color:#6b9fff;text-shadow:0 0 4px rgba(107,159,255,0.3);}
+.bw-risk{color:#ff6b7a;}.bw-tail{color:#4aeaaa;}.bw-event{color:#ffb347;}.bw-data{color:#6b9fff;}
+/* 凡例 */
+.brain-legend{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:10px;position:relative;z-index:1;}
+.brain-leg-card{padding:6px 10px;background:rgba(255,255,255,0.015);border:1px solid rgba(255,255,255,0.07);border-radius:6px;}
+.brain-leg-title{font-family:var(--fn);font-size:7px;letter-spacing:1.5px;opacity:0.4;margin-bottom:3px;font-weight:600;}
+.brain-leg-items{display:flex;gap:6px;}
+.brain-leg-item{display:flex;align-items:center;gap:3px;font-size:8.5px;color:#556;}
+.brain-leg-dot{width:5px;height:5px;border-radius:1px;}
+.brain-date{text-align:center;font-size:7.5px;color:#334;margin-top:6px;letter-spacing:1px;position:relative;z-index:1;}
+@keyframes bspin{to{transform:translateX(-50%) rotate(360deg);}}
+@keyframes bfade{from{opacity:0;transform:translate(-50%,-50%) scale(.7);}to{opacity:.85;transform:translate(-50%,-50%) scale(1);}}
+@keyframes bpop{from{opacity:0;transform:scale(.4);}to{opacity:1;transform:scale(1);}}
+
+/* ── CHART & DETAIL EXPAND ── */
+.t5-spark{width:100px;height:36px;flex-shrink:0;}
+.t5-expand{background:var(--bg3);padding:18px;border-top:1px solid var(--border);border-left:4px solid var(--orange);animation:fi .25s ease;}
+.d-grid{display:grid;grid-template-columns:1fr;gap:14px;}
+@media(min-width:640px){.d-grid{grid-template-columns:1fr 1fr;}}
+.d-sec-ttl{font-size:12px;font-weight:700;color:var(--text2);margin-bottom:8px;display:flex;align-items:center;gap:5px;}
+.d-chart-box{background:var(--bg3);border-radius:8px;padding:10px 8px 6px;border:1px solid var(--border);overflow:hidden;}
+.d-chart-svg{width:100%;height:auto;display:block;overflow:hidden;aspect-ratio:400/160;}
+.d-ma{display:flex;flex-direction:column;gap:5px;margin-top:14px;padding:10px;background:var(--bg2);border-radius:8px;border:1px solid var(--border);}
+.d-ma-row{display:flex;align-items:center;gap:6px;font-size:11px;margin-top:4px;}
+.d-ma-lbl{min-width:90px;color:var(--text);font-weight:500;font-size:10px;}
+.d-ma-bar{flex:1;height:16px;background:var(--border);border-radius:3px;position:relative;overflow:hidden;}
+.d-ma-ctr{position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--text3);opacity:0.3;}
+.d-ma-dot{position:absolute;top:50%;transform:translate(-50%,-50%);width:8px;height:8px;border-radius:50%;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.2);}
+.d-ma-val{min-width:48px;text-align:right;font-family:var(--fn);font-size:11px;font-weight:700;}
+.d-ma-val.up{color:var(--dn);}.d-ma-val.dn{color:var(--up);}
+.d-ma-tag{font-size:9px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:3px;}
+.d-ma-tag.near{background:rgba(148,101,0,0.15);color:var(--amber);}
+.d-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:10px;}
+.d-card{text-align:center;padding:12px 6px;background:var(--bg2);border-radius:8px;border:1px solid var(--border);}
+.d-card b{font-family:var(--fn);font-size:16px;font-weight:800;display:block;color:var(--text2);}
+.d-card small{font-size:9px;color:var(--text3);}
+.d-signal{background:rgba(232,84,30,0.06);border-radius:8px;padding:12px;margin-top:10px;border:1px solid rgba(232,84,30,0.15);}
+.d-signal b{font-size:10px;font-weight:700;color:var(--orange);display:block;margin-bottom:4px;}
+.d-signal p{font-size:11px;color:var(--text);line-height:1.7;margin:0;}
+.d-btns{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap;}
+.d-btn{padding:6px 14px;border-radius:8px;font-size:11px;font-weight:600;border:1px solid var(--border);background:var(--bg2);color:var(--text2);cursor:pointer;transition:all .15s;display:inline-flex;align-items:center;text-decoration:none;}
+.d-btn:hover{border-color:var(--orange);color:var(--orange);}
+
+/* ── MISC ── */
+.fadein{animation:fi 0.3s ease;}
+@keyframes fi{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:none;}}
+.disclaimer{font-size:10px;color:var(--text3);text-align:center;padding:12px 0;line-height:1.8;}
+.sec-wrap{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;margin-bottom:14px;}
+.empty-msg{text-align:center;padding:20px;font-size:12px;color:var(--text3);}
+
+/* ══ MARKET COMMENT (A) ══ */
+.mkt-card{background:linear-gradient(145deg,#141e2e 0%,#1a2540 100%);border:1px solid rgba(80,120,200,0.12);border-radius:var(--r);overflow:hidden;margin-bottom:14px;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
+.mkt-header{display:flex;align-items:center;gap:10px;padding:14px 16px 10px;}
+.mkt-avatar{width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#4a90d9,#7c5cbf);display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;box-shadow:0 2px 8px rgba(74,144,217,0.3);}
+.mkt-who{font-size:12px;font-weight:900;color:#e0e6f0;}
+.mkt-when{font-size:9px;color:rgba(160,180,210,0.4);font-family:var(--fn);}
+.mkt-body{padding:0 16px 14px;}
+.mkt-comment{font-size:12.5px;line-height:1.75;color:#c0cce0;}
+.mkt-comment strong{color:#e8ecf4;}
+.mkt-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:10px;}
+.mkt-tag{font-size:9px;font-weight:700;padding:3px 8px;border-radius:20px;}
+.mkt-tag.bullish{background:rgba(74,234,170,0.12);color:#4aeaaa;}
+.mkt-tag.bearish{background:rgba(255,107,122,0.12);color:#ff7a85;}
+.mkt-tag.hot{background:rgba(255,159,67,0.12);color:#ff9f43;}
+.mkt-tag.neutral{background:rgba(150,180,220,0.1);color:#a0b4d8;}
+.mkt-sources{display:flex;gap:8px;margin-top:10px;padding-top:10px;border-top:1px solid rgba(100,150,255,0.06);}
+.mkt-src{font-size:9px;color:rgba(140,165,210,0.35);display:flex;align-items:center;gap:3px;}
+
+/* ══ RANKING TABLE (B) ══ */
+.rank-card{background:linear-gradient(145deg,#141e2e 0%,#1a2540 100%);border:1px solid rgba(80,120,200,0.12);border-radius:var(--r);overflow:hidden;margin-bottom:14px;box-shadow:0 4px 20px rgba(0,0,0,0.15);}
+.rank-header{background:linear-gradient(135deg,#1e3a5f 0%,#2a1f4e 100%);padding:12px 16px;text-align:center;border-bottom:1px solid rgba(100,150,255,0.1);}
+.rank-header-title{font-size:15px;font-weight:900;color:#e8ecf4;letter-spacing:1px;}
+.rank-header-sub{font-size:9px;color:rgba(180,200,230,0.4);margin-top:2px;font-family:var(--fn);}
+.rank-grid{display:grid;grid-template-columns:1fr 1fr;}
+.rank-col{display:flex;flex-direction:column;}
+.rank-col+.rank-col{border-left:1px solid rgba(100,150,255,0.06);}
+.rank-row{border-bottom:1px solid rgba(100,150,255,0.05);cursor:pointer;transition:all 0.15s;position:relative;}
+.rank-row:hover{background:rgba(100,150,255,0.04);}
+.rank-row:last-child{border-bottom:none;}
+.rank-row.active{background:rgba(74,144,217,0.08);}
+.rank-row-main{display:flex;align-items:center;padding:7px 10px;gap:5px;}
+.rank-name{flex:1;font-size:11px;font-weight:700;color:#c8d4e4;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.has-comment .rank-name::after{content:' 💬';font-size:7px;opacity:0.5;}
+.rank-chg{font-family:var(--fn);font-size:11px;font-weight:500;padding:2px 6px;border-radius:4px;min-width:50px;text-align:center;}
+.rank-chg.r-up{background:rgba(255,77,77,0.15);color:#ff7a85;}
+.rank-chg.r-dn{background:rgba(42,157,106,0.15);color:#4aeaaa;}
+.rank-chg.r-flat{background:rgba(150,150,150,0.1);color:rgba(180,200,230,0.4);}
+.rank-chg.r-big-up{background:rgba(255,77,77,0.3);color:#ff7a85;font-weight:700;}
+.rank-chg.r-big-dn{background:rgba(42,157,106,0.3);color:#4aeaaa;font-weight:700;}
+.rank-cap{font-family:var(--fn);font-size:9px;color:rgba(150,175,210,0.3);min-width:34px;text-align:right;}
+.rank-footer{padding:8px 12px;text-align:center;font-size:9px;color:rgba(150,175,210,0.25);border-top:1px solid rgba(100,150,255,0.06);font-family:var(--fn);}
+
+/* ══ DETAIL PANEL (C) ══ */
+.detail-panel{display:none;background:linear-gradient(145deg,#141e2e 0%,#1a2540 100%);border:1px solid rgba(100,150,255,0.15);border-radius:var(--r);overflow:hidden;margin-bottom:14px;box-shadow:0 4px 24px rgba(0,0,0,0.2);animation:rankSlide 0.25s ease;}
+.detail-panel.show{display:block;}
+.detail-overlay{display:none;position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.7);overflow-y:auto;padding:20px 16px 40px;}
+.detail-overlay.show{display:flex;align-items:flex-end;justify-content:center;}
+.detail-overlay .detail-box{background:linear-gradient(145deg,#141e2e 0%,#1a2540 100%);border:1px solid rgba(100,150,255,0.15);border-radius:var(--r);overflow:hidden;width:100%;max-width:680px;box-shadow:0 8px 40px rgba(0,0,0,0.5);animation:rankSlide 0.25s ease;}
+@keyframes rankSlide{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
+.detail-top{padding:14px 16px;display:flex;align-items:center;gap:12px;border-bottom:1px solid rgba(100,150,255,0.08);}
+.detail-close{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.06);border:none;color:rgba(180,200,230,0.5);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.15s;}
+.detail-close:hover{background:rgba(255,255,255,0.1);}
+.detail-info{flex:1;}
+.detail-name{font-size:15px;font-weight:900;color:#e8ecf4;}
+.detail-meta{font-size:10px;color:rgba(160,180,210,0.4);font-family:var(--fn);margin-top:1px;}
+.detail-chg-big{font-family:var(--fn);font-size:18px;font-weight:700;padding:4px 12px;border-radius:6px;flex-shrink:0;}
+.detail-chg-big.r-up{background:rgba(255,77,77,0.2);color:#ff7a85;}
+.detail-chg-big.r-dn{background:rgba(42,157,106,0.2);color:#4aeaaa;}
+.detail-stats{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(100,150,255,0.06);}
+.detail-stat{text-align:center;padding:10px 4px;border-right:1px solid rgba(100,150,255,0.05);}
+.detail-stat:last-child{border-right:none;}
+.detail-stat-val{font-family:var(--fn);font-size:13px;font-weight:700;color:#d0daf0;}
+.detail-stat-label{font-size:8px;color:rgba(150,175,210,0.4);margin-top:2px;font-weight:700;}
+.detail-cmt{padding:14px 16px;}
+.detail-cmt-head{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.detail-cmt-avatar{width:26px;height:26px;border-radius:50%;background:linear-gradient(135deg,#4a90d9,#7c5cbf);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;}
+.detail-cmt-label{font-size:11px;font-weight:800;color:rgba(180,200,230,0.6);}
+.detail-cmt-body{font-size:12px;line-height:1.75;color:#b0c4e0;background:rgba(74,144,217,0.05);border-radius:10px;padding:12px 14px;border:1px solid rgba(74,144,217,0.08);}
+.detail-cmt-body strong{color:#d0e0f4;}
+.detail-cmt-sources{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap;}
+.src-tag{font-size:8px;font-weight:700;padding:2px 7px;border-radius:10px;}
+.src-tag.yt{background:rgba(255,0,0,0.12);color:#ff6b6b;}
+.src-tag.news{background:rgba(100,180,255,0.1);color:#7ab8f0;}
+.src-tag.tech{background:rgba(255,200,50,0.1);color:#ddb840;}
+.src-tag.score{background:rgba(74,234,170,0.1);color:#4aeaaa;}
+
+/* ── LOGIC MODAL ── */
+.logic-overlay{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,0.4);display:none;align-items:flex-end;justify-content:center;}
+.logic-overlay.open{display:flex;}
+.logic-box{background:var(--bg2);border-radius:16px 16px 0 0;padding:20px;width:100%;max-width:600px;max-height:80vh;overflow-y:auto;}
+.modal-handle{width:36px;height:4px;background:var(--border);border-radius:2px;margin:0 auto 16px;}
+.logic-title{font-family:var(--fh);font-size:15px;font-weight:800;color:var(--text2);margin-bottom:6px;}
+.logic-sub{font-size:12px;color:var(--text3);margin-bottom:14px;line-height:1.7;}
+.logic-tbl{width:100%;border-collapse:collapse;font-size:12px;margin-bottom:14px;}
+.logic-tbl th{background:var(--bg3);padding:7px 10px;text-align:left;font-family:var(--fh);font-size:10px;color:var(--text3);border-bottom:1px solid var(--border);}
+.logic-tbl td{padding:7px 10px;border-bottom:1px solid var(--border);color:var(--text);}
+.logic-tbl .pts{text-align:right;font-family:var(--fn);font-weight:700;}
+.logic-note{background:var(--bg3);border-radius:var(--r2);padding:12px;font-size:11px;color:var(--text);line-height:1.9;margin-bottom:14px;}
+.btn-logic-close{width:100%;padding:10px;background:var(--navy);color:#fff;border:none;border-radius:var(--r);font-family:var(--fh);font-size:13px;font-weight:700;cursor:pointer;}
+
+@media(max-width:600px){
+  .stock-table th:nth-child(n+7),.stock-table td:nth-child(n+7){display:none;}
+}
+@media(max-width:480px){
+  .stock-table th:nth-child(n+6),.stock-table td:nth-child(n+6){display:none;}
+}
+/* ═══════════════════════════════════════
+   ROBINHOOD DARK THEME OVERRIDES
+   ═══════════════════════════════════════ */
+html{font-size:15px;background:#0a0a0a}
+body{background:#0a0a0a;color:#e0e0e0}
+
+/* ── Topbar ── */
+.topbar{background:rgba(10,10,10,0.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.05)}
+.logo-name{color:#fff}
+.logo-tag{color:#555;font-size:9px}
+.btn-topbar{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.15);color:#ccc}
+.btn-topbar:hover{background:rgba(255,255,255,0.16)}
+
+/* ── Hero ── */
+.hero{background:#1e1e1e;border:1px solid rgba(255,255,255,0.10);border-radius:14px;margin:8px 12px}
+.hero-eyebrow{color:#555}
+.hero-dot{background:var(--green);box-shadow:0 0 6px var(--green)}
+.hero-title{color:#fff}
+.hero-title span{color:var(--green)}
+.hero-stat{background:rgba(255,255,255,0.02);border-radius:10px}
+.hero-stat-val{color:#fff;font-family:var(--fn)}
+.hero-stat-val.buy{color:var(--green)}
+.hero-stat-label{color:#555}
+
+/* ── Trust Bar ── */
+.trust-bar{background:#1e1e1e;border:1px solid rgba(255,255,255,0.10);border-radius:14px;margin:8px 12px}
+.trust-text{color:#888}
+.tbadge{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.12);color:#aaa}
+.tbadge.link{color:var(--green)}
+
+/* ── Pulse ── */
+.pulse{background:transparent;padding:8px 12px;margin:0}
+.pulse-row{gap:6px;display:flex}
+.pulse-item{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.07)!important;border-radius:12px!important;color:#fff}
+.pulse-item .p-label,.pulse-item .label{color:#555!important;font-size:8px!important}
+.pulse-item .p-val,.pulse-item .val{font-family:var(--fn)!important;color:#fff!important;font-weight:800!important}
+
+/* ── Stance ── */
+.stance-card,.stance-box{background:#181818;border:1px solid rgba(255,255,255,0.10);border-radius:14px}
+
+/* ── Brain Scanner ── */
+.brain-wrap{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:16px!important;margin:8px 12px}
+.brain-wrap::before{background:radial-gradient(ellipse at 50% 45%,rgba(0,220,130,0.015) 0%,transparent 55%),none!important}
+.brain-title{color:#555!important;font-size:10px!important;letter-spacing:2px!important}
+.brain-sub{color:#444!important}
+.brain-guide{border-color:rgba(255,255,255,0.04)!important}
+.brain-guide.inner{border-color:rgba(0,220,130,0.06)!important;background:radial-gradient(circle,rgba(0,220,130,0.025) 0%,transparent 70%)!important}
+.brain-scan.s1{border-top-color:rgba(0,220,130,0.12)!important}
+.brain-scan.s2{border-right-color:rgba(0,220,130,0.08)!important}
+.brain-tag{color:#333!important}
+.brain-leg-card{background:rgba(255,255,255,0.02)!important;border-color:rgba(255,255,255,0.04)!important}
+.brain-leg-title{opacity:0.5}
+.brain-leg-item{color:#555!important}
+.brain-date{color:#333!important}
+.bw-outer,.bw-mid,.bw-inner{text-shadow:0 2px 12px rgba(0,0,0,0.9)!important}
+.bw-greed,.bw-bull{color:var(--green)!important}
+.bw-fear,.bw-bear,.bw-risk{color:var(--dn)!important}
+.bw-hype,.bw-buzz,.bw-event{color:var(--amber)!important}
+.bw-calm,.bw-data,.bw-tail,.bw-note{color:#888!important}
+.brain-core{background:none!important}
+
+/* ── AI Commentary Card ── */
+.mkt-card{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:16px!important;margin:8px 12px!important;position:relative;overflow:hidden}
+.mkt-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,220,130,0.15),transparent)}
+.mkt-avatar{font-size:20px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;background:rgba(0,220,130,0.08);border-radius:12px;border:1px solid rgba(0,220,130,0.15)}
+.mkt-who{color:#fff!important;font-weight:700!important}
+.mkt-when{color:#444!important;font-family:var(--fn)!important}
+.mkt-comment{color:#999!important;line-height:1.85!important}
+.mkt-comment strong{color:#fff!important}
+.mkt-tag{border-radius:8px!important}
+.mkt-tag.bull,.mkt-tag.bullish{background:rgba(0,220,130,0.08)!important;color:var(--green)!important;border-color:rgba(0,220,130,0.12)!important}
+.mkt-tag.bear,.mkt-tag.bearish{background:rgba(255,77,77,0.08)!important;color:var(--dn)!important;border-color:rgba(255,77,77,0.12)!important}
+.mkt-source{color:#555!important}
+
+/* ── Ranking ── */
+.rank-card{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:16px!important;margin:8px 12px!important}
+.rank-header-title{color:#fff!important;font-weight:800!important}
+.rank-header-sub{color:#444!important}
+.rank-row{border-bottom-color:rgba(255,255,255,0.03)!important}
+.rank-name{color:#999!important;font-weight:600!important}
+.rank-chg{font-family:var(--fn)!important;font-weight:700!important}
+.rank-chg.up{color:var(--dn)!important}
+.rank-chg.dn{color:var(--green)!important}
+.rank-footer{border-top-color:rgba(255,255,255,0.04)!important;color:#444!important}
+
+/* ── Detail Panel ── */
+.detail-panel{background:#1e1e1e;border:1px solid rgba(255,255,255,0.07);border-radius:16px;margin:8px 12px}
+.detail-name{color:#fff!important}
+.detail-close{color:#555!important}
+.detail-section-title{color:#555!important}
+.detail-chg-big.up{color:var(--dn)!important}
+.detail-chg-big.dn{color:var(--green)!important}
+.detail-box{background:rgba(255,255,255,0.02)!important;border-color:rgba(255,255,255,0.04)!important;border-radius:10px!important}
+.detail-cmt{background:rgba(0,220,130,0.04)!important;border:1px solid rgba(0,220,130,0.08)!important;border-radius:12px!important}
+.detail-cmt-body{color:#999!important}
+.detail-fav-btn{border-color:rgba(255,255,255,0.15)!important;color:#aaa!important}
+.detail-fav-btn.active{border-color:rgba(0,220,130,0.3)!important;color:var(--green)!important;background:rgba(0,220,130,0.08)!important}
+.d-btn{background:rgba(255,255,255,0.08)!important;border-color:rgba(255,255,255,0.12)!important;color:var(--green)!important;border-radius:8px!important}
+.d-card{background:rgba(255,255,255,0.02)!important;border-color:rgba(255,255,255,0.04)!important;border-radius:10px!important}
+.d-card label{color:#999!important}
+.d-card .val,.d-card .value{color:#fff!important}
+.d-sec-ttl{color:#555!important}
+.d-signal{border-radius:8px!important}
+.d-ma-row{border-bottom-color:rgba(255,255,255,0.03)!important}
+.d-ma-lbl{color:#888!important}
+.d-ma-val{color:#fff!important;font-family:var(--fn)!important}
+.d-ma-tag{border-radius:6px!important}
+.d-chart-box{background:rgba(255,255,255,0.02)!important;border-radius:10px!important}
+
+/* ── 3 Tabs ── */
+.t5-tabs{background:#141414;border-radius:12px;margin:8px 12px;padding:3px;display:flex;gap:0;border:1px solid rgba(255,255,255,0.08)}
+.t5-tab{background:transparent!important;color:#888!important;border-radius:10px!important;font-weight:700!important;font-size:13px!important;padding:12px 6px!important;transition:all 0.15s ease}
+.t5-tab.active{background:#252525!important;color:var(--green)!important;box-shadow:0 2px 8px rgba(0,0,0,0.4),inset 0 -2px 0 var(--green)!important}
+
+/* ── Tab Content Cards ── */
+#top5Body{margin:0 12px}
+.top10-card,.sec-card{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:14px!important}
+.top10-name{color:#fff!important}
+.top10-score{font-family:var(--fn)!important}
+.top10-score.hi{color:var(--green)!important}
+.top10-meta{color:#555!important}
+.sec-back-btn{color:var(--green)!important}
+
+/* ── Sector Section ── */
+.sec-wrap{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:16px!important;margin:8px 12px!important}
+.sec-head-title{color:#fff!important;font-weight:800!important}
+.sec-head-sub{color:#444!important}
+
+/* ── Portfolio/Diary ── */
+.pf-hero{background:rgba(0,220,130,0.04)!important;border-radius:12px!important}
+.pf-total{color:#fff!important;font-family:var(--fn)!important}
+.pf-chg.up{color:var(--dn)!important}
+.pf-chg.dn{color:var(--green)!important}
+.pf-stat{background:rgba(255,255,255,0.02)!important;border-radius:8px!important}
+.pf-stat-val{color:#fff!important;font-family:var(--fn)!important}
+.pf-stat-label{color:#555!important}
+.pf-stock{border-bottom-color:rgba(255,255,255,0.03)!important}
+.pf-stock-name{color:#fff!important}
+.pf-stock-chg.up{color:var(--dn)!important}
+.pf-stock-chg.dn{color:var(--green)!important}
+.pf-note-link{color:var(--green)!important;background:rgba(0,220,130,0.1)!important;border-radius:8px!important}
+.pf-note-link:hover{background:rgba(0,220,130,0.15)!important}
+
+/* ── Score badge colors ── */
+.zone-badge.buy{background:rgba(0,220,130,0.1)!important;color:var(--green)!important;border:1px solid rgba(0,220,130,0.2)!important}
+.zone-badge.watch{background:rgba(255,170,0,0.1)!important;color:var(--amber)!important;border:1px solid rgba(255,170,0,0.2)!important}
+.zone-badge.hold{background:rgba(255,255,255,0.04)!important;color:#888!important;border:1px solid rgba(255,255,255,0.08)!important}
+
+/* ── Bottom Nav ── */
+.bottom-nav{background:rgba(0,0,0,0.92)!important;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-top:1px solid rgba(255,255,255,0.05)!important}
+.bottom-nav .nav-item{color:#555!important}
+.bottom-nav .nav-item.active{color:var(--green)!important}
+
+/* ── Settings / Logic Modal ── */
+.settings-panel{background:#1e1e1e!important;border-color:rgba(255,255,255,0.04)!important}
+.settings-panel h2,.settings-panel h3{color:#fff!important}
+.settings-panel label{color:#888!important}
+.logic-overlay{background:rgba(0,0,0,0.85)!important}
+.logic-modal{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.06)!important;border-radius:16px!important;color:#999!important}
+.logic-modal h2{color:#fff!important}
+.logic-title{color:var(--green)!important}
+.btn-logic-close{background:rgba(255,255,255,0.06)!important;color:#fff!important;border-radius:10px!important}
+
+/* ── Watch Panel ── */
+.watch-empty{color:#555!important}
+.watch-card{background:#1e1e1e!important;border:1px solid rgba(255,255,255,0.10)!important;border-radius:14px!important}
+.watch-name{color:#fff!important}
+.watch-score{font-family:var(--fn)!important}
+.watch-meta{color:#555!important}
+
+/* ── Disclaimer ── */
+.disclaimer{color:#555!important;border:none!important;background:rgba(255,255,255,0.02)!important;border-top:1px solid rgba(255,255,255,0.06)!important;padding:16px 12px!important;margin-top:20px!important}
+
+/* ── Kokusaku Badge ── */
+.kok-badge{background:rgba(0,220,130,0.08)!important;color:var(--green)!important;border:1px solid rgba(0,220,130,0.15)!important;border-radius:6px!important}
+
+/* ── Skeleton ── */
+.skeleton,.skel-row{background:rgba(255,255,255,0.04)!important}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar{width:4px}
+::-webkit-scrollbar-track{background:transparent}
+::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.1);border-radius:2px}
+
+/* ── Axis/Score bars ── */
+.axis-bar{background:rgba(255,255,255,0.04)!important;border-radius:4px!important;overflow:hidden}
+.axis-seg{border-radius:0!important}
+.axis-name{color:#888!important}
+.axis-score{color:#555!important}
+.axis-total{color:#fff!important}
+
+/* ── Filter bar ── */
+.filter-btn{background:rgba(255,255,255,0.08)!important;border-color:rgba(255,255,255,0.12)!important;color:#aaa!important;border-radius:8px!important}
+.filter-btn.active{background:rgba(0,220,130,0.12)!important;border-color:rgba(0,220,130,0.25)!important;color:var(--green)!important}
+
+/* ── Global accent override ── */
+a{color:var(--green)}
+::selection{background:rgba(0,220,130,0.2);color:#fff}
+
+/* ═══════════════════════════════════════
+   CLICKABILITY IMPROVEMENTS
+   ═══════════════════════════════════════ */
+
+/* ── クリッカブルカードに hover エフェクト ── */
+.top10-card:hover{background:#252525!important;border-color:rgba(0,220,130,0.2)!important;transform:translateY(-1px);transition:all 0.15s ease}
+.top10-card{transition:all 0.15s ease}
+
+.sec-tile:hover{background:#252525!important;border-color:rgba(0,220,130,0.2)!important;transform:translateY(-1px);transition:all 0.15s ease}
+.sec-tile{transition:all 0.15s ease}
+
+.rank-row:hover{background:rgba(0,220,130,0.04)!important}
+.rank-row.active{background:rgba(0,220,130,0.08)!important}
+
+/* ── ボタン類を目立たせる ── */
+.btn-topbar{border:1px solid rgba(0,220,130,0.2)!important;color:var(--green)!important;font-weight:700!important;transition:all 0.15s ease}
+.btn-topbar:hover{background:rgba(0,220,130,0.12)!important;border-color:rgba(0,220,130,0.35)!important}
+
+.d-btn{border:1px solid rgba(0,220,130,0.2)!important;transition:all 0.15s ease}
+.d-btn:hover{background:rgba(0,220,130,0.1)!important;border-color:rgba(0,220,130,0.35)!important;transform:translateY(-1px)}
+
+.pf-note-link{transition:all 0.15s ease}
+.pf-note-link:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,220,130,0.15)!important}
+
+/* ── タブに hover インジケータ ── */
+.t5-tab{transition:all 0.15s ease}
+.t5-tab:hover:not(.active){background:rgba(255,255,255,0.05)!important;color:#aaa!important}
+
+.nav-tab{transition:all 0.15s ease}
+.nav-tab:hover:not(.active){background:rgba(255,255,255,0.04)}
+
+.nav-item{transition:color 0.15s ease}
+.nav-item:hover:not(.active){color:#888!important}
+
+/* ── ランキング行にクリック可能感 ── */
+.rank-row{transition:background 0.1s ease;position:relative}
+.rank-row::after{content:'▸';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:9px;color:rgba(255,255,255,0.1);transition:color 0.15s}
+.rank-row:hover::after{color:rgba(0,220,130,0.4)}
+
+/* ── TOP10カードの展開インジケータを見やすく ── */
+.top10-card .top10-right div[style*="詳細"]{color:var(--green)!important;opacity:0.6}
+.top10-card:hover .top10-right div[style*="詳細"]{opacity:1}
+
+/* ── ウォッチリスト行 ── */
+.watch-row{transition:all 0.15s ease}
+.watch-row:hover{background:#252525!important;border-color:rgba(0,220,130,0.15)!important}
+
+/* ── 設定ボタン ── */
+.setting-opt{transition:all 0.12s ease}
+.setting-opt:hover:not(.active){border-color:rgba(255,255,255,0.2)!important;background:rgba(255,255,255,0.06)!important}
+.settings-save{transition:all 0.15s ease}
+.settings-save:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,220,130,0.2)}
+
+/* ── テーブル行のhover ── */
+.stock-table tr.tbl-row:hover{background:#1e1e1e!important}
+.stock-table tr.tbl-row{cursor:pointer;transition:background 0.1s}
+
+/* ── フィルター設定 ── */
+.filter-tab{transition:all 0.12s ease}
+.filter-tab:hover:not(.active){border-color:rgba(255,255,255,0.15);background:rgba(255,255,255,0.06)}
+
+
+/* R2: CLICKABILITY */
+.top10-card{transition:all 0.15s ease!important}
+.top10-card:hover{background:#262626!important;border-color:rgba(0,220,130,0.2)!important;transform:translateY(-1px)}
+.sec-tile{transition:all 0.15s ease!important}
+.sec-tile:hover{background:#262626!important;border-color:rgba(0,220,130,0.2)!important;transform:translateY(-1px)}
+.rank-row::after{content:'▸';position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:10px;color:rgba(255,255,255,0.08);transition:color 0.15s}
+.rank-row:hover::after{color:var(--green)}
+.rank-row:hover .rank-name{color:#fff!important}
+.d-btn-primary{background:rgba(0,220,130,0.12)!important;border-color:rgba(0,220,130,0.25)!important;font-weight:700!important}
+.d-btn-primary:hover{background:rgba(0,220,130,0.2)!important;transform:translateY(-1px)}
+.d-btn{transition:all 0.15s ease!important}
+.d-btn:hover{border-color:rgba(0,220,130,0.3)!important;transform:translateY(-1px)}
+.btn-topbar{border:1px solid rgba(0,220,130,0.15)!important;color:var(--green)!important;transition:all 0.15s}
+.btn-topbar:hover{background:rgba(0,220,130,0.1)!important;border-color:rgba(0,220,130,0.3)!important}
+.t5-tab:hover:not(.active){background:rgba(255,255,255,0.04)!important;color:#bbb!important}
+.stock-table tr.tbl-row{transition:background 0.1s}
+.stock-table tr.tbl-row:hover{background:#1e1e1e!important}
+.watch-row{transition:all 0.15s!important}
+.watch-row:hover{background:#262626!important;border-color:rgba(0,220,130,0.15)!important}
+.setting-opt{transition:all 0.12s}
+.setting-opt:hover:not(.active){border-color:rgba(255,255,255,0.2)!important;background:rgba(255,255,255,0.05)!important}
+.pf-note-link{transition:all 0.15s}
+.pf-note-link:hover{transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,220,130,0.15)!important}
+
+
+/* R3: CONSISTENCY */
+.hero,.trust-bar,.pulse,.mkt-card,.brain-wrap,.rank-card,.t5-tabs,.sec-wrap{margin-bottom:16px!important}
+.hero{position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,220,130,0.2),transparent)}
+.rank-card{position:relative;overflow:hidden}
+.rank-card::after{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(0,220,130,0.12),transparent)}
+#portfolioSection{border-left:3px solid var(--green)!important}
+.brain-wrap{opacity:0.92}
+.detail-stats{grid-template-columns:repeat(auto-fit,minmax(60px,1fr))!important}
+
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <span class="logo-name">かぶのすけ<span style="color:var(--orange)">Navi</span></span>
+      <span class="logo-tag" id="lastUpdate">📡 更新確認中...</span>
+    </div>
+    <div class="topbar-right">
+      <button class="btn-topbar" onclick="switchTab('watch')">
+        ⭐ ウォッチ <span class="watch-count" id="watchCount">0</span>
+      </button>
+      <button class="btn-topbar" onclick="openSettings()">⚙ 設定</button>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <!-- ══ HOME PANEL ══ -->
+  <div class="panel active" id="panel-home">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-eyebrow" id="heroEyebrow">
+        <span class="hero-dot"></span>かぶのすけ｜AIに1000万円任せてみた
+      </div>
+      <div class="hero-top">
+        <div class="hero-left" style="display:flex;align-items:center;gap:12px">
+          <img id="kabunosukeImg" src="https://raw.githubusercontent.com/maemura/oshime/main/images/kn_cautious.png" alt="かぶのすけ" style="width:64px;height:64px;border-radius:50%;object-fit:cover;">
+          <div>
+            <div class="hero-title" id="kabunosukeComment">今日は慎重にいきます…</div>
+            <div style="font-size:11px;color:var(--text3);margin-top:4px" id="heroDay">Day 11 ・ 2026/3/10</div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div class="hero-stats" id="heroStats">
+        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏の銘柄数</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
+      </div>
+    </div>
+
+    <!-- TRUST BAR removed -->
+
+    <!-- MARKET PULSE -->
+    <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
+
+    <!-- 🤖 AIコメント + 騰落ランキング -->
+    <div class="mkt-card" id="mktCommentSection" style="display:none">
+      <div class="mkt-header">
+        <div class="mkt-avatar">🤖</div>
+        <div>
+          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
+          <div class="mkt-when" id="mktCommentDate"></div>
+        </div>
+      </div>
+      <div class="mkt-body">
+        <div class="mkt-comment" id="mktCommentBody"></div>
+        <div class="mkt-tags" id="mktCommentTags"></div>
+        <div class="mkt-sources" id="mktCommentSources"></div>
+      </div>
+    </div>
+
+    <div class="rank-card" id="rankSection" style="display:none">
+      <div class="rank-header">
+        <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
+        <div class="rank-header-sub"><span id="rankDate"></span>前日比 ・ <span style="color:var(--green);font-weight:700">タップで詳細 ▸</span></div>
+      </div>
+      <div id="rankBody"><div id="rankGrid"></div><div id="rankFooter"></div></div>
+    </div>
+
+    <!-- STANCE（3軸スコア） -->
+    <div class="sec-wrap" id="stanceBox">
+      <div class="stance-day" id="stanceDay"></div>
+      <div class="stance-hint" id="stanceHint" style="font-size:13px;color:var(--text2)"></div>
+      <div class="stance-axes" id="stanceAxes"></div>
+      <div class="stance-summary" id="stanceSummary"></div>
+    </div>
+
+    <!-- 🔥 今日のフォーカス -->
+    <div class="sec-wrap" id="focusSection" style="display:none">
+      <div class="sec-head">
+        <div class="sec-head-title">🔥 今日のフォーカス</div>
+        <div class="sec-head-sub" id="focusDate"></div>
+      </div>
+      <div id="focusBody" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;">
+        <div style="font-size:11px;color:var(--text3)">読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- 🎯 4つの問い -->
+    <div class="sec-wrap" id="questionsSection">
+      <div class="sec-head">
+        <div class="sec-head-title">🎯 今日のかぶのすけ</div>
+        <div class="sec-head-sub">4つのテーマで考える</div>
+      </div>
+      <div id="questionsBody" style="display:flex;flex-direction:column;gap:12px">
+        <div class="q-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-left:4px solid #ffd700">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-size:14px;font-weight:700;color:var(--text1)">💰 今日、守るべき？</div>
+            <div style="font-size:11px;color:var(--text3)" id="qDividendCount">—銘柄</div>
+          </div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:10px" id="qDividendComment">配当利回りの高い割安株を毎朝スキャンしています</div>
+          <div id="qDividendHoldings" style="font-size:11px;color:var(--text3);margin-bottom:8px"></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+            <img src="https://raw.githubusercontent.com/maemura/oshime/main/images/kk_thinking.png" alt="かぶ子" style="width:28px;height:28px;border-radius:50%;object-fit:cover">
+            <div style="font-size:11px;color:var(--accent)" id="qDividendRec">かぶ子の推し：読み込み中…</div>
+          </div>
+        </div>
+        <div class="q-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-left:4px solid #4a90e2">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-size:14px;font-weight:700;color:var(--text1)">🤖 今日、仕込むべき？</div>
+            <div style="font-size:11px;color:var(--text3)" id="qAiCount">—銘柄</div>
+          </div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:10px" id="qAiComment">AI・半導体関連の売られすぎをスキャンしています</div>
+          <div id="qAiHoldings" style="font-size:11px;color:var(--text3);margin-bottom:8px"></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+            <img src="https://raw.githubusercontent.com/maemura/oshime/main/images/kk_excited.png" alt="かぶ子" style="width:28px;height:28px;border-radius:50%;object-fit:cover">
+            <div style="font-size:11px;color:var(--accent)" id="qAiRec">かぶ子の推し：読み込み中…</div>
+          </div>
+        </div>
+        <div class="q-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-left:4px solid #4aeaaa">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-size:14px;font-weight:700;color:var(--text1)">🏛️ 今日、国策に乗るべき？</div>
+            <div style="font-size:11px;color:var(--text3)" id="qKokusakuCount">—銘柄</div>
+          </div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:10px" id="qKokusakuComment">防衛・エネルギー・国策テーマをスキャンしています</div>
+          <div id="qKokusakuHoldings" style="font-size:11px;color:var(--text3);margin-bottom:8px"></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+            <img src="https://raw.githubusercontent.com/maemura/oshime/main/images/kk_patient.png" alt="かぶ子" style="width:28px;height:28px;border-radius:50%;object-fit:cover">
+            <div style="font-size:11px;color:var(--accent)" id="qKokusakuRec">かぶ子の推し：読み込み中…</div>
+          </div>
+        </div>
+        <div class="q-card" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;border-left:4px solid #ff6b7a">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div style="font-size:14px;font-weight:700;color:var(--text1)">🔥 今日、波に乗るべき？</div>
+            <div style="font-size:11px;color:var(--text3)" id="qTrendCount">—銘柄</div>
+          </div>
+          <div style="font-size:12px;color:var(--text2);margin-bottom:10px" id="qTrendComment">SNS・YouTubeで話題の銘柄をスキャンしています</div>
+          <div id="qTrendHoldings" style="font-size:11px;color:var(--text3);margin-bottom:8px"></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:8px">
+            <img src="https://raw.githubusercontent.com/maemura/oshime/main/images/kk_excited.png" alt="かぶ子" style="width:28px;height:28px;border-radius:50%;object-fit:cover">
+            <div style="font-size:11px;color:var(--accent)" id="qTrendRec">かぶ子の推し：読み込み中…</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 📰 マーケットニュース -->
+    <div class="sec-wrap" id="newsSection" style="display:none">
+      <div class="sec-head">
+        <div class="sec-head-title">📰 マーケットニュース</div>
+        <div class="sec-head-sub">自動収集 10ソース</div>
+      </div>
+      <div id="newsBody" style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:14px 16px;">
+        <div style="font-size:11px;color:var(--text3)">読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- 📊 かぶのすけポートフォリオ -->
+    <div class="sec-wrap" id="portfolioSection">
+      <div class="sec-head">
+        <div class="sec-head-title">📊 かぶのすけのポートフォリオ</div>
+        <div class="sec-head-sub">AI × 1000万円 ／ 4テーマ運用中</div>
+      </div>
+      <div id="portfolioBody">
+        <div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">読み込み中...</div>
+      </div>
+    </div>
+
+    <!-- 📡 BRAIN SCANNER 3層同心円 -->
+    <div class="brain-wrap" id="brainSection" style="display:none">
+      <div class="brain-head">
+        <div class="brain-title">投資家の話題マップ</div>
+        <div class="brain-sub">YouTubeやSNSで今日話題のキーワード</div>
+      </div>
+      <div id="brainBody"></div>
+      <div class="brain-legend">
+        <div class="brain-leg-card">
+          <div class="brain-leg-title" style="color:#4af">マクロ（外側）</div>
+          <div class="brain-leg-items">
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>追い風</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>リスク</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ffb347"></div>注目</div>
+          </div>
+        </div>
+        <div class="brain-leg-card">
+          <div class="brain-leg-title" style="color:#4aeaaa">機関（中間）</div>
+          <div class="brain-leg-items">
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>買い</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>売り</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#6b9fff"></div>分析</div>
+          </div>
+        </div>
+        <div class="brain-leg-card">
+          <div class="brain-leg-title" style="color:#a78bfa">個人（内側）</div>
+          <div class="brain-leg-items">
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#4aeaaa"></div>強気</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff6b7a"></div>不安</div>
+            <div class="brain-leg-item"><div class="brain-leg-dot" style="background:#ff9f43"></div>過熱</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOP10 スコアランキング -->
+    <div class="sec-wrap" id="top10Section">
+      <div class="t5-tabs" id="t5tabs"></div>
+      <div id="t5TabSec"></div>
+      <div id="top5Body"></div>
+      <div id="top10Body"></div>
+    </div>
+
+    <!-- 🔗 つながる -->
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:16px;margin-bottom:14px;text-align:center">
+      <div style="font-size:13px;font-weight:600;color:var(--text1);margin-bottom:12px">📢 かぶのすけをフォローする</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <a href="https://note.com/kabunosuke_navi" target="_blank" style="display:block;padding:10px;background:var(--bg1);border:1px solid var(--border);border-radius:8px;color:var(--accent);text-decoration:none;font-size:12px">📝 noteで投資日記を読む →</a>
+        <a href="https://www.youtube.com/@kabuko_screening" target="_blank" style="display:block;padding:10px;background:var(--bg1);border:1px solid var(--border);border-radius:8px;color:var(--accent);text-decoration:none;font-size:12px">📺 かぶ子のYouTubeを見る →</a>
+        <a href="https://x.com/kabunosuke_navi" target="_blank" style="display:block;padding:10px;background:var(--bg1);border:1px solid var(--border);border-radius:8px;color:var(--accent);text-decoration:none;font-size:12px">🐦 Xでフォローする →</a>
+      </div>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">⚠️ 本ツールは参考情報の提供を目的としています。実際の投資判断はご自身の責任で行ってください。株式投資には元本割れのリスクがあります。</div>
+
+  </div><!-- /panel-home -->
+
+  <!-- ══ WATCH PANEL ══ -->
+  <div class="panel" id="panel-watch">
+    <div class="sec-wrap">
+      <div class="sec-head">
+        <div class="sec-head-title">⭐ ウォッチリスト</div>
+      </div>
+      <div id="watchlistBody"></div>
+    </div>
+    <div class="sec-wrap">
+      <div class="sec-head">
+        <div class="sec-head-title">🕐 スキャン履歴</div>
+      </div>
+      <div id="historyBody"></div>
+    </div>
+  </div>
+
+
+    <!-- DETAIL PANEL -->
+    <div class="detail-overlay" id="detailPanel" style="display:none" onclick="closeDetail(event)">
+      <div class="detail-box" id="detailBox"></div>
+    </div>
+</div><!-- /page -->
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <button class="nav-item active" id="nav-home" onclick="switchTab('home')">
+    <span class="nav-ico">🏠</span><span class="nav-label">ホーム</span>
+  </button>
+  <button class="nav-item" id="nav-watch" onclick="switchTab('watch')">
+    <span class="nav-ico">⭐</span><span class="nav-label">ウォッチ</span>
+  </button>
+</nav>
+
+<!-- SETTINGS PANEL -->
+<div class="settings-overlay" id="settingsOverlay" onclick="closeSettingsBg(event)">
+  <div class="settings-box">
+    <div class="settings-handle"></div>
+    <div class="settings-title">⚙ 表示設定</div>
+    <div class="setting-row">
+      <div class="setting-label">スキャンモード</div>
+      <div class="setting-opts" id="set-mode">
+        <div class="setting-opt active" data-val="dividend" onclick="selectSettingOpt(this,'mode')">💰 安定高配当</div>
+        <div class="setting-opt" data-val="value" onclick="selectSettingOpt(this,'mode')">🛡 割安バリュー</div>
+        <div class="setting-opt" data-val="rebound" onclick="selectSettingOpt(this,'mode')">⚡ 強押し目</div>
+      </div>
+    </div>
+    <div class="setting-row">
+      <div class="setting-label">表示件数</div>
+      <div class="setting-opts" id="set-count">
+        <div class="setting-opt" data-val="10" onclick="selectSettingOpt(this,'count')">TOP 10</div>
+        <div class="setting-opt active" data-val="30" onclick="selectSettingOpt(this,'count')">TOP 30</div>
+        <div class="setting-opt" data-val="999" onclick="selectSettingOpt(this,'count')">全件表示</div>
+      </div>
+    </div>
+    <div class="setting-row">
+      <div class="setting-label">最低配当利回り</div>
+      <div class="setting-opts" id="set-mindiv">
+        <div class="setting-opt active" data-val="0" onclick="selectSettingOpt(this,'mindiv')">制限なし</div>
+        <div class="setting-opt" data-val="2" onclick="selectSettingOpt(this,'mindiv')">2%以上</div>
+        <div class="setting-opt" data-val="3" onclick="selectSettingOpt(this,'mindiv')">3%以上</div>
+        <div class="setting-opt" data-val="4" onclick="selectSettingOpt(this,'mindiv')">4%以上</div>
+      </div>
+    </div>
+    <div class="setting-row">
+      <div class="setting-label">ゾーンフィルター</div>
+      <div class="setting-opts" id="set-zone">
+        <div class="setting-opt active" data-val="all" onclick="selectSettingOpt(this,'zone')">全て</div>
+        <div class="setting-opt" data-val="buy" onclick="selectSettingOpt(this,'zone')">買い圏のみ</div>
+        <div class="setting-opt" data-val="buywatch" onclick="selectSettingOpt(this,'zone')">買い圏＋注意圏</div>
+      </div>
+    </div>
+    <button class="settings-save" onclick="saveSettings()">✓ 保存して適用</button>
+  </div>
+</div>
+
+<!-- LOGIC MODAL -->
+<div class="logic-overlay" id="logicModal" onclick="closeLogicModal(event)">
+  <div class="logic-box">
+    <div class="modal-handle"></div>
+    <div class="logic-title">📊 スコアリングの考え方</div>
+    <div class="logic-sub">複数の指標をAIが総合的に判定し、100点満点でスコアリングしています。</div>
+    <div class="logic-note">
+      <b>5つの評価軸</b><br>
+      💰 配当利回り — 高配当ほど加点<br>
+      📉 移動平均乖離 — 押し目が深いほど加点<br>
+      📊 RSI — 売られすぎ水準で加点<br>
+      🛡 PBR — 割安ほど加点<br>
+      📈 PER — 収益性に対して割安なら加点<br><br>
+      <b>3つのスキャンモード</b><br>
+      💰 安定高配当 → 配当重視<br>
+      🛡 割安バリュー → PBR・PER重視<br>
+      ⚡ 強押し目 → テクニカル重視<br><br>
+      <span style="font-size:10px;color:var(--text3)">※ 出来高急騰銘柄や超小型株にはペナルティを適用しています。</span>
+    </div>
+    <button class="btn-logic-close" onclick="closeLogicModal()">閉じる</button>
+  </div>
+</div>
+
+<script>
+// ═══════════════════════════════════════
+// DATA & STATE
+// ═══════════════════════════════════════
+const SAMPLE_STOCKS=[
+  {code:'8306',name:'三菱UFJフィナンシャル',sector:'銀行',price:1423,ma25:1520,ma75:1580,rsi:32,dividend:3.8,pbr:0.7,per:9.2,vol_r:0.8},
+  {code:'9432',name:'NTT',sector:'通信',price:163,ma25:168,ma75:172,rsi:38,dividend:3.2,pbr:1.1,per:11.5,vol_r:0.9},
+  {code:'8058',name:'三菱商事',sector:'商社',price:2890,ma25:3050,ma75:3200,rsi:29,dividend:4.1,pbr:0.9,per:8.7,vol_r:0.7},
+  {code:'4502',name:'武田薬品工業',sector:'医薬品',price:3820,ma25:3960,ma75:4050,rsi:41,dividend:5.6,pbr:1.3,per:15.2,vol_r:1.1},
+  {code:'8001',name:'伊藤忠商事',sector:'商社',price:6780,ma25:7050,ma75:7200,rsi:33,dividend:3.5,pbr:1.8,per:12.3,vol_r:0.6},
+  {code:'7203',name:'トヨタ自動車',sector:'自動車',price:2650,ma25:2720,ma75:2800,rsi:36,dividend:3.0,pbr:1.1,per:10.4,vol_r:0.9},
+  {code:'8316',name:'三井住友FG',sector:'銀行',price:7100,ma25:7600,ma75:7800,rsi:28,dividend:4.2,pbr:0.8,per:9.0,vol_r:0.7},
+  {code:'2914',name:'JT（日本たばこ産業）',sector:'食品',price:3680,ma25:3780,ma75:3820,rsi:35,dividend:6.2,pbr:1.6,per:13.8,vol_r:0.8},
+  {code:'8411',name:'みずほFG',sector:'銀行',price:2680,ma25:2850,ma75:2950,rsi:31,dividend:3.9,pbr:0.7,per:8.5,vol_r:0.8},
+  {code:'9433',name:'KDDI',sector:'通信',price:4350,ma25:4500,ma75:4600,rsi:37,dividend:3.3,pbr:1.9,per:13.5,vol_r:1.0},
+  {code:'9503',name:'関西電力',sector:'電力',price:2140,ma25:2250,ma75:2300,rsi:33,dividend:3.5,pbr:0.9,per:10.1,vol_r:0.7},
+  {code:'5108',name:'ブリヂストン',sector:'ゴム',price:5100,ma25:5280,ma75:5350,rsi:40,dividend:3.8,pbr:1.2,per:11.8,vol_r:0.8},
+];
+
+let STOCKS=[...SAMPLE_STOCKS];
+let processed=[];
+let dataSource='sample';
+let currentMode='dividend';
+let currentTab='sector'; // 'sector','mom','dip'
+let activeSector=null;
+let sectorScoresData={};
+let sortKey='score'; let sortDir='desc';
+let expandedCode=null;
+let watchlist=[];
+let scanHistory=[];
+let settings={mode:'dividend',count:10,mindiv:0,zone:'all'};
+let trendRankingData=[];
+let portfolioData=null;
+let marketData={
+  nikkei_price:null,nikkei_ma25:null,nikkei_1d_chg:null,
+  nasdaq_1d_chg:null,vix:null,usdjpy:null,us10y:null,
+  geo_risk:false,rate_cut_flag:false,prev_buy_count:null,
+};
+
+// ─ localStorageから復元 ─
+try{
+  const sw=localStorage.getItem('kbs_watch');
+  if(sw)watchlist=JSON.parse(sw);
+  const sh=localStorage.getItem('kbs_history');
+  if(sh)scanHistory=JSON.parse(sh);
+  const ss=localStorage.getItem('kbs_settings');
+  if(ss){
+    settings=Object.assign(settings,JSON.parse(ss));
+    currentMode=settings.mode||'dividend';
+    dispCount=settings.count||10;
+    // フィルタータブを復元
+    document.querySelectorAll('.filter-tab[id^="mode-"]').forEach(t=>t.classList.remove('active'));
+    const mt=document.getElementById('mode-'+currentMode);
+    if(mt)mt.classList.add('active');
+    document.querySelectorAll('.filter-tab[id^="disp-"]').forEach(t=>t.classList.remove('active'));
+    const cnt=dispCount>=999?'all':String(dispCount);
+    const dt=document.getElementById('disp-'+cnt);
+    if(dt)dt.classList.add('active');
+  }
+}catch(e){}
+
+// ═══════════════════════════════════════
+// CHART FUNCTIONS
+// ═══════════════════════════════════════
+function calcMA(prices,period){
+  return prices.map((v,i)=>{
+    if(i<period-1)return null;
+    let s=0;for(let j=i-period+1;j<=i;j++)s+=prices[j];return s/period;
+  });
+}
+function toPath(vals,w,h,pad,mn,mx){
+  const pts=[];const rng=mx-mn||1;
+  vals.forEach((v,i)=>{
+    if(v===null)return;
+    const x=pad+(i/(vals.length-1))*(w-2*pad);
+    const y=pad+(1-(v-mn)/rng)*(h-2*pad);
+    pts.push(`${pts.length?'L':'M'}${x.toFixed(1)},${y.toFixed(1)}`);
+  });
+  return pts.join(' ');
+}
+function drawSpark(el,closes,w,h){
+  if(!closes||!closes.length||!el)return;
+  const pad=2;
+  const ma=calcMA(closes,20);
+  const all=closes.concat(ma.filter(v=>v!==null));
+  const mn=Math.min(...all),mx=Math.max(...all);
+  const pp=toPath(closes,w,h,pad,mn,mx);
+  const mp=toPath(ma,w,h,pad,mn,mx);
+  const lastX=pad+((closes.length-1)/(closes.length-1))*(w-2*pad);
+  const isUp=closes[closes.length-1]>=closes[0];
+  const col=isUp?'#059669':'#DC2626';
+  const id='sg_'+Math.random().toString(36).substr(2,6);
+  el.innerHTML=`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${col}" stop-opacity="0.15"/><stop offset="100%" stop-color="${col}" stop-opacity="0.01"/></linearGradient></defs>`+
+    `<path d="${pp} L${lastX},${h-pad} L${pad},${h-pad} Z" fill="url(#${id})"/>`+
+    `<path d="${mp}" fill="none" stroke="#059669" stroke-width="1" opacity="0.5"/>`+
+    `<path d="${pp}" fill="none" stroke="${col}" stroke-width="1.5"/>`;
+}
+function drawDetailChart(el,closes,ma25v,ma75v){
+  if(!closes||!closes.length||!el)return;
+  const W=400,H=160,P=6,PR=45;
+  const ma25calc=calcMA(closes,25);
+  const allVals=[...closes,...ma25calc.filter(v=>v!==null)];
+  if(ma75v&&ma75v>0)allVals.push(ma75v);
+  if(ma25v&&ma25v>0)allVals.push(ma25v);
+  let mn=Math.min(...allVals),mx=Math.max(...allVals);
+  const range=mx-mn||1;
+  mn-=range*0.06;mx+=range*0.06;
+  const rng=mx-mn||1;
+  function niceStep(r){
+    const raw=r/4;const mag=Math.pow(10,Math.floor(Math.log10(raw)));const norm=raw/mag;
+    if(norm<=1.5)return mag;if(norm<=3.5)return 2.5*mag;if(norm<=7.5)return 5*mag;return 10*mag;
+  }
+  const step=niceStep(rng);const gridStart=Math.ceil(mn/step)*step;
+  let gridLines='';
+  for(let v=gridStart;v<=mx;v+=step){
+    const y=P+(1-(v-mn)/rng)*(H-2*P);
+    if(y<P+2||y>H-P-10)continue;
+    gridLines+=`<line x1="${P}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#E2E8F0" stroke-width="0.8"/>`;
+    let label;
+    if(v>=10000)label=`¥${(v/1000).toFixed(v%1000===0?0:1)}k`;
+    else label=`¥${Math.round(v).toLocaleString()}`;
+    gridLines+=`<text x="${W-PR+4}" y="${y+3}" font-size="8" fill="#94A3B8" font-family="sans-serif">${label}</text>`;
+  }
+  const CW=W-PR;
+  const pp=toPath(closes,CW,H,P,mn,mx);
+  const lastX=P+((closes.length-1)/(closes.length-1))*(CW-2*P);
+  const lastY=P+(1-(closes[closes.length-1]-mn)/rng)*(H-2*P);
+  const id='dg_'+Math.random().toString(36).substr(2,6);
+  let ma75line='';
+  if(ma75v&&ma75v>0){
+    let y75=P+(1-(ma75v-mn)/rng)*(H-2*P);
+    y75=Math.max(P+2,Math.min(H-P-2,y75));
+    ma75line=`<line x1="${P}" y1="${y75}" x2="${CW-P}" y2="${y75}" stroke="#059669" stroke-width="1.2" opacity="0.5"/>`;
+  }
+  const ma25path=toPath(ma25calc,CW,H,P,mn,mx);
+  el.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  el.innerHTML=`<defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1B6AC9" stop-opacity="0.10"/><stop offset="100%" stop-color="#1B6AC9" stop-opacity="0.01"/></linearGradient></defs>`+
+    gridLines+
+    `<path d="${pp} L${lastX},${H-P} L${P},${H-P} Z" fill="url(#${id})"/>`+
+    ma75line+
+    `<path d="${ma25path}" fill="none" stroke="#F59E0B" stroke-width="1.2" opacity="0.6"/>`+
+    `<path d="${pp}" fill="none" stroke="#1A1A1A" stroke-width="2.2"/>`+
+    `<circle cx="${lastX}" cy="${lastY}" r="4" fill="#DC2626" stroke="#fff" stroke-width="2"/>`+
+    `<text x="${P}" y="${H-1}" font-size="9" fill="#B0B8C4" font-family="sans-serif">60日前</text>`+
+    `<text x="${CW-P}" y="${H-1}" font-size="9" fill="#B0B8C4" text-anchor="end" font-family="sans-serif">今日</text>`;
+}
+
+// ═══════════════════════════════════════
+// CALC
+// ═══════════════════════════════════════
+function dv(p,m){return m?Math.round((p-m)/m*1000)/10:0;}
+
+function calcScore(s){
+  // Python側で計算済みのscoreを優先使用（実データ）
+  if(dataSource==='real' && s.score!=null) return s.score;
+  // サンプルデータのフォールバック
+  return calcScoreStable(s);
+}
+function calcScoreStable(s){
+  // サンプルデータ用のフォールバック計算
+  const d25=dv(s.price,s.ma25);
+  const div=s.dividend||0;
+  let score=0;
+  score+=div>=5?40:div>=4.5?32:div>=4?25:div>=3.5?18:div>=3?10:0;
+  const pbr=s.pbr||99;
+  score+=pbr<=0.7?20:pbr<=0.9?15:pbr<=1.1?8:pbr<=1.5?3:0;
+  score+=d25<=-8?20:d25<=-5?14:d25<=-3?8:d25<=-1?3:0;
+  const rsi=s.rsi||50;
+  score+=rsi<=30?15:rsi<=38?10:rsi<=45?5:0;
+  const per=s.per||99;
+  score+=per<=10?10:per<=13?6:per<=16?3:0;
+  if((s.vol_r||1)>=1.5) score-=20;
+  if(div<0.5) score=Math.min(score,5);
+  const mc=s.market_cap_b||9999;
+  if(mc>0&&mc<300) score-=20;
+  else if(mc>0&&mc<500) score-=10;
+  return Math.max(0,Math.min(score,100));
+}
+function calcScoreGrowth(s){
+  const d25=dv(s.price,s.ma25);
+  let score=0;
+  score+=d25<=-15?35:d25<=-10?28:d25<=-6?20:d25<=-3?10:d25<=-1?3:0;
+  const rsi=s.rsi||50;
+  score+=rsi<=20?30:rsi<=28?22:rsi<=35?14:rsi<=42?7:0;
+  const pbr=s.pbr||99;
+  score+=pbr<=0.8?15:pbr<=1.2?10:pbr<=2.0?5:0;
+  const div=s.dividend||0;
+  score+=div>=4?10:div>=2?6:div>=1?2:0;
+  const per=s.per||99;
+  score+=per<=10?10:per<=15?5:0;
+  if((s.vol_r||1)>=2.0) score-=15;
+  return Math.max(0,Math.min(score,100));
+}
+
+
+function getZone(sc){
+  return sc>=60?{label:'買い圏',cls:'buy'}:sc>=35?{label:'注意圏',cls:'watch'}:{label:'待機圏',cls:'hold'};
+}
+
+function buildReasons(s,d25){
+  const r=[];
+  if(d25<=-6)r.push({val:`${d25}%`,label:'25MA乖離',note:'強い押し目水準',desc:'-6%以下は過去の反発実績が高い水準',cls:'strong',rank:'A'});
+  else if(d25<=-3)r.push({val:`${d25}%`,label:'25MA乖離',note:'押し目水準',desc:'-3%以上の下落で反発候補に',cls:'mid',rank:'B'});
+  if(s.rsi<=30)r.push({val:String(s.rsi),label:'RSI',note:'強い売られすぎ',desc:'30以下は自律反発が期待できる水準',cls:'strong',rank:'A'});
+  else if(s.rsi<=38)r.push({val:String(s.rsi),label:'RSI',note:'売られすぎ圏内',desc:'38以下で売り過剰が和らぐタイミング',cls:'mid',rank:'B'});
+  if(s.dividend>=4.5)r.push({val:`${s.dividend}%`,label:'配当利回り',note:'高配当・下値サポート',desc:'4.5%超は配当が株価の下値を支える',cls:'strong',rank:'A'});
+  else if(s.dividend>=3)r.push({val:`${s.dividend}%`,label:'配当利回り',note:'インカム期待',desc:'3%以上で長期保有のリスク低減に効く',cls:'mid',rank:'B'});
+  if(s.pbr<=0.8)r.push({val:`${s.pbr}倍`,label:'PBR',note:'解散価値以下',desc:'1倍割れは理論上の下値が固い水準',cls:'strong',rank:'A'});
+  else if(s.pbr<=1.1)r.push({val:`${s.pbr}倍`,label:'PBR',note:'割安圏',desc:'1倍付近は機関投資家が注目する水準',cls:'mid',rank:'B'});
+  if(s.per<=10)r.push({val:`${s.per}倍`,label:'PER',note:'割安水準',desc:'10倍以下は日本株平均を大きく下回る',cls:'mid',rank:'B'});
+  return r;
+}
+
+function calcBreakdown(s,mode){
+  const d25=dv(s.price,s.ma25);
+  const bd=[];
+  let dp=s.dividend>=5?30:s.dividend>=4.5?25:s.dividend>=4?20:s.dividend>=3.5?15:s.dividend>=3?10:s.dividend>=2.5?5:0;
+  if(mode==='dividend')dp=Math.min(Math.round(dp*1.4),40);
+  if(dp>0)bd.push({l:'配当利回り',v:dp,max:40,pos:true});
+  let mp=d25<=-8?28:d25<=-6?22:d25<=-4?12:d25<=-2?5:0;
+  if(mode==='rebound')mp=Math.min(Math.round(mp*1.5),35);
+  if(mp>0)bd.push({l:'25MA乖離',v:mp,max:35,pos:true});
+  let rp=s.rsi<=28?22:s.rsi<=32?16:s.rsi<=38?10:s.rsi<=42?5:0;
+  if(mode==='rebound')rp=Math.min(Math.round(rp*1.3),25);
+  if(rp>0)bd.push({l:'RSI',v:rp,max:25,pos:true});
+  let pp=s.pbr<=0.7?18:s.pbr<=0.9?13:s.pbr<=1.1?7:s.pbr<=1.5?3:0;
+  if(mode==='value')pp=Math.min(Math.round(pp*1.6),25);
+  if(pp>0)bd.push({l:'PBR',v:pp,max:25,pos:true});
+  let ep=s.per<=9?12:s.per<=11?8:s.per<=13?5:s.per<=15?2:0;
+  if(mode==='value')ep=Math.min(Math.round(ep*1.4),15);
+  if(ep>0)bd.push({l:'PER',v:ep,max:15,pos:true});
+  if(s.vol_r>=1.5)bd.push({l:'出来高急増',v:-20,max:20,pos:false});
+  return bd;
+}
+
+// ═══════════════════════════════════════
+// PROCESS
+// ═══════════════════════════════════════
+function processStocks(){
+  const minDiv=settings.mindiv||0;
+  const zoneFilter=settings.zone||'all';
+
+  let list=STOCKS.filter(s=>{
+    if(minDiv>0&&(s.dividend||0)<minDiv) return false;
+    return true;
+  });
+
+  processed=list.map(s=>{
+    const d25=dv(s.price,s.ma25);
+    const score = calcScore(s);
+    const zone=getZone(score);
+    const ma75d = s.ma75 ? dv(s.price, s.ma75) : 0;
+    const mc = s.market_cap_b||0;
+    const div = s.dividend||0;
+    let _type='neutral';
+    if(ma75d < -8) _type='falling';
+    else if(ma75d < -2 && mc >= 3000 && div >= 2.5) _type='value_dip';
+    else if(-5 <= ma75d && ma75d <= 3 && d25 < -1) _type='dip';
+    else if(ma75d > 0 && d25 > 0 && mc >= 1000) _type='momentum';
+    else if(ma75d >= -2 && d25 > 0) _type='bounce';
+    return{...s,name:NAME_JP[s.code]||s.name||s.code,d25,score,zone,_type,ma75d};
+  });
+
+  if(zoneFilter==='buy')processed=processed.filter(s=>s.zone.cls==='buy');
+  else if(zoneFilter==='buywatch')processed=processed.filter(s=>s.zone.cls!=='hold');
+
+  // ソート
+  processed.sort((a,b)=>{
+    let av=a[sortKey]??0, bv=b[sortKey]??0;
+    if(sortKey==='d25'){av=a.d25;bv=b.d25;}
+    return sortDir==='asc'?av-bv:bv-av;
+  });
+
+  // 履歴記録（非同期で後回し）
+  requestAnimationFrame(()=>{
+    const now=new Date();
+    const e={
+      date:`${now.getMonth()+1}/${now.getDate()} ${String(now.getHours()).padStart(2,'0')}:${String(now.getMinutes()).padStart(2,'0')}`,
+      mode:currentMode,count:processed.length,
+      top:processed[0]?.name||'—',topScore:processed[0]?.score||0
+    };
+    scanHistory.unshift(e);
+    scanHistory=scanHistory.slice(0,14);
+    try{localStorage.setItem('kbs_history',JSON.stringify(scanHistory));}catch(e){}
+  });
+}
+
+// ═══════════════════════════════════════
+// RENDER: HERO STATS
+// ═══════════════════════════════════════
+function renderHeroStats(){
+  const buyN=processed.filter(s=>s.zone.cls==='buy').length;
+  const topScore=processed.length?processed[0].score:'—';
+  const maxDiv=processed.length?Math.max(...processed.map(s=>s.dividend)).toFixed(1)+'%':'—';
+  document.getElementById('hsBuy').textContent=buyN+'件';
+  document.getElementById('hsTop').textContent=topScore+'点';
+  document.getElementById('hsDiv').textContent=maxDiv;
+  document.getElementById('hsTotal').textContent=STOCKS.length+'銘柄';
+}
+
+// ═══════════════════════════════════════
+// RENDER: MARKET PULSE
+// ═══════════════════════════════════════
+function renderPulse(){
+  const md=marketData;
+  const sign=v=>v>0?'+':'';
+  const dir=v=>v>0?'up':v<0?'dn':'neutral';
+  const chips=[
+    {l:'日経平均',v:md.nikkei_price?md.nikkei_price.toLocaleString():'—',c:md.nikkei_1d_chg!=null?sign(md.nikkei_1d_chg)+md.nikkei_1d_chg+'%':'—',d:dir(md.nikkei_1d_chg)},
+    {l:'NASDAQ',v:md.nasdaq_1d_chg!=null?sign(md.nasdaq_1d_chg)+md.nasdaq_1d_chg+'%':'—',c:'前日比',d:dir(md.nasdaq_1d_chg)},
+    {l:'ドル円',v:md.usdjpy||'—',c:'',d:'neutral'},
+    {l:'VIX',v:md.vix||'—',c:'',d:md.vix>25?'dn':md.vix<18?'up':'neutral'},
+    {l:'米10年債',v:md.us10y?md.us10y+'%':'—',c:'',d:'neutral'},
+    {l:'NYダウ',v:md.ny_dow?md.ny_dow.toLocaleString():'—',c:md.ny_dow_1d_chg!=null?sign(md.ny_dow_1d_chg)+md.ny_dow_1d_chg+'%':'—',d:dir(md.ny_dow_1d_chg)},
+    {l:'S&P500',v:md.sp500?md.sp500.toLocaleString():'—',c:md.sp500_1d_chg!=null?sign(md.sp500_1d_chg)+md.sp500_1d_chg+'%':'—',d:dir(md.sp500_1d_chg)},
+    {l:'原油WTI',v:md.wti_oil?'$'+md.wti_oil:'—',c:'',d:md.wti_oil>100?'dn':md.wti_oil<70?'up':'neutral'},
+  ];
+  document.getElementById('pulseBar').innerHTML=chips.map(c=>`
+    <div class="pc">
+      <div class="pc-l">${c.l}</div>
+      <div class="pc-v ${c.d}">${c.v}</div>
+      <div class="pc-c ${c.d}">${c.c}</div>
+    </div>`).join('');
+}
+
+
+// =======================================
+// RENDER: FOCUS
+// =======================================
+function renderFocus(){
+  var md=marketData;
+  var title='',body='',color='var(--green)';
+  if(md.vix&&md.vix>=28){title='\u26a0\ufe0f \u30ea\u30b9\u30af\u8b66\u6212';color='var(--dn)';body='VIX\u304c'+md.vix+'\u3002\u6050\u6016\u6307\u6570\u304c25\u8d85\u3048\u3002\u65b0\u898f\u8cfc\u5165\u306f\u63a7\u3048\u3081\u306b\u3002';}
+  else if(md.wti_oil&&md.wti_oil>=100){title='\ud83d\udee2 \u539f\u6cb9\u9ad8\u9a30';color='var(--amber)';body='\u539f\u6cb9$'+md.wti_oil+'\u3002\u30a8\u30cd\u30eb\u30ae\u30fc\u306b\u8ffd\u3044\u98a8\u3001\u81ea\u52d5\u8eca\u306b\u9006\u98a8\u3002';}
+  else if(md.nikkei_1d_chg&&md.nikkei_1d_chg<=-3){title='\ud83d\udcc9 \u6025\u843d';color='var(--dn)';body='\u65e5\u7d4c'+md.nikkei_1d_chg+'%\u3002\u30d1\u30cb\u30c3\u30af\u58f2\u308a\u7981\u7269\u3002';}
+  else if(md.nikkei_1d_chg&&md.nikkei_1d_chg>=2){title='\ud83d\udcc8 \u6025\u9a30';color='var(--up)';body='\u65e5\u7d4c+'+md.nikkei_1d_chg+'%\u3002\u30ea\u30d0\u30a6\u30f3\u30c9\u304b\u3002';}
+  else if(md.vix&&md.vix<16){title='\ud83d\udfe2 \u5e73\u7a4f';color='var(--green)';body='VIX'+md.vix+'\u3002\u5b89\u5b9a\u3002\u8cb7\u3044\u691c\u8a0e\u53ef\u3002';}
+  else if(md.vix&&md.vix>=20){title='\ud83d\udfe1 \u69d8子見';color='var(--amber)';body='VIX'+md.vix+'。警戒寄り。新規購入は慎重に。';}else{title='\ud83d\udcca \u901a\u5e38';color='var(--amber)';body='\u7279\u6bb5\u306e\u7570\u5e38\u306a\u3057\u3002';}
+  var mc=[];
+  if(md.nikkei_price)mc.push('\u65e5\u7d4c '+md.nikkei_price.toLocaleString());
+  if(md.vix)mc.push('VIX '+md.vix);
+  if(md.wti_oil)mc.push('\u539f\u6cb9 $'+md.wti_oil);
+  if(md.usdjpy)mc.push('\xa5/$ '+md.usdjpy);
+  if(md.us10y)mc.push('\u7c7310Y '+md.us10y+'%');
+  if(md.ny_dow)mc.push('NYDow '+md.ny_dow.toLocaleString());
+  if(md.sp500)mc.push('S&P '+md.sp500.toLocaleString());
+  var ms=mc.length?'<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px;">'+mc.map(function(m){return '<span style="background:var(--bg3);border:1px solid var(--border);border-radius:4px;padding:3px 8px;font-family:var(--fn);font-size:11px;color:var(--text)">'+m+'</span>';}).join('')+'</div>':'';
+  document.getElementById('focusBody').innerHTML='<div style="border-left:3px solid '+color+';padding-left:12px;"><div style="font-family:var(--fh);font-size:14px;font-weight:700;color:var(--text2);margin-bottom:6px;">'+title+'</div><div style="font-size:12px;color:var(--text);line-height:1.7;">'+body+'</div></div>'+ms;
+  document.getElementById('focusDate').textContent=marketData.updated_at||'';
+}
+var intelligenceData=null;
+async function loadIntelligence(){try{var r=await fetch('market_intelligence.json?t='+Date.now());if(r.ok)intelligenceData=await r.json();}catch(e){}}
+function renderNews(){
+  if(!intelligenceData){document.getElementById('newsBody').innerHTML='<div style="padding:14px;font-size:11px;color:var(--text3)">No data</div>';return;}
+  var items=[],sources=[{key:'nikkei_headlines',icon:'\ud83d\udcf0',name:'\u65e5\u7d4c'},{key:'kabutan_news',icon:'\ud83d\udcca',name:'\u682a\u63a2'},{key:'google_news',icon:'\ud83c\udf10',name:'Google'},{key:'tdnet_disclosures',icon:'\ud83d\udccb',name:'TDnet'}];
+  sources.forEach(function(s){(intelligenceData[s.key]||[]).slice(0,3).forEach(function(a){items.push({icon:s.icon,src:s.name,title:a.title||'',url:a.url||''});});});
+  items=items.slice(0,12);
+  if(!items.length){document.getElementById('newsBody').innerHTML='<div style="padding:14px;font-size:11px;color:var(--text3)">No news</div>';return;}
+  document.getElementById('newsBody').innerHTML=items.map(function(it){return '<a href="'+it.url+'" target="_blank" rel="noopener" style="display:flex;align-items:flex-start;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border);text-decoration:none;color:var(--text);"><span style="flex-shrink:0">'+it.icon+'</span><div><div style="font-size:12px;line-height:1.5;color:var(--text)">'+it.title+'</div><div style="font-size:9px;color:var(--text3);margin-top:2px">'+it.src+'</div></div></a>';}).join('');
+}
+var sentimentData=null;
+async function loadSentiment(){try{var r=await fetch('sentiment_latest.json?t='+Date.now());if(r.ok)sentimentData=await r.json();}catch(e){}}
+function renderSentiment(){
+  if(!sentimentData){(document.getElementById('sentimentBody')||{}).innerHTML='<div style="font-size:11px;color:var(--text3)">No data</div>';return;}
+  var sections=[{key:'macro',label:'\ud83c\udf0d \u30de\u30af\u30ed'},{key:'institutional',label:'\ud83c\udfe6 \u6a5f\u95a2'},{key:'retail',label:'\ud83d\udc64 \u500b\u4eba'}];
+  var html=sections.map(function(sec){
+    var words=sentimentData[sec.key]||[];
+    if(!words.length)return '';
+    var tags=words.slice(0,8).map(function(w){
+      var sz=w.size==='xl'?'14px':w.size==='lg'?'12px':w.size==='md'?'11px':'10px';
+      var clr=w.mood==='greed'?'var(--up)':w.mood==='fear'?'var(--dn)':'var(--amber)';
+      return '<span style="display:inline-block;padding:3px 8px;margin:2px;border-radius:4px;font-size:'+sz+';color:'+clr+';border:1px solid '+clr+';opacity:0.9;">'+w.word+'</span>';
+    }).join('');
+    return '<div style="margin-bottom:10px;"><div style="font-size:10px;color:var(--text3);margin-bottom:4px;">'+sec.label+'</div><div style="display:flex;flex-wrap:wrap;">'+tags+'</div></div>';
+  }).join('');
+  (document.getElementById('sentimentBody')||{}).innerHTML=html||'<div style="font-size:11px;color:var(--text3)">No data</div>';
+}
+
+// ═══════════════════════════════════════
+// RENDER: STANCE
+// ═══════════════════════════════════════
+function calcStanceScore(){
+  const md=marketData;
+  const buyN=processed.filter(s=>s.zone.cls==='buy').length;
+  const avgRsi=processed.length?(processed.reduce((a,s)=>a+s.rsi,0)/processed.length):50;
+  const avgD25=processed.length?(processed.reduce((a,s)=>a+s.d25,0)/processed.length):0;
+  const highDiv=processed.filter(s=>s.dividend>=4).length;
+  let axes={tech:1,macro:1,scan:0};
+
+  // 軸①テクニカル
+  let t=1;
+  if(md.nikkei_price&&md.nikkei_ma25){
+    if(md.nikkei_price>=md.nikkei_ma25)t++;else t--;
+  }
+  if(md.nikkei_1d_chg!=null){
+    if(md.nikkei_1d_chg>-1)t++;else if(md.nikkei_1d_chg<-1.5)t--;
+  }
+  if(md.vix){if(md.vix<20)t++;else if(md.vix>25)t--;}
+  if(md.usdjpy){if(md.usdjpy>=147)t++;else if(md.usdjpy<140)t--;}
+  axes.tech=Math.max(0,Math.min(t,3));
+
+  // 軸②マクロ
+  let m=1;
+  if(md.nasdaq_1d_chg!=null){
+    if(md.nasdaq_1d_chg>0.5)m++;else if(md.nasdaq_1d_chg<-1.5)m-=2;else if(md.nasdaq_1d_chg<0)m--;
+  }
+  if(md.us10y){if(md.us10y>=3.5&&md.us10y<=4.5)m++;else if(md.us10y>5)m--;}
+  if(md.geo_risk)m-=2;
+  if(md.rate_cut_flag)m++;
+  axes.macro=Math.max(0,Math.min(m,3));
+
+  // 軸③スキャン
+  let sc=0;
+  if(buyN>=5)sc+=2;else if(buyN>=3)sc+=1;
+  if(avgRsi<=35)sc++;else if(avgRsi<=42)sc+=0.5;
+  if(avgD25<=-4)sc++;
+  if(md.prev_buy_count!=null&&buyN>md.prev_buy_count)sc++;
+  axes.scan=Math.max(0,Math.min(Math.round(sc),3));
+
+  const total=axes.tech+axes.macro+axes.scan;
+  return{total,axes,buyN,watchN:processed.filter(s=>s.zone.cls==='watch').length,
+    avgRsi:avgRsi.toFixed(1),avgD25:avgD25.toFixed(1),highDiv};
+}
+
+function renderStance(){
+  const{total,axes,buyN,watchN,avgRsi,avgD25,highDiv}=calcStanceScore();
+  const now=new Date();
+  const days=['日','月','火','水','木','金','土'];
+  const md=marketData;
+  const hasMacro=dataSource==='real'&&md.nikkei_price;
+
+  let stance,icon,label,title,reason;
+  if(total>=7){
+    stance='bull';icon='🟢';label='強気 — 積極的に仕込める日';
+    title='今日は買いやすい地合い';
+    reason=hasMacro
+      ?`3軸スコア<strong>${total}/9点</strong>。日経${md.nikkei_1d_chg>0?'+':''}${md.nikkei_1d_chg}%・NASDAQ${md.nasdaq_1d_chg>0?'+':''}${md.nasdaq_1d_chg}%と外部環境も安定。買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>で積極的に検討できる局面。`
+      :`買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>、平均25MA乖離<strong>${avgD25}%</strong>。数値が揃っており積極的に検討できる局面です。`;
+  }else if(total>=4){
+    stance='neutral';icon='🟡';label='中立 — 厳選して仕込む日';
+    title='今日は銘柄を選ぶ日';
+    reason=hasMacro
+      ?`3軸スコア<strong>${total}/9点</strong>。買い圏<strong>${buyN}銘柄</strong>、注意圏<strong>${watchN}銘柄</strong>。スコア上位に絞れば仕込みやすい銘柄が存在します。`
+      :`買い圏<strong>${buyN}銘柄</strong>、平均RSI<strong>${avgRsi}</strong>。スコア60点以上に絞って慎重に選別を。`;
+  }else{
+    stance='bear';icon='🔴';label='弱気 — 様子見が無難な日';
+    title='今日は無理して買わない日';
+    reason=hasMacro
+      ?`3軸スコア<strong>${total}/9点</strong>。${md.nasdaq_1d_chg<-1?`NASDAQ${md.nasdaq_1d_chg}%と米国株が軟調。`:''}買い圏<strong>${buyN}銘柄</strong>と少なく、十分な押し目が形成されていません。`
+      :`買い圏<strong>${buyN}銘柄</strong>、平均25MA乖離<strong>${avgD25}%</strong>と押し目が浅い。次の明確な下落局面を待つのが賢明です。`;
+  }
+
+  const axisBar=(name,score,ico)=>`
+    <div class="axis-row">
+      <div class="axis-name">${ico} ${name}</div>
+      <div class="axis-bar">
+        ${[0,1,2].map(i=>`<div class="axis-seg ${i<score?'on':''} ${score===0?'zero':score>=2?'hi':'mid'}"></div>`).join('')}
+      </div>
+      <div class="axis-score">${score}/3</div>
+    </div>`;
+
+  const chips=[
+    {label:'買い圏',val:buyN+'銘柄',cls:buyN>=5?'buy':buyN>=3?'warn':''},
+    {label:'平均RSI',val:avgRsi,cls:parseFloat(avgRsi)<=35?'buy':parseFloat(avgRsi)<=45?'warn':''},
+    {label:'MA乖離平均',val:avgD25+'%',cls:parseFloat(avgD25)<=-4?'buy':parseFloat(avgD25)<=-2?'warn':''},
+    {label:'高配当4%超',val:highDiv+'件',cls:highDiv>=3?'buy':highDiv>=1?'warn':''},
+  ];
+
+  document.getElementById('stanceBox').innerHTML=`
+    <div class="stance ${stance} fadein">
+      <div class="stance-head">
+        <div>
+          <div class="stance-title">${title}</div>
+          <div class="stance-date">${now.getFullYear()}年${now.getMonth()+1}月${now.getDate()}日（${days[now.getDay()]}）</div>
+        </div>
+        <div class="stance-badge ${stance}">${icon} ${label}</div>
+      </div>
+      <div class="stance-reason">${reason}</div>
+      <div class="stance-axes">
+        ${axisBar('テクニカル',axes.tech,'📊')}
+        ${axisBar('マクロ',axes.macro,'🌏')}
+        ${axisBar('スキャン結果',axes.scan,'🔍')}
+        <div class="axis-total">総合スコア ${total} / 9点</div>
+      </div>
+      <div class="stance-chips">
+        ${chips.map(c=>`<div class="stance-chip ${c.cls}"><div class="stance-chip-val">${c.val}</div><div class="stance-chip-label">${c.label}</div></div>`).join('')}
+      </div>
+    </div>`;
+}
+
+// ═══════════════════════════════════════
+// 3-TAB SYSTEM: セクター / 上昇 / 割安
+// ═══════════════════════════════════════
+function setTop5Tab(tab){
+  currentTab=tab;
+  activeSector=null;
+  document.querySelectorAll('.t5-tab').forEach(t=>t.classList.remove('active'));
+  const tabEl={sector:'t5TabSec',mom:'t5TabMom',dip:'t5TabDip'}[tab];
+  if(tabEl)document.getElementById(tabEl).classList.add('active');
+  // セクタータブラベルをリセット
+  document.getElementById('t5TabSec').textContent='📊 セクター';
+  renderTop10();
+  gaEvent('tab_changed',{tab});
+}
+
+function renderTop10(){
+  if(currentTab==='sector'){
+    if(activeSector) showSectorStocks(activeSector);
+    else renderSectorTrend();
+  } else if(currentTab==='mom'){
+    // 上昇トレンド or 75日線上の大型株
+    const moms=processed.filter(s=>{
+      const m75=s.ma75d||0;
+      return (m75 > -2 && s.d25 > -2 && (s.market_cap_b||0)>=500 && s.score>=20);
+    }).sort((a,b)=>b.score-a.score).slice(0,10);
+    renderTop10Items(moms,'上昇中 TOP10');
+  } else {
+    // 割安：配当2%以上の押し目銘柄
+    const dips=processed.filter(s=>{
+      return (s.d25 < -2 && (s.dividend||0)>=2.0 && (s.market_cap_b||0)>=500 && s.score>=20);
+    }).sort((a,b)=>b.score-a.score).slice(0,10);
+    renderTop10Items(dips,'割安チャンス TOP10');
+  }
+}
+
+function renderSectorTrend(){
+  if(!document.getElementById("sectorBody")) return;
+  const body=document.getElementById('top5Body');
+  const SEC_MAP={
+    '銀行':   {jp:'銀行',ico:'🏦'},
+    '証券':   {jp:'証券',ico:'📈'},
+    '保険':   {jp:'保険',ico:'🛡️'},
+    '商社':   {jp:'商社',ico:'🌐'},
+    '通信':   {jp:'通信',ico:'📡'},
+    '自動車': {jp:'自動車',ico:'🚗'},
+    '電力':   {jp:'電力',ico:'⚡'},
+    'ガス':   {jp:'ガス',ico:'🔥'},
+    '鉄鋼':   {jp:'鉄鋼',ico:'⚙️'},
+    '石油':   {jp:'石油',ico:'⛽'},
+    '非鉄':   {jp:'非鉄金属',ico:'🔩'},
+    '建設':   {jp:'建設',ico:'🏗️'},
+    '不動産': {jp:'不動産',ico:'🏠'},
+    '食品':   {jp:'食品',ico:'🍙'},
+    '医薬品': {jp:'医薬品',ico:'💊'},
+    '化学':   {jp:'化学',ico:'🧪'},
+    '機械':   {jp:'機械',ico:'🏭'},
+    '電機':   {jp:'電機',ico:'💻'},
+    '精密':   {jp:'精密機器',ico:'🔬'},
+    'IT':     {jp:'IT',ico:'🖥️'},
+    'サービス':{jp:'サービス',ico:'🏢'},
+    'メディア':{jp:'メディア',ico:'📺'},
+    '運輸':   {jp:'運輸',ico:'🚃'},
+    '海運':   {jp:'海運',ico:'🚢'},
+    'ゴム':   {jp:'ゴム',ico:'🛞'},
+    'リース': {jp:'リース',ico:'💳'},
+    '小売':   {jp:'小売',ico:'🛒'},
+    'その他': {jp:'その他',ico:'📊'},
+  };
+
+  // セクター集計：買い圏の銘柄数で並べる
+  const secMap={};
+  processed.forEach(s=>{
+    const sec=s.sector||'その他';
+    if(!secMap[sec])secMap[sec]={count:0,buyCount:0,topScore:0,topName:''};
+    secMap[sec].count++;
+    if(s.zone&&s.zone.cls==='buy')secMap[sec].buyCount++;
+    if(s.score>secMap[sec].topScore){secMap[sec].topScore=s.score;secMap[sec].topName=s.name||'';}
+  });
+
+  const sorted=Object.entries(secMap)
+    .map(([name,data])=>({name,...data,
+      jp:(SEC_MAP[name]||{}).jp||name,
+      ico:(SEC_MAP[name]||{}).ico||'📊'
+    }))
+    .filter(d=>d.count>=3)
+    .sort((a,b)=>b.buyCount-a.buyCount || b.topScore-a.topScore);
+
+  if(!sorted.length){
+    body.innerHTML='<div style="padding:20px;text-align:center;font-size:12px;color:var(--text3)">セクターデータなし</div>';
+    return;
+  }
+
+  body.innerHTML=`<div class="sec-grid fadein">${sorted.map(d=>{
+    const sub=d.buyCount>0?`${d.buyCount}銘柄が買い圏`:`${d.count}銘柄`;
+    return`<div class="sec-tile" onclick="showSectorStocks('${d.name}')">
+      <div class="sec-tile-ico">${d.ico}</div>
+      <div class="sec-tile-name">${d.jp}</div>
+      <div class="sec-tile-sub">${sub}</div>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+function showSectorStocks(secName){
+  activeSector=secName;
+  const SEC_JP={'Technology':'テクノロジー','Financial Services':'金融','Communication Services':'通信',
+    'Consumer Cyclical':'消費（景気敏感）','Industrials':'産業・資本財','Consumer Defensive':'消費（安定）',
+    'Energy':'エネルギー','Basic Materials':'素材','Healthcare':'ヘルスケア','Utilities':'公益',
+    'Real Estate':'不動産'};
+  const jpName=SEC_JP[secName]||secName;
+  document.getElementById('t5TabSec').textContent=jpName+' ✕';
+  const stocks=processed.filter(s=>(s.sector||'')==secName).sort((a,b)=>b.score-a.score).slice(0,10);
+  const body=document.getElementById('top5Body');
+  const backBtn=`<div class="sec-back-btn" onclick="activeSector=null;setTop5Tab('sector')">← セクター一覧に戻る</div>`;
+  if(!stocks.length){
+    body.innerHTML=backBtn+'<div style="padding:16px;text-align:center;font-size:11px;color:var(--text3)">該当なし</div>';
+    return;
+  }
+  body.innerHTML=backBtn+`<div class="top10-cards fadein">${stocks.map((s,i)=>renderCard(s,i+1)).join('')}</div>`;
+  // Draw sparklines
+  stocks.forEach(s=>{
+    if(s.closes_60d&&s.closes_60d.length>10){
+      const el=body.querySelector(`[data-spark="${s.code}"]`);
+      if(el)drawSpark(el,s.closes_60d,120,44);
+    }
+  });
+  if(expandedCode){
+    setTimeout(()=>{
+      const s=stocks.find(x=>x.code===expandedCode);
+      if(s&&s.closes_60d&&s.closes_60d.length>10){
+        const el=document.querySelector(`[data-dchart="${expandedCode}"]`);
+        if(el)drawDetailChart(el,s.closes_60d,s.ma25,s.ma75);
+      }
+    },50);
+  }
+}
+
+function toggleExpand(code){
+  expandedCode=expandedCode===code?null:code;
+  renderTop10();
+  if(expandedCode){
+    setTimeout(()=>{
+      const el=document.querySelector(`[data-dchart="${code}"]`);
+      if(el)el.scrollIntoView({behavior:'smooth',block:'nearest'});
+    },100);
+    gaEvent('detail_open',{code});
+  }
+}
+
+function buildExpand(s){
+  const hasSpark=s.closes_60d&&s.closes_60d.length>10;
+  const ma75pct=Math.max(5,Math.min(95,50+(s.ma75d||0)*3));
+  const ma25pct=Math.max(5,Math.min(95,50+(s.d25||0)*3));
+  const ma75col=(s.ma75d||0)>=0?'var(--dn)':'var(--up)';
+  const ma25col=(s.d25||0)>=0?'var(--dn)':'var(--up)';
+  let signal='';
+  if(s._type==='value_dip'){
+    signal=`<strong>💎 大型高配当株の逆張りチャンス。</strong>一時的な下落で割安に。配当${(s.dividend||0).toFixed(1)}%をもらいながら回復を待てる局面。`;
+  }else if(s._type==='dip'){
+    signal=`長期では上昇トレンド。短期的に調整中で<strong>買いやすい価格帯に接近中</strong>。`;
+  }else if(s._type==='momentum'){
+    signal=`短期・長期ともに上昇中。<strong>勢いに乗っている状態</strong>。高値掴みに注意しつつ、流れに乗るタイミング。`;
+  }else{
+    signal=`現在は方向感が読みにくい状況。無理せず様子見がおすすめ。`;
+  }
+  let ma75tag='';
+  if((s.ma75d||99)>=0&&(s.ma75d||99)<=3)ma75tag='<span class="d-ma-tag near">接近中!</span>';
+
+  return `<div class="t5-expand">
+  <div class="d-grid">
+    <div>
+      <div class="d-sec-ttl">📊 値動きチャート（60日）</div>
+      ${hasSpark?`<div class="d-chart-box">
+        <svg class="d-chart-svg" viewBox="0 0 400 160" overflow="hidden" data-dchart="${s.code}"></svg>
+      </div>
+      <div style="display:flex;gap:14px;padding:10px 0 2px;flex-wrap:wrap;font-size:11px;color:var(--text)">
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#1A1A1A"></div>株価 <b>¥${(s.price||0).toLocaleString()}</b></div>
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#F59E0B"></div>25日平均 <b style="color:#F59E0B">¥${(s.ma25||0).toLocaleString()}</b></div>
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:10px;height:10px;border-radius:50%;background:#059669"></div>75日平均 <b style="color:#059669">¥${(s.ma75||0).toLocaleString()}</b></div>
+      </div>
+      `:`<div style="padding:12px;text-align:center;background:var(--bg2);border-radius:8px;border:1px solid var(--border);font-size:12px;color:var(--text)">株価 ¥${(s.price||0).toLocaleString()} / 25日平均 ¥${(s.ma25||0).toLocaleString()} / 75日平均 ¥${(s.ma75||0).toLocaleString()}</div>`}
+      <div class="d-ma">
+        <div style="font-size:10px;font-weight:700;color:var(--text2);margin-bottom:4px">📏 今の株価の位置</div>
+        <div class="d-ma-row">
+          <div class="d-ma-lbl">25日平均との差</div>
+          <div class="d-ma-bar"><div class="d-ma-ctr"></div><div class="d-ma-dot" style="left:${ma25pct}%;background:${ma25col}"></div></div>
+          <div class="d-ma-val ${(s.d25||0)>=0?'up':'dn'}">${(s.d25||0)>=0?'+':''}${(s.d25||0).toFixed(1)}%</div>
+        </div>
+        <div class="d-ma-row">
+          <div class="d-ma-lbl">75日平均との差</div>
+          <div class="d-ma-bar"><div class="d-ma-ctr"></div><div class="d-ma-dot" style="left:${ma75pct}%;background:${ma75col}"></div></div>
+          <div class="d-ma-val ${(s.ma75d||0)>=0?'up':'dn'}">${(s.ma75d||0)>=0?'+':''}${(s.ma75d||0).toFixed(1)}%</div>
+          ${ma75tag}
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="d-sec-ttl">📈 この銘柄のポイント</div>
+      <div style="padding:10px 14px;margin-bottom:10px;background:rgba(0,135,90,0.06);border-radius:8px;border:1px solid rgba(0,135,90,0.15);font-size:13px;color:var(--text)">
+        💰 購入に必要な金額 → <b style="font-size:16px;color:var(--green)">約${((s.price||0)*100)>=10000?Math.round((s.price||0)*100/10000)+'万':Math.round((s.price||0)*100/1000)+'千'}円</b><span style="font-size:10px;color:var(--text3)">（100株 × ¥${(s.price||0).toLocaleString()}）</span>
+        ${(s.dividend||0)>0?`<br>📦 年間配当金 → <b style="font-size:16px;color:var(--green)">約¥${Math.round((s.price||0)*100*(s.dividend||0)/100).toLocaleString()}</b><span style="font-size:10px;color:var(--text3)">（税引前・100株保有時）</span>`:''}
+      </div>
+      <div class="d-cards">
+        <div class="d-card"><b>${(s.dividend||0).toFixed(1)}%</b><small>配当利回り</small></div>
+        <div class="d-card"><b>${(s.pbr||0).toFixed(2)}倍</b><small>PBR(割安度)</small></div>
+        <div class="d-card"><b>${(s.per||0)>0?(s.per||0).toFixed(0)+'倍':'—'}</b><small>PER</small></div>
+      </div>
+      <div class="d-signal"><b>📝 かぶのすけ（AI）の判定</b><p>${signal}</p></div>
+      <div class="d-btns">
+        <a class="d-btn" href="https://finance.yahoo.co.jp/quote/${s.code}.T" target="_blank" rel="noopener" onclick="event.stopPropagation()">Yahoo!ファイナンス →</a>
+        <a class="d-btn" href="https://kabutan.jp/stock/?code=${s.code}" target="_blank" rel="noopener" onclick="event.stopPropagation()">株探で詳しく →</a>
+      </div>
+    </div>
+  </div></div>`;
+}
+
+function renderCard(s,rank){
+  const sc=s.score>=60?'hi':s.score>=40?'mid':'lo';
+  const divBadge=(s.dividend||0)>=2.5?`<span class="top10-badge div">💰${s.dividend}%</span>`:'';
+  const momBadge=s._type==='momentum'?`<span class="top10-badge mom">↗上昇</span>`:'';
+  const mc=s.market_cap_b?(s.market_cap_b>=10000?(s.market_cap_b/10000).toFixed(1)+'兆':Math.round(s.market_cap_b)+'億'):'';
+  const d75=s.ma75d!=null?`75日線${s.ma75d>0?'+':''}${s.ma75d.toFixed(1)}%`:'';
+  const hasSpark=s.closes_60d&&s.closes_60d.length>10;
+  const isOpen=expandedCode===s.code;
+  return`<div class="top10-card${isOpen?' expanded':''}" onclick="toggleExpand('${s.code}')" style="${isOpen?'border-color:var(--orange)':''}">
+    <div class="top10-rank">${rank}</div>
+    <div class="top10-info">
+      <div class="top10-name">${s.name}</div>
+      <div class="top10-meta">${s.code} ・ ${s.sector||''} ・ ${mc}${d75?' ・ '+d75:''}</div>
+    </div>
+    ${hasSpark?`<svg class="t5-spark" viewBox="0 0 120 44" data-spark="${s.code}"></svg>`:''}
+    <div class="top10-right">
+      <div class="top10-score ${sc}">${s.score}pt</div>
+      ${divBadge}${momBadge}
+      <div style="font-size:9px;color:var(--text3);margin-top:2px">${isOpen?'▲ 閉じる':'▼ 詳細'}</div>
+    </div>
+  </div>${isOpen?buildExpand(s):''}`;
+}
+
+function renderTop10Items(items,title){
+  const body=document.getElementById('top5Body');
+  if(!items.length){
+    body.innerHTML=`<div style="padding:20px;text-align:center;font-size:12px;color:var(--text3)">該当する銘柄がありません</div>`;
+    return;
+  }
+  body.innerHTML=`<div class="top10-cards fadein">${items.map((s,i)=>renderCard(s,i+1)).join('')}</div>`;
+  // Draw sparklines
+  items.forEach(s=>{
+    if(s.closes_60d&&s.closes_60d.length>10){
+      const el=body.querySelector(`[data-spark="${s.code}"]`);
+      if(el)drawSpark(el,s.closes_60d,120,44);
+    }
+  });
+  // Draw detail chart if expanded
+  if(expandedCode){
+    setTimeout(()=>{
+      const s=items.find(x=>x.code===expandedCode);
+      if(s&&s.closes_60d&&s.closes_60d.length>10){
+        const el=document.querySelector(`[data-dchart="${expandedCode}"]`);
+        if(el)drawDetailChart(el,s.closes_60d,s.ma25,s.ma75);
+      }
+    },50);
+  }
+}
+
+// ═══════════════════════════════════════
+// PORTFOLIO DIARY
+// ═══════════════════════════════════════
+async function loadPortfolio(){
+  try{
+    const res=await fetch('portfolio.json?t='+Date.now());
+    if(res.ok)portfolioData=await res.json();
+  }catch(e){console.log('portfolio.json not found');}
+  renderPortfolio();
+}
+
+function renderPortfolio(){
+  const body=document.getElementById('portfolioBody');
+  if(!body)return;
+  if(!portfolioData||!portfolioData.daily_nav||portfolioData.daily_nav.length<=1){
+    body.innerHTML=`<div style="padding:20px;text-align:center">
+      <div style="font-size:32px;margin-bottom:8px">🚀</div>
+      <div style="font-size:13px;font-weight:700;color:var(--text1);margin-bottom:4px">1000万円で運用開始</div>
+      <div style="font-size:11px;color:var(--text3);margin-bottom:12px">AIがスコアに基づいて自動売買。毎日更新します。</div>
+      <a class="pf-note-link" href="https://note.com/kabunosuke_navi" target="_blank" rel="noopener">📝 投資日記をnoteで読む →</a>
+    </div>`;
+    return;
+  }
+  const pf=portfolioData;
+  const nav=pf.daily_nav[pf.daily_nav.length-1];
+  const currentNav=nav.nav;
+  const pnl=currentNav-pf.initial_capital;
+  const pnlPct=(pnl/pf.initial_capital*100).toFixed(2);
+  const dayCount=pf.daily_nav.length;
+  const posCount=(pf.positions||[]).length;
+  const cashPct=Math.round(pf.cash/currentNav*100);
+  const stockPct=100-cashPct;
+  const pnlCls=pnl>=0?'up':'dn';
+  const pnlSign=pnl>=0?'+':'';
+
+  const holdingsHtml=posCount
+    ?(pf.positions||[]).map(p=>{
+        const pc=(p.pnl_pct||0)>=0?'up':'dn';
+        const ps=(p.pnl_pct||0)>=0?'+':'';
+        return`<div class="pf-hold">
+          <div style="flex:1"><div class="pf-hold-name">${p.name}</div><div style="font-size:10px;color:var(--text3)">${p.code} ・ ${p.shares}株</div></div>
+          <div class="pf-hold-pnl ${pc}">${ps}${(p.pnl_pct||0).toFixed(1)}%</div>
+        </div>`;}).join('')
+    :'<div style="font-size:11px;color:var(--text3);padding:4px 0">現金待機中 🔍</div>';
+
+  let chartHtml='';
+  if(pf.daily_nav.length>=3){
+    const vals=pf.daily_nav.map(d=>d.nav);
+    const mn=Math.min(...vals),mx=Math.max(...vals),rng=mx-mn||1;
+    const w=280,h=40;
+    const pts=vals.map((v,i)=>`${(i/(vals.length-1))*w},${h-((v-mn)/rng)*h*0.8-h*0.1}`).join(' ');
+    const clr=vals[vals.length-1]>=pf.initial_capital?'var(--dn)':'var(--up)';
+    chartHtml=`<svg viewBox="0 0 ${w} ${h}" style="width:100%;height:40px;margin:6px 0">
+      <line x1="0" y1="${h-((pf.initial_capital-mn)/rng)*h*0.8-h*0.1}" x2="${w}" y2="${h-((pf.initial_capital-mn)/rng)*h*0.8-h*0.1}" stroke="var(--text3)" stroke-dasharray="3,3" stroke-width="0.5" opacity="0.5"/>
+      <polyline points="${pts}" fill="none" stroke="${clr}" stroke-width="1.5"/>
+    </svg>`;
+  }
+
+  body.innerHTML=`
+    <div class="pf-hero"><div class="pf-nav">¥${currentNav.toLocaleString()}</div><div class="pf-pnl ${pnlCls}">${pnlSign}${pnlPct}%</div><div class="pf-day">Day ${dayCount}</div></div>
+    <div class="pf-bars"><div class="pf-bar cash" style="flex:${cashPct}">💴 現金 ${cashPct}%</div>${posCount?`<div class="pf-bar stock" style="flex:${stockPct}">📈 株式 ${stockPct}%</div>`:''}</div>
+    ${chartHtml}
+    <div style="font-size:11px;font-weight:700;color:var(--text2);margin:8px 0 4px">📋 保有 ${posCount}銘柄</div>
+    <div class="pf-holdings">${holdingsHtml}</div>
+    <a class="pf-note-link" href="https://note.com/kabunosuke_navi" target="_blank" rel="noopener">📝 投資日記をnoteで読む →</a>
+    <div style="font-size:9px;color:var(--text3);margin-top:8px;text-align:center">※仮想投資です。実際の売買ではありません。</div>`;
+}
+
+// ═══════════════════════════════════════
+// FILTER & MODE
+// ═══════════════════════════════════════
+function setMode(m,el){
+  currentMode=m;
+  document.querySelectorAll('.filter-tab[id^="mode-"]').forEach(t=>t.classList.remove('active'));
+  if(el)el.classList.add('active');
+  document.querySelectorAll('#set-mode .setting-opt').forEach(o=>{
+    o.classList.toggle('active',o.dataset.val===m);
+  });
+  run();
+  gaEvent('mode_changed',{mode:m});
+}
+
+
+// ═══════════════════════════════════════
+// SETTINGS
+// ═══════════════════════════════════════
+function openSettings(){
+  // 現在の設定を反映
+  document.querySelectorAll('#set-mode .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===settings.mode));
+  document.querySelectorAll('#set-count .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===String(settings.count)));
+  document.querySelectorAll('#set-mindiv .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===String(settings.mindiv)));
+  document.querySelectorAll('#set-zone .setting-opt').forEach(o=>o.classList.toggle('active',o.dataset.val===settings.zone));
+  document.getElementById('settingsOverlay').classList.add('open');
+  gaEvent('click_settings');
+}
+function closeSettingsBg(e){if(e.target===document.getElementById('settingsOverlay'))document.getElementById('settingsOverlay').classList.remove('open');}
+
+function selectSettingOpt(el,group){
+  document.querySelectorAll(`#set-${group} .setting-opt`).forEach(o=>o.classList.remove('active'));
+  el.classList.add('active');
+}
+
+function saveSettings(){
+  settings.mode=document.querySelector('#set-mode .setting-opt.active')?.dataset.val||'dividend';
+  settings.count=parseInt(document.querySelector('#set-count .setting-opt.active')?.dataset.val||'30');
+  settings.mindiv=parseFloat(document.querySelector('#set-mindiv .setting-opt.active')?.dataset.val||'0');
+  settings.zone=document.querySelector('#set-zone .setting-opt.active')?.dataset.val||'all';
+  try{localStorage.setItem('kbs_settings',JSON.stringify(settings));}catch(e){}
+
+  currentMode=settings.mode;
+  dispCount=settings.count;
+
+  // フィルタータブ同期
+  document.querySelectorAll('.filter-tab[id^="mode-"]').forEach(t=>t.classList.remove('active'));
+  const mt=document.getElementById('mode-'+currentMode);if(mt)mt.classList.add('active');
+  document.querySelectorAll('.filter-tab[id^="disp-"]').forEach(t=>t.classList.remove('active'));
+  const cnt=dispCount>=999?'all':String(dispCount);
+  const dt=document.getElementById('disp-'+cnt);if(dt)dt.classList.add('active');
+
+  document.getElementById('settingsOverlay').classList.remove('open');
+  run();
+  gaEvent('change_filter',settings);
+}
+
+// ═══════════════════════════════════════
+// WATCHLIST
+// ═══════════════════════════════════════
+function toggleFav(code){
+  const adding=!watchlist.includes(code);
+  if(adding){
+    watchlist.push(code);
+    const s=processed.find(x=>x.code===code);
+    gaEvent('watchlist_add',{stock_code:code,score:s?.score||0});
+  }else{
+    watchlist=watchlist.filter(c=>c!==code);
+    gaEvent('watchlist_remove',{stock_code:code});
+  }
+  try{localStorage.setItem('kbs_watch',JSON.stringify(watchlist));}catch(e){}
+  updateWatchCount();
+  // 再描画
+  renderWatchlist();
+}
+
+function updateWatchCount(){
+  const el=document.getElementById('watchCount');
+  el.textContent=watchlist.length;
+  el.classList.toggle('show',watchlist.length>0);
+}
+
+function renderWatchlist(){
+  updateWatchCount();
+  const el=document.getElementById('watchlistBody');
+  if(!watchlist.length){
+    el.innerHTML='<div class="watch-empty">ウォッチ登録した銘柄がここに表示されます。<br>銘柄行をクリックして詳細を開き「ウォッチに追加」から登録できます。</div>';
+    return;
+  }
+  el.innerHTML=`<div class="watch-list">${watchlist.map(code=>{
+    const s=STOCKS.find(x=>x.code===code);if(!s)return'';
+    const score=calcScore(s);
+    const sc=score>=60?'hi':score>=35?'md':'lo';
+    const d25=dv(s.price,s.ma25);
+    return`<div class="watch-row" onclick="window.open('https://finance.yahoo.co.jp/quote/${code}.T','_blank')">
+      <div class="watch-code">${code}</div>
+      <div class="watch-name">${s.name}</div>
+      <div style="text-align:right">
+        <div class="watch-score ${sc}">${score}点</div>
+        <div style="font-size:10px;color:var(--text3)">${d25>0?'+':''}${d25}%</div>
+      </div>
+      <button class="watch-remove" onclick="event.stopPropagation();toggleFav('${code}')">✕</button>
+    </div>`;
+  }).join('')}</div>`;
+}
+
+function renderHistory(){
+  const el=document.getElementById('historyBody');
+  const modeNames={dividend:'高配当',value:'バリュー',rebound:'押し目'};
+  if(!scanHistory.length){
+    el.innerHTML='<div class="watch-empty">スキャン履歴がここに表示されます</div>';
+    return;
+  }
+  el.innerHTML=`<table class="hist-table">
+    <tr><th>日時</th><th>モード</th><th>件数</th><th>1位銘柄</th></tr>
+    ${scanHistory.slice(0,7).map(h=>`<tr>
+      <td>${h.date}</td><td>${modeNames[h.mode]||h.mode}</td>
+      <td>${h.count}件</td><td>${h.top}</td>
+    </tr>`).join('')}
+  </table>`;
+}
+
+// ═══════════════════════════════════════
+// TABS
+// ═══════════════════════════════════════
+function switchTab(tab){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('active'));
+  document.getElementById('panel-'+tab).classList.add('active');
+  const n=document.getElementById('nav-'+tab);if(n)n.classList.add('active');
+  if(tab==='watch'){renderWatchlist();renderHistory();}
+  gaEvent('tab_switched',{tab});
+}
+
+// ═══════════════════════════════════════
+// MODAL
+// ═══════════════════════════════════════
+function openLogicModal(){document.getElementById('logicModal').classList.add('open');}
+function closeLogicModal(e){if(!e||e.target===document.getElementById('logicModal'))document.getElementById('logicModal').classList.remove('open');}
+
+// ═══════════════════════════════════════
+// DATA LOAD
+// ═══════════════════════════════════════
+async function loadRealData(){
+  try{
+    const r=await fetch('stocks_data.json?t='+Date.now());
+    if(!r.ok)throw new Error('fetch failed');
+    const j=await r.json();
+    if(j.stocks&&j.stocks.length>0){
+      STOCKS=j.stocks.map(s=>{
+        // 配当利回りサニティチェック（yfinanceの返り値ブレ対応）
+        if(s.dividend>20) s.dividend=s.dividend>100?Math.round(s.dividend/100*100)/100:0;
+        return s;
+      });
+      dataSource='real';
+      // 市場データ
+      const mFields=['nikkei_price','nikkei_ma25','nikkei_1d_chg','nasdaq_1d_chg',
+                     'vix','usdjpy','us10y','geo_risk','rate_cut_flag','prev_buy_count'];
+      mFields.forEach(k=>{if(j[k]!==undefined)marketData[k]=j[k];});
+      if(j.updated_at)marketData.updated_at=j.updated_at;
+      if(j.vol_ranking&&j.vol_ranking.length)volRankingData=j.vol_ranking;
+      if(j.trend_ranking&&j.trend_ranking.length)trendRankingData=j.trend_ranking;
+      if(j.sector_scores)sectorScoresData=j.sector_scores;
+      // 信頼バー
+      if(document.getElementById('trustText')) document.getElementById('trustText').innerHTML=`<span class="hi">${j.updated_at}</span> 更新 · ${j.total}銘柄スキャン済み`;
+      document.getElementById('lastUpdate').textContent='📡 '+j.updated_at+' 更新';
+      if(document.getElementById('trustDot')) document.getElementById('trustDot').style.background='var(--green)';
+      if(document.getElementById('trustBanner')) document.getElementById('trustBanner').style.borderLeftColor='var(--green)';
+      (document.getElementById('totalCountBadge')||{}).textContent=j.total+'銘柄';
+      document.getElementById('heroEyebrow').innerHTML='<span class="hero-dot"></span>📡 実データ読込済み — 押し目 × 高配当 — 毎朝8:30自動更新';
+    }else throw new Error('no stocks');
+  }catch{
+    dataSource='sample';
+    STOCKS=[...SAMPLE_STOCKS];
+    if(document.getElementById('trustText')) if(document.getElementById('trustText')) document.getElementById('trustText').innerHTML='<span class="warn">サンプルデータ表示中</span> — 実データは毎朝8:30更新';
+    if(document.getElementById('trustDot')) document.getElementById('trustDot').style.background='var(--amber)';
+    if(document.getElementById('trustBanner')) document.getElementById('trustBanner').style.borderLeftColor='var(--amber)';
+  }
+}
+
+// ═══════════════════════════════════════
+// RUN
+// ═══════════════════════════════════════
+function run(){
+  processStocks();
+  renderHeroStats();
+  renderPulse();
+  renderTop10();
+  requestAnimationFrame(()=>{
+    renderStance();
+  });
+  gaEvent('scan_executed',{mode:currentMode,data_source:dataSource});
+}
+
+
+// ═══════════════════════════════════════
+// 4つの問い + かぶのすけ画像切り替え
+// ═══════════════════════════════════════
+async function loadQuestions(){
+  try{
+    const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/stocks_data.json?t='+Date.now());
+    if(!res.ok) return;
+    const data=await res.json();
+    const stocks=data.stocks||[];
+
+    // 4スコアでTOP5を表示
+    const themes=[
+      {key:'score',prefix:'qDividend',label:'高配当',filter:s=>s.dividend>=3},
+      {key:'ai_score',prefix:'qAi',label:'AI',filter:s=>s.ai_score>=30},
+      {key:'kokusaku_score',prefix:'qKokusaku',label:'国策',filter:s=>s.kokusaku_score>=25},
+      {key:'trend_score',prefix:'qTrend',label:'トレンド',filter:s=>s.trend_score>=30}
+    ];
+
+    themes.forEach(t=>{
+      const filtered=stocks.filter(t.filter).sort((a,b)=>(b[t.key]||0)-(a[t.key]||0));
+      const countEl=document.getElementById(t.prefix+'Count');
+      if(countEl) countEl.textContent=filtered.length+'銘柄';
+      const recEl=document.getElementById(t.prefix+'Rec');
+      if(recEl && filtered.length>0){
+        const top=filtered[0];
+        recEl.textContent='かぶ子の推し：'+top.name+'（'+t.label+'スコア:'+top[t.key]+')';
+      }
+    });
+
+    // かぶのすけ画像切り替え
+    const vix=data.vix||25;
+    const score=Math.round(((data.nikkei_1d_chg||0)>0?1:0)+((vix<20)?2:(vix<28)?1:0)+((stocks.filter(s=>s.score>=60).length>=10)?3:2));
+    const img=document.getElementById('kabunosukeImg');
+    const comment=document.getElementById('kabunosukeComment');
+    if(img&&comment){
+      if(vix>=28||score<=3){
+        img.src='https://raw.githubusercontent.com/maemura/oshime/main/images/kn_alert.png';
+        comment.textContent='VIX'+vix.toFixed(0)+'…怖いですけど、ルールに従います';
+      }else if(vix<=20&&score>=7){
+        img.src='https://raw.githubusercontent.com/maemura/oshime/main/images/kn_positive.png';
+        comment.textContent='今日は良い日になりそうです！';
+      }else{
+        img.src='https://raw.githubusercontent.com/maemura/oshime/main/images/kn_cautious.png';
+        comment.textContent='VIX'+vix.toFixed(0)+'。慎重にいきます…';
+      }
+    }
+  }catch(e){console.log('Questions:',e)}
+}
+
+async function loadPortfolioThemes(){
+  try{
+    const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/portfolio.json?t='+Date.now());
+    if(!res.ok) return;
+    const pf=await res.json();
+    const el=document.getElementById('portfolioBody');
+    if(!el) return;
+
+    const themeNames={dividend:'💰 高配当大手株',ai:'🤖 AI・半導体',kokusaku:'🏛️ 国策・エネルギー',trend:'🔥 トレンド・話題株'};
+    const themeColors={dividend:'#ffd700',ai:'#4a90e2',kokusaku:'#4aeaaa',trend:'#ff6b7a'};
+    const themeRules=pf.themes||{};
+
+    let html='<div style="padding:12px 16px">';
+    // 総資産
+    html+='<div style="text-align:center;margin-bottom:16px">';
+    html+='<div style="font-size:22px;font-weight:700;color:var(--text1)">¥'+pf.total_asset.toLocaleString()+'</div>';
+    html+='<div style="font-size:12px;color:'+(pf.pnl_pct>=0?'var(--green)':'var(--red)')+'">開始来 '+(pf.pnl_pct>=0?'+':'')+pf.pnl_pct+'%</div>';
+    html+='<div style="display:flex;justify-content:center;gap:16px;margin-top:8px;font-size:11px;color:var(--text3)">';
+    html+='<span>Day '+pf.day+'</span>';
+    html+='<span>💴 現金 '+Math.round(pf.cash/pf.total_asset*100)+'%</span>';
+    html+='<span>📈 株式 '+Math.round((1-pf.cash/pf.total_asset)*100)+'%</span>';
+    html+='<span>📋 保有 '+pf.holdings.length+'銘柄</span>';
+    html+='</div></div>';
+
+    // テーマ別表示
+    ['dividend','ai','kokusaku','trend'].forEach(theme=>{
+      const holdings=pf.holdings.filter(h=>h.theme===theme);
+      if(holdings.length===0) return;
+      const rule=themeRules[theme]||{};
+      html+='<div style="border-left:3px solid '+themeColors[theme]+';padding:8px 12px;margin-bottom:12px;background:var(--bg1);border-radius:0 var(--r) var(--r) 0">';
+      html+='<div style="font-size:12px;font-weight:600;color:var(--text1);margin-bottom:6px">'+themeNames[theme]+'</div>';
+      holdings.forEach(h=>{
+        html+='<div style="display:flex;justify-content:space-between;font-size:11px;color:var(--text2);padding:2px 0">';
+        html+='<span>'+h.name+(h.s_stock?' <span style=\'font-size:9px;color:var(--text3)\'>S株</span>':'')+'</span>';
+        html+='<span>'+h.shares+'株 @'+h.buy_price.toLocaleString()+'</span>';
+        html+='</div>';
+      });
+      if(rule.take_profit){
+        html+='<div style="font-size:10px;color:var(--text3);margin-top:4px">利確+'+rule.take_profit+'% / 損切'+rule.stop_loss+'%</div>';
+      }
+      html+='</div>';
+    });
+
+    // noteリンク
+    html+='<a href="https://note.com/kabunosuke_navi" target="_blank" style="display:block;text-align:center;padding:10px;margin-top:8px;color:var(--accent);font-size:12px;text-decoration:none;border:1px solid var(--border);border-radius:var(--r)">📝 投資日記をnoteで読む →</a>';
+    html+='<div style="font-size:10px;color:var(--text3);text-align:center;margin-top:8px">※仮想投資です。実際の売買ではありません。</div>';
+    html+='</div>';
+    el.innerHTML=html;
+  }catch(e){console.log('Portfolio:',e)}
+}
+
+// ═══════════════════════════════════════
+// BRAIN SCANNER 3層同心円
+// ═══════════════════════════════════════
+async function loadBrainScanner(){
+  try{
+    const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/sentiment_latest.json?t='+Date.now());
+    if(!res.ok) throw new Error('not found');
+    const data=await res.json();
+    document.getElementById('brainSection').style.display='';
+    renderBrain3(data);
+  }catch(e){
+    console.log('Brain Scanner:',e);
+    document.getElementById('brainSection').style.display='none';
+  }
+}
+
+function renderBrain3(d){
+  const el=document.getElementById('brainBody');
+  // mood正規化
+  const normMood=(m)=>{
+    if(m==='greed'||m==='bullish') return 'greed';
+    if(m==='fear'||m==='bearish'||m==='cautious') return 'fear';
+    if(m==='hype') return 'hype';
+    return 'calm';
+  };
+  // macroカテゴリ用mood→外側色クラス
+  const macroClass=(m)=>{
+    const nm=normMood(m);
+    if(nm==='greed') return 'tail';
+    if(nm==='fear') return 'risk';
+    if(nm==='hype') return 'event';
+    return 'data';
+  };
+  // institutionalカテゴリ用mood→中間色クラス
+  const instiClass=(m)=>{
+    const nm=normMood(m);
+    if(nm==='greed') return 'bull';
+    if(nm==='fear') return 'bear';
+    return 'note';
+  };
+
+  el.innerHTML=`
+    <div class="brain-container">
+      <div class="brain-guide outer"></div>
+      <div class="brain-guide mid"></div>
+      <div class="brain-guide inner"></div>
+      <div class="brain-tag t1">MACRO — 世界の潮流</div>
+      <div class="brain-tag t2">INSTITUTIONAL — 機関の動き</div>
+      <div class="brain-tag t3">RETAIL — 個人の声</div>
+      <div class="brain-ring outer" id="brMacro"></div>
+      <div class="brain-ring mid" id="brInsti"></div>
+      <div class="brain-core" id="brRetail"></div>
+      <div class="brain-scan s1"></div>
+      <div class="brain-scan s2"></div>
+    </div>
+    ${d.date?`<div class="brain-date">毎朝自動更新 — ${d.date}</div>`:''}`;
+
+  // コンテナサイズ取得
+  const container=el.querySelector('.brain-container');
+  const W=container.offsetWidth||380;
+
+  // ── 外層: MACRO ──
+  const macroEl=document.getElementById('brMacro');
+  const mItems=(d.macro||[]).slice(0,10);
+  const mR=W*0.46, mCx=W*0.5, mCy=W*0.5;
+  mItems.forEach((item,i)=>{
+    const angle=(i/mItems.length)*2*Math.PI-Math.PI*0.55;
+    const sp=document.createElement('span');
+    sp.className='bw-outer bw-'+macroClass(item.mood);
+    sp.textContent=item.word;
+    const sc=item.size==='lg'?1.05:item.size==='md'?.95:.85;
+    sp.style.fontSize=(9*sc)+'px';
+    sp.style.left=(mCx+mR*Math.cos(angle))+'px';
+    sp.style.top=(mCy+mR*Math.sin(angle))+'px';
+    sp.style.animationDelay=(0.3+i*0.1)+'s';
+    macroEl.appendChild(sp);
+  });
+
+  // ── 中層: INSTITUTIONAL ──
+  const instiEl=document.getElementById('brInsti');
+  const iItems=(d.institutional||[]).slice(0,10);
+  const iW=W*0.66, iR=iW*0.42, iCx=iW*0.5, iCy=iW*0.5;
+  iItems.forEach((item,i)=>{
+    const angle=(i/iItems.length)*2*Math.PI-Math.PI*0.45;
+    const sp=document.createElement('span');
+    sp.className='bw-mid bw-'+instiClass(item.mood);
+    sp.textContent=item.word;
+    sp.style.left=(iCx+iR*Math.cos(angle))+'px';
+    sp.style.top=(iCy+iR*Math.sin(angle))+'px';
+    sp.style.animationDelay=(1+i*0.1)+'s';
+    instiEl.appendChild(sp);
+  });
+
+  // ── 内層: RETAIL ──
+  const retailEl=document.getElementById('brRetail');
+  const rItems=(d.retail||[]).sort(()=>Math.random()-0.5).slice(0,10);
+  rItems.forEach((item,i)=>{
+    const sp=document.createElement('span');
+    const nm=normMood(item.mood);
+    sp.className='bw-inner '+(item.size||'sm')+' bw-'+nm;
+    sp.textContent=item.word;
+    sp.style.animationDelay=(1.5+i*0.08)+'s';
+    retailEl.appendChild(sp);
+  });
+}
+
+// ═══════════════════════════════════════
+// 騰落ランキング + AIコメント
+// ═══════════════════════════════════════
+var rankStocks=[];
+var commentaryData=null;
+var activeRankIdx=-1;
+
+var NAME_JP={
+  '7203':'トヨタ自動車','8306':'三菱UFJ','9984':'ソフトバンクG','6501':'日立製作所',
+  '8316':'三井住友FG','9983':'ファーストリテ','6857':'アドバンテスト','8035':'東京エレクトロン',
+  '8058':'三菱商事','6758':'ソニーG','8001':'伊藤忠商事','8411':'みずほFG',
+  '4519':'中外製薬','8031':'三井物産','7011':'三菱重工','6861':'キーエンス',
+  '9432':'NTT','8766':'東京海上','6503':'三菱電機','2914':'JT',
+  '4063':'信越化学','285A':'キオクシア','7974':'任天堂','9433':'KDDI',
+  '7182':'ゆうちょ銀行','6098':'リクルート','9434':'ソフトバンク','8002':'丸紅',
+  '7741':'HOYA','4502':'武田薬品','7267':'ホンダ','7270':'SUBARU',
+  '6902':'デンソー','8053':'住友商事','8015':'豊田通商','6504':'富士電機',
+  '6702':'富士通','6752':'パナソニック','6981':'村田製作所','6988':'日東電工',
+  '7751':'キヤノン','7731':'ニコン','4503':'アステラス','4506':'住友ファーマ',
+  '4507':'塩野義','4523':'エーザイ','4568':'第一三共','9501':'東京電力',
+  '9502':'中部電力','9503':'関西電力','5401':'日本製鉄','5411':'JFE',
+  '9020':'JR東日本','9021':'JR西日本','9022':'JR東海','9101':'日本郵船',
+  '9104':'商船三井','9107':'川崎汽船','3382':'セブン&アイ','8267':'イオン',
+  '4676':'フジメディア','7172':'JIA','2181':'パーソルHD','3668':'コロプラ',
+  '4331':'T&G','8304':'あおぞら銀行','8308':'りそなHD','8309':'三井住友トラスト',
+  '1801':'大成建設','1802':'大林組','1812':'鹿島建設','8801':'三井不動産',
+  '8802':'三菱地所','5108':'ブリヂストン','8750':'第一生命','8795':'T&D',
+  '8630':'SOMPO','8725':'MS&AD','8601':'大和証券','8604':'野村HD',
+  '2502':'アサヒ','2503':'キリン','2801':'キッコーマン',
+  '4188':'三菱ケミカル','4042':'東ソー','3405':'クラレ',
+  '6301':'コマツ','6302':'住友重機','6305':'日立建機','6326':'クボタ',
+  '5020':'ENEOS','7201':'日産','7211':'三菱自動車','7261':'マツダ',
+  '4689':'Zホールディングス','4755':'楽天','9613':'NTTデータ',
+  '8830':'住友不動産','3289':'東急不動産','8591':'オリックス',
+  '8697':'日本取引所','7752':'リコー','7911':'凸版','7912':'大日本印刷',
+  '6920':'レーザーテック','6146':'ディスコ','6723':'ルネサス','3436':'SUMCO',
+  '6526':'ソシオネクスト','7012':'川崎重工','7013':'IHI','7721':'東京計器',
+  '1605':'INPEX','9201':'JAL','9202':'ANA','6273':'SMC','3923':'ラクス',
+  '6178':'日本郵政','6532':'ベイカレント','8593':'三菱HCキャピタル',
+  '8566':'リコーリース','5019':'出光興産','5021':'コスモエネルギー',
+  '5802':'住友電工','5801':'古河電工','5803':'フジクラ',
+  '9843':'ニトリ','7532':'パンパシHD','9735':'セコム',
+  '9504':'中国電力','9505':'北陸電力','9506':'東北電力',
+  '9507':'四国電力','9508':'九州電力','9509':'北海道電力',
+  '7269':'スズキ','8354':'ふくおかFG','8355':'静岡銀行',
+  '1928':'積水ハウス','1925':'大和ハウス','1878':'大東建託',
+  '8804':'東京建物','8848':'レオパレス',
+  '4684':'オービック','4751':'サイバーA','9602':'東宝',
+  '2802':'味の素','2809':'キユーピー','2871':'ニチレイ',
+  '2282':'日本ハム','2269':'明治HD',
+  '4183':'三井化学','4631':'DIC','4005':'住友化学',
+  '5406':'神戸製鋼','5413':'日新製鋼',
+  '6361':'荏原製作所','6471':'日本精工',
+  '9531':'東京ガス','9532':'大阪ガス',
+  '5101':'横浜ゴム','7951':'ヤマハ','7186':'コンコルディア',
+  '9064':'ヤマトHD','8252':'丸井G','8168':'ケーヨー',
+};
+
+function formatCap(b){
+  if(!b||b<=0)return'—';
+  if(b>=10000)return (b/10000).toFixed(1)+'兆';
+  return Math.round(b)+'億';
+}
+
+function rankChgClass(v){
+  if(v>=3)return'r-big-up';
+  if(v>0.05)return'r-up';
+  if(v<=-2)return'r-big-dn';
+  if(v<-0.05)return'r-dn';
+  return'r-flat';
+}
+
+function buildRanking(){
+  if(!STOCKS||!STOCKS.length)return;
+  // TOP30 by market_cap_b
+  var top=STOCKS.filter(function(s){return s.market_cap_b&&s.market_cap_b>0;})
+    .sort(function(a,b){return(b.market_cap_b||0)-(a.market_cap_b||0);})
+    .slice(0,30);
+  if(top.length<10)return;
+
+  // calc daily change from closes_60d
+  rankStocks=top.map(function(s){
+    var c=s.closes_60d||[];
+    var chg=0;
+    if(c.length>=2)chg=((c[c.length-1]-c[c.length-2])/c[c.length-2])*100;
+    var d25=s.ma25?((s.price/s.ma25)-1)*100:0;
+    // find commentary if available
+    var cmt=null;
+    if(commentaryData&&commentaryData.stocks){
+      cmt=commentaryData.stocks[s.code]||null;
+    }
+    return{
+      name:NAME_JP[s.code]||s.name||s.code,code:s.code,sector:s.sector||'',
+      chg:Math.round(chg*100)/100,
+      cap:formatCap(s.market_cap_b),capB:s.market_cap_b||0,
+      price:s.price||0,rsi:s.rsi||0,
+      ma25d:d25>=0?'+'+d25.toFixed(1)+'%':d25.toFixed(1)+'%',
+      div:((s.dividend||0)).toFixed(1)+'%',
+      divNum:s.dividend||0,
+      pbr:s.pbr||null,
+      per:s.per||null,
+      ma25:s.ma25||0,
+      ma75:s.ma75||0,
+      closes_60d:s.closes_60d||[],
+      score:s.score||0,
+      kokusaku:s.kokusaku||'',
+      cmt:cmt
+    };
+  });
+
+  // Build grid
+  var grid=document.getElementById('rankGrid');
+  var half=Math.ceil(rankStocks.length/2);
+  function makeRow(s,idx){
+    var sign=s.chg>0?'+':'';
+    var nm=s.name.length>7?s.name.substring(0,7)+'…':s.name;
+    var hasCmt=s.cmt?' has-comment':'';
+    var kokMini=s.kokusaku?'<span style="font-size:7px;margin-left:2px" title="国策:'+s.kokusaku+'">🏛️</span>':'';
+    return'<div class="rank-row'+hasCmt+'" data-ridx="'+idx+'" onclick="showRankDetail('+idx+')">'+
+      '<div class="rank-row-main">'+
+      '<div class="rank-name">'+nm+kokMini+'</div>'+
+      '<div class="rank-chg '+rankChgClass(s.chg)+'">'+sign+s.chg.toFixed(1)+'%</div>'+
+      '<div class="rank-cap">'+s.cap+'</div>'+
+      '</div></div>';
+  }
+  var left=rankStocks.slice(0,half);
+  var right=rankStocks.slice(half);
+  grid.innerHTML='<div class="rank-col">'+left.map(function(s,i){return makeRow(s,i);}).join('')+'</div>'+
+    '<div class="rank-col">'+right.map(function(s,i){return makeRow(s,i+half);}).join('')+'</div>';
+
+  // Footer with date
+  var dt=commentaryData&&commentaryData.date?commentaryData.date:(marketData.updated_at||'');
+  document.getElementById('rankFooter').textContent=dt+' 終値 ・ かぶのすけNavi';
+  var rdEl=document.getElementById('rankDate');
+  if(rdEl&&marketData.updated_at)rdEl.textContent=marketData.updated_at.split(' ')[0]+' 終値 ・ ';
+
+  document.getElementById('rankSection').style.display='';
+}
+
+function showRankDetail(idx){
+  var panel=document.getElementById('detailPanel');
+  var s=rankStocks[idx];
+  if(!s)return;
+
+  // Toggle off
+  if(activeRankIdx===idx){
+    panel.classList.remove('show');
+    var rows=document.querySelectorAll('.rank-row');
+    for(var i=0;i<rows.length;i++)rows[i].classList.remove('active');
+    activeRankIdx=-1;
+    return;
+  }
+  activeRankIdx=idx;
+  var rows=document.querySelectorAll('.rank-row');
+  for(var i=0;i<rows.length;i++)rows[i].classList.remove('active');
+  var target=document.querySelector('.rank-row[data-ridx="'+idx+'"]');
+  if(target)target.classList.add('active');
+
+  var sign=s.chg>0?'+':'';
+  var chgCls=s.chg>=0?'r-up':'r-dn';
+
+  // Comment section
+  var cmtHtml;
+  if(s.cmt&&s.cmt.text){
+    var srcLabels={yt:'📺 YouTube',news:'📰 ニュース',tech:'📊 テクニカル',score:'⭐ スコア'};
+    var srcTags=(s.cmt.sources||[]).map(function(t){
+      return'<span class="src-tag '+t+'">'+(srcLabels[t]||t)+'</span>';
+    }).join('');
+    cmtHtml='<div class="detail-cmt">'+
+      '<div class="detail-cmt-head">'+
+      '<div class="detail-cmt-avatar">🤖</div>'+
+      '<div class="detail-cmt-label">かぶのすけ（AI）の分析</div></div>'+
+      '<div class="detail-cmt-body">'+s.cmt.text+'</div>'+
+      '<div class="detail-cmt-sources">'+srcTags+'</div></div>';
+  }else{
+    // Auto-generate comment from data（リッチ版）
+    var autoText='';
+    var rsi=s.rsi||0;
+    var divN=parseFloat(s.div)||0;
+    var sc=s.score||0;
+    var d25val=parseFloat(s.ma25d)||0;
+    var pbrV=s.pbr||0;
+    var perV=s.per||0;
+    var chgV=s.chg||0;
+
+    // 1. 値動きの状況
+    if(chgV>=3)autoText+='<strong>前日比+'+chgV.toFixed(1)+'%と大幅上昇</strong>。材料が出た可能性あり。';
+    else if(chgV<=-3)autoText+='<strong>前日比'+chgV.toFixed(1)+'%と大幅下落</strong>。ネガティブ材料に注意…ただし押し目の可能性も。';
+    else if(chgV>=1)autoText+='前日比+'+chgV.toFixed(1)+'%と堅調。';
+    else if(chgV<=-1)autoText+='前日比'+chgV.toFixed(1)+'%とやや軟調。';
+
+    // 2. テクニカル分析（RSI + MA乖離を組合せ）
+    if(rsi<=30&&d25val<=-5)autoText+='RSI'+rsi+'×25MA乖離'+d25val.toFixed(1)+'%で<strong>ダブルの売られすぎシグナル</strong>。反発狙いには面白い水準。';
+    else if(rsi<=30)autoText+='RSI'+rsi+'で売られすぎ水準。自律反発に期待できるゾーン。';
+    else if(rsi>=70)autoText+='RSI'+rsi+'で過熱圏。短期的な利確売りに注意。';
+    else if(d25val<=-5)autoText+='25MA乖離'+d25val.toFixed(1)+'%で移動平均から大きく下振れ。反発候補。';
+    else if(d25val>=5)autoText+='25MAを+'+d25val.toFixed(1)+'%上回り上昇トレンド継続中。';
+
+    // 3. ファンダメンタル（配当+PBR+PERを組合せ）
+    if(divN>=4.5&&pbrV>0&&pbrV<=1.0)autoText+='配当'+s.div+'×PBR'+pbrV.toFixed(2)+'倍の<strong>高配当×割安の好条件</strong>。下値は限定的。';
+    else if(divN>=4)autoText+='配当'+s.div+'は高配当水準。長期保有でインカム狙いなら◎。';
+    else if(divN>=2.5)autoText+='配当'+s.div+'で安定感あり。';
+    if(pbrV>0&&pbrV<=0.7&&divN<4)autoText+='PBR'+pbrV.toFixed(2)+'倍で<strong>解散価値割れ</strong>。理論上の下値は固い。';
+    if(perV>0&&perV<=10)autoText+='PER'+perV.toFixed(0)+'倍は割安水準。';
+
+    // 4. 総合判定
+    if(sc>=60)autoText+='総合'+sc+'ptで<strong>僕の基準をしっかりクリア</strong>✨';
+    else if(sc>=45)autoText+='総合'+sc+'pt。あと一押しで狙い目に。';
+    else if(sc>=30)autoText+='総合'+sc+'pt。今は様子見が無難かな。';
+    else autoText+='総合'+sc+'pt。積極的には動きにくい水準。';
+
+    // 国策テーマ
+    if(s.kokusaku)autoText+='<br>🏛️ 国策テーマ「'+s.kokusaku+'」関連で中長期の追い風あり。';
+
+    var autoSources=['tech','score'];
+    if(divN>=2.5)autoSources.push('yt');
+    var autoSrc=autoSources.map(function(t){
+      var srcLabels={tech:'📊 テクニカル',score:'⭐ スコア',yt:'📺 データ分析'};
+      return'<span class="src-tag '+t+'">'+(srcLabels[t]||t)+'</span>';
+    }).join('');
+    cmtHtml='<div class="detail-cmt">'+
+      '<div class="detail-cmt-head">'+
+      '<div class="detail-cmt-avatar">🤖</div>'+
+      '<div class="detail-cmt-label">かぶのすけ（AI）の分析</div></div>'+
+      '<div class="detail-cmt-body">'+autoText+'</div>'+
+      '<div class="detail-cmt-sources">'+autoSrc+'</div></div>';
+  }
+
+  var kokBadge=s.kokusaku?'<span style="display:inline-block;background:linear-gradient(135deg,#d4af37,#f0d060);color:#1a1a2e;font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;margin-left:6px">🏛️ 国策:'+s.kokusaku+'</span>':'';
+
+  // 購入金額・配当金額
+  var buyAmt=(s.price||0)*100;
+  var buyStr=buyAmt>=10000?'約'+Math.round(buyAmt/10000)+'万円':'約'+Math.round(buyAmt/1000)+'千円';
+  var annDiv=Math.round(buyAmt*(s.divNum||0)/100);
+  var divAmtStr=annDiv>0?'約¥'+annDiv.toLocaleString():'—';
+
+  // チャート
+  var hasSpark=s.closes_60d&&s.closes_60d.length>10;
+  var chartHtml=hasSpark?
+    '<div style="padding:8px 12px;background:var(--bg2);border-radius:8px;margin-bottom:8px">'+
+    '<div style="font-size:10px;font-weight:700;color:var(--text2);margin-bottom:6px">📊 60日チャート</div>'+
+    '<svg class="rank-detail-chart" viewBox="0 0 320 100" style="width:100%;height:100px" data-rchart="'+s.code+'"></svg>'+
+    '<div style="display:flex;gap:10px;margin-top:4px;font-size:9px;color:var(--text3)">'+
+    '<span>株価 ¥'+(s.price||0).toLocaleString()+'</span>'+
+    '<span style="color:#F59E0B">25日線 ¥'+(s.ma25||0).toLocaleString()+'</span>'+
+    '<span style="color:#059669">75日線 ¥'+(s.ma75||0).toLocaleString()+'</span>'+
+    '</div></div>':'';
+
+  // PBR/PER
+  var pbrStr=s.pbr?s.pbr.toFixed(2)+'倍':'—';
+  var perStr=s.per?s.per.toFixed(0)+'倍':'—';
+
+  document.getElementById('detailBox').innerHTML=
+    '<div class="detail-top">'+
+      '<div class="detail-info"><div class="detail-name">'+s.name+kokBadge+'</div>'+
+      '<div class="detail-meta">'+s.code+' ・ '+s.sector+' ・ '+s.cap+'</div></div>'+
+      '<div class="detail-chg-big '+chgCls+'">'+sign+s.chg.toFixed(1)+'%</div>'+
+      '<button class="detail-close" onclick="showRankDetail('+idx+')">✕</button></div>'+
+    chartHtml+
+    '<div style="padding:8px 12px;margin-bottom:8px;background:rgba(0,135,90,0.06);border-radius:8px;border:1px solid rgba(0,135,90,0.15);font-size:12px;color:var(--text)">'+
+      '💰 購入に必要な金額 → <b style="font-size:15px;color:var(--green)">'+buyStr+'</b>'+
+      '<span style="font-size:9px;color:var(--text3)">（100株 × ¥'+(s.price||0).toLocaleString()+'）</span>'+
+      (annDiv>0?'<br>📦 年間配当金 → <b style="font-size:15px;color:var(--green)">'+divAmtStr+'</b><span style="font-size:9px;color:var(--text3)">（税引前・100株保有時）</span>':'')+
+    '</div>'+
+    '<div class="detail-stats">'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+s.rsi+'</div><div class="detail-stat-label">RSI</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+s.ma25d+'</div><div class="detail-stat-label">25MA乖離</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+s.div+'</div><div class="detail-stat-label">配当利回り</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+s.score+'pt</div><div class="detail-stat-label">スコア</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+pbrStr+'</div><div class="detail-stat-label">PBR</div></div>'+
+      '<div class="detail-stat"><div class="detail-stat-val">'+perStr+'</div><div class="detail-stat-label">PER</div></div>'+
+    '</div>'+cmtHtml+
+    '<div style="display:flex;gap:8px;padding:8px 12px 4px;flex-wrap:wrap;">'+
+      '<a href="https://finance.yahoo.co.jp/quote/'+s.code+'.T" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(255,100,0,0.12);border:1px solid rgba(255,100,0,0.25);border-radius:6px;color:#ff8c42;font-size:11px;font-weight:700;text-decoration:none;">📊 Yahoo株価</a>'+
+      '<a href="https://kabutan.jp/stock/?code='+s.code+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(0,180,100,0.12);border:1px solid rgba(0,180,100,0.25);border-radius:6px;color:#00c878;font-size:11px;font-weight:700;text-decoration:none;">🔍 株探</a>'+
+      '<a href="https://minkabu.jp/stock/'+s.code+'" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:4px;padding:6px 12px;background:rgba(100,150,255,0.12);border:1px solid rgba(100,150,255,0.25);border-radius:6px;color:#7aa0ff;font-size:11px;font-weight:700;text-decoration:none;">📈 みんかぶ</a>'+
+    '</div>';
+
+  // Draw chart if available
+  if(hasSpark){
+    setTimeout(function(){
+      var el=document.querySelector('[data-rchart="'+s.code+'"]');
+      if(el)drawDetailChart(el,s.closes_60d,s.ma25,s.ma75);
+    },50);
+  }
+
+  panel.classList.remove('show');
+  void panel.offsetWidth;
+  panel.classList.add('show');
+}
+
+function closeDetail(e){
+  if(e&&e.target!==document.getElementById('detailPanel'))return;
+  var panel=document.getElementById('detailPanel');
+  panel.classList.remove('show');
+  activeRankIdx=-1;
+  var rows=document.querySelectorAll('.rank-row');
+  for(var i=0;i<rows.length;i++)rows[i].classList.remove('active');
+}
+
+async function loadCommentary(){
+  try{
+    var res=await fetch('commentary.json?t='+Date.now());
+    if(!res.ok)throw new Error('not found');
+    commentaryData=await res.json();
+    // Render market comment (A)
+    if(commentaryData.market){
+      var m=commentaryData.market;
+      document.getElementById('mktCommentBody').innerHTML=m.text||'';
+      document.getElementById('mktCommentDate').textContent=commentaryData.date||'';
+      // Tags
+      var tagsHtml=(m.tags||[]).map(function(t){
+        return'<span class="mkt-tag '+(t.type||'neutral')+'">'+t.label+'</span>';
+      }).join('');
+      document.getElementById('mktCommentTags').innerHTML=tagsHtml;
+      // Sources
+      var srcHtml=(m.sources||[]).map(function(s){
+        return'<span class="mkt-src">'+s+'</span>';
+      }).join('');
+      document.getElementById('mktCommentSources').innerHTML=srcHtml;
+      document.getElementById('mktCommentSection').style.display='';
+    }
+  }catch(e){
+    console.log('commentary.json not available yet');
+  }
+}
+
+async function init(){
+  updateWatchCount();
+  await loadRealData();
+  run();
+  loadPortfolio();
+  await loadIntelligence();
+  await loadSentiment();
+  renderFocus();
+  renderNews();
+  loadQuestions();
+  loadPortfolioThemes();
+  loadBrainScanner();
+  await loadCommentary();
+  buildRanking();
+  gaEvent('view_app',{data_source:dataSource});
+}
+
+init();
+</script>
+</body>
+</html>
