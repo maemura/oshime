@@ -2973,6 +2973,29 @@ function closeDetail(e){
 }
 
 /* ── 天気モード ── */
+
+function renderInterview(data) {
+  if (!data || !data.interview || !data.interview.length) return;
+  var section = document.getElementById('interviewSection');
+  if (!section) return;
+  var body = document.getElementById('interviewBody');
+  var qa = data.interview;
+  var h = '';
+  qa.forEach(function(item) {
+    h += '<div class="interview-qa">';
+    h += '<div class="interview-q"><span class="interview-q-label">記者</span><span class="interview-q-text">' + item.q + '</span></div>';
+    h += '<div class="interview-a"><span class="interview-a-label">かぶのすけ</span><span class="interview-a-text">' + item.a + '</span></div>';
+    h += '</div>';
+  });
+  body.innerHTML = h;
+  var feelMap = { 'bullish':80, 'slightly_bullish':60, 'neutral':50, 'slightly_bearish':35, 'bearish':20, 'storm':15 };
+  var feel = feelMap[data.market && data.market.daily_feel] || 50;
+  document.getElementById('interviewMoodFill').style.width = feel + '%';
+  document.getElementById('interviewMoodVal').textContent = feel + ' / 100';
+  document.getElementById('interviewDate').textContent = data.date || '';
+  section.style.display = '';
+}
+
 function applyWeatherMode(judge){
   var hero=document.querySelector('.hero');
   var badge=document.getElementById('weatherBadge');
