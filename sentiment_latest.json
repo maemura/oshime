@@ -1,16 +1,16 @@
 {
-  "date": "2026-03-12",
+  "date": "2026-03-13",
   "mode": "claude",
   "macro": [
     {
-      "word": "日経平均",
+      "word": "ドル円",
       "size": "xl",
-      "mood": "calm",
-      "count": 5,
-      "sources": 3
+      "mood": "fear",
+      "count": 6,
+      "sources": 2
     },
     {
-      "word": "ドル円",
+      "word": "日経平均",
       "size": "lg",
       "mood": "fear",
       "count": 4,
@@ -20,13 +20,27 @@
       "word": "ナスダック",
       "size": "lg",
       "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
+    },
+    {
+      "word": "日経",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "円安",
       "size": "sm",
       "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "金利",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
@@ -41,16 +55,9 @@
     },
     {
       "word": "高配当",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
+      "count": 4,
       "sources": 2
     }
   ],
