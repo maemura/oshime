@@ -1,10 +1,10 @@
 {
   "date": "2026-03-13",
-  "collected_at": "2026-03-13 09:59",
+  "collected_at": "2026-03-13 21:52",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 52,
-  "entry_count": 28,
+  "videos_processed": 27,
+  "entry_count": 20,
   "entries": [
     {
       "source": "youtube",
@@ -141,6 +141,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "SBI増配。ホンダ急落。トリケミカル減益。神戸物産減益。ゴールデンドーム関連上昇開始。モジタバ師に～あす上がる株　2026年３月１６日（月）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=sTJ1bB-a4tE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "ホンダが急落で利回り５％超。肥料関連銘柄が続伸。イランモジタバ師、ホルムズ海峡封鎖継続。2026年３月１３日（金）～明日上がる株最新の日本株情報。高配当株の株価",
       "video_url": "https://www.youtube.com/watch?v=CZnn3pdc204",
       "topic": "高配当",
@@ -170,50 +181,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "原油が再上昇。ホルムズ海峡封鎖で、肥料関連株が上昇開始。ＡＮＹＣＯＬＯＲ-16%急落。三井ハイテック10%急落。2026年３月１２日（木）～明日上がる株最新の日",
-      "video_url": "https://www.youtube.com/watch?v=ceifmuuLb_w",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "日経平均が一時4200円安！でも日本株の底打ちも近い？この大型株買ってみた",
-      "video_url": "https://www.youtube.com/watch?v=HPeV_ZDr7XI",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "日経平均が一時4200円安！でも日本株の底打ちも近い？この大型株買ってみた",
-      "video_url": "https://www.youtube.com/watch?v=HPeV_ZDr7XI",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "ばっちゃまの投資チャンネル",
-      "video_title": "【米国株 3/7】速報、広瀬隆雄氏が警鐘「酷かったナスダック」",
-      "video_url": "https://www.youtube.com/watch?v=vczXABryv44",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
     },
     {
       "source": "youtube",
@@ -258,61 +225,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "「有事のドル買い」はオワコン 金利差トレード復活か？【GUEST TALK】吉田恒さん／マネックス証券 &quot;WMZ&quot;  Thursday, 1",
-      "video_url": "https://www.youtube.com/watch?v=O6AL1htcq_Y",
-      "topic": "金利",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 金利"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "ドル円159円台、ドル買いの背景と地政学リスクのポイントとは！？【FXフォーカス】 3月12日 ソニーフィナンシャルグループ 石川久美子さん",
-      "video_url": "https://www.youtube.com/watch?v=nTENSMzHpUA",
-      "topic": "ソニー",
-      "category": "stock",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ソニー"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "ドル円159円台、ドル買いの背景と地政学リスクのポイントとは！？【FXフォーカス】 3月12日 ソニーフィナンシャルグループ 石川久美子さん",
-      "video_url": "https://www.youtube.com/watch?v=nTENSMzHpUA",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "高配当銘柄に絶好の押し目【ゲスト】3月12日 岩井コスモ証券 有沢正一さん",
-      "video_url": "https://www.youtube.com/watch?v=bdpY5fa8Mho",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "ドル円はダブルボトム形成！注目イベントと上値メドは？【FXフォーカス】 3月11日 外為どっとコム総合研究所 宇栄原宗平さん",
-      "video_url": "https://www.youtube.com/watch?v=33NH4VbtqUU",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
     }
   ],
   "summary": {
@@ -350,16 +262,15 @@
         "bear": 0
       },
       "STOCKVOICE": {
-        "bull": 3,
+        "bull": 1,
         "bear": 0
       }
     },
     "by_topic": {
       "日経平均": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
           "Sho's投資情報局"
         ]
       },
@@ -372,34 +283,25 @@
         ]
       },
       "ナスダック": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "ばっちゃまの投資チャンネル",
           "Sho's投資情報局"
         ]
       },
       "ドル円": {
-        "count": 6,
+        "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "STOCKVOICE",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "STOCKVOICE"
         ]
       },
       "高配当": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "STOCKVOICE",
           "株リアルライブ"
-        ]
-      },
-      "円安": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "ひげづら株ちゃんねる"
         ]
       },
       "任天堂": {
@@ -413,36 +315,19 @@
         "count": 2,
         "sentiment": "bearish",
         "sources": [
-          "STOCKVOICE",
-          "たばたの投資ch"
-        ]
-      },
-      "金利": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "STOCKVOICE"
-        ]
-      },
-      "ソニー": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
+          "たばたの投資ch",
           "STOCKVOICE"
         ]
       }
     },
     "hot_words": [
+      "半導体",
       "ドル円",
       "日経平均",
-      "半導体",
       "ナスダック",
       "高配当",
       "日経",
-      "円安",
-      "任天堂",
-      "金利",
-      "ソニー"
+      "任天堂"
     ]
   }
 }
