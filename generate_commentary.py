@@ -1,21 +1,14 @@
 #!/usr/bin/env python3
 """
 かぶのすけ AIコメンタリー生成 — generate_commentary.py (Gemini版)
-=====================================================
-stocks_data.json + sentiment_latest.json を読み込み、
-Gemini API で市場全体コメント＋個別銘柄コメントを生成。
-出力: commentary.json（app.html が読み込む）
-
-GitHub Actions で fetch_stocks.py の後に実行。
 """
 
 import json, os, sys, datetime
 
-# ─── Google Generative AI SDK ───
 try:
-    import google.generativeai as genai
+    from google import genai
 except ImportError:
-    print("⚠ google-generativeai パッケージがありません。pip install google-generativeai")
+    print("⚠ google-genai パッケージがありません。pip3 install google-genai")
     sys.exit(1)
 
 API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -23,10 +16,9 @@ if not API_KEY:
     print("⚠ GEMINI_API_KEY が未設定です")
     sys.exit(1)
 
-genai.configure(api_key=API_KEY)
-MODEL = "gemini-2.0-flash"
+client = genai.Client(api_key=API_KEY)
+MODEL = "models/gemini-2.0-flash-lite"
 
-# ─── データ読み込み ───
 def load_json(path):
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -37,8 +29,6 @@ def load_json(path):
 
 
 def build_prompt(stocks_data, sentiment_data):
-    """Gemini API に渡すプロンプトを構築"""
-
     stocks = sorted(
         [s for s in stocks_data.get("stocks", []) if s.get("market_cap_b", 0) > 0],
         key=lambda s: s.get("market_cap_b", 0),
@@ -56,11 +46,17 @@ def build_prompt(stocks_data, sentiment_data):
 
     sentiment_text = ""
     if sentiment_data:
-        macro = sentiment_data.get("macro", {})
+        macro = sentiment_data.get("macro", [])
+        if isinstance(macro, list):
+            bull_words = [m["word"] for m in macro if m.get("mood") in ("greed", "hope", "calm")][:5]
+            bear_words = [m["word"] for m in macro if m.get("mood") in ("fear", "panic")][:5]
+        else:
+            bull_words = macro.get("word", {}).get("bull", [])[:5]
+            bear_words = macro.get("word", {}).get("bear", [])[:5]
         sentiment_text = f"""
 YouTubeセンチメント:
-  強気ワード: {', '.join(macro.get('word', {}).get('bull', [])[:5])}
-  弱気ワード: {', '.join(macro.get('word', {}).get('bear', [])[:5])}
+  強気ワード: {", ".join(bull_words)}
+  弱気ワード: {", ".join(bear_words)}
 """
 
     prompt = f"""あなたは日本株の個人投資家向けAIアナリスト「かぶのすけ」です。
@@ -83,7 +79,14 @@ YouTubeセンチメント:
       "text": "個別コメント（<strong>強調</strong>タグ使用可、2〜3文）",
       "signal": "buy | watch | caution のいずれか"
     }}
-  }}
+  }},
+  "interview": [
+    {{"q": "今日の相場、一言で言うと？", "a": "かぶのすけの答え（20〜40文字）"}},
+    {{"q": "今日一番気になったリスクは？", "a": "かぶのすけの答え（20〜50文字）"}},
+    {{"q": "今日、買い増しした？", "a": "かぶのすけの答え（20〜50文字）"}},
+    {{"q": "来週どうなりそう？", "a": "かぶのすけの答え（○○次第、という形で20〜50文字）"}},
+    {{"q": "読者へ一言", "a": "かぶのすけの答え（励ましや共感を込めて20〜40文字）"}}
+  ]
 }}
 
 【分析方針】
@@ -93,21 +96,23 @@ YouTubeセンチメント:
 - 複数の指標を組み合わせた分析をする
 - 「買い」「売り」の断定はせず、「面白い水準」「注意が必要」のようにヒントを出す
 - 同じフレーズの使い回しを避ける
+- interviewは必ずかぶのすけの一人称・話し言葉で。「〜ですね」「〜と思います」など自然な口語で
+- interviewの「来週どうなりそう？」は必ず「〇〇次第ですね」という形で締める
+- interviewは感情が伝わるように。怖い時は怖い、強気な時は強気と正直に
 """
     return prompt
 
 
 def generate(stocks_data, sentiment_data):
-    """Gemini API を呼んでコメンタリーを生成"""
     prompt = build_prompt(stocks_data, sentiment_data)
-
-    model = genai.GenerativeModel(MODEL)
     print("🤖 Gemini API 呼び出し中...")
 
-    response = model.generate_content(prompt)
+    response = client.models.generate_content(
+        model=MODEL,
+        contents=prompt
+    )
     text = response.text.strip()
 
-    # ```json ... ``` を除去
     if text.startswith("```"):
         text = text.split("\n", 1)[-1]
     if text.endswith("```"):
@@ -140,8 +145,8 @@ def main():
     try:
         result = generate(stocks_data, sentiment_data)
     except Exception as e:
-        print(f'⚠️ API呼び出し失敗: {e}')
-        print('📝 コメンタリー生成をスキップします')
+        print(f"⚠️ API呼び出し失敗: {e}")
+        print("📝 コメンタリー生成をスキップします")
         sys.exit(0)
 
     if not result:
