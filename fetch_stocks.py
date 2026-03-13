@@ -625,6 +625,37 @@ def fetch_market_data():
 #  メイン処理
 # ═══════════════════════════════════════
 
+def update_portfolio_history(market: dict):
+    """毎日のVIX・日経をportfolio_historyに自動追記"""
+    import datetime
+    history_path = "portfolio_history.json"
+    today = datetime.date.today().strftime("%Y-%m-%d")
+
+    try:
+        with open(history_path) as f:
+            data = json.load(f)
+    except:
+        data = {"history": []}
+
+    # 今日のエントリーが既にあればスキップ
+    existing_dates = [e.get("date") for e in data["history"]]
+    if today in existing_dates:
+        print(f"📅 portfolio_history: {today} は既に記録済み")
+        return
+
+    entry = {
+        "date": today,
+        "vix": market.get("vix"),
+        "nikkei": market.get("nikkei_price"),
+        "usdjpy": market.get("usdjpy"),
+        "wti_oil": market.get("wti_oil"),
+    }
+    data["history"].append(entry)
+
+    with open(history_path, "w") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+    print(f"📅 portfolio_history更新: {today} VIX={entry['vix']}")
+
 def main():
     now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
     print(f"📊 かぶのすけスキャン開始: {now.strftime('%Y/%m/%d %H:%M JST')}")
@@ -718,6 +749,8 @@ def main():
     file_size = os.path.getsize("stocks_data.json") / 1024
     print(f"\n📁 stocks_data.json 出力完了 ({file_size:.0f} KB)")
 
+    update_portfolio_history(market)
+
     # サマリー（4カテゴリー）
     print("\n🏆 💰高配当 TOP5:")
     for s in sorted(stocks, key=lambda x: x.get("score",0), reverse=True)[:5]:
@@ -738,3 +771,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
