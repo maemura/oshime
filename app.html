@@ -1140,6 +1140,28 @@ h2,h3{color:var(--neon-cyan)!important;text-shadow:0 0 10px rgba(0,245,255,0.4);
       </div>
     </div>
 
+
+    <!-- 📰 今日のかぶのすけインタビュー -->
+    <div class="mkt-card" id="interviewSection" style="display:none">
+      <div class="mkt-header">
+        <div class="mkt-avatar">📰</div>
+        <div>
+          <div class="mkt-who">今日のかぶのすけインタビュー</div>
+          <div class="mkt-when" id="interviewDate"></div>
+        </div>
+      </div>
+      <div id="interviewBody"></div>
+      <div class="interview-mood">
+        <span class="interview-mood-label">今日の強気度</span>
+        <div class="interview-mood-track">
+          <div class="interview-mood-fill" id="interviewMoodFill"></div>
+        </div>
+        <span class="interview-mood-val" id="interviewMoodVal"></span>
+      </div>
+    </div>
+
+
+
     <div class="rank-card" id="rankSection" style="display:none">
       <div class="rank-header">
         <div><span style="margin-right:6px">🇯🇵</span><span class="rank-header-title">時価総額TOP30の騰落</span></div>
@@ -2993,6 +3015,7 @@ async function loadCommentary(){
       document.getElementById('mktCommentSources').innerHTML=srcHtml;
       document.getElementById('mktCommentSection').style.display='';
     }
+    renderInterview(commentaryData);
     var judge=(commentaryData.daily_feel&&commentaryData.daily_feel.theme_judge)||null;
     applyWeatherMode(judge);
   }catch(e){
