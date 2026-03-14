@@ -17,7 +17,7 @@ if not API_KEY:
     sys.exit(1)
 
 client = genai.Client(api_key=API_KEY)
-MODEL = "models/gemini-2.0-flash-lite"
+MODEL = "models/gemini-2.0-flash"
 
 def load_json(path):
     try:
