@@ -1065,12 +1065,21 @@ h2,h3{color:var(--neon-cyan)!important;text-shadow:0 0 10px rgba(0,245,255,0.4);
 .hero{box-shadow:0 0 40px rgba(110,0,210,0.15);}
 
 
-    .interview-qa{padding:12px 0;border-bottom:1px solid var(--border)}
-    .interview-qa:last-child{border-bottom:none}
+    .interview-qa{padding:6px 0}
     .interview-q{display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
     .interview-a{display:flex;gap:8px;align-items:flex-start}
-    .interview-q-label{font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;background:var(--bg3);color:var(--text3);white-space:nowrap;flex-shrink:0;margin-top:2px}
-    .interview-a-label{font-size:10px;font-weight:600;padding:2px 8px;border-radius:4px;background:rgba(100,180,255,0.15);color:#64b4ff;white-space:nowrap;flex-shrink:0;margin-top:2px}
+    .bubble-wrap{display:flex;gap:8px;align-items:flex-start;margin-bottom:14px}
+    .bubble-wrap.bubble-right{flex-direction:row-reverse}
+    .bubble-av-col{display:flex;flex-direction:column;align-items:center;gap:3px;flex-shrink:0}
+    .bubble-av{width:36px;height:36px;border-radius:50%;object-fit:cover;object-position:top}
+    .bubble-av-kabuko{border:1.5px solid #ff69b4}
+    .bubble-av-kabunosuke{border:1.5px solid #64b4ff}
+    .bubble-av-name{font-size:9px;font-family:var(--mono)}
+    .bubble-av-name.k{color:#ff69b4}
+    .bubble-av-name.n{color:#64b4ff}
+    .bubble-text{max-width:calc(100% - 56px);padding:10px 13px;font-size:13px;line-height:1.6;color:var(--text1)}
+    .bubble-kabuko{background:rgba(255,105,180,0.1);border:1px solid rgba(255,105,180,0.3);border-radius:12px 12px 12px 2px}
+    .bubble-kabunosuke{background:rgba(100,180,255,0.08);border:1px solid rgba(100,180,255,0.25);border-radius:12px 12px 2px 12px}
     .interview-q-text{font-size:13px;color:var(--text2);line-height:1.5}
     .interview-a-text{font-size:13px;color:var(--text1);line-height:1.6;font-weight:500}
     .interview-mood{display:flex;align-items:center;gap:10px;padding:12px 0 2px;margin-top:4px;border-top:1px solid var(--border)}
@@ -1155,12 +1164,12 @@ h2,h3{color:var(--neon-cyan)!important;text-shadow:0 0 10px rgba(0,245,255,0.4);
     </div>
 
 
-    <!-- 📰 今日のかぶのすけインタビュー -->
+    <!-- 📱 かぶ子、おにいちゃんに聞いてみた -->
     <div class="mkt-card" id="interviewSection" style="display:none">
       <div class="mkt-header">
-        <div class="mkt-avatar">📰</div>
+        <div class="mkt-avatar">📱</div>
         <div>
-          <div class="mkt-who">今日のかぶのすけインタビュー</div>
+          <div class="mkt-who">かぶ子、おにいちゃんに聞いてみた</div>
           <div class="mkt-when" id="interviewDate"></div>
         </div>
       </div>
@@ -2996,9 +3005,15 @@ function renderInterview(data) {
   var qa = data.interview;
   var h = '';
   qa.forEach(function(item) {
+    h += '<div class="bubble-wrap">';
+    h += '<div class="bubble-av-col"><img class="bubble-av bubble-av-kabuko" src="kabuko.png" alt="かぶ子"><span class="bubble-av-name k">かぶ子</span></div>';
+    h += '<div class="bubble-text bubble-kabuko">' + item.q + '</div>';
+    h += '</div>';
+    h += '<div class="bubble-wrap bubble-right">';
+    h += '<div class="bubble-av-col"><img class="bubble-av bubble-av-kabunosuke" src="kabunosuke.png" alt="かぶのすけ"><span class="bubble-av-name n">かぶのすけ</span></div>';
+    h += '<div class="bubble-text bubble-kabunosuke">' + item.a + '</div>';
+    h += '</div>';
     h += '<div class="interview-qa">';
-    h += '<div class="interview-q"><span class="interview-q-label">記者</span><span class="interview-q-text">' + item.q + '</span></div>';
-    h += '<div class="interview-a"><span class="interview-a-label">かぶのすけ</span><span class="interview-a-text">' + item.a + '</span></div>';
     h += '</div>';
   });
   body.innerHTML = h;
