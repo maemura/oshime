@@ -1,14 +1,7 @@
 {
-  "date": "2026-03-13",
+  "date": "2026-03-14",
   "mode": "claude",
   "macro": [
-    {
-      "word": "ドル円",
-      "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
-    },
     {
       "word": "日経平均",
       "size": "lg",
@@ -24,11 +17,25 @@
       "sources": 1
     },
     {
-      "word": "日経",
-      "size": "md",
+      "word": "ドル円",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
+      "count": 3,
       "sources": 2
+    },
+    {
+      "word": "円安",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
