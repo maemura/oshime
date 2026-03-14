@@ -1,10 +1,10 @@
 {
   "date": "2026-03-14",
-  "collected_at": "2026-03-14 09:53",
+  "collected_at": "2026-03-14 21:45",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 27,
-  "entry_count": 19,
+  "videos_processed": 39,
+  "entry_count": 32,
   "entries": [
     {
       "source": "youtube",
@@ -184,14 +184,157 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "任天堂復活！ナンピン地獄からの卒業！海運株が強い！高利回り優待も",
-      "video_url": "https://www.youtube.com/watch?v=OE6NuliX7KY",
+      "channel": "株リアルライブ",
+      "video_title": "原油が再上昇。ホルムズ海峡封鎖で、肥料関連株が上昇開始。ＡＮＹＣＯＬＯＲ-16%急落。三井ハイテック10%急落。2026年３月１２日（木）～明日上がる株最新の日",
+      "video_url": "https://www.youtube.com/watch?v=ceifmuuLb_w",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "商船三井が損傷、イラン攻撃。エニーカラー下方修正。 京都フィナンシャル配当３倍。ニデックOasis～あす上がる株　2026年３月１２日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=1yJz5SO22Ug",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日本株 大幅続伸、戻り遅れ２０銘柄リスト。ダウ下落、今度は機雷。任天堂ヒットで急騰。2026年３月１１日（水）～明日上がる株最新の日本株情報。高配当株の株価やデ",
+      "video_url": "https://www.youtube.com/watch?v=pVHyk5prFYE",
       "topic": "任天堂",
       "category": "stock",
-      "sentiment": "neutral",
+      "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日本株 大幅続伸、戻り遅れ２０銘柄リスト。ダウ下落、今度は機雷。任天堂ヒットで急騰。2026年３月１１日（水）～明日上がる株最新の日本株情報。高配当株の株価やデ",
+      "video_url": "https://www.youtube.com/watch?v=pVHyk5prFYE",
+      "topic": "ダウ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ダウ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日本株 大幅続伸、戻り遅れ２０銘柄リスト。ダウ下落、今度は機雷。任天堂ヒットで急騰。2026年３月１１日（水）～明日上がる株最新の日本株情報。高配当株の株価やデ",
+      "video_url": "https://www.youtube.com/watch?v=pVHyk5prFYE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イラン要因の戻り遅れ２０銘柄。日経先物更に上昇５万５千円回復。アメリカ先物上昇。アサヒG減益。～あす上がる株　2026年３月１０日（火）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=mHzw73qFnps",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イラン要因の戻り遅れ２０銘柄。日経先物更に上昇５万５千円回復。アメリカ先物上昇。アサヒG減益。～あす上がる株　2026年３月１０日（火）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=mHzw73qFnps",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "戻り遅れ２０銘柄。イラン関連株の動き。午後に向けて注意。ダウ上昇、原油価格低下２つの理由。2026年３月１０日（火）～明日上がる株最新の日本株情報。高配当株の株",
+      "video_url": "https://www.youtube.com/watch?v=pKC-xI0M3vM",
+      "topic": "ダウ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ダウ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "戻り遅れ２０銘柄。イラン関連株の動き。午後に向けて注意。ダウ上昇、原油価格低下２つの理由。2026年３月１０日（火）～明日上がる株最新の日本株情報。高配当株の株",
+      "video_url": "https://www.youtube.com/watch?v=pKC-xI0M3vM",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イラン要因での急落銘柄TOP２０。村田製作所不正アクセス発生。ジャパンディスプレイ９６％急騰。～あす上がる株　2026年３月１０日（火）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=EnbPc0kQFPI",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イラン情勢で急落中の２０銘柄。INPEX上昇。原油 １１６ドル突破。イランの新指導者決定、原油 １１６ドル突破。2026年３月９日（月）～明日上がる株最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=clu2raVW20I",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "あすの市場はどうなる？イラン・アメリカ最新動向。任天堂がアメリカを提訴。あす急落しそうな３銘柄。好決算なのに下げてる銘柄。今週注目の決算６銘柄。３月８日:日曜版",
+      "video_url": "https://www.youtube.com/watch?v=VTXu4_j2IuU",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "あすの市場はどうなる？イラン・アメリカ最新動向。任天堂がアメリカを提訴。あす急落しそうな３銘柄。好決算なのに下げてる銘柄。今週注目の決算６銘柄。３月８日:日曜版",
+      "video_url": "https://www.youtube.com/watch?v=VTXu4_j2IuU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "３月暴落相場！絶対押さえる厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=Ipmohab4Jgc",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -223,7 +366,7 @@
         "bear": 12
       },
       "株リアルライブ": {
-        "bull": 2,
+        "bull": 15,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -240,7 +383,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -294,36 +437,62 @@
         ]
       },
       "高配当": {
-        "count": 3,
+        "count": 10,
+        "sentiment": "bullish",
+        "sources": [
+          "優待ライダー",
+          "株リアルライブ"
+        ]
+      },
+      "配当": {
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ"
         ]
       },
       "任天堂": {
-        "count": 1,
-        "sentiment": "neutral",
+        "count": 2,
+        "sentiment": "bullish",
         "sources": [
-          "優待ライダー"
+          "株リアルライブ"
+        ]
+      },
+      "ダウ": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
         ]
       },
       "日経": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "STOCKVOICE"
+        ]
+      },
+      "決算": {
         "count": 1,
         "sentiment": "bullish",
         "sources": [
-          "STOCKVOICE"
+          "株リアルライブ"
         ]
       }
     },
     "hot_words": [
+      "高配当",
       "半導体",
       "日経平均",
       "ナスダック",
       "ドル円",
-      "高配当",
-      "円安",
       "任天堂",
-      "日経"
+      "ダウ",
+      "日経",
+      "円安",
+      "配当",
+      "決算"
     ]
   }
 }

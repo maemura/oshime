@@ -24,21 +24,35 @@
       "sources": 2
     },
     {
+      "word": "ダウ",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "円安",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
+    {
+      "word": "高配当",
+      "size": "xl",
+      "mood": "greed",
+      "count": 10,
+      "sources": 2
+    },
     {
       "word": "半導体",
       "size": "lg",
@@ -47,19 +61,26 @@
       "sources": 2
     },
     {
-      "word": "高配当",
-      "size": "lg",
+      "word": "配当",
+      "size": "sm",
       "mood": "greed",
-      "count": 3,
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "決算",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
       "sources": 1
     }
   ],
   "retail": [
     {
       "word": "任天堂",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
       "sources": 1
     }
   ]
