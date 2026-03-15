@@ -25,9 +25,6 @@ jobs:
       - name: Run stock scan
         run: python fetch_stocks.py
 
-      - name: Patch Japanese names
-        run: python patch_names.py
-
       - name: Generate AI commentary
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
