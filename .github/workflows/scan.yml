@@ -41,4 +41,4 @@ jobs:
           git add stocks_data.json commentary.json
           git add -f diary_draft.md kabuko_script_draft.md x_draft.md diary_drafts/ day_count.txt || true
           git diff --cached --quiet || git commit -m "📊 scan + 🤖 commentary $(date +%Y-%m-%d)"
-          git pull --rebase && git push
+          git push
