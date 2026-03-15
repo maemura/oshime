@@ -1,0 +1,371 @@
+{
+  "date": "2026-03-15",
+  "collected_at": "2026-03-15 09:53",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 49,
+  "entry_count": 22,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/14【日本株また暴落か⁉中東情勢懸念でWTI原油100ドルに急騰→日経平均先物急落】円安加速でドル円160円間近→海外投資家日本株売り加速か。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=tYTyfo1FhgU",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/14【日本株また暴落か⁉中東情勢懸念でWTI原油100ドルに急騰→日経平均先物急落】円安加速でドル円160円間近→海外投資家日本株売り加速か。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=tYTyfo1FhgU",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/14【日本株また暴落か⁉中東情勢懸念でWTI原油100ドルに急騰→日経平均先物急落】円安加速でドル円160円間近→海外投資家日本株売り加速か。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=tYTyfo1FhgU",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/14【日本株また暴落か⁉中東情勢懸念でWTI原油100ドルに急騰→日経平均先物急落】円安加速でドル円160円間近→海外投資家日本株売り加速か。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=tYTyfo1FhgU",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/13【海外投資家が日本株7457億円売却‼個人投資家高値掴み爆増→日経平均大暴落】中東情勢懸念でWTI原油急騰、ドル円159円、米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=P-8j1TkoxJw",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/13【海外投資家が日本株7457億円売却‼個人投資家高値掴み爆増→日経平均大暴落】中東情勢懸念でWTI原油急騰、ドル円159円、米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=P-8j1TkoxJw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/13【海外投資家が日本株7457億円売却‼個人投資家高値掴み爆増→日経平均大暴落】中東情勢懸念でWTI原油急騰、ドル円159円、米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=P-8j1TkoxJw",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/13【海外投資家が日本株7457億円売却‼個人投資家高値掴み爆増→日経平均大暴落】中東情勢懸念でWTI原油急騰、ドル円159円、米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=P-8j1TkoxJw",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/12【海外投資家が日本株7457億円売却‼個人投資家高値掴み爆増→日経平均大暴落】中東情勢懸念でWTI原油急騰、ドル円159円、米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=On7MLyodKww",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/12【海外投資家が日本株7457億円売却‼個人投資家高値掴み爆増→日経平均大暴落】中東情勢懸念でWTI原油急騰、ドル円159円、米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=On7MLyodKww",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/12【海外投資家が日本株7457億円売却‼個人投資家高値掴み爆増→日経平均大暴落】中東情勢懸念でWTI原油急騰、ドル円159円、米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=On7MLyodKww",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/12【海外投資家が日本株7457億円売却‼個人投資家高値掴み爆増→日経平均大暴落】中東情勢懸念でWTI原油急騰、ドル円159円、米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=On7MLyodKww",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "SBI増配。ホンダ急落。トリケミカル減益。神戸物産減益。ゴールデンドーム関連上昇開始。モジタバ師に～あす上がる株　2026年３月１６日（月）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=sTJ1bB-a4tE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ホンダが急落で利回り５％超。肥料関連銘柄が続伸。イランモジタバ師、ホルムズ海峡封鎖継続。2026年３月１３日（金）～明日上がる株最新の日本株情報。高配当株の株価",
+      "video_url": "https://www.youtube.com/watch?v=CZnn3pdc204",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "３月暴落相場！絶対押さえる厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=Ipmohab4Jgc",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "日経VIは高水準、個別銘柄の押し目買いが狙い目？【本日のデリバティブ】3月13日 ブライトンリサーチ 堀川秀樹さん",
+      "video_url": "https://www.youtube.com/watch?v=GyIHeiVAz_4",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "ドル円は1月の高値突破！中銀ウィークとなる来週の焦点は【FXフォーカス】 3月13日 外為どっとコム総合研究所 神田卓也さん",
+      "video_url": "https://www.youtube.com/watch?v=a4rb4zUp5fc",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "「有事のドル買い」はオワコン 金利差トレード復活か？【GUEST TALK】吉田恒さん／マネックス証券 &quot;WMZ&quot;  Thursday, 1",
+      "video_url": "https://www.youtube.com/watch?v=O6AL1htcq_Y",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "ドル円159円台、ドル買いの背景と地政学リスクのポイントとは！？【FXフォーカス】 3月12日 ソニーフィナンシャルグループ 石川久美子さん",
+      "video_url": "https://www.youtube.com/watch?v=nTENSMzHpUA",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "ドル円159円台、ドル買いの背景と地政学リスクのポイントとは！？【FXフォーカス】 3月12日 ソニーフィナンシャルグループ 石川久美子さん",
+      "video_url": "https://www.youtube.com/watch?v=nTENSMzHpUA",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "高配当銘柄に絶好の押し目【ゲスト】3月12日 岩井コスモ証券 有沢正一さん",
+      "video_url": "https://www.youtube.com/watch?v=bdpY5fa8Mho",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "ドル円はダブルボトム形成！注目イベントと上値メドは？【FXフォーカス】 3月11日 外為どっとコム総合研究所 宇栄原宗平さん",
+      "video_url": "https://www.youtube.com/watch?v=33NH4VbtqUU",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 0,
+        "bear": 12
+      },
+      "株リアルライブ": {
+        "bull": 2,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 1
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 3,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円安": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 5,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE",
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "STOCKVOICE",
+          "優待ライダー",
+          "株リアルライブ"
+        ]
+      },
+      "日経": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      },
+      "金利": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      }
+    },
+    "hot_words": [
+      "ドル円",
+      "高配当",
+      "日経平均",
+      "半導体",
+      "ナスダック",
+      "円安",
+      "日経",
+      "金利",
+      "ソニー"
+    ]
+  }
+}
