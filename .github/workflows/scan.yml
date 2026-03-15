@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install yfinance numpy pandas anthropic
+        run: pip install yfinance numpy pandas anthropic google-genai
 
       - name: Run stock scan
         run: python fetch_stocks.py
