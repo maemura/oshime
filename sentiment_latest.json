@@ -3,13 +3,6 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "ドル円",
-      "size": "xl",
-      "mood": "calm",
-      "count": 5,
-      "sources": 2
-    },
-    {
       "word": "日経平均",
       "size": "lg",
       "mood": "fear",
@@ -25,20 +18,20 @@
     },
     {
       "word": "円安",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
+      "count": 2,
       "sources": 1
+    },
+    {
+      "word": "ドル円",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "日経",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "金利",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -47,27 +40,26 @@
   ],
   "institutional": [
     {
-      "word": "高配当",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 3
-    },
-    {
       "word": "半導体",
       "size": "lg",
       "mood": "fear",
       "count": 3,
       "sources": 1
-    }
-  ],
-  "retail": [
+    },
     {
-      "word": "ソニー",
+      "word": "高配当",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "決算",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
-  ]
+  ],
+  "retail": []
 }
