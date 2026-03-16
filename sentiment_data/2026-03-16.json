@@ -1,15 +1,59 @@
 {
   "date": "2026-03-16",
-  "collected_at": "2026-03-16 10:34",
+  "collected_at": "2026-03-16 21:58",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 32,
-  "entry_count": 15,
+  "videos_processed": 29,
+  "entry_count": 17,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
       "video_title": "3/16【日経平均壁ドン警戒‼日本株投げ売り来るか】中東情勢懸念でWTI原油高止まり、円安加速で為替介入警戒か。海外投資家日本株売り加速。米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=78x0KrOuSQk",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/16【日経平均壁ドン警戒‼日本株投げ売り来るか】中東情勢懸念でWTI原油高止まり、円安加速で為替介入警戒か。海外投資家日本株売り加速。米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=78x0KrOuSQk",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/16【日経平均壁ドン警戒‼日本株投げ売り来るか】中東情勢懸念でWTI原油高止まり、円安加速で為替介入警戒か。海外投資家日本株売り加速。米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=78x0KrOuSQk",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/16【日経平均壁ドン警戒‼日本株投げ売り来るか】中東情勢懸念でWTI原油高止まり、円安加速で為替介入警戒か。海外投資家日本株売り加速。米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=78x0KrOuSQk",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/16【日経平均壁ドン警戒‼日本株投げ売り来るか】中東情勢懸念でWTI原油高止まり、円安加速で為替介入警戒か。海外投資家日本株売り加速。米国株、ナスダック、半",
       "video_url": "https://www.youtube.com/watch?v=FbcEsix7LT4",
       "topic": "日経平均",
       "category": "macro",
@@ -96,47 +140,14 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/14【日本株また暴落か⁉中東情勢懸念でWTI原油100ドルに急騰→日経平均先物急落】円安加速でドル円160円間近→海外投資家日本株売り加速か。米国株、ナスダ",
-      "video_url": "https://www.youtube.com/watch?v=tYTyfo1FhgU",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/14【日本株また暴落か⁉中東情勢懸念でWTI原油100ドルに急騰→日経平均先物急落】円安加速でドル円160円間近→海外投資家日本株売り加速か。米国株、ナスダ",
-      "video_url": "https://www.youtube.com/watch?v=tYTyfo1FhgU",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "東京電力が原発停止。赤沢発言でレアアース関連急騰。鳥貴族急落。トリケミカル急落。全国保証上方増配。～あす上がる株　2026年３月１７日（火）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=V-8nx4rj6vM",
+      "topic": "高配当",
       "category": "sector",
-      "sentiment": "bearish",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/14【日本株また暴落か⁉中東情勢懸念でWTI原油100ドルに急騰→日経平均先物急落】円安加速でドル円160円間近→海外投資家日本株売り加速か。米国株、ナスダ",
-      "video_url": "https://www.youtube.com/watch?v=tYTyfo1FhgU",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/14【日本株また暴落か⁉中東情勢懸念でWTI原油100ドルに急騰→日経平均先物急落】円安加速でドル円160円間近→海外投資家日本株売り加速か。米国株、ナスダ",
-      "video_url": "https://www.youtube.com/watch?v=tYTyfo1FhgU",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -163,6 +174,17 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "株価安値放置も増配で注目急浮上！安定累進配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=I1K7qjUPi84",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "３月暴落相場！絶対押さえる厳選高配当１０銘柄",
       "video_url": "https://www.youtube.com/watch?v=Ipmohab4Jgc",
       "topic": "高配当",
@@ -176,10 +198,10 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 8
+        "bear": 4
       },
       "株リアルライブ": {
-        "bull": 2,
+        "bull": 3,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -214,34 +236,34 @@
     "by_topic": {
       "日経平均": {
         "count": 3,
-        "sentiment": "bearish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 3,
-        "sentiment": "bearish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ナスダック": {
         "count": 3,
-        "sentiment": "bearish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "円安": {
         "count": 3,
-        "sentiment": "bearish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "高配当": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
@@ -254,6 +276,13 @@
         "sources": [
           "株リアルライブ"
         ]
+      },
+      "配当": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "優待ライダー"
+        ]
       }
     },
     "hot_words": [
@@ -262,7 +291,8 @@
       "ナスダック",
       "円安",
       "高配当",
-      "決算"
+      "決算",
+      "配当"
     ]
   }
 }
