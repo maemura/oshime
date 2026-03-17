@@ -2559,8 +2559,6 @@ async function loadPortfolioThemes(){
     const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/portfolio.json?t='+Date.now());
     if(!res.ok) return;
     const pf=await res.json();
-    const el=document.getElementById('portfolioBody');
-    if(!el) return;
     // HeroのDay表示を更新
     const heroDay=document.getElementById('heroDay');
     if(heroDay) heroDay.textContent='Day '+pf.day+' ・ '+pf.date.replace(/-/g,'/');
@@ -2572,6 +2570,8 @@ async function loadPortfolioThemes(){
     if(_hNav)_hNav.textContent='¥'+Math.round(pf.total_asset/10000)+'万';
     if(_hPnl){_hPnl.textContent=(_pnl>=0?'+':'')+_pnlPct+'%';_hPnl.className='hero-stat-val '+(_pnl>=0?'buy':'dn');}
     if(_hCash)_hCash.textContent=Math.round(pf.cash/pf.total_asset*100)+'%';
+    const el=document.getElementById('portfolioBody');
+    if(!el) return;
 
     const themeNames={dividend:'💰 高配当大手株',ai:'🤖 AI・半導体',kokusaku:'🏛️ 国策・エネルギー',trend:'🔥 トレンド・話題株'};
     const themeColors={dividend:'#ffd700',ai:'#4a90e2',kokusaku:'#4aeaaa',trend:'#ff6b7a'};
