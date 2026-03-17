@@ -2557,8 +2557,10 @@ async function loadQuestions(){
 async function loadPortfolioThemes(){
   try{
     const res=await fetch('portfolio.json?t='+Date.now());
+    console.log("portfolio fetch status:",res.status);
     if(!res.ok) return;
     const pf=await res.json();
+    console.log("pf.total_asset:",pf.total_asset,"pf.day:",pf.day);
     // HeroのDay表示を更新
     const heroDay=document.getElementById('heroDay');
     if(heroDay) heroDay.textContent='Day '+pf.day+' ・ '+pf.date.replace(/-/g,'/');
