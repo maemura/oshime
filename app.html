@@ -2564,6 +2564,14 @@ async function loadPortfolioThemes(){
     // HeroのDay表示を更新
     const heroDay=document.getElementById('heroDay');
     if(heroDay) heroDay.textContent='Day '+pf.day+' ・ '+pf.date.replace(/-/g,'/');
+    const _hNav=document.getElementById('heroNav');
+    const _hPnl=document.getElementById('heroPnl');
+    const _hCash=document.getElementById('heroCash');
+    const _pnl=pf.total_asset-pf.initial_capital;
+    const _pnlPct=(_pnl/pf.initial_capital*100).toFixed(2);
+    if(_hNav)_hNav.textContent='¥'+Math.round(pf.total_asset/10000)+'万';
+    if(_hPnl){_hPnl.textContent=(_pnl>=0?'+':'')+_pnlPct+'%';_hPnl.className='hero-stat-val '+(_pnl>=0?'buy':'dn');}
+    if(_hCash)_hCash.textContent=Math.round(pf.cash/pf.total_asset*100)+'%';
 
     const themeNames={dividend:'💰 高配当大手株',ai:'🤖 AI・半導体',kokusaku:'🏛️ 国策・エネルギー',trend:'🔥 トレンド・話題株'};
     const themeColors={dividend:'#ffd700',ai:'#4a90e2',kokusaku:'#4aeaaa',trend:'#ff6b7a'};
