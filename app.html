@@ -2545,6 +2545,9 @@ async function loadPortfolioThemes(){
     const pf=await res.json();
     const el=document.getElementById('portfolioBody');
     if(!el) return;
+    // HeroのDay表示を更新
+    const heroDay=document.getElementById('heroDay');
+    if(heroDay) heroDay.textContent='Day '+pf.day+' ・ '+pf.date.replace(/-/g,'/');
 
     const themeNames={dividend:'💰 高配当大手株',ai:'🤖 AI・半導体',kokusaku:'🏛️ 国策・エネルギー',trend:'🔥 トレンド・話題株'};
     const themeColors={dividend:'#ffd700',ai:'#4a90e2',kokusaku:'#4aeaaa',trend:'#ff6b7a'};
