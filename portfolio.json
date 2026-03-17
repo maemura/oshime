@@ -1,46 +1,220 @@
 {
-  "day": 13,
-  "date": "2026-03-12",
-  "total_asset": 10206800,
-  "cash": 3674448,
-  "pnl_pct": 2.07,
+  "day": 16,
+  "date": "2026-03-17",
+  "total_asset": 9962560,
+  "cash": 3587350,
+  "pnl_pct": -0.37,
   "holdings": [
-    {"code": "8411", "name": "みずほFG", "shares": 100, "buy_price": 6382, "theme": "dividend", "s_stock": false},
-    {"code": "8306", "name": "三菱UFJ", "shares": 200, "buy_price": 2715, "theme": "dividend", "s_stock": false},
-    {"code": "9432", "name": "NTT", "shares": 3000, "buy_price": 154, "theme": "dividend", "s_stock": false},
-    {"code": "8031", "name": "三井物産", "shares": 100, "buy_price": 5822, "theme": "dividend", "s_stock": false},
-    {"code": "6920", "name": "レーザーテック", "shares": 10, "buy_price": 34770, "theme": "ai", "s_stock": true},
-    {"code": "6857", "name": "アドバンテスト", "shares": 10, "buy_price": 24070, "theme": "ai", "s_stock": true},
-    {"code": "5803", "name": "フジクラ", "shares": 10, "buy_price": 24065, "theme": "ai", "s_stock": true},
-    {"code": "8035", "name": "東京エレクトロン", "shares": 5, "buy_price": 40760, "theme": "ai", "s_stock": true},
-    {"code": "9984", "name": "ソフトバンクG", "shares": 10, "buy_price": 3632, "theme": "ai", "s_stock": true},
-    {"code": "285A", "name": "キオクシア", "shares": 10, "buy_price": 19570, "theme": "ai", "s_stock": true},
-    {"code": "5801", "name": "古河電工", "shares": 10, "buy_price": 27455, "theme": "ai", "s_stock": true},
-    {"code": "1605", "name": "INPEX", "shares": 200, "buy_price": 3950, "theme": "kokusaku", "s_stock": false},
-    {"code": "7011", "name": "三菱重工", "shares": 200, "buy_price": 4700, "theme": "kokusaku", "s_stock": false},
-    {"code": "7013", "name": "IHI", "shares": 100, "buy_price": 3791, "theme": "kokusaku", "s_stock": false},
-    {"code": "5020", "name": "ENEOS", "shares": 10, "buy_price": 1360.5, "theme": "kokusaku", "s_stock": true},
-    {"code": "9107", "name": "川崎汽船", "shares": 10, "buy_price": 2613, "theme": "kokusaku", "s_stock": true},
-    {"code": "7974", "name": "任天堂", "shares": 10, "buy_price": 9120, "theme": "trend", "s_stock": true},
-    {"code": "8136", "name": "サンリオ", "shares": 10, "buy_price": 5581, "theme": "trend", "s_stock": true},
-    {"code": "7832", "name": "バンダイナムコ", "shares": 10, "buy_price": 4197, "theme": "trend", "s_stock": true},
-    {"code": "3350", "name": "メタプラネット", "shares": 200, "buy_price": 354, "theme": "trend", "s_stock": false},
-    {"code": "7936", "name": "アシックス", "shares": 10, "buy_price": 4331, "theme": "trend", "s_stock": true},
-    {"code": "8050", "name": "セイコーG", "shares": 10, "buy_price": 12490, "theme": "trend", "s_stock": true},
-    {"code": "6072", "name": "地盤ネットHD", "shares": 100, "buy_price": 1045, "theme": "trend", "s_stock": false}
+    {
+      "code": "8411",
+      "name": "みずほFG",
+      "shares": 100,
+      "buy_price": 6382,
+      "theme": "dividend",
+      "s_stock": false
+    },
+    {
+      "code": "8306",
+      "name": "三菱UFJ",
+      "shares": 200,
+      "buy_price": 2715,
+      "theme": "dividend",
+      "s_stock": false
+    },
+    {
+      "code": "9432",
+      "name": "NTT",
+      "shares": 3000,
+      "buy_price": 154,
+      "theme": "dividend",
+      "s_stock": false
+    },
+    {
+      "code": "8031",
+      "name": "三井物産",
+      "shares": 100,
+      "buy_price": 5822,
+      "theme": "dividend",
+      "s_stock": false
+    },
+    {
+      "code": "6920",
+      "name": "レーザーテック",
+      "shares": 10,
+      "buy_price": 34770,
+      "theme": "ai",
+      "s_stock": true
+    },
+    {
+      "code": "6857",
+      "name": "アドバンテスト",
+      "shares": 10,
+      "buy_price": 24070,
+      "theme": "ai",
+      "s_stock": true
+    },
+    {
+      "code": "5803",
+      "name": "フジクラ",
+      "shares": 10,
+      "buy_price": 24065,
+      "theme": "ai",
+      "s_stock": true
+    },
+    {
+      "code": "8035",
+      "name": "東京エレクトロン",
+      "shares": 5,
+      "buy_price": 40760,
+      "theme": "ai",
+      "s_stock": true
+    },
+    {
+      "code": "9984",
+      "name": "ソフトバンクG",
+      "shares": 10,
+      "buy_price": 3632,
+      "theme": "ai",
+      "s_stock": true
+    },
+    {
+      "code": "285A",
+      "name": "キオクシア",
+      "shares": 10,
+      "buy_price": 19570,
+      "theme": "ai",
+      "s_stock": true
+    },
+    {
+      "code": "5801",
+      "name": "古河電工",
+      "shares": 10,
+      "buy_price": 27455,
+      "theme": "ai",
+      "s_stock": true
+    },
+    {
+      "code": "1605",
+      "name": "INPEX",
+      "shares": 200,
+      "buy_price": 3950,
+      "theme": "kokusaku",
+      "s_stock": false
+    },
+    {
+      "code": "7011",
+      "name": "三菱重工",
+      "shares": 200,
+      "buy_price": 4700,
+      "theme": "kokusaku",
+      "s_stock": false
+    },
+    {
+      "code": "7013",
+      "name": "IHI",
+      "shares": 100,
+      "buy_price": 3791,
+      "theme": "kokusaku",
+      "s_stock": false
+    },
+    {
+      "code": "5020",
+      "name": "ENEOS",
+      "shares": 10,
+      "buy_price": 1360.5,
+      "theme": "kokusaku",
+      "s_stock": true
+    },
+    {
+      "code": "9107",
+      "name": "川崎汽船",
+      "shares": 10,
+      "buy_price": 2613,
+      "theme": "kokusaku",
+      "s_stock": true
+    },
+    {
+      "code": "7974",
+      "name": "任天堂",
+      "shares": 10,
+      "buy_price": 9120,
+      "theme": "trend",
+      "s_stock": true
+    },
+    {
+      "code": "8136",
+      "name": "サンリオ",
+      "shares": 10,
+      "buy_price": 5581,
+      "theme": "trend",
+      "s_stock": true
+    },
+    {
+      "code": "7832",
+      "name": "バンダイナムコ",
+      "shares": 10,
+      "buy_price": 4197,
+      "theme": "trend",
+      "s_stock": true
+    },
+    {
+      "code": "3350",
+      "name": "メタプラネット",
+      "shares": 200,
+      "buy_price": 354,
+      "theme": "trend",
+      "s_stock": false
+    },
+    {
+      "code": "7936",
+      "name": "アシックス",
+      "shares": 10,
+      "buy_price": 4331,
+      "theme": "trend",
+      "s_stock": true
+    },
+    {
+      "code": "8050",
+      "name": "セイコーG",
+      "shares": 10,
+      "buy_price": 12490,
+      "theme": "trend",
+      "s_stock": true
+    }
   ],
   "themes": {
-    "dividend": {"name": "💰 高配当大手株", "take_profit": 20, "stop_loss": -15, "review": "減配時のみ"},
-    "ai": {"name": "🤖 AI・半導体", "take_profit": 15, "stop_loss": -10, "review": "四半期決算"},
-    "kokusaku": {"name": "🏛️ 国策・エネルギー", "take_profit": 20, "stop_loss": -15, "review": "月1回"},
-    "trend": {"name": "🔥 トレンド・話題株", "take_profit": 10, "stop_loss": -8, "review": "毎週"}
+    "dividend": {
+      "name": "💰 高配当大手株",
+      "take_profit": 20,
+      "stop_loss": -15,
+      "review": "減配時のみ"
+    },
+    "ai": {
+      "name": "🤖 AI・半導体",
+      "take_profit": 15,
+      "stop_loss": -10,
+      "review": "四半期決算"
+    },
+    "kokusaku": {
+      "name": "🏛️ 国策・エネルギー",
+      "take_profit": 20,
+      "stop_loss": -15,
+      "review": "月1回"
+    },
+    "trend": {
+      "name": "🔥 トレンド・話題株",
+      "take_profit": 10,
+      "stop_loss": -8,
+      "review": "毎週"
+    }
   },
   "rules": {
     "vix_buy_ok": 20,
     "vix_dividend_only": 28,
-    "min_cash_wartime": 0.20,
-    "min_cash_peacetime": 0.10,
+    "min_cash_wartime": 0.2,
+    "min_cash_peacetime": 0.1,
     "max_per_stock": 0.08
   },
-  "sold_today": []
+  "sold_today": [],
+  "initial_capital": 10000000
 }
