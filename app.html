@@ -1132,15 +1132,10 @@ h2,h3{color:var(--neon-cyan)!important;text-shadow:0 0 10px rgba(0,245,255,0.4);
         </div>
       </div>
       <div class="hero-stats" id="heroStats">
-        <div class="hero-stat"><div class="hero-stat-val" id="heroNav">—</div><div class="hero-stat-label">総資産</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="heroPnl">—</div><div class="hero-stat-label">開始来</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="heroCash">—</div><div class="hero-stat-label">現金比率</div></div>
-        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏銘柄</div></div>
-      </div>
-      <!-- X フォローボタン -->
-      <div style="text-align:center;margin-top:12px;display:flex;justify-content:center;gap:10px">
-        <a href="https://x.com/kabunosuke_navi" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#000;color:#fff;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:700;text-decoration:none">𝕏 フォローする</a>
-        <a href="https://www.youtube.com/@kabuko_screening" target="_blank" style="display:inline-flex;align-items:center;gap:6px;background:#ff0000;color:#fff;padding:8px 16px;border-radius:20px;font-size:12px;font-weight:700;text-decoration:none">▶ YouTube</a>
+        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏の銘柄数</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
       </div>
       <div class="hero-dots"></div>
       <div class="hero-scanline"></div>
@@ -1151,6 +1146,23 @@ h2,h3{color:var(--neon-cyan)!important;text-shadow:0 0 10px rgba(0,245,255,0.4);
 
     <!-- MARKET PULSE -->
     <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
+
+    <!-- 🤖 AIコメント + 騰落ランキング -->
+    <div class="mkt-card" id="mktCommentSection" style="display:none">
+      <div class="mkt-header">
+        <div class="mkt-avatar">🤖</div>
+        <div>
+          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
+          <div class="mkt-when" id="mktCommentDate"></div>
+        </div>
+      </div>
+      <div class="mkt-body">
+        <div class="mkt-comment" id="mktCommentBody"></div>
+        <div class="mkt-tags" id="mktCommentTags"></div>
+        <div class="mkt-sources" id="mktCommentSources"></div>
+      </div>
+    </div>
+
 
     <!-- 📱 かぶ子、おにいちゃんに聞いてみた -->
     <div class="mkt-card" id="interviewSection" style="display:none">
@@ -1171,21 +1183,6 @@ h2,h3{color:var(--neon-cyan)!important;text-shadow:0 0 10px rgba(0,245,255,0.4);
       </div>
     </div>
 
-    <!-- 🤖 AIコメント + 騰落ランキング -->
-    <div class="mkt-card" id="mktCommentSection" style="display:none">
-      <div class="mkt-header">
-        <div class="mkt-avatar">🤖</div>
-        <div>
-          <div class="mkt-who">かぶのすけ（AI）の今日の見立て</div>
-          <div class="mkt-when" id="mktCommentDate"></div>
-        </div>
-      </div>
-      <div class="mkt-body">
-        <div class="mkt-comment" id="mktCommentBody"></div>
-        <div class="mkt-tags" id="mktCommentTags"></div>
-        <div class="mkt-sources" id="mktCommentSources"></div>
-      </div>
-    </div>
 
 
     <div class="rank-card" id="rankSection" style="display:none">
@@ -2548,19 +2545,9 @@ async function loadPortfolioThemes(){
     const pf=await res.json();
     const el=document.getElementById('portfolioBody');
     if(!el) return;
-    // HeroのDay・資産表示を更新
+    // HeroのDay表示を更新
     const heroDay=document.getElementById('heroDay');
     if(heroDay) heroDay.textContent='Day '+pf.day+' ・ '+pf.date.replace(/-/g,'/');
-    const heroNav=document.getElementById('heroNav');
-    if(heroNav) heroNav.textContent='¥'+pf.total_asset.toLocaleString();
-    const heroPnl=document.getElementById('heroPnl');
-    if(heroPnl){
-      const sign=pf.pnl_pct>=0?'+':'';
-      heroPnl.textContent=sign+pf.pnl_pct+'%';
-      heroPnl.style.color=pf.pnl_pct>=0?'var(--green)':'var(--red)';
-    }
-    const heroCash=document.getElementById('heroCash');
-    if(heroCash) heroCash.textContent=Math.round(pf.cash/pf.total_asset*100)+'%';
 
     const themeNames={dividend:'💰 高配当大手株',ai:'🤖 AI・半導体',kokusaku:'🏛️ 国策・エネルギー',trend:'🔥 トレンド・話題株'};
     const themeColors={dividend:'#ffd700',ai:'#4a90e2',kokusaku:'#4aeaaa',trend:'#ff6b7a'};
