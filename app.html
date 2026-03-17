@@ -2561,6 +2561,7 @@ async function loadPortfolioThemes(){
     if(!res.ok) return;
     const pf=await res.json();
     console.log("pf.total_asset:",pf.total_asset,"pf.day:",pf.day);
+    document.getElementById("heroDay").textContent="LOADED:"+pf.total_asset;
     // HeroのDay表示を更新
     const heroDay=document.getElementById('heroDay');
     if(heroDay) heroDay.textContent='Day '+pf.day+' ・ '+pf.date.replace(/-/g,'/');
