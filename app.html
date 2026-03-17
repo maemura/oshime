@@ -2485,7 +2485,7 @@ function run(){
 // ═══════════════════════════════════════
 async function loadQuestions(){
   try{
-    const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/stocks_data.json?t='+Date.now());
+    const res=await fetch('stocks_data.json?t='+Date.now());
     if(!res.ok) return;
     const data=await res.json();
     const stocks=data.stocks||[];
@@ -2556,7 +2556,7 @@ async function loadQuestions(){
 
 async function loadPortfolioThemes(){
   try{
-    const res=await fetch('https://raw.githubusercontent.com/maemura/oshime/main/portfolio.json?t='+Date.now());
+    const res=await fetch('portfolio.json?t='+Date.now());
     if(!res.ok) return;
     const pf=await res.json();
     // HeroのDay表示を更新
