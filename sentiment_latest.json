@@ -1,13 +1,13 @@
 {
-  "date": "2026-03-16",
+  "date": "2026-03-17",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "calm",
-      "count": 3,
-      "sources": 1
+      "count": 5,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -22,28 +22,35 @@
       "mood": "calm",
       "count": 3,
       "sources": 1
+    },
+    {
+      "word": "トランプ",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "日経",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 1
     }
   ],
   "institutional": [
+    {
+      "word": "高配当",
+      "size": "lg",
+      "mood": "greed",
+      "count": 4,
+      "sources": 2
+    },
     {
       "word": "半導体",
       "size": "lg",
       "mood": "calm",
       "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "高配当",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "決算",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
       "sources": 1
     },
     {
