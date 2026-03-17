@@ -4,22 +4,22 @@
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
-      "mood": "calm",
-      "count": 5,
-      "sources": 2
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     },
     {
       "word": "円安",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     },
@@ -32,24 +32,24 @@
     },
     {
       "word": "日経",
-      "size": "md",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
+      "count": 1,
       "sources": 1
     }
   ],
   "institutional": [
     {
+      "word": "半導体",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
+    },
+    {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "半導体",
-      "size": "lg",
-      "mood": "calm",
       "count": 3,
       "sources": 1
     },
