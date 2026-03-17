@@ -1132,17 +1132,27 @@ h2,h3{color:var(--neon-cyan)!important;text-shadow:0 0 10px rgba(0,245,255,0.4);
         </div>
       </div>
       <div class="hero-stats" id="heroStats">
-        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏の銘柄数</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsTop">—</div><div class="hero-stat-label">本日1位スコア</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsDiv">—</div><div class="hero-stat-label">最高配当利回り</div></div>
-        <div class="hero-stat"><div class="hero-stat-val" id="hsTotal">—</div><div class="hero-stat-label">スキャン銘柄数</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="heroNav">—</div><div class="hero-stat-label">総資産</div></div>
+        <div class="hero-stat"><div class="hero-stat-val buy" id="heroPnl">—</div><div class="hero-stat-label">開始来</div></div>
+        <div class="hero-stat"><div class="hero-stat-val" id="heroCash">—</div><div class="hero-stat-label">現金比率</div></div>
+        <div class="hero-stat"><div class="hero-stat-val buy" id="hsBuy">—</div><div class="hero-stat-label">買い圏銘柄数</div></div>
       </div>
       <div class="hero-dots"></div>
       <div class="hero-scanline"></div>
       <div class="hero-weather-badge" id="weatherBadge">🌇</div>
     </div>
 
-    <!-- TRUST BAR removed -->
+    <!-- FOLLOW BUTTONS -->
+    <div style="display:flex;gap:8px;padding:0 16px 12px;max-width:480px;margin:0 auto">
+      <a href="https://x.com/kabunosuke_navi" target="_blank" rel="noopener"
+         style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;background:#000;border-radius:10px;color:#fff;text-decoration:none;font-size:12px;font-weight:700;">
+        𝕏 フォローする
+      </a>
+      <a href="https://www.youtube.com/@kabuko_screening" target="_blank" rel="noopener"
+         style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:10px;background:#ff0000;border-radius:10px;color:#fff;text-decoration:none;font-size:12px;font-weight:700;">
+        ▶ チャンネル登録
+      </a>
+    </div>
 
     <!-- MARKET PULSE -->
     <div class="pulse"><div class="pulse-row" id="pulseBar"></div></div>
@@ -2230,6 +2240,12 @@ function renderPortfolio(){
   const currentNav=nav.nav;
   const pnl=currentNav-pf.initial_capital;
   const pnlPct=(pnl/pf.initial_capital*100).toFixed(2);
+  const _heroNav=document.getElementById('heroNav');
+  const _heroPnl=document.getElementById('heroPnl');
+  const _heroCash=document.getElementById('heroCash');
+  if(_heroNav)_heroNav.textContent='\u00a5'+Math.round(currentNav/10000)+'万';
+  if(_heroPnl){_heroPnl.textContent=(pnl>=0?'+':'')+pnlPct+'%';_heroPnl.className='hero-stat-val '+(pnl>=0?'buy':'dn');}
+  if(_heroCash)_heroCash.textContent=Math.round(pf.cash/currentNav*100)+'%';
   const dayCount=pf.daily_nav.length;
   const posCount=(pf.positions||[]).length;
   const cashPct=Math.round(pf.cash/currentNav*100);
