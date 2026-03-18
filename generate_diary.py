@@ -496,8 +496,9 @@ def main():
     d = analyze(pf, cm, sd)
     date = d["date"]
 
-    os.makedirs("diary", exist_ok=True)
-    out_path = f"diary/{date}.txt"
+    diary_dir = "/Users/maemurahideyuki/Library/CloudStorage/GoogleDrive-hide.maemura@gmail.com/マイドライブ/oshime/diary"
+    os.makedirs(diary_dir, exist_ok=True)
+    out_path = os.path.join(diary_dir, f"{date}.txt")
 
     sections = []
 
