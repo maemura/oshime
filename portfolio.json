@@ -1,9 +1,9 @@
 {
-  "day": 16,
-  "date": "2026-03-17",
-  "total_asset": 9962560,
+  "day": 17,
+  "date": "2026-03-18",
+  "total_asset": 8769880,
   "cash": 2016100.0,
-  "pnl_pct": -0.37,
+  "pnl_pct": -12.3,
   "holdings": [
     {
       "code": "8411",
@@ -11,7 +11,9 @@
       "shares": 100,
       "buy_price": 6382,
       "theme": "dividend",
-      "s_stock": false
+      "s_stock": false,
+      "current_price": 6320,
+      "pnl_pct": -1.0
     },
     {
       "code": "8306",
@@ -19,7 +21,9 @@
       "shares": 200,
       "buy_price": 2715,
       "theme": "dividend",
-      "s_stock": false
+      "s_stock": false,
+      "current_price": 2731,
+      "pnl_pct": 0.6
     },
     {
       "code": "9432",
@@ -27,7 +31,9 @@
       "shares": 3000,
       "buy_price": 154,
       "theme": "dividend",
-      "s_stock": false
+      "s_stock": false,
+      "current_price": 158,
+      "pnl_pct": 2.6
     },
     {
       "code": "8031",
@@ -35,7 +41,9 @@
       "shares": 100,
       "buy_price": 5822,
       "theme": "dividend",
-      "s_stock": false
+      "s_stock": false,
+      "current_price": 6659,
+      "pnl_pct": 14.4
     },
     {
       "code": "6920",
@@ -43,7 +51,9 @@
       "shares": 10,
       "buy_price": 34770,
       "theme": "ai",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 36020,
+      "pnl_pct": 3.6
     },
     {
       "code": "6857",
@@ -51,7 +61,9 @@
       "shares": 10,
       "buy_price": 24070,
       "theme": "ai",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 25130,
+      "pnl_pct": 4.4
     },
     {
       "code": "5803",
@@ -59,7 +71,9 @@
       "shares": 10,
       "buy_price": 24065,
       "theme": "ai",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 25705,
+      "pnl_pct": 6.8
     },
     {
       "code": "8035",
@@ -67,7 +81,9 @@
       "shares": 5,
       "buy_price": 40760,
       "theme": "ai",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 40290,
+      "pnl_pct": -1.2
     },
     {
       "code": "9984",
@@ -75,7 +91,9 @@
       "shares": 10,
       "buy_price": 3632,
       "theme": "ai",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 3750,
+      "pnl_pct": 3.2
     },
     {
       "code": "285A",
@@ -83,7 +101,9 @@
       "shares": 10,
       "buy_price": 19570,
       "theme": "ai",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 23390,
+      "pnl_pct": 19.5
     },
     {
       "code": "5801",
@@ -91,7 +111,9 @@
       "shares": 10,
       "buy_price": 27455,
       "theme": "ai",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 28720,
+      "pnl_pct": 4.6
     },
     {
       "code": "1605",
@@ -99,7 +121,9 @@
       "shares": 200,
       "buy_price": 3950,
       "theme": "kokusaku",
-      "s_stock": false
+      "s_stock": false,
+      "current_price": 4675,
+      "pnl_pct": 18.4
     },
     {
       "code": "7011",
@@ -107,7 +131,9 @@
       "shares": 200,
       "buy_price": 4700,
       "theme": "kokusaku",
-      "s_stock": false
+      "s_stock": false,
+      "current_price": 5000,
+      "pnl_pct": 6.4
     },
     {
       "code": "7013",
@@ -115,7 +141,9 @@
       "shares": 100,
       "buy_price": 3791,
       "theme": "kokusaku",
-      "s_stock": false
+      "s_stock": false,
+      "current_price": 3930,
+      "pnl_pct": 3.7
     },
     {
       "code": "5020",
@@ -123,7 +151,9 @@
       "shares": 10,
       "buy_price": 1360.5,
       "theme": "kokusaku",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 1439,
+      "pnl_pct": 5.8
     },
     {
       "code": "9107",
@@ -131,7 +161,9 @@
       "shares": 10,
       "buy_price": 2613,
       "theme": "kokusaku",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 2875,
+      "pnl_pct": 10.0
     },
     {
       "code": "7974",
@@ -139,7 +171,9 @@
       "shares": 10,
       "buy_price": 9120,
       "theme": "trend",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 9859,
+      "pnl_pct": 8.1
     },
     {
       "code": "8136",
@@ -147,7 +181,9 @@
       "shares": 10,
       "buy_price": 5581,
       "theme": "trend",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 5460,
+      "pnl_pct": -2.2
     },
     {
       "code": "7832",
@@ -155,7 +191,9 @@
       "shares": 10,
       "buy_price": 4197,
       "theme": "trend",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 4230,
+      "pnl_pct": 0.8
     },
     {
       "code": "3350",
@@ -163,7 +201,9 @@
       "shares": 200,
       "buy_price": 354,
       "theme": "trend",
-      "s_stock": false
+      "s_stock": false,
+      "current_price": 355,
+      "pnl_pct": 0.3
     },
     {
       "code": "7936",
@@ -171,7 +211,9 @@
       "shares": 10,
       "buy_price": 4331,
       "theme": "trend",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 4565,
+      "pnl_pct": 5.4
     },
     {
       "code": "8050",
@@ -179,7 +221,9 @@
       "shares": 10,
       "buy_price": 12490,
       "theme": "trend",
-      "s_stock": true
+      "s_stock": true,
+      "current_price": 12380,
+      "pnl_pct": -0.9
     }
   ],
   "themes": {
