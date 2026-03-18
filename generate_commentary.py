@@ -107,6 +107,71 @@ YouTubeセンチメント:
     return prompt
 
 
+def build_fallback(stocks_data):
+    """Gemini API が不安定なときに返す固定テキストのフォールバック"""
+    stocks = sorted(
+        [s for s in stocks_data.get("stocks", []) if s.get("market_cap_b", 0) > 0],
+        key=lambda s: s.get("market_cap_b", 0),
+        reverse=True,
+    )[:5]
+
+    # 簡易的な市場全体の方向感を計算
+    changes = [s.get("change_pct", 0) for s in stocks_data.get("stocks", []) if s.get("change_pct") is not None]
+    avg_change = sum(changes) / len(changes) if changes else 0
+    up_count = sum(1 for c in changes if c > 0)
+    down_count = sum(1 for c in changes if c < 0)
+
+    if avg_change > 1:
+        daily_feel = "sunny"
+        mood = "全体的にしっかりした展開です。無理せず、流れに乗っていきましょう。"
+    elif avg_change < -1:
+        daily_feel = "storm"
+        mood = "今日はちょっと荒れ模様です。こういう日は静かに見守るのも立派な戦略だと思います。"
+    else:
+        daily_feel = "sunset"
+        mood = "方向感に乏しい一日ですね。焦らず、次のチャンスをじっくり待ちましょう。"
+
+    comment = (
+        f"本日は値上がり{up_count}銘柄・値下がり{down_count}銘柄でした。"
+        f"{mood}"
+        f"（※ AI解説は一時的にお休み中です。データは最新のものを表示しています）"
+    )
+
+    stock_comments = {}
+    for s in stocks:
+        code = s.get("code", "")
+        name = s.get("name", "")
+        chg = s.get("change_pct", 0)
+        if chg > 0:
+            text = f"<strong>{name}</strong>は前日比+{chg:.1f}%。引き続き注目しています。"
+            signal = "watch"
+        elif chg < -3:
+            text = f"<strong>{name}</strong>は前日比{chg:.1f}%と大きめの下落。慎重に見極めたいところです。"
+            signal = "caution"
+        else:
+            text = f"<strong>{name}</strong>は前日比{chg:.1f}%。大きな動きはありませんが、引き続きウォッチしていきます。"
+            signal = "watch"
+        stock_comments[str(code)] = {"text": text, "signal": signal}
+
+    return {
+        "market": {
+            "comment": comment,
+            "daily_feel": daily_feel,
+            "tags": ["📡データ更新済", "🤖AI一時休止", "📊自動集計", "🔍銘柄監視中", "☕ひと休み"],
+        },
+        "stocks": stock_comments,
+        "interview": [
+            {"q": "ねえおにいちゃん、今日の相場ってどう見てるの？", "a": "すみません、今日はAIの調子が悪くて詳しい分析ができていません。データだけは最新ですので参考にしてください。"},
+            {"q": "今日SNSとかで何が話題になってたの？", "a": "ちょっと情報収集がうまくいかなかったです。また明日しっかりお届けしますね。"},
+            {"q": "気になってる銘柄とかニュースあった？", "a": "今日はお休みをいただいています。銘柄データは最新のものが反映されていますよ。"},
+            {"q": "今って無理して買わない方がいい感じ？", "a": "判断材料が揃っていない日は、無理しないのが一番です。"},
+            {"q": "来週どうなりそう？おにいちゃん的には？", "a": "AIの回復次第ですね。明日にはちゃんと分析をお届けできると思います。"},
+            {"q": "じゃあ今日は何の日って感じ？", "a": "かぶのすけ、充電中の日です。"},
+            {"q": "最後に一言！", "a": "ご心配おかけしてすみません。データは動いていますので安心してください。たぶん大丈夫です。たぶん。"},
+        ],
+    }
+
+
 def generate(stocks_data, sentiment_data):
     prompt = build_prompt(stocks_data, sentiment_data)
     print("🤖 Gemini API 呼び出し中...")
@@ -149,13 +214,12 @@ def main():
     try:
         result = generate(stocks_data, sentiment_data)
     except Exception as e:
-        print(f"⚠️ API呼び出し失敗: {e}")
-        print("📝 コメンタリー生成をスキップします")
-        sys.exit(0)
+        print(f"⚠️ Gemini API呼び出し失敗: {e}")
+        result = None
 
     if not result:
-        print("❌ 生成失敗")
-        sys.exit(1)
+        print("🔄 フォールバック: 固定テキストで commentary.json を生成します")
+        result = build_fallback(stocks_data)
 
     result["date"] = now.strftime("%Y/%m/%d %H:%M") + " 自動生成"
 
