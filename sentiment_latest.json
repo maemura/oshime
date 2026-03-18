@@ -1,5 +1,5 @@
 {
-  "date": "2026-03-17",
+  "date": "2026-03-18",
   "mode": "claude",
   "macro": [
     {
@@ -17,13 +17,6 @@
       "sources": 1
     },
     {
-      "word": "円安",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 1
-    },
-    {
       "word": "トランプ",
       "size": "md",
       "mood": "calm",
@@ -31,7 +24,14 @@
       "sources": 2
     },
     {
-      "word": "日経",
+      "word": "円安",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "ドル円",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -55,6 +55,13 @@
     },
     {
       "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "不動産",
       "size": "sm",
       "mood": "calm",
       "count": 1,
