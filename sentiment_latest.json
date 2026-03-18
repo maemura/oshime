@@ -18,10 +18,10 @@
     },
     {
       "word": "トランプ",
-      "size": "md",
+      "size": "lg",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "円安",
@@ -36,18 +36,25 @@
       "mood": "calm",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
     {
-      "word": "半導体",
-      "size": "lg",
+      "word": "高配当",
+      "size": "xl",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
+      "count": 5,
+      "sources": 3
     },
     {
-      "word": "高配当",
+      "word": "半導体",
       "size": "lg",
       "mood": "greed",
       "count": 3,

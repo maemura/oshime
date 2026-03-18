@@ -1,15 +1,15 @@
 {
   "date": "2026-03-18",
-  "collected_at": "2026-03-18 10:14",
+  "collected_at": "2026-03-18 21:54",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 26,
-  "entry_count": 19,
+  "videos_processed": 52,
+  "entry_count": 23,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "3/18【日本株また騙し上げか⁉】トランプTACOで日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、",
+      "video_title": "3/18【日本株また騙し上げか⁉】トランプ発言で日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、仮想",
       "video_url": "https://www.youtube.com/watch?v=ueKp-CfrXMQ",
       "topic": "日経平均",
       "category": "macro",
@@ -20,7 +20,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "3/18【日本株また騙し上げか⁉】トランプTACOで日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、",
+      "video_title": "3/18【日本株また騙し上げか⁉】トランプ発言で日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、仮想",
       "video_url": "https://www.youtube.com/watch?v=ueKp-CfrXMQ",
       "topic": "半導体",
       "category": "sector",
@@ -31,7 +31,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "3/18【日本株また騙し上げか⁉】トランプTACOで日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、",
+      "video_title": "3/18【日本株また騙し上げか⁉】トランプ発言で日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、仮想",
       "video_url": "https://www.youtube.com/watch?v=ueKp-CfrXMQ",
       "topic": "ナスダック",
       "category": "macro",
@@ -42,7 +42,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "3/18【日本株また騙し上げか⁉】トランプTACOで日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、",
+      "video_title": "3/18【日本株また騙し上げか⁉】トランプ発言で日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、仮想",
       "video_url": "https://www.youtube.com/watch?v=ueKp-CfrXMQ",
       "topic": "ドル円",
       "category": "macro",
@@ -53,7 +53,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "3/18【日本株また騙し上げか⁉】トランプTACOで日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、",
+      "video_title": "3/18【日本株また騙し上げか⁉】トランプ発言で日経平均1539円急騰。中東情勢懸念後退でWTI原油下落、ドル円158円推移。米国株、ナスダック、半導体株、仮想",
       "video_url": "https://www.youtube.com/watch?v=ueKp-CfrXMQ",
       "topic": "トランプ",
       "category": "macro",
@@ -152,6 +152,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "商船三井にエリオットが株主還元要求、株式分割も。ベイカレント4.3％自社株買い。三菱マテリアルS高～あす上がる株　2026年３月１９日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=V3QSaS2mxf4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "東京電力が非上場化検討。三菱マテリアルがS高、日米重要鉱物PJで。ネットプロ、訴訟で急落。2026年３月１８日（水）～明日上がる株最新の日本株情報。高配当株の株",
       "video_url": "https://www.youtube.com/watch?v=k-ZhVhoI5NY",
       "topic": "高配当",
@@ -173,12 +184,12 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "対米投資第２弾「蓄電池も候補」。海運が急騰、上場来高値更新。ジャパンディスプレイ、株価６倍。2026年３月１７日（火）～明日上がる株最新の日本株情報。高配当株の",
-      "video_url": "https://www.youtube.com/watch?v=m_wgPfGINWg",
+      "channel": "トレードラボ",
+      "video_title": "最近の暴落で安くなった3月高配当株5選",
+      "video_url": "https://www.youtube.com/watch?v=brH9qyfCAnk",
       "topic": "高配当",
       "category": "sector",
-      "sentiment": "bullish",
+      "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
     },
@@ -206,6 +217,17 @@
     },
     {
       "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "３月暴落相場！絶対押さえる厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=Ipmohab4Jgc",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
       "channel": "たばたの投資ch",
       "video_title": "住友不動産は&quot;良い立地の物件&quot;は絶対に売らない!?",
       "video_url": "https://www.youtube.com/watch?v=9Q9PoGjDyw8",
@@ -214,6 +236,28 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 不動産"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "トランプが「米中首脳会談延期」を示唆している中、中国へホルムズ海峡への軍艦派遣要請",
+      "video_url": "https://www.youtube.com/watch?v=dQZ0JXaJkZc",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経先物1100円以上の一時急落！原油100ドル付近でイラン最高指導者 モジタバ師「ホルムズ封鎖 確実に継続」の初声明で",
+      "video_url": "https://www.youtube.com/watch?v=o6Lj5mqv0LY",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
     }
   ],
   "summary": {
@@ -232,7 +276,7 @@
       },
       "トレードラボ": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "ばっちゃまの投資チャンネル": {
         "bull": 0,
@@ -240,11 +284,11 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -285,11 +329,12 @@
         ]
       },
       "トランプ": {
-        "count": 2,
+        "count": 3,
         "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局",
-          "ばっちゃまの投資チャンネル"
+          "ばっちゃまの投資チャンネル",
+          "たばたの投資ch"
         ]
       },
       "円安": {
@@ -300,10 +345,12 @@
         ]
       },
       "高配当": {
-        "count": 3,
+        "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ"
+          "優待ライダー",
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "配当": {
@@ -319,18 +366,26 @@
         "sources": [
           "たばたの投資ch"
         ]
+      },
+      "日経": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "たばたの投資ch"
+        ]
       }
     },
     "hot_words": [
+      "高配当",
       "日経平均",
       "半導体",
       "ナスダック",
-      "高配当",
       "トランプ",
       "円安",
       "ドル円",
       "配当",
-      "不動産"
+      "不動産",
+      "日経"
     ]
   }
 }
