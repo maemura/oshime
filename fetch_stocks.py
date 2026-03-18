@@ -432,8 +432,10 @@ def fetch_stock_data(code, retries=2):
                 return None
 
             info = tk.info or {}
-            closes = hist["Close"].dropna().values.tolist()
-            volumes = hist["Volume"].dropna().values.tolist()
+            # Close と Volume を同時に dropna して行の対応を保つ
+            cv = hist[["Close", "Volume"]].dropna()
+            closes = cv["Close"].values.tolist()
+            volumes = cv["Volume"].values.tolist()
 
             price = round(closes[-1], 1)
 
@@ -451,6 +453,12 @@ def fetch_stock_data(code, retries=2):
                 avg20 = np.mean(volumes[-20:])
                 if avg20 > 0:
                     vol_r = round(avg5 / avg20, 2)
+
+            # 売買代金 直近5日平均（億円）
+            turnover_avg5 = None
+            if len(closes) >= 5 and len(volumes) >= 5:
+                turnovers = [closes[-(i+1)] * volumes[-(i+1)] for i in range(5)]
+                turnover_avg5 = round(sum(turnovers) / 5 / 1e8, 1)  # 億円
 
             # ファンダメンタル
             dividend = info.get("dividendYield")
@@ -515,6 +523,7 @@ def fetch_stock_data(code, retries=2):
                 "pbr": pbr,
                 "per": per,
                 "vol_r": vol_r,
+                "turnover_avg5": turnover_avg5,
                 "market_cap_b": market_cap_b,
                 "closes_60d": closes_60d,
             }
