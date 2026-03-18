@@ -1,9 +1,9 @@
 {
   "day": 17,
   "date": "2026-03-18",
-  "total_asset": 8769880,
-  "cash": 2016100.0,
-  "pnl_pct": -12.3,
+  "total_asset": 10341130,
+  "cash": 3587350,
+  "pnl_pct": 3.41,
   "holdings": [
     {
       "code": "8411",
@@ -294,7 +294,7 @@
   "daily_nav": [
     {
       "date": "2026-03-18",
-      "nav": 3587350,
+      "nav": 10341130,
       "cash": 2016100,
       "positions_value": 1571250,
       "nikkei": 53700.0
