@@ -13,10 +13,10 @@ except ImportError:
 
 API_KEY = os.environ.get("GEMINI_API_KEY", "")
 if not API_KEY:
-    print("⚠ GEMINI_API_KEY が未設定です")
-    sys.exit(1)
-
-client = genai.Client(api_key=API_KEY)
+    print("⚠ GEMINI_API_KEY が未設定です。フォールバックで生成します。")
+    client = None
+else:
+    client = genai.Client(api_key=API_KEY)
 MODEL = "models/gemini-2.0-flash"
 
 def load_json(path):
@@ -211,11 +211,14 @@ def main():
     if not sentiment_data:
         print("⚠ sentiment_latest.json なし。YouTube情報なしで生成します。")
 
-    try:
-        result = generate(stocks_data, sentiment_data)
-    except Exception as e:
-        print(f"⚠️ Gemini API呼び出し失敗: {e}")
+    if client is None:
         result = None
+    else:
+        try:
+            result = generate(stocks_data, sentiment_data)
+        except Exception as e:
+            print(f"⚠️ Gemini API呼び出し失敗: {e}")
+            result = None
 
     if not result:
         print("🔄 フォールバック: 固定テキストで commentary.json を生成します")
