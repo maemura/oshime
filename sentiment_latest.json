@@ -1,44 +1,51 @@
 {
-  "date": "2026-03-18",
+  "date": "2026-03-19",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
+      "size": "xl",
+      "mood": "fear",
+      "count": 10,
       "sources": 1
     },
     {
       "word": "ナスダック",
-      "size": "lg",
+      "size": "xl",
+      "mood": "fear",
+      "count": 10,
+      "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "xl",
       "mood": "greed",
-      "count": 3,
+      "count": 6,
+      "sources": 1
+    },
+    {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
       "sources": 1
     },
     {
       "word": "トランプ",
       "size": "lg",
       "mood": "calm",
-      "count": 3,
-      "sources": 3
+      "count": 4,
+      "sources": 4
     },
     {
-      "word": "円安",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "ドル円",
+      "word": "日銀",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "円高",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -47,18 +54,18 @@
   ],
   "institutional": [
     {
-      "word": "高配当",
+      "word": "半導体",
       "size": "xl",
-      "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "mood": "fear",
+      "count": 10,
+      "sources": 1
     },
     {
-      "word": "半導体",
+      "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "配当",
@@ -66,14 +73,15 @@
       "mood": "calm",
       "count": 1,
       "sources": 1
-    },
+    }
+  ],
+  "retail": [
     {
-      "word": "不動産",
+      "word": "ソニー",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
-  ],
-  "retail": []
+  ]
 }
