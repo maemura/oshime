@@ -284,7 +284,7 @@
       "shares": 700,
       "cost": 798000.0,
       "current_price": 1145.5,
-      "pnl_pct": 0.5,
+      "pnl_pct": 0.48,
       "thesis": "スコア87。配当4.8%。RSI29.4。",
       "stop_loss": 969,
       "take_profit": 1368,
@@ -301,9 +301,10 @@
     },
     {
       "date": "2026-03-19",
-      "nav": 10354280,
-      "cash": 2016100,
-      "positions_value": 1584400
+      "nav": 5171750,
+      "cash": 3587350,
+      "positions_value": 1584400,
+      "nikkei": 55239.0
     }
   ],
   "history": [
