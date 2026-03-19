@@ -464,23 +464,27 @@ def gen_kabuko_script(d):
     return "\n".join(lines)
 
 
-# ── ⑨ サムネプロンプト（英語） ──────────────────────────
+# ── ⑨ サムネプロンプト（日本語） ──────────────────────────
 
 def gen_thumbnail_prompt(d):
-    mood = "confident" if d["pnl"] > 0 else "worried"
-    market_dir = "up" if d["nikkei_chg"] > 0 else "down"
-    color = "green and gold" if d["pnl"] > 0 else "red and dark blue"
+    if d["pnl"] > 0:
+        expression = "自信のある表情"
+        chart_dir = "上昇"
+        color_scheme = "緑と金のカラースキーム"
+    else:
+        expression = "緊張した表情"
+        chart_dir = "下落"
+        color_scheme = "赤とダークブルーのカラースキーム"
 
     return (
-        f"Anime-style thumbnail for a Japanese stock investment YouTube video. "
-        f"A cute male anime character (short brown hair, suit, {mood} expression) "
-        f"standing in front of a large stock chart going {market_dir}. "
-        f"Bold Japanese text 'Day{d['day']}' in the top left corner. "
-        f"'{fmt_pct(d['pnl'])}' displayed prominently in large font. "
-        f"Nikkei average '{d['nikkei']:,.0f}' shown on the chart. "
-        f"Color scheme: {color}. "
-        f"Clean, modern, eye-catching design suitable for YouTube thumbnail. "
-        f"16:9 aspect ratio, high contrast text for mobile readability."
+        f"YouTube用サムネイル画像、16:9比率。"
+        f"ピクセルアート風のアニメキャラクター（黒髪、丸メガネ、ダークパーカー、{expression}）が"
+        f"株価モニターの前に座っている。"
+        f"背景は暗いネイビー、モニターには{chart_dir}する株価チャートが表示されている。"
+        f"{color_scheme}。"
+        f"画面に表示するテキスト：「Day{d['day']}」「{fmt_pct(d['pnl'])}」"
+        f"「日経{d['nikkei']:,.0f}円」「かぶのすけ投資日記」。"
+        f"スマホのYouTube表示に適した高コントラストで視認性の高いデザイン。"
     )
 
 
@@ -583,7 +587,7 @@ def main():
     # ⑨
     sections.append("")
     sections.append("━" * 40)
-    sections.append("⑨ サムネプロンプト（英語）")
+    sections.append("⑨ サムネプロンプト（日本語）")
     sections.append("━" * 40)
     sections.append("")
     sections.append(gen_thumbnail_prompt(d))
