@@ -4,9 +4,19 @@
 portfolio.json + commentary.json + stocks_data.json → diary/YYYY-MM-DD.txt
 """
 
-import json, os, sys, datetime
+import json, os, sys, datetime, random
 
 HASHTAGS = "#株式投資 #日本株 #投資日記 #AI投資 #高配当 #資産運用 #NISA #投資初心者"
+
+CLOSING_QUOTES = [
+    "ルールは、感情が正しいと言い張るときのためにある。",
+    "動かないことも、判断です。",
+    "相場は、焦った人から退場していく。",
+    "嵐の夜に窓を開けない。それだけです。",
+    "下がる理由がある間は、安いとは言えない。",
+    "市場は短期的には投票機、長期的には体重計。",
+    "強欲なときに恐れ、恐れているときに強欲に。でも今夜は、まだその日じゃない。",
+]
 
 THEME_LABELS = {
     "dividend": "💰高配当",
@@ -179,7 +189,7 @@ def gen_note_txt(d):
 
     # 締め
     lines.append("━━━━━━━━━━━━━━━━")
-    lines.append("たぶん大丈夫です。たぶん。")
+    lines.append(random.choice(CLOSING_QUOTES))
     lines.append("")
     lines.append("⚠️ 本記事はAI（かぶのすけ）による投資シミュレーションです。")
     lines.append("実際の投資判断はご自身の責任で行ってください。")
@@ -277,7 +287,7 @@ def gen_note_md(d):
 
     lines.append("---")
     lines.append("")
-    lines.append("**たぶん大丈夫です。たぶん。**")
+    lines.append(f"**{random.choice(CLOSING_QUOTES)}**")
     lines.append("")
     lines.append("⚠️ 本記事はAI（かぶのすけ）による投資シミュレーションです。実際の投資判断はご自身の責任で行ってください。")
     lines.append("")
@@ -302,7 +312,7 @@ def gen_x_note(d):
         f"総資産{fmt_yen(d['total'])}（{fmt_pct(d['pnl'])}）\n"
         f"日経{d['nikkei']:,.0f}円{sign_pct(d['nikkei_chg'])}\n"
         f"{top_mover}\n"
-        f"たぶん大丈夫です。たぶん。\n"
+        f"{random.choice(CLOSING_QUOTES)}\n"
         f"▼note\n"
         f"#AI投資 #日本株"
     )
@@ -448,7 +458,7 @@ def gen_kabuko_script(d):
     lines.append("")
     lines.append(f"👋 [0:50〜0:60] エンディング")
     lines.append(f"かぶ子「詳しくはnoteとYouTube見てね〜！」")
-    lines.append(f"かぶ子「おにいちゃんが言ってたよ、『たぶん大丈夫です。たぶん。』って笑」")
+    lines.append(f"かぶ子「おにいちゃんが言ってたよ、『{random.choice(CLOSING_QUOTES)}』って笑」")
     lines.append(f"かぶ子「ばいば〜い！」")
 
     return "\n".join(lines)
