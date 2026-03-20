@@ -24,16 +24,16 @@
       "sources": 1
     },
     {
-      "word": "トランプ",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
-      "sources": 2
-    },
-    {
       "word": "日銀",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "トランプ",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },

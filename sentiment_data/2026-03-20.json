@@ -1,10 +1,10 @@
 {
   "date": "2026-03-20",
-  "collected_at": "2026-03-20 10:01",
+  "collected_at": "2026-03-20 21:49",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 26,
-  "entry_count": 22,
+  "entry_count": 21,
   "entries": [
     {
       "source": "youtube",
@@ -141,6 +141,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "イラン攻撃で下げてるプライム市場２０銘柄。３月２０日:金曜・祝日版～あす上がる株。最新の日本株情報。高配当株の株価やデイトレ情報",
+      "video_url": "https://www.youtube.com/watch?v=i5V6VXVTcrM",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "ＫＡＤＯＫＡＷＡをOasis大量保有。ソニーフィナンシャル5.3％消却。日本テレビ上方修正。～あす上がる株　2026年３月２３日（月）に上がる銘柄。最新の日本株",
       "video_url": "https://www.youtube.com/watch?v=jrmS1wBbLYk",
       "topic": "ソニー",
@@ -184,17 +195,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "商船三井にエリオットが株主還元要求、株式分割も。ベイカレント4.3％自社株買い。三菱マテリアルS高～あす上がる株　2026年３月１９日（木）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=V3QSaS2mxf4",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "トレードラボ",
       "video_title": "最近の暴落で安くなった3月高配当株5選",
       "video_url": "https://www.youtube.com/watch?v=brH9qyfCAnk",
@@ -203,17 +203,6 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【日米首脳会談】トランプを唸らせた高市首相の発言が凄すぎる!!",
-      "video_url": "https://www.youtube.com/watch?v=mFAfnmLcmsY",
-      "topic": "トランプ",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: トランプ"
     },
     {
       "source": "youtube",
@@ -317,20 +306,20 @@
           "Sho's投資情報局"
         ]
       },
-      "ソニー": {
-        "count": 2,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ",
-          "STOCKVOICE"
-        ]
-      },
       "高配当": {
         "count": 4,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
           "トレードラボ"
+        ]
+      },
+      "ソニー": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "STOCKVOICE",
+          "株リアルライブ"
         ]
       },
       "日銀": {
@@ -341,10 +330,9 @@
         ]
       },
       "トランプ": {
-        "count": 2,
+        "count": 1,
         "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch",
           "STOCKVOICE"
         ]
       },
@@ -363,8 +351,8 @@
       "ナスダック",
       "ドル円",
       "ソニー",
-      "トランプ",
       "日銀",
+      "トランプ",
       "円高"
     ]
   }
