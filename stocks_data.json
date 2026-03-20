@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/03/20 07:56",
+ "updated_at": "2026/03/20 16:37",
  "total": 186,
  "stocks": [
   {
@@ -1000,7 +1000,7 @@
    "per": 40.5,
    "vol_r": 1.14,
    "turnover_avg5": 79.1,
-   "market_cap_b": 7271.0,
+   "market_cap_b": 7239.0,
    "closes_60d": [
     1917.0,
     1933.0,
@@ -1410,7 +1410,7 @@
    "per": 67.6,
    "vol_r": 0.79,
    "turnover_avg5": 1805.7,
-   "market_cap_b": 174187.0,
+   "market_cap_b": 174098.0,
    "closes_60d": [
     18805.0,
     19195.0,
@@ -4198,7 +4198,7 @@
    "per": 18.8,
    "vol_r": 0.84,
    "turnover_avg5": 20.9,
-   "market_cap_b": 5445.0,
+   "market_cap_b": 5446.0,
    "closes_60d": [
     3245.0,
     3251.0,
@@ -4362,7 +4362,7 @@
    "per": 13.6,
    "vol_r": 0.9,
    "turnover_avg5": 70.1,
-   "market_cap_b": 20420.0,
+   "market_cap_b": 20442.0,
    "closes_60d": [
     1342.0,
     1348.5,
@@ -4608,7 +4608,7 @@
    "per": 18.5,
    "vol_r": 0.73,
    "turnover_avg5": 41.4,
-   "market_cap_b": 8242.0,
+   "market_cap_b": 8238.0,
    "closes_60d": [
     5367.0,
     5437.0,
@@ -5428,7 +5428,7 @@
    "per": 16.9,
    "vol_r": 1.04,
    "turnover_avg5": 71.6,
-   "market_cap_b": 15539.0,
+   "market_cap_b": 15454.0,
    "closes_60d": [
     1275.5,
     1298.5,
@@ -5510,7 +5510,7 @@
    "per": 11.3,
    "vol_r": 0.88,
    "turnover_avg5": 216.2,
-   "market_cap_b": 68117.0,
+   "market_cap_b": 67982.0,
    "closes_60d": [
     5311.0,
     5397.0,
@@ -6412,7 +6412,7 @@
    "per": 20.7,
    "vol_r": 0.77,
    "turnover_avg5": 12.6,
-   "market_cap_b": 2869.0,
+   "market_cap_b": 2853.0,
    "closes_60d": [
     1514.0,
     1527.0,
@@ -6576,7 +6576,7 @@
    "per": 16.1,
    "vol_r": 1.04,
    "turnover_avg5": 169.7,
-   "market_cap_b": 49551.0,
+   "market_cap_b": 49446.0,
    "closes_60d": [
     1779.5,
     1781.5,
@@ -6822,7 +6822,7 @@
    "per": 15.9,
    "vol_r": 0.66,
    "turnover_avg5": 63.7,
-   "market_cap_b": 13156.0,
+   "market_cap_b": 13143.0,
    "closes_60d": [
     4705.0,
     4619.0,
@@ -7396,7 +7396,7 @@
    "per": 12.7,
    "vol_r": 1.13,
    "turnover_avg5": 56.5,
-   "market_cap_b": 7530.0,
+   "market_cap_b": 7315.0,
    "closes_60d": [
     4153.0,
     4139.0,
@@ -8462,7 +8462,7 @@
    "per": 28.8,
    "vol_r": 0.89,
    "turnover_avg5": 23.6,
-   "market_cap_b": 4955.0,
+   "market_cap_b": 4901.0,
    "closes_60d": [
     1076.5,
     1086.0,
@@ -8544,7 +8544,7 @@
    "per": 4.6,
    "vol_r": 1.16,
    "turnover_avg5": 14.0,
-   "market_cap_b": 3569.0,
+   "market_cap_b": 3537.0,
    "closes_60d": [
     1492.5,
     1507.0,
@@ -10840,7 +10840,7 @@
    "per": 21.0,
    "vol_r": 1.2,
    "turnover_avg5": 39.8,
-   "market_cap_b": 6470.0,
+   "market_cap_b": 6437.0,
    "closes_60d": [
     6829.0,
     6826.0,
@@ -12070,7 +12070,7 @@
    "per": 29.6,
    "vol_r": 0.84,
    "turnover_avg5": 190.4,
-   "market_cap_b": 56773.0,
+   "market_cap_b": 56656.0,
    "closes_60d": [
     3778.0,
     3787.0,
@@ -12152,7 +12152,7 @@
    "per": 21.9,
    "vol_r": 0.99,
    "turnover_avg5": 139.1,
-   "market_cap_b": 43222.0,
+   "market_cap_b": 43243.0,
    "closes_60d": [
     3932.0,
     4015.5,
@@ -12316,7 +12316,7 @@
    "per": 19.4,
    "vol_r": 1.16,
    "turnover_avg5": 292.1,
-   "market_cap_b": 53688.0,
+   "market_cap_b": 53244.0,
    "closes_60d": [
     3341.0,
     3300.0,
@@ -12890,7 +12890,7 @@
    "per": 7.9,
    "vol_r": 0.83,
    "turnover_avg5": 87.0,
-   "market_cap_b": 40516.0,
+   "market_cap_b": 40436.0,
    "closes_60d": [
     4453.0,
     4501.0,
@@ -15540,10 +15540,10 @@
  "nikkei_1d_chg": -3.38,
  "nikkei_ma25": 55949.0,
  "nasdaq_1d_chg": -0.28,
- "vix": 24.1,
- "usdjpy": 157.87,
+ "vix": 24.0,
+ "usdjpy": 158.34,
  "us10y": 4.28,
- "wti_oil": 94.09,
+ "wti_oil": 94.45,
  "ny_dow": 46021.43,
  "ny_dow_1d_chg": -0.44,
  "sp500": 6606.49,
