@@ -2,7 +2,7 @@
   "day": 19,
   "date": "2026-03-19",
   "total_asset": 10141905.018310547,
-  "cash": 3587350,
+  "cash": 1898450.0,
   "pnl_pct": 1.42,
   "holdings": [
     {
@@ -270,7 +270,7 @@
       "shares": 300,
       "cost": 773250.0,
       "current_price": 2559.0,
-      "pnl_pct": -0.7,
+      "pnl_pct": -0.72,
       "thesis": "スコア90。配当4.48%。RSI19.1。",
       "stop_loss": 2191,
       "take_profit": 3093,
@@ -284,10 +284,38 @@
       "shares": 700,
       "cost": 798000.0,
       "current_price": 1089.0,
-      "pnl_pct": -4.5,
+      "pnl_pct": -4.47,
       "thesis": "スコア87。配当4.8%。RSI29.4。",
       "stop_loss": 969,
       "take_profit": 1368,
+      "type": "守り"
+    },
+    {
+      "code": "5411",
+      "name": "JFE HD",
+      "buy_date": "2026-03-20",
+      "buy_price": 1886.5,
+      "shares": 500,
+      "cost": 943250.0,
+      "current_price": 1886.5,
+      "pnl_pct": 0.0,
+      "thesis": "スコア80。配当4.24%。RSI23.6。",
+      "stop_loss": 1604,
+      "take_profit": 2264,
+      "type": "守り"
+    },
+    {
+      "code": "4208",
+      "name": "宇部興産",
+      "buy_date": "2026-03-20",
+      "buy_price": 2485.5,
+      "shares": 300,
+      "cost": 745650.0,
+      "current_price": 2485.5,
+      "pnl_pct": 0.0,
+      "thesis": "スコア80。配当4.43%。RSI27.9。",
+      "stop_loss": 2113,
+      "take_profit": 2983,
       "type": "守り"
     }
   ],
@@ -304,6 +332,13 @@
       "nav": 10141905.018310547,
       "cash": 2016100.0,
       "positions_value": 8125805.018310547
+    },
+    {
+      "date": "2026-03-20",
+      "nav": 5117350,
+      "cash": 1898450,
+      "positions_value": 3218900,
+      "nikkei": 53373.0
     }
   ],
   "history": [
@@ -326,6 +361,26 @@
       "shares": 700,
       "amount": 798000,
       "reason": "スコア87。配当4.8%。RSI29.4。"
+    },
+    {
+      "date": "2026-03-20",
+      "action": "buy",
+      "code": "5411",
+      "name": "JFE HD",
+      "price": 1886.5,
+      "shares": 500,
+      "amount": 943250,
+      "reason": "スコア80。配当4.24%。RSI23.6。"
+    },
+    {
+      "date": "2026-03-20",
+      "action": "buy",
+      "code": "4208",
+      "name": "宇部興産",
+      "price": 2485.5,
+      "shares": 300,
+      "amount": 745650,
+      "reason": "スコア80。配当4.43%。RSI27.9。"
     }
   ]
 }
