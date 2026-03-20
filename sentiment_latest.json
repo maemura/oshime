@@ -1,14 +1,7 @@
 {
-  "date": "2026-03-19",
+  "date": "2026-03-20",
   "mode": "claude",
   "macro": [
-    {
-      "word": "トランプ",
-      "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 4
-    },
     {
       "word": "日経平均",
       "size": "lg",
@@ -31,6 +24,13 @@
       "sources": 1
     },
     {
+      "word": "トランプ",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "日銀",
       "size": "sm",
       "mood": "greed",
@@ -48,23 +48,16 @@
   "institutional": [
     {
       "word": "高配当",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "半導体",
       "size": "lg",
       "mood": "fear",
       "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
       "sources": 1
     }
   ],
