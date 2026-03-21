@@ -4,43 +4,43 @@
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
+      "count": 11,
       "sources": 1
     },
     {
       "word": "ナスダック",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
+      "count": 11,
       "sources": 1
     },
     {
       "word": "ドル円",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
+      "count": 6,
       "sources": 1
     },
     {
-      "word": "日銀",
-      "size": "sm",
+      "word": "円安",
+      "size": "xl",
       "mood": "greed",
-      "count": 1,
+      "count": 5,
       "sources": 1
+    },
+    {
+      "word": "トランプ",
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "日経",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "トランプ",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     },
@@ -54,32 +54,18 @@
   ],
   "institutional": [
     {
-      "word": "高配当",
-      "size": "xl",
-      "mood": "greed",
-      "count": 11,
-      "sources": 3
-    },
-    {
       "word": "半導体",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
+      "count": 11,
       "sources": 1
     },
     {
-      "word": "決算",
-      "size": "sm",
+      "word": "高配当",
+      "size": "lg",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     }
   ],
   "retail": [
