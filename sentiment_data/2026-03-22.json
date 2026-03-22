@@ -1,0 +1,371 @@
+{
+  "date": "2026-03-22",
+  "collected_at": "2026-03-22 09:52",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 26,
+  "entry_count": 22,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/22【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=bMbXYtiYWmU",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/22【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=bMbXYtiYWmU",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/22【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=bMbXYtiYWmU",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/22【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=bMbXYtiYWmU",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=JAmCezCUeJw",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=JAmCezCUeJw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=JAmCezCUeJw",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=JAmCezCUeJw",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=gVDFmv4t_Ww",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=gVDFmv4t_Ww",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=gVDFmv4t_Ww",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
+      "video_url": "https://www.youtube.com/watch?v=gVDFmv4t_Ww",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "下げてる今こそ要チェック、高配当銘柄。大型プライム市場銘柄と小型株。３月２０日:土曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=mcXUYfsW_CE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イラン攻撃で下げてるプライム市場２０銘柄。３月２０日:金曜・祝日版～あす上がる株。最新の日本株情報。高配当株の株価やデイトレ情報",
+      "video_url": "https://www.youtube.com/watch?v=i5V6VXVTcrM",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ＫＡＤＯＫＡＷＡをOasis大量保有。ソニーフィナンシャル5.3％消却。日本テレビ上方修正。～あす上がる株　2026年３月２３日（月）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=jrmS1wBbLYk",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ＫＡＤＯＫＡＷＡをOasis大量保有。ソニーフィナンシャル5.3％消却。日本テレビ上方修正。～あす上がる株　2026年３月２３日（月）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=jrmS1wBbLYk",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "来週の日本株またまたブラックマンデー？・・と思ったら！？トランプさんさぁ・・",
+      "video_url": "https://www.youtube.com/watch?v=eE99kiDD5Qs",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "最近の暴落で、手が出しやすくなった3月高配当株5選",
+      "video_url": "https://www.youtube.com/watch?v=brH9qyfCAnk",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経先物2000円急落！スタグフレーション？を織り込む相場に！でも「日本船ホルムズ通過の用意がある」とイラン外相発言。「イラン原油の購入容認！？」錯綜する情報に",
+      "video_url": "https://www.youtube.com/watch?v=IEqysiJW4bQ",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "3日間連続の鯨幕相場。トランプ発言に翻弄されるマーケットの行方【本日のデリバティブ】 3月19日 ブライトンリサーチ 堀川秀樹さん",
+      "video_url": "https://www.youtube.com/watch?v=6QazAL7ady4",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "160円目前　リスクオフでも円高が進まない理由とは！？【FXフォーカス】 3月19日 ソニーフィナンシャルグループ 尾河眞樹さん",
+      "video_url": "https://www.youtube.com/watch?v=BT8OlgdjpCY",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "160円目前　リスクオフでも円高が進まない理由とは！？【FXフォーカス】 3月19日 ソニーフィナンシャルグループ 尾河眞樹さん",
+      "video_url": "https://www.youtube.com/watch?v=BT8OlgdjpCY",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 0,
+        "bear": 12
+      },
+      "株リアルライブ": {
+        "bull": 4,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 1
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 1
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 2
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ",
+          "株リアルライブ"
+        ]
+      },
+      "ソニー": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "STOCKVOICE",
+          "株リアルライブ"
+        ]
+      },
+      "トランプ": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "STOCKVOICE"
+        ]
+      },
+      "日経": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "円高": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "日経平均",
+      "半導体",
+      "ナスダック",
+      "ドル円",
+      "ソニー",
+      "トランプ",
+      "日経",
+      "円高"
+    ]
+  }
+}
