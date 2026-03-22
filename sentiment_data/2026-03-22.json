@@ -1,9 +1,9 @@
 {
   "date": "2026-03-22",
-  "collected_at": "2026-03-22 09:52",
+  "collected_at": "2026-03-22 21:45",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 26,
+  "videos_processed": 28,
   "entry_count": 22,
   "entries": [
     {
@@ -141,6 +141,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "明日の市場、３つの好ニュース。東京電力が原発再開。あす急落しそうな銘柄。好決算なのに下げてる５銘柄。今週注目の決算銘柄。金関連は厳しい。2026年3月22日:日",
+      "video_url": "https://www.youtube.com/watch?v=smo4NzZ3F-o",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "下げてる今こそ要チェック、高配当銘柄。大型プライム市場銘柄と小型株。３月２０日:土曜版～あす上がる株。最新の日本株情報～",
       "video_url": "https://www.youtube.com/watch?v=mcXUYfsW_CE",
       "topic": "高配当",
@@ -154,28 +165,6 @@
       "channel": "株リアルライブ",
       "video_title": "イラン攻撃で下げてるプライム市場２０銘柄。３月２０日:金曜・祝日版～あす上がる株。最新の日本株情報。高配当株の株価やデイトレ情報",
       "video_url": "https://www.youtube.com/watch?v=i5V6VXVTcrM",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ＫＡＤＯＫＡＷＡをOasis大量保有。ソニーフィナンシャル5.3％消却。日本テレビ上方修正。～あす上がる株　2026年３月２３日（月）に上がる銘柄。最新の日本株",
-      "video_url": "https://www.youtube.com/watch?v=jrmS1wBbLYk",
-      "topic": "ソニー",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ソニー"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ＫＡＤＯＫＡＷＡをOasis大量保有。ソニーフィナンシャル5.3％消却。日本テレビ上方修正。～あす上がる株　2026年３月２３日（月）に上がる銘柄。最新の日本株",
-      "video_url": "https://www.youtube.com/watch?v=jrmS1wBbLYk",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -203,6 +192,17 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 3/17】トランプやばい「同盟国が動かない」",
+      "video_url": "https://www.youtube.com/watch?v=CD7hUUe0QG8",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
     },
     {
       "source": "youtube",
@@ -256,7 +256,7 @@
         "bear": 12
       },
       "株リアルライブ": {
-        "bull": 4,
+        "bull": 3,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -317,28 +317,28 @@
           "Sho's投資情報局"
         ]
       },
-      "高配当": {
-        "count": 4,
+      "決算": {
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
           "株リアルライブ"
         ]
       },
-      "ソニー": {
-        "count": 2,
+      "高配当": {
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "STOCKVOICE",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "トランプ": {
-        "count": 2,
+        "count": 3,
         "sentiment": "neutral",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "STOCKVOICE"
+          "ばっちゃまの投資チャンネル",
+          "STOCKVOICE",
+          "ひげづら株ちゃんねる"
         ]
       },
       "日経": {
@@ -346,6 +346,13 @@
         "sentiment": "bearish",
         "sources": [
           "たばたの投資ch"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "STOCKVOICE"
         ]
       },
       "円高": {
@@ -357,14 +364,15 @@
       }
     },
     "hot_words": [
-      "高配当",
       "日経平均",
       "半導体",
       "ナスダック",
       "ドル円",
-      "ソニー",
+      "高配当",
       "トランプ",
+      "決算",
       "日経",
+      "ソニー",
       "円高"
     ]
   }
