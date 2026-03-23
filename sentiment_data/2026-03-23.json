@@ -1,11 +1,66 @@
 {
   "date": "2026-03-23",
-  "collected_at": "2026-03-23 10:31",
+  "collected_at": "2026-03-23 21:53",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 36,
-  "entry_count": 22,
+  "videos_processed": 31,
+  "entry_count": 21,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
+      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
+      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
+      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
+      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
+      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -107,47 +162,14 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
-      "video_url": "https://www.youtube.com/watch?v=JAmCezCUeJw",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
-      "video_url": "https://www.youtube.com/watch?v=JAmCezCUeJw",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "東京海上にバフェット氏出資。花王、Oasis大幅買い進み。日本板硝子、非公開化か。利回り8.2%。～あす上がる株　2026年３月２４日（火）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=hImcvLNY24I",
+      "topic": "高配当",
       "category": "sector",
-      "sentiment": "bearish",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
-      "video_url": "https://www.youtube.com/watch?v=JAmCezCUeJw",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/21【日経平均先物2000円大暴落‼】日本株信用投げ売り加速か⁉スタグフレーション、利上げ懸念で米国株、ナスダック、半導体株急落。中東情勢懸念でWTI原油高",
-      "video_url": "https://www.youtube.com/watch?v=JAmCezCUeJw",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -184,28 +206,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "下げてる今こそ要チェック、高配当銘柄。大型プライム市場銘柄と小型株。３月２０日:土曜版～あす上がる株。最新の日本株情報～",
-      "video_url": "https://www.youtube.com/watch?v=mcXUYfsW_CE",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "来週の日本株またまたブラックマンデー？・・と思ったら！？トランプさんさぁ・・",
-      "video_url": "https://www.youtube.com/watch?v=eE99kiDD5Qs",
-      "topic": "トランプ",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: トランプ"
-    },
-    {
-      "source": "youtube",
       "channel": "トレードラボ",
       "video_title": "最近の暴落で、手が出しやすくなった3月高配当株5選",
       "video_url": "https://www.youtube.com/watch?v=brH9qyfCAnk",
@@ -214,17 +214,6 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "株価安値放置も増配で注目急浮上！安定累進配当銘柄",
-      "video_url": "https://www.youtube.com/watch?v=I1K7qjUPi84",
-      "topic": "配当",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 配当"
     },
     {
       "source": "youtube",
@@ -253,7 +242,7 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 13
+        "bear": 14
       },
       "株リアルライブ": {
         "bull": 4,
@@ -318,17 +307,10 @@
         ]
       },
       "金利": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
-        ]
-      },
-      "日経": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
         ]
       },
       "高配当": {
@@ -339,6 +321,13 @@
           "トレードラボ"
         ]
       },
+      "日経": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
       "決算": {
         "count": 1,
         "sentiment": "bullish",
@@ -347,18 +336,16 @@
         ]
       },
       "トランプ": {
-        "count": 2,
-        "sentiment": "neutral",
+        "count": 1,
+        "sentiment": "bearish",
         "sources": [
-          "たばたの投資ch",
-          "ひげづら株ちゃんねる"
+          "たばたの投資ch"
         ]
       },
       "配当": {
-        "count": 2,
+        "count": 1,
         "sentiment": "neutral",
         "sources": [
-          "優待ライダー",
           "STOCKVOICE"
         ]
       }
@@ -369,11 +356,11 @@
       "ナスダック",
       "ドル円",
       "高配当",
-      "トランプ",
-      "配当",
       "金利",
       "日経",
-      "決算"
+      "決算",
+      "トランプ",
+      "配当"
     ]
   }
 }
