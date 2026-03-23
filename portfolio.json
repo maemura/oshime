@@ -339,6 +339,13 @@
       "cash": 1898450,
       "positions_value": 3218900,
       "nikkei": 53373.0
+    },
+    {
+      "date": "2026-03-23",
+      "nav": 5117350,
+      "cash": 1898450,
+      "positions_value": 3218900,
+      "nikkei": 53373.0
     }
   ],
   "history": [
