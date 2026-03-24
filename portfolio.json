@@ -1,9 +1,9 @@
 {
   "day": 19,
-  "date": "2026-03-23",
-  "total_asset": 9772270.0,
-  "cash": 3587350,
-  "pnl_pct": -2.28,
+  "date": "2026-03-19",
+  "total_asset": 10141905.018310547,
+  "cash": 1898450.0,
+  "pnl_pct": 1.42,
   "holdings": [
     {
       "code": "8411",
@@ -12,8 +12,8 @@
       "buy_price": 6382,
       "theme": "dividend",
       "s_stock": false,
-      "current_price": 5929.0,
-      "pnl_pct": -7.1
+      "current_price": 6150.0,
+      "pnl_pct": -3.6
     },
     {
       "code": "8306",
@@ -22,8 +22,8 @@
       "buy_price": 2715,
       "theme": "dividend",
       "s_stock": false,
-      "current_price": 2564.5,
-      "pnl_pct": -5.5
+      "current_price": 2686.0,
+      "pnl_pct": -1.1
     },
     {
       "code": "9432",
@@ -32,8 +32,8 @@
       "buy_price": 154,
       "theme": "dividend",
       "s_stock": false,
-      "current_price": 157.0,
-      "pnl_pct": 1.9
+      "current_price": 158.60000610351562,
+      "pnl_pct": 3.0
     },
     {
       "code": "8031",
@@ -42,8 +42,8 @@
       "buy_price": 5822,
       "theme": "dividend",
       "s_stock": false,
-      "current_price": 5874.0,
-      "pnl_pct": 0.9
+      "current_price": 6250.0,
+      "pnl_pct": 7.4
     },
     {
       "code": "6920",
@@ -52,8 +52,8 @@
       "buy_price": 34770,
       "theme": "ai",
       "s_stock": true,
-      "current_price": 32030.0,
-      "pnl_pct": -7.9
+      "current_price": 35090.0,
+      "pnl_pct": 0.9
     },
     {
       "code": "6857",
@@ -62,8 +62,8 @@
       "buy_price": 24070,
       "theme": "ai",
       "s_stock": true,
-      "current_price": 22730.0,
-      "pnl_pct": -5.6
+      "current_price": 23980.0,
+      "pnl_pct": -0.4
     },
     {
       "code": "5803",
@@ -72,8 +72,8 @@
       "buy_price": 24065,
       "theme": "ai",
       "s_stock": true,
-      "current_price": 24330.0,
-      "pnl_pct": 1.1
+      "current_price": 25330.0,
+      "pnl_pct": 5.3
     },
     {
       "code": "8035",
@@ -82,8 +82,8 @@
       "buy_price": 40760,
       "theme": "ai",
       "s_stock": true,
-      "current_price": 38300.0,
-      "pnl_pct": -6.0
+      "current_price": 39330.0,
+      "pnl_pct": -3.5
     },
     {
       "code": "9984",
@@ -92,8 +92,8 @@
       "buy_price": 3632,
       "theme": "ai",
       "s_stock": true,
-      "current_price": 3507.0,
-      "pnl_pct": -3.4
+      "current_price": 3558.0,
+      "pnl_pct": -2.0
     },
     {
       "code": "285A",
@@ -102,8 +102,8 @@
       "buy_price": 19570,
       "theme": "ai",
       "s_stock": true,
-      "current_price": 21465.0,
-      "pnl_pct": 9.7
+      "current_price": 22360.0,
+      "pnl_pct": 14.3
     },
     {
       "code": "5801",
@@ -112,8 +112,8 @@
       "buy_price": 27455,
       "theme": "ai",
       "s_stock": true,
-      "current_price": 27680.0,
-      "pnl_pct": 0.8
+      "current_price": 29400.0,
+      "pnl_pct": 7.1
     },
     {
       "code": "1605",
@@ -122,8 +122,8 @@
       "buy_price": 3950,
       "theme": "kokusaku",
       "s_stock": false,
-      "current_price": 4483.0,
-      "pnl_pct": 13.5
+      "current_price": 4700.0,
+      "pnl_pct": 19.0
     },
     {
       "code": "7011",
@@ -132,8 +132,8 @@
       "buy_price": 4700,
       "theme": "kokusaku",
       "s_stock": false,
-      "current_price": 4517.0,
-      "pnl_pct": -3.9
+      "current_price": 4848.0,
+      "pnl_pct": 3.1
     },
     {
       "code": "7013",
@@ -142,8 +142,8 @@
       "buy_price": 3791,
       "theme": "kokusaku",
       "s_stock": false,
-      "current_price": 3470.0,
-      "pnl_pct": -8.5
+      "current_price": 3769.0,
+      "pnl_pct": -0.6
     },
     {
       "code": "5020",
@@ -152,8 +152,8 @@
       "buy_price": 1360.5,
       "theme": "kokusaku",
       "s_stock": true,
-      "current_price": 1293.5,
-      "pnl_pct": -4.9
+      "current_price": 1367.5,
+      "pnl_pct": 0.5
     },
     {
       "code": "9107",
@@ -162,8 +162,8 @@
       "buy_price": 2613,
       "theme": "kokusaku",
       "s_stock": true,
-      "current_price": 2577.5,
-      "pnl_pct": -1.4
+      "current_price": 2781.0,
+      "pnl_pct": 6.4
     },
     {
       "code": "7974",
@@ -172,8 +172,8 @@
       "buy_price": 9120,
       "theme": "trend",
       "s_stock": true,
-      "current_price": 9432.0,
-      "pnl_pct": 3.4
+      "current_price": 9734.0,
+      "pnl_pct": 6.7
     },
     {
       "code": "8136",
@@ -182,8 +182,8 @@
       "buy_price": 5581,
       "theme": "trend",
       "s_stock": true,
-      "current_price": 5313.0,
-      "pnl_pct": -4.8
+      "current_price": 5414.0,
+      "pnl_pct": -3.0
     },
     {
       "code": "7832",
@@ -192,8 +192,8 @@
       "buy_price": 4197,
       "theme": "trend",
       "s_stock": true,
-      "current_price": 4122.0,
-      "pnl_pct": -1.8
+      "current_price": 4177.0,
+      "pnl_pct": -0.5
     },
     {
       "code": "3350",
@@ -202,8 +202,8 @@
       "buy_price": 354,
       "theme": "trend",
       "s_stock": false,
-      "current_price": 312.0,
-      "pnl_pct": -11.9
+      "current_price": 320.0,
+      "pnl_pct": -9.6
     },
     {
       "code": "7936",
@@ -212,8 +212,8 @@
       "buy_price": 4331,
       "theme": "trend",
       "s_stock": true,
-      "current_price": 4252.0,
-      "pnl_pct": -1.8
+      "current_price": 4404.0,
+      "pnl_pct": 1.7
     },
     {
       "code": "8050",
@@ -222,8 +222,8 @@
       "buy_price": 12490,
       "theme": "trend",
       "s_stock": true,
-      "current_price": 11210.0,
-      "pnl_pct": -10.2
+      "current_price": 11970.0,
+      "pnl_pct": -4.2
     }
   ],
   "themes": {
@@ -270,7 +270,7 @@
       "shares": 300,
       "cost": 773250.0,
       "current_price": 2496.5,
-      "pnl_pct": -3.1,
+      "pnl_pct": -3.14,
       "thesis": "スコア90。配当4.48%。RSI19.1。",
       "stop_loss": 2191,
       "take_profit": 3093,
@@ -284,10 +284,38 @@
       "shares": 700,
       "cost": 798000.0,
       "current_price": 1061.0,
-      "pnl_pct": -6.9,
+      "pnl_pct": -6.93,
       "thesis": "スコア87。配当4.8%。RSI29.4。",
       "stop_loss": 969,
       "take_profit": 1368,
+      "type": "守り"
+    },
+    {
+      "code": "5411",
+      "name": "JFE HD",
+      "buy_date": "2026-03-20",
+      "buy_price": 1886.5,
+      "shares": 500,
+      "cost": 943250.0,
+      "current_price": 1859.0,
+      "pnl_pct": -1.46,
+      "thesis": "スコア80。配当4.24%。RSI23.6。",
+      "stop_loss": 1604,
+      "take_profit": 2264,
+      "type": "守り"
+    },
+    {
+      "code": "4208",
+      "name": "宇部興産",
+      "buy_date": "2026-03-20",
+      "buy_price": 2485.5,
+      "shares": 300,
+      "cost": 745650.0,
+      "current_price": 2425.0,
+      "pnl_pct": -2.43,
+      "thesis": "スコア80。配当4.43%。RSI27.9。",
+      "stop_loss": 2113,
+      "take_profit": 2983,
       "type": "守り"
     }
   ],
@@ -306,10 +334,25 @@
       "positions_value": 8125805.018310547
     },
     {
+      "date": "2026-03-20",
+      "nav": 5117350,
+      "cash": 1898450,
+      "positions_value": 3218900,
+      "nikkei": 53373.0
+    },
+    {
       "date": "2026-03-23",
-      "nav": 9772270.0,
-      "cash": 2016100.0,
-      "positions_value": 7756170.0
+      "nav": 5117350,
+      "cash": 1898450,
+      "positions_value": 3218900,
+      "nikkei": 53373.0
+    },
+    {
+      "date": "2026-03-24",
+      "nav": 5047100,
+      "cash": 1898450,
+      "positions_value": 3148650,
+      "nikkei": 51515.0
     }
   ],
   "history": [
@@ -332,6 +375,26 @@
       "shares": 700,
       "amount": 798000,
       "reason": "スコア87。配当4.8%。RSI29.4。"
+    },
+    {
+      "date": "2026-03-20",
+      "action": "buy",
+      "code": "5411",
+      "name": "JFE HD",
+      "price": 1886.5,
+      "shares": 500,
+      "amount": 943250,
+      "reason": "スコア80。配当4.24%。RSI23.6。"
+    },
+    {
+      "date": "2026-03-20",
+      "action": "buy",
+      "code": "4208",
+      "name": "宇部興産",
+      "price": 2485.5,
+      "shares": 300,
+      "amount": 745650,
+      "reason": "スコア80。配当4.43%。RSI27.9。"
     }
   ]
 }
