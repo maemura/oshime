@@ -2,7 +2,7 @@
   "day": 19,
   "date": "2026-03-24",
   "total_asset": 9874469.981689453,
-  "cash": 3587350.0,
+  "cash": 1830850.0,
   "pnl_pct": -1.26,
   "holdings": [
     {
@@ -270,7 +270,7 @@
       "shares": 300,
       "cost": 773250.0,
       "current_price": 2560.0,
-      "pnl_pct": -0.7,
+      "pnl_pct": -0.68,
       "thesis": "スコア90。配当4.48%。RSI19.1。",
       "stop_loss": 2191,
       "take_profit": 3093,
@@ -284,7 +284,7 @@
       "shares": 700,
       "cost": 798000.0,
       "current_price": 1096.0,
-      "pnl_pct": -3.9,
+      "pnl_pct": -3.86,
       "thesis": "スコア87。配当4.8%。RSI29.4。",
       "stop_loss": 969,
       "take_profit": 1368,
@@ -298,7 +298,7 @@
       "shares": 500,
       "cost": 943250.0,
       "current_price": 1895.5,
-      "pnl_pct": 0.5,
+      "pnl_pct": 0.48,
       "thesis": "スコア80。配当4.24%。RSI23.6。",
       "stop_loss": 1604,
       "take_profit": 2264,
@@ -312,10 +312,38 @@
       "shares": 300,
       "cost": 745650.0,
       "current_price": 2475.0,
-      "pnl_pct": -0.4,
+      "pnl_pct": -0.42,
       "thesis": "スコア80。配当4.43%。RSI27.9。",
       "stop_loss": 2113,
       "take_profit": 2983,
+      "type": "守り"
+    },
+    {
+      "code": "5406",
+      "name": "神戸製鋼所",
+      "buy_date": "2026-03-25",
+      "buy_price": 1979.0,
+      "shares": 500,
+      "cost": 989500.0,
+      "current_price": 1979.0,
+      "pnl_pct": 0.0,
+      "thesis": "スコア79。配当4.04%。RSI34.7。",
+      "stop_loss": 1682,
+      "take_profit": 2375,
+      "type": "守り"
+    },
+    {
+      "code": "5401",
+      "name": "日本製鉄",
+      "buy_date": "2026-03-25",
+      "buy_price": 590.0,
+      "shares": 1300,
+      "cost": 767000.0,
+      "current_price": 590.0,
+      "pnl_pct": 0.0,
+      "thesis": "スコア74。配当4.07%。RSI39.1。",
+      "stop_loss": 502,
+      "take_profit": 708,
       "type": "守り"
     }
   ],
@@ -352,6 +380,13 @@
       "nav": 9874469.981689453,
       "cash": 327200.0,
       "positions_value": 9547269.981689453
+    },
+    {
+      "date": "2026-03-25",
+      "nav": 6812800,
+      "cash": 1830850,
+      "positions_value": 4981950,
+      "nikkei": 52252.0
     }
   ],
   "history": [
@@ -394,6 +429,26 @@
       "shares": 300,
       "amount": 745650,
       "reason": "スコア80。配当4.43%。RSI27.9。"
+    },
+    {
+      "date": "2026-03-25",
+      "action": "buy",
+      "code": "5406",
+      "name": "神戸製鋼所",
+      "price": 1979.0,
+      "shares": 500,
+      "amount": 989500,
+      "reason": "スコア79。配当4.04%。RSI34.7。"
+    },
+    {
+      "date": "2026-03-25",
+      "action": "buy",
+      "code": "5401",
+      "name": "日本製鉄",
+      "price": 590.0,
+      "shares": 1300,
+      "amount": 767000,
+      "reason": "スコア74。配当4.07%。RSI39.1。"
     }
   ]
 }
