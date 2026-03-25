@@ -1,11 +1,55 @@
 {
   "date": "2026-03-25",
-  "collected_at": "2026-03-25 10:11",
+  "collected_at": "2026-03-25 21:58",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 27,
-  "entry_count": 26,
+  "videos_processed": 34,
+  "entry_count": 23,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/25【②日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=ZEr3A6OAZN8",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/25【②日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=ZEr3A6OAZN8",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/25【②日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=ZEr3A6OAZN8",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/25【②日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=ZEr3A6OAZN8",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -107,58 +151,14 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
-      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
-      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "文春砲がライトアップに。戻り遅れ銘柄。ローツェ上方修正。キオクシアベイン売却。システムディ株式分割～あす上がる株　2026年３月２６日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=Fhjq_PXRxrA",
+      "topic": "高配当",
       "category": "sector",
-      "sentiment": "bearish",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
-      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
-      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/23【日本株大暴落続くか。TACOで日経平均先物急騰。原油急落】中東情勢緊迫で世界同時株安。ドル円159円金利急騰で米国株、ナスダック、半導体株、金先物も暴",
-      "video_url": "https://www.youtube.com/watch?v=STUOvY1zM7U",
-      "topic": "金利",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 金利"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -195,28 +195,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "日経反発だが・・・。戻り遅れ１０銘柄。東京海上ストップ高。日本板硝子非公開化へS高。。2026年３月２４日（火）～明日上がる株最新の日本株情報。高配当株の株価や",
-      "video_url": "https://www.youtube.com/watch?v=xGzph0BHWMc",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "日経反発だが・・・。戻り遅れ１０銘柄。東京海上ストップ高。日本板硝子非公開化へS高。。2026年３月２４日（火）～明日上がる株最新の日本株情報。高配当株の株価や",
-      "video_url": "https://www.youtube.com/watch?v=xGzph0BHWMc",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "トランプの一声でまた株式市場が一変ｗもうほんまええ加減にしてほしい！",
       "video_url": "https://www.youtube.com/watch?v=-LxOCTa3qDo",
@@ -228,14 +206,14 @@
     },
     {
       "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "最近の暴落で、手が出しやすくなった3月高配当株5選",
-      "video_url": "https://www.youtube.com/watch?v=brH9qyfCAnk",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bearish",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "来週の日本株またまたブラックマンデー？・・と思ったら！？トランプさんさぁ・・",
+      "video_url": "https://www.youtube.com/watch?v=eE99kiDD5Qs",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 高配当"
+      "summary": "キーワード: トランプ"
     },
     {
       "source": "youtube",
@@ -272,17 +250,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "&quot;プライベートクレジット問題&quot;で日本のメガバンクが危険？？",
-      "video_url": "https://www.youtube.com/watch?v=M3t_Mo_J2PM",
-      "topic": "メガバンク",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: メガバンク"
-    },
-    {
-      "source": "youtube",
       "channel": "STOCKVOICE",
       "video_title": "ドル円は方向感模索、利上げ織り込み度合いが焦点【FXフォーカス】 3月25日 外為どっとコム総合研究所 宇栄原宗平さん",
       "video_url": "https://www.youtube.com/watch?v=oPk7N_90VlQ",
@@ -296,11 +263,11 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 9,
-        "bear": 5
+        "bull": 13,
+        "bear": 0
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -309,7 +276,7 @@
       },
       "トレードラボ": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
         "bull": 0,
@@ -321,7 +288,7 @@
       },
       "たばたの投資ch": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -363,24 +330,16 @@
         ]
       },
       "高配当": {
-        "count": 6,
+        "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ",
+          "優待ライダー",
           "Sho's投資情報局",
-          "優待ライダー"
-        ]
-      },
-      "金利": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "Sho's投資情報局"
+          "株リアルライブ"
         ]
       },
       "日経": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bullish",
         "sources": [
           "たばたの投資ch",
@@ -388,18 +347,11 @@
         ]
       },
       "トランプ": {
-        "count": 2,
+        "count": 3,
         "sentiment": "neutral",
         "sources": [
           "たばたの投資ch",
           "ひげづら株ちゃんねる"
-        ]
-      },
-      "メガバンク": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
         ]
       }
     },
@@ -409,10 +361,8 @@
       "日経平均",
       "半導体",
       "ナスダック",
-      "日経",
       "トランプ",
-      "金利",
-      "メガバンク"
+      "日経"
     ]
   }
 }
