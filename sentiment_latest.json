@@ -1,20 +1,13 @@
 {
-  "date": "2026-03-25",
+  "date": "2026-03-26",
   "mode": "claude",
   "macro": [
-    {
-      "word": "ドル円",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
     {
       "word": "日経平均",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -24,27 +17,27 @@
       "sources": 1
     },
     {
-      "word": "トランプ",
+      "word": "ドル円",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
-      "sources": 2
+      "sources": 1
     },
     {
       "word": "日経",
-      "size": "md",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
     {
       "word": "高配当",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "半導体",
@@ -52,7 +45,22 @@
       "mood": "greed",
       "count": 3,
       "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "ソニー",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    }
+  ]
 }
