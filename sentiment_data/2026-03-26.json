@@ -1,11 +1,66 @@
 {
   "date": "2026-03-26",
-  "collected_at": "2026-03-26 10:16",
+  "collected_at": "2026-03-26 21:50",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
   "entry_count": 21,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -107,47 +162,14 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/25【日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半導",
-      "video_url": "https://www.youtube.com/watch?v=I0N_PBejHRs",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/25【日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半導",
-      "video_url": "https://www.youtube.com/watch?v=I0N_PBejHRs",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "EDPホンダ共同研究へ。花王Oasis大量買い増し。ダイセル下方。あいちFG上方増配。超高配当３件～あす上がる株　2026年３月２７日（金）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=vNzw_2CUSPU",
+      "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/25【日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半導",
-      "video_url": "https://www.youtube.com/watch?v=I0N_PBejHRs",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/25【日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半導",
-      "video_url": "https://www.youtube.com/watch?v=I0N_PBejHRs",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -184,39 +206,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "米イラン １か月停戦へ。日経急騰、９割上げ。東京海上大幅続伸。戻り遅れ、9銘柄。2026年３月２５日（水）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
-      "video_url": "https://www.youtube.com/watch?v=ajlRjErct14",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "米イラン １か月停戦へ。日経急騰、９割上げ。東京海上大幅続伸。戻り遅れ、9銘柄。2026年３月２５日（水）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
-      "video_url": "https://www.youtube.com/watch?v=ajlRjErct14",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "株価安値圏で週末権利取り！オススメ高配当銘柄",
-      "video_url": "https://www.youtube.com/watch?v=zuxwG_L14fo",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "たばたの投資ch",
       "video_title": "イラン「停戦拒否」、米は「交渉継続」をアピール。原油は90ドルにじわり反発。ソフトバンクGが急伸で日経平均の上昇を牽引",
       "video_url": "https://www.youtube.com/watch?v=IUuzl3EpEUA",
@@ -229,23 +218,34 @@
     {
       "source": "youtube",
       "channel": "STOCKVOICE",
-      "video_title": "【FXフォーカス】 3月26日 ソニーフィナンシャルグループ 森本淳太郎さん",
+      "video_title": "ドル円は中東睨み、カギはインフレ期待【FXフォーカス】 3月26日 ソニーフィナンシャルグループ 森本淳太郎さん",
       "video_url": "https://www.youtube.com/watch?v=Wk9EsxiuWzE",
       "topic": "ソニー",
       "category": "stock",
-      "sentiment": "neutral",
+      "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "ドル円は中東睨み、カギはインフレ期待【FXフォーカス】 3月26日 ソニーフィナンシャルグループ 森本淳太郎さん",
+      "video_url": "https://www.youtube.com/watch?v=Wk9EsxiuWzE",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
     }
   ],
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 8,
+        "bull": 4,
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -261,7 +261,7 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 1,
+        "bull": 0,
         "bear": 0
       },
       "たばたの投資ch": {
@@ -273,45 +273,53 @@
         "bear": 0
       },
       "STOCKVOICE": {
-        "bull": 0,
+        "bull": 2,
         "bear": 0
       }
     },
     "by_topic": {
       "日経平均": {
         "count": 4,
-        "sentiment": "bullish",
+        "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "たばたの投資ch"
+          "たばたの投資ch",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 3,
-        "sentiment": "bullish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ナスダック": {
         "count": 3,
-        "sentiment": "bullish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "配当": {
-        "count": 1,
+        "count": 2,
         "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ドル円": {
+        "count": 4,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE",
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局"
+          "株リアルライブ"
         ]
       },
       "ソニー": {
@@ -321,32 +329,16 @@
           "STOCKVOICE",
           "株リアルライブ"
         ]
-      },
-      "高配当": {
-        "count": 4,
-        "sentiment": "bullish",
-        "sources": [
-          "優待ライダー",
-          "株リアルライブ"
-        ]
-      },
-      "日経": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
-        ]
       }
     },
     "hot_words": [
       "日経平均",
-      "高配当",
+      "ドル円",
       "半導体",
       "ナスダック",
-      "ドル円",
-      "ソニー",
+      "高配当",
       "配当",
-      "日経"
+      "ソニー"
     ]
   }
 }
