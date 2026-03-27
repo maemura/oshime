@@ -3,24 +3,38 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "ドル円",
-      "size": "xl",
-      "mood": "calm",
-      "count": 5,
-      "sources": 2
-    },
-    {
-      "word": "日経平均",
+      "word": "ナスダック",
       "size": "lg",
       "mood": "calm",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "ナスダック",
+      "word": "ドル円",
       "size": "lg",
       "mood": "calm",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "日経平均",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
       "sources": 1
     },
     {
@@ -43,8 +57,8 @@
       "word": "配当",
       "size": "lg",
       "mood": "calm",
-      "count": 3,
-      "sources": 2
+      "count": 4,
+      "sources": 3
     },
     {
       "word": "高配当",
@@ -54,13 +68,5 @@
       "sources": 2
     }
   ],
-  "retail": [
-    {
-      "word": "ソニー",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    }
-  ]
+  "retail": []
 }
