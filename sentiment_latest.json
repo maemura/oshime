@@ -1,32 +1,32 @@
 {
-  "date": "2026-03-27",
+  "date": "2026-03-28",
   "mode": "claude",
   "macro": [
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "calm",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "calm",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "日経平均",
+      "word": "日経",
       "size": "md",
-      "mood": "calm",
+      "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "日経平均",
       "size": "sm",
-      "mood": "fear",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },
@@ -36,20 +36,13 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
-    },
-    {
-      "word": "トランプ",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "calm",
+      "mood": "fear",
       "count": 4,
       "sources": 2
     },
@@ -57,7 +50,7 @@
       "word": "配当",
       "size": "lg",
       "mood": "calm",
-      "count": 4,
+      "count": 3,
       "sources": 3
     },
     {
@@ -66,6 +59,13 @@
       "mood": "greed",
       "count": 3,
       "sources": 2
+    },
+    {
+      "word": "不動産",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": []
