@@ -3,6 +3,13 @@
   "mode": "claude",
   "macro": [
     {
+      "word": "日経",
+      "size": "xl",
+      "mood": "greed",
+      "count": 5,
+      "sources": 2
+    },
+    {
       "word": "ナスダック",
       "size": "lg",
       "mood": "fear",
@@ -17,14 +24,14 @@
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "日経平均",
       "size": "md",
-      "mood": "fear",
+      "mood": "calm",
       "count": 2,
-      "sources": 1
+      "sources": 2
     },
     {
-      "word": "日経平均",
+      "word": "ダウ",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -40,6 +47,13 @@
   ],
   "institutional": [
     {
+      "word": "高配当",
+      "size": "xl",
+      "mood": "greed",
+      "count": 10,
+      "sources": 2
+    },
+    {
       "word": "半導体",
       "size": "lg",
       "mood": "fear",
@@ -54,11 +68,11 @@
       "sources": 3
     },
     {
-      "word": "高配当",
-      "size": "lg",
+      "word": "決算",
+      "size": "sm",
       "mood": "greed",
-      "count": 3,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "不動産",
@@ -68,5 +82,13 @@
       "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "ソニー",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
