@@ -3,6 +3,13 @@
   "mode": "claude",
   "macro": [
     {
+      "word": "日経",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 1
+    },
+    {
       "word": "ナスダック",
       "size": "lg",
       "mood": "fear",
@@ -17,18 +24,11 @@
       "sources": 1
     },
     {
-      "word": "日経",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
       "word": "日経平均",
-      "size": "md",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "ダウ",
@@ -50,22 +50,29 @@
       "word": "半導体",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
-      "word": "配当",
+      "word": "高配当",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
       "sources": 3
     },
     {
-      "word": "高配当",
-      "size": "md",
+      "word": "決算",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "不動産",
