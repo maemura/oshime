@@ -4,73 +4,87 @@
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "calm",
-      "count": 4,
-      "sources": 4
+      "count": 11,
+      "sources": 3
     },
     {
       "word": "ナスダック",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
+      "count": 10,
+      "sources": 1
+    },
+    {
+      "word": "ドル円",
+      "size": "xl",
+      "mood": "fear",
+      "count": 8,
       "sources": 1
     },
     {
       "word": "日経",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
+      "count": 6,
       "sources": 2
     },
     {
-      "word": "ドル円",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
+      "word": "トランプ",
+      "size": "lg",
+      "mood": "calm",
+      "count": 4,
       "sources": 1
     },
     {
       "word": "円安",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ダウ",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
+      "count": 2,
       "sources": 1
     }
   ],
   "institutional": [
     {
       "word": "半導体",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
+      "count": 10,
       "sources": 1
     },
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 3,
-      "sources": 3
+      "count": 5,
+      "sources": 5
     },
     {
       "word": "配当",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
       "sources": 2
     },
     {
       "word": "決算",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "不動産",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "メガバンク",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
