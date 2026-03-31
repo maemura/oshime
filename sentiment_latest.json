@@ -1,71 +1,64 @@
 {
-  "date": "2026-03-30",
+  "date": "2026-03-31",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "xl",
-      "mood": "calm",
-      "count": 11,
+      "mood": "fear",
+      "count": 5,
       "sources": 3
     },
     {
-      "word": "ナスダック",
-      "size": "xl",
+      "word": "円安",
+      "size": "lg",
       "mood": "fear",
-      "count": 10,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
-      "word": "ドル円",
-      "size": "xl",
+      "word": "ナスダック",
+      "size": "lg",
       "mood": "fear",
-      "count": 8,
+      "count": 3,
       "sources": 1
     },
     {
       "word": "日経",
-      "size": "xl",
-      "mood": "fear",
-      "count": 6,
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
       "sources": 2
     },
     {
-      "word": "トランプ",
-      "size": "lg",
+      "word": "ダウ",
+      "size": "sm",
       "mood": "calm",
-      "count": 4,
-      "sources": 1
-    },
-    {
-      "word": "円安",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
+      "count": 1,
       "sources": 1
     }
   ],
   "institutional": [
     {
-      "word": "半導体",
-      "size": "xl",
-      "mood": "fear",
-      "count": 10,
-      "sources": 1
-    },
-    {
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
-      "sources": 5
+      "count": 9,
+      "sources": 3
+    },
+    {
+      "word": "半導体",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "配当",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
-      "sources": 2
+      "sources": 1
     },
     {
       "word": "決算",
@@ -73,21 +66,15 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
-    },
+    }
+  ],
+  "retail": [
     {
-      "word": "不動産",
+      "word": "ソニー",
       "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "メガバンク",
-      "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
-  ],
-  "retail": []
+  ]
 }
