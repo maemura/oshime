@@ -1,15 +1,59 @@
 {
   "date": "2026-03-31",
-  "collected_at": "2026-03-31 10:31",
+  "collected_at": "2026-03-31 21:59",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 35,
-  "entry_count": 34,
+  "videos_processed": 27,
+  "entry_count": 19,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
       "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=6z9eWzrjqO4",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=6z9eWzrjqO4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=6z9eWzrjqO4",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=6z9eWzrjqO4",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
       "video_url": "https://www.youtube.com/watch?v=esauK6dznGw",
       "topic": "日経平均",
       "category": "macro",
@@ -96,47 +140,14 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/30【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金、",
-      "video_url": "https://www.youtube.com/watch?v=AsjhkxIcNhc",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/30【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金、",
-      "video_url": "https://www.youtube.com/watch?v=AsjhkxIcNhc",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "ＫＤＤＩ、不正取引結果は下方修正。三井住友ＦＧがエクサＷｉｚの筆頭株主に。株価2.5倍のTOB。～あす上がる株　2026年４月１日（水）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=uJNQUwXk0Gk",
+      "topic": "高配当",
       "category": "sector",
-      "sentiment": "bearish",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/30【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金、",
-      "video_url": "https://www.youtube.com/watch?v=AsjhkxIcNhc",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "3/30【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金、",
-      "video_url": "https://www.youtube.com/watch?v=AsjhkxIcNhc",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -165,171 +176,6 @@
       "channel": "株リアルライブ",
       "video_title": "いま上昇中２テーマ株。権利落ちで急落した人気銘柄。しまむら増益増配。住友ベ増配。大成建設上方増配～あす上がる株　2026年３月３１日（火）に上がる銘柄。最新の日",
       "video_url": "https://www.youtube.com/watch?v=lItRzktA9Gw",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "配当落ち急落中、人気配当株２３銘柄。権利落ちでストップ安も発生。ｉｓｐａｃｅストップ安。2026年３月３０日（月）～明日上がる株最新の日本株情報。高配当株の株価",
-      "video_url": "https://www.youtube.com/watch?v=PKLij_2xwz4",
-      "topic": "配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "あすの日本市場の見通し。あす落ち日の買いタイミング。KDDI、あさって3/31注意！あす急落しそうな銘柄。好決算なのに下げてる銘柄。今週注目の決算。３月２９日:",
-      "video_url": "https://www.youtube.com/watch?v=Y_bVQJqkWsU",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ダウ・ナスダック・日経平均先物が大幅急落。原油が１００ドル突破。１ドル１６０円突破。いったい何が。イラン戦争で、上げてる銘柄と、下げてる銘柄。３月２８日:土曜版",
-      "video_url": "https://www.youtube.com/watch?v=9spBPsYaW0g",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ダウ・ナスダック・日経平均先物が大幅急落。原油が１００ドル突破。１ドル１６０円突破。いったい何が。イラン戦争で、上げてる銘柄と、下げてる銘柄。３月２８日:土曜版",
-      "video_url": "https://www.youtube.com/watch?v=9spBPsYaW0g",
-      "topic": "ダウ",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ダウ"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "先物-1.32%急落中。原油上昇。片山大臣円安に断固とした措置。さくらインターネット、デジタル庁が～あす上がる株　2026年３月３０日（月）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=Vv0HYNGo1fw",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "先物-1.32%急落中。原油上昇。片山大臣円安に断固とした措置。さくらインターネット、デジタル庁が～あす上がる株　2026年３月３０日（月）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=Vv0HYNGo1fw",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "本日、権利最終日！３月配当株の動き。ローム・東芝・三菱、パワー半導体統合協議。ＦＰＧ、下方修正・減配。2026年３月２７日（金）～明日上がる株最新の日本株情報。",
-      "video_url": "https://www.youtube.com/watch?v=sW4wK5fzo3A",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "本日、権利最終日！３月配当株の動き。ローム・東芝・三菱、パワー半導体統合協議。ＦＰＧ、下方修正・減配。2026年３月２７日（金）～明日上がる株最新の日本株情報。",
-      "video_url": "https://www.youtube.com/watch?v=sW4wK5fzo3A",
-      "topic": "配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "EDPホンダ共同研究へ。花王Oasis大量買い増し。ダイセル下方。あいちFG上方増配。超高配当３件～あす上がる株　2026年３月２７日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=vNzw_2CUSPU",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ソニー・ホンダＥＶ開発中止。イラン和平提案拒否。文春砲で２日連続S安。原油、再び上昇。2026年３月２６日（木）～明日上がる株最新の日本株情報。高配当株の株価や",
-      "video_url": "https://www.youtube.com/watch?v=dovOEb11iYI",
-      "topic": "ソニー",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ソニー"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ソニー・ホンダＥＶ開発中止。イラン和平提案拒否。文春砲で２日連続S安。原油、再び上昇。2026年３月２６日（木）～明日上がる株最新の日本株情報。高配当株の株価や",
-      "video_url": "https://www.youtube.com/watch?v=dovOEb11iYI",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "文春砲がライトアップに。戻り遅れ銘柄。ローツェ上方修正。キオクシアベイン売却。システムディ株式分割～あす上がる株　2026年３月２６日（木）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=Fhjq_PXRxrA",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "米イラン １か月停戦へ。日経急騰、９割上げ。東京海上大幅続伸。戻り遅れ、9銘柄。2026年３月２５日（水）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
-      "video_url": "https://www.youtube.com/watch?v=ajlRjErct14",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "米イラン １か月停戦へ。日経急騰、９割上げ。東京海上大幅続伸。戻り遅れ、9銘柄。2026年３月２５日（水）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
-      "video_url": "https://www.youtube.com/watch?v=ajlRjErct14",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "三井住友、ジェフリーズ買収検討。カドカワOasis更に買い進み。日本板硝子スクイーズアウト。～あす上がる株　2026年３月２５日（水）に上がる銘柄。最新の日本株",
-      "video_url": "https://www.youtube.com/watch?v=9EwOVdo8GIY",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -368,17 +214,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経1200円下落で50600円台に！スケベ勢の心折る展開か？",
-      "video_url": "https://www.youtube.com/watch?v=4l9rad4t7ZY",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
     }
   ],
   "summary": {
@@ -388,7 +223,7 @@
         "bear": 12
       },
       "株リアルライブ": {
-        "bull": 16,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -409,7 +244,7 @@
       },
       "たばたの投資ch": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -422,20 +257,18 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 5,
-        "sentiment": "bearish",
-        "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局",
-          "株リアルライブ"
-        ]
-      },
-      "半導体": {
         "count": 4,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局",
-          "株リアルライブ"
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "半導体": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -446,52 +279,29 @@
         ]
       },
       "円安": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "優待ライダー",
+          "ひげづら株ちゃんねる",
           "株リアルライブ"
         ]
       },
       "日経": {
-        "count": 3,
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
-          "たばたの投資ch",
           "株リアルライブ"
         ]
       },
       "配当": {
-        "count": 3,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "高配当": {
-        "count": 9,
-        "sentiment": "bullish",
-        "sources": [
-          "ひげづら株ちゃんねる",
-          "優待ライダー",
-          "株リアルライブ"
-        ]
-      },
-      "決算": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "ダウ": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "ソニー": {
         "count": 1,
         "sentiment": "bullish",
         "sources": [
@@ -500,16 +310,13 @@
       }
     },
     "hot_words": [
-      "高配当",
       "日経平均",
+      "高配当",
       "半導体",
-      "円安",
       "ナスダック",
+      "円安",
       "日経",
-      "配当",
-      "決算",
-      "ダウ",
-      "ソニー"
+      "配当"
     ]
   }
 }
