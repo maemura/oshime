@@ -1,0 +1,728 @@
+{
+  "date": "2026-04-01",
+  "collected_at": "2026-04-01 10:32",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 35,
+  "entry_count": 55,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/1【日本株暴落終了来たか⁉️日経平均2675円急騰。TACO上げは売りで騙し上げか⁉️】中東情勢懸念後退でWTI原油下落、ドル円158円、米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=VHR8aag8cO4",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/1【日本株暴落終了来たか⁉️日経平均2675円急騰。TACO上げは売りで騙し上げか⁉️】中東情勢懸念後退でWTI原油下落、ドル円158円、米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=VHR8aag8cO4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/1【日本株暴落終了来たか⁉️日経平均2675円急騰。TACO上げは売りで騙し上げか⁉️】中東情勢懸念後退でWTI原油下落、ドル円158円、米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=VHR8aag8cO4",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/1【日本株暴落終了来たか⁉️日経平均2675円急騰。TACO上げは売りで騙し上げか⁉️】中東情勢懸念後退でWTI原油下落、ドル円158円、米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=VHR8aag8cO4",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=6z9eWzrjqO4",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=6z9eWzrjqO4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=6z9eWzrjqO4",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=6z9eWzrjqO4",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=esauK6dznGw",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=esauK6dznGw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=esauK6dznGw",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/31【日本株木端微塵か⁉️信用害悪激減で投売り加速→日経平均822円続落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=esauK6dznGw",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/30②【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金",
+      "video_url": "https://www.youtube.com/watch?v=Q6r5jTmbBvc",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/30②【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金",
+      "video_url": "https://www.youtube.com/watch?v=Q6r5jTmbBvc",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/30②【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金",
+      "video_url": "https://www.youtube.com/watch?v=Q6r5jTmbBvc",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/30②【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金",
+      "video_url": "https://www.youtube.com/watch?v=Q6r5jTmbBvc",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/30【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金、",
+      "video_url": "https://www.youtube.com/watch?v=AsjhkxIcNhc",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/30【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金、",
+      "video_url": "https://www.youtube.com/watch?v=AsjhkxIcNhc",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/30【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金、",
+      "video_url": "https://www.youtube.com/watch?v=AsjhkxIcNhc",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/30【日本株大暴落これからか。日経平均1487円急落‼】原油急騰、円安加速でドル円為替介入警戒で重い。中東情勢カオスで米国株、ナスダック、半導体株急落。金、",
+      "video_url": "https://www.youtube.com/watch?v=AsjhkxIcNhc",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/29【緊急.日経先物2200円大暴落‼ブラックマンデー日本株崩壊か⁉】ドル円160円で円安加速。中東情勢カオスでWTI原油急騰。米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=JWlEjgz5zLY",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/29【緊急.日経先物2200円大暴落‼ブラックマンデー日本株崩壊か⁉】ドル円160円で円安加速。中東情勢カオスでWTI原油急騰。米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=JWlEjgz5zLY",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/29【緊急.日経先物2200円大暴落‼ブラックマンデー日本株崩壊か⁉】ドル円160円で円安加速。中東情勢カオスでWTI原油急騰。米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=JWlEjgz5zLY",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/29【緊急.日経先物2200円大暴落‼ブラックマンデー日本株崩壊か⁉】ドル円160円で円安加速。中東情勢カオスでWTI原油急騰。米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=JWlEjgz5zLY",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/29【緊急.日経先物2200円大暴落‼ブラックマンデー日本株崩壊か⁉】ドル円160円で円安加速。中東情勢カオスでWTI原油急騰。米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=4W6Z_zvJqB4",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/29【緊急.日経先物2200円大暴落‼ブラックマンデー日本株崩壊か⁉】ドル円160円で円安加速。中東情勢カオスでWTI原油急騰。米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=4W6Z_zvJqB4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/29【緊急.日経先物2200円大暴落‼ブラックマンデー日本株崩壊か⁉】ドル円160円で円安加速。中東情勢カオスでWTI原油急騰。米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=4W6Z_zvJqB4",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/29【緊急.日経先物2200円大暴落‼ブラックマンデー日本株崩壊か⁉】ドル円160円で円安加速。中東情勢カオスでWTI原油急騰。米国株、ナスダック、半導体株",
+      "video_url": "https://www.youtube.com/watch?v=4W6Z_zvJqB4",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/27【日経先物が大暴落‼】海外投資家が日本株5200億円大量売却‼中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうなる。仮想通貨、",
+      "video_url": "https://www.youtube.com/watch?v=igUPUHIQr74",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/27【日経先物が大暴落‼】海外投資家が日本株5200億円大量売却‼中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうなる。仮想通貨、",
+      "video_url": "https://www.youtube.com/watch?v=igUPUHIQr74",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/27【日経先物が大暴落‼】海外投資家が日本株5200億円大量売却‼中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうなる。仮想通貨、",
+      "video_url": "https://www.youtube.com/watch?v=igUPUHIQr74",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/27【日経先物が大暴落‼】海外投資家が日本株5200億円大量売却‼中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうなる。仮想通貨、",
+      "video_url": "https://www.youtube.com/watch?v=igUPUHIQr74",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/26【②海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうな",
+      "video_url": "https://www.youtube.com/watch?v=1oQ4ZrSS4ZE",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/27【海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうなる",
+      "video_url": "https://www.youtube.com/watch?v=kC4xDPMbEdM",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/27【海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうなる",
+      "video_url": "https://www.youtube.com/watch?v=kC4xDPMbEdM",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/27【海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうなる",
+      "video_url": "https://www.youtube.com/watch?v=kC4xDPMbEdM",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/27【海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうなる",
+      "video_url": "https://www.youtube.com/watch?v=kC4xDPMbEdM",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/27【海外投資家が日本株5200億円大量売却‼日経平均配当落ち後下落再開か⁉】中東懸念で株式市場不安定。ドル円159円。米国株、ナスダック、半導体株どうなる",
+      "video_url": "https://www.youtube.com/watch?v=kC4xDPMbEdM",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/25【②日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=ZEr3A6OAZN8",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/25【②日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=ZEr3A6OAZN8",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/25【②日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=ZEr3A6OAZN8",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "3/25【②日本株チャンス来たか⁉】中東懸念後退で日経平均1497円急伸→信用害悪多すぎて騙し上げ否定できない。ドル円158円。停戦交渉で米国株、ナスダック、半",
+      "video_url": "https://www.youtube.com/watch?v=ZEr3A6OAZN8",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "東証が上場廃止危機２６銘柄を発表。商船三井が減益で急落。権利落ち続落銘柄。2026年4月１日（水）～明日上がる株最新の日本株情報。高配当株の株価やデイトレ情報～",
+      "video_url": "https://www.youtube.com/watch?v=B_l8enz2f-I",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "大幅な全面高。イラン戦争終結の見通し。原油価格が低下。４月１日水曜日～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当株やデイトレ情報も",
+      "video_url": "https://www.youtube.com/watch?v=WYA6DwUkrsc",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ＫＤＤＩ、不正取引結果は下方修正。三井住友ＦＧがエクサＷｉｚの筆頭株主に。株価2.5倍のTOB。～あす上がる株　2026年４月１日（水）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=uJNQUwXk0Gk",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "直近1か月の日経平均にある特徴？実体経済にも原油高影響が徐々に出てきた【3月30日市況】",
+      "video_url": "https://www.youtube.com/watch?v=LWUenmQAz7Y",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "利回り５％急接近！この急落相場で利回り上昇中の高配当株３選",
+      "video_url": "https://www.youtube.com/watch?v=hUbx7_iGDIA",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "地獄の月曜日、ここが勝負時！厳選高配当10銘柄",
+      "video_url": "https://www.youtube.com/watch?v=1orZwM7k7D4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経2300円急反発！イラン大統領「終戦の用意」発言でも原油まだ100ドル。株と原油どちらが間違ってる？",
+      "video_url": "https://www.youtube.com/watch?v=quUnqmTKwwk",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経急反発で5万3千円回復。イラン大統領「戦争終了の用意」の発言で",
+      "video_url": "https://www.youtube.com/watch?v=g10OSdbkv9E",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "戦争終結でもドル円の下げは限定？豪ドル円は正念場。【FXフォーカス】 4月1日 外為どっとコム総合研究所 中村勉さん",
+      "video_url": "https://www.youtube.com/watch?v=A1gzCOQFfGo",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 4,
+        "bear": 32
+      },
+      "株リアルライブ": {
+        "bull": 3,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 1,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 1,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 2,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 9,
+        "sentiment": "bearish",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 11,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 11,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 8,
+        "sentiment": "bearish",
+        "sources": [
+          "STOCKVOICE",
+          "Sho's投資情報局"
+        ]
+      },
+      "円安": {
+        "count": 4,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "日経": {
+        "count": 5,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局",
+          "たばたの投資ch"
+        ]
+      },
+      "配当": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "ひげづら株ちゃんねる",
+          "優待ライダー"
+        ]
+      }
+    },
+    "hot_words": [
+      "半導体",
+      "ナスダック",
+      "日経平均",
+      "ドル円",
+      "日経",
+      "高配当",
+      "円安",
+      "配当"
+    ]
+  }
+}
