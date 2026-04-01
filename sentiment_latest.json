@@ -13,8 +13,8 @@
       "word": "日経平均",
       "size": "xl",
       "mood": "fear",
-      "count": 9,
-      "sources": 2
+      "count": 10,
+      "sources": 3
     },
     {
       "word": "ドル円",
@@ -24,18 +24,18 @@
       "sources": 2
     },
     {
-      "word": "日経",
-      "size": "xl",
-      "mood": "fear",
-      "count": 5,
-      "sources": 2
-    },
-    {
       "word": "円安",
       "size": "lg",
       "mood": "fear",
       "count": 4,
       "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 2
     }
   ],
   "institutional": [
@@ -48,10 +48,10 @@
     },
     {
       "word": "高配当",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "配当",
