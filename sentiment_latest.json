@@ -1,63 +1,56 @@
 {
-  "date": "2026-04-01",
+  "date": "2026-04-02",
   "mode": "claude",
   "macro": [
     {
-      "word": "ナスダック",
+      "word": "トランプ",
       "size": "xl",
       "mood": "fear",
-      "count": 11,
-      "sources": 1
+      "count": 5,
+      "sources": 5
     },
     {
       "word": "日経平均",
-      "size": "xl",
-      "mood": "fear",
-      "count": 10,
-      "sources": 3
-    },
-    {
-      "word": "ドル円",
-      "size": "xl",
-      "mood": "fear",
-      "count": 8,
-      "sources": 2
-    },
-    {
-      "word": "円安",
       "size": "lg",
       "mood": "fear",
       "count": 4,
-      "sources": 1
+      "sources": 2
     },
     {
       "word": "日経",
       "size": "lg",
-      "mood": "fear",
+      "mood": "greed",
       "count": 4,
-      "sources": 2
+      "sources": 3
+    },
+    {
+      "word": "ナスダック",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 1
     }
   ],
   "institutional": [
     {
       "word": "半導体",
-      "size": "xl",
+      "size": "lg",
       "mood": "fear",
-      "count": 11,
+      "count": 3,
       "sources": 1
     },
     {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "配当",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
+      "count": 3,
       "sources": 1
     }
   ],
