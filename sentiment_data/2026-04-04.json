@@ -1,10 +1,10 @@
 {
   "date": "2026-04-04",
-  "collected_at": "2026-04-04 09:58",
+  "collected_at": "2026-04-04 21:51",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 28,
+  "entry_count": 26,
   "entries": [
     {
       "source": "youtube",
@@ -163,6 +163,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "海外投資家２兆円売り。NISAでフジクラ人気化。４月の株式分割６銘柄。５月の株式分割と高配当株。４月４日:土曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=_8bBIzvunFs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "トランプ大統領、イラン発電所に警告。省エネ関連が急騰。三菱商事がイラン紛争で業績向上。さくらS高～あす上がる株　2026年４月６日（月）に上がる銘柄。最新の日本",
       "video_url": "https://www.youtube.com/watch?v=ClTgwF8BzEQ",
       "topic": "高配当",
@@ -198,28 +209,6 @@
       "channel": "株リアルライブ",
       "video_title": "日経、上昇だが・・・。リョーサン菱洋が-１１％の急落中。霞ヶ関キャピタルが上昇。電線株が急騰。2026年4月３日（金）～明日上がる株最新の日本株情報。高配当株の",
       "video_url": "https://www.youtube.com/watch?v=DDqUYCMpr4c",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "アメリカ市場は好転！ナスダック、S&amp;P500は上げ。その理由。スペースＸが上場へ。４月３日金表～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当",
-      "video_url": "https://www.youtube.com/watch?v=g-YoYX4baVo",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "アメリカ市場は好転！ナスダック、S&amp;P500は上げ。その理由。スペースＸが上場へ。４月３日金表～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当",
-      "video_url": "https://www.youtube.com/watch?v=g-YoYX4baVo",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -294,17 +283,6 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "日経爆上げもKDDIが急落！買い場なのか！？",
-      "video_url": "https://www.youtube.com/watch?v=ViDt7SerCN8",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
       "channel": "たばたの投資ch",
       "video_title": "米陸軍トップが解任！トランプは地上戦に踏み切るか！？",
       "video_url": "https://www.youtube.com/watch?v=POFQt3JMwXI",
@@ -322,7 +300,7 @@
         "bear": 5
       },
       "株リアルライブ": {
-        "bull": 6,
+        "bull": 5,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -359,8 +337,8 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
@@ -371,11 +349,10 @@
         ]
       },
       "ナスダック": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "株リアルライブ"
+          "Sho's投資情報局"
         ]
       },
       "ドル円": {
@@ -389,11 +366,11 @@
         "count": 7,
         "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch",
-          "Sho's投資情報局",
-          "優待ライダー",
           "ひげづら株ちゃんねる",
+          "Sho's投資情報局",
           "ばっちゃまの投資チャンネル",
+          "優待ライダー",
+          "たばたの投資ch",
           "株リアルライブ"
         ]
       },
@@ -401,17 +378,16 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
+          "優待ライダー",
           "株リアルライブ",
-          "優待ライダー"
+          "トレードラボ"
         ]
       },
       "日経": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー"
+          "株リアルライブ"
         ]
       }
     },
@@ -419,8 +395,8 @@
       "トランプ",
       "高配当",
       "日経平均",
-      "ナスダック",
       "半導体",
+      "ナスダック",
       "ドル円",
       "日経"
     ]

@@ -20,8 +20,8 @@
       "word": "ナスダック",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "ドル円",
@@ -32,10 +32,10 @@
     },
     {
       "word": "日経",
-      "size": "md",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
