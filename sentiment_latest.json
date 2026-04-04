@@ -1,48 +1,41 @@
 {
-  "date": "2026-04-03",
+  "date": "2026-04-04",
   "mode": "claude",
   "macro": [
     {
       "word": "トランプ",
       "size": "xl",
       "mood": "calm",
-      "count": 10,
+      "count": 7,
       "sources": 6
     },
     {
-      "word": "日経",
-      "size": "xl",
-      "mood": "greed",
-      "count": 9,
-      "sources": 3
-    },
-    {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "calm",
-      "count": 7,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "fear",
+      "mood": "greed",
       "count": 4,
       "sources": 2
     },
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "fear",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "ダウ",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "word": "日経",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     }
   ],
   "institutional": [
@@ -56,7 +49,7 @@
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "fear",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     }

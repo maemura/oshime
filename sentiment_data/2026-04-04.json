@@ -1,0 +1,428 @@
+{
+  "date": "2026-04-04",
+  "collected_at": "2026-04-04 09:58",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 28,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/4【日経平均〇〇が上昇サインか⁉️海外投資家が日本株を2.1兆円大量売却‼️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、半導体株乱高",
+      "video_url": "https://www.youtube.com/watch?v=aH_VlYSz4QQ",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/4【日経平均〇〇が上昇サインか⁉️海外投資家が日本株を2.1兆円大量売却‼️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、半導体株乱高",
+      "video_url": "https://www.youtube.com/watch?v=aH_VlYSz4QQ",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/4【日経平均〇〇が上昇サインか⁉️海外投資家が日本株を2.1兆円大量売却‼️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、半導体株乱高",
+      "video_url": "https://www.youtube.com/watch?v=aH_VlYSz4QQ",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/4【日経平均〇〇が上昇サインか⁉️海外投資家が日本株を2.1兆円大量売却‼️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、半導体株乱高",
+      "video_url": "https://www.youtube.com/watch?v=aH_VlYSz4QQ",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/3【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均乱高下‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、",
+      "video_url": "https://www.youtube.com/watch?v=UBr_he2nu5k",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/3【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均乱高下‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、",
+      "video_url": "https://www.youtube.com/watch?v=UBr_he2nu5k",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/3【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均乱高下‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、",
+      "video_url": "https://www.youtube.com/watch?v=UBr_he2nu5k",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/3【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均乱高下‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、",
+      "video_url": "https://www.youtube.com/watch?v=UBr_he2nu5k",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/3【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均乱高下‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、",
+      "video_url": "https://www.youtube.com/watch?v=UBr_he2nu5k",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/2②【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均1276円急落‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円",
+      "video_url": "https://www.youtube.com/watch?v=x9dAfivIXv8",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/2②【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均1276円急落‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円",
+      "video_url": "https://www.youtube.com/watch?v=x9dAfivIXv8",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/2②【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均1276円急落‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円",
+      "video_url": "https://www.youtube.com/watch?v=x9dAfivIXv8",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/2②【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均1276円急落‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円",
+      "video_url": "https://www.youtube.com/watch?v=x9dAfivIXv8",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/2②【海外投資家が日本株を2.1兆円大量売却‼️トランプ砲で日経平均1276円急落‼️TACO上げは騙し上げや】中東情勢懸念でWTI原油急騰、ドル円159円",
+      "video_url": "https://www.youtube.com/watch?v=x9dAfivIXv8",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "トランプ大統領、イラン発電所に警告。省エネ関連が急騰。三菱商事がイラン紛争で業績向上。さくらS高～あす上がる株　2026年４月６日（月）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=ClTgwF8BzEQ",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "トランプ大統領、イラン発電所に警告。省エネ関連が急騰。三菱商事がイラン紛争で業績向上。さくらS高～あす上がる株　2026年４月６日（月）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=ClTgwF8BzEQ",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日経、上昇だが・・・。リョーサン菱洋が-１１％の急落中。霞ヶ関キャピタルが上昇。電線株が急騰。2026年4月３日（金）～明日上がる株最新の日本株情報。高配当株の",
+      "video_url": "https://www.youtube.com/watch?v=DDqUYCMpr4c",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日経、上昇だが・・・。リョーサン菱洋が-１１％の急落中。霞ヶ関キャピタルが上昇。電線株が急騰。2026年4月３日（金）～明日上がる株最新の日本株情報。高配当株の",
+      "video_url": "https://www.youtube.com/watch?v=DDqUYCMpr4c",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "アメリカ市場は好転！ナスダック、S&amp;P500は上げ。その理由。スペースＸが上場へ。４月３日金表～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当",
+      "video_url": "https://www.youtube.com/watch?v=g-YoYX4baVo",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "アメリカ市場は好転！ナスダック、S&amp;P500は上げ。その理由。スペースＸが上場へ。４月３日金表～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当",
+      "video_url": "https://www.youtube.com/watch?v=g-YoYX4baVo",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均またもトランプ発言連発で下落！イランを石器時代に？株価は上がる？【4月2日市況】",
+      "video_url": "https://www.youtube.com/watch?v=6IOGo4zSenU",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均またもトランプ発言連発で下落！イランを石器時代に？株価は上がる？【4月2日市況】",
+      "video_url": "https://www.youtube.com/watch?v=6IOGo4zSenU",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【暴落でも安心】まだ気付かれていない下げ過ぎ高配当株、仕込みチャンスです",
+      "video_url": "https://www.youtube.com/watch?v=vP4ZhxnaN2U",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 4/2】時間外のトランプ演説で急展開です。",
+      "video_url": "https://www.youtube.com/watch?v=duYNt319Rcc",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "業績悪化懸念で株価大幅下落！注目高配当優待銘柄",
+      "video_url": "https://www.youtube.com/watch?v=9UZzRMmlGt0",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "株価暴落中で年初来安値更新！トランプ失言",
+      "video_url": "https://www.youtube.com/watch?v=nYnZIXiYRGc",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "日経爆上げもKDDIが急落！買い場なのか！？",
+      "video_url": "https://www.youtube.com/watch?v=ViDt7SerCN8",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "米陸軍トップが解任！トランプは地上戦に踏み切るか！？",
+      "video_url": "https://www.youtube.com/watch?v=POFQt3JMwXI",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 4,
+        "bear": 5
+      },
+      "株リアルライブ": {
+        "bull": 6,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 1
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "neutral",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "株リアルライブ"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "トランプ": {
+        "count": 7,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch",
+          "Sho's投資情報局",
+          "優待ライダー",
+          "ひげづら株ちゃんねる",
+          "ばっちゃまの投資チャンネル",
+          "株リアルライブ"
+        ]
+      },
+      "高配当": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ",
+          "株リアルライブ",
+          "優待ライダー"
+        ]
+      },
+      "日経": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "優待ライダー"
+        ]
+      }
+    },
+    "hot_words": [
+      "トランプ",
+      "高配当",
+      "日経平均",
+      "ナスダック",
+      "半導体",
+      "ドル円",
+      "日経"
+    ]
+  }
+}
