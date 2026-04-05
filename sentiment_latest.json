@@ -3,18 +3,18 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "トランプ",
-      "size": "xl",
-      "mood": "calm",
-      "count": 6,
-      "sources": 5
+      "word": "日経平均",
+      "size": "lg",
+      "mood": "greed",
+      "count": 4,
+      "sources": 2
     },
     {
-      "word": "日経平均",
+      "word": "トランプ",
       "size": "lg",
       "mood": "calm",
       "count": 4,
-      "sources": 2
+      "sources": 4
     },
     {
       "word": "ナスダック",
@@ -31,13 +31,6 @@
       "sources": 1
     },
     {
-      "word": "日経",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "金利",
       "size": "sm",
       "mood": "calm",
@@ -50,7 +43,7 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
+      "count": 6,
       "sources": 3
     },
     {
@@ -58,6 +51,13 @@
       "size": "lg",
       "mood": "greed",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "決算",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
       "sources": 1
     }
   ],
