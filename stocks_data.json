@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/04/03 16:52",
+ "updated_at": "2026/04/06 07:59",
  "total": 186,
  "stocks": [
   {
@@ -997,7 +997,7 @@
    "rsi": 58.6,
    "dividend": 5.47,
    "pbr": 1.64,
-   "per": 11.5,
+   "per": 11.4,
    "vol_r": 1.12,
    "turnover_avg5": 8.9,
    "market_cap_b": 1207.0,
@@ -11411,7 +11411,7 @@
    "rsi": 44.4,
    "dividend": 0.0,
    "pbr": 14.25,
-   "per": 38.3,
+   "per": 38.2,
    "vol_r": 1.08,
    "turnover_avg5": 1754.0,
    "market_cap_b": 32314.0,
@@ -15591,9 +15591,9 @@
  "nikkei_ma25": 54058.0,
  "nasdaq_1d_chg": 0.18,
  "vix": 23.9,
- "usdjpy": 159.57,
+ "usdjpy": 159.67,
  "us10y": 4.31,
- "wti_oil": 111.54,
+ "wti_oil": 114.42,
  "ny_dow": 46504.67,
  "ny_dow_1d_chg": -0.13,
  "sp500": 6582.69,
