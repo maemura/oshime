@@ -1,13 +1,13 @@
 {
-  "date": "2026-04-04",
+  "date": "2026-04-05",
   "mode": "claude",
   "macro": [
     {
       "word": "トランプ",
       "size": "xl",
       "mood": "calm",
-      "count": 7,
-      "sources": 6
+      "count": 6,
+      "sources": 5
     },
     {
       "word": "日経平均",
@@ -34,6 +34,13 @@
       "word": "日経",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "金利",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
