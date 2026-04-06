@@ -25,9 +25,9 @@
     },
     {
       "word": "トランプ",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
+      "count": 3,
       "sources": 2
     },
     {
@@ -41,9 +41,9 @@
   "institutional": [
     {
       "word": "高配当",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 6,
+      "count": 4,
       "sources": 3
     },
     {

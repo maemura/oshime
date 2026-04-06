@@ -1,10 +1,10 @@
 {
   "date": "2026-04-06",
-  "collected_at": "2026-04-06 10:35",
+  "collected_at": "2026-04-06 21:55",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 26,
+  "entry_count": 25,
   "entries": [
     {
       "source": "youtube",
@@ -141,6 +141,28 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "今夜AM２時注意！トランプ大統領、ステルスミサイル全弾投入。Ａｂａｌａｎｃｅ米国差し止め危機。～あす上がる株　2026年４月７日（火）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=l6r2-THgkR0",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "今夜AM２時注意！トランプ大統領、ステルスミサイル全弾投入。Ａｂａｌａｎｃｅ米国差し止め危機。～あす上がる株　2026年４月７日（火）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=l6r2-THgkR0",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "ドンキ、Ｏｌｙｍｐｉｃ経営統合。トランプ大統領、期限延期。マルマエ好決算なのに急落。T＆D急落。2026年4月６日（月）～明日上がる株最新の日本株情報。高配当株",
       "video_url": "https://www.youtube.com/watch?v=EoSIyWAGaAY",
       "topic": "高配当",
@@ -184,17 +206,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "海外投資家２兆円売り。NISAでフジクラ人気化。４月の株式分割６銘柄。５月の株式分割と高配当株。４月４日:土曜版～あす上がる株。最新の日本株情報～",
-      "video_url": "https://www.youtube.com/watch?v=_8bBIzvunFs",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "日経平均やっとブラマン脱出！ただ絶対通さないマンがｗあの有名株はブラックロックが爆買い【4月6日市況】",
       "video_url": "https://www.youtube.com/watch?v=mIsiin0KH_0",
@@ -217,17 +228,6 @@
     },
     {
       "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "【暴落でも安心】まだ気付かれていない下げ過ぎ高配当株、仕込みチャンスです",
-      "video_url": "https://www.youtube.com/watch?v=vP4ZhxnaN2U",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ばっちゃまの投資チャンネル",
       "video_title": "【米国株 4/2】時間外のトランプ演説で急展開です。",
       "video_url": "https://www.youtube.com/watch?v=duYNt319Rcc",
@@ -245,17 +245,6 @@
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "業績悪化懸念で株価大幅下落！注目高配当優待銘柄",
-      "video_url": "https://www.youtube.com/watch?v=9UZzRMmlGt0",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
     },
@@ -300,7 +289,7 @@
         "bear": 4
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 6,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -337,8 +326,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "AI関連": {
@@ -370,7 +359,7 @@
         ]
       },
       "高配当": {
-        "count": 6,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
           "トレードラボ",
@@ -378,19 +367,19 @@
           "優待ライダー"
         ]
       },
+      "トランプ": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "ばっちゃまの投資チャンネル",
+          "株リアルライブ"
+        ]
+      },
       "決算": {
         "count": 2,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ"
-        ]
-      },
-      "トランプ": {
-        "count": 2,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ",
-          "ばっちゃまの投資チャンネル"
         ]
       },
       "金利": {
@@ -410,13 +399,13 @@
       }
     },
     "hot_words": [
-      "高配当",
       "日経平均",
+      "高配当",
       "ナスダック",
       "ドル円",
+      "トランプ",
       "半導体",
       "決算",
-      "トランプ",
       "金利",
       "AI関連",
       "配当"
