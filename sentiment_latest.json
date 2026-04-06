@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-05",
+  "date": "2026-04-06",
   "mode": "claude",
   "macro": [
     {
@@ -8,13 +8,6 @@
       "mood": "greed",
       "count": 4,
       "sources": 2
-    },
-    {
-      "word": "トランプ",
-      "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 4
     },
     {
       "word": "ナスダック",
@@ -31,11 +24,18 @@
       "sources": 1
     },
     {
+      "word": "トランプ",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "金利",
-      "size": "sm",
+      "size": "md",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     }
   ],
   "institutional": [
@@ -48,15 +48,29 @@
     },
     {
       "word": "半導体",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 1
     },
     {
       "word": "決算",
-      "size": "sm",
+      "size": "md",
       "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "AI関連",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
