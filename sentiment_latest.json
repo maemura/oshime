@@ -5,7 +5,7 @@
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "greed",
+      "mood": "calm",
       "count": 4,
       "sources": 2
     },
@@ -25,9 +25,9 @@
     },
     {
       "word": "トランプ",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 2
     },
     {
@@ -43,22 +43,22 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
+      "count": 6,
       "sources": 3
     },
     {
       "word": "AI関連",
-      "size": "md",
+      "size": "lg",
       "mood": "calm",
-      "count": 2,
+      "count": 3,
       "sources": 1
     },
     {
       "word": "半導体",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
