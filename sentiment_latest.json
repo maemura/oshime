@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-06",
+  "date": "2026-04-07",
   "mode": "claude",
   "macro": [
     {
@@ -12,14 +12,14 @@
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "greed",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "greed",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
@@ -32,48 +32,42 @@
     },
     {
       "word": "金利",
-      "size": "md",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
+      "count": 5,
       "sources": 3
+    },
+    {
+      "word": "AI関連",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 1
     },
     {
       "word": "半導体",
       "size": "md",
       "mood": "greed",
       "count": 2,
-      "sources": 1
-    },
+      "sources": 2
+    }
+  ],
+  "retail": [
     {
-      "word": "決算",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "AI関連",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
+      "word": "信越化学",
       "size": "sm",
       "mood": "calm",
       "count": 1,
       "sources": 1
     }
-  ],
-  "retail": []
+  ]
 }
