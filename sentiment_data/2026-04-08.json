@@ -1,0 +1,432 @@
+{
+  "date": "2026-04-08",
+  "collected_at": "2026-04-08 10:33",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 26,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/7②【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上",
+      "video_url": "https://www.youtube.com/watch?v=hLJIaakMyOg",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/7②【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上",
+      "video_url": "https://www.youtube.com/watch?v=hLJIaakMyOg",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/7②【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上",
+      "video_url": "https://www.youtube.com/watch?v=hLJIaakMyOg",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/7②【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上",
+      "video_url": "https://www.youtube.com/watch?v=hLJIaakMyOg",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/7【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上昇",
+      "video_url": "https://www.youtube.com/watch?v=aUnW46FIqe8",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/7【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上昇",
+      "video_url": "https://www.youtube.com/watch?v=aUnW46FIqe8",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/7【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上昇",
+      "video_url": "https://www.youtube.com/watch?v=aUnW46FIqe8",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/7【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上昇",
+      "video_url": "https://www.youtube.com/watch?v=aUnW46FIqe8",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/6【日本株爆上げ来るか⁉日経平均TACO上げ来そーけど中東情勢懸念で後場売り圧力増】WTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄下落相場",
+      "video_url": "https://www.youtube.com/watch?v=w0fOHtbNDGQ",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/6【日本株爆上げ来るか⁉日経平均TACO上げ来そーけど中東情勢懸念で後場売り圧力増】WTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄下落相場",
+      "video_url": "https://www.youtube.com/watch?v=w0fOHtbNDGQ",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/6【日本株爆上げ来るか⁉日経平均TACO上げ来そーけど中東情勢懸念で後場売り圧力増】WTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄下落相場",
+      "video_url": "https://www.youtube.com/watch?v=w0fOHtbNDGQ",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/6【日本株爆上げ来るか⁉日経平均TACO上げ来そーけど中東情勢懸念で後場売り圧力増】WTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄下落相場",
+      "video_url": "https://www.youtube.com/watch?v=w0fOHtbNDGQ",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "即時停戦合意で急騰。キオクシアが初配当検討。戻り遅れ１０銘柄。INPEX・海運下落。2026年4月８日（水）～明日上がる株最新の日本株情報。高配当株の株価やデイ",
+      "video_url": "https://www.youtube.com/watch?v=rcEFg4qCfq0",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イランが、サウ​ジやＵＡＥに攻撃を警告。マスク氏のＡＩ半導体「テラファブ」プロジェクトにインテルが参画。４月８日水曜～あす上がる株米国版。最新のアメリカ株価と株",
+      "video_url": "https://www.youtube.com/watch?v=A2fgzvDWtKg",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イランが、サウ​ジやＵＡＥに攻撃を警告。マスク氏のＡＩ半導体「テラファブ」プロジェクトにインテルが参画。４月８日水曜～あす上がる株米国版。最新のアメリカ株価と株",
+      "video_url": "https://www.youtube.com/watch?v=A2fgzvDWtKg",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "高市首相、今夜。パルグループが最高益。ディスコは速報で急落。モジタバ師が意識不明。～あす上がる株　2026年４月８日（水）に上がる銘柄。最新の日本株情報。高配当",
+      "video_url": "https://www.youtube.com/watch?v=hAT8yLP3rTw",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "ソニーGの株価が30％急落中！今すぐ買うべきか私の結論はコレです",
+      "video_url": "https://www.youtube.com/watch?v=BkjGTtBqpxg",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均やっとブラマン脱出！ただ絶対通さないマンがｗあの有名株はブラックロックが爆買い【4月6日市況】",
+      "video_url": "https://www.youtube.com/watch?v=mIsiin0KH_0",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "３月権利落ち後に仕込みたい高配当株３選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=7c2Pi_aFwKY",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "現在急落中も安心高配当！静かなる退職へ",
+      "video_url": "https://www.youtube.com/watch?v=0fy7b4LCn8Q",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "今後下落なら迷わず買い！厳選高配当10銘柄",
+      "video_url": "https://www.youtube.com/watch?v=LsURkXmXBL0",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経2900円爆上げ！停戦合意で原油も急落！この上げは本物か？",
+      "video_url": "https://www.youtube.com/watch?v=yld6Cs71tXI",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "停戦合意で日経バク上げ2900円高！原油は大暴落で100ドル割れ！とりあえず買いか？",
+      "video_url": "https://www.youtube.com/watch?v=KVTm071ca6w",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "停戦合意で日経バク上げ2900円高！原油は大暴落で100ドル割れ！とりあえず買いか？",
+      "video_url": "https://www.youtube.com/watch?v=KVTm071ca6w",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "信越化学やSUMCOに影響も。中東情勢の悪化が半導体産業を直撃する",
+      "video_url": "https://www.youtube.com/watch?v=VEgTB4cvbYM",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "信越化学やSUMCOに影響も。中東情勢の悪化が半導体産業を直撃する",
+      "video_url": "https://www.youtube.com/watch?v=VEgTB4cvbYM",
+      "topic": "信越化学",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 信越化学"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 0,
+        "bear": 4
+      },
+      "株リアルライブ": {
+        "bull": 4,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 1,
+        "bear": 1
+      },
+      "トレードラボ": {
+        "bull": 1,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 1,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 3
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "neutral",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
+        ]
+      },
+      "AI関連": {
+        "count": 3,
+        "sentiment": "neutral",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "neutral",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "neutral",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "配当": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "半導体": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "つばめ投資顧問",
+          "株リアルライブ"
+        ]
+      },
+      "高配当": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ",
+          "優待ライダー",
+          "株リアルライブ"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "日経": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "円高": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "信越化学": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "日経平均",
+      "AI関連",
+      "ナスダック",
+      "ドル円",
+      "半導体",
+      "日経",
+      "配当",
+      "ソニー",
+      "円高",
+      "信越化学"
+    ]
+  }
+}

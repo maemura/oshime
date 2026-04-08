@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-07",
+  "date": "2026-04-08",
   "mode": "claude",
   "macro": [
     {
@@ -24,16 +24,16 @@
       "sources": 1
     },
     {
-      "word": "トランプ",
+      "word": "日経",
       "size": "md",
-      "mood": "greed",
+      "mood": "fear",
       "count": 2,
-      "sources": 2
+      "sources": 1
     },
     {
-      "word": "金利",
+      "word": "円高",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -43,7 +43,7 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
+      "count": 5,
       "sources": 3
     },
     {
@@ -55,13 +55,27 @@
     },
     {
       "word": "半導体",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "配当",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
   ],
   "retail": [
+    {
+      "word": "ソニー",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
     {
       "word": "信越化学",
       "size": "sm",
