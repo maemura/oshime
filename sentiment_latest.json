@@ -19,7 +19,7 @@
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     },
@@ -42,7 +42,7 @@
     {
       "word": "AI関連",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     }
