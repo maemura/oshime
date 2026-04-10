@@ -40,14 +40,14 @@
   ],
   "institutional": [
     {
-      "word": "高配当",
-      "size": "xl",
+      "word": "AI関連",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 3,
+      "sources": 1
     },
     {
-      "word": "AI関連",
+      "word": "高配当",
       "size": "lg",
       "mood": "greed",
       "count": 3,
@@ -57,6 +57,13 @@
       "word": "半導体",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "防衛",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }

@@ -1,14 +1,58 @@
 {
   "date": "2026-04-10",
-  "collected_at": "2026-04-10 10:31",
+  "collected_at": "2026-04-10 21:58",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 23,
+  "entry_count": 22,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "4/10【海外投資家が日本株を1.9兆円爆買い‼日経平均TACO上げ続くか⁉️】中東情勢懸念後退ででWTI原油急落、ドル円158円。米国株、ナスダック、AI関連",
+      "video_url": "https://www.youtube.com/watch?v=0y_fYLfETvQ",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/10【海外投資家が日本株を1.9兆円爆買い‼日経平均TACO上げ続くか⁉️】中東情勢懸念後退ででWTI原油急落、ドル円158円。米国株、ナスダック、AI関連",
+      "video_url": "https://www.youtube.com/watch?v=0y_fYLfETvQ",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/10【海外投資家が日本株を1.9兆円爆買い‼日経平均TACO上げ続くか⁉️】中東情勢懸念後退ででWTI原油急落、ドル円158円。米国株、ナスダック、AI関連",
+      "video_url": "https://www.youtube.com/watch?v=0y_fYLfETvQ",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/10【海外投資家が日本株を1.9兆円爆買い‼日経平均TACO上げ続くか⁉️】中東情勢懸念後退ででWTI原油急落、ドル円158円。米国株、ナスダック、AI関連",
+      "video_url": "https://www.youtube.com/watch?v=0y_fYLfETvQ",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "4/9【海外投資家が日本株を1.9兆円爆買い‼日経平均TACO上げ続くか⁉️】中東情勢懸念後退ででWTI原油急落、ドル円158円。米国株、ナスダック、AI関連銘",
       "video_url": "https://www.youtube.com/watch?v=1QL1NvkGAUc",
       "topic": "日経平均",
@@ -96,47 +140,14 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "4/7②【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上",
-      "video_url": "https://www.youtube.com/watch?v=hLJIaakMyOg",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "4/7②【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上",
-      "video_url": "https://www.youtube.com/watch?v=hLJIaakMyOg",
-      "topic": "AI関連",
+      "channel": "株リアルライブ",
+      "video_title": "良品計画、上方修正・増配。安川電機、増益・増配。タマホーム、減配。竹内製作所、減益・増配。～あす上がる株　2026年４月１３日（月）に上がる銘柄。最新の日本株情",
+      "video_url": "https://www.youtube.com/watch?v=-OvFNHq5ScU",
+      "topic": "高配当",
       "category": "sector",
-      "sentiment": "neutral",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: AI関連"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "4/7②【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上",
-      "video_url": "https://www.youtube.com/watch?v=hLJIaakMyOg",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "4/7②【日本株空売り激減‼日経平均投げ売り警戒か⁉️】中東情勢懸念でWTI原油急騰、ドル円159円。米国株、ナスダック、AI関連銘柄どうなる。仮想通貨BTC上",
-      "video_url": "https://www.youtube.com/watch?v=hLJIaakMyOg",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -173,17 +184,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ホルムズ再封鎖で大規模攻撃。ファーストリテイリング上方増配。セブンi減益。ローツェ増益。イオン急落～あす上がる株　2026年４月１０日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=e4klOHlX_SI",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "ソニーGの株価が30％急落中！今すぐ買うべきか私の結論はコレです",
       "video_url": "https://www.youtube.com/watch?v=BkjGTtBqpxg",
@@ -207,13 +207,13 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
-      "video_title": "３月権利落ち後に仕込みたい高配当株３選#shorts",
-      "video_url": "https://www.youtube.com/watch?v=7c2Pi_aFwKY",
-      "topic": "高配当",
+      "video_title": "【株価41%OFF】あの防衛の有力株、今なら格安で手に入ります",
+      "video_url": "https://www.youtube.com/watch?v=cnja1562_Bo",
+      "topic": "防衛",
       "category": "sector",
-      "sentiment": "bullish",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 高配当"
+      "summary": "キーワード: 防衛"
     },
     {
       "source": "youtube",
@@ -225,17 +225,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "現在急落中も安心高配当！静かなる退職へ",
-      "video_url": "https://www.youtube.com/watch?v=0fy7b4LCn8Q",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -263,7 +252,7 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 8,
+        "bull": 12,
         "bear": 0
       },
       "株リアルライブ": {
@@ -275,7 +264,7 @@
         "bear": 1
       },
       "トレードラボ": {
-        "bull": 1,
+        "bull": 0,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -304,8 +293,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "AI関連": {
@@ -330,11 +319,9 @@
         ]
       },
       "高配当": {
-        "count": 5,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "優待ライダー",
-          "トレードラボ",
           "株リアルライブ"
         ]
       },
@@ -352,12 +339,19 @@
           "ひげづら株ちゃんねる"
         ]
       },
+      "防衛": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
       "日経": {
         "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "優待ライダー",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "優待ライダー"
         ]
       },
       "日銀": {
@@ -369,14 +363,15 @@
       }
     },
     "hot_words": [
-      "高配当",
       "日経平均",
       "AI関連",
       "ナスダック",
       "ドル円",
+      "高配当",
       "日経",
       "半導体",
       "ソニー",
+      "防衛",
       "日銀"
     ]
   }
