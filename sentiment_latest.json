@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-10",
+  "date": "2026-04-11",
   "mode": "claude",
   "macro": [
     {
@@ -25,13 +25,20 @@
     },
     {
       "word": "日経",
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 3
+    },
+    {
+      "word": "日銀",
       "size": "md",
       "mood": "calm",
       "count": 2,
       "sources": 2
     },
     {
-      "word": "日銀",
+      "word": "FRB",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -62,6 +69,13 @@
     },
     {
       "word": "防衛",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "銀行",
       "size": "sm",
       "mood": "calm",
       "count": 1,
