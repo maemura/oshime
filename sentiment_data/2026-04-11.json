@@ -1,10 +1,10 @@
 {
   "date": "2026-04-11",
-  "collected_at": "2026-04-11 10:00",
+  "collected_at": "2026-04-11 21:53",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 26,
+  "entry_count": 24,
   "entries": [
     {
       "source": "youtube",
@@ -162,28 +162,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "モジタバ師が声明。またアンソロピック・ショック。半導体株強い。４月１０日金～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当株やデイトレ情報も",
-      "video_url": "https://www.youtube.com/watch?v=4xWLtPzdZ0c",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "モジタバ師が声明。またアンソロピック・ショック。半導体株強い。４月１０日金～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当株やデイトレ情報も",
-      "video_url": "https://www.youtube.com/watch?v=4xWLtPzdZ0c",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "ソニーGの株価が30％急落中！今すぐ買うべきか私の結論はコレです",
       "video_url": "https://www.youtube.com/watch?v=BkjGTtBqpxg",
@@ -195,14 +173,14 @@
     },
     {
       "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "日経平均やっとブラマン脱出！ただ絶対通さないマンがｗあの有名株はブラックロックが爆買い【4月6日市況】",
-      "video_url": "https://www.youtube.com/watch?v=mIsiin0KH_0",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
+      "channel": "トレードラボ",
+      "video_title": "【暴落でも安心】まだ気付かれていない下げ過ぎ高配当株、仕込みチャンスです#shorts",
+      "video_url": "https://www.youtube.com/watch?v=diJkduoR14s",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -218,7 +196,7 @@
     {
       "source": "youtube",
       "channel": "ばっちゃまの投資チャンネル",
-      "video_title": "【米国株 4/11】米政府とFRBが銀行トップを緊急招集、これは異例の動き",
+      "video_title": "【米国株 4/11】米政府とFRBが銀行トップを緊急招集です。",
       "video_url": "https://www.youtube.com/watch?v=2rsAyd9bpoI",
       "topic": "FRB",
       "category": "macro",
@@ -229,7 +207,7 @@
     {
       "source": "youtube",
       "channel": "ばっちゃまの投資チャンネル",
-      "video_title": "【米国株 4/11】米政府とFRBが銀行トップを緊急招集、これは異例の動き",
+      "video_title": "【米国株 4/11】米政府とFRBが銀行トップを緊急招集です。",
       "video_url": "https://www.youtube.com/watch?v=2rsAyd9bpoI",
       "topic": "銀行",
       "category": "sector",
@@ -240,18 +218,18 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
-      "video_title": "日経爆上げも人気優待廃止！大損確定銘柄",
-      "video_url": "https://www.youtube.com/watch?v=PcslZ4R1yUo",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "neutral",
+      "video_title": "KDDIピンチ！暴落で狩れ最強高配当優待",
+      "video_url": "https://www.youtube.com/watch?v=KcZhRHoS5Zs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
       "confidence": 0.4,
-      "summary": "キーワード: 日経"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "イラン戦争一時停戦後、日銀利上げは「かなりの確率」どうなる日経？",
+      "video_title": "イランが一時停戦後、日銀利上げは「かなりの確率」どうなる日経？",
       "video_url": "https://www.youtube.com/watch?v=uokb60HYnbE",
       "topic": "日経",
       "category": "macro",
@@ -262,7 +240,7 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "イラン戦争一時停戦後、日銀利上げは「かなりの確率」どうなる日経？",
+      "video_title": "イランが一時停戦後、日銀利上げは「かなりの確率」どうなる日経？",
       "video_url": "https://www.youtube.com/watch?v=uokb60HYnbE",
       "topic": "日銀",
       "category": "macro",
@@ -300,11 +278,11 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 4,
+        "bull": 2,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
-        "bull": 1,
+        "bull": 0,
         "bear": 1
       },
       "トレードラボ": {
@@ -317,7 +295,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -334,11 +312,10 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "Sho's投資情報局"
         ]
       },
       "AI関連": {
@@ -363,17 +340,12 @@
         ]
       },
       "高配当": {
-        "count": 3,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "半導体": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
+          "優待ライダー",
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "ソニー": {
@@ -405,32 +377,30 @@
         ]
       },
       "日経": {
-        "count": 3,
+        "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch",
-          "優待ライダー",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "たばたの投資ch"
         ]
       },
       "日銀": {
         "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "たばたの投資ch"
         ]
       }
     },
     "hot_words": [
+      "高配当",
       "日経平均",
       "AI関連",
       "ナスダック",
       "ドル円",
-      "高配当",
       "日経",
       "日銀",
-      "半導体",
       "ソニー",
       "防衛",
       "FRB",

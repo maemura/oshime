@@ -6,8 +6,8 @@
       "word": "日経平均",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "ナスダック",
@@ -25,10 +25,10 @@
     },
     {
       "word": "日経",
-      "size": "lg",
+      "size": "md",
       "mood": "calm",
-      "count": 3,
-      "sources": 3
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "日銀",
@@ -47,24 +47,17 @@
   ],
   "institutional": [
     {
+      "word": "高配当",
+      "size": "lg",
+      "mood": "greed",
+      "count": 4,
+      "sources": 3
+    },
+    {
       "word": "AI関連",
       "size": "lg",
       "mood": "greed",
       "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "高配当",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "半導体",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
       "sources": 1
     },
     {
