@@ -24,6 +24,13 @@
       "sources": 1
     },
     {
+      "word": "ダウ",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "FRB",
       "size": "sm",
       "mood": "calm",
@@ -47,17 +54,24 @@
   ],
   "institutional": [
     {
-      "word": "高配当",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 3
-    },
-    {
       "word": "AI関連",
       "size": "lg",
       "mood": "greed",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "高配当",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 3
+    },
+    {
+      "word": "決算",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
       "sources": 1
     },
     {

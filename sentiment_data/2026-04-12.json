@@ -1,10 +1,10 @@
 {
   "date": "2026-04-12",
-  "collected_at": "2026-04-12 10:04",
+  "collected_at": "2026-04-12 21:54",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 22,
+  "entry_count": 23,
   "entries": [
     {
       "source": "youtube",
@@ -141,19 +141,30 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
-      "video_title": "良品計画、上方修正・増配。安川電機、増益・増配。タマホーム、減配。竹内製作所、減益・増配。～あす上がる株　2026年４月１３日（月）に上がる銘柄。最新の日本株情",
-      "video_url": "https://www.youtube.com/watch?v=-OvFNHq5ScU",
-      "topic": "高配当",
-      "category": "sector",
+      "video_title": "米イラン合意できず、Sダウ、ビットコイン急落。あす急落しそうな銘柄。好決算なのに下げてる銘柄。今週注目の決算人気銘柄。４月１２日:日曜版～あす上がる株。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=_cI7IGxltFU",
+      "topic": "ダウ",
+      "category": "macro",
       "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 高配当"
+      "summary": "キーワード: ダウ"
     },
     {
       "source": "youtube",
       "channel": "株リアルライブ",
-      "video_title": "アンソロピック・ショック、ついに恐ろしい段階へ。ファーストリテイリング急騰。機械関連が急騰。2026年4月１０日（金）～明日上がる株最新の日本株情報。高配当株の",
-      "video_url": "https://www.youtube.com/watch?v=vxbumJfh-ZA",
+      "video_title": "米イラン合意できず、Sダウ、ビットコイン急落。あす急落しそうな銘柄。好決算なのに下げてる銘柄。今週注目の決算人気銘柄。４月１２日:日曜版～あす上がる株。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=_cI7IGxltFU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "良品計画、上方修正・増配。安川電機、増益・増配。タマホーム、減配。竹内製作所、減益・増配。～あす上がる株　2026年４月１３日（月）に上がる銘柄。最新の日本株情",
+      "video_url": "https://www.youtube.com/watch?v=-OvFNHq5ScU",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -256,7 +267,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 2,
+        "bull": 3,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -317,13 +328,27 @@
           "Sho's投資情報局"
         ]
       },
-      "高配当": {
-        "count": 4,
+      "ダウ": {
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
-          "優待ライダー",
-          "トレードラボ",
           "株リアルライブ"
+        ]
+      },
+      "決算": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "高配当": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "優待ライダー",
+          "トレードラボ"
         ]
       },
       "ソニー": {
@@ -370,11 +395,13 @@
       }
     },
     "hot_words": [
-      "高配当",
       "日経平均",
       "AI関連",
       "ナスダック",
       "ドル円",
+      "高配当",
+      "ダウ",
+      "決算",
       "ソニー",
       "防衛",
       "FRB",
