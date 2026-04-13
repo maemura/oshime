@@ -1,0 +1,433 @@
+{
+  "date": "2026-04-13",
+  "collected_at": "2026-04-13 10:58",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 24,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/13【日本株空売り激減での波乱あるか⁉️中東情勢懸念で日経平均421円安】米ホルムズ海峡封鎖でWTI原油150ドルも。ドル円159円。米国株、ナスダック、A",
+      "video_url": "https://www.youtube.com/watch?v=jfr7R2-pvrg",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/13【日本株空売り激減での波乱あるか⁉️中東情勢懸念で日経平均421円安】米ホルムズ海峡封鎖でWTI原油150ドルも。ドル円159円。米国株、ナスダック、A",
+      "video_url": "https://www.youtube.com/watch?v=jfr7R2-pvrg",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/13【日本株空売り激減での波乱あるか⁉️中東情勢懸念で日経平均421円安】米ホルムズ海峡封鎖でWTI原油150ドルも。ドル円159円。米国株、ナスダック、A",
+      "video_url": "https://www.youtube.com/watch?v=jfr7R2-pvrg",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/13【日本株空売り激減での波乱あるか⁉️中東情勢懸念で日経平均421円安】米ホルムズ海峡封鎖でWTI原油150ドルも。ドル円159円。米国株、ナスダック、A",
+      "video_url": "https://www.youtube.com/watch?v=jfr7R2-pvrg",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/11【日本株異常な値動きヤバすぎる‼️】中東情勢交渉控えAI関連だけ爆上げ→日経平均急伸の異常な二極化相場。WTI原油急落、ドル円159円。米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=vRjuTpxysd0",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/11【日本株異常な値動きヤバすぎる‼️】中東情勢交渉控えAI関連だけ爆上げ→日経平均急伸の異常な二極化相場。WTI原油急落、ドル円159円。米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=vRjuTpxysd0",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/11【日本株異常な値動きヤバすぎる‼️】中東情勢交渉控えAI関連だけ爆上げ→日経平均急伸の異常な二極化相場。WTI原油急落、ドル円159円。米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=vRjuTpxysd0",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/11【日本株異常な値動きヤバすぎる‼️】中東情勢交渉控えAI関連だけ爆上げ→日経平均急伸の異常な二極化相場。WTI原油急落、ドル円159円。米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=vRjuTpxysd0",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/10【海外投資家が日本株を1.9兆円爆買い‼日経平均TACO上げ続くか⁉️】中東情勢懸念後退ででWTI原油急落、ドル円158円。米国株、ナスダック、AI関連",
+      "video_url": "https://www.youtube.com/watch?v=0y_fYLfETvQ",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/10【海外投資家が日本株を1.9兆円爆買い‼日経平均TACO上げ続くか⁉️】中東情勢懸念後退ででWTI原油急落、ドル円158円。米国株、ナスダック、AI関連",
+      "video_url": "https://www.youtube.com/watch?v=0y_fYLfETvQ",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/10【海外投資家が日本株を1.9兆円爆買い‼日経平均TACO上げ続くか⁉️】中東情勢懸念後退ででWTI原油急落、ドル円158円。米国株、ナスダック、AI関連",
+      "video_url": "https://www.youtube.com/watch?v=0y_fYLfETvQ",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/10【海外投資家が日本株を1.9兆円爆買い‼日経平均TACO上げ続くか⁉️】中東情勢懸念後退ででWTI原油急落、ドル円158円。米国株、ナスダック、AI関連",
+      "video_url": "https://www.youtube.com/watch?v=0y_fYLfETvQ",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "米イラン不合意で下げ。安川電機の好調で、フィジカルAI関連上昇。タマホーム急落。2026年4月１３日（月）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
+      "video_url": "https://www.youtube.com/watch?v=isTf5x2upIA",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "米イラン不合意で下げ。安川電機の好調で、フィジカルAI関連上昇。タマホーム急落。2026年4月１３日（月）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
+      "video_url": "https://www.youtube.com/watch?v=isTf5x2upIA",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "米イラン合意できず、Sダウ、ビットコイン急落。あす急落しそうな銘柄。好決算なのに下げてる銘柄。今週注目の決算人気銘柄。４月１２日:日曜版～あす上がる株。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=_cI7IGxltFU",
+      "topic": "ダウ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ダウ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "米イラン合意できず、Sダウ、ビットコイン急落。あす急落しそうな銘柄。好決算なのに下げてる銘柄。今週注目の決算人気銘柄。４月１２日:日曜版～あす上がる株。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=_cI7IGxltFU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "ソニーGの株価が30％急落中！今すぐ買うべきか私の結論はコレです",
+      "video_url": "https://www.youtube.com/watch?v=BkjGTtBqpxg",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【暴落でも安心】まだ気付かれていない下げ過ぎ高配当株、仕込みチャンスです#shorts",
+      "video_url": "https://www.youtube.com/watch?v=diJkduoR14s",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【株価41%OFF】あの防衛の有力株、今なら格安で手に入ります",
+      "video_url": "https://www.youtube.com/watch?v=cnja1562_Bo",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 4/11】米政府とFRBが銀行トップを緊急招集です。",
+      "video_url": "https://www.youtube.com/watch?v=2rsAyd9bpoI",
+      "topic": "FRB",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: FRB"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 4/11】米政府とFRBが銀行トップを緊急招集です。",
+      "video_url": "https://www.youtube.com/watch?v=2rsAyd9bpoI",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "KDDIピンチ！暴落で狩れ最強高配当優待",
+      "video_url": "https://www.youtube.com/watch?v=KcZhRHoS5Zs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "とうとうナフサショックの影響が！？「日経は大丈夫」と思ってる人は全員見てください。",
+      "video_url": "https://www.youtube.com/watch?v=rpMLTMIGOLI",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "イラン停戦交渉にトランプ氏の娘婿 クシュナー氏が行く理由とは？",
+      "video_url": "https://www.youtube.com/watch?v=HoMUv0ka9EU",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 4,
+        "bear": 4
+      },
+      "株リアルライブ": {
+        "bull": 4,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 1
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 1
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "AI関連": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円安": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "トレードラボ",
+          "優待ライダー"
+        ]
+      },
+      "ダウ": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "決算": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "防衛": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
+      "FRB": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "ばっちゃまの投資チャンネル"
+        ]
+      },
+      "銀行": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "ばっちゃまの投資チャンネル"
+        ]
+      },
+      "日経": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "トランプ": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      }
+    },
+    "hot_words": [
+      "AI関連",
+      "日経平均",
+      "ナスダック",
+      "高配当",
+      "ドル円",
+      "円安",
+      "ダウ",
+      "決算",
+      "ソニー",
+      "防衛",
+      "FRB",
+      "銀行",
+      "日経",
+      "トランプ"
+    ]
+  }
+}
