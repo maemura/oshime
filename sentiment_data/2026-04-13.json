@@ -1,10 +1,10 @@
 {
   "date": "2026-04-13",
-  "collected_at": "2026-04-13 10:58",
+  "collected_at": "2026-04-13 22:05",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 24,
+  "entry_count": 26,
   "entries": [
     {
       "source": "youtube",
@@ -141,6 +141,28 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "トランプ大統領、ホルムズ海峡を逆封鎖し、イラン再攻撃検討。TOTO、バス受注停止し急落。～あす上がる株　2026年４月１４日（火）に上がる銘柄。最新の日本株情報",
+      "video_url": "https://www.youtube.com/watch?v=5SqodeB8ITc",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "トランプ大統領、ホルムズ海峡を逆封鎖し、イラン再攻撃検討。TOTO、バス受注停止し急落。～あす上がる株　2026年４月１４日（火）に上がる銘柄。最新の日本株情報",
+      "video_url": "https://www.youtube.com/watch?v=5SqodeB8ITc",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "米イラン不合意で下げ。安川電機の好調で、フィジカルAI関連上昇。タマホーム急落。2026年4月１３日（月）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
       "video_url": "https://www.youtube.com/watch?v=isTf5x2upIA",
       "topic": "AI関連",
@@ -184,17 +206,6 @@
     },
     {
       "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "ソニーGの株価が30％急落中！今すぐ買うべきか私の結論はコレです",
-      "video_url": "https://www.youtube.com/watch?v=BkjGTtBqpxg",
-      "topic": "ソニー",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ソニー"
-    },
-    {
-      "source": "youtube",
       "channel": "トレードラボ",
       "video_title": "【暴落でも安心】まだ気付かれていない下げ過ぎ高配当株、仕込みチャンスです#shorts",
       "video_url": "https://www.youtube.com/watch?v=diJkduoR14s",
@@ -203,17 +214,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "【株価41%OFF】あの防衛の有力株、今なら格安で手に入ります",
-      "video_url": "https://www.youtube.com/watch?v=cnja1562_Bo",
-      "topic": "防衛",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 防衛"
     },
     {
       "source": "youtube",
@@ -240,6 +240,17 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "再び暴落中で直近安値更新の注目高配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=9VP4dwlrYsI",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "KDDIピンチ！暴落で狩れ最強高配当優待",
       "video_url": "https://www.youtube.com/watch?v=KcZhRHoS5Zs",
       "topic": "高配当",
@@ -251,7 +262,18 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "とうとうナフサショックの影響が！？「日経は大丈夫」と思ってる人は全員見てください。",
+      "video_title": "日銀・政策金利がどこまで上がるのか、ちょる子に聞いてみた!!",
+      "video_url": "https://www.youtube.com/watch?v=T9wIsCyXVD0",
+      "topic": "日銀",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日銀"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "とうとうナフサ・ショックの影響が！？「日経は大丈夫」と思ってる人は全員見てください。",
       "video_url": "https://www.youtube.com/watch?v=rpMLTMIGOLI",
       "topic": "日経",
       "category": "macro",
@@ -278,12 +300,12 @@
         "bear": 4
       },
       "株リアルライブ": {
-        "bull": 4,
+        "bull": 6,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "トレードラボ": {
         "bull": 0,
@@ -295,10 +317,10 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 1
+        "bear": 2
       },
       "たばたの投資ch": {
-        "bull": 0,
+        "bull": 1,
         "bear": 0
       },
       "つばめ投資顧問": {
@@ -348,12 +370,20 @@
         ]
       },
       "高配当": {
-        "count": 3,
+        "count": 5,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
-          "トレードラボ",
-          "優待ライダー"
+          "優待ライダー",
+          "トレードラボ"
+        ]
+      },
+      "トランプ": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "たばたの投資ch"
         ]
       },
       "ダウ": {
@@ -370,20 +400,6 @@
           "株リアルライブ"
         ]
       },
-      "ソニー": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "ひげづら株ちゃんねる"
-        ]
-      },
-      "防衛": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "トレードラボ"
-        ]
-      },
       "FRB": {
         "count": 1,
         "sentiment": "neutral",
@@ -398,14 +414,14 @@
           "ばっちゃまの投資チャンネル"
         ]
       },
-      "日経": {
+      "日銀": {
         "count": 1,
-        "sentiment": "neutral",
+        "sentiment": "bullish",
         "sources": [
           "たばたの投資ch"
         ]
       },
-      "トランプ": {
+      "日経": {
         "count": 1,
         "sentiment": "neutral",
         "sources": [
@@ -414,20 +430,19 @@
       }
     },
     "hot_words": [
+      "高配当",
       "AI関連",
       "日経平均",
       "ナスダック",
-      "高配当",
       "ドル円",
+      "トランプ",
       "円安",
       "ダウ",
       "決算",
-      "ソニー",
-      "防衛",
       "FRB",
       "銀行",
-      "日経",
-      "トランプ"
+      "日銀",
+      "日経"
     ]
   }
 }

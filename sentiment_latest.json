@@ -24,6 +24,13 @@
       "sources": 1
     },
     {
+      "word": "トランプ",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "円安",
       "size": "sm",
       "mood": "fear",
@@ -45,14 +52,14 @@
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "日銀",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "トランプ",
+      "word": "日経",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -61,6 +68,13 @@
   ],
   "institutional": [
     {
+      "word": "高配当",
+      "size": "xl",
+      "mood": "greed",
+      "count": 5,
+      "sources": 3
+    },
+    {
       "word": "AI関連",
       "size": "lg",
       "mood": "greed",
@@ -68,23 +82,9 @@
       "sources": 2
     },
     {
-      "word": "高配当",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 3
-    },
-    {
       "word": "決算",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "防衛",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     },
@@ -96,13 +96,5 @@
       "sources": 1
     }
   ],
-  "retail": [
-    {
-      "word": "ソニー",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    }
-  ]
+  "retail": []
 }
