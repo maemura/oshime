@@ -17,37 +17,23 @@
       "sources": 1
     },
     {
-      "word": "トランプ",
+      "word": "円高",
       "size": "md",
       "mood": "greed",
       "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "円高",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
       "sources": 1
     },
     {
       "word": "金利",
-      "size": "sm",
+      "size": "md",
       "mood": "greed",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
       "word": "円安",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ドル円",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     },
@@ -59,7 +45,7 @@
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "トランプ",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -90,6 +76,13 @@
     },
     {
       "word": "半導体",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "決算",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -97,13 +90,6 @@
     },
     {
       "word": "銀行",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "SaaS",
       "size": "sm",
       "mood": "calm",
       "count": 1,
