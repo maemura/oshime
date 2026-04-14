@@ -1,26 +1,19 @@
 {
-  "date": "2026-04-13",
+  "date": "2026-04-14",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "fear",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "fear",
+      "mood": "greed",
       "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "ドル円",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
       "sources": 1
     },
     {
@@ -31,6 +24,20 @@
       "sources": 2
     },
     {
+      "word": "円高",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "金利",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "円安",
       "size": "sm",
       "mood": "fear",
@@ -38,9 +45,9 @@
       "sources": 1
     },
     {
-      "word": "ダウ",
+      "word": "ドル円",
       "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },
@@ -52,14 +59,14 @@
       "sources": 1
     },
     {
-      "word": "日銀",
+      "word": "日経",
       "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "日銀",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -71,18 +78,18 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 8,
+      "sources": 5
     },
     {
       "word": "AI関連",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
-      "word": "決算",
+      "word": "半導体",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -92,6 +99,20 @@
       "word": "銀行",
       "size": "sm",
       "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "SaaS",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "防衛",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
