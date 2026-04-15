@@ -1,0 +1,534 @@
+{
+  "date": "2026-04-15",
+  "collected_at": "2026-04-15 10:40",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 33,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/15【日本株爆上どこまで続くか⁉️】空売り爆増で日経平均続伸。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=IBM2JKJ12Xk",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/15【日本株爆上どこまで続くか⁉️】空売り爆増で日経平均続伸。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=IBM2JKJ12Xk",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/15【日本株爆上どこまで続くか⁉️】空売り爆増で日経平均続伸。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=IBM2JKJ12Xk",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/15【日本株爆上どこまで続くか⁉️】空売り爆増で日経平均続伸。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=IBM2JKJ12Xk",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/15【日本株爆上どこまで続くか⁉️】空売り爆増で日経平均続伸。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=IBM2JKJ12Xk",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=vTfhjpWcPZA",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=vTfhjpWcPZA",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=vTfhjpWcPZA",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=vTfhjpWcPZA",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=vTfhjpWcPZA",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=vTfhjpWcPZA",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=vTfhjpWcPZA",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=myEW30v7p_M",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=myEW30v7p_M",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=myEW30v7p_M",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=myEW30v7p_M",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=myEW30v7p_M",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=myEW30v7p_M",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/14【日本株空売り爆増ヤバイ‼AI、半導体株爆上げで日経平均１３７４円高】金利高で高配当銘柄弱い。ドル円158円。WTI原油のねじれ解消。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=myEW30v7p_M",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "協議継続期待で原油下落。クリレス・ＳＦＰ合併。ベイカレントS高。アークランズ・ジョイフル統合。ベイカレントS高。2026年4月１５日（水）～明日上がる株最新の日",
+      "video_url": "https://www.youtube.com/watch?v=Nb-4y-HFIM4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "トランプ大統領・イラン、2日以内に再協議。金融系、決算ラッシュ突入。テスラ、上げ反転か？アマゾン衛星企業買収。４月１５日水曜～あす上がる株米国版。最新のアメリカ",
+      "video_url": "https://www.youtube.com/watch?v=Q29VPfSjXow",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "トランプ大統領・イラン、2日以内に再協議。金融系、決算ラッシュ突入。テスラ、上げ反転か？アマゾン衛星企業買収。４月１５日水曜～あす上がる株米国版。最新のアメリカ",
+      "video_url": "https://www.youtube.com/watch?v=Q29VPfSjXow",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "トランプ大統領・イラン、2日以内に再協議。金融系、決算ラッシュ突入。テスラ、上げ反転か？アマゾン衛星企業買収。４月１５日水曜～あす上がる株米国版。最新のアメリカ",
+      "video_url": "https://www.youtube.com/watch?v=Q29VPfSjXow",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "大量発表、決算・増配。ベイカレント増益増配。東宝減益。高島屋増益増配。ＳＨＩＦＴ減益。～あす上がる株　2026年４月１５日（水）に上がる銘柄。最新の日本株情報。",
+      "video_url": "https://www.youtube.com/watch?v=dZ_yChXeuNw",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "大量発表、決算・増配。ベイカレント増益増配。東宝減益。高島屋増益増配。ＳＨＩＦＴ減益。～あす上がる株　2026年４月１５日（水）に上がる銘柄。最新の日本株情報。",
+      "video_url": "https://www.youtube.com/watch?v=dZ_yChXeuNw",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【暴落でも安心】まだ気付かれていない下げ過ぎ高配当株、仕込みチャンスです#shorts",
+      "video_url": "https://www.youtube.com/watch?v=diJkduoR14s",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 4/11】米政府とFRBが銀行トップを緊急招集です。",
+      "video_url": "https://www.youtube.com/watch?v=2rsAyd9bpoI",
+      "topic": "FRB",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: FRB"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 4/11】米政府とFRBが銀行トップを緊急招集です。",
+      "video_url": "https://www.youtube.com/watch?v=2rsAyd9bpoI",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "再び暴落中で直近安値更新の注目高配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=9VP4dwlrYsI",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "【必見】決算またぎをする決め手はコレです!!",
+      "video_url": "https://www.youtube.com/watch?v=IXP8vmHidGY",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "予算倍増で恩恵を受ける「隠れ防衛銘柄」3選【高配当・割安株】",
+      "video_url": "https://www.youtube.com/watch?v=ccvAnsp8_VU",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "予算倍増で恩恵を受ける「隠れ防衛銘柄」3選【高配当・割安株】",
+      "video_url": "https://www.youtube.com/watch?v=ccvAnsp8_VU",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "イラン情勢、どちらに転んでも円安？【FXフォーカス】 4月15日 外為どっとコム総合研究所 中村勉さん",
+      "video_url": "https://www.youtube.com/watch?v=23XZDbU-51g",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 19,
+        "bear": 0
+      },
+      "株リアルライブ": {
+        "bull": 6,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 1
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 2,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "AI関連": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 9,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ",
+          "Sho's投資情報局",
+          "優待ライダー",
+          "株リアルライブ",
+          "つばめ投資顧問"
+        ]
+      },
+      "ドル円": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円高": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "金利": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "決算": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "たばたの投資ch"
+        ]
+      },
+      "トランプ": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "FRB": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "ばっちゃまの投資チャンネル"
+        ]
+      },
+      "銀行": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "ばっちゃまの投資チャンネル"
+        ]
+      },
+      "防衛": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      },
+      "円安": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "日経平均",
+      "AI関連",
+      "ナスダック",
+      "決算",
+      "半導体",
+      "円高",
+      "金利",
+      "ドル円",
+      "トランプ",
+      "FRB",
+      "銀行",
+      "防衛",
+      "円安"
+    ]
+  }
+}
