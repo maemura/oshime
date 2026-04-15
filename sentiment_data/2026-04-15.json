@@ -1,10 +1,10 @@
 {
   "date": "2026-04-15",
-  "collected_at": "2026-04-15 10:40",
+  "collected_at": "2026-04-15 22:06",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 33,
+  "entry_count": 32,
   "entries": [
     {
       "source": "youtube",
@@ -218,6 +218,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "サントリーが第一三共を買収。BitcoinJapan監理銘柄解除。ベイカレントS高。キオクシア急落～あす上がる株　2026年４月１６日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=x1slBHiFIB8",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "協議継続期待で原油下落。クリレス・ＳＦＰ合併。ベイカレントS高。アークランズ・ジョイフル統合。ベイカレントS高。2026年4月１５日（水）～明日上がる株最新の日",
       "video_url": "https://www.youtube.com/watch?v=Nb-4y-HFIM4",
       "topic": "高配当",
@@ -261,39 +272,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "大量発表、決算・増配。ベイカレント増益増配。東宝減益。高島屋増益増配。ＳＨＩＦＴ減益。～あす上がる株　2026年４月１５日（水）に上がる銘柄。最新の日本株情報。",
-      "video_url": "https://www.youtube.com/watch?v=dZ_yChXeuNw",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "大量発表、決算・増配。ベイカレント増益増配。東宝減益。高島屋増益増配。ＳＨＩＦＴ減益。～あす上がる株　2026年４月１５日（水）に上がる銘柄。最新の日本株情報。",
-      "video_url": "https://www.youtube.com/watch?v=dZ_yChXeuNw",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "【暴落でも安心】まだ気付かれていない下げ過ぎ高配当株、仕込みチャンスです#shorts",
-      "video_url": "https://www.youtube.com/watch?v=diJkduoR14s",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ばっちゃまの投資チャンネル",
       "video_title": "【米国株 4/11】米政府とFRBが銀行トップを緊急招集です。",
       "video_url": "https://www.youtube.com/watch?v=2rsAyd9bpoI",
@@ -313,6 +291,17 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "決算で暴落も利回り大幅増！改悪大損優待も",
+      "video_url": "https://www.youtube.com/watch?v=4UPjSD8ftc4",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -377,7 +366,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 6,
+        "bull": 5,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -394,7 +383,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 1
+        "bear": 2
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -432,14 +421,13 @@
         ]
       },
       "高配当": {
-        "count": 9,
+        "count": 8,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "Sho's投資情報局",
           "優待ライダー",
-          "株リアルライブ",
-          "つばめ投資顧問"
+          "Sho's投資情報局",
+          "つばめ投資顧問",
+          "株リアルライブ"
         ]
       },
       "ドル円": {
@@ -474,8 +462,9 @@
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "たばたの投資ch"
+          "優待ライダー",
+          "たばたの投資ch",
+          "株リアルライブ"
         ]
       },
       "トランプ": {
