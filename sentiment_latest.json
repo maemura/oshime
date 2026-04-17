@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-16",
+  "date": "2026-04-17",
   "mode": "claude",
   "macro": [
     {
@@ -10,6 +10,13 @@
       "sources": 3
     },
     {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "greed",
+      "count": 4,
+      "sources": 2
+    },
+    {
       "word": "ナスダック",
       "size": "lg",
       "mood": "greed",
@@ -17,32 +24,11 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 1
-    },
-    {
       "word": "日経",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "円高",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "金利",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "count": 3,
+      "sources": 3
     }
   ],
   "institutional": [
@@ -50,34 +36,27 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
+      "count": 5,
       "sources": 2
     },
     {
       "word": "AI関連",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "決算",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
+      "count": 4,
       "sources": 2
     },
     {
-      "word": "半導体",
-      "size": "sm",
+      "word": "決算",
+      "size": "md",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     },
     {
-      "word": "防衛",
+      "word": "配当",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
@@ -93,7 +72,7 @@
     {
       "word": "ソニー",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
