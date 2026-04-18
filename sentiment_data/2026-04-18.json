@@ -1,10 +1,10 @@
 {
   "date": "2026-04-18",
-  "collected_at": "2026-04-18 10:05",
+  "collected_at": "2026-04-18 21:54",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 26,
+  "entry_count": 25,
   "entries": [
     {
       "source": "youtube",
@@ -217,28 +217,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "オラクルとアマゾンが相互接続。TSMCは下落。エヌビディア影響で量子コンピューター銘柄続伸。４月１７日金曜～あす上がる株米国版。最新のアメリカ株価と株式投資。高",
-      "video_url": "https://www.youtube.com/watch?v=bNgasrpXRuQ",
-      "topic": "エヌビディア",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: エヌビディア"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "オラクルとアマゾンが相互接続。TSMCは下落。エヌビディア影響で量子コンピューター銘柄続伸。４月１７日金曜～あす上がる株米国版。最新のアメリカ株価と株式投資。高",
-      "video_url": "https://www.youtube.com/watch?v=bNgasrpXRuQ",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "日経平均ついに6万円くるか！？次は●●株が上がってTOPIX押し上げ？",
       "video_url": "https://www.youtube.com/watch?v=LC_Z6RT57Es",
@@ -247,6 +225,17 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【株価41%OFF】あの防衛の有力株、今なら格安で手に入ります#shorts",
+      "video_url": "https://www.youtube.com/watch?v=UdUFRFnhNUM",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
     },
     {
       "source": "youtube",
@@ -262,6 +251,17 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "高配当なのに優待まで神！見逃すと損１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=vGc_MuDyY54",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "日経過去最高も恩恵無し涙、、、急落優待欲しい！",
       "video_url": "https://www.youtube.com/watch?v=Zm3ydurrKEE",
       "topic": "日経",
@@ -269,17 +269,6 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "決算で暴落も利回り大幅増！改悪大損優待も",
-      "video_url": "https://www.youtube.com/watch?v=4UPjSD8ftc4",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -300,7 +289,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 6,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -316,8 +305,8 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 0,
-        "bear": 2
+        "bull": 1,
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -360,6 +349,7 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
+          "優待ライダー",
           "Sho's投資情報局",
           "株リアルライブ"
         ]
@@ -368,8 +358,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "ソニー": {
@@ -386,28 +376,14 @@
           "株リアルライブ"
         ]
       },
-      "エヌビディア": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
       "防衛": {
-        "count": 1,
-        "sentiment": "bearish",
+        "count": 2,
+        "sentiment": "neutral",
         "sources": [
           "トレードラボ"
         ]
       },
       "日経": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "優待ライダー"
-        ]
-      },
-      "決算": {
         "count": 1,
         "sentiment": "bearish",
         "sources": [
@@ -421,12 +397,10 @@
       "AI関連",
       "ドル円",
       "ナスダック",
+      "防衛",
       "ソニー",
       "配当",
-      "エヌビディア",
-      "防衛",
-      "日経",
-      "決算"
+      "日経"
     ]
   }
 }

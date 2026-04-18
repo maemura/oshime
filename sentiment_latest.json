@@ -37,7 +37,7 @@
       "size": "xl",
       "mood": "greed",
       "count": 5,
-      "sources": 2
+      "sources": 3
     },
     {
       "word": "AI関連",
@@ -47,23 +47,16 @@
       "sources": 2
     },
     {
+      "word": "防衛",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 1
+    },
+    {
       "word": "配当",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "防衛",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "決算",
-      "size": "sm",
-      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -71,13 +64,6 @@
   "retail": [
     {
       "word": "ソニー",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "エヌビディア",
       "size": "sm",
       "mood": "greed",
       "count": 1,
