@@ -1,13 +1,13 @@
 {
-  "date": "2026-04-17",
+  "date": "2026-04-18",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ドル円",
@@ -25,10 +25,10 @@
     },
     {
       "word": "日経",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
