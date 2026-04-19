@@ -4,10 +4,10 @@
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ドル円",
@@ -24,9 +24,9 @@
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "ダウ",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
@@ -43,8 +43,8 @@
       "word": "AI関連",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "防衛",
@@ -54,20 +54,12 @@
       "sources": 1
     },
     {
-      "word": "配当",
+      "word": "決算",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     }
   ],
-  "retail": [
-    {
-      "word": "ソニー",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    }
-  ]
+  "retail": []
 }
