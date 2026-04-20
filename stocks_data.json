@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/04/20 08:03",
+ "updated_at": "2026/04/20 18:03",
  "total": 186,
  "stocks": [
   {
@@ -14280,7 +14280,7 @@
    "ma75": 64034.7,
    "rsi": 83.6,
    "dividend": 0.0,
-   "pbr": 9.07,
+   "pbr": 8.63,
    "per": 47.6,
    "vol_r": 1.0,
    "turnover_avg5": 919.5,
@@ -15566,14 +15566,14 @@
    "buy_count": 0
   }
  },
- "nikkei_price": 58476.0,
- "nikkei_1d_chg": -1.75,
- "nikkei_ma25": 54525.0,
+ "nikkei_price": 58899.0,
+ "nikkei_1d_chg": 0.72,
+ "nikkei_ma25": 54729.0,
  "nasdaq_1d_chg": 1.52,
  "vix": 17.5,
- "usdjpy": 158.98,
+ "usdjpy": 158.93,
  "us10y": 4.25,
- "wti_oil": 82.59,
+ "wti_oil": 83.85,
  "ny_dow": 49447.43,
  "ny_dow_1d_chg": 1.79,
  "sp500": 7126.06,
