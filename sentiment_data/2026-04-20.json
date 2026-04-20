@@ -1,0 +1,375 @@
+{
+  "date": "2026-04-20",
+  "collected_at": "2026-04-20 11:00",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 23,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/19【日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダック、AI関連強い。",
+      "video_url": "https://www.youtube.com/watch?v=-asv9EDwVTY",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/19【日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダック、AI関連強い。",
+      "video_url": "https://www.youtube.com/watch?v=-asv9EDwVTY",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/19【日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダック、AI関連強い。",
+      "video_url": "https://www.youtube.com/watch?v=-asv9EDwVTY",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/19【日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダック、AI関連強い。",
+      "video_url": "https://www.youtube.com/watch?v=-asv9EDwVTY",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/19【日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダック、AI関連強い。",
+      "video_url": "https://www.youtube.com/watch?v=-asv9EDwVTY",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/18【ホルムズ海峡完全開放⁉日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=t89zqnd1g-4",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/18【ホルムズ海峡完全開放⁉日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=t89zqnd1g-4",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/18【ホルムズ海峡完全開放⁉日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=t89zqnd1g-4",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/18【ホルムズ海峡完全開放⁉日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=t89zqnd1g-4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/18【ホルムズ海峡完全開放⁉日経平均6万円突破か⁉】海外投資家が日本株を1.6兆円爆買い。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=t89zqnd1g-4",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/17【日本株流れ変わるか】日経平均→TOPIX。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、AI関連銘柄強",
+      "video_url": "https://www.youtube.com/watch?v=_yHtdL1KkDs",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/17【日本株流れ変わるか】日経平均→TOPIX。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、AI関連銘柄強",
+      "video_url": "https://www.youtube.com/watch?v=_yHtdL1KkDs",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/17【日本株流れ変わるか】日経平均→TOPIX。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、AI関連銘柄強",
+      "video_url": "https://www.youtube.com/watch?v=_yHtdL1KkDs",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/17【日本株流れ変わるか】日経平均→TOPIX。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、AI関連銘柄強",
+      "video_url": "https://www.youtube.com/watch?v=_yHtdL1KkDs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/17【日本株流れ変わるか】日経平均→TOPIX。NT倍率高で高配当株シフト来るか。ドル円159円。WTI原油のねじれ解消。米国株、ナスダック、AI関連銘柄強",
+      "video_url": "https://www.youtube.com/watch?v=_yHtdL1KkDs",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イランが米国との再協議を拒否。ワコール身売り報道。ニデック急騰。2026年4月２０日（月）～明日上がる株最新の日本株情報。高配当株の株価やデイトレ情報～",
+      "video_url": "https://www.youtube.com/watch?v=AnVGUFcArks",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ホルムズ海峡危機、Sダウ、ビットコイン急落。あす急落しそうな銘柄。好決算なのに下げてる銘柄。今週注目の決算人気銘柄。４月１９日:日曜版～あす上がる株。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=Q9kpdhcKcYU",
+      "topic": "ダウ",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ダウ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ホルムズ海峡危機、Sダウ、ビットコイン急落。あす急落しそうな銘柄。好決算なのに下げてる銘柄。今週注目の決算人気銘柄。４月１９日:日曜版～あす上がる株。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=Q9kpdhcKcYU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "ホルムズ海峡再封鎖でも日経平均株価は上昇！今夜の米国市場にバトン",
+      "video_url": "https://www.youtube.com/watch?v=qf828f-mMQA",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【株価41%OFF】あの防衛の有力株、今なら格安で手に入ります#shorts",
+      "video_url": "https://www.youtube.com/watch?v=UdUFRFnhNUM",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "防衛＆レアアースの国策株＋バークシャーも買った“業界No.1株”が密かに急落中ほか【コメント返し】",
+      "video_url": "https://www.youtube.com/watch?v=b_py526fMV4",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "高配当なのに優待まで神！見逃すと損１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=vGc_MuDyY54",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "今から初めてプロに勝つ投資術 決算のクセで読み解く【ゲスト】4月20日 立花証券 入沢健さん",
+      "video_url": "https://www.youtube.com/watch?v=j6dROBoKe0w",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 15,
+        "bear": 0
+      },
+      "株リアルライブ": {
+        "bull": 3,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 1,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 1
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 1,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
+        ]
+      },
+      "AI関連": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "Sho's投資情報局",
+          "優待ライダー"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ダウ": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "決算": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "STOCKVOICE"
+        ]
+      },
+      "防衛": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "トレードラボ"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "日経平均",
+      "AI関連",
+      "ナスダック",
+      "ドル円",
+      "決算",
+      "防衛",
+      "ダウ"
+    ]
+  }
+}
