@@ -4,10 +4,10 @@
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ナスダック",
@@ -36,7 +36,7 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
+      "count": 6,
       "sources": 3
     },
     {
@@ -55,11 +55,19 @@
     },
     {
       "word": "防衛",
-      "size": "md",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
+      "count": 1,
       "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "コーエーテクモ",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
