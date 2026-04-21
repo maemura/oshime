@@ -1,10 +1,10 @@
 {
   "date": "2026-04-21",
-  "collected_at": "2026-04-21 10:48",
+  "collected_at": "2026-04-21 22:03",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 25,
+  "entry_count": 23,
   "entries": [
     {
       "source": "youtube",
@@ -185,6 +185,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "利回り８％銘柄急落。アドバンテストとアプライドマテリアルズ。ＪＡＸＡとアクセルスペース。オービック～あす上がる株　2026年４月２２日（水）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=4JEXROtUz7U",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "ノジマが日立の家電を買収。政府がリサイクルに１兆円投資で関連株急騰。SHIFTが急落。2026年4月２１日（火）～明日上がる株最新の日本株情報。高配当株の株価や",
       "video_url": "https://www.youtube.com/watch?v=pbA9Ea6abpM",
       "topic": "高配当",
@@ -198,28 +209,6 @@
       "channel": "株リアルライブ",
       "video_title": "アマゾンがアンソロピックに投資。幻覚剤銘柄が急騰。４月２１日火曜～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当株やデイトレ情報も",
       "video_url": "https://www.youtube.com/watch?v=iuvpNnOPXSk",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "イラン再協議予定なし。コーエーテクモ最高益。ワコールS高。石油資源開発急落。ＡｂａｌａｎｃｅS安。～あす上がる株　2026年４月２１日（火）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=RqtbeVIRLHI",
-      "topic": "コーエーテクモ",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: コーエーテクモ"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "イラン再協議予定なし。コーエーテクモ最高益。ワコールS高。石油資源開発急落。ＡｂａｌａｎｃｅS安。～あす上がる株　2026年４月２１日（火）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=RqtbeVIRLHI",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -250,25 +239,14 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "高配当なのに優待まで神！見逃すと損１０銘柄",
-      "video_url": "https://www.youtube.com/watch?v=vGc_MuDyY54",
+      "channel": "たばたの投資ch",
+      "video_title": "&quot;4億円投資家&quot;ちょる子が保有する高配当株を公開!!",
+      "video_url": "https://www.youtube.com/watch?v=86e2N6IX0Ns",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日銀は4月利上げを見送りへ？　日本株どうなる？",
-      "video_url": "https://www.youtube.com/watch?v=5S80n10Z4OI",
-      "topic": "日銀",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日銀"
     },
     {
       "source": "youtube",
@@ -289,7 +267,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 4,
+        "bull": 3,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -305,11 +283,11 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 1,
+        "bull": 0,
         "bear": 0
       },
       "たばたの投資ch": {
-        "bull": 0,
+        "bull": 1,
         "bear": 0
       },
       "つばめ投資顧問": {
@@ -356,7 +334,7 @@
         "sentiment": "bullish",
         "sources": [
           "Sho's投資情報局",
-          "優待ライダー",
+          "たばたの投資ch",
           "株リアルライブ"
         ]
       },
@@ -367,25 +345,11 @@
           "Sho's投資情報局"
         ]
       },
-      "コーエーテクモ": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
       "防衛": {
         "count": 1,
         "sentiment": "neutral",
         "sources": [
           "トレードラボ"
-        ]
-      },
-      "日銀": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
         ]
       },
       "決算": {
@@ -403,9 +367,7 @@
       "ナスダック",
       "ドル円",
       "半導体",
-      "コーエーテクモ",
       "防衛",
-      "日銀",
       "決算"
     ]
   }

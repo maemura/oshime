@@ -22,13 +22,6 @@
       "mood": "greed",
       "count": 3,
       "sources": 1
-    },
-    {
-      "word": "日銀",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
@@ -68,13 +61,5 @@
       "sources": 1
     }
   ],
-  "retail": [
-    {
-      "word": "コーエーテクモ",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    }
-  ]
+  "retail": []
 }
