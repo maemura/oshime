@@ -1,13 +1,13 @@
 {
-  "date": "2026-04-20",
+  "date": "2026-04-21",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -24,9 +24,9 @@
       "sources": 1
     },
     {
-      "word": "ダウ",
+      "word": "日銀",
       "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -36,7 +36,7 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
+      "count": 7,
       "sources": 3
     },
     {
@@ -47,16 +47,23 @@
       "sources": 1
     },
     {
-      "word": "決算",
-      "size": "md",
+      "word": "半導体",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "防衛",
       "size": "sm",
       "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "決算",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
