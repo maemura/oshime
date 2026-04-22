@@ -4,10 +4,10 @@
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ナスダック",
@@ -24,13 +24,6 @@
       "sources": 1
     },
     {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "トランプ",
       "size": "sm",
       "mood": "calm",
@@ -43,7 +36,14 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
+      "count": 7,
+      "sources": 3
+    },
+    {
+      "word": "半導体",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
       "sources": 2
     },
     {
@@ -59,20 +59,6 @@
       "mood": "greed",
       "count": 2,
       "sources": 2
-    },
-    {
-      "word": "半導体",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "防衛",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": []
