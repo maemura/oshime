@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-21",
+  "date": "2026-04-22",
   "mode": "claude",
   "macro": [
     {
@@ -22,6 +22,20 @@
       "mood": "greed",
       "count": 3,
       "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "トランプ",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
@@ -29,8 +43,8 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 7,
-      "sources": 3
+      "count": 6,
+      "sources": 2
     },
     {
       "word": "AI関連",
@@ -38,6 +52,13 @@
       "mood": "greed",
       "count": 3,
       "sources": 1
+    },
+    {
+      "word": "決算",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "半導体",
@@ -50,13 +71,6 @@
       "word": "防衛",
       "size": "sm",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "決算",
-      "size": "sm",
-      "mood": "greed",
       "count": 1,
       "sources": 1
     }
