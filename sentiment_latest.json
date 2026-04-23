@@ -1,13 +1,20 @@
 {
-  "date": "2026-04-22",
+  "date": "2026-04-23",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
+    },
+    {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "greed",
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -17,16 +24,16 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
-      "size": "lg",
+      "word": "日経",
+      "size": "sm",
       "mood": "greed",
-      "count": 3,
+      "count": 1,
       "sources": 1
     },
     {
-      "word": "トランプ",
+      "word": "金利",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
@@ -36,15 +43,15 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 7,
+      "count": 6,
       "sources": 3
     },
     {
       "word": "半導体",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 3,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "AI関連",
@@ -55,11 +62,26 @@
     },
     {
       "word": "決算",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    }
+  ],
+  "retail": [
+    {
+      "word": "ソニー",
       "size": "md",
       "mood": "greed",
       "count": 2,
       "sources": 2
+    },
+    {
+      "word": "任天堂",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
-  ],
-  "retail": []
+  ]
 }
