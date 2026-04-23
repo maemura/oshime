@@ -1,10 +1,10 @@
 {
   "date": "2026-04-23",
-  "collected_at": "2026-04-23 10:51",
+  "collected_at": "2026-04-23 22:05",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 31,
+  "entry_count": 33,
   "entries": [
     {
       "source": "youtube",
@@ -196,6 +196,28 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "NECがアンソロピックと協業を発表。ソニーフィナンシャルが詐取事件。ヤクルトにダルトン株主提案。～あす上がる株　2026年４月２４日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=il30P_Zmb2c",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "NECがアンソロピックと協業を発表。ソニーフィナンシャルが詐取事件。ヤクルトにダルトン株主提案。～あす上がる株　2026年４月２４日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=il30P_Zmb2c",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "日経6万円突破！。ソニーフィナンシャル、社員が金銭詐取事件。財務大臣がTOB中止勧告。2026年4月２３日（木）～明日上がる株最新の日本株情報。高配当株の株価や",
       "video_url": "https://www.youtube.com/watch?v=Lj4R8AXUYso",
       "topic": "日経",
@@ -250,17 +272,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ディスコが増益・増配で最高益。山一電機ランサムウェア発生。サッポロ急落。ドローン関連急騰、S高多発～あす上がる株　2026年４月２３日（木）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=-VJlHwCI6TI",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "半導体関連は株価が大きすぎて買えん！そんなあなたにコレがおすすめ",
       "video_url": "https://www.youtube.com/watch?v=0C-5kDfteKc",
@@ -291,6 +302,17 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 4/23】あの半導体ETFがドットコム以来の歴史的急騰、俺は乗れなかった。",
+      "video_url": "https://www.youtube.com/watch?v=cXiaPVOGC_s",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
     },
     {
       "source": "youtube",
@@ -355,7 +377,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 6,
+        "bull": 7,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -392,16 +414,17 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
-        "count": 5,
+        "count": 6,
         "sentiment": "bullish",
         "sources": [
-          "つばめ投資顧問",
           "Sho's投資情報局",
+          "つばめ投資顧問",
+          "ばっちゃまの投資チャンネル",
           "ひげづら株ちゃんねる"
         ]
       },
@@ -431,9 +454,17 @@
         "count": 6,
         "sentiment": "bullish",
         "sources": [
+          "トレードラボ",
           "Sho's投資情報局",
+          "株リアルライブ"
+        ]
+      },
+      "ソニー": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
           "株リアルライブ",
-          "トレードラボ"
+          "STOCKVOICE"
         ]
       },
       "日経": {
@@ -441,14 +472,6 @@
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ"
-        ]
-      },
-      "ソニー": {
-        "count": 2,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ",
-          "STOCKVOICE"
         ]
       },
       "決算": {
@@ -474,8 +497,8 @@
       }
     },
     "hot_words": [
-      "高配当",
       "半導体",
+      "高配当",
       "日経平均",
       "ドル円",
       "AI関連",

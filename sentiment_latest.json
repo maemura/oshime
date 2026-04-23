@@ -40,17 +40,17 @@
   ],
   "institutional": [
     {
+      "word": "半導体",
+      "size": "xl",
+      "mood": "greed",
+      "count": 6,
+      "sources": 4
+    },
+    {
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
       "count": 6,
-      "sources": 3
-    },
-    {
-      "word": "半導体",
-      "size": "xl",
-      "mood": "greed",
-      "count": 5,
       "sources": 3
     },
     {
@@ -71,9 +71,9 @@
   "retail": [
     {
       "word": "ソニー",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
+      "count": 3,
       "sources": 2
     },
     {
