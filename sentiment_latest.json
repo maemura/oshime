@@ -1,16 +1,9 @@
 {
-  "date": "2026-04-23",
+  "date": "2026-04-24",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "ドル円",
       "size": "lg",
       "mood": "greed",
       "count": 4,
@@ -24,16 +17,16 @@
       "sources": 1
     },
     {
-      "word": "日経",
-      "size": "sm",
+      "word": "ドル円",
+      "size": "lg",
       "mood": "greed",
-      "count": 1,
+      "count": 3,
       "sources": 1
     },
     {
-      "word": "金利",
+      "word": "トランプ",
       "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -62,24 +55,17 @@
     },
     {
       "word": "決算",
-      "size": "sm",
+      "size": "lg",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "count": 3,
+      "sources": 2
     }
   ],
   "retail": [
     {
       "word": "ソニー",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "任天堂",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
