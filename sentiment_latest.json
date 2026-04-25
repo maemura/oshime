@@ -43,8 +43,8 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
-      "sources": 3
+      "count": 7,
+      "sources": 4
     },
     {
       "word": "AI関連",
@@ -55,10 +55,17 @@
     },
     {
       "word": "決算",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 2
+    },
+    {
+      "word": "防衛",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "SaaS",

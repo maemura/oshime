@@ -1,15 +1,15 @@
 {
   "date": "2026-04-25",
-  "collected_at": "2026-04-25 10:09",
+  "collected_at": "2026-04-25 21:56",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 32,
+  "entry_count": 33,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "4/25【日経平均6万円突破で海外勢日本株爆買い加速か】半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナス",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
       "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
       "topic": "日経平均",
       "category": "macro",
@@ -20,7 +20,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "4/25【日経平均6万円突破で海外勢日本株爆買い加速か】半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナス",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
       "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
       "topic": "半導体",
       "category": "sector",
@@ -31,7 +31,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "4/25【日経平均6万円突破で海外勢日本株爆買い加速か】半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナス",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
       "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
       "topic": "AI関連",
       "category": "sector",
@@ -42,7 +42,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "4/25【日経平均6万円突破で海外勢日本株爆買い加速か】半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナス",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
       "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
       "topic": "ナスダック",
       "category": "macro",
@@ -53,7 +53,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "4/25【日経平均6万円突破で海外勢日本株爆買い加速か】半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナス",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
       "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
       "topic": "ドル円",
       "category": "macro",
@@ -181,6 +181,17 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "大手機関がいま買ってる株・売ってる株。月曜権利最終日、４月の高配当株と株式分割。４月２５日:土曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=-QUv9s-pvuU",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -217,28 +228,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "テスラ、好決算も下落。インテル急騰。テキサス・インスツルメンツ急騰。４月２４日金曜～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当株やデイトレ情報も",
-      "video_url": "https://www.youtube.com/watch?v=vbde80S1uoQ",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "テスラ、好決算も下落。インテル急騰。テキサス・インスツルメンツ急騰。４月２４日金曜～あす上がる株米国版。最新のアメリカ株価と株式投資。高配当株やデイトレ情報も",
-      "video_url": "https://www.youtube.com/watch?v=vbde80S1uoQ",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "半導体関連は株価が大きすぎて買えん！そんなあなたにコレがおすすめ",
       "video_url": "https://www.youtube.com/watch?v=0C-5kDfteKc",
@@ -247,6 +236,17 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "防衛＆レアアースの国策株＋バークシャーも買った“業界No.1株”が密かに急落中ほか【コメント返し】#shorts",
+      "video_url": "https://www.youtube.com/watch?v=QRQHFvtovnY",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
     },
     {
       "source": "youtube",
@@ -302,6 +302,17 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "異例の暴落で迷わず握る！厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=_lZ7CjXtKC4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -366,7 +377,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -375,7 +386,7 @@
       },
       "トレードラボ": {
         "bull": 3,
-        "bear": 0
+        "bear": 1
       },
       "ばっちゃまの投資チャンネル": {
         "bull": 0,
@@ -383,7 +394,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -411,10 +422,10 @@
         "count": 7,
         "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch",
           "Sho's投資情報局",
-          "つばめ投資顧問",
           "ひげづら株ちゃんねる",
+          "たばたの投資ch",
+          "つばめ投資顧問",
           "ばっちゃまの投資チャンネル"
         ]
       },
@@ -440,20 +451,28 @@
         ]
       },
       "高配当": {
-        "count": 6,
+        "count": 7,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
           "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "優待ライダー",
+          "株リアルライブ"
         ]
       },
       "決算": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "つばめ投資顧問"
+          "つばめ投資顧問",
+          "株リアルライブ"
+        ]
+      },
+      "防衛": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "トレードラボ"
         ]
       },
       "トランプ": {
@@ -486,6 +505,7 @@
       "ナスダック",
       "ドル円",
       "決算",
+      "防衛",
       "トランプ",
       "SaaS",
       "任天堂"
