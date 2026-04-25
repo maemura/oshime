@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-24",
+  "date": "2026-04-25",
   "mode": "claude",
   "macro": [
     {
@@ -33,18 +33,18 @@
   ],
   "institutional": [
     {
+      "word": "半導体",
+      "size": "xl",
+      "mood": "calm",
+      "count": 7,
+      "sources": 5
+    },
+    {
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 7,
-      "sources": 3
-    },
-    {
-      "word": "半導体",
-      "size": "xl",
-      "mood": "greed",
       "count": 6,
-      "sources": 4
+      "sources": 3
     },
     {
       "word": "AI関連",
@@ -59,7 +59,22 @@
       "mood": "greed",
       "count": 3,
       "sources": 2
+    },
+    {
+      "word": "SaaS",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "任天堂",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
