@@ -25,6 +25,13 @@
     },
     {
       "word": "トランプ",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "ダウ",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -42,15 +49,15 @@
     {
       "word": "半導体",
       "size": "xl",
-      "mood": "calm",
-      "count": 7,
-      "sources": 5
+      "mood": "greed",
+      "count": 6,
+      "sources": 4
     },
     {
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 7,
+      "count": 5,
       "sources": 4
     },
     {
@@ -63,7 +70,7 @@
     {
       "word": "決算",
       "size": "md",
-      "mood": "greed",
+      "mood": "calm",
       "count": 2,
       "sources": 2
     },
