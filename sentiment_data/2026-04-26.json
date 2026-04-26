@@ -1,0 +1,533 @@
+{
+  "date": "2026-04-26",
+  "collected_at": "2026-04-26 10:10",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 34,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/25【バリュー株全滅‼️】日経平均6万円突破で半導体、AI関連銘柄爆上げ止まらない‼️ソフトバンクG爆上げ。バリュー株全滅。ドル円159円。米国、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=_7JIlbXDxD4",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/24【日本株信用害爆増で違和感拡大か⁉️】AI関連、半導体株爆上げで日経平均6万円間近。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=2Ot98g302MM",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/24【日本株信用害爆増で違和感拡大か⁉️】AI関連、半導体株爆上げで日経平均6万円間近。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=2Ot98g302MM",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/24【日本株信用害爆増で違和感拡大か⁉️】AI関連、半導体株爆上げで日経平均6万円間近。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=2Ot98g302MM",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/24【日本株信用害爆増で違和感拡大か⁉️】AI関連、半導体株爆上げで日経平均6万円間近。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=2Ot98g302MM",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/24【日本株信用害爆増で違和感拡大か⁉️】AI関連、半導体株爆上げで日経平均6万円間近。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=2Ot98g302MM",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/24【日本株信用害爆増で違和感拡大か⁉️】AI関連、半導体株爆上げで日経平均6万円間近。高配当株シフト来るか。ドル円158円。WTI原油急落で米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=2Ot98g302MM",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/23【日経平均６万天井か⁉日本株違和感マシマシ】海外投資家が日本株を9975億円爆買い。ソフトバンクG爆上げ。AI関連、半導体株寄り天。ドル円159円。米国",
+      "video_url": "https://www.youtube.com/watch?v=mzgMLr2tlNg",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/23【日経平均６万天井か⁉日本株違和感マシマシ】海外投資家が日本株を9975億円爆買い。ソフトバンクG爆上げ。AI関連、半導体株寄り天。ドル円159円。米国",
+      "video_url": "https://www.youtube.com/watch?v=mzgMLr2tlNg",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/23【日経平均６万天井か⁉日本株違和感マシマシ】海外投資家が日本株を9975億円爆買い。ソフトバンクG爆上げ。AI関連、半導体株寄り天。ドル円159円。米国",
+      "video_url": "https://www.youtube.com/watch?v=mzgMLr2tlNg",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/23【日経平均６万天井か⁉日本株違和感マシマシ】海外投資家が日本株を9975億円爆買い。ソフトバンクG爆上げ。AI関連、半導体株寄り天。ドル円159円。米国",
+      "video_url": "https://www.youtube.com/watch?v=mzgMLr2tlNg",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "4/23【日経平均６万天井か⁉日本株違和感マシマシ】海外投資家が日本株を9975億円爆買い。ソフトバンクG爆上げ。AI関連、半導体株寄り天。ドル円159円。米国",
+      "video_url": "https://www.youtube.com/watch?v=mzgMLr2tlNg",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "大手機関がいま買ってる株・売ってる株。月曜権利最終日、４月の高配当株と株式分割。４月２５日:土曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=-QUv9s-pvuU",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "第一三共急落。キヤノン急落。中外製薬増益。日立建機増益増配。ファナック増益。キーエンス最高益～あす上がる株　2026年４月２７日（月）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=osD8ZcLAI6Q",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "第一三共が決算延期で急落。ルネサス、大幅増益の決算だったが・・・。原油が上昇。キャノンが急落。2026年4月２４日（金）～明日上がる株最新の日本株情報。高配当株",
+      "video_url": "https://www.youtube.com/watch?v=VMniqesVRtY",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "第一三共が決算延期で急落。ルネサス、大幅増益の決算だったが・・・。原油が上昇。キャノンが急落。2026年4月２４日（金）～明日上がる株最新の日本株情報。高配当株",
+      "video_url": "https://www.youtube.com/watch?v=VMniqesVRtY",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "半導体関連は株価が大きすぎて買えん！そんなあなたにコレがおすすめ",
+      "video_url": "https://www.youtube.com/watch?v=0C-5kDfteKc",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "防衛＆レアアースの国策株＋バークシャーも買った“業界No.1株”が密かに急落中ほか【コメント返し】#shorts",
+      "video_url": "https://www.youtube.com/watch?v=QRQHFvtovnY",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "あの大赤字・ドン底だった高配当株が大復活へ...今からでも買いな理由",
+      "video_url": "https://www.youtube.com/watch?v=Q0uQCRHYuJo",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "日経平均が6万円目前なのにバーゲンセール中の高配当株3選",
+      "video_url": "https://www.youtube.com/watch?v=xtJwPuLMxr4",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "日経平均が6万円目前なのにバーゲンセール中の高配当株3選",
+      "video_url": "https://www.youtube.com/watch?v=xtJwPuLMxr4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 4/24】ついに逮捕者、“市場はカジノ化”している—トランプが警告",
+      "video_url": "https://www.youtube.com/watch?v=NctVm9kLVB4",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 4/23】あの半導体ETFがドットコム以来の歴史的急騰、俺は乗れなかった。",
+      "video_url": "https://www.youtube.com/watch?v=cXiaPVOGC_s",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "異例の暴落で迷わず握る！厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=_lZ7CjXtKC4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "結局&quot;インデックス投資&quot;が最強って本当？？【S&amp;P500・オルカン・日経225】",
+      "video_url": "https://www.youtube.com/watch?v=LEQDT_q7_jM",
+      "topic": "日経225",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経225"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "人気者銘柄を買ってはいけない理由【ソニーFG大幅下落】",
+      "video_url": "https://www.youtube.com/watch?v=KYdl5g3luI4",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "【爆上げ】注目の&quot;あの半導体銘柄&quot;が、今とんでもないことに!?",
+      "video_url": "https://www.youtube.com/watch?v=mzGTu-hgBPQ",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "AI相場はどこまで？フジクラ・伊藤忠・任天堂を長期投資家の目で分析",
+      "video_url": "https://www.youtube.com/watch?v=oSutpHcH-SY",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "決算、実は重要ではない？",
+      "video_url": "https://www.youtube.com/watch?v=lRS5dN08rVw",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "TOTOが「半導体銘柄」として大化け？アナリストが徹底解説",
+      "video_url": "https://www.youtube.com/watch?v=o5vZNZatWuw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 16,
+        "bear": 0
+      },
+      "株リアルライブ": {
+        "bull": 4,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 3,
+        "bear": 1
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 1
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 1
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "トレードラボ"
+        ]
+      },
+      "半導体": {
+        "count": 7,
+        "sentiment": "neutral",
+        "sources": [
+          "Sho's投資情報局",
+          "ばっちゃまの投資チャンネル",
+          "たばたの投資ch",
+          "つばめ投資顧問",
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "AI関連": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 7,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "Sho's投資情報局",
+          "トレードラボ",
+          "優待ライダー"
+        ]
+      },
+      "決算": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "つばめ投資顧問"
+        ]
+      },
+      "防衛": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
+      "トランプ": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "ばっちゃまの投資チャンネル"
+        ]
+      },
+      "日経225": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "任天堂": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      }
+    },
+    "hot_words": [
+      "半導体",
+      "高配当",
+      "日経平均",
+      "AI関連",
+      "ナスダック",
+      "ドル円",
+      "決算",
+      "防衛",
+      "トランプ",
+      "日経225",
+      "ソニー",
+      "任天堂"
+    ]
+  }
+}
