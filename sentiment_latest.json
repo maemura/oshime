@@ -57,14 +57,14 @@
       "word": "決算",
       "size": "lg",
       "mood": "calm",
-      "count": 3,
+      "count": 4,
       "sources": 3
     },
     {
       "word": "AI関連",
-      "size": "md",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
