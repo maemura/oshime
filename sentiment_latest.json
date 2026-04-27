@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-26",
+  "date": "2026-04-27",
   "mode": "claude",
   "macro": [
     {
@@ -36,13 +36,6 @@
       "mood": "calm",
       "count": 1,
       "sources": 1
-    },
-    {
-      "word": "日経225",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
@@ -50,29 +43,29 @@
       "word": "半導体",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
-      "sources": 4
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "高配当",
-      "size": "xl",
-      "mood": "greed",
-      "count": 5,
-      "sources": 4
-    },
-    {
-      "word": "AI関連",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 3
     },
     {
       "word": "決算",
-      "size": "md",
+      "size": "lg",
       "mood": "calm",
+      "count": 3,
+      "sources": 3
+    },
+    {
+      "word": "AI関連",
+      "size": "md",
+      "mood": "greed",
       "count": 2,
-      "sources": 2
+      "sources": 1
     },
     {
       "word": "防衛",
@@ -80,16 +73,16 @@
       "mood": "fear",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "SaaS",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
-    {
-      "word": "ソニー",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
     {
       "word": "任天堂",
       "size": "sm",
