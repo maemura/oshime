@@ -1,10 +1,10 @@
 {
   "date": "2026-04-28",
-  "collected_at": "2026-04-28 11:19",
+  "collected_at": "2026-04-28 22:28",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 29,
+  "entry_count": 27,
   "entries": [
     {
       "source": "youtube",
@@ -152,6 +152,28 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "信越化学減益・配当未定。オリエンタルランド減益。富士通減益。NEC増益増配。JR東海減益。山崎増益～あす上がる株　2026年４月３０日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=CfO_4mfglyo",
+      "topic": "信越化学",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 信越化学"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "信越化学減益・配当未定。オリエンタルランド減益。富士通減益。NEC増益増配。JR東海減益。山崎増益～あす上がる株　2026年４月３０日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=CfO_4mfglyo",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "大和証券がオリックス銀行を買収。イリソ電子、不正会計。利回り8.3銘柄が%急騰。2026年4月２８日（火）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
       "video_url": "https://www.youtube.com/watch?v=kZXQkRrwVNw",
       "topic": "高配当",
@@ -181,28 +203,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "利回り９．９％の超割安株が登場！アステラス増益増配。ニデック決算延期。日立増益。アドバンテスト増益～あす上がる株　2026年４月２８日（火）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=fUm7XX7DzvY",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "利回り９．９％の超割安株が登場！アステラス増益増配。ニデック決算延期。日立増益。アドバンテスト増益～あす上がる株　2026年４月２８日（火）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=fUm7XX7DzvY",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -258,28 +258,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: トランプ"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "異例の暴落で迷わず握る！厳選高配当１０銘柄",
-      "video_url": "https://www.youtube.com/watch?v=_lZ7CjXtKC4",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経6万円いよいよ定着か？【ちょる子】",
-      "video_url": "https://www.youtube.com/watch?v=7UtOzTmRDdM",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
     },
     {
       "source": "youtube",
@@ -350,7 +328,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -377,8 +355,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -410,22 +388,34 @@
           "Sho's投資情報局"
         ]
       },
+      "信越化学": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "配当": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
       "高配当": {
-        "count": 5,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
-          "トレードラボ",
-          "優待ライダー"
+          "トレードラボ"
         ]
       },
       "決算": {
-        "count": 3,
+        "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "株リアルライブ",
-          "つばめ投資顧問",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "つばめ投資顧問"
         ]
       },
       "防衛": {
@@ -440,13 +430,6 @@
         "sentiment": "neutral",
         "sources": [
           "ばっちゃまの投資チャンネル"
-        ]
-      },
-      "日経": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
         ]
       },
       "SaaS": {
@@ -472,17 +455,18 @@
       }
     },
     "hot_words": [
-      "高配当",
       "半導体",
       "日経平均",
       "ナスダック",
-      "決算",
+      "高配当",
       "銀行",
       "ドル円",
+      "決算",
       "円安",
+      "信越化学",
+      "配当",
       "防衛",
       "トランプ",
-      "日経",
       "SaaS",
       "任天堂",
       "金利"

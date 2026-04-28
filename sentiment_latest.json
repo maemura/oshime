@@ -38,13 +38,6 @@
       "sources": 1
     },
     {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "金利",
       "size": "sm",
       "mood": "calm",
@@ -54,13 +47,6 @@
   ],
   "institutional": [
     {
-      "word": "高配当",
-      "size": "xl",
-      "mood": "greed",
-      "count": 5,
-      "sources": 3
-    },
-    {
       "word": "半導体",
       "size": "lg",
       "mood": "greed",
@@ -68,11 +54,11 @@
       "sources": 2
     },
     {
-      "word": "決算",
+      "word": "高配当",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
-      "sources": 3
+      "sources": 2
     },
     {
       "word": "銀行",
@@ -82,23 +68,44 @@
       "sources": 2
     },
     {
-      "word": "防衛",
+      "word": "決算",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "配当",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "SaaS",
+      "word": "防衛",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
   ],
   "retail": [
     {
+      "word": "信越化学",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "任天堂",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "SaaS",
       "size": "sm",
       "mood": "calm",
       "count": 1,
