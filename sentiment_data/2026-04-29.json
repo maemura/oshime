@@ -1,10 +1,10 @@
 {
   "date": "2026-04-29",
-  "collected_at": "2026-04-29 11:11",
+  "collected_at": "2026-04-29 22:15",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 29,
+  "entry_count": 31,
   "entries": [
     {
       "source": "youtube",
@@ -163,6 +163,28 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "あす厳しい、でも！半導体株は買いチャンス。原油、１０３ドル突破！。あす、あさっての注目決算。あす、急落しそうな銘柄。４月２９日:水曜・祝日版～あす上がる株。最新",
+      "video_url": "https://www.youtube.com/watch?v=2_8FbUjyLaQ",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "あす厳しい、でも！半導体株は買いチャンス。原油、１０３ドル突破！。あす、あさっての注目決算。あす、急落しそうな銘柄。４月２９日:水曜・祝日版～あす上がる株。最新",
+      "video_url": "https://www.youtube.com/watch?v=2_8FbUjyLaQ",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "信越化学減益・配当未定。オリエンタルランド減益。富士通減益。NEC増益増配。JR東海減益。山崎増益～あす上がる株　2026年４月３０日（木）に上がる銘柄。最新の",
       "video_url": "https://www.youtube.com/watch?v=CfO_4mfglyo",
       "topic": "信越化学",
@@ -203,17 +225,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 銀行"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "OpenAIがマイクロソフトと独占契約終了。ユナイテッド航空は、アメリカン航空の買収を断念。４月２８日火曜～あす上がる株米国版。最新のアメリカ株価と株式投資。高",
-      "video_url": "https://www.youtube.com/watch?v=PZOF_qvWv9w",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -269,6 +280,17 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "現在急落中でこっそり購入！注目決算銘柄も",
+      "video_url": "https://www.youtube.com/watch?v=kXkShRx7NAE",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -333,7 +355,7 @@
         "bear": 10
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 6,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -350,7 +372,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -374,11 +396,12 @@
         ]
       },
       "半導体": {
-        "count": 4,
+        "count": 5,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "株リアルライブ",
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "ナスダック": {
@@ -399,9 +422,9 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
+          "株リアルライブ",
           "たばたの投資ch",
-          "株リアルライブ"
+          "Sho's投資情報局"
         ]
       },
       "ドル円": {
@@ -409,6 +432,16 @@
         "sentiment": "bullish",
         "sources": [
           "Sho's投資情報局"
+        ]
+      },
+      "決算": {
+        "count": 5,
+        "sentiment": "neutral",
+        "sources": [
+          "株リアルライブ",
+          "優待ライダー",
+          "つばめ投資顧問",
+          "ひげづら株ちゃんねる"
         ]
       },
       "信越化学": {
@@ -427,18 +460,10 @@
         ]
       },
       "高配当": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ"
-        ]
-      },
-      "決算": {
-        "count": 3,
-        "sentiment": "neutral",
-        "sources": [
-          "ひげづら株ちゃんねる",
-          "つばめ投資顧問"
         ]
       },
       "防衛": {
@@ -472,15 +497,15 @@
     },
     "hot_words": [
       "半導体",
+      "決算",
       "銀行",
       "日経平均",
       "ナスダック",
-      "決算",
       "円安",
       "配当",
-      "高配当",
       "ドル円",
       "信越化学",
+      "高配当",
       "防衛",
       "SaaS",
       "任天堂",

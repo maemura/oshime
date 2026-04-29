@@ -41,10 +41,17 @@
   "institutional": [
     {
       "word": "半導体",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
+    },
+    {
+      "word": "決算",
+      "size": "xl",
+      "mood": "calm",
+      "count": 5,
+      "sources": 4
     },
     {
       "word": "銀行",
@@ -52,13 +59,6 @@
       "mood": "fear",
       "count": 4,
       "sources": 3
-    },
-    {
-      "word": "決算",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 2
     },
     {
       "word": "配当",
@@ -69,9 +69,9 @@
     },
     {
       "word": "高配当",
-      "size": "md",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
