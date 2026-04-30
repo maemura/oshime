@@ -17,14 +17,14 @@
       "sources": 1
     },
     {
-      "word": "円安",
+      "word": "ドル円",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "ドル円",
+      "word": "円安",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -43,28 +43,28 @@
       "word": "決算",
       "size": "xl",
       "mood": "calm",
-      "count": 6,
+      "count": 5,
       "sources": 4
     },
     {
       "word": "半導体",
-      "size": "xl",
+      "size": "lg",
       "mood": "fear",
-      "count": 5,
-      "sources": 3
-    },
-    {
-      "word": "銀行",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "高配当",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "銀行",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
       "sources": 1
     },
     {
