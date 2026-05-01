@@ -1,5 +1,5 @@
 {
-  "date": "2026-04-30",
+  "date": "2026-05-01",
   "mode": "claude",
   "macro": [
     {
@@ -25,17 +25,17 @@
     },
     {
       "word": "円安",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     },
     {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "word": "日銀",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     }
   ],
   "institutional": [
@@ -43,7 +43,7 @@
       "word": "決算",
       "size": "xl",
       "mood": "calm",
-      "count": 5,
+      "count": 6,
       "sources": 4
     },
     {
@@ -62,17 +62,17 @@
     },
     {
       "word": "銀行",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "配当",
-      "size": "sm",
+      "size": "md",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "防衛",
@@ -83,13 +83,6 @@
     }
   ],
   "retail": [
-    {
-      "word": "任天堂",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
     {
       "word": "SaaS",
       "size": "sm",
