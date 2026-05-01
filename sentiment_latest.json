@@ -18,17 +18,10 @@
     },
     {
       "word": "ドル円",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
+      "count": 3,
       "sources": 1
-    },
-    {
-      "word": "円安",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
     },
     {
       "word": "日銀",
@@ -36,6 +29,13 @@
       "mood": "greed",
       "count": 2,
       "sources": 2
+    },
+    {
+      "word": "円安",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
@@ -43,8 +43,8 @@
       "word": "決算",
       "size": "xl",
       "mood": "calm",
-      "count": 6,
-      "sources": 4
+      "count": 7,
+      "sources": 5
     },
     {
       "word": "半導体",
@@ -61,13 +61,6 @@
       "sources": 1
     },
     {
-      "word": "銀行",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
-    },
-    {
       "word": "配当",
       "size": "md",
       "mood": "calm",
@@ -75,14 +68,12 @@
       "sources": 2
     },
     {
-      "word": "防衛",
+      "word": "銀行",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
-    }
-  ],
-  "retail": [
+    },
     {
       "word": "SaaS",
       "size": "sm",
@@ -90,5 +81,6 @@
       "count": 1,
       "sources": 1
     }
-  ]
+  ],
+  "retail": []
 }

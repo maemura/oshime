@@ -1,14 +1,58 @@
 {
   "date": "2026-05-01",
-  "collected_at": "2026-05-01 10:49",
+  "collected_at": "2026-05-01 22:09",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 31,
+  "entry_count": 30,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "5/1【為替介入でドル円急落。AI半導体株調整で日経平均下落来るのか】日本株バリュー株相場に移行？ドル円160円突破。中東情勢懸念で原油急騰。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=yUcgx-qR4xQ",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/1【為替介入でドル円急落。AI半導体株調整で日経平均下落来るのか】日本株バリュー株相場に移行？ドル円160円突破。中東情勢懸念で原油急騰。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=yUcgx-qR4xQ",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/1【為替介入でドル円急落。AI半導体株調整で日経平均下落来るのか】日本株バリュー株相場に移行？ドル円160円突破。中東情勢懸念で原油急騰。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=yUcgx-qR4xQ",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/1【為替介入でドル円急落。AI半導体株調整で日経平均下落来るのか】日本株バリュー株相場に移行？ドル円160円突破。中東情勢懸念で原油急騰。米国株、ナスダック",
+      "video_url": "https://www.youtube.com/watch?v=yUcgx-qR4xQ",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "4/30【ドル円１５６円に急落‼AI半導体株終了で日経平均急落来るか】日本株バリュー株相場に移行？ドル円160円突破。中東情勢懸念で原油急騰。米国株、ナスダック",
       "video_url": "https://www.youtube.com/watch?v=I0WeOr-mMkk",
       "topic": "日経平均",
@@ -96,58 +140,25 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "4/29【バリュー株に資金大移動⁉日本株次のチャンス到来か⁉】SBG10％急落、アドバンテスト下落→AI半導体株連れ安で日経平均600円安。銀行株大幅高。ドル円",
-      "video_url": "https://www.youtube.com/watch?v=0NS8E4aHSEE",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "4/29【バリュー株に資金大移動⁉日本株次のチャンス到来か⁉】SBG10％急落、アドバンテスト下落→AI半導体株連れ安で日経平均600円安。銀行株大幅高。ドル円",
-      "video_url": "https://www.youtube.com/watch?v=0NS8E4aHSEE",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "サンリオ決算延期。住友商事が株式分割。ＴＯＴＯはストップ高。丸紅急落。りそなとJR西が資本業務提携。～あす上がる株　2026年５月７日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=ULw0h3p_G8c",
+      "topic": "高配当",
       "category": "sector",
-      "sentiment": "bearish",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "4/29【バリュー株に資金大移動⁉日本株次のチャンス到来か⁉】SBG10％急落、アドバンテスト下落→AI半導体株連れ安で日経平均600円安。銀行株大幅高。ドル円",
-      "video_url": "https://www.youtube.com/watch?v=0NS8E4aHSEE",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
+      "channel": "株リアルライブ",
+      "video_title": "サンリオ決算延期。住友商事が株式分割。ＴＯＴＯはストップ高。丸紅急落。りそなとJR西が資本業務提携。～あす上がる株　2026年５月７日（木）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=ULw0h3p_G8c",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "4/29【バリュー株に資金大移動⁉日本株次のチャンス到来か⁉】SBG10％急落、アドバンテスト下落→AI半導体株連れ安で日経平均600円安。銀行株大幅高。ドル円",
-      "video_url": "https://www.youtube.com/watch?v=0NS8E4aHSEE",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "4/29【バリュー株に資金大移動⁉日本株次のチャンス到来か⁉】SBG10％急落、アドバンテスト下落→AI半導体株連れ安で日経平均600円安。銀行株大幅高。ドル円",
-      "video_url": "https://www.youtube.com/watch?v=0NS8E4aHSEE",
-      "topic": "銀行",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 銀行"
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -195,17 +206,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "富士通１３％ 急落。商船三井減益。JAL減益。ＪＲ東海急落。大東建託増益増配。2026年4月３０日（木）～明日上がる株最新の日本株情報。高配当株の株価やデイトレ",
-      "video_url": "https://www.youtube.com/watch?v=xsrM-eYHsCM",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "4月30日も注目決算が目白押し！日本株は決算ラッシュでも高値維持",
       "video_url": "https://www.youtube.com/watch?v=DAfBFer1VBw",
@@ -236,17 +236,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "防衛＆レアアースの国策株＋バークシャーも買った“業界No.1株”が密かに急落中ほか【コメント返し】#shorts",
-      "video_url": "https://www.youtube.com/watch?v=QRQHFvtovnY",
-      "topic": "防衛",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 防衛"
     },
     {
       "source": "youtube",
@@ -352,10 +341,10 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 13
+        "bear": 12
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 6,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -364,7 +353,7 @@
       },
       "トレードラボ": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
         "bull": 0,
@@ -399,8 +388,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "つばめ投資顧問"
+          "つばめ投資顧問",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -411,26 +400,10 @@
         ]
       },
       "ドル円": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
-        ]
-      },
-      "円安": {
-        "count": 2,
-        "sentiment": "bearish",
-        "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
-        ]
-      },
-      "銀行": {
-        "count": 2,
-        "sentiment": "bearish",
-        "sources": [
-          "Sho's投資情報局",
-          "株リアルライブ"
         ]
       },
       "高配当": {
@@ -440,37 +413,38 @@
           "株リアルライブ"
         ]
       },
+      "決算": {
+        "count": 7,
+        "sentiment": "neutral",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "たばたの投資ch",
+          "株リアルライブ",
+          "優待ライダー",
+          "ばっちゃまの投資チャンネル"
+        ]
+      },
       "日銀": {
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "STOCKVOICE",
-          "株リアルライブ"
+          "株リアルライブ",
+          "STOCKVOICE"
         ]
       },
-      "決算": {
-        "count": 6,
-        "sentiment": "neutral",
+      "銀行": {
+        "count": 1,
+        "sentiment": "bullish",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "ばっちゃまの投資チャンネル",
-          "たばたの投資ch",
-          "優待ライダー"
+          "株リアルライブ"
         ]
       },
       "配当": {
         "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch",
-          "トレードラボ"
-        ]
-      },
-      "防衛": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "トレードラボ"
+          "トレードラボ",
+          "たばたの投資ch"
         ]
       },
       "SaaS": {
@@ -479,6 +453,13 @@
         "sources": [
           "つばめ投資顧問"
         ]
+      },
+      "円安": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
+        ]
       }
     },
     "hot_words": [
@@ -486,14 +467,13 @@
       "半導体",
       "日経平均",
       "ナスダック",
-      "高配当",
       "ドル円",
-      "円安",
-      "銀行",
+      "高配当",
       "日銀",
       "配当",
-      "防衛",
-      "SaaS"
+      "銀行",
+      "SaaS",
+      "円安"
     ]
   }
 }
