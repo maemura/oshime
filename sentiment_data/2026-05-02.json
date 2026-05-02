@@ -1,10 +1,10 @@
 {
   "date": "2026-05-02",
-  "collected_at": "2026-05-02 10:15",
+  "collected_at": "2026-05-02 22:03",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 28,
+  "entry_count": 31,
   "entries": [
     {
       "source": "youtube",
@@ -152,6 +152,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "６月の株式分割。オリエンタルランドがNISAで大人気～あす上がる株　2026年５月２日（土曜版）最新の日本株情報。高配当株の株価やデイトレ情報",
+      "video_url": "https://www.youtube.com/watch?v=Wu5l4dIjb5g",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "サンリオ決算延期。住友商事が株式分割。ＴＯＴＯはストップ高。丸紅急落。りそなとJR西が資本業務提携。～あす上がる株　2026年５月７日（木）に上がる銘柄。最新の",
       "video_url": "https://www.youtube.com/watch?v=ULw0h3p_G8c",
       "topic": "高配当",
@@ -206,17 +217,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "京セラ11.9%自社株買い.。東京エレクトロン減益増配。レーザーテック増益。ＡＮＡ減配。JR東増益。～あす上がる株　2026年５月１日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=C4NxFoGO0m4",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "4月30日も注目決算が目白押し！日本株は決算ラッシュでも高値維持",
       "video_url": "https://www.youtube.com/watch?v=DAfBFer1VBw",
@@ -225,6 +225,28 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "日経平均が6万円突破したのにバーゲンセール中の高配当株3選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=7Hu0zdR2GSs",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "日経平均が6万円突破したのにバーゲンセール中の高配当株3選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=7Hu0zdR2GSs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -251,11 +273,22 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
-      "video_title": "現在急落中でこっそり購入！注目決算銘柄も",
-      "video_url": "https://www.youtube.com/watch?v=kXkShRx7NAE",
+      "video_title": "決算急落で実は買いたい！安心累進配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=zW2J5BuelnU",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "決算急落で実は買いたい！安心累進配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=zW2J5BuelnU",
       "topic": "決算",
       "category": "event",
-      "sentiment": "bearish",
+      "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
     },
@@ -330,7 +363,7 @@
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 0,
+        "bull": 2,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -339,7 +372,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -392,10 +425,11 @@
         ]
       },
       "日経平均": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "トレードラボ"
         ]
       },
       "ドル円": {
@@ -406,21 +440,22 @@
         ]
       },
       "高配当": {
-        "count": 3,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "決算": {
         "count": 5,
         "sentiment": "neutral",
         "sources": [
-          "優待ライダー",
-          "たばたの投資ch",
-          "ばっちゃまの投資チャンネル",
           "株リアルライブ",
-          "ひげづら株ちゃんねる"
+          "優待ライダー",
+          "ひげづら株ちゃんねる",
+          "ばっちゃまの投資チャンネル",
+          "たばたの投資ch"
         ]
       },
       "日銀": {
@@ -439,9 +474,10 @@
         ]
       },
       "配当": {
-        "count": 2,
+        "count": 3,
         "sentiment": "neutral",
         "sources": [
+          "優待ライダー",
           "たばたの投資ch",
           "トレードラボ"
         ]
@@ -457,12 +493,12 @@
     "hot_words": [
       "決算",
       "半導体",
-      "ナスダック",
       "高配当",
+      "ナスダック",
       "日経平均",
+      "配当",
       "ドル円",
       "日銀",
-      "配当",
       "日経",
       "任天堂",
       "円高",

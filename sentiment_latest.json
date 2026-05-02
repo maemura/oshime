@@ -11,10 +11,10 @@
     },
     {
       "word": "日経平均",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
-      "sources": 1
+      "count": 3,
+      "sources": 2
     },
     {
       "word": "ドル円",
@@ -71,15 +71,15 @@
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "配当",
-      "size": "md",
+      "size": "lg",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "銀行",
