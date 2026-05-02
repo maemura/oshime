@@ -1,14 +1,7 @@
 {
-  "date": "2026-05-01",
+  "date": "2026-05-02",
   "mode": "claude",
   "macro": [
-    {
-      "word": "日経平均",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 1
-    },
     {
       "word": "ナスダック",
       "size": "lg",
@@ -17,10 +10,17 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
-      "size": "lg",
+      "word": "日経平均",
+      "size": "md",
       "mood": "fear",
-      "count": 3,
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "ドル円",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
       "sources": 1
     },
     {
@@ -29,6 +29,20 @@
       "mood": "greed",
       "count": 2,
       "sources": 2
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円高",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "円安",
@@ -43,7 +57,7 @@
       "word": "決算",
       "size": "xl",
       "mood": "calm",
-      "count": 7,
+      "count": 5,
       "sources": 5
     },
     {
@@ -73,14 +87,15 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
-    },
+    }
+  ],
+  "retail": [
     {
-      "word": "SaaS",
+      "word": "任天堂",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
-  ],
-  "retail": []
+  ]
 }
