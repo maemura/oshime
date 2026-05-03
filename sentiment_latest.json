@@ -3,11 +3,25 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "日銀",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ナスダック",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円高",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "日経平均",
@@ -22,22 +36,29 @@
       "mood": "calm",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "日銀",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
+    {
+      "word": "決算",
+      "size": "xl",
+      "mood": "calm",
+      "count": 5,
+      "sources": 4
+    },
     {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
       "count": 4,
       "sources": 2
-    },
-    {
-      "word": "決算",
-      "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 4
     },
     {
       "word": "配当",
@@ -47,9 +68,9 @@
       "sources": 2
     },
     {
-      "word": "銀行",
+      "word": "半導体",
       "size": "sm",
-      "mood": "greed",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -57,10 +78,10 @@
   "retail": [
     {
       "word": "任天堂",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     }
   ]
 }

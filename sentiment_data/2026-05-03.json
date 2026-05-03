@@ -1,11 +1,88 @@
 {
   "date": "2026-05-03",
-  "collected_at": "2026-05-03 10:28",
+  "collected_at": "2026-05-03 22:05",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 16,
+  "entry_count": 20,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "【決算ラッシュ前半】 好決算だったのに下げてる狙い目銘柄あす上がる株　2026年５月３日（日曜版）最新の日本株情報。高配当株の株価やデイトレ情報",
+      "video_url": "https://www.youtube.com/watch?v=_RctYPQjezE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "【決算ラッシュ前半】 好決算だったのに下げてる狙い目銘柄あす上がる株　2026年５月３日（日曜版）最新の日本株情報。高配当株の株価やデイトレ情報",
+      "video_url": "https://www.youtube.com/watch?v=_RctYPQjezE",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
     {
       "source": "youtube",
       "channel": "株リアルライブ",
@@ -38,39 +115,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "政府日銀が為替介入。三井物産は増益増配。丸紅、増益増配。ＳＢＩ、増益。SBI新生銀行、増益。2026年５月１日（金曜）～明日上がる株最新の日本株情報。高配当株の",
-      "video_url": "https://www.youtube.com/watch?v=hM3HWtsRTDA",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "政府日銀が為替介入。三井物産は増益増配。丸紅、増益増配。ＳＢＩ、増益。SBI新生銀行、増益。2026年５月１日（金曜）～明日上がる株最新の日本株情報。高配当株の",
-      "video_url": "https://www.youtube.com/watch?v=hM3HWtsRTDA",
-      "topic": "日銀",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日銀"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "政府日銀が為替介入。三井物産は増益増配。丸紅、増益増配。ＳＢＩ、増益。SBI新生銀行、増益。2026年５月１日（金曜）～明日上がる株最新の日本株情報。高配当株の",
-      "video_url": "https://www.youtube.com/watch?v=hM3HWtsRTDA",
-      "topic": "銀行",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 銀行"
     },
     {
       "source": "youtube",
@@ -187,10 +231,10 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 0
+        "bear": 5
       },
       "株リアルライブ": {
-        "bull": 6,
+        "bull": 5,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -223,37 +267,58 @@
       }
     },
     "by_topic": {
+      "日経": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "任天堂": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "たばたの投資ch",
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円高": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
       "高配当": {
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "決算": {
-        "count": 4,
+        "count": 5,
         "sentiment": "neutral",
         "sources": [
-          "優待ライダー",
-          "ひげづら株ちゃんねる",
           "ばっちゃまの投資チャンネル",
-          "株リアルライブ"
-        ]
-      },
-      "日銀": {
-        "count": 2,
-        "sentiment": "bullish",
-        "sources": [
-          "STOCKVOICE",
-          "株リアルライブ"
-        ]
-      },
-      "銀行": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
+          "株リアルライブ",
+          "ひげづら株ちゃんねる",
+          "優待ライダー"
         ]
       },
       "日経平均": {
@@ -271,14 +336,14 @@
           "トレードラボ"
         ]
       },
-      "任天堂": {
+      "円安": {
         "count": 1,
-        "sentiment": "bearish",
+        "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch"
+          "STOCKVOICE"
         ]
       },
-      "円安": {
+      "日銀": {
         "count": 1,
         "sentiment": "neutral",
         "sources": [
@@ -287,14 +352,17 @@
       }
     },
     "hot_words": [
-      "高配当",
       "決算",
-      "日銀",
-      "配当",
-      "銀行",
-      "日経平均",
+      "高配当",
       "任天堂",
-      "円安"
+      "配当",
+      "日経",
+      "半導体",
+      "ナスダック",
+      "円高",
+      "日経平均",
+      "円安",
+      "日銀"
     ]
   }
 }
