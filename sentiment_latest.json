@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-03",
+  "date": "2026-05-04",
   "mode": "claude",
   "macro": [
     {
@@ -47,25 +47,18 @@
   ],
   "institutional": [
     {
-      "word": "決算",
-      "size": "xl",
-      "mood": "calm",
-      "count": 5,
-      "sources": 4
-    },
-    {
       "word": "高配当",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
+      "count": 5,
       "sources": 2
     },
     {
-      "word": "配当",
-      "size": "md",
+      "word": "決算",
+      "size": "lg",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 4,
+      "sources": 4
     },
     {
       "word": "半導体",
@@ -73,15 +66,22 @@
       "mood": "fear",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
     {
       "word": "任天堂",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ]
 }
