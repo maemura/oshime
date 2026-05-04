@@ -1,11 +1,66 @@
 {
   "date": "2026-05-04",
-  "collected_at": "2026-05-04 11:20",
+  "collected_at": "2026-05-04 22:29",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 18,
+  "entry_count": 24,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -163,6 +218,17 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "暴落で買い場！ガチホしたい厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=FzZnFL0aj2M",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "決算急落で実は買いたい！安心累進配当銘柄",
       "video_url": "https://www.youtube.com/watch?v=zW2J5BuelnU",
       "topic": "配当",
@@ -209,7 +275,7 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 5
+        "bear": 10
       },
       "株リアルライブ": {
         "bull": 4,
@@ -246,56 +312,57 @@
     },
     "by_topic": {
       "日経": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "半導体": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "任天堂": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ナスダック": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "円高": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "高配当": {
-        "count": 5,
+        "count": 6,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "トレードラボ"
+          "優待ライダー",
+          "トレードラボ",
+          "株リアルライブ"
         ]
       },
       "決算": {
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "株リアルライブ",
+          "優待ライダー",
           "ばっちゃまの投資チャンネル",
-          "ひげづら株ちゃんねる",
-          "優待ライダー"
+          "株リアルライブ",
+          "ひげづら株ちゃんねる"
         ]
       },
       "日経平均": {

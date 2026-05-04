@@ -4,23 +4,23 @@
   "macro": [
     {
       "word": "日経",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
       "word": "ナスダック",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
       "word": "円高",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
@@ -50,8 +50,8 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
-      "sources": 2
+      "count": 6,
+      "sources": 3
     },
     {
       "word": "決算",
@@ -62,9 +62,9 @@
     },
     {
       "word": "半導体",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
@@ -78,9 +78,9 @@
   "retail": [
     {
       "word": "任天堂",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
+      "count": 2,
       "sources": 1
     }
   ]
