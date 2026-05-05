@@ -1,0 +1,399 @@
+{
+  "date": "2026-05-05",
+  "collected_at": "2026-05-05 10:57",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 23,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/4【日本株破】円高加速で海外投資家が日本株爆買いか⁉空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナスダック強い",
+      "video_url": "https://www.youtube.com/watch?v=UVUjkeRIMVc",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/3、円高加速で海外投資家が日本株爆買いか⁉為替介入でドル円急落。空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株→バリュー株に移行？原油急騰も米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=1dL_JE18W2M",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "さすがに下げ過ぎ、プライム市場の人気８銘柄。～あす上がる株　2026年５月４日（月曜・祝日版）最新の日本株情報。高配当株の株価やデイトレ情報",
+      "video_url": "https://www.youtube.com/watch?v=ZKWdp9XU2H0",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "【決算ラッシュ前半】 好決算だったのに下げてる狙い目銘柄あす上がる株　2026年５月３日（日曜版）最新の日本株情報。高配当株の株価やデイトレ情報",
+      "video_url": "https://www.youtube.com/watch?v=_RctYPQjezE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "【決算ラッシュ前半】 好決算だったのに下げてる狙い目銘柄あす上がる株　2026年５月３日（日曜版）最新の日本株情報。高配当株の株価やデイトレ情報",
+      "video_url": "https://www.youtube.com/watch?v=_RctYPQjezE",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "６月の株式分割。オリエンタルランドがNISAで大人気～あす上がる株　2026年５月２日（土曜版）最新の日本株情報。高配当株の株価やデイトレ情報",
+      "video_url": "https://www.youtube.com/watch?v=Wu5l4dIjb5g",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "4月30日も注目決算が目白押し！日本株は決算ラッシュでも高値維持",
+      "video_url": "https://www.youtube.com/watch?v=DAfBFer1VBw",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【利回り5.5%確定】あの有名高配当株が投げ売り中です",
+      "video_url": "https://www.youtube.com/watch?v=2CUC86ely1g",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "日経平均が6万円突破したのにバーゲンセール中の高配当株3選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=7Hu0zdR2GSs",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "日経平均が6万円突破したのにバーゲンセール中の高配当株3選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=7Hu0zdR2GSs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "暴落で買い場！ガチホしたい厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=FzZnFL0aj2M",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "決算急落で実は買いたい！安心累進配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=zW2J5BuelnU",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "決算急落で実は買いたい！安心累進配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=zW2J5BuelnU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "日銀会合後に介入　６月利上げで円安是正か！【ゲスト】 5月1日 ストリート・インサイツ 安田佐和子さん",
+      "video_url": "https://www.youtube.com/watch?v=C44SDTD-2aw",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "日銀会合後に介入　６月利上げで円安是正か！【ゲスト】 5月1日 ストリート・インサイツ 安田佐和子さん",
+      "video_url": "https://www.youtube.com/watch?v=C44SDTD-2aw",
+      "topic": "日銀",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日銀"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 0,
+        "bear": 10
+      },
+      "株リアルライブ": {
+        "bull": 4,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 2,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "任天堂": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円高": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 6,
+        "sentiment": "bullish",
+        "sources": [
+          "優待ライダー",
+          "トレードラボ",
+          "株リアルライブ"
+        ]
+      },
+      "決算": {
+        "count": 3,
+        "sentiment": "neutral",
+        "sources": [
+          "優待ライダー",
+          "ひげづら株ちゃんねる",
+          "株リアルライブ"
+        ]
+      },
+      "日経平均": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
+      "配当": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "優待ライダー"
+        ]
+      },
+      "円安": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      },
+      "日銀": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "決算",
+      "日経",
+      "半導体",
+      "任天堂",
+      "ナスダック",
+      "円高",
+      "日経平均",
+      "配当",
+      "円安",
+      "日銀"
+    ]
+  }
+}

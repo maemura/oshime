@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-04",
+  "date": "2026-05-05",
   "mode": "claude",
   "macro": [
     {
@@ -57,8 +57,8 @@
       "word": "決算",
       "size": "lg",
       "mood": "calm",
-      "count": 4,
-      "sources": 4
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "半導体",
