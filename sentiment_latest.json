@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-05",
+  "date": "2026-05-06",
   "mode": "claude",
   "macro": [
     {
@@ -21,6 +21,13 @@
       "size": "lg",
       "mood": "fear",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "TOPIX",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
       "sources": 1
     },
     {
@@ -50,7 +57,7 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
+      "count": 7,
       "sources": 3
     },
     {
@@ -62,10 +69,10 @@
     },
     {
       "word": "決算",
-      "size": "md",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
