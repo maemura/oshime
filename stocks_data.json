@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/05/06 08:26",
+ "updated_at": "2026/05/06 18:13",
  "total": 186,
  "stocks": [
   {
@@ -15605,10 +15605,10 @@
  "nikkei_1d_chg": 0.38,
  "nikkei_ma25": 56720.0,
  "nasdaq_1d_chg": 1.03,
- "vix": 17.4,
- "usdjpy": 157.64,
+ "vix": 16.7,
+ "usdjpy": 156.05,
  "us10y": 4.42,
- "wti_oil": 100.13,
+ "wti_oil": 95.79,
  "ny_dow": 49298.25,
  "ny_dow_1d_chg": 0.73,
  "sp500": 7259.22,
