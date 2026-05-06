@@ -24,6 +24,13 @@
       "sources": 1
     },
     {
+      "word": "日銀",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "TOPIX",
       "size": "sm",
       "mood": "calm",
@@ -39,13 +46,6 @@
     },
     {
       "word": "円安",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日銀",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -69,10 +69,10 @@
     },
     {
       "word": "決算",
-      "size": "sm",
+      "size": "md",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     }
   ],
   "retail": [
