@@ -6,34 +6,34 @@
       "word": "日経平均",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
+      "count": 4,
       "sources": 3
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "fear",
+      "mood": "greed",
       "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "円高",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
       "sources": 1
     },
     {
       "word": "ドル円",
-      "size": "sm",
+      "size": "md",
       "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円高",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
@@ -57,15 +57,15 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
-      "sources": 3
+      "count": 5,
+      "sources": 2
     },
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "決算",
@@ -85,9 +85,9 @@
   "retail": [
     {
       "word": "任天堂",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
