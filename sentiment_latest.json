@@ -7,7 +7,14 @@
       "size": "lg",
       "mood": "greed",
       "count": 4,
-      "sources": 3
+      "sources": 2
+    },
+    {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "greed",
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -17,30 +24,9 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "日経",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "円高",
+      "word": "円安",
       "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "トランプ",
-      "size": "sm",
-      "mood": "fear",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -48,9 +34,9 @@
   "institutional": [
     {
       "word": "高配当",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
+      "count": 4,
       "sources": 2
     },
     {
@@ -73,15 +59,29 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "防衛",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
     {
+      "word": "トヨタ",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "任天堂",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "ソニー",
