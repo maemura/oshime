@@ -1,0 +1,465 @@
+{
+  "date": "2026-05-08",
+  "collected_at": "2026-05-08 10:51",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 28,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7【日本株狂い上げで日経平均3300円急騰‼】SBG、キオクシアS高で空売り勢木端微塵。AI半導体株急騰。ドル円15６円→円高加速で海外勢日本株爆買い。米国",
+      "video_url": "https://www.youtube.com/watch?v=VjYxBQpGP_M",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7【日本株狂い上げで日経平均3300円急騰‼】SBG、キオクシアS高で空売り勢木端微塵。AI半導体株急騰。ドル円15６円→円高加速で海外勢日本株爆買い。米国",
+      "video_url": "https://www.youtube.com/watch?v=VjYxBQpGP_M",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7【日本株狂い上げで日経平均3300円急騰‼】SBG、キオクシアS高で空売り勢木端微塵。AI半導体株急騰。ドル円15６円→円高加速で海外勢日本株爆買い。米国",
+      "video_url": "https://www.youtube.com/watch?v=VjYxBQpGP_M",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7【日本株狂い上げで日経平均3300円急騰‼】SBG、キオクシアS高で空売り勢木端微塵。AI半導体株急騰。ドル円15６円→円高加速で海外勢日本株爆買い。米国",
+      "video_url": "https://www.youtube.com/watch?v=VjYxBQpGP_M",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7【日本株狂い上げで日経平均3300円急騰‼】SBG、キオクシアS高で空売り勢木端微塵。AI半導体株急騰。ドル円15６円→円高加速で海外勢日本株爆買い。米国",
+      "video_url": "https://www.youtube.com/watch?v=szHIGEm7c00",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7【日本株狂い上げで日経平均3300円急騰‼】SBG、キオクシアS高で空売り勢木端微塵。AI半導体株急騰。ドル円15６円→円高加速で海外勢日本株爆買い。米国",
+      "video_url": "https://www.youtube.com/watch?v=szHIGEm7c00",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7【日本株狂い上げで日経平均3300円急騰‼】SBG、キオクシアS高で空売り勢木端微塵。AI半導体株急騰。ドル円15６円→円高加速で海外勢日本株爆買い。米国",
+      "video_url": "https://www.youtube.com/watch?v=szHIGEm7c00",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7【日本株狂い上げで日経平均3300円急騰‼】SBG、キオクシアS高で空売り勢木端微塵。AI半導体株急騰。ドル円15６円→円高加速で海外勢日本株爆買い。米国",
+      "video_url": "https://www.youtube.com/watch?v=szHIGEm7c00",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7.日経先物爆上げヤバイ‼️円高加速ドル円155円→海外勢日本株爆買いか⁉️空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株急騰。原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=LJI3XQOf3fo",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7.日経先物爆上げヤバイ‼️円高加速ドル円155円→海外勢日本株爆買いか⁉️空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株急騰。原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=LJI3XQOf3fo",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7.日経先物爆上げヤバイ‼️円高加速ドル円155円→海外勢日本株爆買いか⁉️空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株急騰。原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=LJI3XQOf3fo",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7.日経先物爆上げヤバイ‼️円高加速ドル円155円→海外勢日本株爆買いか⁉️空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株急騰。原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=LJI3XQOf3fo",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/7.日経先物爆上げヤバイ‼️円高加速ドル円155円→海外勢日本株爆買いか⁉️空売り増で日経理論値爆上げ。任天堂暴落。AI半導体株急騰。原油急落で米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=LJI3XQOf3fo",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ソニー最高益・増配。小野薬品、増益。カカクコム増益増配。日本新薬、提訴で急落。横河電機が好決算なのに急落。2026年５月８日（金）～明日上がる株最新の日本株情報",
+      "video_url": "https://www.youtube.com/watch?v=KniAEEr2Dos",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ソニー最高益・増配。小野薬品、増益。カカクコム増益増配。日本新薬、提訴で急落。横河電機が好決算なのに急落。2026年５月８日（金）～明日上がる株最新の日本株情報",
+      "video_url": "https://www.youtube.com/watch?v=KniAEEr2Dos",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ソニー最高益・増配。小野薬品、増益。カカクコム増益増配。日本新薬、提訴で急落。横河電機が好決算なのに急落。2026年５月８日（金）～明日上がる株最新の日本株情報",
+      "video_url": "https://www.youtube.com/watch?v=KniAEEr2Dos",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "配当7.9%株。住友林業減益。サンリオ急落。味の素減益。ＭｏｎｏｔａＲＯ増益。オアシスがIIJ保有～あす上がる株　2026年５月８日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=g-z6nM6qrk8",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "日本株が急騰。サンリオ急落。SBGがアームで急騰。エムスリー急落。2026年５月７日（木曜）～明日上がる株最新の日本株情報。高配当株の株価やデイトレ情報～",
+      "video_url": "https://www.youtube.com/watch?v=JP4rcfE8ZVA",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "【資金流入中】下がったら買うべき好決算株３銘柄はコレ",
+      "video_url": "https://www.youtube.com/watch?v=Is9g8O937_4",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均株価が過去最大の上げ幅で最高値更新！問題はSQ通過後の流れに",
+      "video_url": "https://www.youtube.com/watch?v=6f7nGpKusIY",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【本命株】６月権利の高配当株、この３銘柄を仕込め",
+      "video_url": "https://www.youtube.com/watch?v=VlvEC-9mnmU",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【利回り5.5%確定】あの有名高配当株が投げ売り中です",
+      "video_url": "https://www.youtube.com/watch?v=2CUC86ely1g",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "日経平均が6万円突破したのにバーゲンセール中の高配当株3選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=7Hu0zdR2GSs",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "日経平均が6万円突破したのにバーゲンセール中の高配当株3選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=7Hu0zdR2GSs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "株価急落も圧倒的還元中！今週注目決算も",
+      "video_url": "https://www.youtube.com/watch?v=JUVRgBNGf08",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "ARM株が10%急落でSB株と日経どうなる？米株も反落、トランプ訪中にイラン停戦の不透明感も",
+      "video_url": "https://www.youtube.com/watch?v=CBTRnz63siA",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "ARM株が10%急落でSB株と日経どうなる？米株も反落、トランプ訪中にイラン停戦の不透明感も",
+      "video_url": "https://www.youtube.com/watch?v=CBTRnz63siA",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "ドル円はイラン情勢と介入で乱高下、来週の目玉はベッセント氏来日【FXフォーカス】 5月8日 外為どっとコム総合研究所 神田卓也さん",
+      "video_url": "https://www.youtube.com/watch?v=5HRBWyVygz8",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 8,
+        "bear": 5
+      },
+      "株リアルライブ": {
+        "bull": 5,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 2,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 3,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 1
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 2
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局",
+          "トレードラボ"
+        ]
+      },
+      "半導体": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "STOCKVOICE"
+        ]
+      },
+      "日経": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局",
+          "たばたの投資ch"
+        ]
+      },
+      "任天堂": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円高": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "高配当": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "トレードラボ"
+        ]
+      },
+      "決算": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "ひげづら株ちゃんねる",
+          "優待ライダー"
+        ]
+      },
+      "配当": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "トランプ": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "日経平均",
+      "半導体",
+      "ナスダック",
+      "ドル円",
+      "決算",
+      "日経",
+      "任天堂",
+      "円高",
+      "ソニー",
+      "配当",
+      "トランプ"
+    ]
+  }
+}

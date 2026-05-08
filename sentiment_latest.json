@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-07",
+  "date": "2026-05-08",
   "mode": "claude",
   "macro": [
     {
@@ -18,17 +18,17 @@
     },
     {
       "word": "ドル円",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
-      "sources": 1
+      "count": 3,
+      "sources": 2
     },
     {
       "word": "日経",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "円高",
@@ -38,16 +38,9 @@
       "sources": 1
     },
     {
-      "word": "日銀",
+      "word": "トランプ",
       "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "TOPIX",
-      "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -93,7 +86,7 @@
     {
       "word": "ソニー",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
