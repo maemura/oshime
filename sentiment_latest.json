@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-08",
+  "date": "2026-05-09",
   "mode": "claude",
   "macro": [
     {
@@ -70,14 +70,14 @@
   ],
   "retail": [
     {
-      "word": "トヨタ",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "word": "任天堂",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 3
     },
     {
-      "word": "任天堂",
+      "word": "トヨタ",
       "size": "md",
       "mood": "greed",
       "count": 2,
