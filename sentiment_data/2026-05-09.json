@@ -1,15 +1,15 @@
 {
   "date": "2026-05-09",
-  "collected_at": "2026-05-09 10:30",
+  "collected_at": "2026-05-09 22:04",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 30,
+  "entry_count": 29,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "5/9【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、ナ",
+      "video_title": "5/10【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、",
       "video_url": "https://www.youtube.com/watch?v=y4sDAzL1Tcc",
       "topic": "日経平均",
       "category": "macro",
@@ -20,7 +20,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "5/9【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、ナ",
+      "video_title": "5/10【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、",
       "video_url": "https://www.youtube.com/watch?v=y4sDAzL1Tcc",
       "topic": "半導体",
       "category": "sector",
@@ -31,7 +31,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "5/9【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、ナ",
+      "video_title": "5/10【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、",
       "video_url": "https://www.youtube.com/watch?v=y4sDAzL1Tcc",
       "topic": "任天堂",
       "category": "stock",
@@ -42,7 +42,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "5/9【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、ナ",
+      "video_title": "5/10【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、",
       "video_url": "https://www.youtube.com/watch?v=y4sDAzL1Tcc",
       "topic": "ナスダック",
       "category": "macro",
@@ -53,7 +53,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "5/9【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、ナ",
+      "video_title": "5/10【日経平均６５０００円までAI半導体株狂い上げか⁉】日本株空売り勢木端微塵‼任天堂ADRで大暴落。ドル円15６円→円高加速で海外勢日本株爆買い。米国株、",
       "video_url": "https://www.youtube.com/watch?v=y4sDAzL1Tcc",
       "topic": "ドル円",
       "category": "macro",
@@ -148,6 +148,28 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "来週、コンセンサス未達で急落するかもしれない６銘柄。来週もメモリー関連上がりそう。ソニーがTSMCと提携。。～あす上がる株　2026年５月９日（土曜）最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=rVA4vlg_svs",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "来週、コンセンサス未達で急落するかもしれない６銘柄。来週もメモリー関連上がりそう。ソニーがTSMCと提携。。～あす上がる株　2026年５月９日（土曜）最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=rVA4vlg_svs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -217,17 +239,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "配当7.9%株。住友林業減益。サンリオ急落。味の素減益。ＭｏｎｏｔａＲＯ増益。オアシスがIIJ保有～あす上がる株　2026年５月８日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=g-z6nM6qrk8",
-      "topic": "配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "【資金流入中】下がったら買うべき好決算株３銘柄はコレ",
       "video_url": "https://www.youtube.com/watch?v=Is9g8O937_4",
@@ -236,17 +247,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "日経平均株価が過去最大の上げ幅で最高値更新！問題はSQ通過後の流れに",
-      "video_url": "https://www.youtube.com/watch?v=6f7nGpKusIY",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
     },
     {
       "source": "youtube",
@@ -272,14 +272,14 @@
     },
     {
       "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "【利回り5.5%確定】あの有名高配当株が投げ売り中です",
-      "video_url": "https://www.youtube.com/watch?v=2CUC86ely1g",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "neutral",
+      "channel": "優待ライダー",
+      "video_title": "決算で暴落も権利目前で注目！苦境ナンピン",
+      "video_url": "https://www.youtube.com/watch?v=k8kpR6NjVfE",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
       "confidence": 0.4,
-      "summary": "キーワード: 高配当"
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -305,19 +305,8 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "株価急落も圧倒的還元中！今週注目決算も",
-      "video_url": "https://www.youtube.com/watch?v=JUVRgBNGf08",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "【テラドローン】業績赤字でも上がり続ける防衛銘柄...どこまで株価は上がる？",
+      "video_title": "【テラドローン】赤字経営でも上がり続ける防衛銘柄...どこまで株価は上がる？",
       "video_url": "https://www.youtube.com/watch?v=O0l3Cp27VLM",
       "topic": "防衛",
       "category": "sector",
@@ -344,11 +333,11 @@
         "bear": 5
       },
       "株リアルライブ": {
-        "bull": 7,
+        "bull": 8,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
-        "bull": 2,
+        "bull": 1,
         "bear": 0
       },
       "トレードラボ": {
@@ -378,11 +367,10 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
@@ -396,9 +384,9 @@
         "count": 3,
         "sentiment": "bearish",
         "sources": [
+          "優待ライダー",
           "Sho's投資情報局",
-          "株リアルライブ",
-          "優待ライダー"
+          "株リアルライブ"
         ]
       },
       "ナスダック": {
@@ -412,30 +400,30 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "STOCKVOICE",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "STOCKVOICE"
         ]
       },
-      "トヨタ": {
+      "ソニー": {
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー"
+          "株リアルライブ"
         ]
       },
       "高配当": {
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "トレードラボ"
+          "トレードラボ",
+          "株リアルライブ"
         ]
       },
-      "ソニー": {
-        "count": 1,
+      "トヨタ": {
+        "count": 2,
         "sentiment": "bullish",
         "sources": [
+          "優待ライダー",
           "株リアルライブ"
         ]
       },
@@ -443,16 +431,9 @@
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
           "優待ライダー",
+          "株リアルライブ",
           "ひげづら株ちゃんねる"
-        ]
-      },
-      "配当": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
         ]
       },
       "円安": {
@@ -471,16 +452,15 @@
       }
     },
     "hot_words": [
-      "日経平均",
       "ドル円",
       "高配当",
+      "日経平均",
       "半導体",
       "任天堂",
       "ナスダック",
       "決算",
-      "トヨタ",
       "ソニー",
-      "配当",
+      "トヨタ",
       "円安",
       "防衛"
     ]
