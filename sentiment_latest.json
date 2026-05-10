@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-09",
+  "date": "2026-05-10",
   "mode": "claude",
   "macro": [
     {
@@ -29,6 +29,13 @@
       "mood": "calm",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
@@ -52,13 +59,6 @@
       "mood": "greed",
       "count": 3,
       "sources": 3
-    },
-    {
-      "word": "防衛",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": [
