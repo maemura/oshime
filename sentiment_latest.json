@@ -5,21 +5,21 @@
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 4,
       "sources": 2
     },
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
@@ -40,41 +40,41 @@
   ],
   "institutional": [
     {
-      "word": "高配当",
+      "word": "決算",
       "size": "lg",
       "mood": "greed",
       "count": 4,
-      "sources": 2
+      "sources": 3
     },
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "決算",
-      "size": "lg",
+      "word": "高配当",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
-      "sources": 3
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
     {
       "word": "任天堂",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 3,
-      "sources": 3
-    },
-    {
-      "word": "ソニー",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 1
+      "count": 7,
+      "sources": 4
     },
     {
       "word": "トヨタ",
@@ -82,6 +82,13 @@
       "mood": "greed",
       "count": 2,
       "sources": 2
+    },
+    {
+      "word": "ソニー",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     }
   ]
 }
