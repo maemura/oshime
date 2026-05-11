@@ -1,37 +1,30 @@
 {
-  "date": "2026-05-10",
+  "date": "2026-05-11",
   "mode": "claude",
   "macro": [
     {
-      "word": "ドル円",
+      "word": "日経平均",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 4,
       "sources": 2
     },
     {
-      "word": "日経平均",
+      "word": "ドル円",
       "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "mood": "calm",
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "円安",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日経",
+      "word": "TOPIX",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -41,15 +34,15 @@
   "institutional": [
     {
       "word": "決算",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
+      "size": "xl",
+      "mood": "fear",
+      "count": 5,
       "sources": 3
     },
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
@@ -61,7 +54,21 @@
       "sources": 1
     },
     {
+      "word": "防衛",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "銀行",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -72,16 +79,9 @@
     {
       "word": "任天堂",
       "size": "xl",
-      "mood": "fear",
-      "count": 7,
-      "sources": 4
-    },
-    {
-      "word": "トヨタ",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "mood": "calm",
+      "count": 6,
+      "sources": 3
     },
     {
       "word": "ソニー",
