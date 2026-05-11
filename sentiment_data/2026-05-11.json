@@ -1,6 +1,6 @@
 {
   "date": "2026-05-11",
-  "collected_at": "2026-05-11 12:26",
+  "collected_at": "2026-05-11 22:31",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -418,9 +418,9 @@
         "count": 6,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
+          "株リアルライブ",
           "優待ライダー",
-          "株リアルライブ"
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -434,8 +434,8 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "STOCKVOICE",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "STOCKVOICE"
         ]
       },
       "高配当": {
@@ -456,9 +456,9 @@
         "count": 5,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
           "株リアルライブ",
-          "優待ライダー"
+          "優待ライダー",
+          "ひげづら株ちゃんねる"
         ]
       },
       "防衛": {
