@@ -1,0 +1,467 @@
+{
+  "date": "2026-05-13",
+  "collected_at": "2026-05-13 11:38",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 29,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=hu28cFXDUUg",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=hu28cFXDUUg",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=hu28cFXDUUg",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=hu28cFXDUUg",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=hu28cFXDUUg",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/12【ニデック木端微塵‼】海外勢が5781億円日本株売却、日経平均→TOPIXバリュー株にシフトか。AI半導体株はゆでガエル⁉ドル円157円。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=TN35_0FJFjY",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/12【ニデック木端微塵‼】海外勢が5781億円日本株売却、日経平均→TOPIXバリュー株にシフトか。AI半導体株はゆでガエル⁉ドル円157円。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=TN35_0FJFjY",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/12【ニデック木端微塵‼】海外勢が5781億円日本株売却、日経平均→TOPIXバリュー株にシフトか。AI半導体株はゆでガエル⁉ドル円157円。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=TN35_0FJFjY",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/12【ニデック木端微塵‼】海外勢が5781億円日本株売却、日経平均→TOPIXバリュー株にシフトか。AI半導体株はゆでガエル⁉ドル円157円。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=TN35_0FJFjY",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/12【海外勢が5781億円日本株売仕掛け‼】日経平均→TOPIXバリュー株にシフトか→NT倍率続落。AI半導体株はゆでガエル⁉ドル円157円。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=haM23Wf_1JU",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/12【海外勢が5781億円日本株売仕掛け‼】日経平均→TOPIXバリュー株にシフトか→NT倍率続落。AI半導体株はゆでガエル⁉ドル円157円。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=haM23Wf_1JU",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/12【海外勢が5781億円日本株売仕掛け‼】日経平均→TOPIXバリュー株にシフトか→NT倍率続落。AI半導体株はゆでガエル⁉ドル円157円。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=haM23Wf_1JU",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/12【海外勢が5781億円日本株売仕掛け‼】日経平均→TOPIXバリュー株にシフトか→NT倍率続落。AI半導体株はゆでガエル⁉ドル円157円。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=haM23Wf_1JU",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "好決算なのに急落している銘柄が大量発生中！大林組は減益・増配。ニデックが不正で一時S安。2026年５月１３日（水）～明日上がる株最新の日本株情報。高配当株の株価",
+      "video_url": "https://www.youtube.com/watch?v=2F4AqDpwzkQ",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "好決算なのに急落している銘柄が大量発生中！大林組は減益・増配。ニデックが不正で一時S安。2026年５月１３日（水）～明日上がる株最新の日本株情報。高配当株の株価",
+      "video_url": "https://www.youtube.com/watch?v=2F4AqDpwzkQ",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "カカクコム買収、合戦勃発。ＫＤＤＩ最高益増配。楽天銀行増益。資生堂増益。塩野義最高益増配。花王増益～あす上がる株　2026年５月１３日（水）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=9tr_4dtKtyw",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "カカクコム買収、合戦勃発。ＫＤＤＩ最高益増配。楽天銀行増益。資生堂増益。塩野義最高益増配。花王増益～あす上がる株　2026年５月１３日（水）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=9tr_4dtKtyw",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "好決算なのに急落銘柄が大量発生。川崎重工は増益・増配。ＪＸ金属が-１5％の急落。2026年５月１２日（火）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
+      "video_url": "https://www.youtube.com/watch?v=hAZm548IuSY",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "好決算なのに急落銘柄が大量発生。川崎重工は増益・増配。ＪＸ金属が-１5％の急落。2026年５月１２日（火）～明日上がる株最新の日本株情報。高配当株の株価やデイト",
+      "video_url": "https://www.youtube.com/watch?v=hAZm548IuSY",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均からTOPIXシフト継続！好決算株も続々、古河電工10分割でスト高、川崎重工や東京センチュリー上昇",
+      "video_url": "https://www.youtube.com/watch?v=tk9KkYRAE9I",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均からTOPIXシフト継続！好決算株も続々、古河電工10分割でスト高、川崎重工や東京センチュリー上昇",
+      "video_url": "https://www.youtube.com/watch?v=tk9KkYRAE9I",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【株価40％OFF】あの国策防衛株が久しぶりの仕込みチャンスです",
+      "video_url": "https://www.youtube.com/watch?v=dTMbc3a9od8",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "夢の毎月配当金生活、この2銘柄だけで完成します【利回り4.62％】#shorts",
+      "video_url": "https://www.youtube.com/watch?v=-hQyC133Ijc",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "決算で急落も配当に旨味！見事最強KDDI",
+      "video_url": "https://www.youtube.com/watch?v=6_zK-ntHUsM",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "決算で急落も配当に旨味！見事最強KDDI",
+      "video_url": "https://www.youtube.com/watch?v=6_zK-ntHUsM",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "最強連続増配も決算で急落！任天堂どうする？？",
+      "video_url": "https://www.youtube.com/watch?v=n7Yy3px1hbg",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "最強連続増配も決算で急落！任天堂どうする？？",
+      "video_url": "https://www.youtube.com/watch?v=n7Yy3px1hbg",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "半導体株に利食い売り。強めのCPIで米利下げに暗雲？",
+      "video_url": "https://www.youtube.com/watch?v=BLPJRflIboU",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "信越化学に投資家注目！【AI×地政学】で追い風が吹く理由",
+      "video_url": "https://www.youtube.com/watch?v=TsoIpNSPdb8",
+      "topic": "信越化学",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 信越化学"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 13,
+        "bear": 0
+      },
+      "株リアルライブ": {
+        "bull": 6,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 2,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 1,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 4
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 1
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "半導体": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "たばたの投資ch"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "決算": {
+        "count": 6,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "優待ライダー",
+          "株リアルライブ",
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "高配当": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "銀行": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "防衛": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
+      "配当": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "優待ライダー",
+          "トレードラボ"
+        ]
+      },
+      "任天堂": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "優待ライダー"
+        ]
+      },
+      "信越化学": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      }
+    },
+    "hot_words": [
+      "決算",
+      "日経平均",
+      "半導体",
+      "ナスダック",
+      "ドル円",
+      "高配当",
+      "配当",
+      "銀行",
+      "防衛",
+      "任天堂",
+      "信越化学"
+    ]
+  }
+}

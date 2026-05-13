@@ -1,13 +1,13 @@
 {
-  "date": "2026-05-12",
+  "date": "2026-05-13",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 6,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -22,13 +22,6 @@
       "mood": "greed",
       "count": 3,
       "sources": 1
-    },
-    {
-      "word": "日銀",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
@@ -37,7 +30,7 @@
       "size": "xl",
       "mood": "greed",
       "count": 6,
-      "sources": 3
+      "sources": 4
     },
     {
       "word": "半導体",
@@ -78,15 +71,15 @@
   "retail": [
     {
       "word": "任天堂",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 3
-    },
-    {
-      "word": "トヨタ",
       "size": "sm",
       "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "信越化学",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
