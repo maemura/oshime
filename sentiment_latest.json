@@ -29,7 +29,7 @@
       "word": "決算",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
+      "count": 5,
       "sources": 4
     },
     {
@@ -69,13 +69,6 @@
     }
   ],
   "retail": [
-    {
-      "word": "任天堂",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
     {
       "word": "信越化学",
       "size": "sm",
