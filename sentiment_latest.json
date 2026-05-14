@@ -1,13 +1,13 @@
 {
-  "date": "2026-05-13",
+  "date": "2026-05-14",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "ナスダック",
@@ -29,15 +29,15 @@
       "word": "決算",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
+      "count": 7,
       "sources": 4
     },
     {
       "word": "半導体",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "高配当",
@@ -54,13 +54,6 @@
       "sources": 2
     },
     {
-      "word": "銀行",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "防衛",
       "size": "sm",
       "mood": "greed",
@@ -70,10 +63,17 @@
   ],
   "retail": [
     {
+      "word": "ソニー",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "信越化学",
-      "size": "sm",
+      "size": "md",
       "mood": "calm",
-      "count": 1,
+      "count": 2,
       "sources": 1
     }
   ]
