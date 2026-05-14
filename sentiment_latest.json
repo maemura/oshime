@@ -5,21 +5,21 @@
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     }
@@ -29,13 +29,13 @@
       "word": "決算",
       "size": "xl",
       "mood": "greed",
-      "count": 7,
+      "count": 5,
       "sources": 4
     },
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
@@ -48,10 +48,10 @@
     },
     {
       "word": "配当",
-      "size": "md",
+      "size": "lg",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "防衛",
@@ -64,10 +64,10 @@
   "retail": [
     {
       "word": "ソニー",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "信越化学",
