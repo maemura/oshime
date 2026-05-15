@@ -1,7 +1,14 @@
 {
-  "date": "2026-05-14",
+  "date": "2026-05-15",
   "mode": "claude",
   "macro": [
+    {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 2
+    },
     {
       "word": "日経平均",
       "size": "lg",
@@ -17,10 +24,17 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
+      "word": "日経",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "金利",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
       "sources": 1
     }
   ],
@@ -29,15 +43,15 @@
       "word": "決算",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
-      "sources": 4
+      "count": 8,
+      "sources": 5
     },
     {
       "word": "半導体",
       "size": "lg",
       "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "高配当",
@@ -45,13 +59,6 @@
       "mood": "greed",
       "count": 3,
       "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 3
     },
     {
       "word": "防衛",
@@ -63,18 +70,18 @@
   ],
   "retail": [
     {
-      "word": "ソニー",
+      "word": "信越化学",
       "size": "lg",
       "mood": "calm",
       "count": 3,
-      "sources": 3
+      "sources": 1
     },
     {
-      "word": "信越化学",
+      "word": "ソニー",
       "size": "md",
-      "mood": "calm",
+      "mood": "greed",
       "count": 2,
-      "sources": 1
+      "sources": 2
     }
   ]
 }
