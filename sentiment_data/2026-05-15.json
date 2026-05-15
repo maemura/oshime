@@ -1,14 +1,58 @@
 {
   "date": "2026-05-15",
-  "collected_at": "2026-05-15 11:31",
+  "collected_at": "2026-05-15 22:14",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 33,
+  "entry_count": 31,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "5/15【フジクラ大暴落で日本株に違和感】キオクシア急騰。AI半導体株急落で日経平均→TOPIXバリュ株シフトか⁉ドル円157円で海外勢日本株爆買い。米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=rjIIx9BZvlI",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/15【フジクラ大暴落で日本株に違和感】キオクシア急騰。AI半導体株急落で日経平均→TOPIXバリュ株シフトか⁉ドル円157円で海外勢日本株爆買い。米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=rjIIx9BZvlI",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/15【フジクラ大暴落で日本株に違和感】キオクシア急騰。AI半導体株急落で日経平均→TOPIXバリュ株シフトか⁉ドル円157円で海外勢日本株爆買い。米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=rjIIx9BZvlI",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/15【フジクラ大暴落で日本株に違和感】キオクシア急騰。AI半導体株急落で日経平均→TOPIXバリュ株シフトか⁉ドル円157円で海外勢日本株爆買い。米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=rjIIx9BZvlI",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "5/14【フジクラ19％大暴落‼日本株に違和感】AI半導体株急落で日経平均→TOPIXバリュ株シフトか⁉ドル円157円で海外勢日本株爆買い。米国株、ナスダックは",
       "video_url": "https://www.youtube.com/watch?v=-lUbHJh6JLM",
       "topic": "日経平均",
@@ -96,53 +140,20 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
-      "video_url": "https://www.youtube.com/watch?v=JAU5jEQKR9s",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
-      "video_url": "https://www.youtube.com/watch?v=JAU5jEQKR9s",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "キオクシア、超絶好決算！三菱ＵＦＪ増益増配。みずほ増益増配。三菱ＨＣ減益増配。ヤマハ発動機増益。～あす上がる株　2026年５月１８日（月）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=gtESUWIZEfM",
+      "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
-      "video_url": "https://www.youtube.com/watch?v=JAU5jEQKR9s",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
-      "video_url": "https://www.youtube.com/watch?v=JAU5jEQKR9s",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/13【ソフトバンクG決算ヤバい‼日本株に違和感】日経平均→TOPIXバリュ株優位に大転換来るか⁉ドル円157円でAI半導体株はゆでガエル⁉ド米国株、ナスダッ",
-      "video_url": "https://www.youtube.com/watch?v=JAU5jEQKR9s",
+      "channel": "株リアルライブ",
+      "video_title": "キオクシア、超絶好決算！三菱ＵＦＪ増益増配。みずほ増益増配。三菱ＨＣ減益増配。ヤマハ発動機増益。～あす上がる株　2026年５月１８日（月）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=gtESUWIZEfM",
       "topic": "決算",
       "category": "event",
       "sentiment": "bullish",
@@ -181,39 +192,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ソニーフィナンシャル赤字・増配。鹿島建設、減益・増配。好決算なのに急落している銘柄が大量発生中！2026年５月１４日（木）～明日上がる株最新の日本株情報。高配当",
-      "video_url": "https://www.youtube.com/watch?v=zVXSF2g5fio",
-      "topic": "ソニー",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ソニー"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ソニーフィナンシャル赤字・増配。鹿島建設、減益・増配。好決算なのに急落している銘柄が大量発生中！2026年５月１４日（木）～明日上がる株最新の日本株情報。高配当",
-      "video_url": "https://www.youtube.com/watch?v=zVXSF2g5fio",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ソニーフィナンシャル赤字・増配。鹿島建設、減益・増配。好決算なのに急落している銘柄が大量発生中！2026年５月１４日（木）～明日上がる株最新の日本株情報。高配当",
-      "video_url": "https://www.youtube.com/watch?v=zVXSF2g5fio",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -284,6 +262,17 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
+      "video_title": "HONDA配当利回り5.5％、本当に買い時なの！？",
+      "video_url": "https://www.youtube.com/watch?v=smQYPY2Oh7A",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
       "video_title": "田端の日経Wレバ（1570）ポートフォリオ！5,600万円まで回復！",
       "video_url": "https://www.youtube.com/watch?v=-h1kjWEvYT4",
       "topic": "日経",
@@ -297,17 +286,6 @@
       "channel": "たばたの投資ch",
       "video_title": "キオクシア純利益48倍の超好決算でPTS爆アゲ！＆リアルゲイト公募増資でヒューリック第三者割当をライブでPERAGARU塩谷氏と見守る！ほかはMUFG、みずほ、",
       "video_url": "https://www.youtube.com/watch?v=fvGxwIRxOsU",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "屋外デジタル看板銘柄 ヒットの好決算と今後の業績拡大について塩谷さんと語る株ライブ",
-      "video_url": "https://www.youtube.com/watch?v=-p0-BWW6lGw",
       "topic": "決算",
       "category": "event",
       "sentiment": "bullish",
@@ -373,11 +351,11 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 5,
-        "bear": 8
+        "bull": 0,
+        "bear": 12
       },
       "株リアルライブ": {
-        "bull": 6,
+        "bull": 5,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -436,19 +414,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "STOCKVOICE",
-          "Sho's投資情報局"
-        ]
-      },
-      "決算": {
-        "count": 8,
-        "sentiment": "bullish",
-        "sources": [
           "Sho's投資情報局",
-          "優待ライダー",
-          "ひげづら株ちゃんねる",
-          "株リアルライブ",
-          "たばたの投資ch"
+          "STOCKVOICE"
         ]
       },
       "高配当": {
@@ -458,11 +425,13 @@
           "株リアルライブ"
         ]
       },
-      "ソニー": {
-        "count": 2,
+      "決算": {
+        "count": 6,
         "sentiment": "bullish",
         "sources": [
+          "ひげづら株ちゃんねる",
           "優待ライダー",
+          "たばたの投資ch",
           "株リアルライブ"
         ]
       },
@@ -471,6 +440,20 @@
         "sentiment": "bullish",
         "sources": [
           "トレードラボ"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "優待ライダー"
+        ]
+      },
+      "配当": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "たばたの投資ch"
         ]
       },
       "日経": {
@@ -503,8 +486,9 @@
       "ナスダック",
       "高配当",
       "信越化学",
-      "ソニー",
       "防衛",
+      "ソニー",
+      "配当",
       "日経",
       "金利"
     ]

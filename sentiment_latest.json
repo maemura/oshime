@@ -43,8 +43,8 @@
       "word": "決算",
       "size": "xl",
       "mood": "greed",
-      "count": 8,
-      "sources": 5
+      "count": 6,
+      "sources": 4
     },
     {
       "word": "半導体",
@@ -66,6 +66,13 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
@@ -78,10 +85,10 @@
     },
     {
       "word": "ソニー",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ]
 }
