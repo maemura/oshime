@@ -36,7 +36,7 @@
       "word": "決算",
       "size": "xl",
       "mood": "calm",
-      "count": 5,
+      "count": 6,
       "sources": 3
     },
     {
@@ -51,14 +51,14 @@
       "size": "lg",
       "mood": "greed",
       "count": 3,
-      "sources": 1
+      "sources": 2
     },
     {
       "word": "防衛",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [

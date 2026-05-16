@@ -1,6 +1,6 @@
 {
   "date": "2026-05-16",
-  "collected_at": "2026-05-16 10:41",
+  "collected_at": "2026-05-16 22:07",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -184,17 +184,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "フジクラがストップ安！その理由。三井住友トラスト、増益・増配・株式分割。楽天赤字縮小。ホンダ黒字。～あす上がる株　2026年５月１５日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=xnx-nrw3aZE",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "あの圧倒的な世界トップ株が決算でまさかの急落！これはチャンスかも？",
       "video_url": "https://www.youtube.com/watch?v=UNK-Urs7wbg",
@@ -218,6 +207,17 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
+      "video_title": "【利回り5.5%確定】あの有名高配当株が投げ売り中です#shorts",
+      "video_url": "https://www.youtube.com/watch?v=WUCgC-GmgY4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
       "video_title": "あのAI半導体の本命株が10分の1に分割！まだ株価は上がるのか？解説します",
       "video_url": "https://www.youtube.com/watch?v=HkdBQUzs2jw",
       "topic": "半導体",
@@ -228,14 +228,14 @@
     },
     {
       "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "【株価40％OFF】あの国策防衛株が久しぶりの仕込みチャンスです",
-      "video_url": "https://www.youtube.com/watch?v=dTMbc3a9od8",
-      "topic": "防衛",
-      "category": "sector",
-      "sentiment": "bullish",
+      "channel": "優待ライダー",
+      "video_title": "決算終焉から安値で狙い撃ち！厳選優待１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=vObnVAdj9js",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 防衛"
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -322,7 +322,7 @@
         "bear": 12
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -330,7 +330,7 @@
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 2,
+        "bull": 1,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -366,8 +366,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "トレードラボ",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "トレードラボ"
         ]
       },
       "ナスダック": {
@@ -381,32 +381,25 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "STOCKVOICE",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "STOCKVOICE"
         ]
       },
       "高配当": {
         "count": 3,
         "sentiment": "bullish",
         "sources": [
+          "トレードラボ",
           "株リアルライブ"
         ]
       },
       "決算": {
-        "count": 5,
+        "count": 6,
         "sentiment": "neutral",
         "sources": [
+          "優待ライダー",
           "株リアルライブ",
-          "ひげづら株ちゃんねる",
-          "優待ライダー"
-        ]
-      },
-      "防衛": {
-        "count": 2,
-        "sentiment": "bullish",
-        "sources": [
-          "トレードラボ",
-          "つばめ投資顧問"
+          "ひげづら株ちゃんねる"
         ]
       },
       "ソニー": {
@@ -414,6 +407,13 @@
         "sentiment": "neutral",
         "sources": [
           "優待ライダー"
+        ]
+      },
+      "防衛": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "つばめ投資顧問"
         ]
       },
       "信越化学": {
@@ -438,9 +438,9 @@
       "日経平均",
       "ナスダック",
       "高配当",
-      "防衛",
       "信越化学",
       "ソニー",
+      "防衛",
       "金利"
     ]
   }
