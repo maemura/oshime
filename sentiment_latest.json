@@ -1,14 +1,7 @@
 {
-  "date": "2026-05-17",
+  "date": "2026-05-18",
   "mode": "claude",
   "macro": [
-    {
-      "word": "ドル円",
-      "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
-    },
     {
       "word": "日経平均",
       "size": "lg",
@@ -25,9 +18,16 @@
     },
     {
       "word": "円安",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 3
+    },
+    {
+      "word": "ドル円",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
       "sources": 1
     },
     {
@@ -42,8 +42,8 @@
     {
       "word": "決算",
       "size": "xl",
-      "mood": "calm",
-      "count": 6,
+      "mood": "greed",
+      "count": 5,
       "sources": 3
     },
     {
@@ -57,7 +57,7 @@
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
+      "count": 4,
       "sources": 3
     },
     {
@@ -73,13 +73,20 @@
       "mood": "calm",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
     {
-      "word": "信越化学",
+      "word": "任天堂",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
