@@ -1,11 +1,55 @@
 {
   "date": "2026-05-18",
-  "collected_at": "2026-05-18 12:49",
+  "collected_at": "2026-05-18 22:29",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
   "entry_count": 29,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/18【キオクシアS高なのに日経平均593円安‼○○次第で日本株さらに下落か⁉】AI半導体株急落続く。円安、株安、債券安で木端微塵。ドル円158円。米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=4_YCa7wbIoI",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/18【キオクシアS高なのに日経平均593円安‼○○次第で日本株さらに下落か⁉】AI半導体株急落続く。円安、株安、債券安で木端微塵。ドル円158円。米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=4_YCa7wbIoI",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/18【キオクシアS高なのに日経平均593円安‼○○次第で日本株さらに下落か⁉】AI半導体株急落続く。円安、株安、債券安で木端微塵。ドル円158円。米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=4_YCa7wbIoI",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/18【キオクシアS高なのに日経平均593円安‼○○次第で日本株さらに下落か⁉】AI半導体株急落続く。円安、株安、債券安で木端微塵。ドル円158円。米国株、ナ",
+      "video_url": "https://www.youtube.com/watch?v=4_YCa7wbIoI",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -88,50 +132,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "5/17【AI半導体株暴落で日経平均急落。キオクシア空売り勢木端微塵か。日本株TOPIXバリュ株シフトで強い。ドル円158円に円安加速。米国株、ナスダック下落。",
       "video_url": "https://www.youtube.com/watch?v=ASDocg6slQo",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/16【日本株に違和感‼】AI半導体株暴落で日経平均急落。キオクシア空売り勢木端微塵か。TOPIXバリュ株シフトで強い。ドル円158円に円安加速。米国株、ナス",
-      "video_url": "https://www.youtube.com/watch?v=8mrRQ8sORV0",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/16【日本株に違和感‼】AI半導体株暴落で日経平均急落。キオクシア空売り勢木端微塵か。TOPIXバリュ株シフトで強い。ドル円158円に円安加速。米国株、ナス",
-      "video_url": "https://www.youtube.com/watch?v=8mrRQ8sORV0",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/16【日本株に違和感‼】AI半導体株暴落で日経平均急落。キオクシア空売り勢木端微塵か。TOPIXバリュ株シフトで強い。ドル円158円に円安加速。米国株、ナス",
-      "video_url": "https://www.youtube.com/watch?v=8mrRQ8sORV0",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/16【日本株に違和感‼】AI半導体株暴落で日経平均急落。キオクシア空売り勢木端微塵か。TOPIXバリュ株シフトで強い。ドル円158円に円安加速。米国株、ナス",
-      "video_url": "https://www.youtube.com/watch?v=8mrRQ8sORV0",
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "bearish",
@@ -389,16 +389,16 @@
         ]
       },
       "円安": {
-        "count": 3,
+        "count": 4,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局",
-          "STOCKVOICE",
-          "トレードラボ"
+          "トレードラボ",
+          "STOCKVOICE"
         ]
       },
       "ドル円": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -409,8 +409,8 @@
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
-          "優待ライダー",
-          "トレードラボ"
+          "トレードラボ",
+          "優待ライダー"
         ]
       },
       "決算": {
@@ -418,8 +418,8 @@
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
-          "優待ライダー",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "優待ライダー"
         ]
       },
       "銀行": {
@@ -461,10 +461,10 @@
     "hot_words": [
       "決算",
       "半導体",
+      "円安",
       "高配当",
       "日経平均",
       "ナスダック",
-      "円安",
       "ドル円",
       "銀行",
       "任天堂",

@@ -3,6 +3,13 @@
   "mode": "claude",
   "macro": [
     {
+      "word": "円安",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 3
+    },
+    {
       "word": "日経平均",
       "size": "lg",
       "mood": "fear",
@@ -17,17 +24,10 @@
       "sources": 1
     },
     {
-      "word": "円安",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 3
-    },
-    {
       "word": "ドル円",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
