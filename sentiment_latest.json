@@ -1,20 +1,13 @@
 {
-  "date": "2026-05-18",
+  "date": "2026-05-19",
   "mode": "claude",
   "macro": [
-    {
-      "word": "円安",
-      "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 3
-    },
     {
       "word": "日経平均",
       "size": "lg",
       "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -25,22 +18,36 @@
     },
     {
       "word": "ドル円",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
+      "count": 2,
       "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "金利",
       "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
   ],
   "institutional": [
     {
-      "word": "決算",
+      "word": "高配当",
       "size": "xl",
       "mood": "greed",
       "count": 5,
@@ -54,39 +61,32 @@
       "sources": 2
     },
     {
-      "word": "高配当",
+      "word": "銀行",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 3
+      "count": 3,
+      "sources": 2
     },
     {
-      "word": "銀行",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "防衛",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "word": "決算",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
     }
   ],
   "retail": [
     {
       "word": "任天堂",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 2
+    },
+    {
+      "word": "NVIDIA",
       "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
