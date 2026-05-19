@@ -1,10 +1,10 @@
 {
   "date": "2026-05-19",
-  "collected_at": "2026-05-19 12:23",
+  "collected_at": "2026-05-19 22:41",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 31,
+  "entry_count": 28,
   "entries": [
     {
       "source": "youtube",
@@ -294,39 +294,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "キオクシアPTSで58000円！日経先物は反発　NVIDIA決算前に下落",
-      "video_url": "https://www.youtube.com/watch?v=rnpLyhUWmnI",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "キオクシアPTSで58000円！日経先物は反発　NVIDIA決算前に下落",
-      "video_url": "https://www.youtube.com/watch?v=rnpLyhUWmnI",
-      "topic": "NVIDIA",
-      "category": "stock",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: NVIDIA"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "キオクシアPTSで58000円！日経先物は反発　NVIDIA決算前に下落",
-      "video_url": "https://www.youtube.com/watch?v=rnpLyhUWmnI",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
       "channel": "STOCKVOICE",
       "video_title": "日経平均はレンジ相場へ？AI株調整とセクター循環【本日のデリバティブ】5月19日 松井証券 窪田朋一郎さん",
       "video_url": "https://www.youtube.com/watch?v=nAZOLlhqXMI",
@@ -400,16 +367,16 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "Sho's投資情報局"
         ]
       },
       "任天堂": {
         "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -430,8 +397,8 @@
         "count": 2,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "Sho's投資情報局"
         ]
       },
       "高配当": {
@@ -439,8 +406,8 @@
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
-          "優待ライダー",
-          "トレードラボ"
+          "トレードラボ",
+          "優待ライダー"
         ]
       },
       "銀行": {
@@ -452,11 +419,10 @@
         ]
       },
       "決算": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "たばたの投資ch"
+          "ひげづら株ちゃんねる"
         ]
       },
       "金利": {
@@ -464,20 +430,6 @@
         "sentiment": "neutral",
         "sources": [
           "ばっちゃまの投資チャンネル"
-        ]
-      },
-      "日経": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "NVIDIA": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
         ]
       }
     },
@@ -491,9 +443,7 @@
       "ドル円",
       "円安",
       "決算",
-      "金利",
-      "日経",
-      "NVIDIA"
+      "金利"
     ]
   }
 }

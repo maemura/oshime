@@ -36,13 +36,6 @@
       "mood": "calm",
       "count": 1,
       "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
@@ -69,10 +62,10 @@
     },
     {
       "word": "決算",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
@@ -82,13 +75,6 @@
       "mood": "fear",
       "count": 3,
       "sources": 2
-    },
-    {
-      "word": "NVIDIA",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ]
 }
