@@ -1,53 +1,32 @@
 {
-  "date": "2026-05-21",
+  "date": "2026-05-22",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "size": "xl",
+      "mood": "greed",
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ナスダック",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
       "sources": 1
     },
     {
       "word": "ドル円",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "金利",
       "size": "md",
-      "mood": "calm",
+      "mood": "greed",
       "count": 2,
-      "sources": 2
+      "sources": 1
     },
     {
       "word": "トランプ",
       "size": "sm",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "円安",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "greed",
       "count": 1,
       "sources": 1
     }
@@ -57,14 +36,7 @@
       "word": "半導体",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
-    },
-    {
-      "word": "決算",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
+      "count": 6,
       "sources": 4
     },
     {
@@ -77,21 +49,28 @@
     {
       "word": "銀行",
       "size": "lg",
-      "mood": "greed",
-      "count": 4,
+      "mood": "calm",
+      "count": 3,
       "sources": 3
-    }
-  ],
-  "retail": [
+    },
     {
-      "word": "エヌビディア",
+      "word": "決算",
       "size": "md",
       "mood": "greed",
       "count": 2,
       "sources": 2
     },
     {
-      "word": "任天堂",
+      "word": "AI関連",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    }
+  ],
+  "retail": [
+    {
+      "word": "エヌビディア",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -105,9 +84,9 @@
       "sources": 1
     },
     {
-      "word": "ソニー",
+      "word": "任天堂",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
