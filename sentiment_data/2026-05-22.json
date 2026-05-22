@@ -1,6 +1,6 @@
 {
   "date": "2026-05-22",
-  "collected_at": "2026-05-22 12:02",
+  "collected_at": "2026-05-22 22:31",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -370,8 +370,8 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "ひげづら株ちゃんねる",
           "STOCKVOICE",
+          "ひげづら株ちゃんねる",
           "Sho's投資情報局"
         ]
       },
@@ -379,9 +379,9 @@
         "count": 6,
         "sentiment": "bullish",
         "sources": [
-          "ひげづら株ちゃんねる",
           "トレードラボ",
           "STOCKVOICE",
+          "ひげづら株ちゃんねる",
           "Sho's投資情報局"
         ]
       },
@@ -425,8 +425,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "つばめ投資顧問"
+          "つばめ投資顧問",
+          "株リアルライブ"
         ]
       },
       "NVIDIA": {
@@ -440,9 +440,9 @@
         "count": 3,
         "sentiment": "neutral",
         "sources": [
-          "株リアルライブ",
           "STOCKVOICE",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "株リアルライブ"
         ]
       },
       "任天堂": {
