@@ -1,10 +1,10 @@
 {
   "date": "2026-05-23",
-  "collected_at": "2026-05-23 10:47",
+  "collected_at": "2026-05-23 22:11",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 29,
+  "entry_count": 27,
   "entries": [
     {
       "source": "youtube",
@@ -141,6 +141,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "高配当株の総まとめ。超高配当銘柄と注目の人気高配当銘柄。５月２３日:土曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=WNRx6BF0n0M",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "JIA・双日資本業務提携。量子コンピュータ関連、フィジカルAI関連、宇宙関連、電子部品関連が急騰。～あす上がる株　2026年５月２５日（月）に上がる銘柄。最新の",
       "video_url": "https://www.youtube.com/watch?v=PKyqebELJZU",
       "topic": "AI関連",
@@ -184,28 +195,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "川崎重工、欧州液化水素。フジクラ反発。楽天銀行S安。ＳＯＭＰＯ１０％急落。ソフトバンクグループS高～あす上がる株　2026年５月２２日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=BIwTVHRrT8Q",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "川崎重工、欧州液化水素。フジクラ反発。楽天銀行S安。ＳＯＭＰＯ１０％急落。ソフトバンクグループS高～あす上がる株　2026年５月２２日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=BIwTVHRrT8Q",
-      "topic": "銀行",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 銀行"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "怒涛の半導体調整を経て日経平均ついに最高値圏へキャムブワァックッ！！",
       "video_url": "https://www.youtube.com/watch?v=4RmXI604SdA",
@@ -229,6 +218,17 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
+      "video_title": "【株価40％OFF】あの国策防衛株が久しぶりの仕込みチャンスです#shorts",
+      "video_url": "https://www.youtube.com/watch?v=4ejQqvKNxHA",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
       "video_title": "決算後に下落した三菱HCキャピタル、買い場はもう少し先です",
       "video_url": "https://www.youtube.com/watch?v=rfDr6H35kcI",
       "topic": "決算",
@@ -236,28 +236,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "AI半導体バブルの裏で密かに上がり始めた○○株＋低迷する任天堂、OLC株の買い時ほか【コメント返し】",
-      "video_url": "https://www.youtube.com/watch?v=xrbzh7UXTiU",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "AI半導体バブルの裏で密かに上がり始めた○○株＋低迷する任天堂、OLC株の買い時ほか【コメント返し】",
-      "video_url": "https://www.youtube.com/watch?v=xrbzh7UXTiU",
-      "topic": "任天堂",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 任天堂"
     },
     {
       "source": "youtube",
@@ -333,7 +311,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 6,
+        "bull": 5,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -341,7 +319,7 @@
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 2,
+        "bull": 1,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -376,10 +354,9 @@
         ]
       },
       "半導体": {
-        "count": 6,
+        "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
           "Sho's投資情報局",
           "STOCKVOICE",
           "ひげづら株ちゃんねる"
@@ -410,15 +387,8 @@
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "Sho's投資情報局"
-        ]
-      },
-      "AI関連": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
+          "Sho's投資情報局",
+          "トレードラボ"
         ]
       },
       "高配当": {
@@ -429,6 +399,13 @@
           "株リアルライブ"
         ]
       },
+      "AI関連": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
       "NVIDIA": {
         "count": 1,
         "sentiment": "bullish",
@@ -436,15 +413,7 @@
           "株リアルライブ"
         ]
       },
-      "銀行": {
-        "count": 2,
-        "sentiment": "bullish",
-        "sources": [
-          "STOCKVOICE",
-          "株リアルライブ"
-        ]
-      },
-      "任天堂": {
+      "防衛": {
         "count": 1,
         "sentiment": "bullish",
         "sources": [
@@ -464,22 +433,29 @@
         "sources": [
           "つばめ投資顧問"
         ]
+      },
+      "銀行": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
+        ]
       }
     },
     "hot_words": [
-      "半導体",
       "日経平均",
+      "半導体",
       "高配当",
       "ナスダック",
       "ドル円",
       "決算",
-      "銀行",
       "エヌビディア",
       "AI関連",
       "NVIDIA",
-      "任天堂",
+      "防衛",
       "トランプ",
-      "トヨタ"
+      "トヨタ",
+      "銀行"
     ]
   }
 }
