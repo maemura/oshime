@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-22",
+  "date": "2026-05-23",
   "mode": "claude",
   "macro": [
     {
@@ -47,14 +47,14 @@
       "sources": 2
     },
     {
-      "word": "銀行",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 3
+      "word": "決算",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     },
     {
-      "word": "決算",
+      "word": "銀行",
       "size": "md",
       "mood": "greed",
       "count": 2,
@@ -87,6 +87,13 @@
       "word": "任天堂",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "トヨタ",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
