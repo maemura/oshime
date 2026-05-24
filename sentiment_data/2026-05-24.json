@@ -1,15 +1,15 @@
 {
   "date": "2026-05-24",
-  "collected_at": "2026-05-24 10:51",
+  "collected_at": "2026-05-24 22:15",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 24,
-  "entry_count": 21,
+  "videos_processed": 27,
+  "entry_count": 23,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "5/23 【チャンネル秘話話すで】億トレ爆増。日経平均がSBG爆騰で大幅高。日本株、AI半導体株急騰から○○が節目⁉バリュー株シフト加速か⁉ドル円159円。米国",
+      "video_title": "5/24 【チャンネル秘話】億トレ爆増。日経平均がSBG爆騰で大幅高。日本株、AI半導体株急騰から○○が節目⁉バリュー株シフト加速か⁉ドル円159円。米国株、ナ",
       "video_url": "https://www.youtube.com/watch?v=8NnnTwlmxKg",
       "topic": "日経平均",
       "category": "macro",
@@ -20,7 +20,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "5/23 【チャンネル秘話話すで】億トレ爆増。日経平均がSBG爆騰で大幅高。日本株、AI半導体株急騰から○○が節目⁉バリュー株シフト加速か⁉ドル円159円。米国",
+      "video_title": "5/24 【チャンネル秘話】億トレ爆増。日経平均がSBG爆騰で大幅高。日本株、AI半導体株急騰から○○が節目⁉バリュー株シフト加速か⁉ドル円159円。米国株、ナ",
       "video_url": "https://www.youtube.com/watch?v=8NnnTwlmxKg",
       "topic": "半導体",
       "category": "sector",
@@ -31,7 +31,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "5/23 【チャンネル秘話話すで】億トレ爆増。日経平均がSBG爆騰で大幅高。日本株、AI半導体株急騰から○○が節目⁉バリュー株シフト加速か⁉ドル円159円。米国",
+      "video_title": "5/24 【チャンネル秘話】億トレ爆増。日経平均がSBG爆騰で大幅高。日本株、AI半導体株急騰から○○が節目⁉バリュー株シフト加速か⁉ドル円159円。米国株、ナ",
       "video_url": "https://www.youtube.com/watch?v=8NnnTwlmxKg",
       "topic": "ナスダック",
       "category": "macro",
@@ -42,7 +42,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "5/23 【チャンネル秘話話すで】億トレ爆増。日経平均がSBG爆騰で大幅高。日本株、AI半導体株急騰から○○が節目⁉バリュー株シフト加速か⁉ドル円159円。米国",
+      "video_title": "5/24 【チャンネル秘話】億トレ爆増。日経平均がSBG爆騰で大幅高。日本株、AI半導体株急騰から○○が節目⁉バリュー株シフト加速か⁉ドル円159円。米国株、ナ",
       "video_url": "https://www.youtube.com/watch?v=8NnnTwlmxKg",
       "topic": "ドル円",
       "category": "macro",
@@ -115,6 +115,17 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ホルムズ海峡開放！好決算だったのにまだ急落中の１３銘柄。あす急落しそうな銘柄。今週注目の決算人気銘柄。５月２４日:日曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=7AYDAKBamYw",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -143,28 +154,6 @@
       "channel": "株リアルライブ",
       "video_title": "JIA・双日資本業務提携。量子コンピュータ関連、フィジカルAI関連、宇宙関連、電子部品関連が急騰。～あす上がる株　2026年５月２５日（月）に上がる銘柄。最新の",
       "video_url": "https://www.youtube.com/watch?v=PKyqebELJZU",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "川崎重工NVIDIA協業。量子コンピュータ関連急騰。オンコリスバイオファーマ、世界初がん治療薬了承。2026年５月２２日（金）～明日上がる株最新の日本株情報。高",
-      "video_url": "https://www.youtube.com/watch?v=-Mfs6iVpGrg",
-      "topic": "NVIDIA",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: NVIDIA"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "川崎重工NVIDIA協業。量子コンピュータ関連急騰。オンコリスバイオファーマ、世界初がん治療薬了承。2026年５月２２日（金）～明日上がる株最新の日本株情報。高",
-      "video_url": "https://www.youtube.com/watch?v=-Mfs6iVpGrg",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -206,14 +195,14 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "スペースXの1兆ドルIPO＝トヨタ４個分、日本株と米株はレベチすぎる！？",
-      "video_url": "https://www.youtube.com/watch?v=CdhpgZzod44",
-      "topic": "トヨタ",
-      "category": "stock",
+      "channel": "優待ライダー",
+      "video_title": "株価急落中で必ず欲しい！厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=TEuu_XOiLKo",
+      "topic": "高配当",
+      "category": "sector",
       "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: トヨタ"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -236,6 +225,39 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: トヨタ"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "日経平均連続上昇と、一極集中の現実【本日のデリバティブ】 5月22日 ブライトンリサーチ 堀川秀樹さん",
+      "video_url": "https://www.youtube.com/watch?v=-njFySzHqjY",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "160円乗せあるならドル高主導、来週は中銀イベント多数【FXフォーカス】 5月22日 SMBC信託銀行プレスティア 合澤史登さん",
+      "video_url": "https://www.youtube.com/watch?v=Gvscz_XVVWk",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "やっぱりAI半導体【ゲスト】 5月22日 岩井コスモ証券 有沢正一さん",
+      "video_url": "https://www.youtube.com/watch?v=xUgkj5WNgjo",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
     }
   ],
   "summary": {
@@ -245,7 +267,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -271,20 +293,26 @@
       "つばめ投資顧問": {
         "bull": 0,
         "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 1,
+        "bear": 0
       }
     },
     "by_topic": {
       "日経平均": {
-        "count": 3,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
+          "STOCKVOICE",
           "Sho's投資情報局"
         ]
       },
       "半導体": {
-        "count": 3,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
+          "STOCKVOICE",
           "Sho's投資情報局"
         ]
       },
@@ -302,21 +330,23 @@
           "Sho's投資情報局"
         ]
       },
+      "決算": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ",
+          "株リアルライブ"
+        ]
+      },
       "高配当": {
         "count": 3,
         "sentiment": "bullish",
         "sources": [
+          "優待ライダー",
           "株リアルライブ"
         ]
       },
       "AI関連": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
-        ]
-      },
-      "NVIDIA": {
         "count": 1,
         "sentiment": "bullish",
         "sources": [
@@ -330,13 +360,6 @@
           "トレードラボ"
         ]
       },
-      "決算": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "トレードラボ"
-        ]
-      },
       "トランプ": {
         "count": 1,
         "sentiment": "neutral",
@@ -345,11 +368,17 @@
         ]
       },
       "トヨタ": {
-        "count": 3,
+        "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "つばめ投資顧問",
-          "たばたの投資ch"
+          "つばめ投資顧問"
+        ]
+      },
+      "銀行": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
         ]
       }
     },
@@ -357,14 +386,14 @@
       "日経平均",
       "半導体",
       "高配当",
-      "トヨタ",
       "ナスダック",
       "ドル円",
-      "AI関連",
-      "NVIDIA",
-      "防衛",
       "決算",
-      "トランプ"
+      "トヨタ",
+      "AI関連",
+      "防衛",
+      "トランプ",
+      "銀行"
     ]
   }
 }

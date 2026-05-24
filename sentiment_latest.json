@@ -6,8 +6,8 @@
       "word": "日経平均",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -36,15 +36,22 @@
       "word": "半導体",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
       "count": 3,
-      "sources": 1
+      "sources": 2
+    },
+    {
+      "word": "決算",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "AI関連",
@@ -61,7 +68,7 @@
       "sources": 1
     },
     {
-      "word": "決算",
+      "word": "銀行",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -71,16 +78,9 @@
   "retail": [
     {
       "word": "トヨタ",
-      "size": "lg",
+      "size": "md",
       "mood": "calm",
-      "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "NVIDIA",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
+      "count": 2,
       "sources": 1
     }
   ]
