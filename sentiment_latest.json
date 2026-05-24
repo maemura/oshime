@@ -1,13 +1,13 @@
 {
-  "date": "2026-05-23",
+  "date": "2026-05-24",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "ナスダック",
@@ -34,24 +34,17 @@
   "institutional": [
     {
       "word": "半導体",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "決算",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "AI関連",
@@ -68,7 +61,7 @@
       "sources": 1
     },
     {
-      "word": "銀行",
+      "word": "決算",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -77,23 +70,16 @@
   ],
   "retail": [
     {
-      "word": "エヌビディア",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "word": "トヨタ",
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 2
     },
     {
       "word": "NVIDIA",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "トヨタ",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
