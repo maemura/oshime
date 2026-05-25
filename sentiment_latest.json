@@ -6,8 +6,8 @@
       "word": "日経平均",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 6,
+      "sources": 4
     },
     {
       "word": "ナスダック",
@@ -32,6 +32,13 @@
     },
     {
       "word": "トランプ",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "金利",
       "size": "sm",
       "mood": "calm",
       "count": 1,

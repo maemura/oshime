@@ -1,10 +1,10 @@
 {
   "date": "2026-05-25",
-  "collected_at": "2026-05-25 12:46",
+  "collected_at": "2026-05-25 22:31",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 24,
-  "entry_count": 28,
+  "videos_processed": 27,
+  "entry_count": 30,
   "entries": [
     {
       "source": "youtube",
@@ -262,6 +262,17 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
+      "video_title": "キーエンスが金利に弱いのはなぜ！？【金利が上がったら見ろ！】",
+      "video_url": "https://www.youtube.com/watch?v=p0Od8PV2Azw",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
       "video_title": "米イラン和平合意間近か！？日経平均も初の6万5000円突破！！",
       "video_url": "https://www.youtube.com/watch?v=_zA02p4E0t0",
       "topic": "日経平均",
@@ -313,6 +324,17 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: トヨタ"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "集中物色続く日本株！日経平均主導の大商い相場【ゲスト】 5月25日 元証券ディーラー たけぞうさん",
+      "video_url": "https://www.youtube.com/watch?v=_5gUxWbeQpI",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
     }
   ],
   "summary": {
@@ -348,15 +370,20 @@
       "つばめ投資顧問": {
         "bull": 0,
         "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
       }
     },
     "by_topic": {
       "日経平均": {
-        "count": 5,
+        "count": 6,
         "sentiment": "bullish",
         "sources": [
-          "たばたの投資ch",
+          "STOCKVOICE",
           "Sho's投資情報局",
+          "たばたの投資ch",
           "ひげづら株ちゃんねる"
         ]
       },
@@ -426,6 +453,13 @@
           "たばたの投資ch"
         ]
       },
+      "金利": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
       "トヨタ": {
         "count": 3,
         "sentiment": "neutral",
@@ -445,7 +479,8 @@
       "決算",
       "日経",
       "防衛",
-      "トランプ"
+      "トランプ",
+      "金利"
     ]
   }
 }
