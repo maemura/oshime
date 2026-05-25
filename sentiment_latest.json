@@ -1,27 +1,34 @@
 {
-  "date": "2026-05-24",
+  "date": "2026-05-25",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ナスダック",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
+      "count": 3,
       "sources": 1
     },
     {
       "word": "ドル円",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
+      "count": 3,
       "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "トランプ",
@@ -36,8 +43,8 @@
       "word": "半導体",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "高配当",
@@ -47,6 +54,13 @@
       "sources": 2
     },
     {
+      "word": "AI関連",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
       "word": "決算",
       "size": "md",
       "mood": "greed",
@@ -54,23 +68,9 @@
       "sources": 2
     },
     {
-      "word": "AI関連",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "防衛",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "銀行",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -78,9 +78,9 @@
   "retail": [
     {
       "word": "トヨタ",
-      "size": "md",
+      "size": "lg",
       "mood": "calm",
-      "count": 2,
+      "count": 3,
       "sources": 1
     }
   ]
