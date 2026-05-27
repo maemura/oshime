@@ -2,7 +2,7 @@
   "day": 19,
   "date": "2026-03-24",
   "total_asset": 9874469.981689453,
-  "cash": 2512150.0,
+  "cash": 2624482.0,
   "pnl_pct": -1.26,
   "holdings": [
     {
@@ -269,8 +269,8 @@
       "buy_price": 2577.5,
       "shares": 300,
       "cost": 773250.0,
-      "current_price": 2464.5,
-      "pnl_pct": -4.38,
+      "current_price": 2466.0,
+      "pnl_pct": -4.33,
       "thesis": "スコア90。配当4.48%。RSI19.1。",
       "stop_loss": 2191,
       "take_profit": 3093,
@@ -283,8 +283,8 @@
       "buy_price": 1140.0,
       "shares": 700,
       "cost": 798000.0,
-      "current_price": 1090.5,
-      "pnl_pct": -4.34,
+      "current_price": 1100.5,
+      "pnl_pct": -3.46,
       "thesis": "スコア87。配当4.8%。RSI29.4。",
       "stop_loss": 969,
       "take_profit": 1368,
@@ -297,8 +297,8 @@
       "buy_price": 1886.5,
       "shares": 500,
       "cost": 943250.0,
-      "current_price": 1630.0,
-      "pnl_pct": -13.6,
+      "current_price": 1641.5,
+      "pnl_pct": -12.99,
       "thesis": "スコア80。配当4.24%。RSI23.6。",
       "stop_loss": 1604,
       "take_profit": 2264,
@@ -309,10 +309,10 @@
       "name": "宇部興産",
       "buy_date": "2026-03-20",
       "buy_price": 2485.5,
-      "shares": 75,
-      "cost": 186412.5,
-      "current_price": 2970.0,
-      "pnl_pct": 19.49,
+      "shares": 38,
+      "cost": 94449.0,
+      "current_price": 3036.0,
+      "pnl_pct": 22.15,
       "thesis": "スコア80。配当4.43%。RSI27.9。",
       "stop_loss": 2113,
       "take_profit": 2983,
@@ -325,8 +325,8 @@
       "buy_price": 1979.0,
       "shares": 500,
       "cost": 989500.0,
-      "current_price": 1960.5,
-      "pnl_pct": -0.93,
+      "current_price": 1966.0,
+      "pnl_pct": -0.66,
       "thesis": "スコア79。配当4.04%。RSI34.7。",
       "stop_loss": 1682,
       "take_profit": 2375,
@@ -339,8 +339,8 @@
       "buy_price": 590.0,
       "shares": 1300,
       "cost": 767000.0,
-      "current_price": 556.2,
-      "pnl_pct": -5.73,
+      "current_price": 557.5,
+      "pnl_pct": -5.51,
       "thesis": "スコア74。配当4.07%。RSI39.1。",
       "stop_loss": 502,
       "take_profit": 708,
@@ -695,6 +695,13 @@
       "cash": 2512150,
       "positions_value": 4243760,
       "nikkei": 63339.0
+    },
+    {
+      "date": "2026-05-27",
+      "nav": 6778500,
+      "cash": 2624482,
+      "positions_value": 4154018,
+      "nikkei": 65158.0
     }
   ],
   "history": [
@@ -777,6 +784,16 @@
       "shares": 75,
       "amount": 224400,
       "reason": "利確（20.4%）。+20%で半分売却。"
+    },
+    {
+      "date": "2026-05-27",
+      "action": "sell",
+      "code": "4208",
+      "name": "宇部興産",
+      "price": 3036.0,
+      "shares": 37,
+      "amount": 112332,
+      "reason": "利確（22.1%）。+20%で半分売却。"
     }
   ]
 }
