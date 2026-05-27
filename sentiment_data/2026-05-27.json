@@ -1,6 +1,6 @@
 {
   "date": "2026-05-27",
-  "collected_at": "2026-05-27 12:38",
+  "collected_at": "2026-05-27 22:53",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -9,6 +9,61 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "5/27 【AI半導体株爆上げ続くか⁉日経平均行ってこい】AI関連、半導体株に月末売り。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=2Syh7nPCkCY",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/27 【AI半導体株爆上げ続くか⁉日経平均行ってこい】AI関連、半導体株に月末売り。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=2Syh7nPCkCY",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/27 【AI半導体株爆上げ続くか⁉日経平均行ってこい】AI関連、半導体株に月末売り。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=2Syh7nPCkCY",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/27 【AI半導体株爆上げ続くか⁉日経平均行ってこい】AI関連、半導体株に月末売り。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=2Syh7nPCkCY",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/27 【AI半導体株爆上げ続くか⁉日経平均行ってこい】AI関連、半導体株に月末売り。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=2Syh7nPCkCY",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "5/27 【日本株空売り爆増‼️日経平均急騰続くか⁉️】AI関連、半導体株に月末売り。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通貨",
       "video_url": "https://www.youtube.com/watch?v=gGkn2L3AniI",
       "topic": "日経平均",
@@ -110,61 +165,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "5/26 【日本株空売り増加ヤバイ‼️日経平均〇〇爆上がりで７万円へ踏み上げか⁉️】AI関連、半導体株止まらない。ドル円159円。米国株、ナスダック上昇。仮想通",
       "video_url": "https://www.youtube.com/watch?v=y_4MZ2SO_3M",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/26 【日本株空売り増加ヤバイ‼️日経平均〇〇爆上がりで７万円へ踏み上げか⁉️】AI関連、半導体株止まらない。ドル円159円。米国株、ナスダック上昇。仮想通",
-      "video_url": "https://www.youtube.com/watch?v=289XwdgDpt0",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/26 【日本株空売り増加ヤバイ‼️日経平均〇〇爆上がりで７万円へ踏み上げか⁉️】AI関連、半導体株止まらない。ドル円159円。米国株、ナスダック上昇。仮想通",
-      "video_url": "https://www.youtube.com/watch?v=289XwdgDpt0",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/26 【日本株空売り増加ヤバイ‼️日経平均〇〇爆上がりで７万円へ踏み上げか⁉️】AI関連、半導体株止まらない。ドル円159円。米国株、ナスダック上昇。仮想通",
-      "video_url": "https://www.youtube.com/watch?v=289XwdgDpt0",
-      "topic": "AI関連",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: AI関連"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/26 【日本株空売り増加ヤバイ‼️日経平均〇〇爆上がりで７万円へ踏み上げか⁉️】AI関連、半導体株止まらない。ドル円159円。米国株、ナスダック上昇。仮想通",
-      "video_url": "https://www.youtube.com/watch?v=289XwdgDpt0",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "5/26 【日本株空売り増加ヤバイ‼️日経平均〇〇爆上がりで７万円へ踏み上げか⁉️】AI関連、半導体株止まらない。ドル円159円。米国株、ナスダック上昇。仮想通",
-      "video_url": "https://www.youtube.com/watch?v=289XwdgDpt0",
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "neutral",
@@ -393,24 +393,24 @@
         "sentiment": "neutral",
         "sources": [
           "ひげづら株ちゃんねる",
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "つばめ投資顧問"
+          "つばめ投資顧問",
+          "Sho's投資情報局"
         ]
       },
       "AI関連": {
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -473,8 +473,8 @@
         "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch",
-          "優待ライダー"
+          "優待ライダー",
+          "たばたの投資ch"
         ]
       },
       "トヨタ": {
