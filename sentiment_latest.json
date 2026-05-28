@@ -1,13 +1,20 @@
 {
-  "date": "2026-05-27",
+  "date": "2026-05-28",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "calm",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
+    },
+    {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "calm",
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -15,43 +22,22 @@
       "mood": "calm",
       "count": 3,
       "sources": 1
-    },
-    {
-      "word": "ドル円",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "トランプ",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
     {
       "word": "半導体",
-      "size": "lg",
+      "size": "xl",
       "mood": "calm",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "AI関連",
       "size": "lg",
       "mood": "calm",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "高配当",
@@ -61,39 +47,39 @@
       "sources": 1
     },
     {
-      "word": "銀行",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "不動産",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "防衛",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
   ],
   "retail": [
     {
-      "word": "トヨタ",
+      "word": "ソニー",
       "size": "md",
-      "mood": "calm",
+      "mood": "greed",
       "count": 2,
-      "sources": 1
+      "sources": 2
     },
     {
       "word": "NVIDIA",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "トヨタ",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
