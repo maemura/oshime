@@ -1,6 +1,6 @@
 {
   "date": "2026-05-28",
-  "collected_at": "2026-05-28 12:47",
+  "collected_at": "2026-05-28 22:49",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -359,16 +359,16 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 5,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
           "ばっちゃまの投資チャンネル",
+          "Sho's投資情報局",
           "つばめ投資顧問"
         ]
       },
@@ -390,16 +390,16 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "ソニー": {
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "STOCKVOICE",
-          "株リアルライブ"
+          "株リアルライブ",
+          "STOCKVOICE"
         ]
       },
       "高配当": {
