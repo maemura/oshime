@@ -5,7 +5,7 @@
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 4,
       "sources": 2
     },
@@ -51,6 +51,13 @@
       "size": "lg",
       "mood": "greed",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "防衛",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
       "sources": 1
     },
     {

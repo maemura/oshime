@@ -1,14 +1,69 @@
 {
   "date": "2026-05-29",
-  "collected_at": "2026-05-29 12:29",
+  "collected_at": "2026-05-29 22:46",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 25,
+  "entry_count": 26,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "5/29【日本株潮目変わるか⁉日経平均爆上げヤバイで‼】AI関連、半導体株上昇。ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
+      "video_url": "https://www.youtube.com/watch?v=Co3mMRbKJuE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/29【日本株潮目変わるか⁉日経平均爆上げヤバイで‼】AI関連、半導体株上昇。ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
+      "video_url": "https://www.youtube.com/watch?v=Co3mMRbKJuE",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/29【日本株潮目変わるか⁉日経平均爆上げヤバイで‼】AI関連、半導体株上昇。ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
+      "video_url": "https://www.youtube.com/watch?v=Co3mMRbKJuE",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/29【日本株潮目変わるか⁉日経平均爆上げヤバイで‼】AI関連、半導体株上昇。ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
+      "video_url": "https://www.youtube.com/watch?v=Co3mMRbKJuE",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "5/29【日本株潮目変わるか⁉日経平均爆上げヤバイで‼】AI関連、半導体株上昇。ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
+      "video_url": "https://www.youtube.com/watch?v=Co3mMRbKJuE",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "5/28【日本株に違和感⁉️】日経平均後場急落でAI関連、半導体株大幅安。中東情勢懸念で乱高下。６月バリュー株上昇か。MSQ警戒。ドル円159円。米国株、ナスダ",
       "video_url": "https://www.youtube.com/watch?v=6DNX03BnnEY",
       "topic": "日経平均",
@@ -110,61 +165,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "5/27 【AI半導体株爆上げ続くか⁉日経平均行ってこい】AI関連、半導体株に月末売り。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通",
       "video_url": "https://www.youtube.com/watch?v=2Syh7nPCkCY",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均急騰続くか⁉️】AI関連、半導体株に月末売り。日本株空売り爆増。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
-      "video_url": "https://www.youtube.com/watch?v=gGkn2L3AniI",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均急騰続くか⁉️】AI関連、半導体株に月末売り。日本株空売り爆増。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
-      "video_url": "https://www.youtube.com/watch?v=gGkn2L3AniI",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均急騰続くか⁉️】AI関連、半導体株に月末売り。日本株空売り爆増。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
-      "video_url": "https://www.youtube.com/watch?v=gGkn2L3AniI",
-      "topic": "AI関連",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: AI関連"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均急騰続くか⁉️】AI関連、半導体株に月末売り。日本株空売り爆増。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
-      "video_url": "https://www.youtube.com/watch?v=gGkn2L3AniI",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均急騰続くか⁉️】AI関連、半導体株に月末売り。日本株空売り爆増。原油価格ショックに直面‼️ドル円159円。米国株、ナスダック上昇。仮想通貨BTC軟調",
-      "video_url": "https://www.youtube.com/watch?v=gGkn2L3AniI",
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "neutral",
@@ -239,6 +239,17 @@
     },
     {
       "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【株価40％OFF】あの国策防衛株が久しぶりの仕込みチャンスです#shorts",
+      "video_url": "https://www.youtube.com/watch?v=4ejQqvKNxHA",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
       "channel": "ばっちゃまの投資チャンネル",
       "video_title": "【米国株 5/27】投資家が“半導体一点買い”を始めています",
       "video_url": "https://www.youtube.com/watch?v=MfG0rAbjL6s",
@@ -285,7 +296,7 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 0,
+        "bull": 5,
         "bear": 0
       },
       "株リアルライブ": {
@@ -297,7 +308,7 @@
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 1,
+        "bull": 2,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -324,19 +335,19 @@
     "by_topic": {
       "日経平均": {
         "count": 4,
-        "sentiment": "neutral",
+        "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 5,
         "sentiment": "neutral",
         "sources": [
+          "つばめ投資顧問",
           "Sho's投資情報局",
-          "ばっちゃまの投資チャンネル",
-          "つばめ投資顧問"
+          "ばっちゃまの投資チャンネル"
         ]
       },
       "AI関連": {
@@ -381,6 +392,13 @@
           "トレードラボ"
         ]
       },
+      "防衛": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
       "配当": {
         "count": 1,
         "sentiment": "bearish",
@@ -405,6 +423,7 @@
       "高配当",
       "ソニー",
       "NVIDIA",
+      "防衛",
       "配当",
       "日経"
     ]
