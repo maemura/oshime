@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-28",
+  "date": "2026-05-29",
   "mode": "claude",
   "macro": [
     {
@@ -10,17 +10,24 @@
       "sources": 2
     },
     {
-      "word": "ドル円",
-      "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 2
-    },
-    {
       "word": "ナスダック",
       "size": "lg",
       "mood": "calm",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
       "sources": 1
     }
   ],
@@ -47,13 +54,6 @@
       "sources": 1
     },
     {
-      "word": "防衛",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "配当",
       "size": "sm",
       "mood": "fear",
@@ -64,22 +64,15 @@
   "retail": [
     {
       "word": "ソニー",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "NVIDIA",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "トヨタ",
+      "word": "NVIDIA",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
