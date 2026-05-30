@@ -1,10 +1,10 @@
 {
   "date": "2026-05-30",
-  "collected_at": "2026-05-30 10:55",
+  "collected_at": "2026-05-30 22:29",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 24,
+  "entry_count": 23,
   "entries": [
     {
       "source": "youtube",
@@ -195,28 +195,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ソニー生命、不適切金銭1.2億円。あす狙い目か権利落ち急落。タマホーム、パソ、ＦＰパートナー急落～あす上がる株　2026年５月２９日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=3tLvVJlu9-g",
-      "topic": "ソニー",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ソニー"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ソニー生命、不適切金銭1.2億円。あす狙い目か権利落ち急落。タマホーム、パソ、ＦＰパートナー急落～あす上がる株　2026年５月２９日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=3tLvVJlu9-g",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "日経平均またも最高値更新！！かと思ったら下げるんかいッ！",
       "video_url": "https://www.youtube.com/watch?v=1HIhPTAVi6Y",
@@ -225,6 +203,17 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "決算後に下落した三菱HCキャピタル、買い場はもう少し先です#shorts",
+      "video_url": "https://www.youtube.com/watch?v=QjrkCtfPORM",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -278,7 +267,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 4,
+        "bull": 2,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -315,16 +304,16 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "ばっちゃまの投資チャンネル",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ばっちゃまの投資チャンネル"
         ]
       },
       "AI関連": {
@@ -356,17 +345,17 @@
         ]
       },
       "高配当": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ"
         ]
       },
-      "ソニー": {
+      "決算": {
         "count": 1,
-        "sentiment": "bullish",
+        "sentiment": "neutral",
         "sources": [
-          "株リアルライブ"
+          "トレードラボ"
         ]
       },
       "NVIDIA": {
@@ -396,10 +385,10 @@
       "半導体",
       "AI関連",
       "ドル円",
-      "高配当",
       "ナスダック",
+      "高配当",
       "SaaS",
-      "ソニー",
+      "決算",
       "NVIDIA",
       "配当",
       "任天堂"
