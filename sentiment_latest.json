@@ -18,9 +18,9 @@
     },
     {
       "word": "ナスダック",
-      "size": "md",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
+      "count": 1,
       "sources": 1
     }
   ],
@@ -40,6 +40,13 @@
       "sources": 1
     },
     {
+      "word": "SaaS",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
       "word": "決算",
       "size": "md",
       "mood": "greed",
@@ -47,25 +54,11 @@
       "sources": 2
     },
     {
-      "word": "SaaS",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "高配当",
-      "size": "sm",
+      "size": "md",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     }
   ],
   "retail": [
