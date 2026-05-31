@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-30",
+  "date": "2026-05-31",
   "mode": "claude",
   "macro": [
     {
@@ -27,10 +27,10 @@
   "institutional": [
     {
       "word": "半導体",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "AI関連",
@@ -40,11 +40,11 @@
       "sources": 1
     },
     {
-      "word": "高配当",
+      "word": "決算",
       "size": "md",
       "mood": "greed",
       "count": 2,
-      "sources": 1
+      "sources": 2
     },
     {
       "word": "SaaS",
@@ -54,9 +54,9 @@
       "sources": 1
     },
     {
-      "word": "決算",
+      "word": "高配当",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -70,18 +70,11 @@
   ],
   "retail": [
     {
-      "word": "NVIDIA",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "任天堂",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 2
     }
   ]
 }
