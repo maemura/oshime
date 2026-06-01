@@ -1,23 +1,30 @@
 {
-  "date": "2026-05-31",
+  "date": "2026-06-01",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "greed",
+      "mood": "calm",
       "count": 4,
       "sources": 2
     },
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "greed",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
     {
       "word": "ナスダック",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "日経",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -29,45 +36,59 @@
       "word": "半導体",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 6,
+      "sources": 4
     },
     {
-      "word": "AI関連",
+      "word": "SaaS",
       "size": "lg",
-      "mood": "greed",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "SaaS",
-      "size": "md",
+      "word": "高配当",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
-      "sources": 1
+      "count": 3,
+      "sources": 2
     },
     {
       "word": "決算",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 3
     },
     {
-      "word": "高配当",
-      "size": "md",
+      "word": "AI関連",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "防衛",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
     {
       "word": "任天堂",
       "size": "lg",
-      "mood": "greed",
-      "count": 3,
+      "mood": "calm",
+      "count": 4,
       "sources": 2
+    },
+    {
+      "word": "銀行",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ]
 }
