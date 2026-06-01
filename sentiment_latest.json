@@ -68,7 +68,7 @@
       "sources": 1
     },
     {
-      "word": "防衛",
+      "word": "銀行",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -82,13 +82,6 @@
       "mood": "calm",
       "count": 4,
       "sources": 2
-    },
-    {
-      "word": "銀行",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ]
 }

@@ -1,10 +1,10 @@
 {
   "date": "2026-06-01",
-  "collected_at": "2026-06-01 15:39",
+  "collected_at": "2026-06-01 23:12",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 32,
+  "entry_count": 31,
   "entries": [
     {
       "source": "youtube",
@@ -294,17 +294,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【ちょる子】防衛銘柄の時代はもう終わってしまったのか??",
-      "video_url": "https://www.youtube.com/watch?v=qokQw6NNa9E",
-      "topic": "防衛",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 防衛"
-    },
-    {
-      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "半年で株価45％下落任天堂 今こそ買いか？",
       "video_url": "https://www.youtube.com/watch?v=4Miog_CkI2Q",
@@ -403,17 +392,17 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
         "count": 6,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "優待ライダー",
           "トレードラボ",
+          "優待ライダー",
+          "Sho's投資情報局",
           "ばっちゃまの投資チャンネル"
         ]
       },
@@ -449,37 +438,30 @@
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー"
+          "優待ライダー",
+          "株リアルライブ"
         ]
       },
       "決算": {
         "count": 3,
         "sentiment": "neutral",
         "sources": [
-          "STOCKVOICE",
+          "トレードラボ",
           "株リアルライブ",
-          "トレードラボ"
+          "STOCKVOICE"
         ]
       },
       "任天堂": {
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "つばめ投資顧問",
-          "トレードラボ"
+          "トレードラボ",
+          "つばめ投資顧問"
         ]
       },
       "日経": {
         "count": 1,
         "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "防衛": {
-        "count": 1,
-        "sentiment": "neutral",
         "sources": [
           "たばたの投資ch"
         ]
@@ -503,7 +485,6 @@
       "ナスダック",
       "AI関連",
       "日経",
-      "防衛",
       "銀行"
     ]
   }
