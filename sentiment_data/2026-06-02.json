@@ -1,10 +1,10 @@
 {
   "date": "2026-06-02",
-  "collected_at": "2026-06-02 12:54",
+  "collected_at": "2026-06-02 23:12",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 29,
+  "entry_count": 30,
   "entries": [
     {
       "source": "youtube",
@@ -294,6 +294,17 @@
     },
     {
       "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "下落中の任天堂、そろそろ底打ちか？？",
+      "video_url": "https://www.youtube.com/watch?v=Pm52aWinkog",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "半年で株価45％下落任天堂 今こそ買いか？",
       "video_url": "https://www.youtube.com/watch?v=4Miog_CkI2Q",
@@ -354,7 +365,7 @@
       },
       "たばたの投資ch": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -370,17 +381,17 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 5,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
+          "優待ライダー",
           "トレードラボ",
-          "優待ライダー"
+          "Sho's投資情報局"
         ]
       },
       "SaaS": {
@@ -398,12 +409,13 @@
         ]
       },
       "任天堂": {
-        "count": 6,
+        "count": 7,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
+          "つばめ投資顧問",
+          "たばたの投資ch",
           "トレードラボ",
-          "つばめ投資顧問"
+          "Sho's投資情報局"
         ]
       },
       "ドル円": {
@@ -431,8 +443,8 @@
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー"
+          "優待ライダー",
+          "株リアルライブ"
         ]
       },
       "決算": {
