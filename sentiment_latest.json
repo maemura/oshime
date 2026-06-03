@@ -12,15 +12,8 @@
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
+      "mood": "fear",
+      "count": 3,
       "sources": 1
     }
   ],

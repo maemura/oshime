@@ -1,10 +1,10 @@
 {
   "date": "2026-06-03",
-  "collected_at": "2026-06-03 14:10",
+  "collected_at": "2026-06-03 23:15",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 26,
+  "entry_count": 24,
   "entries": [
     {
       "source": "youtube",
@@ -239,17 +239,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経、一時2000円のバク上げで6万8000円突破！なぜソフバンGだけ下落して日経上がるのか？Google13兆円増資との関係を解説します。",
-      "video_url": "https://www.youtube.com/watch?v=LpuE3-NT1GA",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "半年で株価45％下落任天堂 今こそ買いか？",
       "video_url": "https://www.youtube.com/watch?v=4Miog_CkI2Q",
@@ -280,17 +269,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: エヌビディア"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "ドル円160円に急接近、植田総裁講演に注目集まる【FXフォーカス】 6月3日 外為どっとコム総合研究所 宇栄原宗平さん",
-      "video_url": "https://www.youtube.com/watch?v=lNsUkPJSdmA",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
     }
   ],
   "summary": {
@@ -351,10 +329,9 @@
         ]
       },
       "ドル円": {
-        "count": 4,
-        "sentiment": "neutral",
+        "count": 3,
+        "sentiment": "bearish",
         "sources": [
-          "STOCKVOICE",
           "Sho's投資情報局"
         ]
       },
@@ -392,8 +369,8 @@
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "配当": {
@@ -401,13 +378,6 @@
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ"
-        ]
-      },
-      "日経": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
         ]
       },
       "エヌビディア": {
@@ -421,14 +391,13 @@
     "hot_words": [
       "半導体",
       "日経平均",
-      "ドル円",
       "任天堂",
+      "ドル円",
       "高配当",
       "SaaS",
       "ソニー",
       "トヨタ",
       "配当",
-      "日経",
       "エヌビディア"
     ]
   }
