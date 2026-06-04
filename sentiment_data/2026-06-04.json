@@ -1,6 +1,6 @@
 {
   "date": "2026-06-04",
-  "collected_at": "2026-06-04 12:23",
+  "collected_at": "2026-06-04 22:50",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -9,6 +9,39 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "【緊急】海外投資家が日本株を3952億円ついに売却‼ソフトバンクG11％大暴落で日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円。米国",
+      "video_url": "https://www.youtube.com/watch?v=rNLIVJRMedk",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】海外投資家が日本株を3952億円ついに売却‼ソフトバンクG11％大暴落で日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円。米国",
+      "video_url": "https://www.youtube.com/watch?v=rNLIVJRMedk",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】海外投資家が日本株を3952億円ついに売却‼ソフトバンクG11％大暴落で日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円。米国",
+      "video_url": "https://www.youtube.com/watch?v=rNLIVJRMedk",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "6/4【緊急】海外投資家が日本株を3952億円ついに売却‼ソフトバンクG11％大暴落で日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円",
       "video_url": "https://www.youtube.com/watch?v=vivHDgrMXVY",
       "topic": "日経平均",
@@ -69,39 +102,6 @@
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均最高値更新‼】ここからの押し目買いは正解か？AI半導体株急伸で日本株空売り勢木端微塵。ドル円159円。米国株、ハイテク株強い。仮想通貨BTC急落",
-      "video_url": "https://www.youtube.com/watch?v=Hflbhuy_OKo",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均最高値更新‼】ここからの押し目買いは正解か？AI半導体株急伸で日本株空売り勢木端微塵。ドル円159円。米国株、ハイテク株強い。仮想通貨BTC急落",
-      "video_url": "https://www.youtube.com/watch?v=Hflbhuy_OKo",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均最高値更新‼】ここからの押し目買いは正解か？AI半導体株急伸で日本株空売り勢木端微塵。ドル円159円。米国株、ハイテク株強い。仮想通貨BTC急落",
-      "video_url": "https://www.youtube.com/watch?v=Hflbhuy_OKo",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: ドル円"
     },
@@ -274,8 +274,8 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 3,
-        "bear": 6
+        "bull": 0,
+        "bear": 9
       },
       "株リアルライブ": {
         "bull": 5,
@@ -362,8 +362,8 @@
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "つばめ投資顧問",
-          "トレードラボ"
+          "トレードラボ",
+          "つばめ投資顧問"
         ]
       },
       "AI銘柄": {
