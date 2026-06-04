@@ -1,19 +1,33 @@
 {
-  "date": "2026-06-03",
+  "date": "2026-06-04",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 2
+      "size": "xl",
+      "mood": "fear",
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ドル円",
       "size": "lg",
       "mood": "fear",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日銀",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
       "sources": 1
     }
   ],
@@ -29,20 +43,13 @@
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
+      "count": 4,
       "sources": 2
     },
     {
-      "word": "SaaS",
+      "word": "AI銘柄",
       "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "greed",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -50,17 +57,10 @@
   "retail": [
     {
       "word": "任天堂",
-      "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 3
-    },
-    {
-      "word": "ソニー",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "トヨタ",
@@ -70,7 +70,7 @@
       "sources": 1
     },
     {
-      "word": "エヌビディア",
+      "word": "ソニー",
       "size": "sm",
       "mood": "calm",
       "count": 1,
