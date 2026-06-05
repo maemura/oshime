@@ -1,6 +1,6 @@
 {
   "date": "2026-06-05",
-  "collected_at": "2026-06-05 12:21",
+  "collected_at": "2026-06-05 22:37",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -9,7 +9,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【緊急】海外投資家が日本株を3952億円ついに売却‼日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円。米国株最高値推移。仮想通貨BTC",
+      "video_title": "米雇用統計で株は大転換か⁉。海外投資家が日本株を3952億円ついに売却‼日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円。米国株最高値",
       "video_url": "https://www.youtube.com/watch?v=rPQaIXFO9Ik",
       "topic": "日経平均",
       "category": "macro",
@@ -20,7 +20,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【緊急】海外投資家が日本株を3952億円ついに売却‼日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円。米国株最高値推移。仮想通貨BTC",
+      "video_title": "米雇用統計で株は大転換か⁉。海外投資家が日本株を3952億円ついに売却‼日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円。米国株最高値",
       "video_url": "https://www.youtube.com/watch?v=rPQaIXFO9Ik",
       "topic": "半導体",
       "category": "sector",
@@ -31,7 +31,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【緊急】海外投資家が日本株を3952億円ついに売却‼日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円。米国株最高値推移。仮想通貨BTC",
+      "video_title": "米雇用統計で株は大転換か⁉。海外投資家が日本株を3952億円ついに売却‼日経平均下落。AI半導体株の売りSQ、スペースX上場警戒か。ドル円160円。米国株最高値",
       "video_url": "https://www.youtube.com/watch?v=rPQaIXFO9Ik",
       "topic": "ドル円",
       "category": "macro",
@@ -218,7 +218,7 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "筆頭株主3D Investment狙い撃ちで東邦HD経営陣が希薄化させようとしてる件について徹底解説します。買収防衛策って誰のためにあるの？",
+      "video_title": "買収防衛策って誰のため？筆頭株主ファンド3D狙い撃ちな東邦HD株主総会の議案を徹底解説します。",
       "video_url": "https://www.youtube.com/watch?v=hr15d3Hxawk",
       "topic": "防衛",
       "category": "sector",
@@ -290,8 +290,8 @@
         "count": 5,
         "sentiment": "bearish",
         "sources": [
-          "株リアルライブ",
           "Sho's投資情報局",
+          "株リアルライブ",
           "ひげづら株ちゃんねる"
         ]
       },
@@ -306,8 +306,8 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "トレードラボ"
+          "トレードラボ",
+          "株リアルライブ"
         ]
       },
       "不動産": {
