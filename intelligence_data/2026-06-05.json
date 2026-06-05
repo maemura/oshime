@@ -1,262 +1,101 @@
 {
   "date": "2026-06-05",
-  "updated_at": "2026-06-05 07:21 JST",
-  "note_trends": [
-    {
-      "title": "​日経平均最高値なのに「高配当株全滅」のウワサと、この歪な相場を生き抜く投資家の新常識",
-      "author": "たくみ丨元銀行員の堅実投資",
-      "likes": 4,
-      "price": 0,
-      "tag": "日経平均",
-      "url": "https://note.com/poruka180/n/nd09b7705966f"
-    },
-    {
-      "title": "「完全国産化すると機体価格が1.5〜2倍になる」——国産ドローン量産を阻む3つの本当の壁",
-      "author": "busin",
-      "likes": 1,
-      "price": 0,
-      "tag": "日経平均",
-      "url": "https://note.com/busintemasamo1/n/na6b6c428bd5f"
-    },
-    {
-      "title": "Ｇ１宮島・常滑の数字の裏に隠された“仕組まれた罠”を暴く",
-      "author": "note競艇カテゴリ⭐️殿堂入り⭐️競艇大明神",
-      "likes": 1,
-      "price": 9800,
-      "tag": "高配当",
-      "url": "https://note.com/hot_hornet3616/n/nca65e24babc8"
-    },
-    {
-      "title": "東京市場・朝の展望（6月5日 金）ダウ＋874反発 × 半導体は“ブロコムショック継続”装置は粘るが、素材・電子部品は重い朝へ",
-      "author": "mainichi",
-      "likes": 0,
-      "price": 0,
-      "tag": "日本株",
-      "url": "https://note.com/nii314/n/nd9248804bf50"
-    },
-    {
-      "title": "【06/05】本日のシグナル速報",
-      "author": "signal_etf",
-      "likes": 0,
-      "price": 0,
-      "tag": "日本株",
-      "url": "https://note.com/signal_etf/n/n9688f915f81c"
-    },
-    {
-      "title": "【トレードメモ】6227 AIメカテックと付き合っていきます",
-      "author": "くまっこ",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/lovely_deer787/n/n909adf0d4701"
-    },
-    {
-      "title": "お金② 株式投資の世界へ",
-      "author": "    海と銭湯と投資",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/noble_roses436/n/n56cb4edf4798"
-    },
-    {
-      "title": "【銘柄分析】 QLSホールディングス",
-      "author": "きぶんの企業分析",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/hsho488/n/n6603e9de6e70"
-    },
-    {
-      "title": "【50代の投資日記】第4回|配当金のお知らせは、ちょっとしたラブレター",
-      "author": "ariko",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/ariko_note/n/n137332da4bfb"
-    },
-    {
-      "title": "【朝5分のマーケットニュース|2026年6月5日】日経平均は1,000円安。AI主導相場の調整局面で何が起きているのか",
-      "author": "アセマネ太郎",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/148461/n/n39569510da97"
-    },
-    {
-      "title": "投資初心者がサイドFIREまでにやるべき5ステップ【現実ロードマップ】",
-      "author": "つば｜投資初心者の記録",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/long_tsuba/n/n0241bd4a5d01"
-    },
-    {
-      "title": "株主優待：サッポロホールディングス(2501)",
-      "author": "うえだし",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/shidaeu/n/nc7b682585926"
-    },
-    {
-      "title": "2026/06/05 ニュースまとめ",
-      "author": "下河原雄太",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/shimogyu/n/n3cef8c6f4f8c"
-    },
-    {
-      "title": "【決算分析】DOCU強決算の死角。株価が下落した理由と今後の展望",
-      "author": "まどか｜US株ジャーナル｜特許出願と求人で市場を読む",
-      "likes": 0,
-      "price": 980,
-      "tag": "株式投資",
-      "url": "https://note.com/us_kabu_journal/n/n7ff79d61fe46"
-    },
-    {
-      "title": "【6月5日】日経平均株価の予測〜高値圏で迎える週末前、市場はどちらを向くのか〜",
-      "author": "とうや｜日経平均",
-      "likes": 0,
-      "price": 300,
-      "tag": "日経平均",
-      "url": "https://note.com/kabukabukabuchan/n/n93c6ff7f4bf0"
-    },
-    {
-      "title": "奄美シングルマザーのNISA日記 #37｜ブロードコム決算ショックで日経931円安！半導体株がまじで一瞬で溶けた",
-      "author": "My maya mai",
-      "likes": 0,
-      "price": 0,
-      "tag": "日経平均",
-      "url": "https://note.com/mai_maya_mai/n/n52b20df61e66"
-    },
-    {
-      "title": "📊 セラの今日の日経平均株価予想（6月5日）",
-      "author": "九条セラ",
-      "likes": 0,
-      "price": 0,
-      "tag": "日経平均",
-      "url": "https://note.com/birdieman/n/n1d3ecfa49cca"
-    },
-    {
-      "title": "【朝刊】6月5日 今日の相場まとめ｜米雇用統計前、半導体株と日経平均の反応を整理",
-      "author": "ねこ教授のマーケット研究室",
-      "likes": 0,
-      "price": 0,
-      "tag": "日経平均",
-      "url": "https://note.com/neko_market_lab/n/nf469886b88e3"
-    },
-    {
-      "title": "上昇継続待ちか、レンジ混戦か｜2026.6.5",
-      "author": "RB Decision｜相場判断ログ（RUN & FAKE）",
-      "likes": 0,
-      "price": 0,
-      "tag": "日経平均",
-      "url": "https://note.com/noske54/n/n179abcd9ed7e"
-    },
-    {
-      "title": "【BrainBay】日経931円安もダウ最高値更新。SBGの大幅安とPayPayの1,300億円買収から読む次の戦略",
-      "author": "べいさん｜主体性と市場の構造",
-      "likes": 0,
-      "price": 0,
-      "tag": "日経平均",
-      "url": "https://note.com/brain_bay/n/ncbf44ac628c9"
-    }
-  ],
+  "updated_at": "2026-06-05 20:56 JST",
+  "note_trends": [],
   "nikkei_headlines": [
     {
       "category": "総合",
-      "title": "NY債券、長期債反発　10年債利回り4.47%　原油価格の下落で",
-      "url": "https://www.nikkei.com/article/DGXZQOFL04CTT0U6A600C2000000/",
-      "date": "2026-06-05T06:10:26+09:00"
+      "title": "出利葉太一郎が首位浮上　ツアー選手権ゴルフ第2日",
+      "url": "https://www.nikkei.com/article/DGXZQOKC05AR20V00C26A6000000/",
+      "date": "2026-06-05T20:12:57+09:00"
     },
     {
       "category": "総合",
-      "title": "ブロードコム株13%安、増収増益でも予想未達　半導体株に売り波及",
-      "url": "https://www.nikkei.com/article/DGXZQOGN04COE0U6A600C2000000/",
-      "date": "2026-06-05T06:08:57+09:00"
+      "title": "北米産の製紙用パルプ、4月積み横ばい　需要伸び悩む",
+      "url": "https://www.nikkei.com/article/DGXZQOUB022X70S6A600C2000000/",
+      "date": "2026-06-05T20:08:43+09:00"
     },
     {
       "category": "総合",
-      "title": "スペースXのIPO祭り　｢資金吸い上げ｣で波乱か、新たな投資呼び水か",
-      "url": "https://www.nikkei.com/article/DGXZQOGN04CP00U6A600C2000000/",
-      "date": "2026-06-05T06:03:26+09:00"
+      "title": "あいちFG、ありあけキャピタルが筆頭株主　地銀再編の最前線で存在感",
+      "url": "https://www.nikkei.com/article/DGXZQOFD024PV0S6A600C2000000/",
+      "date": "2026-06-05T20:05:13+09:00"
     },
     {
       "category": "総合",
-      "title": "ペルシャ湾船舶の脱出、5月半ばから増加か　平時の水準には遠く",
-      "url": "https://www.nikkei.com/article/DGXZQOGN04CZ20U6A600C2000000/",
-      "date": "2026-06-05T05:50:34+09:00"
+      "title": "インドの25年度GDP7.7%増　高成長を維持、27年にも日本超え",
+      "url": "https://www.nikkei.com/article/DGXZQOGM269DD0W6A520C2000000/",
+      "date": "2026-06-05T20:05:03+09:00"
     },
     {
       "category": "総合",
-      "title": "NYダウ874ドル高で最高値、中東情勢の警戒和らぐ　値がさ株高も効果",
-      "url": "https://www.nikkei.com/article/DGXZQOFL050120V00C26A6000000/",
-      "date": "2026-06-05T05:39:08+09:00"
+      "title": "夏の甲子園、継続試合の運用など決定　高野連",
+      "url": "https://www.nikkei.com/article/DGXZQOKC05ALA0V00C26A6000000/",
+      "date": "2026-06-05T20:04:38+09:00"
     },
     {
       "category": "国際",
-      "title": "ブロードコム株13%安、増収増益でも予想未達　半導体株に売り波及",
-      "url": "https://www.nikkei.com/article/DGXZQOGN04COE0U6A600C2000000/",
-      "date": "2026-06-05T06:08:57+09:00"
+      "title": "日本・インドネシア、海自護衛艦の輸出議論開始へ　両国防衛相が会談",
+      "url": "https://www.nikkei.com/article/DGXZQOUA058O20V00C26A6000000/",
+      "date": "2026-06-05T18:42:11+09:00"
     },
     {
       "category": "国際",
-      "title": "NYダウ874ドル高で最高値、中東情勢の警戒和らぐ　値がさ株高も効果",
-      "url": "https://www.nikkei.com/article/DGXZQOFL050120V00C26A6000000/",
-      "date": "2026-06-05T05:39:08+09:00"
+      "title": "自民、南米EPA交渉入り容認へ　決議案「農産品の輸出促進へ攻め」",
+      "url": "https://www.nikkei.com/article/DGXZQOUA0480M0U6A600C2000000/",
+      "date": "2026-06-05T18:30:01+09:00"
     },
     {
       "category": "国際",
-      "title": "中国で運転免許がいらなくなる日　PwCの薗田直孝氏に聞く",
-      "url": "https://www.nikkei.com/article/DGXZQODK03B3U0T00C26A6000000/",
-      "date": "2026-06-05T05:00:00+09:00"
+      "title": "プーチン氏「東部支配」の主張崩さず　ウクライナは首脳会談呼びかけ",
+      "url": "https://www.nikkei.com/article/DGXZQOGR051EZ0V00C26A6000000/",
+      "date": "2026-06-05T18:21:47+09:00"
     },
     {
       "category": "国際",
-      "title": "GoogleもHPも企業統治に使った予測市場　業務の成否を賭けの対象に",
-      "url": "https://www.nikkei.com/article/DGXZQOLC038E00T00C26A6000000/",
-      "date": "2026-06-05T05:00:00+09:00"
+      "title": "韓国LGイノテック、ベトナムに半導体基板工場　データセンター向け",
+      "url": "https://www.nikkei.com/article/DGXZQOGM0541E0V00C26A6000000/",
+      "date": "2026-06-05T17:48:31+09:00"
     },
     {
       "category": "国際",
-      "title": "米アプライドマテリアルズ、東南アで半導体人材25%増員",
-      "url": "https://www.nikkei.com/article/DGXZQOCB0386X0T00C26A6000000/",
-      "date": "2026-06-05T05:00:00+09:00"
+      "title": "習近平氏、8日から7年ぶり北朝鮮訪問　金正恩氏と対米方針協議へ",
+      "url": "https://www.nikkei.com/article/DGXZQOGM2193D0R21C23A1000000/",
+      "date": "2026-06-05T17:38:14+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "スペースXのIPO祭り　｢資金吸い上げ｣で波乱か、新たな投資呼び水か",
-      "url": "https://www.nikkei.com/article/DGXZQOGN04CP00U6A600C2000000/",
-      "date": "2026-06-05T06:03:26+09:00"
+      "title": "iPhone×AI、融合どこまで　WWDC26現地生解説　9日正午から",
+      "url": "https://www.nikkei.com/article/DGXZQOKE00017_V00C26A6000000/",
+      "date": "2026-06-05T18:01:57+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "「うるう時間」27年にも導入　時刻のずれ調整を実質廃止、IT障害防ぐ",
-      "url": "https://www.nikkei.com/article/DGXZQOUC1595N0V10C26A5000000/",
-      "date": "2026-06-05T05:00:00+09:00"
+      "title": "有望スタートアップ続出の韓国国立大　支援手厚く、5年で24社上場",
+      "url": "https://www.nikkei.com/article/DGXZQOGM28B7E0Y6A520C2000000/",
+      "date": "2026-06-05T16:16:24+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "うつの緩和、ダンスは薬やウオーキングを上回る　最良の方法は",
-      "url": "https://www.nikkei.com/article/DGXZQOSG218M60R20C26A5000000/",
-      "date": "2026-06-05T05:00:00+09:00"
+      "title": "日立、「ミュトス」のアクセス権取得　送配電などセキュリティー強化",
+      "url": "https://www.nikkei.com/article/DGXZQOUC052XS0V00C26A6000000/",
+      "date": "2026-06-05T14:20:00+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "米国の仮想通貨詐欺、ロマンス型など被害1兆円超　日本でも200億円",
-      "url": "https://www.nikkei.com/article/DGXZQOGN18B550Y6A510C2000000/",
-      "date": "2026-06-05T04:13:28+09:00"
+      "title": "アンソロピック、｢AI開発減速｣提言　OpenAIは政府規制強化を訴え",
+      "url": "https://www.nikkei.com/article/DGXZQOGN04D5P0U6A600C2000000/",
+      "date": "2026-06-05T13:17:25+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "メテリクス、企業のAIエージェント利用を安全に　アクセス制限の新機能",
-      "url": "https://www.nikkei.com/article/DGXZQOUC287740Y6A520C2000000/",
-      "date": "2026-06-05T02:00:00+09:00"
+      "title": "Appleのアプリ経済圏、25年は224兆円　AI搭載アプリ拡大",
+      "url": "https://www.nikkei.com/article/DGXZQOGN04DCB0U6A600C2000000/",
+      "date": "2026-06-05T11:58:52+09:00"
     }
   ],
   "fear_greed": {
-    "vix": 16.5,
+    "vix": 15.7,
     "score": 70,
     "rating": "Greed",
     "rating_jp": "強欲"
@@ -265,44 +104,51 @@
   "tradingview_signals": [
     {
       "code": "4676",
-      "score": 0.158,
-      "signal_jp": "買い",
-      "ma_score": 0.133,
-      "osc_score": 0.182
+      "score": 0.603,
+      "signal_jp": "強い買い",
+      "ma_score": 0.933,
+      "osc_score": 0.273
     },
     {
       "code": "7270",
-      "score": 0.067,
+      "score": 0.024,
       "signal_jp": "中立",
-      "ma_score": 0.133,
-      "osc_score": 0
+      "ma_score": -0.133,
+      "osc_score": 0.182
     },
     {
       "code": "4331",
-      "score": -0.558,
-      "signal_jp": "強い売り",
-      "ma_score": -0.933,
-      "osc_score": -0.182
+      "score": -0.355,
+      "signal_jp": "売り",
+      "ma_score": -0.8,
+      "osc_score": 0.091
     },
     {
       "code": "7172",
-      "score": -0.424,
-      "signal_jp": "売り",
-      "ma_score": -0.667,
-      "osc_score": -0.182
+      "score": -0.088,
+      "signal_jp": "中立",
+      "ma_score": -0.267,
+      "osc_score": 0.091
     },
     {
       "code": "2181",
-      "score": -0.445,
-      "signal_jp": "売り",
-      "ma_score": -0.8,
+      "score": 0.088,
+      "signal_jp": "中立",
+      "ma_score": 0.267,
       "osc_score": -0.091
     },
     {
       "code": "3668",
-      "score": -0.467,
-      "signal_jp": "売り",
-      "ma_score": -0.933,
+      "score": -0.064,
+      "signal_jp": "中立",
+      "ma_score": -0.4,
+      "osc_score": 0.273
+    },
+    {
+      "code": "285A",
+      "score": 0.4,
+      "signal_jp": "買い",
+      "ma_score": 0.8,
       "osc_score": 0
     },
     {
@@ -313,67 +159,60 @@
       "osc_score": 0
     },
     {
-      "code": "285A",
-      "score": 0.264,
-      "signal_jp": "買い",
-      "ma_score": 0.8,
-      "osc_score": -0.273
-    },
-    {
       "code": "7203",
-      "score": -0.536,
-      "signal_jp": "強い売り",
+      "score": -0.264,
+      "signal_jp": "売り",
       "ma_score": -0.8,
-      "osc_score": -0.273
+      "osc_score": 0.273
     },
     {
       "code": "8306",
-      "score": 0.467,
-      "signal_jp": "買い",
-      "ma_score": 0.933,
-      "osc_score": 0
-    },
-    {
-      "code": "8035",
       "score": 0.558,
       "signal_jp": "強い買い",
       "ma_score": 0.933,
       "osc_score": 0.182
     },
     {
-      "code": "9983",
-      "score": 0.536,
-      "signal_jp": "強い買い",
+      "code": "8035",
+      "score": 0.309,
+      "signal_jp": "買い",
       "ma_score": 0.8,
+      "osc_score": -0.182
+    },
+    {
+      "code": "9983",
+      "score": 0.445,
+      "signal_jp": "買い",
+      "ma_score": 0.8,
+      "osc_score": 0.091
+    },
+    {
+      "code": "6501",
+      "score": 0.603,
+      "signal_jp": "強い買い",
+      "ma_score": 0.933,
       "osc_score": 0.273
     },
     {
       "code": "8316",
-      "score": 0.421,
-      "signal_jp": "買い",
+      "score": 0.603,
+      "signal_jp": "強い買い",
       "ma_score": 0.933,
-      "osc_score": -0.091
-    },
-    {
-      "code": "6501",
-      "score": 0.355,
-      "signal_jp": "買い",
-      "ma_score": 0.8,
-      "osc_score": -0.091
+      "osc_score": 0.273
     },
     {
       "code": "6758",
-      "score": 0.042,
-      "signal_jp": "中立",
-      "ma_score": 0.267,
-      "osc_score": -0.182
+      "score": 0.267,
+      "signal_jp": "買い",
+      "ma_score": 0.533,
+      "osc_score": 0
     },
     {
       "code": "6857",
-      "score": 0.467,
-      "signal_jp": "買い",
-      "ma_score": 0.933,
-      "osc_score": 0
+      "score": -0.158,
+      "signal_jp": "売り",
+      "ma_score": -0.133,
+      "osc_score": -0.182
     }
   ],
   "yahoo_board": [
@@ -402,22 +241,73 @@
       "error": "HTTP Error 403: Forbidden"
     }
   ],
-  "tdnet_disclosures": [],
+  "tdnet_disclosures": [
+    {
+      "title": "あゆみ製薬ホールディングス株式会社の完全子会社化について",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564617.pdf"
+    },
+    {
+      "title": "（訂正）「2026年３月期通期決算説明資料」の一部訂正について",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564522.pdf"
+    },
+    {
+      "title": "（訂正・数値データ訂正）「2026年３月期決算短信〔日本基準〕(連結)」の一部訂正について",
+      "url": "https://www.release.tdnet.info/inbs/140120260604563582.pdf"
+    },
+    {
+      "title": "（訂正）「2026 年３月期 通期決算説明資料」の一部訂正について",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564598.pdf"
+    },
+    {
+      "title": "2026年7月期 第3四半期 決算説明資料",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564335.pdf"
+    },
+    {
+      "title": "2026年３月期　決算説明資料",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564309.pdf"
+    },
+    {
+      "title": "自己株式の取得結果および取得終了のお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260604562724.pdf"
+    },
+    {
+      "title": "第三者割当により発行された第39回新株予約権（行使価額修正条項付）の大量行使に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564584.pdf"
+    },
+    {
+      "title": "（訂正）「ＴＣＧ2511 株式会社による日本ドライケミカル株式会社の普通株式に対する公開買付けの開始に関するお知らせ」の訂正に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260604563426.pdf"
+    },
+    {
+      "title": "譲渡制限付株式報酬及びパフォーマンス・シェア・ユニットとしての自己株式の処分に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260605563805.pdf"
+    },
+    {
+      "title": "自己株式の取得状況に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564605.pdf"
+    },
+    {
+      "title": "自己株式の取得状況に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564567.pdf"
+    },
+    {
+      "title": "（訂正）「第三者割当により発行された行使価額修正条項付第22回新株予約権の月間行使状況に関するお知らせ」の一部訂正について",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564535.pdf"
+    },
+    {
+      "title": "自己株式の取得及び自己株式立会外買付取引（ToSTNeT-3）による自己株式の買付けに関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564103.pdf"
+    },
+    {
+      "title": "自己株式の取得状況に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260605564505.pdf"
+    }
+  ],
   "google_news": [
     {
-      "title": "AIラリーで主役級に抜擢、大活況続く「電子部品」有望株セレクト ＜株探トップ特集＞ | 特集 - 株探ニュース - かぶたん",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9oN08xMnBGajdkdGg5eE41VHFaUW0tZW1UQUozUE5zQVVXMW56ZGgyMlJ4U2FVSHZ6aEEyWlc5dFpBakVpRHNlbEMwZUZwbWdGWDkyZzY3M0VYa3ZIRl9PTA?oc=5",
-      "published": "Thu, 04 Jun 2026 10:30:00 GMT"
-    },
-    {
-      "title": "グーグルもマイクロソフトも敵わなかった…2000億円運用の投資のプロが「最強の日本株」と断言する企業の名前 - Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9OOEdtY1pMWmFWbDJzRlNVTlFkWjJGV2prSTZWVUtfREc1c2R6c1RZLU5JclRWREZvaDMzdkh6dHhDb0xDYzJGUGZoTEczci1FU2RraXFQb1Vrc1ozT3JVQ0xQcGpmdlFtZmJSbW41VHNpTG0yRmlWTllEZzNXWGs?oc=5",
-      "published": "Wed, 03 Jun 2026 21:15:41 GMT"
-    },
-    {
-      "title": "海外投資家、日本株9週ぶり売り越し MSCIの銘柄除外響く - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE8xcjNEUGZQUm13eUNpUGx3SWM3WjBfbkRqUDdBTHFuUGVxcWNuNzB6YTdKcmdFT1Z2RE0zR0hWNUV6dFJkTlBsMG1TcFNLMkhvYkRGdjRDSVRPdmtPeVpVeHFXcG16WmVGTGJvUQ?oc=5",
-      "published": "Thu, 04 Jun 2026 10:15:17 GMT"
+      "title": "米国・日本株：超速AI相場の「トリセツ」は？ - トウシル",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBYT01DaG55X3lIZDBrSDgzYkRaWGdya1lkNzh0TDVOV0FMY3lFcmdyb1BhcmNERXlSN1RHQ19semlmNHJoN3VaT2E2UEtBSy0ya3BYNlM3cXhuZw?oc=5",
+      "published": "Thu, 04 Jun 2026 22:30:00 GMT"
     },
     {
       "title": "アングル：超大型ＩＰＯラッシュ、ＡＩ相場は潮目変化か 日本株に波及リスク - Reuters",
@@ -425,24 +315,34 @@
       "published": "Wed, 03 Jun 2026 22:00:05 GMT"
     },
     {
-      "title": "【日本株】半導体と並ぶ重要部品「水晶デバイス」、AIデータセンターの高性能化で高まる存在感 - マネクリ",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE9wQWxZZUQ4d3o2c0FfcEltT18tUFRJR0ROTUZGak9fY0kyX2xlWVY2dnRPZWd2NjN6WGU5NVFFYlBwYzRuTFlwcDlvNFRHeG5VQkpGVdIBV0FVX3lxTE5ZSGN5R0dPTzNJVTJRSnE1RnZyQTNOdWJ2YlpOeG1raWRYWGprLW9ZSDlOczVJUEtGVXROUngyb1VRTzVxMW84bDZrb2xWYTRTZEJYWFVWdw?oc=5",
-      "published": "Thu, 04 Jun 2026 05:15:00 GMT"
+      "title": "日本株、株高でも崩れる「仮需の山」 弱気予想ゼロが映す下値抵抗力 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9jeV8yM1FyRzZ4ZmtGOU1zbWJOVTFNaGR0Wmp5RDhJVlFrY2NRTEttVFU3SHVXdUNPMWhpTHVnVFBhNC12WXlaaldKc0tld09DSFNOeXA4bzdwdnBLWTY2UzRUUVVuMlZWM3JxNg?oc=5",
+      "published": "Fri, 05 Jun 2026 09:14:21 GMT"
     },
     {
-      "title": "日経平均株価、米株安と中東情勢の不透明感が重荷（先読み株式相場） - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB5WXNDbVhzZmdMa2ZpZk9nRGZHYUN2ODk5MjBrRXZNTUp0QWhiM1hjYVZmQlY0V08ycFB5Vy1oZVRjUmRya1JCalVZZE9Zb1MwbEtYNHFLYVFoeEVoNmJvWTJIYTRtRVM1U1VXbA?oc=5",
-      "published": "Wed, 03 Jun 2026 23:16:31 GMT"
+      "title": "AIラリーで主役級に抜擢、大活況続く「電子部品」有望株セレクト ＜株探トップ特集＞ | 特集 - 株探ニュース - 株探（かぶたん）",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9oN08xMnBGajdkdGg5eE41VHFaUW0tZW1UQUozUE5zQVVXMW56ZGgyMlJ4U2FVSHZ6aEEyWlc5dFpBakVpRHNlbEMwZUZwbWdGWDkyZzY3M0VYa3ZIRl9PTA?oc=5",
+      "published": "Thu, 04 Jun 2026 10:30:00 GMT"
     },
     {
-      "title": "4日の日本株は下落､米･イラン再衝突を受けAI関連に売り - 四季報オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1Gczlwc0lYYTJxbzJnUVFOUlhhMVFhSy0zQzBza2haT0RWbmM1ZHhSQzc0bFZtcWQ0dG9fdjVkQUtqX2NSTTV2dW02YllIVWRRS25TMzByUQ?oc=5",
-      "published": "Thu, 04 Jun 2026 07:30:00 GMT"
+      "title": "東京為替：ドル・円は失速、日本株は下げ幅拡大(フィスコ) - Yahoo!ファイナンス",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPdjRVeUlyXzdfMWlvTDNidFUxc29mUFo2WE1BODBlX0dfVjhSelJ4bzlHZEducnFXMThVcTVHNk5rbUw4b3pjYVM1bWFBdUdPczFoa2UwREstT2NrTEFqOTJoN1pBTWJKNTE4dlo3QllURHlkX2xRSHgzRkhGYm95NExkSG5udGc?oc=5",
+      "published": "Fri, 05 Jun 2026 04:14:00 GMT"
     },
     {
-      "title": "利食い優勢も半導体やAI関連株の押し目狙い／オープニングコメント(フィスコ) - Yahoo!ファイナンス",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNd0ppWWlqQ0dKVEJQU3pDcWIyM2xHSlMwQzNWNVV3aFUyc3NwWUEtZlA3ZWNkSW03MnQ2amtCWTNyODljOUp1RUdDTzlaRVVDYXpwcV85bUg5UzgxNG9jRGpJZ0tuUzdaQVJsOG9PUkxpOThfYnllTW95eWxzT3JhUGE3S2NRQkE?oc=5",
-      "published": "Wed, 03 Jun 2026 23:27:00 GMT"
+      "title": "日本株は反発へ、原油価格の下落を好感－景気敏感や銀行に買い - Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9mMDVUVnlMVXJMbkxRSS1xSzVHc3lKZV9mTWYxYUZ3V1VqRTR6YllKYzR1bjcxcmxpcHNMSWM0bm9GMXVhU3M4UnlHRkRYdVBaWmVRN0FIRzdCbTg4WlNXTklsUnhjUzV2OTY5N2I3N1k0Qy1RSUE0?oc=5",
+      "published": "Thu, 04 Jun 2026 22:54:37 GMT"
+    },
+    {
+      "title": "5日午前の日本株は続落､AI相場の息切れを警戒 - 四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9jLWw5Qk5TY2loTTdVU1NDaUNNXzZ3VWROcXpsSDQ0dVJ5TjA2dWo4cXNfREl5Mi1XTEVPRGVCbDRQbkVpWWwxQnR5UGVpZmJRcFRXSWxqcw?oc=5",
+      "published": "Fri, 05 Jun 2026 02:55:00 GMT"
+    },
+    {
+      "title": "【日本株】売れている企業は株価も強い？増収モメンタムと在庫回転率で探す注目株 - マネクリ",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTFBnN1l1cW9QbXV1bWpYS0t0Wk1WV2VfcVZ3RV96RjdCTzA5eHl3dzhNLTNEX0NNXzhCSmt0WUV6ejlrLUtXcE9BRjlocG9wWFpWQlRib9IBV0FVX3lxTE5JaWlhNnlCdk5jdzVFNmVmcWlXa3JxNDJKX2lRLXZBa01EeHpXZGgzVEhqZ0ttMkg0Z25DUkx0RnAtd0ZIeDNoOUhmS0VDUm9yc01xNEJDaw?oc=5",
+      "published": "Wed, 03 Jun 2026 11:40:00 GMT"
     },
     {
       "title": "日本株の燃料補給 米国経済の見通しが好転する | 藤代 宏一 | 第一ライフ資産運用経済研究所 - 第一ライフ資産運用経済研究所",
@@ -450,34 +350,34 @@
       "published": "Wed, 03 Jun 2026 03:00:11 GMT"
     },
     {
-      "title": "東京為替：ドル・円は上げ渋り、日本株は下げ幅縮小(フィスコ) - Yahoo!ファイナンス",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPMGFtb05oUllobnZFaTlHbmdGQ1l0SjJHdmR6RWZ5djdzSlI2NUNZdEtuSERub1BTX3FHWjEwajRQODl5QzdpcGllWnotNmV1dVZGTmh0VU9HNzZYd2VsWGVlczFhNEFTTEZUVEUzamsxRl9fZFgxQTdYSXBYZEhoN3kwcUhfcFk?oc=5",
-      "published": "Thu, 04 Jun 2026 04:18:00 GMT"
+      "title": "「株式」ADR日本株ランキング～全般買い優勢、シカゴは大阪日中比465円安の67775円 執筆： Fisco - Investing.com - FX | 株式",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1RYUlYdHVMNUlKOU1VeG5tYVNRSEtVN2YyRXVseEw3dVZwU3FpdmYxX3JxaFVWNmFCSDk1MzMxTkQwM0NGVHV4UUhWVjJKQWp5bDBSWllDMVQ3SkJjdHh0VGJ0X2p0d3NUdkdhOERsbmE?oc=5",
+      "published": "Fri, 05 Jun 2026 00:42:00 GMT"
     },
     {
-      "title": "日経平均終値931円安、スピード調整 米ブロードコム決算が冷や水 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE51UVN4bklxTWdWanNXeVhoZUFaLXJwblo2QWZUSW9FSFJhOEh4WlZiZk1NSm9MOW5hRy1WeHcwUUpFdTI3eThpanFISjRmOFBiY2g5cEVMY3dLZmlNMEszV09xdVpWTWJmQnM1dw?oc=5",
-      "published": "Thu, 04 Jun 2026 02:46:24 GMT"
+      "title": "株価 一時1600円超下落 午後は下落幅縮小 - NHKニュース",
+      "url": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE96dFdUS0FISXo3bkJCNm9VTklCcHVEamVYZE1yWjRVN0FiTzlGd3JnTlV5YnZjNGgwbkxFZEk3RmkydHREQlMtRmVwLUtqTVduYWRWdkFUYXF6eWM4WFVB?oc=5",
+      "published": "Fri, 05 Jun 2026 00:27:09 GMT"
     },
     {
-      "title": "日経平均は反落、利益確定売り優勢 ＳＢＧの下げが重し - Reuters",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQVnlGQXNZVnNQNmhVZ3AzZEJUaU91TW5UZE5UcS1ZR2FpTXlZU29aQUo5Ym9ZaG4yRXczSFJOU0M5ekhTNzZ1LU8tSkUzUm1hem9ZQVN6ejJzOGVJaVV2WU1xUzVNRGF2SHV4NHQ2ZlhTeVhUaHFtWDJaZko3SGVPag?oc=5",
-      "published": "Thu, 04 Jun 2026 07:06:39 GMT"
+      "title": "日経平均終値は882円安、AI半導体一人負け 物色先は金融・内需株 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9BMUFESnJjZTVlZ09qUThOWmlBdXFKbmRRV2RzZmg5bVBVV2Jwa1ZhNnZrLWgxWkY3STlGUUpwaUFKQ3J2aEwyWG1ZTTVWcU5tS2VvSkhsVkdxOEo2QUlmN0psVXpqRVhIQVNROA?oc=5",
+      "published": "Fri, 05 Jun 2026 02:55:16 GMT"
     },
     {
-      "title": "日経225先物テクニカルポイント（5日夜間取引終了時点） - かぶたん",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBRNU1aNW4wS01ab2lyUkRYWGk2bUVHX3FXOWhoWFBfb0ZGcTU5RkNuMnFvb1ZFbWR4cGd6MnBhWDhpNjN2cFlwZ0cwaHNTOHNaNEE?oc=5",
-      "published": "Thu, 04 Jun 2026 22:10:16 GMT"
+      "title": "6月高配当株ランキング！ 最高益企業も/三菱UFJが上場来高値/日経平均続落【今日の注目株＆日本株市場見通し】「デイリーZAi」6月5日号（ダイヤモンド・ザイ）",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5Xc2VHLW5ydXQwWlYwNTBDWkJpeHNBY2lYRklCRlFFbG5jSlE5eUx2Nkg2UXpueFg1c09NUU9XMDBuYjhNaHduRV9tTElNZ1VQZGY1eEJPZmRTLXZ4djcxMWZDaDEtYnNUQ1NFOVRxb3hXalJwS2ZUc09DcF9DUDQ?oc=5",
+      "published": "Fri, 05 Jun 2026 11:10:27 GMT"
     },
     {
-      "title": "スペースXのIPO祭り ｢資金吸い上げ｣で波乱か、新たな投資呼び水か - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1UN05xWmpCRk93RElNZ3hodG40R0Z4RHd3WUJqeUU4R25aNFAwOFRGaTRIaDlZSjBfQ3dzOE9salNncE1PZzRqNDQyOGd6UnRqVEQxZTcwbjJFS3hSQnh1SERKb1lURFJSREh0WQ?oc=5",
-      "published": "Thu, 04 Jun 2026 21:03:26 GMT"
+      "title": "残念ですが日経平均10万円でも日本人は豊かになれません。銀行の収益構造を見ればわかる「日本型経営の搾取システム」 - ダイヤモンド・オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE81ZVJSTEgzVFFiQjVzdm9xOEduVjdkZFBjanU1bThWZkluTHM3R3puMW8wUUdZTEJwSnJJUWxiRXVITmlwTG5CUFNfZ2fSAU9BVV95cUxPYkZoWUZvZGY0N3ZwMGpjZFlxT3BwZV9CZVViTUI3TFZwRFBFclE3eVBISldHeHBpNDlMQno4ZDRHTHBvd3dEWGNPUjNDMnNN?oc=5",
+      "published": "Thu, 04 Jun 2026 23:05:00 GMT"
     },
     {
-      "title": "日経平均6万円超え！最高値更新でもPERは低下…これって「割安」のサイン？ - トウシル",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5Db2hmZHhoUjk0Qy1vdlRhaFRta1B4UVNzRktlQnlwZ0NRcEJvWEh4bW9DZXFxbXppVjhnQkxXVWxFblQ2bkI4QU8wTnI0aEhZTWpDU05EV050QQ?oc=5",
-      "published": "Thu, 04 Jun 2026 02:00:00 GMT"
+      "title": "伊藤智洋が読む「日経平均株価・短期シナリオ」 (6月5日記） - 株探（かぶたん）",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE04MFV0NzFTRGlVeVlvWmxkZTlwWVp5M0RHdjBjX1J5aWloYUpHV0o5eTBlX25tVjVtVmNNRTBfTUtVaURLYWlwT1M2UVF6ckU1aWktMWpvcEdHMVhuLTIyQw?oc=5",
+      "published": "Thu, 04 Jun 2026 23:11:14 GMT"
     }
   ]
 }
