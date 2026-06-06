@@ -1,10 +1,10 @@
 {
   "date": "2026-06-06",
-  "collected_at": "2026-06-06 11:01",
+  "collected_at": "2026-06-06 22:33",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 24,
+  "entry_count": 25,
   "entries": [
     {
       "source": "youtube",
@@ -195,17 +195,6 @@
     },
     {
       "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "に、に、に、日経平均７万円の時代は近い！？本日の立役者はココ！",
-      "video_url": "https://www.youtube.com/watch?v=C5qhQmmb4mw",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
       "channel": "トレードラボ",
       "video_title": "【NVIDIA級】あの世界シェアNo.1銘柄が異次元の仕込みチャンスです#shorts",
       "video_url": "https://www.youtube.com/watch?v=Y4wH4t4B-V8",
@@ -234,6 +223,28 @@
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "日経先物急落で暴落相場突入か！？厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=N3PNw2qXX80",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "日経先物急落で暴落相場突入か！？厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=N3PNw2qXX80",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
     },
@@ -295,7 +306,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 0
+        "bear": 2
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -312,9 +323,10 @@
     },
     "by_topic": {
       "日経": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
+          "優待ライダー",
           "Sho's投資情報局"
         ]
       },
@@ -323,9 +335,9 @@
         "sentiment": "bearish",
         "sources": [
           "つばめ投資顧問",
-          "ひげづら株ちゃんねる",
           "株リアルライブ",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "ナスダック": {
@@ -343,19 +355,19 @@
         ]
       },
       "日経平均": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
           "Sho's投資情報局"
         ]
       },
       "高配当": {
-        "count": 4,
+        "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
+          "優待ライダー",
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "不動産": {
@@ -397,8 +409,8 @@
     "hot_words": [
       "半導体",
       "高配当",
-      "ドル円",
       "日経",
+      "ドル円",
       "ナスダック",
       "日経平均",
       "不動産",
