@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-06",
+  "date": "2026-06-07",
   "mode": "claude",
   "macro": [
     {
@@ -17,17 +17,17 @@
       "sources": 1
     },
     {
+      "word": "日経平均",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 3
+    },
+    {
       "word": "ナスダック",
       "size": "md",
       "mood": "fear",
       "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "日経平均",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
       "sources": 1
     },
     {
@@ -43,34 +43,27 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 6,
-      "sources": 4
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "高配当",
-      "size": "xl",
+      "size": "md",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "決算",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "不動産",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "銀行",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "防衛",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
