@@ -1,10 +1,10 @@
 {
   "date": "2026-06-07",
-  "collected_at": "2026-06-07 11:17",
+  "collected_at": "2026-06-07 22:33",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 27,
-  "entry_count": 22,
+  "videos_processed": 26,
+  "entry_count": 23,
   "entries": [
     {
       "source": "youtube",
@@ -218,13 +218,24 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "日経平均が2380円の急落！月曜はブラマンか！？今夜もちょる子と株ライブ！",
+      "video_title": "総会シーズンで買収防衛策の闇!!そもそも誰から何を「防衛」するの？",
+      "video_url": "https://www.youtube.com/watch?v=qyQF_Fnm8dM",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経先物が2380円の急落！月曜はブラマンか？今夜もちょる子と株ライブ！",
       "video_url": "https://www.youtube.com/watch?v=rqR3tWQiNZc",
-      "topic": "日経平均",
+      "topic": "日経",
       "category": "macro",
       "sentiment": "bearish",
       "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
+      "summary": "キーワード: 日経"
     },
     {
       "source": "youtube",
@@ -290,20 +301,21 @@
     },
     "by_topic": {
       "日経": {
-        "count": 3,
+        "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "優待ライダー",
-          "Sho's投資情報局"
+          "たばたの投資ch",
+          "Sho's投資情報局",
+          "優待ライダー"
         ]
       },
       "半導体": {
         "count": 5,
         "sentiment": "bearish",
         "sources": [
-          "つばめ投資顧問",
           "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "つばめ投資顧問"
         ]
       },
       "ナスダック": {
@@ -321,11 +333,10 @@
         ]
       },
       "日経平均": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "トレードラボ",
-          "たばたの投資ch",
           "Sho's投資情報局"
         ]
       },
@@ -358,6 +369,13 @@
           "トレードラボ"
         ]
       },
+      "防衛": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
       "日銀": {
         "count": 1,
         "sentiment": "neutral",
@@ -370,12 +388,13 @@
       "半導体",
       "日経",
       "ドル円",
-      "日経平均",
       "ナスダック",
+      "日経平均",
       "高配当",
       "決算",
       "不動産",
       "NVIDIA",
+      "防衛",
       "日銀"
     ]
   }

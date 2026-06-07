@@ -6,8 +6,8 @@
       "word": "日経",
       "size": "lg",
       "mood": "fear",
-      "count": 3,
-      "sources": 2
+      "count": 4,
+      "sources": 3
     },
     {
       "word": "ドル円",
@@ -17,18 +17,18 @@
       "sources": 1
     },
     {
-      "word": "日経平均",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 3
-    },
-    {
       "word": "ナスダック",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
+    },
+    {
+      "word": "日経平均",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "日銀",
@@ -64,6 +64,13 @@
       "word": "不動産",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "防衛",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
