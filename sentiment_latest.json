@@ -1,13 +1,20 @@
 {
-  "date": "2026-06-07",
+  "date": "2026-06-08",
   "mode": "claude",
   "macro": [
     {
-      "word": "日経",
+      "word": "日経平均",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
-      "sources": 3
+      "count": 3,
+      "sources": 2
+    },
+    {
+      "word": "ナスダック",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "ドル円",
@@ -17,21 +24,14 @@
       "sources": 1
     },
     {
-      "word": "ナスダック",
-      "size": "md",
+      "word": "日経",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
-      "sources": 1
+      "count": 3,
+      "sources": 3
     },
     {
-      "word": "日経平均",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "日銀",
+      "word": "円安",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -41,24 +41,17 @@
   "institutional": [
     {
       "word": "半導体",
-      "size": "xl",
+      "size": "lg",
       "mood": "fear",
-      "count": 5,
-      "sources": 3
-    },
-    {
-      "word": "高配当",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
+      "count": 4,
       "sources": 2
     },
     {
-      "word": "決算",
-      "size": "sm",
+      "word": "高配当",
+      "size": "lg",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "count": 4,
+      "sources": 3
     },
     {
       "word": "不動産",
@@ -68,14 +61,21 @@
       "sources": 1
     },
     {
-      "word": "防衛",
+      "word": "決算",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
   ],
   "retail": [
+    {
+      "word": "トヨタ",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
     {
       "word": "NVIDIA",
       "size": "sm",
