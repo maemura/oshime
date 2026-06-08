@@ -1,6 +1,6 @@
 {
   "date": "2026-06-08",
-  "collected_at": "2026-06-08 13:48",
+  "collected_at": "2026-06-08 22:53",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -251,6 +251,17 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
+      "video_title": "日経Wレバを全部売りました!!その理由とは..??",
+      "video_url": "https://www.youtube.com/watch?v=X9EBxnvDIY0",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
       "video_title": "止まらない円安の備えは中国株ってほんと！？【ちょる子】",
       "video_url": "https://www.youtube.com/watch?v=F_ZD8x4guPU",
       "topic": "円安",
@@ -258,17 +269,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経3000円急落！米雇用統計で就業者が増えても日経が下がる理由を解説します",
-      "video_url": "https://www.youtube.com/watch?v=DIUFfFOlor4",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
     },
     {
       "source": "youtube",
@@ -326,16 +326,16 @@
         "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "つばめ投資顧問",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "つばめ投資顧問"
         ]
       },
       "ナスダック": {
@@ -356,9 +356,9 @@
         "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "たばたの投資ch",
           "優待ライダー",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "たばたの投資ch"
         ]
       },
       "トヨタ": {
@@ -372,8 +372,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
           "トレードラボ",
+          "株リアルライブ",
           "優待ライダー"
         ]
       },
