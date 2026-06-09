@@ -5,42 +5,35 @@
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 4,
       "sources": 2
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "ドル円",
+      "word": "円高",
       "size": "md",
-      "mood": "fear",
+      "mood": "calm",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "円高",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "日銀",
-      "size": "sm",
+      "size": "md",
       "mood": "calm",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "ドル円",
       "size": "sm",
-      "mood": "greed",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -48,10 +41,10 @@
   "institutional": [
     {
       "word": "半導体",
-      "size": "xl",
+      "size": "lg",
       "mood": "calm",
-      "count": 6,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "高配当",
