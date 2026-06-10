@@ -1,6 +1,6 @@
 {
   "date": "2026-06-10",
-  "collected_at": "2026-06-10 12:40",
+  "collected_at": "2026-06-10 23:01",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -284,24 +284,24 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "日経先物は1200円安。米軍がイランへの空爆再開",
-      "video_url": "https://www.youtube.com/watch?v=uC8y8MBpb34",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物は1200円安。米軍がイランへの空爆再開",
-      "video_url": "https://www.youtube.com/watch?v=uC8y8MBpb34",
+      "video_title": "日銀利上げ1.0%へ！それでも円安が進む理由",
+      "video_url": "https://www.youtube.com/watch?v=50LNdQyHoGs",
       "topic": "円安",
       "category": "macro",
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日銀利上げ1.0%へ！それでも円安が進む理由",
+      "video_url": "https://www.youtube.com/watch?v=50LNdQyHoGs",
+      "topic": "日銀",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日銀"
     }
   ],
   "summary": {
@@ -348,16 +348,16 @@
         "count": 5,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "優待ライダー"
+          "優待ライダー",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -382,9 +382,10 @@
         ]
       },
       "日銀": {
-        "count": 2,
+        "count": 3,
         "sentiment": "neutral",
         "sources": [
+          "たばたの投資ch",
           "Sho's投資情報局"
         ]
       },
@@ -406,8 +407,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "NVIDIA": {
@@ -415,13 +416,6 @@
         "sentiment": "bullish",
         "sources": [
           "トレードラボ"
-        ]
-      },
-      "日経": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
         ]
       },
       "円安": {
@@ -437,13 +431,12 @@
       "半導体",
       "高配当",
       "ナスダック",
-      "円高",
       "日銀",
+      "円高",
       "任天堂",
       "ドル円",
       "トヨタ",
       "NVIDIA",
-      "日経",
       "円安"
     ]
   }

@@ -17,14 +17,14 @@
       "sources": 1
     },
     {
-      "word": "円高",
-      "size": "md",
+      "word": "日銀",
+      "size": "lg",
       "mood": "calm",
-      "count": 2,
-      "sources": 1
+      "count": 3,
+      "sources": 2
     },
     {
-      "word": "日銀",
+      "word": "円高",
       "size": "md",
       "mood": "calm",
       "count": 2,
@@ -34,13 +34,6 @@
       "word": "ドル円",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     },
