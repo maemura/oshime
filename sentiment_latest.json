@@ -1,44 +1,65 @@
 {
-  "date": "2026-06-10",
+  "date": "2026-06-11",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "fear",
-      "count": 5,
+      "count": 4,
       "sources": 2
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "calm",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "日銀",
+      "word": "ドル円",
       "size": "lg",
-      "mood": "calm",
+      "mood": "fear",
       "count": 3,
       "sources": 2
     },
     {
       "word": "円高",
-      "size": "md",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
-      "word": "ドル円",
+      "word": "日銀",
       "size": "sm",
-      "mood": "fear",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ダウ",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },
     {
       "word": "円安",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "トランプ",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -63,14 +84,14 @@
   ],
   "retail": [
     {
-      "word": "任天堂",
-      "size": "md",
+      "word": "トヨタ",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
-      "word": "トヨタ",
+      "word": "任天堂",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -80,6 +101,13 @@
       "word": "NVIDIA",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ソニー",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
