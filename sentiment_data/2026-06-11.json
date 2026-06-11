@@ -1,10 +1,10 @@
 {
   "date": "2026-06-11",
-  "collected_at": "2026-06-11 12:58",
+  "collected_at": "2026-06-11 23:00",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 28,
+  "entry_count": 24,
   "entries": [
     {
       "source": "youtube",
@@ -250,50 +250,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物1700円安。ダウ5万ドル割れ 「インフレ大好き」トランプ発言",
-      "video_url": "https://www.youtube.com/watch?v=vOyNshrROYw",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物1700円安。ダウ5万ドル割れ 「インフレ大好き」トランプ発言",
-      "video_url": "https://www.youtube.com/watch?v=vOyNshrROYw",
-      "topic": "ダウ",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ダウ"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物1700円安。ダウ5万ドル割れ 「インフレ大好き」トランプ発言",
-      "video_url": "https://www.youtube.com/watch?v=vOyNshrROYw",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物1700円安。ダウ5万ドル割れ 「インフレ大好き」トランプ発言",
-      "video_url": "https://www.youtube.com/watch?v=vOyNshrROYw",
-      "topic": "トランプ",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: トランプ"
-    },
-    {
-      "source": "youtube",
       "channel": "STOCKVOICE",
       "video_title": "ドル円じり高、イラン情勢や日米金融政策の焦点は？【FXフォーカス】 6月11日 ソニーフィナンシャルグループ 石川久美子さん",
       "video_url": "https://www.youtube.com/watch?v=B0o7qn85KOQ",
@@ -359,8 +315,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
@@ -429,34 +385,6 @@
           "トレードラボ"
         ]
       },
-      "日経": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "ダウ": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "円安": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "トランプ": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
       "ソニー": {
         "count": 1,
         "sentiment": "neutral",
@@ -476,10 +404,6 @@
       "トヨタ",
       "任天堂",
       "NVIDIA",
-      "日経",
-      "ダウ",
-      "円安",
-      "トランプ",
       "ソニー"
     ]
   }
