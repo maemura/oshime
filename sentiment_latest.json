@@ -1,13 +1,13 @@
 {
-  "date": "2026-06-11",
+  "date": "2026-06-12",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "size": "xl",
+      "mood": "calm",
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ナスダック",
@@ -21,20 +21,6 @@
       "size": "lg",
       "mood": "fear",
       "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "円高",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日銀",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
       "sources": 1
     }
   ],
@@ -54,34 +40,5 @@
       "sources": 2
     }
   ],
-  "retail": [
-    {
-      "word": "トヨタ",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "任天堂",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "NVIDIA",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ソニー",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    }
-  ]
+  "retail": []
 }

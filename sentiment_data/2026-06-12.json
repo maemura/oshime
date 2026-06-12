@@ -1,0 +1,307 @@
+{
+  "date": "2026-06-12",
+  "collected_at": "2026-06-12 12:39",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 19,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場‼】日経平均爆上げでAI半導体強い。日本株踏み上げ相場続くか。ドル円160円。米国、ナスダック、SOX指数どうなる。仮想通貨BTC",
+      "video_url": "https://www.youtube.com/watch?v=WJ7zatlTScM",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場‼】日経平均爆上げでAI半導体強い。日本株踏み上げ相場続くか。ドル円160円。米国、ナスダック、SOX指数どうなる。仮想通貨BTC",
+      "video_url": "https://www.youtube.com/watch?v=WJ7zatlTScM",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場‼】日経平均爆上げでAI半導体強い。日本株踏み上げ相場続くか。ドル円160円。米国、ナスダック、SOX指数どうなる。仮想通貨BTC",
+      "video_url": "https://www.youtube.com/watch?v=WJ7zatlTScM",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場‼】日経平均爆上げでAI半導体強い。日本株踏み上げ相場続くか。ドル円160円。米国、ナスダック、SOX指数どうなる。仮想通貨BTC",
+      "video_url": "https://www.youtube.com/watch?v=WJ7zatlTScM",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】海外投資家が日本株を5726億円売却‼日経平均大荒れでAI半導体株の崩壊来るか⁉スペースX上場、SQ警戒。ドル円160円。米国、ナスダック、SOX指数急",
+      "video_url": "https://www.youtube.com/watch?v=cdWuOb-9acw",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】海外投資家が日本株を5726億円売却‼日経平均大荒れでAI半導体株の崩壊来るか⁉スペースX上場、SQ警戒。ドル円160円。米国、ナスダック、SOX指数急",
+      "video_url": "https://www.youtube.com/watch?v=cdWuOb-9acw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】海外投資家が日本株を5726億円売却‼日経平均大荒れでAI半導体株の崩壊来るか⁉スペースX上場、SQ警戒。ドル円160円。米国、ナスダック、SOX指数急",
+      "video_url": "https://www.youtube.com/watch?v=cdWuOb-9acw",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】海外投資家が日本株を5726億円売却‼日経平均大荒れでAI半導体株の崩壊来るか⁉スペースX上場、SQ警戒。ドル円160円。米国、ナスダック、SOX指数急",
+      "video_url": "https://www.youtube.com/watch?v=cdWuOb-9acw",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【CPI発表。日本株動くぞ‼】日経平均大暴落来るか。AI半導体株暴落続く。スペースX上場、SQ警戒。ドル円160円。米国、ナスダック、SOX指数大暴落。仮想通貨",
+      "video_url": "https://www.youtube.com/watch?v=zYYcPiin1R8",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【CPI発表。日本株動くぞ‼】日経平均大暴落来るか。AI半導体株暴落続く。スペースX上場、SQ警戒。ドル円160円。米国、ナスダック、SOX指数大暴落。仮想通貨",
+      "video_url": "https://www.youtube.com/watch?v=zYYcPiin1R8",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【CPI発表。日本株動くぞ‼】日経平均大暴落来るか。AI半導体株暴落続く。スペースX上場、SQ警戒。ドル円160円。米国、ナスダック、SOX指数大暴落。仮想通貨",
+      "video_url": "https://www.youtube.com/watch?v=zYYcPiin1R8",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【CPI発表。日本株動くぞ‼】日経平均大暴落来るか。AI半導体株暴落続く。スペースX上場、SQ警戒。ドル円160円。米国、ナスダック、SOX指数大暴落。仮想通貨",
+      "video_url": "https://www.youtube.com/watch?v=zYYcPiin1R8",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "いよいよ、今夜！６月株式分割が新登場。神戸物産増益。三井ハイテック上方修正。HIS赤字。サムコ上方～あす上がる株　2026年６月１５日（月）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=LZegqOqwhUo",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "キオクシアが時価総額１位に。宇宙関連株が急騰。MacbeePlanet急落。ビジョナル急落。2026年６月１２日（金）～明日上がる株最新の日本株情報。高配当株の",
+      "video_url": "https://www.youtube.com/watch?v=jOFVBhKUMh4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "フジクラ半値。ＡＮＹＣＯＬＯＲストップ安。マルマエ上方修正・増配。アサヒ下方修正。ビジョナル増益。～あす上がる株　2026年６月１２日（金）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=Rpx874i6Gas",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均の乱高下がエグい！CPI発表でハイテク株は反発できるのか",
+      "video_url": "https://www.youtube.com/watch?v=xFZpePKPGe0",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【好機】6月高配当株、1つだけ買うならこの銘柄",
+      "video_url": "https://www.youtube.com/watch?v=xXFPEu14h8c",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "半導体暴落中だがお金は減らず！最強奪還銘柄も",
+      "video_url": "https://www.youtube.com/watch?v=uz5saT9rQGA",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "日経平均8万円へ!?  スペースX驚愕のIPO上場【ゲスト】 6月12日 いちよし証券 持田真樹さん",
+      "video_url": "https://www.youtube.com/watch?v=RdP7nSUtK2I",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 0,
+        "bear": 8
+      },
+      "株リアルライブ": {
+        "bull": 3,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 1,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 1,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 1
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 5,
+        "sentiment": "neutral",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "STOCKVOICE",
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 4,
+        "sentiment": "bearish",
+        "sources": [
+          "優待ライダー",
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "トレードラボ"
+        ]
+      }
+    },
+    "hot_words": [
+      "日経平均",
+      "半導体",
+      "高配当",
+      "ナスダック",
+      "ドル円"
+    ]
+  }
+}
