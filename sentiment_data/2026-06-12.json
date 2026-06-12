@@ -1,6 +1,6 @@
 {
   "date": "2026-06-12",
-  "collected_at": "2026-06-12 12:39",
+  "collected_at": "2026-06-12 22:52",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -260,17 +260,17 @@
         "count": 5,
         "sentiment": "neutral",
         "sources": [
+          "Sho's投資情報局",
           "ひげづら株ちゃんねる",
-          "STOCKVOICE",
-          "Sho's投資情報局"
+          "STOCKVOICE"
         ]
       },
       "半導体": {
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "優待ライダー",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "優待ライダー"
         ]
       },
       "ナスダック": {
@@ -291,8 +291,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "トレードラボ"
+          "トレードラボ",
+          "株リアルライブ"
         ]
       }
     },
