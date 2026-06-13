@@ -1,6 +1,6 @@
 {
   "date": "2026-06-13",
-  "collected_at": "2026-06-13 11:26",
+  "collected_at": "2026-06-13 22:33",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -229,13 +229,13 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
-      "video_title": "半導体暴落中だがお金は減らず！最強奪還銘柄も",
-      "video_url": "https://www.youtube.com/watch?v=uz5saT9rQGA",
-      "topic": "半導体",
+      "video_title": "立会外分売で株価暴落中！注目高配当優待",
+      "video_url": "https://www.youtube.com/watch?v=vpzuXg71Awo",
+      "topic": "高配当",
       "category": "sector",
       "sentiment": "bearish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -315,17 +315,16 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
+          "Sho's投資情報局",
           "STOCKVOICE",
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
-        "count": 4,
-        "sentiment": "bearish",
+        "count": 3,
+        "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
-          "優待ライダー"
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -336,12 +335,13 @@
         ]
       },
       "高配当": {
-        "count": 6,
+        "count": 7,
         "sentiment": "bullish",
         "sources": [
+          "株リアルライブ",
           "トレードラボ",
           "Sho's投資情報局",
-          "株リアルライブ"
+          "優待ライダー"
         ]
       },
       "ドル円": {

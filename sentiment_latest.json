@@ -36,15 +36,15 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
-      "sources": 3
+      "count": 7,
+      "sources": 4
     },
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "銀行",
