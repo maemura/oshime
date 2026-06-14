@@ -1,0 +1,451 @@
+{
+  "date": "2026-06-14",
+  "collected_at": "2026-06-14 11:38",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 29,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=e0GIevhMqqM",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=e0GIevhMqqM",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=e0GIevhMqqM",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=e0GIevhMqqM",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=e0GIevhMqqM",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=e0GIevhMqqM",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=yarKqXHU-U0",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=yarKqXHU-U0",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=yarKqXHU-U0",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=yarKqXHU-U0",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=yarKqXHU-U0",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場で日経平均爆上げ再始動⁉】資金逆流で日本株空売り勢木端微塵‼AI半導体強い。金利低下で高配当株も上昇。ドル円160円。米国、ナスダック、SOX指",
+      "video_url": "https://www.youtube.com/watch?v=yarKqXHU-U0",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場‼】日経平均爆上げでAI半導体強い。日本株踏み上げ相場続くか。ドル円160円。米国、ナスダック、SOX指数どうなる。仮想通貨BTC",
+      "video_url": "https://www.youtube.com/watch?v=WJ7zatlTScM",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場‼】日経平均爆上げでAI半導体強い。日本株踏み上げ相場続くか。ドル円160円。米国、ナスダック、SOX指数どうなる。仮想通貨BTC",
+      "video_url": "https://www.youtube.com/watch?v=WJ7zatlTScM",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場‼】日経平均爆上げでAI半導体強い。日本株踏み上げ相場続くか。ドル円160円。米国、ナスダック、SOX指数どうなる。仮想通貨BTC",
+      "video_url": "https://www.youtube.com/watch?v=WJ7zatlTScM",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【スペースX上場‼】日経平均爆上げでAI半導体強い。日本株踏み上げ相場続くか。ドル円160円。米国、ナスダック、SOX指数どうなる。仮想通貨BTC",
+      "video_url": "https://www.youtube.com/watch?v=WJ7zatlTScM",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "あす半導体を中心に上げそうではあるが。あす急落しそうな３銘柄。米国で宇宙関連株ボロ下げ。好決算でまだ急落中の銘柄。６月１４日:日曜版～あす上がる株。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=AKLC610_gYU",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "あす半導体を中心に上げそうではあるが。あす急落しそうな３銘柄。米国で宇宙関連株ボロ下げ。好決算でまだ急落中の銘柄。６月１４日:日曜版～あす上がる株。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=AKLC610_gYU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "昨夜19:30にTOB発表。７月の株式分割と高配当株。スペースX上場結果。アンソロピック供給停止。６月１３日:土曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=hdjsT1C_unw",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "いよいよ、今夜！６月株式分割が新登場。神戸物産増益。三井ハイテック上方修正。HIS赤字。サムコ上方～あす上がる株　2026年６月１５日（月）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=LZegqOqwhUo",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均の乱高下がエグい！CPI発表でハイテク株は反発できるのか",
+      "video_url": "https://www.youtube.com/watch?v=xFZpePKPGe0",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "高配当株の下落をチャンスに変える！「底打ちサイン」3選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=xIDOqi2eXIQ",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "今の高配当株は静観！仕込むのは○○が起きてからです#shorts",
+      "video_url": "https://www.youtube.com/watch?v=sUIlCYbAxh0",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "急落するなら権利直前取り厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=foLrJXgYYIY",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "立会外分売で株価暴落中！注目高配当優待",
+      "video_url": "https://www.youtube.com/watch?v=vpzuXg71Awo",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "株価40％下落 SBI新生銀行 なぜ？",
+      "video_url": "https://www.youtube.com/watch?v=UMdUmn3F1Mk",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "好業績なのに株価急落？SBI新生銀行・ソニーFG・楽天銀行に何が起きているのか",
+      "video_url": "https://www.youtube.com/watch?v=cFk4xQKj2DM",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "好業績なのに株価急落？SBI新生銀行・ソニーFG・楽天銀行に何が起きているのか",
+      "video_url": "https://www.youtube.com/watch?v=cFk4xQKj2DM",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "日経平均8万円へ!?  スペースX驚愕のIPO上場【ゲスト】 6月12日 いちよし証券 持田真樹さん",
+      "video_url": "https://www.youtube.com/watch?v=RdP7nSUtK2I",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 12,
+        "bear": 0
+      },
+      "株リアルライブ": {
+        "bull": 4,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 1,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 2,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 1
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 3
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "STOCKVOICE",
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 8,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ",
+          "株リアルライブ",
+          "優待ライダー",
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "金利": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "決算": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "銀行": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "日経平均",
+      "半導体",
+      "ナスダック",
+      "ドル円",
+      "金利",
+      "銀行",
+      "決算",
+      "ソニー"
+    ]
+  }
+}
