@@ -1,10 +1,10 @@
 {
   "date": "2026-06-14",
-  "collected_at": "2026-06-14 11:38",
+  "collected_at": "2026-06-14 22:37",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 29,
+  "entry_count": 32,
   "entries": [
     {
       "source": "youtube",
@@ -283,6 +283,39 @@
     },
     {
       "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "Anthropic「Claude Fable 5」停止命令！日経への影響はあるの！？",
+      "video_url": "https://www.youtube.com/watch?v=bFLjTklQgEY",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経先物1300円アゲで67400円！イラン停戦でハッピーマンデーくる！？それとも日銀利上げで！？　日曜夜も株ライブ",
+      "video_url": "https://www.youtube.com/watch?v=eOCj0kxuUWI",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経先物1300円アゲで67400円！イラン停戦でハッピーマンデーくる！？それとも日銀利上げで！？　日曜夜も株ライブ",
+      "video_url": "https://www.youtube.com/watch?v=eOCj0kxuUWI",
+      "topic": "日銀",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日銀"
+    },
+    {
+      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "株価40％下落 SBI新生銀行 なぜ？",
       "video_url": "https://www.youtube.com/watch?v=UMdUmn3F1Mk",
@@ -370,8 +403,8 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "ひげづら株ちゃんねる",
           "STOCKVOICE",
+          "ひげづら株ちゃんねる",
           "Sho's投資情報局"
         ]
       },
@@ -421,6 +454,20 @@
           "株リアルライブ"
         ]
       },
+      "日経": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "日銀": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
       "銀行": {
         "count": 2,
         "sentiment": "bearish",
@@ -443,8 +490,10 @@
       "ナスダック",
       "ドル円",
       "金利",
+      "日経",
       "銀行",
       "決算",
+      "日銀",
       "ソニー"
     ]
   }
