@@ -1,10 +1,10 @@
 {
   "date": "2026-06-15",
-  "collected_at": "2026-06-15 15:25",
+  "collected_at": "2026-06-15 23:13",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 38,
+  "entry_count": 37,
   "entries": [
     {
       "source": "youtube",
@@ -338,17 +338,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経平均3千円バク上げで7万円まで残りわずか！日経は今から買えるか？長期で考えてみた。",
-      "video_url": "https://www.youtube.com/watch?v=S_K20jeZF0I",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "株価25％下落 ソニーFG なぜ？",
       "video_url": "https://www.youtube.com/watch?v=J7N_FVWgn8M",
@@ -466,22 +455,21 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 5,
+        "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch",
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
         "count": 6,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー",
+          "Sho's投資情報局",
           "トレードラボ",
-          "Sho's投資情報局"
+          "優待ライダー",
+          "株リアルライブ"
         ]
       },
       "ナスダック": {
@@ -495,18 +483,18 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "STOCKVOICE",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "STOCKVOICE"
         ]
       },
       "高配当": {
         "count": 8,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー",
+          "Sho's投資情報局",
           "トレードラボ",
-          "Sho's投資情報局"
+          "優待ライダー",
+          "株リアルライブ"
         ]
       },
       "金利": {
@@ -520,8 +508,8 @@
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー"
+          "優待ライダー",
+          "株リアルライブ"
         ]
       },
       "決算": {
@@ -535,8 +523,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "トレードラボ",
           "STOCKVOICE",
+          "トレードラボ",
           "つばめ投資顧問"
         ]
       },
