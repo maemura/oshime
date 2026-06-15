@@ -1,176 +1,337 @@
 {
   "date": "2026-06-15",
-  "updated_at": "2026-06-15 07:12 JST",
-  "note_trends": [],
+  "updated_at": "2026-06-15 23:59 JST",
+  "note_trends": [
+    {
+      "title": "6/15コロガシ競艇予想📝本日の的中📝",
+      "author": "競艇予想🚬艇道のマサル",
+      "likes": 5,
+      "price": 0,
+      "tag": "高配当",
+      "url": "https://note.com/ripe_heron5746/n/nc6a9e9c0bb33"
+    },
+    {
+      "title": "《今日の新NISA》6/15の報告",
+      "author": "yumika | ふたり暮らし | 旅・投資・家計",
+      "likes": 5,
+      "price": 0,
+      "tag": "高配当",
+      "url": "https://note.com/yumika_room/n/n5bc3b000fff2"
+    },
+    {
+      "title": "新高値ブレイク投資術との出会い　～目から鱗の驚くべき投資手法～",
+      "author": "株パパ　Ι　新高値ブレイク投資でFIREを目指す日記",
+      "likes": 3,
+      "price": 0,
+      "tag": "日経平均",
+      "url": "https://note.com/mj0810/n/n50e5b8ee6b2e"
+    },
+    {
+      "title": "【今日の〆】イラン情勢緊張緩和で大幅高",
+      "author": "trader_hiro@入金力14万（VTI・BTC・FX・",
+      "likes": 3,
+      "price": 50000,
+      "tag": "日経平均",
+      "url": "https://note.com/trader_hiro/n/nbc4039525848"
+    },
+    {
+      "title": "6/15🎯競艇予想コロガシ的中報告🎯",
+      "author": "コロガシ競艇予想🍸めあり🍸",
+      "likes": 3,
+      "price": 0,
+      "tag": "高配当",
+      "url": "https://note.com/sougof1456/n/n1acb2ed0489f"
+    },
+    {
+      "title": "【株式投資】資産がドンドン増える億トレーダーのある手法をここだけで大暴露！",
+      "author": "ヴィトン＠自由に稼ぐ投資家",
+      "likes": 2,
+      "price": 2999,
+      "tag": "株式投資",
+      "url": "https://note.com/literacy88/n/n04672d5868aa"
+    },
+    {
+      "title": "2026年6月16日の売買銘柄",
+      "author": "決算太郎@だれでも一緒に実践できる投資戦略",
+      "likes": 1,
+      "price": 0,
+      "tag": "日本株",
+      "url": "https://note.com/kessantaro/n/nd69b37fd1f27"
+    },
+    {
+      "title": "株で1日3,000円稼ぎたい人が、最初に考えるべきこと",
+      "author": "株の勝ち方を考えるnote",
+      "likes": 1,
+      "price": 0,
+      "tag": "日本株",
+      "url": "https://note.com/kabu_kachi/n/neafb1f2f496e"
+    },
+    {
+      "title": "令和２年度（第43回） エネルギー管理士研修試験・回答集",
+      "author": "SohanX",
+      "likes": 1,
+      "price": 980,
+      "tag": "株式投資",
+      "url": "https://note.com/gay_kiwi3705/n/n53a5d9f813f7"
+    },
+    {
+      "title": "【こっちがかなりお得】この通り実践するだけ！あなたの収入が劇的に増える株式投資手法が全部詰まったマガジンが大好評！！",
+      "author": "ヴィトン＠自由に稼ぐ投資家",
+      "likes": 1,
+      "price": 100,
+      "tag": "株式投資",
+      "url": "https://note.com/literacy88/n/n925f8cb7b52e"
+    },
+    {
+      "title": "【勝率爆上げ】株式投資で安定的に毎月25万円を実現できるスイングトレードの賢い戦略と手法",
+      "author": "ヴィトン＠自由に稼ぐ投資家",
+      "likes": 1,
+      "price": 2999,
+      "tag": "株式投資",
+      "url": "https://note.com/literacy88/n/nfa34706c9b48"
+    },
+    {
+      "title": "【勝ちトレーダーの裏技】株式投資で毎日コツコツ10000円を安定して実現できる方法〜脱サラも目指せる〜",
+      "author": "ヴィトン＠自由に稼ぐ投資家",
+      "likes": 1,
+      "price": 2999,
+      "tag": "株式投資",
+      "url": "https://note.com/literacy88/n/nb55b32515e1a"
+    },
+    {
+      "title": "世界が変わったのか、私が変わったのか",
+      "author": "梟商会　一恵さん",
+      "likes": 1,
+      "price": 0,
+      "tag": "日経平均",
+      "url": "https://note.com/fukuro_shokai/n/ncec64e830746"
+    },
+    {
+      "title": "【6月16日(火)】明日のデイトレ注目3銘柄｜アドバンテスト・東京エレクトロン・三菱重工",
+      "author": "【パッと見】デイトレ戦略と決算図解",
+      "likes": 1,
+      "price": 500,
+      "tag": "日経平均",
+      "url": "https://note.com/tasty_cedum8588/n/n75e440bdbc66"
+    },
+    {
+      "title": "【無料公開中】6/15　「業績相場」の銘柄にも明らかに資金流入",
+      "author": "相場サイクル論で考える新時代と日本株【うらはな】",
+      "likes": 1,
+      "price": 0,
+      "tag": "日経平均",
+      "url": "https://note.com/n_kabu/n/n0b03c071cfdd"
+    },
+    {
+      "title": "【2026年6月15日】日経平均が史上最高値更新！次は7万円時代へ？",
+      "author": "vanc space",
+      "likes": 1,
+      "price": 0,
+      "tag": "日経平均",
+      "url": "https://note.com/vancx/n/nb4205c60d778"
+    },
+    {
+      "title": "06/16【常滑】1〜5R予想パック🔥神6点絞り🔥🚨1R・4R激アツ警報🚨鉄則の絞り×神舟券🎯🎯",
+      "author": "GOD【競艇パック予想】",
+      "likes": 1,
+      "price": 777,
+      "tag": "高配当",
+      "url": "https://note.com/kamashi_0218/n/nfcbb2dcc7e61"
+    },
+    {
+      "title": "6月15日(月)✨️🎯的中報告🎯♡",
+      "author": "♡コロガシ競艇予想かすみ♡",
+      "likes": 1,
+      "price": 0,
+      "tag": "高配当",
+      "url": "https://note.com/kasumi_korogashi/n/n00422d4a7461"
+    },
+    {
+      "title": "🗓️6/15 🌼的中報告📝🌼",
+      "author": "🌻競艇コロガシ専門家🌻 LaLa（ララ）",
+      "likes": 1,
+      "price": 0,
+      "tag": "高配当",
+      "url": "https://note.com/lalanot1/n/nbf223d4ae2f4"
+    },
+    {
+      "title": "【決算分析】パーク２４株式会社（4666）2026年10月期 第２四半期（中間期）決算短信〔日本基準〕（連結）",
+      "author": "かぶばけ",
+      "likes": 0,
+      "price": 0,
+      "tag": "日本株",
+      "url": "https://note.com/kabubake/n/n030c5da1dd3a"
+    }
+  ],
   "nikkei_headlines": [
     {
       "category": "総合",
-      "title": "米中西部ミズーリ州で航空機が墜落、乗客・乗員12人が死亡",
-      "url": "https://www.nikkei.com/article/DGXZQOGN142GW0U6A610C2000000/",
-      "date": "2026-06-15T05:11:07+09:00"
+      "title": "国旗損壊罪、SNS投稿を対象外に　自民が法案修正で野党と提出めざす",
+      "url": "https://www.nikkei.com/article/DGXZQOUA15AGM0V10C26A6000000/",
+      "date": "2026-06-15T23:09:33+09:00"
     },
     {
       "category": "総合",
-      "title": "トランプ氏、合意前にレバノン攻撃のイスラエルに激怒　イラン態度硬化",
-      "url": "https://www.nikkei.com/article/DGXZQOGN142CD0U6A610C2000000/",
-      "date": "2026-06-15T05:10:49+09:00"
+      "title": "神奈川の女子生徒殺害、死因は窒息死　TikTokで交際発展か",
+      "url": "https://www.nikkei.com/article/DGXZQOUD156T10V10C26A6000000/",
+      "date": "2026-06-15T22:39:07+09:00"
     },
     {
       "category": "総合",
-      "title": "【速報中】サッカー日本vsオランダ　久保建英・前田大然ら先発",
-      "url": "https://www.nikkei.com/article/DGXZQODH140HG0U6A610C2000000/",
-      "date": "2026-06-15T05:07:09+09:00"
+      "title": "ロス五輪ボランティア、7月14日から募集開始　6万人規模",
+      "url": "https://www.nikkei.com/article/DGXZQOKC15AMA0V10C26A6000000/",
+      "date": "2026-06-15T22:27:50+09:00"
     },
     {
       "category": "総合",
-      "title": "精密板金加工の芝原工業が新工場　供給力1.5倍､溶接技術共有しやすく",
-      "url": "https://www.nikkei.com/article/DGXZQOCC28CRU0Y6A520C2000000/",
-      "date": "2026-06-15T05:00:00+09:00"
+      "title": "立憲民主党支援の労働組合、中道合流巡り早期の協議要求",
+      "url": "https://www.nikkei.com/article/DGXZQOUA15A080V10C26A6000000/",
+      "date": "2026-06-15T22:05:10+09:00"
     },
     {
       "category": "総合",
-      "title": "米年収3200万円の「FDE」 、AI時代の新花形職種が映す課題",
-      "url": "https://www.nikkei.com/article/DGXZQOCD11BKW0R10C26A6000000/",
-      "date": "2026-06-15T05:00:00+09:00"
+      "title": "日軽金と神戸製鋼、アルミ押し出し材事業を統合へ　27年4月以降",
+      "url": "https://www.nikkei.com/article/DGXZQOUC155V00V10C26A6000000/",
+      "date": "2026-06-15T22:04:02+09:00"
     },
     {
       "category": "国際",
-      "title": "米中西部ミズーリ州で航空機が墜落、乗客・乗員12人が死亡",
-      "url": "https://www.nikkei.com/article/DGXZQOGN142GW0U6A610C2000000/",
-      "date": "2026-06-15T05:11:07+09:00"
+      "title": "日本・イタリア、米イランの合意履行へ連携　経済安保協力も確認",
+      "url": "https://www.nikkei.com/article/DGXZQOUA1337C0T10C26A6000000/",
+      "date": "2026-06-15T21:20:01+09:00"
     },
     {
       "category": "国際",
-      "title": "トランプ氏、合意前にレバノン攻撃のイスラエルに激怒　イラン態度硬化",
-      "url": "https://www.nikkei.com/article/DGXZQOGN142CD0U6A610C2000000/",
-      "date": "2026-06-15T05:10:49+09:00"
+      "title": "米イラン、戦闘終結の覚書合意　署名後に60日間で核問題など協議へ",
+      "url": "https://www.nikkei.com/article/DGXZQODL151Q60V10C26A6000000/",
+      "date": "2026-06-15T20:44:27+09:00"
     },
     {
       "category": "国際",
-      "title": "タイのエビ業界、マレーシア禁輸が追い打ち",
-      "url": "https://www.nikkei.com/article/DGXZQOCB119U10R10C26A6000000/",
-      "date": "2026-06-15T05:00:00+09:00"
+      "title": "モンゴル外相「エネルギー自立高める」　日本と太陽光・風力で連携視野",
+      "url": "https://www.nikkei.com/article/DGXZQOGM153IQ0V10C26A6000000/",
+      "date": "2026-06-15T20:27:06+09:00"
     },
     {
       "category": "国際",
-      "title": "慶応大発のライフスケイプス、脳波リハビリ機器をアジア展開　6億円調達",
-      "url": "https://www.nikkei.com/article/DGXZQOUC119LQ0R10C26A6000000/",
-      "date": "2026-06-15T05:00:00+09:00"
+      "title": "台湾IT19社、5月38.4%増収　先端サーバー量産が押し上げ",
+      "url": "https://www.nikkei.com/article/DGXZQOGM119H20R10C26A6000000/",
+      "date": "2026-06-15T20:24:59+09:00"
     },
     {
       "category": "国際",
-      "title": "綱渡りの欧州航空燃料、米国産増でも足りず　秋から高値理由で減便も",
-      "url": "https://www.nikkei.com/article/DGXZQOGR158JW0V10C26A5000000/",
-      "date": "2026-06-15T05:00:00+09:00"
+      "title": "日英イタリア、戦闘機開発の官民契約にめど　BAEやレオナルド参画",
+      "url": "https://www.nikkei.com/article/DGXZQOUA12A4N0S6A610C2000000/",
+      "date": "2026-06-15T20:22:59+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "2026年1〜3月期のAIスタートアップの資金調達　25年通年上回る",
-      "url": "https://www.nikkei.com/article/DGXZQOUC081MY0Y6A600C2000000/",
-      "date": "2026-06-15T02:00:00+09:00"
+      "title": "ミュトス禁輸、開いたAI軍拡の「パンドラの箱」　核競争と相似形",
+      "url": "https://www.nikkei.com/article/DGXZQOUC154C20V10C26A6000000/",
+      "date": "2026-06-15T19:19:26+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "新しい言葉なぜ生まれる　若者に限らず中高年も先導、移民も影響",
-      "url": "https://www.nikkei.com/article/DGXZQOSG302PZ0Q6A430C2000000/",
-      "date": "2026-06-14T05:00:00+09:00"
+      "title": "北九州市、フィジカルAI都市へ始動　台湾系半導体設計が開発拠点",
+      "url": "https://www.nikkei.com/article/DGXZQOJC140JW0U6A610C2000000/",
+      "date": "2026-06-15T18:41:13+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "NVIDIAのCEO、日本を素通り　歴訪の韓台に劣るパートナーの魅力",
-      "url": "https://www.nikkei.com/article/DGXZQOGN091C60Z00C26A6000000/",
-      "date": "2026-06-14T05:00:00+09:00"
+      "title": "生成AIが業務時間16%削減、1日8時間勤務なら75分　マクロミル調べ",
+      "url": "https://www.nikkei.com/article/DGXZQOUC157DU0V10C26A6000000/",
+      "date": "2026-06-15T18:22:33+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "誤差は100億年に1秒の「光格子時計」発明　香取秀俊・東京大教授",
-      "url": "https://www.nikkei.com/article/DGXZQOSG0977R0Z00C26A6000000/",
-      "date": "2026-06-14T02:00:00+09:00"
+      "title": "JX金属、光通信の半導体材料を10倍に増産　AIデータ拠点の電力抑制",
+      "url": "https://www.nikkei.com/article/DGXZQOUC112I50R10C26A3000000/",
+      "date": "2026-06-15T18:00:00+09:00"
     },
     {
       "category": "テクノロジー",
-      "title": "AIが加速するナラティブの競争　認識の枠組み、絶えず検証を",
-      "url": "https://www.nikkei.com/article/DGXZQOSG2728Z0X20C26A5000000/",
-      "date": "2026-06-14T02:00:00+09:00"
+      "title": "ダイフクなど、自動運転協議会に参画　物流施設で実証",
+      "url": "https://www.nikkei.com/article/DGXZQOUC153YJ0V10C26A6000000/",
+      "date": "2026-06-15T14:42:18+09:00"
     }
   ],
   "fear_greed": {
-    "vix": 19.1,
-    "score": 50,
-    "rating": "Neutral",
-    "rating_jp": "中立"
+    "vix": 16.5,
+    "score": 70,
+    "rating": "Greed",
+    "rating_jp": "強欲"
   },
   "kabutan_news": [],
   "tradingview_signals": [
     {
       "code": "4676",
-      "score": 0.4,
-      "signal_jp": "買い",
+      "score": 0.536,
+      "signal_jp": "強い買い",
       "ma_score": 0.8,
-      "osc_score": 0
+      "osc_score": 0.273
     },
     {
       "code": "7270",
-      "score": -0.042,
-      "signal_jp": "中立",
-      "ma_score": -0.267,
-      "osc_score": 0.182
+      "score": 0.336,
+      "signal_jp": "買い",
+      "ma_score": 0.4,
+      "osc_score": 0.273
     },
     {
       "code": "4331",
-      "score": -0.309,
+      "score": -0.4,
       "signal_jp": "売り",
       "ma_score": -0.8,
-      "osc_score": 0.182
-    },
-    {
-      "code": "7172",
-      "score": -0.245,
-      "signal_jp": "売り",
-      "ma_score": -0.4,
-      "osc_score": -0.091
-    },
-    {
-      "code": "2181",
-      "score": -0.003,
-      "signal_jp": "中立",
-      "ma_score": 0.267,
-      "osc_score": -0.273
-    },
-    {
-      "code": "3668",
-      "score": -0.491,
-      "signal_jp": "売り",
-      "ma_score": -0.8,
-      "osc_score": -0.182
-    },
-    {
-      "code": "285A",
-      "score": 0.467,
-      "signal_jp": "買い",
-      "ma_score": 0.933,
       "osc_score": 0
     },
     {
+      "code": "7172",
+      "score": 0.333,
+      "signal_jp": "買い",
+      "ma_score": 0.667,
+      "osc_score": 0
+    },
+    {
+      "code": "2181",
+      "score": 0.267,
+      "signal_jp": "買い",
+      "ma_score": 0.533,
+      "osc_score": 0
+    },
+    {
+      "code": "3668",
+      "score": -0.467,
+      "signal_jp": "売り",
+      "ma_score": -0.933,
+      "osc_score": 0
+    },
+    {
+      "code": "285A",
+      "score": 0.603,
+      "signal_jp": "強い買い",
+      "ma_score": 0.933,
+      "osc_score": 0.273
+    },
+    {
       "code": "9984",
-      "score": 0.045,
-      "signal_jp": "中立",
-      "ma_score": 0,
-      "osc_score": 0.091
+      "score": 0.288,
+      "signal_jp": "買い",
+      "ma_score": 0.667,
+      "osc_score": -0.091
     },
     {
       "code": "7203",
-      "score": -0.218,
+      "score": -0.109,
       "signal_jp": "売り",
-      "ma_score": -0.8,
-      "osc_score": 0.364
+      "ma_score": -0.4,
+      "osc_score": 0.182
     },
     {
       "code": "8306",
-      "score": 0.491,
-      "signal_jp": "買い",
-      "ma_score": 0.8,
-      "osc_score": 0.182
+      "score": 0.648,
+      "signal_jp": "強い買い",
+      "ma_score": 0.933,
+      "osc_score": 0.364
     },
     {
       "code": "8035",
@@ -181,17 +342,24 @@
     },
     {
       "code": "9983",
-      "score": 0.467,
-      "signal_jp": "買い",
+      "score": 0.512,
+      "signal_jp": "強い買い",
       "ma_score": 0.933,
-      "osc_score": 0
+      "osc_score": 0.091
     },
     {
       "code": "8316",
-      "score": 0.603,
+      "score": 0.648,
       "signal_jp": "強い買い",
       "ma_score": 0.933,
-      "osc_score": 0.273
+      "osc_score": 0.364
+    },
+    {
+      "code": "6857",
+      "score": 0.558,
+      "signal_jp": "強い買い",
+      "ma_score": 0.933,
+      "osc_score": 0.182
     },
     {
       "code": "6501",
@@ -201,18 +369,11 @@
       "osc_score": 0.364
     },
     {
-      "code": "6857",
-      "score": 0.467,
-      "signal_jp": "買い",
-      "ma_score": 0.933,
-      "osc_score": 0
-    },
-    {
       "code": "6758",
-      "score": -0.603,
-      "signal_jp": "強い売り",
-      "ma_score": -0.933,
-      "osc_score": -0.273
+      "score": -0.309,
+      "signal_jp": "売り",
+      "ma_score": -0.8,
+      "osc_score": 0.182
     }
   ],
   "yahoo_board": [
@@ -241,82 +402,143 @@
       "error": "HTTP Error 403: Forbidden"
     }
   ],
-  "tdnet_disclosures": [],
+  "tdnet_disclosures": [
+    {
+      "title": "SAGLアドバイザーズ株式会社の株式取得による完全子会社に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260615571087.pdf"
+    },
+    {
+      "title": "（訂正）「2026年4月期（第23期）決算説明資料」の一部訂正について",
+      "url": "https://www.release.tdnet.info/inbs/140120260615571233.pdf"
+    },
+    {
+      "title": "2026年４月期決算短信［日本基準］（連結）",
+      "url": "https://www.release.tdnet.info/inbs/140120260615571175.pdf"
+    },
+    {
+      "title": "2026年４月期決算説明補足資料",
+      "url": "https://www.release.tdnet.info/inbs/140120260615571186.pdf"
+    },
+    {
+      "title": "剰余金の配当（増配）に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260615571262.pdf"
+    },
+    {
+      "title": "譲渡制限付株式報酬としての新株式発行に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260615570449.pdf"
+    },
+    {
+      "title": "（訂正・数値データ訂正）「2026年３月期 決算短信[日本基準]（連結）」の一部訂正について",
+      "url": "https://www.release.tdnet.info/inbs/140120260615570918.pdf"
+    },
+    {
+      "title": "子会社が保有する当社株式の取得に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260615570368.pdf"
+    },
+    {
+      "title": "（経過開示）持株会社体制への移行に伴う分割承継会社の商号決定、子会社の機関設計変更並びに代表取締役の異動を伴う役員体制に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260612569088.pdf"
+    },
+    {
+      "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260615570521.pdf"
+    },
+    {
+      "title": "杏林製薬株式会社との共同研究開発及び販売に関する契約に係るマイルストン達成のお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260615571147.pdf"
+    },
+    {
+      "title": "完全子会社間の合併に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260615570703.pdf"
+    },
+    {
+      "title": "2026年10月期 第２四半期（中間期）決算短信〔日本基準〕（連結）",
+      "url": "https://www.release.tdnet.info/inbs/140120260615571026.pdf"
+    },
+    {
+      "title": "2026年10月期　中間決算短信〔日本基準〕(非連結)",
+      "url": "https://www.release.tdnet.info/inbs/140120260615570337.pdf"
+    },
+    {
+      "title": "2026年10月期  中間決算短信〔日本基準〕（非連結）",
+      "url": "https://www.release.tdnet.info/inbs/140120260615570709.pdf"
+    }
+  ],
   "google_news": [
     {
-      "title": "本日の決算発表予定 … サンバイオ、テラドローン、パーク２４など 33社 (6月15日) - 株探",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1rXzM4amRTLW9UdzdDLUMzRFNwcGc0MXhfSkd1TDVXNkRRbjhxdVlXbGFadzlUVUVwRzVhRFo5ZXB5SUgzU25tc3d5eDd3WEplZ3R3WlVhb3dOX0NLTGtDRg?oc=5",
-      "published": "Sun, 14 Jun 2026 21:00:01 GMT"
+      "title": "日本株、高値波乱も「押し目は買い」。AIブームで日本の製造業に広がる恩恵（窪田真之） - トウシル",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBTMzRnR1pZWi1UN01JalpWVE54RlYzZDJsQ3VNUXNTZjJwSnh1dFpKX2tFYTUwcjZvMGU3Ty1xRVphVTdhVWR3YWZWYVNTMGJ4TDluQmxmZzVCUQ?oc=5",
+      "published": "Sun, 14 Jun 2026 23:00:00 GMT"
     },
     {
-      "title": "スペースX上場、波乱なく消化した米市場 日経平均は7万円再び視界に - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB0Xy1Bbmp6b1BHTnFzZ3JDS2dMTHR5cWpsdDVhYmtrYjVKZFJSNWpvY2k1cG1sQks0OWhTYldDSDREWk5QcUlocTRzZ3NoYVVQcFdYUkd6T0xVbG9zOTJjT25ad3hrR25xanNIeA?oc=5",
-      "published": "Sun, 14 Jun 2026 20:00:00 GMT"
+      "title": "【明日の好悪材料】を開示情報でチェック！ (6月15日発表分) - かぶたん",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBoVzN3Vy1xcUhZUVpGV0F4MUJIR3BZcDlRRUFpUnU0d09kMmdtaGVCMnl3MzRkWUUyNHNfbDkxOW1fSlJWV3Jab0paZm9aN2d4bTlLRDlnOGZYV3VBQlV6bA?oc=5",
+      "published": "Mon, 15 Jun 2026 11:00:00 GMT"
     },
     {
-      "title": "金利上昇で始まった「日本株の主役交代」に乗る方法 （藤村哲也 投資顧問助言業）（シェアーズカフェ・オンライン） - Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9McVgxLXVneE9iUUdadVYyX090OXoxOXVCNFdxMHE5cHNKWlVLV2ptbnJBT3RIVXB5UTU4MjBwYzFCVFJqQ3NROE1xaEVaeDRzVkVtS1pveDFxb0pIQ2p0cWV4X3NzMFlYVFQxLTFpdnBuRWJHZWQ3MDRyMlRLcm8?oc=5",
-      "published": "Sun, 14 Jun 2026 21:34:22 GMT"
+      "title": "キオクシア株価が上場来高値 半導体株高が追い風（15日の株式市場） - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9DWDA2MnBMWkdXeDltSTFUYjlqbVhHYUZpc0RUME5FTXdUTzRySTVuMVpYSXNnc3g0NzdDdDR1NjNoSERVeTNRU2xYYXFuR01hUGVKcXlIMW1KY293Mi11YTlLcXZfYk1uYnJjZg?oc=5",
+      "published": "Mon, 15 Jun 2026 07:30:00 GMT"
     },
     {
-      "title": "新NISAで迷ったら読む！日本株ETFと米国株ETF、初心者はどっち？ - ｄメニューニュース",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5KUmR4dEdRRGY5VkJlSHQ5OTI1TmhFbFotSS02bnpCUS1iSEFvM3JiZks3VTBLaXlpZUp1S2JDbGZGcGFYX0JNc0lJWTAxQjRFVEp6ME90ell5LXFxNTd3dnRsU1hKYkl5c3U2UTNiYUJGVW9GdmxyUzBR0gF_QVVfeXFMUElmcEVrNEFNUnJaQTFINXlFM19zZzE5aEJsX2xPdTR3TlpyNVhGLTFQNFo1a0pHREktSnBNUVExMElzYmllWmZ4U0t5RnJSWXlHZkJ0U3NtR2NsUHNXMk5Qd1RKcGRTQzlPTnRyeXFMakd5alJHLWVwdVpYSHJBMA?oc=5",
-      "published": "Sun, 14 Jun 2026 02:30:00 GMT"
+      "title": "【日本株】スペースXが米ナスダック上場！日本のオーナー企業で利益成長が堅調な10銘柄 - マネクリ",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE94NmtETy14OWpMa2s0ZVBfRHd3SXp4aTJCcUs3dUl3ZWRhTVNSWklLRTI3ZWtoUEVfM045UVlrVXk5MFNrZU12dzAwcEx6ZkdCSFpRUNIBV0FVX3lxTE10M1YxTG5GdlRYWVZHbXZXQVZZTlhHeTZJcTZHY1VpbHhPOGlVME1Idi1BNS1NOE85OEN5X2M5SFQ2V1B2UjB5MHI0R29QZHdabV9mYnlCRQ?oc=5",
+      "published": "Mon, 15 Jun 2026 04:22:15 GMT"
     },
     {
-      "title": "急騰する日本株、個人投資家はどう動いた？投資信託の資金流出入から迫る「強気」の真相【投資信託の最前線】 - ダイヤモンド・オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiTEFVX3lxTE1GUUEySjRQLXpfWEkxNm9ITVdPa0JlTl9DQWk2UElKQ0x6bXpyZ0pJRXUyN3JQZGhCT1Z6dEJUSF9icDZEMlBIeXJNbG8?oc=5",
-      "published": "Sat, 13 Jun 2026 12:00:00 GMT"
+      "title": "「株式」ADR日本株ランキング～全般買い優勢、シカゴは大阪日中比880円高の67270円(フィスコ) - Yahoo!ファイナンス",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOd3BGcWJUcno4YzFYOEVCTlFPcnJaYS12RTdlOG0xMlZ0QkFjZExqYjJEcTJNeVlFT2I1YmZ4RXpWZ3pzWUZRV240SGZpcERjNTBJMnBiWjdnWDU2YnZ3ckRhVHF1Vy0tempQU3Q1RUZudUZFQ25iRm5uZHc0Mk11dG9UTnc5NFk?oc=5",
+      "published": "Sun, 14 Jun 2026 23:00:00 GMT"
     },
     {
-      "title": "利益成長“青天井”銘柄リスト【総集編】第3弾 34社選出 ＜成長株特集＞ - 株探",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1qbHBMeWZLXzVOcXdPTmQ5RzBDbXZXVXRpZUROOWpLTjU1Vm9QTmF4ZW1UZXhTSFhBQ3hfS1d3NzBYZl9ERmJESTdlVHdZT1ZNWlVPY1lrdGRRQ0tNSFJ4Qg?oc=5",
-      "published": "Sun, 14 Jun 2026 10:30:00 GMT"
+      "title": "15日寄り付き直後の日本株は続伸､米イラン和平合意を好感 - 四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE14eXJINWZYaWc3NmNNbVZSUmZwMlR4MVUycDVEUVFCVUUyNnV2Zi0zNzBxQWMzVUhNcTVrOUhiUXZGVWl4cUFseVRJTkhicGw5WUl2c3AtQQ?oc=5",
+      "published": "Mon, 15 Jun 2026 01:00:00 GMT"
     },
     {
-      "title": "伊藤智洋が読むマーケット・シナリオ【週間展望】 6月14日版 - 株探",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBZcVY5Z3VmSFN3U21ZUlNRXzVzTU4yZXV5TVNJdXRHeUtVSEJ5by1qdVlORVA4NTBJZmlCMkxaRjNVTDZuUjdSS0YyOFpYa04zSUxrRXc1eGQyWks1Sndpaw?oc=5",
-      "published": "Sun, 14 Jun 2026 04:31:48 GMT"
+      "title": "今週は日銀決定会合＆米FOMC/キオクシアは9万円台乗せ/日経平均最高値【今日の注目株＆日本株市場見通し】「デイリーZAi」6月15日号 - ダイヤモンド・オン",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1mX1pfdDNPeWVFYmE2V1YzcVdYb21oT3I3UEs1Q1NfN0J5Q1ptQmEzSUJCT3BzamRfQWU2Sld1UGFfaS1DRXBsWkx3UGxNVkFxRURZ?oc=5",
+      "published": "Mon, 15 Jun 2026 10:00:00 GMT"
     },
     {
-      "title": "【明日の好悪材料】を開示情報でチェック！ (6月12日発表分) - 株探",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uakI4dGp2MWY0YXhoQ0xKYjA0d0VfcE5CZlVkWDVzZ0lsR0RoenRQUnFmcDM4a2VIYm1Td1REN2FqVEtKMkVuYUtQbVl6T1dDU2pDenFrbFhJcWVfQzdyMw?oc=5",
-      "published": "Sun, 14 Jun 2026 04:30:00 GMT"
+      "title": "急騰する日本株、個人投資家はどう動いた?投資信託の資金流出入から迫る「強気」の真相【投資信託の最前線】 - オリコンニュース",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE8ydHhkNUU0cmZRUG9CanVEaGhHY3BBTWF3VVgwTU44eTRRWEM5MER6cm9qbHd4RGt6TzRLSlVOeVRHYnFVS25Tcm9VVFFLVTBob2dF?oc=5",
+      "published": "Mon, 15 Jun 2026 12:00:00 GMT"
     },
     {
-      "title": "【高配当利回り株】ベスト50 ＜割安株特集＞ (6月12日現在) - 株探",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE91N196cUxuUUUxcnJ4a0dubE9lRm8wd0htWVdpZ3NrUnlza3VYWWVVajR0cmM2bWFXaFFwOHF5eElIS09OTldWVmE3UzFza0J2VDVfbzNsbzlKYUxOVmpqRw?oc=5",
-      "published": "Sun, 14 Jun 2026 01:10:00 GMT"
+      "title": "東京為替：ドル・円は小じっかり、日本株急伸で円安(フィスコ) - Yahoo!ファイナンス",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQa2J4ZUhWTzhnTFZtUXJlTjUzNWtrV3llZmxOSGlLZ3F3MkNueS11cnFVUGZyb0o4SGJOZDZlZ0NJN0M3SDcxbjdsa3g0NHVnckstUkZIbVhlRWdEQUwtSnlUMDhJaldSRE1abXJhYUhJa1I5ZXhaT01POWg0amRJSUJfRWpsbUU?oc=5",
+      "published": "Mon, 15 Jun 2026 03:11:00 GMT"
     },
     {
-      "title": "【北浜流一郎のズバリ株先見！】 ─ 将来保障で友にすべき「ハイクオリティ銘柄5選」！ - 株探",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5GSllEMmZDM3pJSmtFanlkMnZ0b09SeDhOOFZsajBST0lIX01xMUJEMGhURXlkd1BocXRjbVE2MkVWN3B3UllFVVJyb2NySnV3V1F5RUlIS1AwVnh0ZjdMdA?oc=5",
-      "published": "Sun, 14 Jun 2026 00:30:00 GMT"
+      "title": "東京為替：ドル・円は160円台、日本株は大幅高 - かぶたん",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1vbnZBcm1CVjRjN3VabjFKRnYwa2RWNFByVWFOdzZfdkktbWdMYURNUkxRNzBPYmpKRlk0Q2NRWDh4SV9JZ3FYUzctcXV5SVh0MXc?oc=5",
+      "published": "Mon, 15 Jun 2026 04:44:08 GMT"
     },
     {
-      "title": "日経平均大幅高もモメンタムはマイナス､今週の行方は？ - 四季報オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE9oSXN4OVRDLVZrYkxKd3RfZHdMTlROYWl1QThDaEV5MDJFdWZpVXFlVXNtX3pDYnZjczFkNWZhN1lZLTJlMkpSaHBzY19CS0tGcUM5UWM1dw?oc=5",
-      "published": "Sat, 13 Jun 2026 23:00:00 GMT"
+      "title": "明日の株式相場に向けて＝日経平均７万円射程、イラン和平実現で「ＡＩバブル」膨張へ - かぶたん",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5uR1hxaW9OYUFWMFJ3N2kyQUJ5dW13cW5IZGpnTzlGWG9HMl9TbHZBbDZYQkNvZjI0aWE4dS01LWhRdTk3cFlLLXlZUVlwSkR6ajR3YlVGR1ZtV0hrWjVndg?oc=5",
+      "published": "Mon, 15 Jun 2026 08:54:00 GMT"
     },
     {
-      "title": "【↑】日経平均 大引け｜ 大幅続伸、AI･半導体関連株が相場を牽引 (6月12日) - 株探",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFA3Z1J1MldxWDRxU0prZl9TcURfd3JNWnBlRzlUMzdaS2NqWG9ueVlHeE9UaTcwOW9rLXlGMjQ2NjZOUm91QVY5bVRfLVRwNndqVVV5VkN5R0Y1SkFHVm5pMw?oc=5",
-      "published": "Fri, 12 Jun 2026 07:36:47 GMT"
+      "title": "日経平均 史上初6万9000円台突入 - Yahoo!ニュース",
+      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5RX2JaaG5TNG9GcTRjOTFhczhZN24tWkFYWTU0dEMta2lPMjJOS19lNWxma2hBMXZfdnVaZzRleC1EbXRUb1I3cmtUZnhBRl9B?oc=5",
+      "published": "Mon, 15 Jun 2026 00:40:20 GMT"
     },
     {
-      "title": "シカゴ日経平均先物 大取終値比 1150円高 （6月12日）(株探ニュース) - Yahoo!ファイナンス",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPQkZFWU9sVkV2TTBPbnBwcS1iMkl0Q0hYZG52TmZqblFwelZfZUxzRGNaZk43YWZuUkRvT2tMMjNnQkFrMW1GcGJ2Y2ZRWTVYNnJvNkQzYkxKd1VzQjlfekJTUHN3Nm9CZ2RKN3RqS1J2bllRLUlOS25QOFYyOXRyV1N3NnNPOVk?oc=5",
-      "published": "Sun, 14 Jun 2026 21:58:00 GMT"
+      "title": "日経平均、上値余地残すも相場は重い？IPO銘柄の動向と日米金融イベントに注目 - トウシル",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBxWHlpZmpWWHRvaU04VjI1UXlLUUt6M1YxaW9sTEZEMnRya0ZMbjVIdG5WY0NYOHNMWjZvSXBDZml5dS1OdmZYUEkzRGc4SXEyRTl5aVVKWTUwUQ?oc=5",
+      "published": "Mon, 15 Jun 2026 03:40:00 GMT"
     },
     {
-      "title": "日経平均株価 終値1800円高の6万6000円台に 半導体メモリー大手「キオクシア」が初の時価総額首位 中東情勢への警戒感が和らぐ - TBS NEWS DIG",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFA4ajdEbGtyaHNyMlFYcVh6XzdhWXhMYUNDSklnU0FUUmRfanZncjlLRS1fVWN1WkhpRG13MVFaVFBCWjVPeVJMZWEtN05NS3NQOUhERThGNA?oc=5",
-      "published": "Fri, 12 Jun 2026 07:24:00 GMT"
+      "title": "「停戦合意」で日経平均が７万円に接近、上昇は続く？ - SBI証券",
+      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE96MnJhYmtabERaZjV6NG53WkVfXzNoRG0yWVItMzVmUGpHTk1BcGd5YXgyY0g1Nk8wc3NMQzVDQUNGZE44eXgyNnUtSmpIMGxtVHgtazNFTFFVNlFQS2IwYzJ4eEtrUUZaeE53YTQ1M1B3ZkIx?oc=5",
+      "published": "Mon, 15 Jun 2026 02:12:24 GMT"
     },
     {
-      "title": "日経平均、為替介入で急落リスクも 週次568円安 AIブームは一服？ - ig.com",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQUVYtcHhOTTRwSk0wclhvTFdDRy1obHUwc2J0U0Nla0gxZFZkLWt1eXZONjh4UHM5b21NT0ZIRDRnWDdVWFpfTVNWUDdEM3BRakZDRk10NGRQMGc3WWVLY2tmN2tqNGs3WHRJVG54Nzd6cFp1ZVJUNkd3ZXdfZ2h5LTdLa2s0M1lVNTcwbnZQaktlQnBkVnRacXlvaTBpekVGVWd6Sk5wazl1UQ?oc=5",
-      "published": "Sat, 13 Jun 2026 23:21:37 GMT"
+      "title": "日経平均初の6万9000円台 ｢いいとこ取り相場｣で上げ幅歴代2位 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9kMUxoS1VyQkZqQlpTcmtaMURGUUoyMU9UeUJoVUxwYmNZR29HaTlFT3NmdkNBb2t1Q0JKOGxwWnBSVTJXaEREVWFKNkNIUFdPRGNHeVVvbHl3ckR6blE4bldiWjNFV0gyTTdJUQ?oc=5",
+      "published": "Mon, 15 Jun 2026 09:33:01 GMT"
     }
   ]
 }
