@@ -1,18 +1,11 @@
 {
-  "date": "2026-06-15",
+  "date": "2026-06-16",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "ドル円",
-      "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 4,
       "sources": 2
     },
@@ -24,25 +17,25 @@
       "sources": 1
     },
     {
-      "word": "金利",
-      "size": "md",
+      "word": "ドル円",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
+      "count": 3,
       "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
     },
     {
       "word": "日銀",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 2
+    },
+    {
+      "word": "日経",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 2
     }
   ],
   "institutional": [
@@ -50,27 +43,34 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 8,
-      "sources": 4
+      "count": 6,
+      "sources": 3
     },
     {
       "word": "半導体",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
-      "sources": 4
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "銀行",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
-      "sources": 3
+      "count": 3,
+      "sources": 2
+    },
+    {
+      "word": "AI関連",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
     },
     {
       "word": "決算",
       "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -78,9 +78,9 @@
   "retail": [
     {
       "word": "ソニー",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
+      "count": 1,
       "sources": 1
     }
   ]
