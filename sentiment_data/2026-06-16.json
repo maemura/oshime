@@ -1,10 +1,10 @@
 {
   "date": "2026-06-16",
-  "collected_at": "2026-06-16 14:28",
+  "collected_at": "2026-06-16 22:59",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 34,
+  "entry_count": 35,
   "entries": [
     {
       "source": "youtube",
@@ -349,6 +349,17 @@
     },
     {
       "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経平均10万円は◯年以内に突破する!?",
+      "video_url": "https://www.youtube.com/watch?v=IGm5-HHTWMo",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "株価40％下落 楽天銀行 なぜ？",
       "video_url": "https://www.youtube.com/watch?v=MrRw67zOzrY",
@@ -422,10 +433,11 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 4,
-        "sentiment": "bullish",
+        "count": 5,
+        "sentiment": "neutral",
         "sources": [
           "ひげづら株ちゃんねる",
+          "たばたの投資ch",
           "Sho's投資情報局"
         ]
       },
@@ -433,9 +445,9 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
           "優待ライダー",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "トレードラボ"
         ]
       },
       "AI関連": {
@@ -463,8 +475,8 @@
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "株リアルライブ"
         ]
       },
       "日経": {
@@ -479,9 +491,9 @@
         "count": 6,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
           "優待ライダー",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "決算": {
@@ -509,8 +521,8 @@
     },
     "hot_words": [
       "高配当",
-      "半導体",
       "日経平均",
+      "半導体",
       "ナスダック",
       "ドル円",
       "日銀",

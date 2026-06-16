@@ -4,10 +4,10 @@
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "size": "xl",
+      "mood": "calm",
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ナスダック",
