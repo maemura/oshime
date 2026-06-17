@@ -17,18 +17,18 @@
       "sources": 1
     },
     {
-      "word": "日銀",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 3
-    },
-    {
       "word": "円安",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
+    },
+    {
+      "word": "日銀",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "日経",

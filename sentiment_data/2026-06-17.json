@@ -1,10 +1,10 @@
 {
   "date": "2026-06-17",
-  "collected_at": "2026-06-17 12:59",
+  "collected_at": "2026-06-17 22:54",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 31,
+  "entry_count": 30,
   "entries": [
     {
       "source": "youtube",
@@ -335,17 +335,6 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: ソニー"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "焦点は日銀からFOMCへ、ウォーシュ新議長次第で介入も？【FXフォーカス】 6月17日 外為どっとコム総合研究所 神田卓也さん",
-      "video_url": "https://www.youtube.com/watch?v=RRrtVsMowK8",
-      "topic": "日銀",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日銀"
     }
   ],
   "summary": {
@@ -400,9 +389,9 @@
         "count": 5,
         "sentiment": "bearish",
         "sources": [
+          "Sho's投資情報局",
           "優待ライダー",
-          "トレードラボ",
-          "Sho's投資情報局"
+          "トレードラボ"
         ]
       },
       "ナスダック": {
@@ -434,20 +423,19 @@
         ]
       },
       "日銀": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
           "Sho's投資情報局",
-          "STOCKVOICE"
+          "株リアルライブ"
         ]
       },
       "高配当": {
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "決算": {
@@ -462,8 +450,8 @@
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "優待ライダー",
-          "株リアルライブ"
+          "株リアルライブ",
+          "優待ライダー"
         ]
       },
       "銀行": {
@@ -494,8 +482,8 @@
       "日経平均",
       "高配当",
       "ナスダック",
-      "日銀",
       "円安",
+      "日銀",
       "決算",
       "日経",
       "銀行",
