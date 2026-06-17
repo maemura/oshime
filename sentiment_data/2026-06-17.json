@@ -1,0 +1,508 @@
+{
+  "date": "2026-06-17",
+  "collected_at": "2026-06-17 12:59",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 31,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=4JZfiJ2SbBc",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=4JZfiJ2SbBc",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=4JZfiJ2SbBc",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=4JZfiJ2SbBc",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=wR_SjSd55DU",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=wR_SjSd55DU",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=wR_SjSd55DU",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=wR_SjSd55DU",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株需給チェック‼信用害が激減‼】日経平均７万突破で利食い先行。AI関連、半導体株相場続く。日銀利上げもドル円160円。原油価格急落。スペースX急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=dgW5Q8DEbbk",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株需給チェック‼信用害が激減‼】日経平均７万突破で利食い先行。AI関連、半導体株相場続く。日銀利上げもドル円160円。原油価格急落。スペースX急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=dgW5Q8DEbbk",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株需給チェック‼信用害が激減‼】日経平均７万突破で利食い先行。AI関連、半導体株相場続く。日銀利上げもドル円160円。原油価格急落。スペースX急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=dgW5Q8DEbbk",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株需給チェック‼信用害が激減‼】日経平均７万突破で利食い先行。AI関連、半導体株相場続く。日銀利上げもドル円160円。原油価格急落。スペースX急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=dgW5Q8DEbbk",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株需給チェック‼信用害が激減‼】日経平均７万突破で利食い先行。AI関連、半導体株相場続く。日銀利上げもドル円160円。原油価格急落。スペースX急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=dgW5Q8DEbbk",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株需給チェック‼信用害が激減‼】日経平均７万突破で利食い先行。AI関連、半導体株相場続く。日銀利上げもドル円160円。原油価格急落。スペースX急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=dgW5Q8DEbbk",
+      "topic": "日銀",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日銀"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "サンリオ延期決算の発表日決定。オアシスが近畿車輛に。メルカリが格上げ。原発関連が急騰。～あす上がる株　2026年６月１８日（木）に上がる銘柄。最新の日本株情報。",
+      "video_url": "https://www.youtube.com/watch?v=aH-NESR7Uio",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "サンリオ延期決算の発表日決定。オアシスが近畿車輛に。メルカリが格上げ。原発関連が急騰。～あす上がる株　2026年６月１８日（木）に上がる銘柄。最新の日本株情報。",
+      "video_url": "https://www.youtube.com/watch?v=aH-NESR7Uio",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "あすの朝、要注意！三菱重工が反転上昇中。原発関連が急騰。ＰｏｗｅｒＸがストップ安その理由。2026年６月１７日（水）～明日上がる株最新の日本株情報。高配当株の株",
+      "video_url": "https://www.youtube.com/watch?v=y0MzhGE4m_E",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ついに日経７万円突破！日銀、利上げ決定。利回り６．３％プライム銘柄！。タクシーアプリ『GO』が上場～あす上がる株　2026年６月１７日（水）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=hsVh6PFk9n8",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ついに日経７万円突破！日銀、利上げ決定。利回り６．３％プライム銘柄！。タクシーアプリ『GO』が上場～あす上がる株　2026年６月１７日（水）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=hsVh6PFk9n8",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ついに日経７万円突破！日銀、利上げ決定。利回り６．３％プライム銘柄！。タクシーアプリ『GO』が上場～あす上がる株　2026年６月１７日（水）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=hsVh6PFk9n8",
+      "topic": "日銀",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日銀"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "あの決算でストップ安になった圧倒的首位株じわじわ浮上してきてます",
+      "video_url": "https://www.youtube.com/watch?v=6qz1MTaFlDo",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "世界平和バンザイ！！日経平均７万円目前も上値余地は米利下げ次第か",
+      "video_url": "https://www.youtube.com/watch?v=wLfgjSPmWWM",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "銀行でも半導体でもない&quot;あの&quot;国策銘柄が８年ぶりに大化けチャンス",
+      "video_url": "https://www.youtube.com/watch?v=C4eZVyyc82k",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "銀行でも半導体でもない&quot;あの&quot;国策銘柄が８年ぶりに大化けチャンス",
+      "video_url": "https://www.youtube.com/watch?v=C4eZVyyc82k",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "高配当株の下落をチャンスに変える！「底打ちサイン」3選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=xIDOqi2eXIQ",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "日経７万円目前！半導体バブル（乗り遅れた・・）暴落注目優待も",
+      "video_url": "https://www.youtube.com/watch?v=PA6RCmPiKgk",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "日経７万円目前！半導体バブル（乗り遅れた・・）暴落注目優待も",
+      "video_url": "https://www.youtube.com/watch?v=PA6RCmPiKgk",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "スペースX3連騰で200ドル突破！FRB新議長が今夜に初会見",
+      "video_url": "https://www.youtube.com/watch?v=sa-c7cfBmS0",
+      "topic": "FRB",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: FRB"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "株価40％下落 楽天銀行 なぜ？",
+      "video_url": "https://www.youtube.com/watch?v=MrRw67zOzrY",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "株価25％下落 ソニーFG なぜ？",
+      "video_url": "https://www.youtube.com/watch?v=J7N_FVWgn8M",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "焦点は日銀からFOMCへ、ウォーシュ新議長次第で介入も？【FXフォーカス】 6月17日 外為どっとコム総合研究所 神田卓也さん",
+      "video_url": "https://www.youtube.com/watch?v=RRrtVsMowK8",
+      "topic": "日銀",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日銀"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 6,
+        "bear": 8
+      },
+      "株リアルライブ": {
+        "bull": 6,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 3,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 2
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 2
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "半導体": {
+        "count": 5,
+        "sentiment": "bearish",
+        "sources": [
+          "優待ライダー",
+          "トレードラボ",
+          "Sho's投資情報局"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円安": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "AI関連": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "日銀": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "Sho's投資情報局",
+          "STOCKVOICE"
+        ]
+      },
+      "高配当": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ",
+          "株リアルライブ"
+        ]
+      },
+      "決算": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "日経": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "優待ライダー",
+          "株リアルライブ"
+        ]
+      },
+      "銀行": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "つばめ投資顧問",
+          "トレードラボ"
+        ]
+      },
+      "FRB": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      }
+    },
+    "hot_words": [
+      "半導体",
+      "日経平均",
+      "高配当",
+      "ナスダック",
+      "日銀",
+      "円安",
+      "決算",
+      "日経",
+      "銀行",
+      "AI関連",
+      "ドル円",
+      "FRB",
+      "ソニー"
+    ]
+  }
+}
