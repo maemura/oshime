@@ -1,13 +1,13 @@
 {
-  "date": "2026-06-17",
+  "date": "2026-06-18",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ナスダック",
@@ -17,6 +17,20 @@
       "sources": 1
     },
     {
+      "word": "FRB",
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 3
+    },
+    {
+      "word": "日経",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "円安",
       "size": "md",
       "mood": "fear",
@@ -24,28 +38,7 @@
       "sources": 1
     },
     {
-      "word": "日銀",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "日経",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    },
-    {
       "word": "ドル円",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "FRB",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -55,10 +48,10 @@
   "institutional": [
     {
       "word": "半導体",
-      "size": "xl",
+      "size": "lg",
       "mood": "fear",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "高配当",
@@ -80,20 +73,13 @@
       "mood": "greed",
       "count": 2,
       "sources": 2
-    },
-    {
-      "word": "AI関連",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": [
     {
       "word": "ソニー",
       "size": "sm",
-      "mood": "fear",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
