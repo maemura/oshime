@@ -5,23 +5,23 @@
     {
       "word": "日経平均",
       "size": "xl",
-      "mood": "fear",
-      "count": 5,
+      "mood": "calm",
+      "count": 6,
       "sources": 3
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "FRB",
-      "size": "lg",
+      "word": "ドル円",
+      "size": "md",
       "mood": "calm",
-      "count": 3,
-      "sources": 3
+      "count": 2,
+      "sources": 1
     },
     {
       "word": "日経",
@@ -31,16 +31,16 @@
       "sources": 2
     },
     {
-      "word": "円安",
+      "word": "FRB",
       "size": "md",
-      "mood": "fear",
+      "mood": "calm",
       "count": 2,
-      "sources": 1
+      "sources": 2
     },
     {
-      "word": "ドル円",
+      "word": "円安",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -49,7 +49,7 @@
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 4,
       "sources": 2
     },

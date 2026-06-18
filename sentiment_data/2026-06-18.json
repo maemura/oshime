@@ -1,11 +1,55 @@
 {
   "date": "2026-06-18",
-  "collected_at": "2026-06-18 12:34",
+  "collected_at": "2026-06-18 23:13",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
   "entry_count": 29,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【海外投資家は日本株5074億円大量売却で上昇続くか。日経平均７万突破】AI半導体株上昇、キオクシア10万鍵？ドル円160円。米国株、ナスダック下落。スペースX",
+      "video_url": "https://www.youtube.com/watch?v=flHL6DHF1Ug",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【海外投資家は日本株5074億円大量売却で上昇続くか。日経平均７万突破】AI半導体株上昇、キオクシア10万鍵？ドル円160円。米国株、ナスダック下落。スペースX",
+      "video_url": "https://www.youtube.com/watch?v=flHL6DHF1Ug",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【海外投資家は日本株5074億円大量売却で上昇続くか。日経平均７万突破】AI半導体株上昇、キオクシア10万鍵？ドル円160円。米国株、ナスダック下落。スペースX",
+      "video_url": "https://www.youtube.com/watch?v=flHL6DHF1Ug",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【海外投資家は日本株5074億円大量売却で上昇続くか。日経平均７万突破】AI半導体株上昇、キオクシア10万鍵？ドル円160円。米国株、ナスダック下落。スペースX",
+      "video_url": "https://www.youtube.com/watch?v=flHL6DHF1Ug",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -88,50 +132,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
       "video_url": "https://www.youtube.com/watch?v=4JZfiJ2SbBc",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
-      "video_url": "https://www.youtube.com/watch?v=wR_SjSd55DU",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
-      "video_url": "https://www.youtube.com/watch?v=wR_SjSd55DU",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
-      "video_url": "https://www.youtube.com/watch?v=wR_SjSd55DU",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株に違和感発生か⁉】日経平均7万円で謎の売り圧力。キオクシア50%下落余地⁉️AI半導体株強い。レーザーテック爆上げ‼️利上げで円安止まらん。米国株、ナス",
-      "video_url": "https://www.youtube.com/watch?v=wR_SjSd55DU",
       "topic": "円安",
       "category": "macro",
       "sentiment": "bearish",
@@ -262,8 +262,19 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "日経平均が上昇し続けている理由を理解していますか？？",
-      "video_url": "https://www.youtube.com/watch?v=YtESWnEUDs4",
+      "video_title": "【朝倉慶】日経平均はまだ割安って本当ですか？？",
+      "video_url": "https://www.youtube.com/watch?v=LioLC4gSWBg",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経平均7万円突破！株価上昇は続くの？",
+      "video_url": "https://www.youtube.com/watch?v=CXC1nHYoz80",
       "topic": "日経平均",
       "category": "macro",
       "sentiment": "bullish",
@@ -273,24 +284,13 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "1500円爆アゲ！日経平均7万1000円も突破！FRBウォーシュ初陣で市場がやや動揺！",
-      "video_url": "https://www.youtube.com/watch?v=vJwJ17A9pbk",
+      "video_title": "日経平均が上昇し続けている理由を理解していますか？？",
+      "video_url": "https://www.youtube.com/watch?v=YtESWnEUDs4",
       "topic": "日経平均",
       "category": "macro",
-      "sentiment": "neutral",
+      "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "1500円爆アゲ！日経平均7万1000円も突破！FRBウォーシュ初陣で市場がやや動揺！",
-      "video_url": "https://www.youtube.com/watch?v=vJwJ17A9pbk",
-      "topic": "FRB",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: FRB"
     },
     {
       "source": "youtube",
@@ -330,7 +330,7 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 8
+        "bear": 4
       },
       "株リアルライブ": {
         "bull": 5,
@@ -353,7 +353,7 @@
         "bear": 0
       },
       "たばたの投資ch": {
-        "bull": 1,
+        "bull": 2,
         "bear": 0
       },
       "つばめ投資顧問": {
@@ -366,17 +366,18 @@
       }
     },
     "by_topic": {
-      "日経": {
-        "count": 2,
+      "日経平均": {
+        "count": 6,
         "sentiment": "neutral",
         "sources": [
-          "株リアルライブ",
-          "Sho's投資情報局"
+          "たばたの投資ch",
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
         "count": 4,
-        "sentiment": "bearish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局",
           "トレードラボ"
@@ -384,29 +385,28 @@
       },
       "ナスダック": {
         "count": 3,
-        "sentiment": "bearish",
-        "sources": [
-          "Sho's投資情報局"
-        ]
-      },
-      "ドル円": {
-        "count": 1,
         "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
-      "日経平均": {
-        "count": 5,
-        "sentiment": "bearish",
+      "ドル円": {
+        "count": 2,
+        "sentiment": "neutral",
         "sources": [
-          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
+        ]
+      },
+      "日経": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
           "Sho's投資情報局",
-          "たばたの投資ch"
+          "株リアルライブ"
         ]
       },
       "円安": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -437,12 +437,11 @@
         ]
       },
       "FRB": {
-        "count": 3,
+        "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "たばたの投資ch",
-          "ばっちゃまの投資チャンネル",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "ばっちゃまの投資チャンネル"
         ]
       },
       "ソニー": {
@@ -458,12 +457,12 @@
       "半導体",
       "高配当",
       "ナスダック",
-      "FRB",
+      "ドル円",
       "日経",
-      "円安",
       "決算",
       "銀行",
-      "ドル円",
+      "FRB",
+      "円安",
       "ソニー"
     ]
   }
