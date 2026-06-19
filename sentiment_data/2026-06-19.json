@@ -1,6 +1,6 @@
 {
   "date": "2026-06-19",
-  "collected_at": "2026-06-19 12:55",
+  "collected_at": "2026-06-19 22:28",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -316,8 +316,8 @@
         "sentiment": "neutral",
         "sources": [
           "ひげづら株ちゃんねる",
-          "STOCKVOICE",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "STOCKVOICE"
         ]
       },
       "半導体": {
