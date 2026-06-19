@@ -1,5 +1,5 @@
 {
- "updated_at": "2026/06/18 20:02",
+ "updated_at": "2026/06/19 09:09",
  "total": 186,
  "stocks": [
   {
@@ -16,7 +16,7 @@
    "per": 10.0,
    "vol_r": 0.87,
    "turnover_avg5": 51.5,
-   "market_cap_b": 9763.0,
+   "market_cap_b": 9752.0,
    "closes_60d": [
     3375.2,
     3417.3,
@@ -13136,7 +13136,7 @@
    "per": 18.6,
    "vol_r": 0.93,
    "turnover_avg5": 15.3,
-   "market_cap_b": 5590.0,
+   "market_cap_b": 5604.0,
    "closes_60d": [
     4021.4,
     4054.1,
@@ -13382,7 +13382,7 @@
    "per": 16.1,
    "vol_r": 0.86,
    "turnover_avg5": 223.1,
-   "market_cap_b": 59465.0,
+   "market_cap_b": 59978.0,
    "closes_60d": [
     5861.6,
     6165.1,
@@ -14694,7 +14694,7 @@
    "per": 19.2,
    "vol_r": 0.94,
    "turnover_avg5": 9.6,
-   "market_cap_b": 2099.0,
+   "market_cap_b": 2100.0,
    "closes_60d": [
     612.9,
     625.3,
@@ -15193,7 +15193,6 @@
     2300.0,
     2300.0,
     2300.0,
-    2300.0,
     2305.0,
     2301.0,
     2302.0,
@@ -15531,18 +15530,18 @@
    "buy_count": 0
   }
  },
- "nikkei_price": 71053.0,
- "nikkei_1d_chg": 1.65,
- "nikkei_ma25": 65338.0,
- "nasdaq_1d_chg": -1.34,
- "vix": 17.2,
- "usdjpy": 160.94,
- "us10y": 4.49,
- "wti_oil": 74.88,
- "ny_dow": 51492.55,
- "ny_dow_1d_chg": -0.98,
- "sp500": 7420.1,
- "sp500_1d_chg": -1.21,
+ "nikkei_price": 69902.0,
+ "nikkei_1d_chg": 0.72,
+ "nikkei_ma25": 65002.0,
+ "nasdaq_1d_chg": 1.91,
+ "vix": 16.4,
+ "usdjpy": 161.24,
+ "us10y": 4.45,
+ "wti_oil": 75.43,
+ "ny_dow": 51564.7,
+ "ny_dow_1d_chg": 0.14,
+ "sp500": 7500.58,
+ "sp500_1d_chg": 1.08,
  "geo_risk": 0,
  "rate_cut_flag": 0,
  "prev_buy_count": 0
