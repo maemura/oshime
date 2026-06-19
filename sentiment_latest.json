@@ -1,13 +1,20 @@
 {
-  "date": "2026-06-18",
+  "date": "2026-06-19",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "calm",
-      "count": 6,
+      "count": 4,
       "sources": 3
+    },
+    {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "calm",
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ナスダック",
@@ -17,30 +24,23 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
-      "sources": 1
-    },
-    {
       "word": "日経",
-      "size": "md",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "FRB",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "円安",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "FRB",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -57,31 +57,30 @@
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "決算",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "銀行",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    }
-  ],
-  "retail": [
-    {
-      "word": "ソニー",
       "size": "sm",
       "mood": "calm",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "銀行",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     }
-  ]
+  ],
+  "retail": []
 }
