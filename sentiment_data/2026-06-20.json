@@ -1,6 +1,6 @@
 {
   "date": "2026-06-20",
-  "collected_at": "2026-06-20 11:27",
+  "collected_at": "2026-06-20 22:37",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -315,8 +315,8 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
@@ -324,8 +324,8 @@
         "sentiment": "neutral",
         "sources": [
           "つばめ投資顧問",
-          "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -339,8 +339,8 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "高配当": {
