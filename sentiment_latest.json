@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-19",
+  "date": "2026-06-20",
   "mode": "claude",
   "macro": [
     {
@@ -7,7 +7,7 @@
       "size": "lg",
       "mood": "calm",
       "count": 4,
-      "sources": 3
+      "sources": 2
     },
     {
       "word": "ドル円",
@@ -21,13 +21,6 @@
       "size": "lg",
       "mood": "calm",
       "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
       "sources": 1
     },
     {
@@ -48,16 +41,16 @@
   "institutional": [
     {
       "word": "半導体",
-      "size": "lg",
+      "size": "xl",
       "mood": "calm",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 1
     },
     {
@@ -82,5 +75,13 @@
       "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "トヨタ",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
