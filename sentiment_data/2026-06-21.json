@@ -1,6 +1,6 @@
 {
   "date": "2026-06-21",
-  "collected_at": "2026-06-21 11:58",
+  "collected_at": "2026-06-21 22:39",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -9,6 +9,50 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆上げ続く⁉中東懸念再燃、キオクシア引けに謎の爆上げ】AI半導体株上昇。日本株空売り崩壊。フジクラS高。ドル円161円。米国株、ナスダック強い。スペー",
+      "video_url": "https://www.youtube.com/watch?v=Npbgfh_rUj8",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆上げ続く⁉中東懸念再燃、キオクシア引けに謎の爆上げ】AI半導体株上昇。日本株空売り崩壊。フジクラS高。ドル円161円。米国株、ナスダック強い。スペー",
+      "video_url": "https://www.youtube.com/watch?v=Npbgfh_rUj8",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆上げ続く⁉中東懸念再燃、キオクシア引けに謎の爆上げ】AI半導体株上昇。日本株空売り崩壊。フジクラS高。ドル円161円。米国株、ナスダック強い。スペー",
+      "video_url": "https://www.youtube.com/watch?v=Npbgfh_rUj8",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆上げ続く⁉中東懸念再燃、キオクシア引けに謎の爆上げ】AI半導体株上昇。日本株空売り崩壊。フジクラS高。ドル円161円。米国株、ナスダック強い。スペー",
+      "video_url": "https://www.youtube.com/watch?v=Npbgfh_rUj8",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "【日経平均〇〇まで爆上げか⁉️キオクシア引けに謎の爆上げ】AI半導体株上昇。日本株空売り崩壊。フジクラS高。ドル円161円。米国株、ナスダック強い。スペースX祭",
       "video_url": "https://www.youtube.com/watch?v=l6QT_aqNO8A",
       "topic": "日経平均",
@@ -88,50 +132,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "【日経平均爆上げ続くか。海外投資家は日本株5074億円大量売却】AI半導体株上昇、キオクシア10万鍵？ドル円160円。米国株、ナスダック下落。スペースX祭り終焉",
       "video_url": "https://www.youtube.com/watch?v=LxRTtdtwiUc",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【海外投資家は日本株5074億円大量売却で上昇続くか。日経平均７万突破】AI半導体株上昇、キオクシア10万鍵？ドル円160円。米国株、ナスダック下落。スペースX",
-      "video_url": "https://www.youtube.com/watch?v=flHL6DHF1Ug",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【海外投資家は日本株5074億円大量売却で上昇続くか。日経平均７万突破】AI半導体株上昇、キオクシア10万鍵？ドル円160円。米国株、ナスダック下落。スペースX",
-      "video_url": "https://www.youtube.com/watch?v=flHL6DHF1Ug",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【海外投資家は日本株5074億円大量売却で上昇続くか。日経平均７万突破】AI半導体株上昇、キオクシア10万鍵？ドル円160円。米国株、ナスダック下落。スペースX",
-      "video_url": "https://www.youtube.com/watch?v=flHL6DHF1Ug",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【海外投資家は日本株5074億円大量売却で上昇続くか。日経平均７万突破】AI半導体株上昇、キオクシア10万鍵？ドル円160円。米国株、ナスダック下落。スペースX",
-      "video_url": "https://www.youtube.com/watch?v=flHL6DHF1Ug",
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "neutral",
@@ -240,24 +240,24 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
-      "video_title": "週明け買うならここが一押し！厳選高配当10銘柄",
+      "video_title": "週明け下落で買う。ここが一押し！厳選高配当10銘柄",
       "video_url": "https://www.youtube.com/watch?v=59Sc-_oCaZ0",
       "topic": "高配当",
       "category": "sector",
-      "sentiment": "bullish",
+      "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "トヨタ売られすぎ!?今が買い時か??",
-      "video_url": "https://www.youtube.com/watch?v=CyX81V3cxUY",
-      "topic": "トヨタ",
-      "category": "stock",
-      "sentiment": "bullish",
+      "video_title": "【闇】フジクラが保守的に決算を出す理由がやばい...",
+      "video_url": "https://www.youtube.com/watch?v=5JbRfcsMNS0",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: トヨタ"
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -316,11 +316,11 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 1,
+        "bull": 0,
         "bear": 0
       },
       "たばたの投資ch": {
-        "bull": 1,
+        "bull": 0,
         "bear": 0
       },
       "つばめ投資顧問": {
@@ -337,17 +337,17 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 5,
         "sentiment": "neutral",
         "sources": [
-          "トレードラボ",
+          "つばめ投資顧問",
           "Sho's投資情報局",
-          "つばめ投資顧問"
+          "トレードラボ"
         ]
       },
       "ナスダック": {
@@ -361,8 +361,8 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "配当": {
@@ -381,19 +381,20 @@
         ]
       },
       "決算": {
-        "count": 2,
-        "sentiment": "bullish",
+        "count": 3,
+        "sentiment": "neutral",
         "sources": [
-          "株リアルライブ",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "たばたの投資ch",
+          "株リアルライブ"
         ]
       },
       "高配当": {
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー"
+          "優待ライダー",
+          "株リアルライブ"
         ]
       },
       "銀行": {
@@ -409,13 +410,6 @@
         "sources": [
           "ばっちゃまの投資チャンネル"
         ]
-      },
-      "トヨタ": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
       }
     },
     "hot_words": [
@@ -423,13 +417,12 @@
       "日経平均",
       "ドル円",
       "ナスダック",
-      "配当",
       "決算",
+      "配当",
       "高配当",
       "円安",
       "銀行",
-      "FRB",
-      "トヨタ"
+      "FRB"
     ]
   }
 }

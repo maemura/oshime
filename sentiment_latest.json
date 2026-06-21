@@ -47,14 +47,14 @@
       "sources": 3
     },
     {
-      "word": "配当",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "word": "決算",
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 3
     },
     {
-      "word": "決算",
+      "word": "配当",
       "size": "md",
       "mood": "greed",
       "count": 2,
@@ -75,13 +75,5 @@
       "sources": 1
     }
   ],
-  "retail": [
-    {
-      "word": "トヨタ",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    }
-  ]
+  "retail": []
 }
