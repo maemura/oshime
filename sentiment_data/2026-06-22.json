@@ -1,10 +1,10 @@
 {
   "date": "2026-06-22",
-  "collected_at": "2026-06-22 15:02",
+  "collected_at": "2026-06-22 22:58",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 29,
+  "entry_count": 27,
   "entries": [
     {
       "source": "youtube",
@@ -229,7 +229,7 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
-      "video_title": "【株価60%OFF】国策+40年累進配当でもまだ安く買える防衛株5選",
+      "video_title": "【株価60%OFF】国策+40年累進配当も！まだ安く買える防衛株5選",
       "video_url": "https://www.youtube.com/watch?v=9z1UHpN_ewU",
       "topic": "配当",
       "category": "sector",
@@ -240,7 +240,7 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
-      "video_title": "【株価60%OFF】国策+40年累進配当でもまだ安く買える防衛株5選",
+      "video_title": "【株価60%OFF】国策+40年累進配当も！まだ安く買える防衛株5選",
       "video_url": "https://www.youtube.com/watch?v=9z1UHpN_ewU",
       "topic": "防衛",
       "category": "sector",
@@ -283,17 +283,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "カテキンさんと語る自動車株と半導体銘柄　〜イランが「ホルムズ再封鎖」宣言もマンデー空振り！？",
-      "video_url": "https://www.youtube.com/watch?v=tvIJCXTCMXA",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "デクセリアルズは買いか？AI・光半導体で注目の高ROE企業を分析",
       "video_url": "https://www.youtube.com/watch?v=o3KOxSzC3tY",
@@ -313,17 +302,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "ドル円161円台後半、ウォーシュ流FOMCのポイントは？【FXフォーカス】 6月22日 ADVANCE ＹＥＮ蔵さん",
-      "video_url": "https://www.youtube.com/watch?v=mq2SGe9byYc",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
     }
   ],
   "summary": {
@@ -375,13 +353,12 @@
         ]
       },
       "半導体": {
-        "count": 6,
-        "sentiment": "neutral",
+        "count": 5,
+        "sentiment": "bearish",
         "sources": [
-          "たばたの投資ch",
-          "Sho's投資情報局",
           "つばめ投資顧問",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -392,19 +369,18 @@
         ]
       },
       "ドル円": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "Sho's投資情報局"
         ]
       },
       "高配当": {
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "優待ライダー",
-          "株リアルライブ"
+          "株リアルライブ",
+          "優待ライダー"
         ]
       },
       "AI関連": {
@@ -418,8 +394,8 @@
         "count": 3,
         "sentiment": "neutral",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "円安": {
@@ -433,8 +409,8 @@
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "株リアルライブ"
+          "株リアルライブ",
+          "ひげづら株ちゃんねる"
         ]
       },
       "防衛": {
@@ -455,8 +431,8 @@
     "hot_words": [
       "半導体",
       "日経平均",
-      "ドル円",
       "ナスダック",
+      "ドル円",
       "高配当",
       "配当",
       "決算",

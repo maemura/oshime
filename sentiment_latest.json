@@ -10,14 +10,14 @@
       "sources": 2
     },
     {
-      "word": "ドル円",
+      "word": "ナスダック",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
-      "word": "ナスダック",
+      "word": "ドル円",
       "size": "lg",
       "mood": "fear",
       "count": 3,
@@ -42,9 +42,9 @@
     {
       "word": "半導体",
       "size": "xl",
-      "mood": "calm",
-      "count": 6,
-      "sources": 4
+      "mood": "fear",
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "高配当",
