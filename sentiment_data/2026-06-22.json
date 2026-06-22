@@ -1,0 +1,469 @@
+{
+  "date": "2026-06-22",
+  "collected_at": "2026-06-22 15:02",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 29,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
+      "video_url": "https://www.youtube.com/watch?v=59Vi_jyyKCo",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
+      "video_url": "https://www.youtube.com/watch?v=59Vi_jyyKCo",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
+      "video_url": "https://www.youtube.com/watch?v=59Vi_jyyKCo",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
+      "video_url": "https://www.youtube.com/watch?v=59Vi_jyyKCo",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
+      "video_url": "https://www.youtube.com/watch?v=GWYWCx9qbPs",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
+      "video_url": "https://www.youtube.com/watch?v=GWYWCx9qbPs",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
+      "video_url": "https://www.youtube.com/watch?v=GWYWCx9qbPs",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
+      "video_url": "https://www.youtube.com/watch?v=GWYWCx9qbPs",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆上げ続く⁉中東懸念再燃、キオクシア引けに謎の爆上げ】AI半導体株上昇。日本株空売り崩壊。フジクラS高。ドル円161円。米国株、ナスダック強い。スペー",
+      "video_url": "https://www.youtube.com/watch?v=Npbgfh_rUj8",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆上げ続く⁉中東懸念再燃、キオクシア引けに謎の爆上げ】AI半導体株上昇。日本株空売り崩壊。フジクラS高。ドル円161円。米国株、ナスダック強い。スペー",
+      "video_url": "https://www.youtube.com/watch?v=Npbgfh_rUj8",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆上げ続く⁉中東懸念再燃、キオクシア引けに謎の爆上げ】AI半導体株上昇。日本株空売り崩壊。フジクラS高。ドル円161円。米国株、ナスダック強い。スペー",
+      "video_url": "https://www.youtube.com/watch?v=Npbgfh_rUj8",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆上げ続く⁉中東懸念再燃、キオクシア引けに謎の爆上げ】AI半導体株上昇。日本株空売り崩壊。フジクラS高。ドル円161円。米国株、ナスダック強い。スペー",
+      "video_url": "https://www.youtube.com/watch?v=Npbgfh_rUj8",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ＮＴＴが安値。イオンが安値。オアシス、エアウォーター大量保有。フィジカルAI急騰。あすサンリオ注目～あす上がる株　2026年６月２３日（火）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=l-Td7K92-nE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "フジクラが２日連続でストップ高、関連９銘柄も急騰中。東電が急落中。フィジカルAI関連が急騰中。2026年６月２２日（月）～明日上がる株最新の日本株情報。高配当株",
+      "video_url": "https://www.youtube.com/watch?v=a_1axGiNmp0",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "フジクラが２日連続でストップ高、関連９銘柄も急騰中。東電が急落中。フィジカルAI関連が急騰中。2026年６月２２日（月）～明日上がる株最新の日本株情報。高配当株",
+      "video_url": "https://www.youtube.com/watch?v=a_1axGiNmp0",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イランがホルムズ海峡を再封鎖。円安、為替介入警戒。今週金曜が権利最終日、６月の人気配当銘柄。好決算だったのにまだ下げてる銘柄。６月２１日:日曜版～あす上がる株。",
+      "video_url": "https://www.youtube.com/watch?v=exEBDwiDlgg",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イランがホルムズ海峡を再封鎖。円安、為替介入警戒。今週金曜が権利最終日、６月の人気配当銘柄。好決算だったのにまだ下げてる銘柄。６月２１日:日曜版～あす上がる株。",
+      "video_url": "https://www.youtube.com/watch?v=exEBDwiDlgg",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "イランがホルムズ海峡を再封鎖。円安、為替介入警戒。今週金曜が権利最終日、６月の人気配当銘柄。好決算だったのにまだ下げてる銘柄。６月２１日:日曜版～あす上がる株。",
+      "video_url": "https://www.youtube.com/watch?v=exEBDwiDlgg",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均7万2000円突破！マイクロン決算前にどこまで行くんやっ！",
+      "video_url": "https://www.youtube.com/watch?v=coXOskVF2qI",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均7万2000円突破！マイクロン決算前にどこまで行くんやっ！",
+      "video_url": "https://www.youtube.com/watch?v=coXOskVF2qI",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【株価60%OFF】国策+40年累進配当でもまだ安く買える防衛株5選",
+      "video_url": "https://www.youtube.com/watch?v=9z1UHpN_ewU",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【株価60%OFF】国策+40年累進配当でもまだ安く買える防衛株5選",
+      "video_url": "https://www.youtube.com/watch?v=9z1UHpN_ewU",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "毎月5万円の配当金を達成するには？現実的な戦略を完全解説",
+      "video_url": "https://www.youtube.com/watch?v=p6EL3yv-mXM",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 6/18】FRBが大転換です。",
+      "video_url": "https://www.youtube.com/watch?v=K1JMwXYz_Hw",
+      "topic": "FRB",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: FRB"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "週明け下落で買う。ここが一押し！厳選高配当10銘柄",
+      "video_url": "https://www.youtube.com/watch?v=59Sc-_oCaZ0",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "カテキンさんと語る自動車株と半導体銘柄　〜イランが「ホルムズ再封鎖」宣言もマンデー空振り！？",
+      "video_url": "https://www.youtube.com/watch?v=tvIJCXTCMXA",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "デクセリアルズは買いか？AI・光半導体で注目の高ROE企業を分析",
+      "video_url": "https://www.youtube.com/watch?v=o3KOxSzC3tY",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "出遅れ半導体株3選【ゲスト】 6月22日 立花証券 入沢健さん",
+      "video_url": "https://www.youtube.com/watch?v=VC10cBk8nkI",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "ドル円161円台後半、ウォーシュ流FOMCのポイントは？【FXフォーカス】 6月22日 ADVANCE ＹＥＮ蔵さん",
+      "video_url": "https://www.youtube.com/watch?v=mq2SGe9byYc",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 0,
+        "bear": 8
+      },
+      "株リアルライブ": {
+        "bull": 6,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 1,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "bearish",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 6,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch",
+          "Sho's投資情報局",
+          "つばめ投資顧問",
+          "STOCKVOICE"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 4,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局",
+          "STOCKVOICE"
+        ]
+      },
+      "高配当": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "優待ライダー",
+          "株リアルライブ"
+        ]
+      },
+      "AI関連": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "配当": {
+        "count": 3,
+        "sentiment": "neutral",
+        "sources": [
+          "トレードラボ",
+          "株リアルライブ"
+        ]
+      },
+      "円安": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "決算": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "株リアルライブ"
+        ]
+      },
+      "防衛": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
+      "FRB": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "ばっちゃまの投資チャンネル"
+        ]
+      }
+    },
+    "hot_words": [
+      "半導体",
+      "日経平均",
+      "ドル円",
+      "ナスダック",
+      "高配当",
+      "配当",
+      "決算",
+      "AI関連",
+      "円安",
+      "防衛",
+      "FRB"
+    ]
+  }
+}
