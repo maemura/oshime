@@ -1,5 +1,5 @@
 {
-  "date": "2026-06-22",
+  "date": "2026-06-23",
   "mode": "claude",
   "macro": [
     {
@@ -18,13 +18,20 @@
     },
     {
       "word": "ドル円",
-      "size": "lg",
+      "size": "md",
       "mood": "fear",
-      "count": 3,
+      "count": 2,
       "sources": 1
     },
     {
       "word": "円安",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "トランプ",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -36,51 +43,59 @@
       "mood": "calm",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
     {
       "word": "半導体",
-      "size": "xl",
+      "size": "lg",
       "mood": "fear",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "配当",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
+      "count": 4,
       "sources": 2
     },
     {
       "word": "決算",
       "size": "md",
-      "mood": "greed",
+      "mood": "calm",
       "count": 2,
       "sources": 2
     },
     {
-      "word": "AI関連",
+      "word": "防衛",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "防衛",
+      "word": "配当",
       "size": "sm",
       "mood": "calm",
       "count": 1,
       "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "トヨタ",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
