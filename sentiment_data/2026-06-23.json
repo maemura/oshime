@@ -1,11 +1,55 @@
 {
   "date": "2026-06-23",
-  "collected_at": "2026-06-23 12:18",
+  "collected_at": "2026-06-23 22:41",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 26,
+  "entry_count": 25,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】日経平均2500円大暴落。キオクシア15%急落ヤバい‼️AI半導体株暴落。日本株空売り急増で日経下げ幅限定か⁉円安加速でドル円161円。米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=5T2D3a5XEek",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】日経平均2500円大暴落。キオクシア15%急落ヤバい‼️AI半導体株暴落。日本株空売り急増で日経下げ幅限定か⁉円安加速でドル円161円。米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=5T2D3a5XEek",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】日経平均2500円大暴落。キオクシア15%急落ヤバい‼️AI半導体株暴落。日本株空売り急増で日経下げ幅限定か⁉円安加速でドル円161円。米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=5T2D3a5XEek",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】日経平均2500円大暴落。キオクシア15%急落ヤバい‼️AI半導体株暴落。日本株空売り急増で日経下げ幅限定か⁉円安加速でドル円161円。米国株、ナスダッ",
+      "video_url": "https://www.youtube.com/watch?v=5T2D3a5XEek",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -88,50 +132,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
       "video_url": "https://www.youtube.com/watch?v=59Vi_jyyKCo",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
-      "video_url": "https://www.youtube.com/watch?v=GWYWCx9qbPs",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
-      "video_url": "https://www.youtube.com/watch?v=GWYWCx9qbPs",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
-      "video_url": "https://www.youtube.com/watch?v=GWYWCx9qbPs",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均76,000円へ急騰か⁉】ドル円崩壊ヤバい→円安加速で海外勢の日本株売り継続⁉AI半導体株爆上げ→キオクシア鍵、フジクラS高。米国株、ナスダック強い。",
-      "video_url": "https://www.youtube.com/watch?v=GWYWCx9qbPs",
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "bearish",
@@ -272,17 +272,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物が一時7万3千円を突破！スペースXは急落",
-      "video_url": "https://www.youtube.com/watch?v=-nYm8aLZmQ8",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "デクセリアルズは買いか？AI・光半導体で注目の高ROE企業を分析",
       "video_url": "https://www.youtube.com/watch?v=o3KOxSzC3tY",
@@ -321,7 +310,7 @@
       },
       "たばたの投資ch": {
         "bull": 1,
-        "bear": 1
+        "bear": 0
       },
       "つばめ投資顧問": {
         "bull": 1,
@@ -345,8 +334,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "つばめ投資顧問"
+          "つばめ投資顧問",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -357,14 +346,14 @@
         ]
       },
       "円安": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ドル円": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -389,8 +378,8 @@
         "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "優待ライダー",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "優待ライダー"
         ]
       },
       "防衛": {
@@ -420,13 +409,6 @@
         "sources": [
           "たばたの投資ch"
         ]
-      },
-      "日経": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
       }
     },
     "hot_words": [
@@ -434,15 +416,14 @@
       "半導体",
       "高配当",
       "ナスダック",
-      "ドル円",
-      "決算",
       "円安",
+      "決算",
+      "ドル円",
       "トランプ",
       "防衛",
       "配当",
       "FRB",
-      "トヨタ",
-      "日経"
+      "トヨタ"
     ]
   }
 }

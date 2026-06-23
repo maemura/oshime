@@ -17,14 +17,14 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
+      "word": "円安",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "円安",
+      "word": "ドル円",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -41,13 +41,6 @@
       "word": "FRB",
       "size": "sm",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "fear",
       "count": 1,
       "sources": 1
     }
