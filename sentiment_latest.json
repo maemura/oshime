@@ -29,13 +29,6 @@
       "mood": "calm",
       "count": 1,
       "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
@@ -43,14 +36,14 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 5,
+      "count": 6,
       "sources": 3
     },
     {
       "word": "決算",
       "size": "xl",
       "mood": "fear",
-      "count": 5,
+      "count": 6,
       "sources": 4
     },
     {
