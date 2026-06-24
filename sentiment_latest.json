@@ -1,9 +1,16 @@
 {
-  "date": "2026-06-23",
+  "date": "2026-06-24",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
+      "size": "xl",
+      "mood": "fear",
+      "count": 5,
+      "sources": 3
+    },
+    {
+      "word": "円安",
       "size": "lg",
       "mood": "fear",
       "count": 4,
@@ -17,30 +24,16 @@
       "sources": 1
     },
     {
-      "word": "円安",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "ドル円",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "トランプ",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "FRB",
       "size": "sm",
       "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -48,36 +41,36 @@
   "institutional": [
     {
       "word": "半導体",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 4,
+      "count": 5,
+      "sources": 3
+    },
+    {
+      "word": "決算",
+      "size": "xl",
+      "mood": "fear",
+      "count": 5,
+      "sources": 4
+    },
+    {
+      "word": "配当",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
       "sources": 2
     },
     {
       "word": "高配当",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "決算",
       "size": "md",
-      "mood": "calm",
+      "mood": "greed",
       "count": 2,
-      "sources": 2
+      "sources": 1
     },
     {
       "word": "防衛",
       "size": "sm",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -87,6 +80,27 @@
       "word": "トヨタ",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "任天堂",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "NVIDIA",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "イビデン",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
