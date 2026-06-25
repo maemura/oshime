@@ -1,10 +1,10 @@
 {
   "date": "2026-06-25",
-  "collected_at": "2026-06-25 11:59",
+  "collected_at": "2026-06-25 22:52",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 35,
+  "entry_count": 36,
   "entries": [
     {
       "source": "youtube",
@@ -316,6 +316,17 @@
     },
     {
       "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "キオクシア急落！ついに半導体バブルも終了か！？",
+      "video_url": "https://www.youtube.com/watch?v=2FwVkVOqx3Y",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "1年で株価8倍 イビデン なぜ？",
       "video_url": "https://www.youtube.com/watch?v=H5qMNrT_wHM",
@@ -420,7 +431,7 @@
       },
       "たばたの投資ch": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -436,17 +447,18 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
-        "count": 5,
-        "sentiment": "bullish",
+        "count": 6,
+        "sentiment": "bearish",
         "sources": [
+          "たばたの投資ch",
           "株リアルライブ",
-          "つばめ投資顧問",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "つばめ投資顧問"
         ]
       },
       "円高": {
@@ -461,9 +473,9 @@
         "sentiment": "bearish",
         "sources": [
           "株リアルライブ",
-          "ひげづら株ちゃんねる",
           "Sho's投資情報局",
-          "優待ライダー"
+          "優待ライダー",
+          "ひげづら株ちゃんねる"
         ]
       },
       "ナスダック": {
@@ -477,8 +489,8 @@
         "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "Sho's投資情報局"
         ]
       },
       "高配当": {
@@ -506,8 +518,8 @@
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "トレードラボ"
+          "トレードラボ",
+          "株リアルライブ"
         ]
       },
       "防衛": {
