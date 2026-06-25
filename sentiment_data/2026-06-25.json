@@ -1,0 +1,574 @@
+{
+  "date": "2026-06-25",
+  "collected_at": "2026-06-25 11:59",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 35,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆騰警報3,191円高‼】キオクシア12％急騰で空売り勢木端微塵‼海外投資家も日本株1兆円爆買い。円安加速でドル円161円。米国株もMU好決算でAI半",
+      "video_url": "https://www.youtube.com/watch?v=tNO_B5mKW0o",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆騰警報3,191円高‼】キオクシア12％急騰で空売り勢木端微塵‼海外投資家も日本株1兆円爆買い。円安加速でドル円161円。米国株もMU好決算でAI半",
+      "video_url": "https://www.youtube.com/watch?v=tNO_B5mKW0o",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆騰警報3,191円高‼】キオクシア12％急騰で空売り勢木端微塵‼海外投資家も日本株1兆円爆買い。円安加速でドル円161円。米国株もMU好決算でAI半",
+      "video_url": "https://www.youtube.com/watch?v=tNO_B5mKW0o",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均爆騰警報3,191円高‼】キオクシア12％急騰で空売り勢木端微塵‼海外投資家も日本株1兆円爆買い。円安加速でドル円161円。米国株もMU好決算でAI半",
+      "video_url": "https://www.youtube.com/watch?v=tNO_B5mKW0o",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？スペース",
+      "video_url": "https://www.youtube.com/watch?v=KjfCefvlDsw",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？スペース",
+      "video_url": "https://www.youtube.com/watch?v=KjfCefvlDsw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？スペース",
+      "video_url": "https://www.youtube.com/watch?v=KjfCefvlDsw",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？スペース",
+      "video_url": "https://www.youtube.com/watch?v=KjfCefvlDsw",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？スペース",
+      "video_url": "https://www.youtube.com/watch?v=KjfCefvlDsw",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
+      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
+      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
+      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
+      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
+      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "キオクシア株式分割へ。ソフトバンクグループ、フィジカルＡＩでロボット量産。パソナ大幅下方修正。～あす上がる株　2026年６月２６日（金）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=BN_I0-N_yq8",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "マイクロン、好決算！その決算内容。半導体・MLCC関連が急騰。原油が１バレル７０ドル割れ。2026年６月２５日（木）～明日上がる株最新の日本株情報。高配当株の株",
+      "video_url": "https://www.youtube.com/watch?v=cxVk_l6tsG4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "マイクロン、好決算！その決算内容。半導体・MLCC関連が急騰。原油が１バレル７０ドル割れ。2026年６月２５日（木）～明日上がる株最新の日本株情報。高配当株の株",
+      "video_url": "https://www.youtube.com/watch?v=cxVk_l6tsG4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "マイクロン、好決算！その決算内容。半導体・MLCC関連が急騰。原油が１バレル７０ドル割れ。2026年６月２５日（木）～明日上がる株最新の日本株情報。高配当株の株",
+      "video_url": "https://www.youtube.com/watch?v=cxVk_l6tsG4",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "今夜警戒！サンリオ下落、その理由。トヨタが安値。任天堂も安値。一気に配当２倍に増配した銘柄。～あす上がる株　2026年６月２５日（木）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=ZRD_N2ZPYKU",
+      "topic": "トヨタ",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: トヨタ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "今夜警戒！サンリオ下落、その理由。トヨタが安値。任天堂も安値。一気に配当２倍に増配した銘柄。～あす上がる株　2026年６月２５日（木）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=ZRD_N2ZPYKU",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 任天堂"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "今夜警戒！サンリオ下落、その理由。トヨタが安値。任天堂も安値。一気に配当２倍に増配した銘柄。～あす上がる株　2026年６月２５日（木）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=ZRD_N2ZPYKU",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "株価半分に急落していた人気株サンリオがついに決算発表！一時急騰も・・",
+      "video_url": "https://www.youtube.com/watch?v=FwFNZFoYTck",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均株価が2日で3000円下落！マイクロン決算は織り込まれたのか？",
+      "video_url": "https://www.youtube.com/watch?v=r6GwGWi7WEw",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "日経平均株価が2日で3000円下落！マイクロン決算は織り込まれたのか？",
+      "video_url": "https://www.youtube.com/watch?v=r6GwGWi7WEw",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "円安・資源高でもひたすら下がる...INPEXが抱えるヤバイ現実",
+      "video_url": "https://www.youtube.com/watch?v=yJVmUC419ss",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【株価60%OFF】買い時が迫っている防衛株ランキングTOP5",
+      "video_url": "https://www.youtube.com/watch?v=9z1UHpN_ewU",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "毎月5万円の配当金を達成するには？現実的な戦略を完全解説",
+      "video_url": "https://www.youtube.com/watch?v=p6EL3yv-mXM",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "決算延期から驚愕の結果に！暴落阿鼻叫喚も",
+      "video_url": "https://www.youtube.com/watch?v=M1Mgxqt-1-0",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "1年で株価8倍 イビデン なぜ？",
+      "video_url": "https://www.youtube.com/watch?v=H5qMNrT_wHM",
+      "topic": "イビデン",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: イビデン"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "【イビデン】NVIDIA・Intelが頼る理由！AI半導体を支える日本企業の実力",
+      "video_url": "https://www.youtube.com/watch?v=6a5NDuXVXuo",
+      "topic": "NVIDIA",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: NVIDIA"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "【イビデン】NVIDIA・Intelが頼る理由！AI半導体を支える日本企業の実力",
+      "video_url": "https://www.youtube.com/watch?v=6a5NDuXVXuo",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "【イビデン】NVIDIA・Intelが頼る理由！AI半導体を支える日本企業の実力",
+      "video_url": "https://www.youtube.com/watch?v=6a5NDuXVXuo",
+      "topic": "イビデン",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: イビデン"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "中央銀行の買い継続観測と金（ゴールド）相場の長期上昇予想【本日のデリバティブ】6月25日 楽天証券経済研究所 吉田哲さん",
+      "video_url": "https://www.youtube.com/watch?v=7DiRc4obFC4",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "ドル円は介入警戒続く、目先はPCEデフレータに注目【FXフォーカス】 6月25日 ソニーフィナンシャルグループ 森本淳太郎さん",
+      "video_url": "https://www.youtube.com/watch?v=mBb8kXZ-j70",
+      "topic": "ソニー",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ソニー"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "ドル円は介入警戒続く、目先はPCEデフレータに注目【FXフォーカス】 6月25日 ソニーフィナンシャルグループ 森本淳太郎さん",
+      "video_url": "https://www.youtube.com/watch?v=mBb8kXZ-j70",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 4,
+        "bear": 10
+      },
+      "株リアルライブ": {
+        "bull": 7,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 3
+      },
+      "トレードラボ": {
+        "bull": 1,
+        "bear": 1
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 1
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 1,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 4,
+        "sentiment": "bearish",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "つばめ投資顧問",
+          "Sho's投資情報局"
+        ]
+      },
+      "円高": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "決算": {
+        "count": 7,
+        "sentiment": "bearish",
+        "sources": [
+          "株リアルライブ",
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局",
+          "優待ライダー"
+        ]
+      },
+      "ナスダック": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円安": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局",
+          "トレードラボ"
+        ]
+      },
+      "高配当": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "トヨタ": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "任天堂": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "配当": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "トレードラボ"
+        ]
+      },
+      "防衛": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
+      "イビデン": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      },
+      "NVIDIA": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      },
+      "銀行": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      },
+      "ソニー": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      },
+      "ドル円": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      }
+    },
+    "hot_words": [
+      "決算",
+      "半導体",
+      "日経平均",
+      "円安",
+      "ナスダック",
+      "高配当",
+      "配当",
+      "イビデン",
+      "円高",
+      "トヨタ",
+      "任天堂",
+      "防衛",
+      "NVIDIA",
+      "銀行",
+      "ソニー"
+    ]
+  }
+}
