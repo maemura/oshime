@@ -1,11 +1,66 @@
 {
   "date": "2026-06-26",
-  "collected_at": "2026-06-26 11:57",
+  "collected_at": "2026-06-26 22:39",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
   "entry_count": 31,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均また暴落。キオクシア大荒れでAI半導体株暴落。円安加速でドル円ヤバい。米国株、ナスダック、MU決算GAFAM大暴落。スペースX急落。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=8Y-AiPUExqE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均また暴落。キオクシア大荒れでAI半導体株暴落。円安加速でドル円ヤバい。米国株、ナスダック、MU決算GAFAM大暴落。スペースX急落。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=8Y-AiPUExqE",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均また暴落。キオクシア大荒れでAI半導体株暴落。円安加速でドル円ヤバい。米国株、ナスダック、MU決算GAFAM大暴落。スペースX急落。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=8Y-AiPUExqE",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均また暴落。キオクシア大荒れでAI半導体株暴落。円安加速でドル円ヤバい。米国株、ナスダック、MU決算GAFAM大暴落。スペースX急落。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=8Y-AiPUExqE",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日経平均また暴落。キオクシア大荒れでAI半導体株暴落。円安加速でドル円ヤバい。米国株、ナスダック、MU決算GAFAM大暴落。スペースX急落。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=8Y-AiPUExqE",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -99,61 +154,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？スペース",
       "video_url": "https://www.youtube.com/watch?v=KjfCefvlDsw",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
-      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
-      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
-      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
-      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】日経平均急落続くか⁉キオクシア大荒れでAI半導体株暴落。日本株空売り急増で日経下げ幅限定⁉円安加速でドル円ヤバい。米国株、ナスダック、MU決算で大波乱？",
-      "video_url": "https://www.youtube.com/watch?v=l1rTLZC-4PM",
       "topic": "決算",
       "category": "event",
       "sentiment": "bearish",
@@ -401,23 +401,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "つばめ投資顧問"
-        ]
-      },
-      "円高": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
+          "つばめ投資顧問",
           "Sho's投資情報局"
-        ]
-      },
-      "決算": {
-        "count": 5,
-        "sentiment": "bearish",
-        "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
         ]
       },
       "ナスダック": {
@@ -431,9 +416,24 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
+          "トレードラボ",
           "Sho's投資情報局",
-          "たばたの投資ch",
-          "トレードラボ"
+          "たばたの投資ch"
+        ]
+      },
+      "決算": {
+        "count": 5,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "円高": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
         ]
       },
       "高配当": {
