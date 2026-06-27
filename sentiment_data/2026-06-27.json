@@ -1,10 +1,10 @@
 {
   "date": "2026-06-27",
-  "collected_at": "2026-06-27 11:07",
+  "collected_at": "2026-06-27 22:33",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 27,
+  "entry_count": 28,
   "entries": [
     {
       "source": "youtube",
@@ -262,6 +262,17 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "６月権利落ちで暴落するのか！？スター高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=9Wrm56E0Hjw",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "任天堂暴落！大バーゲン中。我慢ナンピンも",
       "video_url": "https://www.youtube.com/watch?v=lI4bMbeeueM",
       "topic": "任天堂",
@@ -328,7 +339,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 1
+        "bear": 2
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -356,8 +367,8 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
           "トレードラボ",
+          "株リアルライブ",
           "Sho's投資情報局"
         ]
       },
@@ -399,9 +410,10 @@
         ]
       },
       "高配当": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
+          "優待ライダー",
           "株リアルライブ"
         ]
       },
