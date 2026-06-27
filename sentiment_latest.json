@@ -1,26 +1,26 @@
 {
-  "date": "2026-06-26",
+  "date": "2026-06-27",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "fear",
-      "count": 5,
-      "sources": 3
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "円安",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
-      "sources": 3
+      "count": 3,
+      "sources": 2
     },
     {
       "word": "ナスダック",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
@@ -40,6 +40,13 @@
   ],
   "institutional": [
     {
+      "word": "半導体",
+      "size": "xl",
+      "mood": "greed",
+      "count": 5,
+      "sources": 3
+    },
+    {
       "word": "決算",
       "size": "xl",
       "mood": "fear",
@@ -47,21 +54,21 @@
       "sources": 2
     },
     {
-      "word": "半導体",
-      "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
-    },
-    {
       "word": "高配当",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 1
     },
     {
-      "word": "防衛",
+      "word": "AI関連",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "銀行",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -71,22 +78,15 @@
   "retail": [
     {
       "word": "イビデン",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
       "sources": 1
     },
     {
       "word": "任天堂",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "NVIDIA",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
