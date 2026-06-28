@@ -1,10 +1,10 @@
 {
   "date": "2026-06-28",
-  "collected_at": "2026-06-28 11:18",
+  "collected_at": "2026-06-28 22:32",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 30,
+  "entry_count": 32,
   "entries": [
     {
       "source": "youtube",
@@ -284,6 +284,17 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "入替直前で必ず押さえる厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=pTYHqHXRaeA",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "６月権利落ちで暴落するのか！？スター高配当１０銘柄",
       "video_url": "https://www.youtube.com/watch?v=9Wrm56E0Hjw",
       "topic": "高配当",
@@ -306,7 +317,18 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "日経平均が毎日3千円の乱高下！ 今後の相場をちょる子と考えよう！",
+      "video_title": "半導体メモリ増産できるはずなのに、なぜ増産しない？【キオクシア】【マイクロンテクノロジー】【SK hynix】",
+      "video_url": "https://www.youtube.com/watch?v=0aLmPUx4MDs",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経平均が毎日3千円の乱高下！ 今後の相場をちょる子と考えよう！きこチャンネルの発足を控えて、後半はチャンネル名も考えよう！",
       "video_url": "https://www.youtube.com/watch?v=PfmMAYl_iu4",
       "topic": "日経平均",
       "category": "macro",
@@ -360,7 +382,7 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 0,
+        "bull": 1,
         "bear": 2
       },
       "たばたの投資ch": {
@@ -381,18 +403,19 @@
         "count": 5,
         "sentiment": "bearish",
         "sources": [
+          "ひげづら株ちゃんねる",
           "たばたの投資ch",
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
-        "count": 6,
+        "count": 7,
         "sentiment": "bearish",
         "sources": [
           "株リアルライブ",
-          "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "たばたの投資ch",
+          "Sho's投資情報局"
         ]
       },
       "AI関連": {
@@ -406,8 +429,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "Sho's投資情報局"
         ]
       },
       "決算": {
@@ -415,8 +438,8 @@
         "sentiment": "bearish",
         "sources": [
           "株リアルライブ",
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -427,7 +450,7 @@
         ]
       },
       "高配当": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
@@ -468,8 +491,8 @@
       "決算",
       "日経平均",
       "円安",
-      "AI関連",
       "高配当",
+      "AI関連",
       "ナスダック",
       "銀行",
       "任天堂",

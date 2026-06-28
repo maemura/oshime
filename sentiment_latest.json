@@ -36,8 +36,8 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 6,
-      "sources": 3
+      "count": 7,
+      "sources": 4
     },
     {
       "word": "決算",
@@ -47,18 +47,18 @@
       "sources": 3
     },
     {
+      "word": "高配当",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 2
+    },
+    {
       "word": "AI関連",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
-    },
-    {
-      "word": "高配当",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
     },
     {
       "word": "銀行",
