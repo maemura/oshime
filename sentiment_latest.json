@@ -1,34 +1,27 @@
 {
-  "date": "2026-06-28",
+  "date": "2026-06-29",
   "mode": "claude",
   "macro": [
-    {
-      "word": "日経平均",
-      "size": "xl",
-      "mood": "fear",
-      "count": 5,
-      "sources": 3
-    },
     {
       "word": "円安",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "ナスダック",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
+      "count": 3,
       "sources": 1
     },
     {
       "word": "日経",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
       "sources": 1
+    },
+    {
+      "word": "日経平均",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
     }
   ],
   "institutional": [
@@ -36,25 +29,32 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 7,
-      "sources": 4
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "決算",
-      "size": "xl",
+      "size": "lg",
       "mood": "fear",
-      "count": 6,
+      "count": 4,
       "sources": 3
     },
     {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
+      "count": 4,
       "sources": 2
     },
     {
       "word": "AI関連",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "SaaS",
       "size": "md",
       "mood": "fear",
       "count": 2,
@@ -70,16 +70,9 @@
   ],
   "retail": [
     {
-      "word": "任天堂",
+      "word": "防衛",
       "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "イビデン",
-      "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
