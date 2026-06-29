@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "collected_at": "2026-06-29 13:48",
+  "collected_at": "2026-06-29 22:34",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -355,9 +355,9 @@
         "count": 5,
         "sentiment": "bearish",
         "sources": [
+          "トレードラボ",
           "Sho's投資情報局",
-          "株リアルライブ",
-          "トレードラボ"
+          "株リアルライブ"
         ]
       },
       "AI関連": {
@@ -394,8 +394,8 @@
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局",
-          "株リアルライブ",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "株リアルライブ"
         ]
       },
       "高配当": {
