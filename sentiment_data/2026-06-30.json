@@ -1,0 +1,415 @@
+{
+  "date": "2026-06-30",
+  "collected_at": "2026-06-30 11:56",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 25,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【警戒】キオクシア大荒れ‼︎日本株信用害爆増ヤバい‼️AI半導体株上昇で日経平均上昇。円安加速でドル円162円。米国株上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=eRt1xoePokM",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【警戒】キオクシア大荒れ‼︎日本株信用害爆増ヤバい‼️AI半導体株上昇で日経平均上昇。円安加速でドル円162円。米国株上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=eRt1xoePokM",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【警戒】キオクシア大荒れ‼︎日本株信用害爆増ヤバい‼️AI半導体株上昇で日経平均上昇。円安加速でドル円162円。米国株上昇、仮想通貨弱い",
+      "video_url": "https://www.youtube.com/watch?v=eRt1xoePokM",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=q_HoypQeclQ",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=q_HoypQeclQ",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=q_HoypQeclQ",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=q_HoypQeclQ",
+      "topic": "SaaS",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: SaaS"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=q_HoypQeclQ",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=Hekaw4tKQ2U",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=Hekaw4tKQ2U",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=Hekaw4tKQ2U",
+      "topic": "AI関連",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: AI関連"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=Hekaw4tKQ2U",
+      "topic": "SaaS",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: SaaS"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア急落ヤバい‼日本株動くぞ‼AI半導体株急落で日経軟調→バリュー株、SaaS銘柄に資金シフト。円安加速でドル円161円。米国株もAI関連銘柄、GAFAM",
+      "video_url": "https://www.youtube.com/watch?v=Hekaw4tKQ2U",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "為替介入に警戒！高島屋増益。Ｊ．フロント減益。Oasisがマネックス大量保有。楽天に１５００億円。～あす上がる株　2026年７月１日（水）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=hiPg-80tSpk",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "円安、ついに１６２円突破！権利落ち急落中銘柄。IPOがスゴイ状況！。2026年６月３０日（火）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ情報～",
+      "video_url": "https://www.youtube.com/watch?v=GiUOfNfhj8g",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "円安、ついに１６２円突破！権利落ち急落中銘柄。IPOがスゴイ状況！。2026年６月３０日（火）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ情報～",
+      "video_url": "https://www.youtube.com/watch?v=GiUOfNfhj8g",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "コナミ、今夜深夜２時！権利落ちで急落している銘柄。象印苦しい。Ｕ－ＮＥＸＴ、TBS資本業務提。～あす上がる株　2026年６月３０日（火）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=W_C8tUPo3QY",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "株価半分に急落していた人気株サンリオがついに決算発表！一時急騰も・・",
+      "video_url": "https://www.youtube.com/watch?v=FwFNZFoYTck",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "銀行でも半導体でもない&quot;あの&quot;国策銘柄が８年ぶりに大化けチャンス#shorts",
+      "video_url": "https://www.youtube.com/watch?v=rl8apKtpKuA",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "銀行でも半導体でもない&quot;あの&quot;国策銘柄が８年ぶりに大化けチャンス#shorts",
+      "video_url": "https://www.youtube.com/watch?v=rl8apKtpKuA",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 6/30】速報、円安がやばいです。",
+      "video_url": "https://www.youtube.com/watch?v=pVKfiPWA-UA",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "入替直前で必ず押さえる厳選高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=pTYHqHXRaeA",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経1000円高！スペースXも指数組入で反発",
+      "video_url": "https://www.youtube.com/watch?v=d9A6XLBYO6w",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "日経1000円高！スペースXも指数組入で反発",
+      "video_url": "https://www.youtube.com/watch?v=d9A6XLBYO6w",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "拡大する日経平均の標準偏差をどう考えるか【ゲスト】 6月30日 楽天証券経済研究所 愛宕伸康さん",
+      "video_url": "https://www.youtube.com/watch?v=DJ5qZHhQk4c",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 3,
+        "bear": 10
+      },
+      "株リアルライブ": {
+        "bull": 4,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 1
+      },
+      "トレードラボ": {
+        "bull": 2,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 1,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 2,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "STOCKVOICE",
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "トレードラボ"
+        ]
+      },
+      "円安": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "ばっちゃまの投資チャンネル",
+          "株リアルライブ"
+        ]
+      },
+      "日経": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局",
+          "たばたの投資ch"
+        ]
+      },
+      "AI関連": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "SaaS": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
+          "優待ライダー"
+        ]
+      },
+      "決算": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "銀行": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
+      "円高": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      }
+    },
+    "hot_words": [
+      "円安",
+      "半導体",
+      "高配当",
+      "日経",
+      "日経平均",
+      "AI関連",
+      "SaaS",
+      "決算",
+      "銀行",
+      "円高"
+    ]
+  }
+}
