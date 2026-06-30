@@ -10,23 +10,23 @@
       "sources": 3
     },
     {
-      "word": "日経",
+      "word": "日経平均",
       "size": "lg",
-      "mood": "fear",
+      "mood": "greed",
       "count": 3,
       "sources": 2
     },
     {
-      "word": "日経平均",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "円高",
+      "word": "ナスダック",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -48,16 +48,16 @@
     },
     {
       "word": "AI関連",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
       "word": "SaaS",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
