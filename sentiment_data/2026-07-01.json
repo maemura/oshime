@@ -1,10 +1,10 @@
 {
   "date": "2026-07-01",
-  "collected_at": "2026-07-01 12:18",
+  "collected_at": "2026-07-01 22:44",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 23,
+  "entry_count": 20,
   "entries": [
     {
       "source": "youtube",
@@ -225,39 +225,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経平均が寄り付きで1700円爆上げ！。NYダウ連日の最高値。トランプ仮想通貨で1000億円の収入",
-      "video_url": "https://www.youtube.com/watch?v=1Yb2yKq2bFw",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経平均が寄り付きで1700円爆上げ！。NYダウ連日の最高値。トランプ仮想通貨で1000億円の収入",
-      "video_url": "https://www.youtube.com/watch?v=1Yb2yKq2bFw",
-      "topic": "ダウ",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ダウ"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経平均が寄り付きで1700円爆上げ！。NYダウ連日の最高値。トランプ仮想通貨で1000億円の収入",
-      "video_url": "https://www.youtube.com/watch?v=1Yb2yKq2bFw",
-      "topic": "トランプ",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: トランプ"
     }
   ],
   "summary": {
@@ -287,7 +254,7 @@
         "bear": 0
       },
       "たばたの投資ch": {
-        "bull": 3,
+        "bull": 0,
         "bear": 0
       },
       "つばめ投資顧問": {
@@ -301,11 +268,10 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 5,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
           "ひげづら株ちゃんねる",
-          "たばたの投資ch",
           "Sho's投資情報局"
         ]
       },
@@ -313,8 +279,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "トレードラボ"
         ]
       },
       "ドル円": {
@@ -367,20 +333,6 @@
         "sources": [
           "たばたの投資ch"
         ]
-      },
-      "ダウ": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
-      "トランプ": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
       }
     },
     "hot_words": [
@@ -392,9 +344,7 @@
       "ナスダック",
       "銀行",
       "配当",
-      "トヨタ",
-      "ダウ",
-      "トランプ"
+      "トヨタ"
     ]
   }
 }
