@@ -1,20 +1,27 @@
 {
-  "date": "2026-06-30",
+  "date": "2026-07-01",
   "mode": "claude",
   "macro": [
     {
-      "word": "円安",
+      "word": "日経平均",
       "size": "xl",
       "mood": "greed",
       "count": 5,
       "sources": 3
     },
     {
-      "word": "日経平均",
+      "word": "円安",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 2
+      "count": 4,
+      "sources": 3
+    },
+    {
+      "word": "ドル円",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "ナスダック",
@@ -24,9 +31,16 @@
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "ダウ",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "トランプ",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
@@ -43,28 +57,7 @@
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "AI関連",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "SaaS",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "決算",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
+      "count": 3,
       "sources": 1
     },
     {
@@ -73,7 +66,22 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "トヨタ",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
