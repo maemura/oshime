@@ -1,15 +1,48 @@
 {
   "date": "2026-07-02",
-  "collected_at": "2026-07-02 11:44",
+  "collected_at": "2026-07-02 22:32",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 23,
+  "entry_count": 22,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【緊急事態】キオクシア13％大暴落‼海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。ドル円162円。米",
+      "video_title": "キオクシア13％大暴落‼海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。雇用統計でドル円160円。米国",
+      "video_url": "https://www.youtube.com/watch?v=X2QrYp3MvWQ",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア13％大暴落‼海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。雇用統計でドル円160円。米国",
+      "video_url": "https://www.youtube.com/watch?v=X2QrYp3MvWQ",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア13％大暴落‼海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。雇用統計でドル円160円。米国",
+      "video_url": "https://www.youtube.com/watch?v=X2QrYp3MvWQ",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急キオクシア大暴落ヤバい‼】海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。ドル円162円。米国株",
       "video_url": "https://www.youtube.com/watch?v=ArteqNO7Czw",
       "topic": "日経平均",
       "category": "macro",
@@ -20,7 +53,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【緊急事態】キオクシア13％大暴落‼海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。ドル円162円。米",
+      "video_title": "【緊急キオクシア大暴落ヤバい‼】海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。ドル円162円。米国株",
       "video_url": "https://www.youtube.com/watch?v=ArteqNO7Czw",
       "topic": "半導体",
       "category": "sector",
@@ -31,7 +64,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【緊急事態】キオクシア13％大暴落‼海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。ドル円162円。米",
+      "video_title": "【緊急キオクシア大暴落ヤバい‼】海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。ドル円162円。米国株",
       "video_url": "https://www.youtube.com/watch?v=ArteqNO7Czw",
       "topic": "円高",
       "category": "macro",
@@ -71,50 +104,6 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株信用害爆増ヤバい‼️AI半導体株上昇で日経平均上昇。円安加速でドル円162円。米国株、ナスダック上昇、仮想通貨弱い",
-      "video_url": "https://www.youtube.com/watch?v=LEsqTCU5l-U",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株信用害爆増ヤバい‼️AI半導体株上昇で日経平均上昇。円安加速でドル円162円。米国株、ナスダック上昇、仮想通貨弱い",
-      "video_url": "https://www.youtube.com/watch?v=LEsqTCU5l-U",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株信用害爆増ヤバい‼️AI半導体株上昇で日経平均上昇。円安加速でドル円162円。米国株、ナスダック上昇、仮想通貨弱い",
-      "video_url": "https://www.youtube.com/watch?v=LEsqTCU5l-U",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株信用害爆増ヤバい‼️AI半導体株上昇で日経平均上昇。円安加速でドル円162円。米国株、ナスダック上昇、仮想通貨弱い",
-      "video_url": "https://www.youtube.com/watch?v=LEsqTCU5l-U",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
     },
     {
       "source": "youtube",
@@ -263,8 +252,8 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 4,
-        "bear": 6
+        "bull": 0,
+        "bear": 9
       },
       "株リアルライブ": {
         "bull": 3,
@@ -318,7 +307,7 @@
         ]
       },
       "円高": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -328,24 +317,8 @@
         "count": 2,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
-        ]
-      },
-      "ナスダック": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
+          "STOCKVOICE",
           "Sho's投資情報局"
-        ]
-      },
-      "円安": {
-        "count": 3,
-        "sentiment": "neutral",
-        "sources": [
-          "ばっちゃまの投資チャンネル",
-          "Sho's投資情報局",
-          "たばたの投資ch"
         ]
       },
       "高配当": {
@@ -360,6 +333,14 @@
         "sentiment": "bullish",
         "sources": [
           "トレードラボ"
+        ]
+      },
+      "円安": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "ばっちゃまの投資チャンネル",
+          "たばたの投資ch"
         ]
       },
       "配当": {
@@ -380,11 +361,10 @@
     "hot_words": [
       "日経平均",
       "半導体",
-      "円安",
       "高配当",
-      "ドル円",
       "円高",
-      "ナスダック",
+      "ドル円",
+      "円安",
       "銀行",
       "配当",
       "ソニー"
