@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-02",
+  "date": "2026-07-03",
   "mode": "claude",
   "macro": [
     {
@@ -18,17 +18,24 @@
     },
     {
       "word": "ドル円",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
-      "word": "円安",
-      "size": "md",
+      "word": "日経",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "ダウ",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
@@ -36,22 +43,15 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 5,
-      "sources": 3
+      "count": 7,
+      "sources": 4
     },
     {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "銀行",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "配当",
@@ -63,9 +63,9 @@
   ],
   "retail": [
     {
-      "word": "ソニー",
+      "word": "トヨタ",
       "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
