@@ -1,39 +1,32 @@
 {
-  "date": "2026-07-03",
+  "date": "2026-07-04",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
+      "size": "lg",
       "mood": "calm",
-      "count": 5,
+      "count": 4,
       "sources": 2
     },
     {
-      "word": "円高",
+      "word": "ドル円",
       "size": "md",
-      "mood": "fear",
+      "mood": "greed",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "ドル円",
+      "word": "ナスダック",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "円高",
       "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ダウ",
-      "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -42,9 +35,9 @@
     {
       "word": "半導体",
       "size": "xl",
-      "mood": "fear",
-      "count": 7,
-      "sources": 4
+      "mood": "greed",
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "高配当",
@@ -59,15 +52,14 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
-    }
-  ],
-  "retail": [
+    },
     {
-      "word": "トヨタ",
+      "word": "不動産",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
-  ]
+  ],
+  "retail": []
 }
