@@ -1,10 +1,10 @@
 {
   "date": "2026-07-04",
-  "collected_at": "2026-07-04 11:03",
+  "collected_at": "2026-07-04 22:24",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 19,
+  "entry_count": 18,
   "entries": [
     {
       "source": "youtube",
@@ -195,17 +195,6 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "再び安値圏も下限配当で安心！衝動買い銘柄も",
-      "video_url": "https://www.youtube.com/watch?v=PsOXK7pBSOk",
-      "topic": "配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 配当"
-    },
-    {
-      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "不動産株は買い時か？三菱地所・三井不動産・住友不動産・ヒューリックを徹底比較",
       "video_url": "https://www.youtube.com/watch?v=yCNMOtXWlQ0",
@@ -239,7 +228,7 @@
         "bear": 1
       },
       "優待ライダー": {
-        "bull": 1,
+        "bull": 0,
         "bear": 0
       },
       "たばたの投資ch": {
@@ -260,9 +249,9 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
+          "ばっちゃまの投資チャンネル",
           "Sho's投資情報局",
-          "ばっちゃまの投資チャンネル"
+          "トレードラボ"
         ]
       },
       "ナスダック": {
@@ -283,8 +272,8 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "円高": {
@@ -298,15 +287,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
-        ]
-      },
-      "配当": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "優待ライダー"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "不動産": {
@@ -324,7 +306,6 @@
       "ドル円",
       "ナスダック",
       "円高",
-      "配当",
       "不動産"
     ]
   }
