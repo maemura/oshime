@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-04",
+  "date": "2026-07-05",
   "mode": "claude",
   "macro": [
     {
@@ -43,11 +43,18 @@
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
+      "count": 3,
       "sources": 2
     },
     {
       "word": "不動産",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "決算",
       "size": "sm",
       "mood": "greed",
       "count": 1,
