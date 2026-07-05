@@ -3,30 +3,30 @@
   "mode": "claude",
   "macro": [
     {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 1
+    },
+    {
       "word": "日経平均",
       "size": "lg",
       "mood": "calm",
-      "count": 4,
+      "count": 3,
       "sources": 2
     },
     {
-      "word": "ドル円",
+      "word": "ナスダック",
       "size": "md",
       "mood": "greed",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "ナスダック",
+      "word": "トランプ",
       "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "円高",
-      "size": "sm",
-      "mood": "fear",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }

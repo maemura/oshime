@@ -1,11 +1,44 @@
 {
   "date": "2026-07-05",
-  "collected_at": "2026-07-05 11:15",
+  "collected_at": "2026-07-05 22:27",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 19,
+  "entry_count": 20,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️海外勢1.2兆円日本株売りでAI半導体株大荒れ。バリュー株資金シフト。ドル円１６１円推移。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=xSANXEv6qxs",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️海外勢1.2兆円日本株売りでAI半導体株大荒れ。バリュー株資金シフト。ドル円１６１円推移。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=xSANXEv6qxs",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️海外勢1.2兆円日本株売りでAI半導体株大荒れ。バリュー株資金シフト。ドル円１６１円推移。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=xSANXEv6qxs",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -71,39 +104,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "キオクシア13％大暴落‼海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。雇用統計でドル円160円。米国",
-      "video_url": "https://www.youtube.com/watch?v=X2QrYp3MvWQ",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "キオクシア13％大暴落‼海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。雇用統計でドル円160円。米国",
-      "video_url": "https://www.youtube.com/watch?v=X2QrYp3MvWQ",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "キオクシア13％大暴落‼海外投資家が日本株を1.2兆円爆売り。日経平均1741円急落でAI半導体株急落→個人9000億円高値掴み。雇用統計でドル円160円。米国",
-      "video_url": "https://www.youtube.com/watch?v=X2QrYp3MvWQ",
-      "topic": "円高",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円高"
     },
     {
       "source": "youtube",
@@ -195,6 +195,17 @@
     },
     {
       "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "新生児向け「トランプ口座」、この制度が日本の少子化対策にも使える！？",
+      "video_url": "https://www.youtube.com/watch?v=gn-T4KqS4pE",
+      "topic": "トランプ",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トランプ"
+    },
+    {
+      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "売れ残ったのに得！？ 業界の非常識を貫く 住友不動産",
       "video_url": "https://www.youtube.com/watch?v=oanhcUMpd2U",
@@ -219,8 +230,8 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 3,
-        "bear": 3
+        "bull": 6,
+        "bear": 0
       },
       "株リアルライブ": {
         "bull": 3,
@@ -260,38 +271,31 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
           "トレードラボ",
+          "Sho's投資情報局",
           "ばっちゃまの投資チャンネル"
         ]
       },
       "ナスダック": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "Sho's投資情報局"
-        ]
-      },
-      "ドル円": {
         "count": 2,
         "sentiment": "bullish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
       "日経平均": {
-        "count": 4,
+        "count": 3,
         "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局",
           "ひげづら株ちゃんねる"
-        ]
-      },
-      "円高": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "Sho's投資情報局"
         ]
       },
       "決算": {
@@ -305,8 +309,15 @@
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "トレードラボ"
+          "トレードラボ",
+          "株リアルライブ"
+        ]
+      },
+      "トランプ": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
         ]
       },
       "不動産": {
@@ -319,13 +330,13 @@
     },
     "hot_words": [
       "半導体",
+      "ドル円",
       "日経平均",
       "高配当",
-      "ドル円",
-      "不動産",
       "ナスダック",
-      "円高",
-      "決算"
+      "不動産",
+      "決算",
+      "トランプ"
     ]
   }
 }
