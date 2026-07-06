@@ -1,6 +1,6 @@
 {
   "date": "2026-07-06",
-  "collected_at": "2026-07-06 13:01",
+  "collected_at": "2026-07-06 22:41",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -312,9 +312,9 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
+          "優待ライダー",
           "ばっちゃまの投資チャンネル",
-          "Sho's投資情報局",
-          "優待ライダー"
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
