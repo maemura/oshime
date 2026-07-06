@@ -1,0 +1,398 @@
+{
+  "date": "2026-07-06",
+  "collected_at": "2026-07-06 13:01",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 23,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=anBMhSeLmyA",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=anBMhSeLmyA",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=anBMhSeLmyA",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=anBMhSeLmyA",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=LVcU7QmSPXE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=LVcU7QmSPXE",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=LVcU7QmSPXE",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
+      "video_url": "https://www.youtube.com/watch?v=LVcU7QmSPXE",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️海外勢1.2兆円日本株売りでAI半導体株大荒れ。バリュー株資金シフト。ドル円１６１円推移。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=xSANXEv6qxs",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️海外勢1.2兆円日本株売りでAI半導体株大荒れ。バリュー株資金シフト。ドル円１６１円推移。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=xSANXEv6qxs",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️海外勢1.2兆円日本株売りでAI半導体株大荒れ。バリュー株資金シフト。ドル円１６１円推移。米国株、ナスダ",
+      "video_url": "https://www.youtube.com/watch?v=xSANXEv6qxs",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ディスコが出荷額速報値を発表。防衛装備品、工場を国有化へ。ネクステージが上方修正。株式分割追加。～あす上がる株　2026年７月７日（火）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=sNFNl0WKF4A",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ディスコが出荷額速報値を発表。防衛装備品、工場を国有化へ。ネクステージが上方修正。株式分割追加。～あす上がる株　2026年７月７日（火）に上がる銘柄。最新の日本",
+      "video_url": "https://www.youtube.com/watch?v=sNFNl0WKF4A",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "政府が防衛装備品工場を国有化へ、防衛関連が急騰。霞ヶ関キャピタル急落。マルマエが急落。。2026年７月６日（月）～明日上がる株。最新の日本株情報。高配当株の株価",
+      "video_url": "https://www.youtube.com/watch?v=MrESyVjq6kY",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "政府が防衛装備品工場を国有化へ、防衛関連が急騰。霞ヶ関キャピタル急落。マルマエが急落。。2026年７月６日（月）～明日上がる株。最新の日本株情報。高配当株の株価",
+      "video_url": "https://www.youtube.com/watch?v=MrESyVjq6kY",
+      "topic": "防衛",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 防衛"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "原油が過剰供給へ！今週決算の人気５銘柄。好決算なのに急落中の銘柄。あす急落しそうな銘柄。７月５日:日曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=XAAAV-ymsB8",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "いよいよ雇用統計！5000円幅レンジで調整した日経平均は耐えられるのか",
+      "video_url": "https://www.youtube.com/watch?v=xM1xRFOKcgE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 7/2】Meta報道で半導体とメモリが急落、韓国株が再びサーキットブレーカー発動",
+      "video_url": "https://www.youtube.com/watch?v=NK0wn_i0g9w",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "分割優待拡充で買い易さＵＰ！半導体急落も",
+      "video_url": "https://www.youtube.com/watch?v=5X61dP3lhXw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "配当利回り3 94% 平均年収2000万円超 ヒューリック 買いか？",
+      "video_url": "https://www.youtube.com/watch?v=dDAvVNfnNVk",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "売れ残ったのに得！？ 業界の非常識を貫く 住友不動産",
+      "video_url": "https://www.youtube.com/watch?v=oanhcUMpd2U",
+      "topic": "不動産",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 不動産"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "不動産株は買い時か？三菱地所・三井不動産・住友不動産・ヒューリックを徹底比較",
+      "video_url": "https://www.youtube.com/watch?v=yCNMOtXWlQ0",
+      "topic": "不動産",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 不動産"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "【FXフォーカス】 7月6日 SMBC信託銀行プレスティア 合澤史登さん",
+      "video_url": "https://www.youtube.com/watch?v=rP53BvRogw0",
+      "topic": "銀行",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 銀行"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 11,
+        "bear": 0
+      },
+      "株リアルライブ": {
+        "bull": 5,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 0,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 1
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 2,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
+          "ばっちゃまの投資チャンネル",
+          "Sho's投資情報局",
+          "優待ライダー"
+        ]
+      },
+      "ナスダック": {
+        "count": 3,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円安": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "防衛": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "決算": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "配当": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      },
+      "不動産": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      },
+      "銀行": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      }
+    },
+    "hot_words": [
+      "半導体",
+      "日経平均",
+      "ナスダック",
+      "円安",
+      "高配当",
+      "防衛",
+      "不動産",
+      "ドル円",
+      "決算",
+      "配当",
+      "銀行"
+    ]
+  }
+}
