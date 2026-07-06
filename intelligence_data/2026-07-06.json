@@ -1,351 +1,392 @@
 {
   "date": "2026-07-06",
-  "updated_at": "2026-07-06 07:03 JST",
+  "updated_at": "2026-07-06 21:39 JST",
   "note_trends": [
     {
-      "title": "【第63話】黄金の果実が彩る12ヶ月の陣形 ～J-REITを用いた毎月分配型ポートフォリオの具体的構成～",
-      "author": "銀河相場伝説",
-      "likes": 10,
-      "price": 0,
-      "tag": "高配当",
-      "url": "https://note.com/gin_sou_den/n/n071efd508060"
-    },
-    {
-      "title": "【7月配当権利直前】今からでも狙える増配株7選📚",
-      "author": "ダイ@医師 | 不動産、株、債券投資家",
-      "likes": 7,
-      "price": 980,
-      "tag": "高配当",
-      "url": "https://note.com/later0906/n/nd01dabbb0c79"
-    },
-    {
-      "title": "来週、日本株が「1.7兆円」売られるらしい。それでも僕が慌てなかった理由",
-      "author": "ふつおじ|資産形成20年",
-      "likes": 3,
+      "title": "2026年7月6日｜日経平均は小反落でもTOPIXは年初来高値更新。防衛・ドローン・グロース株に資金が向かった理由は？｜日本株・米国株のポイント解説と明日の展望",
+      "author": "税理士ひで | インデックス投資で資産形成 | 45歳に資産",
+      "likes": 23,
       "price": 0,
       "tag": "日経平均",
-      "url": "https://note.com/futsuoji_nisa/n/n9e6e53c510d2"
+      "url": "https://note.com/hide_taxnote/n/n96a1073d46de"
     },
     {
-      "title": "投資脳を育てるー著名投資家やノーベル賞級の物理学者の名言が、今日の市況に刺さる理由【投資・資産形成】",
-      "author": "💡Market Desision OS💡ニュースを読む人から",
+      "title": "【保存版】海帆(3133)だけじゃない。国策「系統用蓄電池」の恩恵を受ける厳選20銘柄を一挙公開",
+      "author": "日本個別株デューデリジェンスセンター",
       "likes": 2,
-      "price": 0,
+      "price": 600,
       "tag": "日本株",
-      "url": "https://note.com/time_mach_effect/n/na7ebf6b479e3"
+      "url": "https://note.com/tatsuya_sabato/n/n1e7fc84fc440"
     },
     {
-      "title": "​【AI買いで日経平均7万円】1週間で±3,000円。私が「止まらない相場」で淡々と続けていること🦁",
-      "author": "ふっくん",
+      "title": "《7/6 今夜の米国株戦略》ダウが1.14%上昇の一方でナスダックは下落、メガキャップ内の資金シフトが示す示唆",
+      "author": "まどか｜US株ジャーナル｜特許出願と求人で米国株式の市場を読",
       "likes": 2,
-      "price": 0,
-      "tag": "日本株",
-      "url": "https://note.com/happy_murre7793/n/n89b21ef620aa"
-    },
-    {
-      "title": "​月5万円も狙える⁉️「PER・PBR・ROE」をなんとなくで見ていませんか？プロが実践する投資指標の「正しい裏の読み方」",
-      "author": "たくみ丨元銀行員の堅実投資",
-      "likes": 2,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/poruka180/n/nc76053bec846"
-    },
-    {
-      "title": "【新NISA】今週7/6(月)~7/10(金)の日経平均、TOPIXを予想する",
-      "author": "humina20",
-      "likes": 1,
-      "price": 0,
-      "tag": "日本株",
-      "url": "https://note.com/humina20/n/n553b6699750d"
-    },
-    {
-      "title": "【マクロ金利サイクルの転換と次世代インフラの再始動】雇用データショックの波及と、新たな週の資本最適化プロセス",
-      "author": "半導体未来ラボ",
-      "likes": 1,
-      "price": 0,
-      "tag": "日本株",
-      "url": "https://note.com/nonot_ko/n/n415bab19cd97"
-    },
-    {
-      "title": "会社予想が「保守的すぎる」注目株2銘柄！",
-      "author": "シュウ",
-      "likes": 1,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/apt_hebe8902/n/n95c3d6a101e5"
-    },
-    {
-      "title": "今日の重要ニュース5選｜2026年7月6日（月）朝版",
-      "author": "深掘りニュース編集部",
-      "likes": 1,
-      "price": 0,
-      "tag": "日経平均",
-      "url": "https://note.com/mens_slution/n/nd54ed759e677"
-    },
-    {
-      "title": "【15:29〆】7/6(月) 和歌山11R｜FI 激戦の和歌山、差し脚炸裂の伏兵",
-      "author": "競輪AI予想「競輪ラボ」｜【毎日配信】厳選買い目公開",
-      "likes": 1,
-      "price": 120,
-      "tag": "高配当",
-      "url": "https://note.com/kwkmlight/n/n3b450ad9283f"
-    },
-    {
-      "title": "【株カフェ週報 6/29〜7/3】キオクシア7万円割れからの大逆転！川崎重工増資の裏で、主婦投資家が狙う「年間配当10万円」高配当株JT・積水ハウス等",
-      "author": "おちゃお｜元銀行員ママのゼロから株式投資",
-      "likes": 0,
       "price": 100,
-      "tag": "日本株",
-      "url": "https://note.com/ochao_money/n/nc382a76d6469"
+      "tag": "株式投資",
+      "url": "https://note.com/us_kabu_journal/n/n42a03104e2cf"
     },
     {
-      "title": "【初心者向け・詳細版】株価急落の裏にある「AI半導体」の落とし穴と、自分の資産を守る方法",
-      "author": "データで語る猫🐾| AI株分析",
+      "title": "【7月6日】本日の株式市場レポート 　日経平均小幅安の裏でTOPIXは最高値更新！",
+      "author": "玲 女子大生が経済を語る",
+      "likes": 2,
+      "price": 0,
+      "tag": "日経平均",
+      "url": "https://note.com/rei_blog/n/n845bc21f5607"
+    },
+    {
+      "title": "割安株は、こうやって探しています｜スクリーニングの考え方（4つの条件）",
+      "author": "ビスタ｜割安株とNISA",
+      "likes": 1,
+      "price": 0,
+      "tag": "日本株",
+      "url": "https://note.com/vista_kabu/n/n1a3ea8f327bc"
+    },
+    {
+      "title": "日次レポート 2026/07/06｜JP225先物・OP フロー&価格帯分析",
+      "author": "Lynx Signal Lab",
+      "likes": 1,
+      "price": 500,
+      "tag": "日本株",
+      "url": "https://note.com/jp225_lynx_lab/n/n164926beaa95"
+    },
+    {
+      "title": "🚨【QDレーザ】読者との対話で見えた「ストーリー投資」の罠。経営陣の“ポエム”と財務諸表の残酷な現実",
+      "author": "カトちゃん",
+      "likes": 1,
+      "price": 0,
+      "tag": "日本株",
+      "url": "https://note.com/rapid_hornet5906/n/n47b874e1f6e6"
+    },
+    {
+      "title": "有料メルマガライブラリから（623)「安く買えるチャンスは時々舞い降りる」",
+      "author": "億の近道",
+      "likes": 1,
+      "price": 0,
+      "tag": "株式投資",
+      "url": "https://note.com/okuchika/n/nac018111f3d9"
+    },
+    {
+      "title": "【完全版】サムスン決算でキオクシア株はどう動く？初心者向けに「5つのシナリオ」を徹底解説",
+      "author": "kento　FIRE目指す。",
+      "likes": 1,
+      "price": 0,
+      "tag": "株式投資",
+      "url": "https://note.com/fair_kento_note/n/n0b56f0355803"
+    },
+    {
+      "title": "今年の収支を少しずつ公開していきます",
+      "author": "みんかせ株式投資",
+      "likes": 1,
+      "price": 0,
+      "tag": "株式投資",
+      "url": "https://note.com/minnadekasego/n/n19a8f358efb0"
+    },
+    {
+      "title": "【7月6日:それが大事】",
+      "author": "nao_",
+      "likes": 1,
+      "price": 0,
+      "tag": "日経平均",
+      "url": "https://note.com/torinikusoboro_/n/n571d4ca5f7b0"
+    },
+    {
+      "title": "【FX】本日（7/6）の Ginkan（銀漢） インジケーターの【勝てる形】",
+      "author": "tensoko",
+      "likes": 1,
+      "price": 0,
+      "tag": "日経平均",
+      "url": "https://note.com/tensoko_fx/n/nadca5cf8d7f6"
+    },
+    {
+      "title": "注文ボタンの前で、僕は今日も数秒だけ止まった【続けるために大事な「自己決定」】",
+      "author": "豆腐メンタル投資録 | ゆるひこ",
+      "likes": 1,
+      "price": 0,
+      "tag": "高配当",
+      "url": "https://note.com/yuruhiko_asset/n/n18c20656479d"
+    },
+    {
+      "title": "日本株 モメチン日報 2026/07/06",
+      "author": "matsu",
       "likes": 0,
       "price": 0,
       "tag": "日本株",
-      "url": "https://note.com/dataneko/n/n0b1d361f7263"
+      "url": "https://note.com/rich_weasel6914/n/n949a8c377d08"
     },
     {
-      "title": "「株価は最高値でも中身は複雑」AI相場の転換点と、止まらない円安の行方",
-      "author": "いつもありがとう＠感謝です!!",
+      "title": "価格モメンタムランキング 2026/07/06",
+      "author": "matsu",
       "likes": 0,
       "price": 0,
       "tag": "日本株",
-      "url": "https://note.com/hayamamasami/n/n0f1d8c8bb21d"
+      "url": "https://note.com/rich_weasel6914/n/n33dcd1b832fa"
     },
     {
-      "title": "【IR分析 #1227】 石原産業（4028） ｜ いい銘柄を、安いときに買う  ｜ 2026.3期 IR情報から考える",
-      "author": "\"ちょこっとIR\"　ーいい銘柄を安いときに買うためのIR情報",
+      "title": "本当の資産は、株価だけでは増えない。",
+      "author": "よっしー｜営業×オーダースーツ",
       "likes": 0,
-      "price": 200,
+      "price": 0,
       "tag": "日本株",
-      "url": "https://note.com/happy_hebe580/n/n96eccf5fbff2"
+      "url": "https://note.com/huge_cougar9399/n/n29a975c53d93"
     },
     {
-      "title": "資生堂Q1決算　利益は出てきているが・・・",
-      "author": "ジャリ",
+      "title": "7月6日の日本株式市況と明日の市場予測、注目銘柄3選+1",
+      "author": "まこと　おさむ",
+      "likes": 0,
+      "price": 0,
+      "tag": "日本株",
+      "url": "https://note.com/moral_boar8368/n/n911bcc8b551a"
+    },
+    {
+      "title": "決算後フォロー候補 2026/07/06",
+      "author": "matsu",
+      "likes": 0,
+      "price": 0,
+      "tag": "日本株",
+      "url": "https://note.com/rich_weasel6914/n/n485fc3360fd3"
+    },
+    {
+      "title": "僕が毎月いくら投資しているのか",
+      "author": "けい　減量🍚×投資📕×副業💰",
+      "likes": 0,
+      "price": 0,
+      "tag": "日本株",
+      "url": "https://note.com/keyzz1/n/n950974761161"
+    },
+    {
+      "title": "フィリップ・フィッシャー｜1930〜1970年代・アメリカ｜数字より企業の質を見よ｜投資",
+      "author": "Mike",
       "likes": 0,
       "price": 300,
-      "tag": "日本株",
-      "url": "https://note.com/y_y_y_y_y_y/n/n65800823020c"
-    },
-    {
-      "title": "株式会社エブリー上場、11,000台のサイネージが暴いたデリッシュキッチンの正体：レシピ動画の会社は、スーパーの棚に立つ広告代理店だった",
-      "author": "セオドア アカデミー",
-      "likes": 0,
-      "price": 380,
-      "tag": "日本株",
-      "url": "https://note.com/seodoa_academy/n/n41cd19327079"
-    },
-    {
-      "title": "チャンスは平等。なのに結果が分かれる本当の理由",
-      "author": "堀北晃生",
-      "likes": 0,
-      "price": 0,
       "tag": "株式投資",
-      "url": "https://note.com/akiohorikita/n/ndd57315e38db"
-    },
-    {
-      "title": "「欧米では大規模倒産、日本では6割赤字」——その中でもシェア3割を目指す、植物工場のリアル",
-      "author": "busin",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/busintemasamo1/n/ndeae2b2a0a15"
-    },
-    {
-      "title": "朝のAI 日経簡易分析　前場寄り前　2026/7/6 6:00 月曜日　前日ナスダック0.80%安",
-      "author": "株としひろ",
-      "likes": 0,
-      "price": 0,
-      "tag": "株式投資",
-      "url": "https://note.com/kabutoshiro777/n/n26203c0845fb"
+      "url": "https://note.com/huge_mimosa533/n/n7ef4ca813af6"
     }
   ],
   "nikkei_headlines": [
     {
       "category": "総合",
-      "title": "ノルウェーが8強入りをかけてブラジルと対戦　サッカーW杯",
-      "url": "https://www.nikkei.com/article/DGXZQODH051LI0V00C26A7000000/",
-      "date": "2026-07-06T05:08:24+09:00"
+      "title": "人事、外務省",
+      "url": "https://www.nikkei.com/article/DGXZQOH1062LN0W6A700C2000000/",
+      "date": "2026-07-06T20:10:32+09:00"
     },
     {
       "category": "総合",
-      "title": "美術館「資生堂アートハウス」閉館　地方での文化発信、課題浮き彫り",
-      "url": "https://www.nikkei.com/article/DGXZQOCC26DKP0W6A620C2000000/",
-      "date": "2026-07-06T05:00:00+09:00"
+      "title": "人事、内閣官房",
+      "url": "https://www.nikkei.com/article/DGXZQOH1067GE0W6A700C2000000/",
+      "date": "2026-07-06T20:09:15+09:00"
     },
     {
       "category": "総合",
+      "title": "「野党と向き合えば長期政権」自民・石井参院幹事長、高支持率踏まえ",
+      "url": "https://www.nikkei.com/article/DGXZQOUA067JE0W6A700C2000000/",
+      "date": "2026-07-06T20:02:09+09:00"
+    },
+    {
+      "category": "総合",
+      "title": "日本株買い、「非AI」業種に拡大　韓台とマネー争奪",
+      "url": "https://www.nikkei.com/article/DGXZQOUB061NJ0W6A700C2000000/",
+      "date": "2026-07-06T20:01:04+09:00"
+    },
+    {
+      "category": "総合",
+      "title": "長期金利2.830%、30年ぶり高さ　財政リスク・日銀の利上げ遅れ懸念",
+      "url": "https://www.nikkei.com/article/DGXZQOUB0609N0W6A700C2000000/",
+      "date": "2026-07-06T19:56:39+09:00"
+    },
+    {
+      "category": "国際",
+      "title": "トヨタとホンダ、1〜6月の中国販売減　ガソリン車の不振響く",
+      "url": "https://www.nikkei.com/article/DGXZQOGM0654J0W6A700C2000000/",
+      "date": "2026-07-06T19:01:05+09:00"
+    },
+    {
+      "category": "国際",
+      "title": "国連主導のAI会議が初開幕　グテレス総長「参加を行動に」",
+      "url": "https://www.nikkei.com/article/DGXZQOGR042JE0U6A700C2000000/",
+      "date": "2026-07-06T18:29:09+09:00"
+    },
+    {
+      "category": "国際",
+      "title": "中国とロシアが海空の軍事演習開始　太平洋で共同巡航、日本威圧か",
+      "url": "https://www.nikkei.com/article/DGXZQOGM0609R0W6A700C2000000/",
+      "date": "2026-07-06T18:20:36+09:00"
+    },
+    {
+      "category": "国際",
+      "title": "上海フォーミュラEで量産EVを訴求　日産、シェア奪回へ電動技術強調",
+      "url": "https://www.nikkei.com/article/DGXZQOGM0413H0U6A700C2000000/",
+      "date": "2026-07-06T18:12:40+09:00"
+    },
+    {
+      "category": "国際",
+      "title": "サッポロ、カールスバーグとアジアで合弁　1029億円出資し製販で協業",
+      "url": "https://www.nikkei.com/article/DGXZQOUC065JY0W6A700C2000000/",
+      "date": "2026-07-06T18:04:48+09:00"
+    },
+    {
+      "category": "テクノロジー",
+      "title": "H3ロケット、25年12月の打ち上げ失敗で対策案　JAXAが報告",
+      "url": "https://www.nikkei.com/article/DGXZQOSG063PA0W6A700C2000000/",
+      "date": "2026-07-06T16:20:19+09:00"
+    },
+    {
+      "category": "テクノロジー",
+      "title": "中国AIがミュトスいぬ間に躍進　料金は20分の1、米企業も乗り換え",
+      "url": "https://www.nikkei.com/article/DGXZQOGN242Z50U6A620C2000000/",
+      "date": "2026-07-06T11:00:00+09:00"
+    },
+    {
+      "category": "テクノロジー",
+      "title": "自動運転のTuring、126億円調達　米AMDや三菱商事が出資",
+      "url": "https://www.nikkei.com/article/DGXZQOUC30AD40Q6A630C2000000/",
+      "date": "2026-07-06T10:00:00+09:00"
+    },
+    {
+      "category": "テクノロジー",
+      "title": "米国、衰えるにはまだ若い　AI活用が左右する対中覇権争い",
+      "url": "https://www.nikkei.com/article/DGXZQOCD031DI0T00C26A7000000/",
+      "date": "2026-07-06T10:00:00+09:00"
+    },
+    {
+      "category": "テクノロジー",
       "title": "AIがキャリア相談、必要なスキルや研修も紹介　「タレントパレット」",
       "url": "https://www.nikkei.com/article/DGXZQOUC01CNX0R00C26A7000000/",
       "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "総合",
-      "title": "鹿島アントラーズが小学校で食育　地元クラブが伝える食事の大切さ",
-      "url": "https://www.nikkei.com/article/DGXZQOCD02CMY0S6A700C2000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "総合",
-      "title": "千葉ジェッツ、積極投資でBリーグの「勝ち組」に　田村前社長に聞く",
-      "url": "https://www.nikkei.com/article/DGXZQODH17BOU0X10C26A6000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "国際",
-      "title": "イラクの原油増産要求、逆風OPECの火種に　8月は小幅増産で合意",
-      "url": "https://www.nikkei.com/article/DGXZQOGR30B8Q0Q6A630C2000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "国際",
-      "title": "失速の韓国李大統領、8月の与党代表選に賭け　支持獲得へ財閥動かす",
-      "url": "https://www.nikkei.com/article/DGXZQOGM019UR0R00C26A7000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "国際",
-      "title": "NATOの「異端児」トルコ、米欧を橋渡し　脱退示唆のトランプ氏招く",
-      "url": "https://www.nikkei.com/article/DGXZQOGR0376S0T00C26A7000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "国際",
-      "title": "ホルムズは「国際海峡」、日本政府が解釈変更　航行の自由主張",
-      "url": "https://www.nikkei.com/article/DGXZQOUA236IK0T20C26A6000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "国際",
-      "title": "東南アジアで50億円富豪急増　インドネシア首位",
-      "url": "https://www.nikkei.com/article/DGXZQOCB0313M0T00C26A7000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "テクノロジー",
-      "title": "AIがキャリア相談、必要なスキルや研修も紹介　「タレントパレット」",
-      "url": "https://www.nikkei.com/article/DGXZQOUC01CNX0R00C26A7000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "テクノロジー",
-      "title": "産総研、松やにから黒鉛の原料生成　電池の電極材を脱石油化",
-      "url": "https://www.nikkei.com/article/DGXZQOSG016ZB0R00C26A7000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "テクノロジー",
-      "title": "謎の刻印は世界最古のアルファベットか　4400年前の土器に",
-      "url": "https://www.nikkei.com/article/DGXZQOSG185A60Y6A610C2000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "テクノロジー",
-      "title": "日立子会社、独自マーケで受注3倍　予算も組織もない活動の舞台裏",
-      "url": "https://www.nikkei.com/article/DGXZQOUC220AH0S6A620C2000000/",
-      "date": "2026-07-06T05:00:00+09:00"
-    },
-    {
-      "category": "テクノロジー",
-      "title": "NVIDIAのCEOも待ちわびる「量子AI」　究極知は夢の技術か脅威か",
-      "url": "https://www.nikkei.com/article/DGXZQOUC1578N0V10C26A5000000/",
-      "date": "2026-07-06T02:00:00+09:00"
     }
   ],
   "fear_greed": {
-    "vix": 15.9,
+    "vix": 16.3,
     "score": 70,
     "rating": "Greed",
     "rating_jp": "強欲"
   },
-  "kabutan_news": [],
+  "kabutan_news": [
+    {
+      "title": "アルテック、上期経常が黒字浮上で着地・3-5月期も黒字浮上",
+      "url": "https://kabutan.jp/news/?&b=k202607060014"
+    },
+    {
+      "title": "きょくとう、3-5月期(1Q)経常は13％減益・上期計画を超過",
+      "url": "https://kabutan.jp/news/?&b=k202607060013"
+    },
+    {
+      "title": "ミタチ産業、今期経常は31％減益、10円減配へ",
+      "url": "https://kabutan.jp/news/?&b=k202607060011"
+    },
+    {
+      "title": "ジャパニアス、上期経常が29％減益で着地・3-5月期も81％減益",
+      "url": "https://kabutan.jp/news/?&b=k202607060009"
+    },
+    {
+      "title": "ＵＳＭＨ、3-5月期(1Q)経常は赤字転落で着地",
+      "url": "https://kabutan.jp/news/?&b=k202607060008"
+    },
+    {
+      "title": "ミトラＧ、3-5月期(1Q)経常は2.8倍増益で着地",
+      "url": "https://kabutan.jp/news/?&b=k202607060007"
+    },
+    {
+      "title": "カルラ、3-5月期(1Q)経常は10％増益で着地",
+      "url": "https://kabutan.jp/news/?&b=k202607060006"
+    },
+    {
+      "title": "薬王堂ＨＤ、3-5月期(1Q)経常は9％減益で着地",
+      "url": "https://kabutan.jp/news/?&b=k202607060004"
+    },
+    {
+      "title": "ネクステージ、今期経常を13％上方修正・最高益予想を上乗せ",
+      "url": "https://kabutan.jp/news/?&b=k202607060003"
+    },
+    {
+      "title": "トーセイ、上期最終は13％増益で着地",
+      "url": "https://kabutan.jp/news/?&b=k202607060002"
+    }
+  ],
   "tradingview_signals": [
     {
       "code": "4676",
-      "score": 0.333,
-      "signal_jp": "買い",
-      "ma_score": 0.667,
-      "osc_score": 0
+      "score": 0.603,
+      "signal_jp": "強い買い",
+      "ma_score": 0.933,
+      "osc_score": 0.273
     },
     {
       "code": "7270",
-      "score": 0.291,
+      "score": 0.403,
       "signal_jp": "買い",
-      "ma_score": 0.4,
-      "osc_score": 0.182
+      "ma_score": 0.533,
+      "osc_score": 0.273
     },
     {
       "code": "4331",
-      "score": -0.221,
-      "signal_jp": "売り",
-      "ma_score": -0.533,
-      "osc_score": 0.091
-    },
-    {
-      "code": "7172",
-      "score": 0.512,
-      "signal_jp": "強い買い",
-      "ma_score": 0.933,
-      "osc_score": 0.091
-    },
-    {
-      "code": "2181",
-      "score": 0.445,
-      "signal_jp": "買い",
-      "ma_score": 0.8,
-      "osc_score": 0.091
-    },
-    {
-      "code": "3668",
-      "score": 0.382,
-      "signal_jp": "買い",
-      "ma_score": 0.4,
-      "osc_score": 0.364
-    },
-    {
-      "code": "285A",
-      "score": 0.042,
-      "signal_jp": "中立",
-      "ma_score": 0.267,
-      "osc_score": -0.182
-    },
-    {
-      "code": "8306",
-      "score": 0.512,
-      "signal_jp": "強い買い",
-      "ma_score": 0.933,
-      "osc_score": 0.091
-    },
-    {
-      "code": "9984",
-      "score": -0.133,
-      "signal_jp": "売り",
-      "ma_score": -0.267,
-      "osc_score": 0
-    },
-    {
-      "code": "7203",
       "score": 0.024,
       "signal_jp": "中立",
       "ma_score": -0.133,
       "osc_score": 0.182
     },
     {
+      "code": "7172",
+      "score": 0.603,
+      "signal_jp": "強い買い",
+      "ma_score": 0.933,
+      "osc_score": 0.273
+    },
+    {
+      "code": "2181",
+      "score": 0.558,
+      "signal_jp": "強い買い",
+      "ma_score": 0.933,
+      "osc_score": 0.182
+    },
+    {
+      "code": "3668",
+      "score": 0.088,
+      "signal_jp": "中立",
+      "ma_score": 0.267,
+      "osc_score": -0.091
+    },
+    {
+      "code": "285A",
+      "score": 0.021,
+      "signal_jp": "中立",
+      "ma_score": 0.133,
+      "osc_score": -0.091
+    },
+    {
+      "code": "8306",
+      "score": 0.421,
+      "signal_jp": "買い",
+      "ma_score": 0.933,
+      "osc_score": -0.091
+    },
+    {
+      "code": "7203",
+      "score": 0.291,
+      "signal_jp": "買い",
+      "ma_score": 0.4,
+      "osc_score": 0.182
+    },
+    {
+      "code": "9984",
+      "score": -0.291,
+      "signal_jp": "売り",
+      "ma_score": -0.4,
+      "osc_score": -0.182
+    },
+    {
       "code": "8035",
-      "score": 0.267,
+      "score": 0.221,
       "signal_jp": "買い",
       "ma_score": 0.533,
-      "osc_score": 0
+      "osc_score": -0.091
     },
     {
       "code": "9983",
-      "score": 0.512,
+      "score": 0.603,
       "signal_jp": "強い買い",
       "ma_score": 0.933,
-      "osc_score": 0.091
+      "osc_score": 0.273
     },
     {
       "code": "8316",
@@ -355,25 +396,25 @@
       "osc_score": 0.091
     },
     {
-      "code": "6857",
-      "score": -0.091,
-      "signal_jp": "中立",
-      "ma_score": 0,
-      "osc_score": -0.182
-    },
-    {
       "code": "6501",
-      "score": -0.403,
-      "signal_jp": "売り",
-      "ma_score": -0.533,
-      "osc_score": -0.273
+      "score": 0.158,
+      "signal_jp": "買い",
+      "ma_score": 0.133,
+      "osc_score": 0.182
     },
     {
-      "code": "6981",
-      "score": 0.267,
+      "code": "6857",
+      "score": 0.021,
+      "signal_jp": "中立",
+      "ma_score": 0.133,
+      "osc_score": -0.091
+    },
+    {
+      "code": "6758",
+      "score": 0.221,
       "signal_jp": "買い",
       "ma_score": 0.533,
-      "osc_score": 0
+      "osc_score": -0.091
     }
   ],
   "yahoo_board": [
@@ -402,42 +443,113 @@
       "error": "HTTP Error 403: Forbidden"
     }
   ],
-  "tdnet_disclosures": [],
-  "google_news": [
+  "tdnet_disclosures": [
     {
-      "title": "資源循環サバイバル：リサイクル・リユース関連日本株 注目22銘柄 和島英樹 - 週刊エコノミスト Online",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1wWUtRclFwWmhyQ2dwTEpIYVMyT25wWDZJdGZhXzJHSEpWSUY0VG1UZWRYcFF4cW90YjEzeEdDc2ZUUXVkR3VBc29kcW1kNGdPQ3oydzVDWUdTVUtVR1VvYlVBa2Q5amE5dk9XNklXeEhMeDJHd05vNEdHUEJWSWc?oc=5",
-      "published": "Sun, 05 Jul 2026 20:01:21 GMT"
+      "title": "（再訂正・数値データ訂正）「2025年12年期 決算短信〔日本基準〕（連結）」の一部訂正について",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588553.pdf"
     },
     {
-      "title": "防衛装備品輸出で脚光、新ステージ迎える「防衛関連」妙味株6選 ＜株探トップ特集＞ - かぶたん",
+      "title": "第７回新株予約権（行使価額修正条項付）の大量行使に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588551.pdf"
+    },
+    {
+      "title": "第三者割当により発行された第19回新株予約権（行使価額修正条項付）の大量行使に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588476.pdf"
+    },
+    {
+      "title": "株式報酬型ストックオプション（Ｂ種新株予約権）の発行に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588114.pdf"
+    },
+    {
+      "title": "（再訂正）「譲渡制限付株式報酬としての自己株式の処分に関するお知らせ」一部訂正の件",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588358.pdf"
+    },
+    {
+      "title": "第三者割当による第１回無担保社債（私募債）及び第20回新株予約権（行使価額修正条項付）の発行及び第19回新株予約権の一部取得及び消却に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588424.pdf"
+    },
+    {
+      "title": "2026年11月期  第２四半期（中間期）決算短信〔日本基準〕（連結）",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588232.pdf"
+    },
+    {
+      "title": "当社及び当社の子会社の従業員に対する譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588464.pdf"
+    },
+    {
+      "title": "譲渡制限付株式報酬としての自己株式の処分に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588418.pdf"
+    },
+    {
+      "title": "2027年２月期第１四半期決算短信〔日本基準〕（非連結）",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588288.pdf"
+    },
+    {
+      "title": "譲渡制限付株式報酬としての自己株式処分の払込完了に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260703587441.pdf"
+    },
+    {
+      "title": "自己株式の取得状況に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588153.pdf"
+    },
+    {
+      "title": "第三者割当による行使価額修正条項付第３回及び第４回新株予約権（停止指定条項付）の発行に係る払込完了に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260703587369.pdf"
+    },
+    {
+      "title": "自己株式の取得状況に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260706588115.pdf"
+    },
+    {
+      "title": "自己株式の取得状況に関するお知らせ",
+      "url": "https://www.release.tdnet.info/inbs/140120260702587264.pdf"
+    }
+  ],
+  "google_news": [
+    {
+      "title": "日本株買い「まだ続く」 海外勢の買い過去最大、欧米証券幹部に聞く - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9VMjF6MzhsdTludXIwZmVhYTlmOWlybkJZSDhmbk1LcG45NUMzN0x3d3VyWno5czR6dmh3Ni1kUC13ZVRLT2oycFhsMnVwS3BNb1Vzc2VzeHFYTmR0cjZnS0xHZnVhUUZvNmRpag?oc=5",
+      "published": "Mon, 06 Jul 2026 08:30:00 GMT"
+    },
+    {
+      "title": "【今週の日本株】AI・半導体に暗雲？…循環物色すすむ相場の「注目イベント」を整理 - トウシル",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1xMVRFUnNVU0ZoNVB5bXg3Nk9XbVE3YzJwazhfODNpYVNJSjJMckJ0b3NsTFBaVFJ3cVNaUl85WkxXWjdQWWRldExEbDNEMnJWR0pCRklobm9ndw?oc=5",
+      "published": "Mon, 06 Jul 2026 03:20:00 GMT"
+    },
+    {
+      "title": "6日の日本株はTOPIXが最高値を更新､AI以外に買い - 会社四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTFBfWDFOaWV0ZFZ3ZlQwWDMtTndwMWxUTWh4N0g3TU9SeDdZaE14OUVhZ214M3h1NS1uU040aDlnVTZhWTZZUXhrREJOTmpPYllYaHYzVmRjWQ?oc=5",
+      "published": "Mon, 06 Jul 2026 07:20:00 GMT"
+    },
+    {
+      "title": "AI・半導体株に「物色終了」のお知らせ？「転換点」は今週金曜か(トウシル) - Yahoo!ファイナンス",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPOG5IYVpTcjUybHdZbFBxN2lORmswSENRaG92bXFBYUJCM1VORDZ5SWxnU2hzWTAwUUhHV0szcWpadHBTdk94WkFxcDVPZWZXcXlYVUVRT19jT2d2ZE1oNFZXSUxQandYSGhxREFycnBoM296YTF0RHpnWW84QzQ1c2hjc0d6a0k?oc=5",
+      "published": "Mon, 06 Jul 2026 06:15:00 GMT"
+    },
+    {
+      "title": "【新NISA】7月配当取りを狙える、注目の日本株「増配株4選」を実名公開 - 現代ビジネス",
+      "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFBFUjRxYjB1ejRaenVRdXVuR3dLZGU5eTRNUURVS0hNSUVieGQwNlNVX1FuSFpxazl3cGxSaTE4ZWluNExSZlA4RUFoczlCQm8?oc=5",
+      "published": "Sun, 05 Jul 2026 20:00:42 GMT"
+    },
+    {
+      "title": "防衛装備品輸出で脚光、新ステージ迎える「防衛関連」妙味株6選 ＜株探トップ特集＞ - 株探",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE01MC1mQnlfN2NwY2FjSTBJSVpRX2VLMFJzZ3pWY3dvMlpKM2p4aU5aYlgtVnVMMEQ4blZfYzkwTWU2MlFCMkhVS0dWcGtRSTFGZUloeTV2aEphQmVGR2xNOQ?oc=5",
       "published": "Sat, 04 Jul 2026 10:30:00 GMT"
     },
     {
-      "title": "次のキオクシアはどの銘柄？ 大型株でも\"テンバガー\"を狙える時代にNISAで買いたい日本株｢徹底分析｣ - 東洋経済オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBBRFNHZHVMTS1Dems1VjdWdEkyaTUtTTdicWxiZko2enpObTNPTmNFUHQyS25Xd1ZVc1BpN3hObXJrR2JZdXJMS0djbUM4NTM1SmN5aU5IR3ZSTE0?oc=5",
-      "published": "Fri, 03 Jul 2026 08:00:00 GMT"
+      "title": "日本株は上昇トレンド継続でもスピードが鈍る｢3つの根拠｣ - 会社四季報オンライン",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5tc3VVQUxKeWlrN0x3RC1vOGtVel81eXV0X3NvczNMMHV0Zkl4SF9EMElkTE1NX3hCZE51MkxHcnh6NWRQTEdpRG5qakUtQ1o4YURxRDVRUQ?oc=5",
+      "published": "Sun, 05 Jul 2026 22:30:00 GMT"
     },
     {
-      "title": "【日本株週間展望】下落方向、AI設備投資収益性に投資家の視線厳格化（Bloomberg） - Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBTMTY1V0o5Yl9NNUVIM2FrblFfV3k2MG1VUmdVVTl3WHRCR2VCdUNLYk1SbHFpbmhaTU5MNTdaR2d2ckpHMk5oWHVYUnBLNDJOZF8zdE9qb2hDZzkyOEFxajNTSnBfTWhsUWhsUzZOVFFfMXdCQkpFNDB5eURIalk?oc=5",
-      "published": "Fri, 03 Jul 2026 06:55:44 GMT"
+      "title": "7月6日 本日の特選銘柄 －フィスコ日本株分析・ダイジェスト - Yahoo!ファイナンス",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPR1NhLVBBZzNVWjlTc2puM2pqUDlJeTNudm1xNGlvbEtJQXM1elBhYnNnQ3BmblJISXRmUFlUQUs1eENnM21oLXkwQTVtOElWY2dlZEtvZldRQko5dnJWcmd6Sk5Wb1ZZY1N2RWJxRU5NUWdiamZsWFRld2RXSTZ4NGs2UmhCV2M?oc=5",
+      "published": "Sun, 05 Jul 2026 22:59:00 GMT"
     },
     {
-      "title": "日本株ETFの「分配金売り」、1.7兆円規模 活況相場で影響軽微か - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4zYk1zRWFFU21tcm5xb1FMbW5Bb05TV0d0UnZ3UnJDRmZzWXIteVFTR2x0VEtBa2E5TU1nUE9VN2xJUFdvcGRWNVpCV3hzRVVRcjIwNHA5a0t1MVpjWThUM09sNko2U254U2VvVw?oc=5",
-      "published": "Fri, 03 Jul 2026 01:00:00 GMT"
-    },
-    {
-      "title": "2026年後半の日本株戦略：AI半導体の押し目買いと割安株妙味。「循環物色」を考えよう（土信田雅之） - トウシル",
-      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE1icWVNNEhJSm1HZHhTMkFLbzRVanFMeEIzNHlORks0T3RxWDZwNzl0bVBMdkZHaTNvZzJOR29BS0ZabE9Cemx2QU9Melo0eFY2X1hjVHd6MENWQQ?oc=5",
-      "published": "Thu, 02 Jul 2026 23:00:00 GMT"
-    },
-    {
-      "title": "NISAで人気の「日本株」ランキング【2026年7月】楽天証券の「NISA口座(成長投資枠)」で買われている「日本株」の買付金額＆保有残高ランキングを発表！ -",
-      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9Sel9GTFZUT2ZmZmh5Z3JtZTRvSHBXSl9JaDhwckp1WHczc1dtSWZCbGloWTU5TlVXVHM4Rm9SRTAzOU1ObkEyTWVLYVVoS25ZLVI4?oc=5",
-      "published": "Sun, 05 Jul 2026 16:30:21 GMT"
+      "title": "資源循環サバイバル：リサイクル・リユース関連日本株 注目22銘柄 和島英樹 - 週刊エコノミスト Online",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1wWUtRclFwWmhyQ2dwTEpIYVMyT25wWDZJdGZhXzJHSEpWSUY0VG1UZWRYcFF4cW90YjEzeEdDc2ZUUXVkR3VBc29kcW1kNGdPQ3oydzVDWUdTVUtVR1VvYlVBa2Q5amE5dk9XNklXeEhMeDJHd05vNEdHUEJWSWc?oc=5",
+      "published": "Sun, 05 Jul 2026 20:01:21 GMT"
     },
     {
       "title": "夏の風物詩、「ETF分配金売り」で日本株は下がるのか？ 野村證券ストラテジストが解説 - nomura.co.jp",
@@ -445,39 +557,29 @@
       "published": "Fri, 03 Jul 2026 08:00:00 GMT"
     },
     {
-      "title": "10万円以下で買える、高利回り＆低PER〔第1弾〕29社 ＜割安株特集＞ - かぶたん",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5DVDVjdkhkQnRscWhQdnV4OG9VaDl3QlpoWk1NUUZnZ3huWG9MUkVHeVIwblhJd25tSndMQ2o5YVZvYm1ab3Q2Q3pDNUxmdnlHVG9XYTk3TXdSenduVnFJVw?oc=5",
-      "published": "Fri, 03 Jul 2026 10:30:00 GMT"
+      "title": "日経平均大荒れ。半導体・AI関連株は高値波乱、出遅れ小型株に注目（窪田真之） - トウシル",
+      "url": "https://news.google.com/rss/articles/CBMiWkFVX3lxTE54R1Bkc25semloUGNOLXFtTVFsT2JqRU0tckpvNmEyZmZzY25MT3E5NE9Gd3Z1cTYyWjV5ek1nS0Q4Wk40R2R6endMdVlPV2tRc0hYakVfX2VEQQ?oc=5",
+      "published": "Sun, 05 Jul 2026 23:00:00 GMT"
     },
     {
-      "title": "韓国で149兆ウォン売り越しの外国人、日本では104兆ウォン買い越し…アジア半導体マネームーブ（中央日報日本語版） - Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9IS0o1cW5MN2ZuMmI5NXFtcGs4a2F1R1p0SGluRUMwSGR6NTNEZ01fZkxGYTZ0OU13ZWkzbTRXbm1ZWmRxZXJGdmdpamhRcWhaY3pHdWVSNFkzYW55MEJ3SW5JYXlCV2hXa09ReWpnczN6S2xsYmRTWXZZa1Fqck0?oc=5",
-      "published": "Sat, 04 Jul 2026 00:04:41 GMT"
+      "title": "伊藤智洋が読む「日経平均株価・短期シナリオ」 (7月6日記） - 株探",
+      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1QdGRVcnVkT2VadUdlTGc1Vmd2OWhJUTBoRG9xcEdYS3BIMU1KYzFuRVFVZnhSajd4amhRVEpDdmhWcG9wdGVJdDQtRnhCdFU2RmNtWmEtQzFrOTdPT1RVTg?oc=5",
+      "published": "Sun, 05 Jul 2026 23:16:38 GMT"
     },
     {
-      "title": "日経平均伸び悩みか、円は上値試す 今週の市場・予定 - 日本経済新聞",
-      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5SalJDUGx1NzJLTjlKWUp6VXF2d1BzbmJvSXo0XzltZzExZl9kajI0V0F3akUwa3ZxNUxYQk54MjZGd1c0VGlWaE1RS05kbUZWRUhORmpNcFRESWR5YWJUbU8yVzB5a19ETmlJNw?oc=5",
-      "published": "Sun, 05 Jul 2026 09:00:00 GMT"
+      "title": "日経平均株価終値6円安 「ホルムズ正常化」トレードで惑う方向感 - 日本経済新聞",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE00TldORFloYmdNYTVjTkc0UGxsN0d4elZUd3lVbXRsV2cyODBRRFBGMHF3bEUxUm1ha2ZSamNRWG5CZHRGU09ab1V3cldOWE1DamUyTy0tbW5UZUh5YXR1TXJBQnN3bWI4SXZnRQ?oc=5",
+      "published": "Mon, 06 Jul 2026 02:50:01 GMT"
     },
     {
-      "title": "【コラム】日経平均7万円時代 ｢円｣の錯覚・｢％｣の真実 - QUICK Money World",
-      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTFBvQnpUVE5kMVRIUDl5MXRTeHVpV1dfQ3BIcHNMNGI1MjJkWFZwY1lZRDJ6TmxBTUVld1dXWmZvQVJ5UV9hZUhnaElQaGFYcDlBUUdSaV9R?oc=5",
-      "published": "Fri, 03 Jul 2026 11:47:00 GMT"
+      "title": "日経平均は小幅安、バリュー株への物色続く／相場概況(フィスコ) - Yahoo!ファイナンス",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNM1NjWmFGUzh2R0hRb1dIS1lwc3Q5WmR1SU1WRktQNUlaSWlIaW1DUk90aGZXN294d1pwQ3NBaGhHRW45MEEtYWxBbFZVU1MxY0dub1BNcEoxOV8tNmh0eDVDYWg5bEZKU1RMX1NQMHJfZWVNQkdIUndZYjdkMHBkMV80NEJvSHM?oc=5",
+      "published": "Mon, 06 Jul 2026 07:13:00 GMT"
     },
     {
-      "title": "｢チャネル｣の中で規則正しく動く日経平均､今後の推移は？ - 会社四季報オンライン",
-      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE5scXZxN3hVUEVkUmdNV3dLdlBDTmI4VENmOXBWWHRQdXZJWTVDWElNQUxCN2lYckNwdTQzbDFZZXc2OGg0N1VRa3NWV2R2U0ozVXhGUFNldw?oc=5",
-      "published": "Sat, 04 Jul 2026 23:00:00 GMT"
-    },
-    {
-      "title": "日経平均、AI株に急落リスク 週次383円高 株価上昇の裾野は拡大 - ig.com",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMk9vVFVablpDR3RuUDFGTHBRV012RG1WTVlDblU3Q05Rd1dDY0VjTHJUU1FWbXRNb2w4b0VRMHp2ZjlpTEJ3Ym1ORUZZWkxBSEYzQTJXak1odU4tb3c0U1drYmJVY2d1S01YRWZlY3U1MzdCMV9DekdjaGpmTHoyMWR0ak5SeXVuU2VMV0piTk9DbXIxckhVN01iS2JTUWs?oc=5",
-      "published": "Sat, 04 Jul 2026 23:13:18 GMT"
-    },
-    {
-      "title": "「日経平均7万円は高くない」2026年の“昇龍拳相場”で著名投資家が仕込む、エヌビディアの次に爆発する巨大セクター - Yahoo!ニュース",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5IaVVQUUFUTllRNGNlNGs4eXdIaElpNDVXeHl3N2NCUHpQOTRaRDZGc3dEc1FsZGRZVlA5clROZlIxeE5qSGJLejNlaEpzZ1llNUNXMkZ3NDlpNy1rSS1qX1plcWI3M1BSeU9PRS1Nb256eEZ3bk5PNkMyVFIteVU?oc=5",
-      "published": "Sun, 05 Jul 2026 03:10:02 GMT"
+      "title": "（まとめ）日経平均は終盤持ち直すも小幅安の69,737円で反落　今週は主力株の決算に注目 - マネクリ",
+      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE93dmRUSWtvcHZkWEs4bUFtM2FHQWVNZlM4ZC1fRWZCZDVHSmdEX1dQbGE1UE1KTEN2M1A5eGlKWnZ5QjU5aTJXSkhQR2VnbnJLaEJMMtIBV0FVX3lxTFBpNFRHbm1kM3dDN1YyYlJGVE5HV1hiTUFBNW8wV2FQOThta08zb0E2Ui0yMkFqZHNCOFJZWkIwY0JqTFFnMDZHU2M1SzV1REdZTFNaTUktZw?oc=5",
+      "published": "Mon, 06 Jul 2026 07:58:00 GMT"
     }
   ]
 }
