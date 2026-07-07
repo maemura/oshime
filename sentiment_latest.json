@@ -1,12 +1,12 @@
 {
-  "date": "2026-07-06",
+  "date": "2026-07-07",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
+      "count": 4,
       "sources": 2
     },
     {
@@ -26,6 +26,13 @@
     {
       "word": "ドル円",
       "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "TOPIX",
+      "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
@@ -36,22 +43,29 @@
       "word": "半導体",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "count": 6,
+      "sources": 4
     },
     {
       "word": "高配当",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
+      "count": 3,
       "sources": 1
     },
     {
-      "word": "防衛",
+      "word": "決算",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 2
+    },
+    {
+      "word": "銀行",
       "size": "md",
       "mood": "greed",
       "count": 2,
-      "sources": 1
+      "sources": 2
     },
     {
       "word": "不動産",
@@ -61,14 +75,7 @@
       "sources": 1
     },
     {
-      "word": "決算",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
+      "word": "防衛",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -77,9 +84,16 @@
   ],
   "retail": [
     {
-      "word": "銀行",
+      "word": "トヨタ",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
