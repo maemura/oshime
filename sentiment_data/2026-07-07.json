@@ -1,11 +1,55 @@
 {
   "date": "2026-07-07",
-  "collected_at": "2026-07-07 12:12",
+  "collected_at": "2026-07-07 22:33",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 30,
+  "entry_count": 29,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急,日本株空売り激減‼】キオクシア11％暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円161円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BT",
+      "video_url": "https://www.youtube.com/watch?v=KjvmehJ_PZU",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急,日本株空売り激減‼】キオクシア11％暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円161円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BT",
+      "video_url": "https://www.youtube.com/watch?v=KjvmehJ_PZU",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急,日本株空売り激減‼】キオクシア11％暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円161円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BT",
+      "video_url": "https://www.youtube.com/watch?v=KjvmehJ_PZU",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急,日本株空売り激減‼】キオクシア11％暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円161円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BT",
+      "video_url": "https://www.youtube.com/watch?v=KjvmehJ_PZU",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -88,50 +132,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
       "video_url": "https://www.youtube.com/watch?v=anBMhSeLmyA",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
-      "video_url": "https://www.youtube.com/watch?v=LVcU7QmSPXE",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
-      "video_url": "https://www.youtube.com/watch?v=LVcU7QmSPXE",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
-      "video_url": "https://www.youtube.com/watch?v=LVcU7QmSPXE",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株爆益チャンス‼️】キオクシア高値掴み助かるか⁉️ AI半導体株急落で日経平均弱い→バリュー株に資金シフト。円安加速でドル円１６２円。米国株、ナスダック、",
-      "video_url": "https://www.youtube.com/watch?v=LVcU7QmSPXE",
       "topic": "円安",
       "category": "macro",
       "sentiment": "bullish",
@@ -283,17 +283,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "キオクシア-6%で7万5000円台に急落！トヨタ系工場勤務の21歳こでら君が電話ナマ参加でアフリカ株散歩への計画を相談",
-      "video_url": "https://www.youtube.com/watch?v=1XeFxuoaUiY",
-      "topic": "トヨタ",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: トヨタ"
-    },
-    {
-      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "配当利回り3 94% 平均年収2000万円超 ヒューリック 買いか？",
       "video_url": "https://www.youtube.com/watch?v=dDAvVNfnNVk",
@@ -340,8 +329,8 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 8,
-        "bear": 4
+        "bull": 4,
+        "bear": 8
       },
       "株リアルライブ": {
         "bull": 8,
@@ -365,7 +354,7 @@
       },
       "たばたの投資ch": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "つばめ投資顧問": {
         "bull": 2,
@@ -379,38 +368,38 @@
     "by_topic": {
       "日経平均": {
         "count": 4,
-        "sentiment": "bullish",
+        "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 6,
-        "sentiment": "bullish",
+        "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
           "株リアルライブ",
+          "Sho's投資情報局",
           "優待ライダー",
           "ばっちゃまの投資チャンネル"
         ]
       },
       "ナスダック": {
         "count": 3,
-        "sentiment": "bullish",
+        "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ドル円": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "円安": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
           "Sho's投資情報局"
@@ -446,13 +435,6 @@
           "株リアルライブ"
         ]
       },
-      "トヨタ": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
       "配当": {
         "count": 1,
         "sentiment": "bullish",
@@ -481,12 +463,11 @@
       "ナスダック",
       "高配当",
       "決算",
-      "円安",
+      "ドル円",
       "銀行",
       "不動産",
-      "ドル円",
+      "円安",
       "防衛",
-      "トヨタ",
       "配当",
       "TOPIX"
     ]

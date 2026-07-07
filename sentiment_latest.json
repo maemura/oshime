@@ -5,28 +5,28 @@
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 4,
       "sources": 2
     },
     {
       "word": "ナスダック",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "円安",
+      "word": "ドル円",
       "size": "md",
-      "mood": "greed",
+      "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "ドル円",
+      "word": "円安",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -42,7 +42,7 @@
     {
       "word": "半導体",
       "size": "xl",
-      "mood": "greed",
+      "mood": "fear",
       "count": 6,
       "sources": 4
     },
@@ -83,13 +83,6 @@
     }
   ],
   "retail": [
-    {
-      "word": "トヨタ",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
     {
       "word": "配当",
       "size": "sm",
