@@ -1,14 +1,58 @@
 {
   "date": "2026-07-08",
-  "collected_at": "2026-07-08 11:20",
+  "collected_at": "2026-07-08 22:29",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 27,
+  "entry_count": 28,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "【緊急,日本株空売り激減‼】キオクシア暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円162円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=mFeSkphwY1k",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急,日本株空売り激減‼】キオクシア暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円162円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=mFeSkphwY1k",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急,日本株空売り激減‼】キオクシア暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円162円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=mFeSkphwY1k",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急,日本株空売り激減‼】キオクシア暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円162円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=mFeSkphwY1k",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "【緊急事態】日経平均暴落ヤバい‼日本株空売り激減でAI半導体株暴落。キオクシア高値掴み助かるか。ドル円162円推移。原油価格急騰で米国株、ナスダックも下落か。仮",
       "video_url": "https://www.youtube.com/watch?v=u-RpjGw_jJg",
       "topic": "日経平均",
@@ -88,50 +132,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "【緊急,日本株空売り激減‼】キオクシア11％暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円161円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BT",
       "video_url": "https://www.youtube.com/watch?v=KjvmehJ_PZU",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急,日本株空売り激減‼】キオクシア11％暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円161円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BT",
-      "video_url": "https://www.youtube.com/watch?v=v_fMuHGk-iY",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急,日本株空売り激減‼】キオクシア11％暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円161円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BT",
-      "video_url": "https://www.youtube.com/watch?v=v_fMuHGk-iY",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急,日本株空売り激減‼】キオクシア11％暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円161円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BT",
-      "video_url": "https://www.youtube.com/watch?v=v_fMuHGk-iY",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急,日本株空売り激減‼】キオクシア11％暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円161円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BT",
-      "video_url": "https://www.youtube.com/watch?v=v_fMuHGk-iY",
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "bearish",
@@ -229,13 +229,24 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
-      "video_title": "【利回り10%】今なら1000円以下で仕込める優良高配当株3選",
+      "video_title": "【利回り10%】今なら1000円以下で手に入る優良高配当株３選",
       "video_url": "https://www.youtube.com/watch?v=2Nav76uYIw0",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "驚き増配も、なお割安感大！超累進配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=BY7iXlTF_IM",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
     },
     {
       "source": "youtube",
@@ -273,13 +284,13 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "日経先物が6万8000円割れ、キオクシアも寄り付きで7万円割れ",
-      "video_url": "https://www.youtube.com/watch?v=ykYKnrDDmLo",
-      "topic": "日経",
-      "category": "macro",
+      "video_title": "ゲームハードウェア機需要減少...今度任天堂はどうなる？",
+      "video_url": "https://www.youtube.com/watch?v=exT8e9AYUMQ",
+      "topic": "任天堂",
+      "category": "stock",
       "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 日経"
+      "summary": "キーワード: 任天堂"
     },
     {
       "source": "youtube",
@@ -348,17 +359,17 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 6,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
+          "株リアルライブ",
           "優待ライダー",
-          "株リアルライブ"
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -379,16 +390,24 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "決算": {
         "count": 3,
         "sentiment": "bullish",
         "sources": [
+          "株リアルライブ",
+          "優待ライダー"
+        ]
+      },
+      "配当": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
           "優待ライダー",
-          "株リアルライブ"
+          "つばめ投資顧問"
         ]
       },
       "銀行": {
@@ -398,18 +417,11 @@
           "優待ライダー"
         ]
       },
-      "日経": {
+      "任天堂": {
         "count": 1,
         "sentiment": "neutral",
         "sources": [
           "たばたの投資ch"
-        ]
-      },
-      "配当": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "つばめ投資顧問"
         ]
       },
       "不動産": {
@@ -427,9 +439,9 @@
       "ナスダック",
       "ドル円",
       "決算",
-      "銀行",
-      "日経",
       "配当",
+      "銀行",
+      "任天堂",
       "不動産"
     ]
   }

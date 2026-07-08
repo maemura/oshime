@@ -22,13 +22,6 @@
       "mood": "fear",
       "count": 3,
       "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
@@ -54,16 +47,16 @@
       "sources": 2
     },
     {
+      "word": "配当",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "銀行",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -75,5 +68,13 @@
       "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "任天堂",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
