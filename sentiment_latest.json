@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-07",
+  "date": "2026-07-08",
   "mode": "claude",
   "macro": [
     {
@@ -18,22 +18,15 @@
     },
     {
       "word": "ドル円",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
+      "count": 3,
       "sources": 1
     },
     {
-      "word": "円安",
+      "word": "日経",
       "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "TOPIX",
-      "size": "sm",
-      "mood": "greed",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -44,14 +37,14 @@
       "size": "xl",
       "mood": "fear",
       "count": 6,
-      "sources": 4
+      "sources": 3
     },
     {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "決算",
@@ -62,33 +55,25 @@
     },
     {
       "word": "銀行",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "不動産",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "防衛",
       "size": "sm",
-      "mood": "greed",
+      "mood": "fear",
       "count": 1,
       "sources": 1
-    }
-  ],
-  "retail": [
+    },
     {
       "word": "配当",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "不動産",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
-  ]
+  ],
+  "retail": []
 }
