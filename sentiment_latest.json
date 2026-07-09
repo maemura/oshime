@@ -1,20 +1,13 @@
 {
-  "date": "2026-07-08",
+  "date": "2026-07-09",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 4,
       "sources": 2
-    },
-    {
-      "word": "ナスダック",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 1
     },
     {
       "word": "ドル円",
@@ -22,14 +15,35 @@
       "mood": "fear",
       "count": 3,
       "sources": 1
+    },
+    {
+      "word": "ナスダック",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "トランプ",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
     {
       "word": "半導体",
       "size": "xl",
-      "mood": "fear",
-      "count": 6,
+      "mood": "calm",
+      "count": 5,
       "sources": 3
     },
     {
@@ -42,28 +56,21 @@
     {
       "word": "決算",
       "size": "lg",
-      "mood": "greed",
+      "mood": "fear",
       "count": 3,
-      "sources": 2
+      "sources": 3
     },
     {
       "word": "配当",
-      "size": "md",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "銀行",
       "size": "sm",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "不動産",
-      "size": "sm",
-      "mood": "calm",
       "count": 1,
       "sources": 1
     }
@@ -72,7 +79,7 @@
     {
       "word": "任天堂",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
