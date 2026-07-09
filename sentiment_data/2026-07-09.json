@@ -1,14 +1,47 @@
 {
   "date": "2026-07-09",
-  "collected_at": "2026-07-09 12:18",
+  "collected_at": "2026-07-09 22:46",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 26,
+  "entry_count": 24,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "【日経平均騙し上げか⁉】ベインがキオクシア全売却⁉海外投資家が日本株3600億円買いに違和感→AI半導体株戻り売り警戒か。。空売り激減でVIX警戒。ドル円162",
+      "video_url": "https://www.youtube.com/watch?v=pTUUM0IwMn4",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均騙し上げか⁉】ベインがキオクシア全売却⁉海外投資家が日本株3600億円買いに違和感→AI半導体株戻り売り警戒か。。空売り激減でVIX警戒。ドル円162",
+      "video_url": "https://www.youtube.com/watch?v=pTUUM0IwMn4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均騙し上げか⁉】ベインがキオクシア全売却⁉海外投資家が日本株3600億円買いに違和感→AI半導体株戻り売り警戒か。。空売り激減でVIX警戒。ドル円162",
+      "video_url": "https://www.youtube.com/watch?v=pTUUM0IwMn4",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "【日経平均騙し上げか⁉】ベインがキオクシア全売却。海外投資家が日本株3600億円買いに違和感→AI半導体株戻り売り警戒か。。空売り激減でVIX警戒。ドル円162",
       "video_url": "https://www.youtube.com/watch?v=nakQ_zMBg0I",
       "topic": "日経平均",
@@ -77,50 +110,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "【緊急,日本株空売り激減‼】キオクシア暴落ヤバい。AI半導体株急落で日経平均崩壊か。ドル円162円推移。米国株、ナスダック、半導体株どうなる。仮想通貨BTC弱",
       "video_url": "https://www.youtube.com/watch?v=mFeSkphwY1k",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急事態】日経平均暴落ヤバい‼日本株空売り激減でAI半導体株暴落。キオクシア高値掴み助かるか。ドル円162円推移。原油価格急騰で米国株、ナスダックも下落か。仮",
-      "video_url": "https://www.youtube.com/watch?v=u-RpjGw_jJg",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急事態】日経平均暴落ヤバい‼日本株空売り激減でAI半導体株暴落。キオクシア高値掴み助かるか。ドル円162円推移。原油価格急騰で米国株、ナスダックも下落か。仮",
-      "video_url": "https://www.youtube.com/watch?v=u-RpjGw_jJg",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急事態】日経平均暴落ヤバい‼日本株空売り激減でAI半導体株暴落。キオクシア高値掴み助かるか。ドル円162円推移。原油価格急騰で米国株、ナスダックも下落か。仮",
-      "video_url": "https://www.youtube.com/watch?v=u-RpjGw_jJg",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急事態】日経平均暴落ヤバい‼日本株空売り激減でAI半導体株暴落。キオクシア高値掴み助かるか。ドル円162円推移。原油価格急騰で米国株、ナスダックも下落か。仮",
-      "video_url": "https://www.youtube.com/watch?v=u-RpjGw_jJg",
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "bearish",
@@ -272,17 +261,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【長期リスク】任天堂への投資は本当に安全なのか？",
-      "video_url": "https://www.youtube.com/watch?v=LUt679BP_Dc",
-      "topic": "任天堂",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 任天堂"
-    },
-    {
-      "source": "youtube",
       "channel": "STOCKVOICE",
       "video_title": "米国テック株に注目！半導体ブームの行方【本日のデリバティブ】 7月9日 岩井コスモ証券 有沢正一さん",
       "video_url": "https://www.youtube.com/watch?v=sqGAakdt3UA",
@@ -297,7 +275,7 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 8
+        "bear": 4
       },
       "株リアルライブ": {
         "bull": 2,
@@ -321,7 +299,7 @@
       },
       "たばたの投資ch": {
         "bull": 1,
-        "bear": 1
+        "bear": 0
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -337,28 +315,28 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
         "count": 5,
         "sentiment": "neutral",
         "sources": [
-          "株リアルライブ",
           "STOCKVOICE",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "株リアルライブ"
         ]
       },
       "ドル円": {
         "count": 3,
-        "sentiment": "bearish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ナスダック": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -368,17 +346,17 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "トレードラボ"
+          "トレードラボ",
+          "株リアルライブ"
         ]
       },
       "決算": {
         "count": 3,
         "sentiment": "bearish",
         "sources": [
+          "優待ライダー",
           "株リアルライブ",
-          "ひげづら株ちゃんねる",
-          "優待ライダー"
+          "ひげづら株ちゃんねる"
         ]
       },
       "トランプ": {
@@ -408,13 +386,6 @@
         "sources": [
           "たばたの投資ch"
         ]
-      },
-      "任天堂": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
-        ]
       }
     },
     "hot_words": [
@@ -427,8 +398,7 @@
       "トランプ",
       "配当",
       "銀行",
-      "日経",
-      "任天堂"
+      "日経"
     ]
   }
 }

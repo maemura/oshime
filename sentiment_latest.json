@@ -12,15 +12,15 @@
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
     {
       "word": "ナスダック",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
+      "count": 1,
       "sources": 1
     },
     {
@@ -75,13 +75,5 @@
       "sources": 1
     }
   ],
-  "retail": [
-    {
-      "word": "任天堂",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    }
-  ]
+  "retail": []
 }
