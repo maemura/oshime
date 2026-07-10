@@ -3,13 +3,6 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "日経平均",
-      "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 2
-    },
-    {
       "word": "ドル円",
       "size": "lg",
       "mood": "calm",
@@ -17,11 +10,11 @@
       "sources": 1
     },
     {
-      "word": "ナスダック",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "word": "日経平均",
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 2
     },
     {
       "word": "金利",
