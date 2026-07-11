@@ -1,15 +1,15 @@
 {
   "date": "2026-07-11",
-  "collected_at": "2026-07-11 10:37",
+  "collected_at": "2026-07-11 22:10",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 21,
+  "entry_count": 18,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【日本株に違和感】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移。米国株上昇",
+      "video_title": "【これ来たら日本株ヤバい‼️】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移",
       "video_url": "https://www.youtube.com/watch?v=BP-NtAUD5Wg",
       "topic": "日経平均",
       "category": "macro",
@@ -20,7 +20,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【日本株に違和感】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移。米国株上昇",
+      "video_title": "【これ来たら日本株ヤバい‼️】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移",
       "video_url": "https://www.youtube.com/watch?v=BP-NtAUD5Wg",
       "topic": "半導体",
       "category": "sector",
@@ -31,7 +31,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【日本株に違和感】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移。米国株上昇",
+      "video_title": "【これ来たら日本株ヤバい‼️】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移",
       "video_url": "https://www.youtube.com/watch?v=BP-NtAUD5Wg",
       "topic": "ドル円",
       "category": "macro",
@@ -42,7 +42,7 @@
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
-      "video_title": "【日本株に違和感】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移。米国株上昇",
+      "video_title": "【これ来たら日本株ヤバい‼️】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移",
       "video_url": "https://www.youtube.com/watch?v=BP-NtAUD5Wg",
       "topic": "決算",
       "category": "event",
@@ -151,17 +151,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "片山晃氏が14％の大量保有。ファーストリテイリング上方修正。セブン＆アイ上方修正。ローツェ増益。～あす上がる株　2026年７月９日（木）に上がる銘柄。最新の日本",
-      "video_url": "https://www.youtube.com/watch?v=bQ6eTJeDCUE",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "あの1年ちょいで30％下落した有名株ついに決算で急騰し始めたぞ！",
       "video_url": "https://www.youtube.com/watch?v=wKdvabsIbk4",
@@ -170,17 +159,6 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "日経平均株価ついに25日線割れッ！今後のキオクシアはこう動く？",
-      "video_url": "https://www.youtube.com/watch?v=vYK2GF9OuWw",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
     },
     {
       "source": "youtube",
@@ -217,17 +195,6 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "驚き増配も、なお割安感大！超累進配当銘柄",
-      "video_url": "https://www.youtube.com/watch?v=BY7iXlTF_IM",
-      "topic": "配当",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 配当"
-    },
-    {
-      "source": "youtube",
       "channel": "STOCKVOICE",
       "video_title": "片山大臣発言で円高、持続性はいかに？【FXフォーカス】 7月10日 外為どっとコム総合研究所 神田卓也さん",
       "video_url": "https://www.youtube.com/watch?v=BXOuSvCHoYQ",
@@ -245,7 +212,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -279,11 +246,10 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 3,
+        "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
@@ -304,13 +270,13 @@
         "count": 3,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
           "ひげづら株ちゃんねる",
+          "Sho's投資情報局",
           "株リアルライブ"
         ]
       },
       "高配当": {
-        "count": 5,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
           "トレードラボ",
@@ -331,13 +297,6 @@
           "ばっちゃまの投資チャンネル"
         ]
       },
-      "配当": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "優待ライダー"
-        ]
-      },
       "円高": {
         "count": 1,
         "sentiment": "neutral",
@@ -348,13 +307,12 @@
     },
     "hot_words": [
       "高配当",
-      "日経平均",
       "半導体",
       "ドル円",
       "決算",
+      "日経平均",
       "金利",
       "トランプ",
-      "配当",
       "円高"
     ]
   }
