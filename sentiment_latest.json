@@ -5,23 +5,16 @@
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "円安",
-      "size": "md",
       "mood": "fear",
-      "count": 2,
+      "count": 4,
       "sources": 2
     },
     {
-      "word": "ドル円",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "word": "円安",
+      "size": "lg",
+      "mood": "fear",
+      "count": 3,
+      "sources": 2
     },
     {
       "word": "トランプ",
@@ -33,6 +26,13 @@
   ],
   "institutional": [
     {
+      "word": "半導体",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 2
+    },
+    {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
@@ -40,32 +40,11 @@
       "sources": 3
     },
     {
-      "word": "半導体",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 1
-    },
-    {
       "word": "決算",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 3
-    },
-    {
-      "word": "メガバンク",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "銀行",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     }
   ],
   "retail": []

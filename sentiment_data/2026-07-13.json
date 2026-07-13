@@ -1,11 +1,44 @@
 {
   "date": "2026-07-13",
-  "collected_at": "2026-07-13 12:18",
+  "collected_at": "2026-07-13 22:15",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 19,
+  "entry_count": 18,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=bJog98tpCLk",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=bJog98tpCLk",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=bJog98tpCLk",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -60,50 +93,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【これ来たら日本株ヤバい‼️】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移",
-      "video_url": "https://www.youtube.com/watch?v=BP-NtAUD5Wg",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【これ来たら日本株ヤバい‼️】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移",
-      "video_url": "https://www.youtube.com/watch?v=BP-NtAUD5Wg",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【これ来たら日本株ヤバい‼️】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移",
-      "video_url": "https://www.youtube.com/watch?v=BP-NtAUD5Wg",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【これ来たら日本株ヤバい‼️】日経平均上昇続くか⁉️ファストリ好決算で急落。キオクシア乱高下でAI半導体株上昇続くか。空売り激減でVIX警戒。ドル円161円推移",
-      "video_url": "https://www.youtube.com/watch?v=BP-NtAUD5Wg",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -152,17 +141,6 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
-      "video_title": "絶好調メガバンク株が陥る急落パターン３選",
-      "video_url": "https://www.youtube.com/watch?v=gdm1sk1zuJE",
-      "topic": "メガバンク",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: メガバンク"
-    },
-    {
-      "source": "youtube",
-      "channel": "トレードラボ",
       "video_title": "【利回り10%】今なら1000円以下で手に入る優良高配当株３選#shorts",
       "video_url": "https://www.youtube.com/watch?v=Ey5_D3ligIs",
       "topic": "高配当",
@@ -196,13 +174,24 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "メガバン買うなら、この銀行一択です!!",
-      "video_url": "https://www.youtube.com/watch?v=VvDmk3VV4hw",
-      "topic": "銀行",
+      "video_title": "今年の日経平均は7万円台が天井か！？",
+      "video_url": "https://www.youtube.com/watch?v=gQAUE0iYGw4",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "半導体株に嫌な兆しが。。。【カテキンさん】",
+      "video_url": "https://www.youtube.com/watch?v=Uz5bCuK96gg",
+      "topic": "半導体",
       "category": "sector",
       "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 銀行"
+      "summary": "キーワード: 半導体"
     },
     {
       "source": "youtube",
@@ -220,7 +209,7 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 3
+        "bear": 6
       },
       "株リアルライブ": {
         "bull": 3,
@@ -232,7 +221,7 @@
       },
       "トレードラボ": {
         "bull": 1,
-        "bear": 1
+        "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
         "bull": 0,
@@ -244,7 +233,7 @@
       },
       "たばたの投資ch": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -257,57 +246,44 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 3,
-        "sentiment": "neutral",
+        "count": 4,
+        "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "たばたの投資ch"
         ]
       },
       "半導体": {
-        "count": 3,
-        "sentiment": "neutral",
+        "count": 4,
+        "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "たばたの投資ch"
         ]
       },
       "円安": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局",
           "STOCKVOICE"
         ]
       },
-      "ドル円": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "Sho's投資情報局"
-        ]
-      },
-      "決算": {
-        "count": 3,
-        "sentiment": "neutral",
-        "sources": [
-          "Sho's投資情報局",
-          "株リアルライブ",
-          "ひげづら株ちゃんねる"
-        ]
-      },
       "高配当": {
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
           "優待ライダー",
-          "トレードラボ"
+          "トレードラボ",
+          "株リアルライブ"
         ]
       },
-      "メガバンク": {
-        "count": 1,
-        "sentiment": "bearish",
+      "決算": {
+        "count": 2,
+        "sentiment": "bullish",
         "sources": [
-          "トレードラボ"
+          "株リアルライブ",
+          "ひげづら株ちゃんねる"
         ]
       },
       "トランプ": {
@@ -316,25 +292,15 @@
         "sources": [
           "ばっちゃまの投資チャンネル"
         ]
-      },
-      "銀行": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
-        ]
       }
     },
     "hot_words": [
-      "高配当",
       "日経平均",
       "半導体",
-      "決算",
+      "高配当",
       "円安",
-      "ドル円",
-      "メガバンク",
-      "トランプ",
-      "銀行"
+      "決算",
+      "トランプ"
     ]
   }
 }
