@@ -1,0 +1,307 @@
+{
+  "date": "2026-07-14",
+  "collected_at": "2026-07-14 10:59",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 17,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株空売り激減‼️】日経平均CPIで投げ売り加速か⁉AI半導体株急落でキオクシア大荒れヤバい‼ドル円162円で海外勢も日本株売りか。中東情勢悪化で米国株、仮",
+      "video_url": "https://www.youtube.com/watch?v=LaP8tccQGCQ",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株空売り激減‼️】日経平均CPIで投げ売り加速か⁉AI半導体株急落でキオクシア大荒れヤバい‼ドル円162円で海外勢も日本株売りか。中東情勢悪化で米国株、仮",
+      "video_url": "https://www.youtube.com/watch?v=LaP8tccQGCQ",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株空売り激減‼️】日経平均CPIで投げ売り加速か⁉AI半導体株急落でキオクシア大荒れヤバい‼ドル円162円で海外勢も日本株売りか。中東情勢悪化で米国株、仮",
+      "video_url": "https://www.youtube.com/watch?v=LaP8tccQGCQ",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=bJog98tpCLk",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=bJog98tpCLk",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=bJog98tpCLk",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=DwzMRo4lEpY",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=DwzMRo4lEpY",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=DwzMRo4lEpY",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "オリエンタルランドが急騰。安川電機が-11%大幅続落。エーザイ、アルツハイマー注射剤FDA承認。原油大幅上昇！2026年７月１４日（火）～明日上がる株。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=P3Ps8zznRtE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ＴＳＭＣ、過去最高益を発表。三菱UFJが日本株トップに。安川電機S安。マネーフォワード上方修正。～あす上がる株　2026年７月１４日（火）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=oIeueZDjfdE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "本日の好決算２選 / キオクシア株の底打ちは近い！？SKハイニックス反発継続なるか",
+      "video_url": "https://www.youtube.com/watch?v=O3VXLY0YHOY",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "安川電機が決算で大コケ！株価急落もフィジカルAIの期待感は継続？",
+      "video_url": "https://www.youtube.com/watch?v=8D40DJOmqzg",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "絶好調メガバンク株が陥る急落パターン３選",
+      "video_url": "https://www.youtube.com/watch?v=gdm1sk1zuJE",
+      "topic": "メガバンク",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: メガバンク"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【利回り10%】今なら1000円以下で手に入る優良高配当株３選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=Ey5_D3ligIs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "ホルムズ海峡再封鎖で暴落すれば買い！注目高配当１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=O6auUpDhuSo",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "長期金利上昇の背景と片山GPIF発言のポイント【FXフォーカス】 7月14日 ADVANCE ＹＥＮ蔵さん",
+      "video_url": "https://www.youtube.com/watch?v=qJ0bQBd1ZRw",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 0,
+        "bear": 9
+      },
+      "株リアルライブ": {
+        "bull": 2,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 1,
+        "bear": 0
+      },
+      "トレードラボ": {
+        "bull": 1,
+        "bear": 1
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 0
+      },
+      "STOCKVOICE": {
+        "bull": 1,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "半導体": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "ドル円": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "円安": {
+        "count": 2,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 4,
+        "sentiment": "bullish",
+        "sources": [
+          "優待ライダー",
+          "トレードラボ",
+          "株リアルライブ"
+        ]
+      },
+      "決算": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "メガバンク": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "トレードラボ"
+        ]
+      },
+      "金利": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "STOCKVOICE"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "日経平均",
+      "半導体",
+      "円安",
+      "決算",
+      "ドル円",
+      "メガバンク",
+      "金利"
+    ]
+  }
+}
