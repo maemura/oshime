@@ -10,14 +10,14 @@
       "sources": 1
     },
     {
-      "word": "円安",
+      "word": "ドル円",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "ドル円",
+      "word": "円安",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -34,9 +34,9 @@
   "institutional": [
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
+      "count": 5,
       "sources": 3
     },
     {
@@ -55,11 +55,19 @@
     },
     {
       "word": "メガバンク",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
+      "count": 2,
+      "sources": 2
+    }
+  ],
+  "retail": [
+    {
+      "word": "NVIDIA",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
-  ],
-  "retail": []
+  ]
 }

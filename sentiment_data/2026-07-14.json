@@ -1,11 +1,44 @@
 {
   "date": "2026-07-14",
-  "collected_at": "2026-07-14 10:59",
+  "collected_at": "2026-07-14 22:26",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 17,
+  "entry_count": 20,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株空売り激減‼️】日経平均CPIで投げ売り加速か⁉AI半導体株急落でキオクシア大荒れヤバい‼ドル円162円で海外勢も日本株売りか。中東情勢悪化で米国株、仮",
+      "video_url": "https://www.youtube.com/watch?v=iMsLmSIm5VE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株空売り激減‼️】日経平均CPIで投げ売り加速か⁉AI半導体株急落でキオクシア大荒れヤバい‼ドル円162円で海外勢も日本株売りか。中東情勢悪化で米国株、仮",
+      "video_url": "https://www.youtube.com/watch?v=iMsLmSIm5VE",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株空売り激減‼️】日経平均CPIで投げ売り加速か⁉AI半導体株急落でキオクシア大荒れヤバい‼ドル円162円で海外勢も日本株売りか。中東情勢悪化で米国株、仮",
+      "video_url": "https://www.youtube.com/watch?v=iMsLmSIm5VE",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -74,36 +107,25 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
-      "video_url": "https://www.youtube.com/watch?v=DwzMRo4lEpY",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
+      "channel": "株リアルライブ",
+      "video_title": "三菱重工がNVIDIAと提携。『GO』が大増益。増配が大量。 安川電機が大幅続落。原油８０ドル突破～あす上がる株　2026年７月１５日（火）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=fjVEqbw9p6I",
+      "topic": "NVIDIA",
+      "category": "stock",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
+      "summary": "キーワード: NVIDIA"
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
-      "video_url": "https://www.youtube.com/watch?v=DwzMRo4lEpY",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "三菱重工がNVIDIAと提携。『GO』が大増益。増配が大量。 安川電機が大幅続落。原油８０ドル突破～あす上がる株　2026年７月１５日（火）に上がる銘柄。最新の",
+      "video_url": "https://www.youtube.com/watch?v=fjVEqbw9p6I",
+      "topic": "高配当",
       "category": "sector",
-      "sentiment": "bearish",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株緊急事態‼️】キオクシア13％大暴落ヤバい‼AI半導体株急落、空売り激減で日経平均1315円安。ドル円162円で海外勢も日本株売りか。米国株、仮想通貨B",
-      "video_url": "https://www.youtube.com/watch?v=DwzMRo4lEpY",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -152,7 +174,7 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
-      "video_title": "絶好調メガバンク株が陥る急落パターン３選",
+      "video_title": "絶好調メガバンク株が突然急落するパターン３選",
       "video_url": "https://www.youtube.com/watch?v=gdm1sk1zuJE",
       "topic": "メガバンク",
       "category": "sector",
@@ -170,6 +192,17 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "大幅減配から増配復活か！？メガバンク売りたい・・",
+      "video_url": "https://www.youtube.com/watch?v=YBRBGfBjd6c",
+      "topic": "メガバンク",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: メガバンク"
     },
     {
       "source": "youtube",
@@ -201,7 +234,7 @@
         "bear": 9
       },
       "株リアルライブ": {
-        "bull": 2,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -218,7 +251,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -249,25 +282,32 @@
         ]
       },
       "ドル円": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "Sho's投資情報局"
-        ]
-      },
-      "円安": {
         "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
-      "高配当": {
-        "count": 4,
+      "円安": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "NVIDIA": {
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
-          "優待ライダー",
+          "株リアルライブ"
+        ]
+      },
+      "高配当": {
+        "count": 5,
+        "sentiment": "bullish",
+        "sources": [
           "トレードラボ",
+          "優待ライダー",
           "株リアルライブ"
         ]
       },
@@ -279,10 +319,11 @@
         ]
       },
       "メガバンク": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
-          "トレードラボ"
+          "トレードラボ",
+          "優待ライダー"
         ]
       },
       "金利": {
@@ -297,10 +338,11 @@
       "高配当",
       "日経平均",
       "半導体",
-      "円安",
-      "決算",
       "ドル円",
+      "決算",
       "メガバンク",
+      "円安",
+      "NVIDIA",
       "金利"
     ]
   }
