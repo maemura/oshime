@@ -1,7 +1,14 @@
 {
-  "date": "2026-07-14",
+  "date": "2026-07-15",
   "mode": "claude",
   "macro": [
+    {
+      "word": "ドル円",
+      "size": "lg",
+      "mood": "calm",
+      "count": 4,
+      "sources": 2
+    },
     {
       "word": "日経平均",
       "size": "lg",
@@ -10,21 +17,14 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "円安",
+      "word": "日経",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "金利",
+      "word": "円高",
       "size": "sm",
       "mood": "greed",
       "count": 1,
@@ -48,10 +48,10 @@
     },
     {
       "word": "決算",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 1
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 2
     },
     {
       "word": "メガバンク",
@@ -59,6 +59,13 @@
       "mood": "fear",
       "count": 2,
       "sources": 2
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
