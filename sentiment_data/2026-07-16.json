@@ -1,11 +1,55 @@
 {
   "date": "2026-07-16",
-  "collected_at": "2026-07-16 11:14",
+  "collected_at": "2026-07-16 22:26",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 27,
+  "entry_count": 29,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急、日本株大暴落‼】キオクシア15％暴落ヤバい‼AI半導体株急落で日経平均1915円安。空売り激減で投げ売り加速。ドル円162円推移。米国株、ハイテク株もT",
+      "video_url": "https://www.youtube.com/watch?v=751sEsM98vw",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急、日本株大暴落‼】キオクシア15％暴落ヤバい‼AI半導体株急落で日経平均1915円安。空売り激減で投げ売り加速。ドル円162円推移。米国株、ハイテク株もT",
+      "video_url": "https://www.youtube.com/watch?v=751sEsM98vw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急、日本株大暴落‼】キオクシア15％暴落ヤバい‼AI半導体株急落で日経平均1915円安。空売り激減で投げ売り加速。ドル円162円推移。米国株、ハイテク株もT",
+      "video_url": "https://www.youtube.com/watch?v=751sEsM98vw",
+      "topic": "円安",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円安"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急、日本株大暴落‼】キオクシア15％暴落ヤバい‼AI半導体株急落で日経平均1915円安。空売り激減で投げ売り加速。ドル円162円推移。米国株、ハイテク株もT",
+      "video_url": "https://www.youtube.com/watch?v=751sEsM98vw",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -88,50 +132,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "【日本株騙し上げか⁉】AI半導体株急騰で日経平均1000円続伸。空売り激減で騙し上げ警戒か⁉ASML決算でレーザーテック急騰。ドル円162円。中東情勢悪化で米国",
       "video_url": "https://www.youtube.com/watch?v=phD5qHtG4tE",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株騙し上げか⁉️】AI半導体株急騰で日経平均1000円続伸。空売り激減警戒か⁉ASML決算でレーザーテック急騰。ドル円162円。中東情勢悪化で米国株、仮想",
-      "video_url": "https://www.youtube.com/watch?v=8ZMCgNAIigc",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株騙し上げか⁉️】AI半導体株急騰で日経平均1000円続伸。空売り激減警戒か⁉ASML決算でレーザーテック急騰。ドル円162円。中東情勢悪化で米国株、仮想",
-      "video_url": "https://www.youtube.com/watch?v=8ZMCgNAIigc",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株騙し上げか⁉️】AI半導体株急騰で日経平均1000円続伸。空売り激減警戒か⁉ASML決算でレーザーテック急騰。ドル円162円。中東情勢悪化で米国株、仮想",
-      "video_url": "https://www.youtube.com/watch?v=8ZMCgNAIigc",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株騙し上げか⁉️】AI半導体株急騰で日経平均1000円続伸。空売り激減警戒か⁉ASML決算でレーザーテック急騰。ドル円162円。中東情勢悪化で米国株、仮想",
-      "video_url": "https://www.youtube.com/watch?v=8ZMCgNAIigc",
       "topic": "決算",
       "category": "event",
       "sentiment": "bearish",
@@ -251,6 +251,28 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "累進配当銘柄で本日優待爆誕！半導体暴落も",
+      "video_url": "https://www.youtube.com/watch?v=l6COtDXeXoo",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "累進配当銘柄で本日優待爆誕！半導体暴落も",
+      "video_url": "https://www.youtube.com/watch?v=l6COtDXeXoo",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "大幅減配から増配復活か！？メガバンク売りたい・・",
       "video_url": "https://www.youtube.com/watch?v=YBRBGfBjd6c",
       "topic": "メガバンク",
@@ -328,7 +350,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 1
+        "bear": 3
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -352,15 +374,16 @@
         ]
       },
       "半導体": {
-        "count": 4,
+        "count": 5,
         "sentiment": "bearish",
         "sources": [
           "つばめ投資顧問",
+          "優待ライダー",
           "Sho's投資情報局"
         ]
       },
       "円安": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -375,7 +398,7 @@
         ]
       },
       "ドル円": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "STOCKVOICE",
@@ -408,7 +431,14 @@
         "count": 2,
         "sentiment": "bearish",
         "sources": [
-          "トレードラボ",
+          "優待ライダー",
+          "トレードラボ"
+        ]
+      },
+      "配当": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
           "優待ライダー"
         ]
       },
@@ -428,15 +458,16 @@
       }
     },
     "hot_words": [
+      "半導体",
       "決算",
       "高配当",
-      "半導体",
       "日経平均",
+      "円安",
       "ドル円",
       "メガバンク",
-      "円安",
       "NVIDIA",
       "AI関連",
+      "配当",
       "トヨタ",
       "ソニー"
     ]

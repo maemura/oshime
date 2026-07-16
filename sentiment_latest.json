@@ -10,21 +10,28 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
-      "size": "lg",
+      "word": "円安",
+      "size": "md",
       "mood": "fear",
-      "count": 3,
-      "sources": 2
+      "count": 2,
+      "sources": 1
     },
     {
-      "word": "円安",
-      "size": "sm",
+      "word": "ドル円",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     }
   ],
   "institutional": [
+    {
+      "word": "半導体",
+      "size": "xl",
+      "mood": "fear",
+      "count": 5,
+      "sources": 3
+    },
     {
       "word": "決算",
       "size": "xl",
@@ -40,13 +47,6 @@
       "sources": 2
     },
     {
-      "word": "半導体",
-      "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
-    },
-    {
       "word": "メガバンク",
       "size": "md",
       "mood": "fear",
@@ -57,6 +57,13 @@
       "word": "AI関連",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
