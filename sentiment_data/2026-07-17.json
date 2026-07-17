@@ -1,6 +1,6 @@
 {
   "date": "2026-07-17",
-  "collected_at": "2026-07-17 11:00",
+  "collected_at": "2026-07-17 22:10",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -141,6 +141,28 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "キオクシアに370億円の賠償命令。日経-4%超急落、その原因。ＳＵＭＣＯがストップ安。～あす上がる株　2026年７月２１日（火）に上がる銘柄。最新の日本株情報。",
+      "video_url": "https://www.youtube.com/watch?v=smnFQ4PqIYA",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "キオクシアに370億円の賠償命令。日経-4%超急落、その原因。ＳＵＭＣＯがストップ安。～あす上がる株　2026年７月２１日（火）に上がる銘柄。最新の日本株情報。",
+      "video_url": "https://www.youtube.com/watch?v=smnFQ4PqIYA",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "キオクシア、一時ストップ安。セブン＆アイ、東欧１万３千店舗報道。サイゼリヤ絶好調。ＢｉｔｃｏｉｎＪ30%急落。2026年７月１７日（金）～明日上がる株。最新の日",
       "video_url": "https://www.youtube.com/watch?v=gubOYKl1Pc4",
       "topic": "高配当",
@@ -165,17 +187,6 @@
       "channel": "株リアルライブ",
       "video_title": "NVIDIA技術で富士通、ファナック、安川電機、川崎重工がフィジカルＡＩ。キオクシア-急落。～あす上がる株　2026年７月１７日（金）に上がる銘柄。最新の日本株",
       "video_url": "https://www.youtube.com/watch?v=FouYdBhDWHs",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "本日午後３時注意！ニチレイ復活。韓国の規制懸念でキオクシア-14%急落。2026年７月１６日（木）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ情報",
-      "video_url": "https://www.youtube.com/watch?v=BmvvpTsBSA4",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -239,14 +250,14 @@
     },
     {
       "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "【利回り10%】今なら1000円以下で手に入る優良高配当株３選#shorts",
-      "video_url": "https://www.youtube.com/watch?v=Ey5_D3ligIs",
-      "topic": "高配当",
+      "channel": "優待ライダー",
+      "video_title": "日本株大暴落でキオクシアS安！銀行地獄絵図も",
+      "video_url": "https://www.youtube.com/watch?v=1MuYmAr8Pbw",
+      "topic": "銀行",
       "category": "sector",
-      "sentiment": "bullish",
+      "sentiment": "bearish",
       "confidence": 0.4,
-      "summary": "キーワード: 高配当"
+      "summary": "キーワード: 銀行"
     },
     {
       "source": "youtube",
@@ -269,17 +280,6 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "大幅減配から増配復活か！？メガバンク売りたい・・",
-      "video_url": "https://www.youtube.com/watch?v=YBRBGfBjd6c",
-      "topic": "メガバンク",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: メガバンク"
     },
     {
       "source": "youtube",
@@ -311,7 +311,7 @@
         "bear": 12
       },
       "株リアルライブ": {
-        "bull": 4,
+        "bull": 5,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -319,7 +319,7 @@
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 3,
+        "bull": 2,
         "bear": 1
       },
       "ばっちゃまの投資チャンネル": {
@@ -381,8 +381,16 @@
           "Sho's投資情報局"
         ]
       },
+      "日経": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "たばたの投資ch",
+          "株リアルライブ"
+        ]
+      },
       "高配当": {
-        "count": 5,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
           "トレードラボ",
@@ -404,10 +412,16 @@
         ]
       },
       "メガバンク": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
-          "トレードラボ",
+          "トレードラボ"
+        ]
+      },
+      "銀行": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
           "優待ライダー"
         ]
       },
@@ -416,13 +430,6 @@
         "sentiment": "bearish",
         "sources": [
           "優待ライダー"
-        ]
-      },
-      "日経": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "たばたの投資ch"
         ]
       },
       "日銀": {
@@ -435,16 +442,17 @@
     },
     "hot_words": [
       "決算",
-      "高配当",
       "半導体",
+      "高配当",
       "日経平均",
       "円安",
-      "メガバンク",
+      "日経",
       "ドル円",
       "NVIDIA",
       "AI関連",
+      "メガバンク",
+      "銀行",
       "配当",
-      "日経",
       "日銀"
     ]
   }

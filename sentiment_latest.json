@@ -17,14 +17,14 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "word": "日経",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     },
     {
-      "word": "日経",
+      "word": "ドル円",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -47,13 +47,6 @@
       "sources": 2
     },
     {
-      "word": "高配当",
-      "size": "xl",
-      "mood": "greed",
-      "count": 5,
-      "sources": 2
-    },
-    {
       "word": "半導体",
       "size": "lg",
       "mood": "fear",
@@ -61,10 +54,10 @@
       "sources": 2
     },
     {
-      "word": "メガバンク",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
+      "word": "高配当",
+      "size": "lg",
+      "mood": "greed",
+      "count": 4,
       "sources": 2
     },
     {
@@ -75,7 +68,14 @@
       "sources": 1
     },
     {
-      "word": "配当",
+      "word": "メガバンク",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "銀行",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -87,6 +87,13 @@
       "word": "NVIDIA",
       "size": "sm",
       "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
