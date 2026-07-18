@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-17",
+  "date": "2026-07-18",
   "mode": "claude",
   "macro": [
     {
@@ -10,23 +10,23 @@
       "sources": 1
     },
     {
-      "word": "円安",
+      "word": "ドル円",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "日経",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "ドル円",
+      "word": "円安",
       "size": "sm",
       "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -40,14 +40,14 @@
   ],
   "institutional": [
     {
-      "word": "決算",
+      "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 5,
-      "sources": 2
+      "count": 6,
+      "sources": 4
     },
     {
-      "word": "半導体",
+      "word": "決算",
       "size": "lg",
       "mood": "fear",
       "count": 4,
@@ -62,10 +62,10 @@
     },
     {
       "word": "AI関連",
-      "size": "sm",
+      "size": "md",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "メガバンク",
