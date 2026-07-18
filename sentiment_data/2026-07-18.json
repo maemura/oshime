@@ -1,10 +1,10 @@
 {
   "date": "2026-07-18",
-  "collected_at": "2026-07-18 10:44",
+  "collected_at": "2026-07-18 22:10",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 28,
+  "entry_count": 27,
   "entries": [
     {
       "source": "youtube",
@@ -130,6 +130,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "再上昇くるか、半導体主要１０銘柄の詳細と比較。７月１８日:土曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=M91lJsBszRc",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "キオクシアに370億円の賠償命令。日経-4%超急落、その原因。ＳＵＭＣＯがストップ安。～あす上がる株　2026年７月２１日（火）に上がる銘柄。最新の日本株情報。",
       "video_url": "https://www.youtube.com/watch?v=smnFQ4PqIYA",
       "topic": "日経",
@@ -162,28 +173,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "NVIDIA技術で富士通、ファナック、安川電機、川崎重工がフィジカルＡＩ。キオクシア-急落。～あす上がる株　2026年７月１７日（金）に上がる銘柄。最新の日本株",
-      "video_url": "https://www.youtube.com/watch?v=FouYdBhDWHs",
-      "topic": "NVIDIA",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: NVIDIA"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "NVIDIA技術で富士通、ファナック、安川電機、川崎重工がフィジカルＡＩ。キオクシア-急落。～あす上がる株　2026年７月１７日（金）に上がる銘柄。最新の日本株",
-      "video_url": "https://www.youtube.com/watch?v=FouYdBhDWHs",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "おい！ハイテク株の調整は終わったんちゃうんか！TSMC決算は無事通過",
       "video_url": "https://www.youtube.com/watch?v=o-GA8c6iA-Q",
@@ -195,14 +184,14 @@
     },
     {
       "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "本日の好決算２選 / キオクシア株の底打ちは近い！？SKハイニックス反発継続なるか",
-      "video_url": "https://www.youtube.com/watch?v=O3VXLY0YHOY",
-      "topic": "決算",
-      "category": "event",
+      "channel": "トレードラボ",
+      "video_title": "【利回り5％】まだバーゲン価格で放置されている優秀な高配当株４選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=xw6rd7l0yIQ",
+      "topic": "高配当",
+      "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 決算"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -228,25 +217,25 @@
     },
     {
       "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "絶好調メガバンク株が突然急落するパターン３選",
-      "video_url": "https://www.youtube.com/watch?v=gdm1sk1zuJE",
-      "topic": "メガバンク",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: メガバンク"
-    },
-    {
-      "source": "youtube",
-      "channel": "ばっちゃまの投資チャンネル",
-      "video_title": "【米国株 7/18】中国AIショック、半導体株が弱気相場入り",
-      "video_url": "https://www.youtube.com/watch?v=0C3N1f61fiM",
+      "channel": "優待ライダー",
+      "video_title": "半導体暴落も配当で耐えろ！オススメ高配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=Q2Ei4S2hptw",
       "topic": "半導体",
       "category": "sector",
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "半導体暴落も配当で耐えろ！オススメ高配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=Q2Ei4S2hptw",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
     },
     {
       "source": "youtube",
@@ -322,24 +311,24 @@
         "bear": 11
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
-        "bull": 1,
+        "bull": 0,
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 2,
-        "bear": 1
+        "bull": 3,
+        "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 3
+        "bear": 5
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -363,13 +352,13 @@
         ]
       },
       "半導体": {
-        "count": 6,
+        "count": 7,
         "sentiment": "bearish",
         "sources": [
-          "ばっちゃまの投資チャンネル",
+          "優待ライダー",
           "Sho's投資情報局",
-          "つばめ投資顧問",
-          "優待ライダー"
+          "株リアルライブ",
+          "つばめ投資顧問"
         ]
       },
       "ドル円": {
@@ -380,11 +369,11 @@
         ]
       },
       "決算": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
         ]
       },
       "円安": {
@@ -405,15 +394,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
-        ]
-      },
-      "NVIDIA": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "AI関連": {
@@ -424,21 +406,14 @@
           "トレードラボ"
         ]
       },
-      "メガバンク": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "トレードラボ"
-        ]
-      },
-      "銀行": {
-        "count": 1,
+      "配当": {
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "優待ライダー"
         ]
       },
-      "配当": {
+      "銀行": {
         "count": 1,
         "sentiment": "bearish",
         "sources": [
@@ -455,17 +430,15 @@
     },
     "hot_words": [
       "半導体",
-      "決算",
       "高配当",
       "日経平均",
+      "決算",
       "ドル円",
       "AI関連",
+      "配当",
       "円安",
       "日経",
-      "NVIDIA",
-      "メガバンク",
       "銀行",
-      "配当",
       "日銀"
     ]
   }
