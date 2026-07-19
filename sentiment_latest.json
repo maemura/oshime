@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-18",
+  "date": "2026-07-19",
   "mode": "claude",
   "macro": [
     {
@@ -61,17 +61,17 @@
       "sources": 2
     },
     {
-      "word": "AI関連",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
-    },
-    {
       "word": "配当",
       "size": "md",
       "mood": "fear",
       "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "AI関連",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
       "sources": 1
     },
     {
