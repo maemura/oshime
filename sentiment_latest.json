@@ -11,16 +11,9 @@
     },
     {
       "word": "ドル円",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "円安",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
+      "count": 3,
       "sources": 1
     },
     {
@@ -43,44 +36,52 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 7,
+      "count": 6,
       "sources": 4
     },
     {
-      "word": "高配当",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
-    {
       "word": "決算",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "配当",
       "size": "md",
       "mood": "fear",
       "count": 2,
-      "sources": 1
+      "sources": 2
     },
     {
-      "word": "AI関連",
-      "size": "sm",
+      "word": "銀行",
+      "size": "md",
       "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "高配当",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "メガバンク",
+      "size": "sm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "銀行",
+      "word": "配当",
       "size": "sm",
       "mood": "fear",
       "count": 1,
       "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "ソニー",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
