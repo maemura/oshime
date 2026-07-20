@@ -3,17 +3,24 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "日経平均",
+      "word": "ドル円",
       "size": "lg",
       "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "ドル円",
+      "word": "日経平均",
       "size": "lg",
       "mood": "fear",
       "count": 3,
+      "sources": 2
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
       "sources": 1
     },
     {
@@ -33,18 +40,18 @@
       "sources": 4
     },
     {
-      "word": "決算",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 3
-    },
-    {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
       "count": 3,
       "sources": 3
+    },
+    {
+      "word": "決算",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "銀行",
