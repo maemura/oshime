@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-19",
+  "date": "2026-07-20",
   "mode": "claude",
   "macro": [
     {
@@ -14,13 +14,6 @@
       "size": "lg",
       "mood": "fear",
       "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
       "sources": 1
     },
     {
@@ -41,24 +34,24 @@
     },
     {
       "word": "決算",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
-    },
-    {
-      "word": "銀行",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "高配当",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 3,
+      "sources": 3
+    },
+    {
+      "word": "銀行",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "メガバンク",
@@ -76,6 +69,13 @@
     }
   ],
   "retail": [
+    {
+      "word": "信越化学",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
     {
       "word": "ソニー",
       "size": "sm",
