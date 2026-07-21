@@ -18,10 +18,10 @@
     },
     {
       "word": "日経",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "トランプ",
@@ -31,21 +31,7 @@
       "sources": 1
     },
     {
-      "word": "円高",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
       "word": "金利",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "FRB",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -57,8 +43,8 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 6,
-      "sources": 4
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "高配当",
@@ -83,13 +69,6 @@
     },
     {
       "word": "メガバンク",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "配当",
       "size": "sm",
       "mood": "fear",
       "count": 1,

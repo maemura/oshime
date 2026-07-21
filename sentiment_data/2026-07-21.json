@@ -1,10 +1,10 @@
 {
   "date": "2026-07-21",
-  "collected_at": "2026-07-21 11:20",
+  "collected_at": "2026-07-21 22:23",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 32,
+  "entry_count": 27,
   "entries": [
     {
       "source": "youtube",
@@ -250,28 +250,6 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "半導体暴落も配当で耐えろ！オススメ高配当銘柄",
-      "video_url": "https://www.youtube.com/watch?v=Q2Ei4S2hptw",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "半導体暴落も配当で耐えろ！オススメ高配当銘柄",
-      "video_url": "https://www.youtube.com/watch?v=Q2Ei4S2hptw",
-      "topic": "配当",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 配当"
-    },
-    {
-      "source": "youtube",
       "channel": "たばたの投資ch",
       "video_title": "トランプ氏「半導体の50%を米国生産」と圧力、キオクシアにも影響はあるのか！？",
       "video_url": "https://www.youtube.com/watch?v=JuGOmMPODIY",
@@ -291,28 +269,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: トランプ"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物700円高で6万4800円に。３連休明けは一旦反発か？",
-      "video_url": "https://www.youtube.com/watch?v=vGiweaj0GTc",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "日経先物700円高で6万4800円に。３連休明けは一旦反発か？",
-      "video_url": "https://www.youtube.com/watch?v=vGiweaj0GTc",
-      "topic": "円高",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円高"
     },
     {
       "source": "youtube",
@@ -346,17 +302,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 金利"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "FRBも日銀も現状維持 しかし９月は・・・【ゲスト】 7月21日 楽天証券経済研究所 愛宕伸康さん",
-      "video_url": "https://www.youtube.com/watch?v=1BZoGf1LMmc",
-      "topic": "FRB",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: FRB"
     }
   ],
   "summary": {
@@ -383,10 +328,10 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 2
+        "bear": 0
       },
       "たばたの投資ch": {
-        "bull": 2,
+        "bull": 0,
         "bear": 0
       },
       "つばめ投資顧問": {
@@ -407,12 +352,11 @@
         ]
       },
       "半導体": {
-        "count": 6,
+        "count": 5,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局",
           "たばたの投資ch",
-          "優待ライダー",
           "STOCKVOICE"
         ]
       },
@@ -427,17 +371,16 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
+          "株リアルライブ",
           "Sho's投資情報局",
-          "ひげづら株ちゃんねる",
-          "株リアルライブ"
+          "ひげづら株ちゃんねる"
         ]
       },
       "日経": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "たばたの投資ch"
+          "Sho's投資情報局"
         ]
       },
       "イビデン": {
@@ -451,10 +394,10 @@
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
+          "つばめ投資顧問",
           "トレードラボ",
-          "優待ライダー",
-          "つばめ投資顧問"
+          "株リアルライブ",
+          "優待ライダー"
         ]
       },
       "銀行": {
@@ -478,13 +421,6 @@
           "トレードラボ"
         ]
       },
-      "配当": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "優待ライダー"
-        ]
-      },
       "トランプ": {
         "count": 1,
         "sentiment": "neutral",
@@ -492,21 +428,7 @@
           "たばたの投資ch"
         ]
       },
-      "円高": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "たばたの投資ch"
-        ]
-      },
       "金利": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "STOCKVOICE"
-        ]
-      },
-      "FRB": {
         "count": 1,
         "sentiment": "neutral",
         "sources": [
@@ -520,16 +442,13 @@
       "決算",
       "ドル円",
       "日経平均",
-      "日経",
       "銀行",
+      "日経",
       "イビデン",
       "信越化学",
       "メガバンク",
-      "配当",
       "トランプ",
-      "円高",
-      "金利",
-      "FRB"
+      "金利"
     ]
   }
 }
