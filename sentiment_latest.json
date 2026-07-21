@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-20",
+  "date": "2026-07-21",
   "mode": "claude",
   "macro": [
     {
@@ -11,20 +11,41 @@
     },
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "md",
       "mood": "fear",
-      "count": 3,
-      "sources": 2
+      "count": 2,
+      "sources": 1
     },
     {
       "word": "日経",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "トランプ",
+      "size": "sm",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "日銀",
+      "word": "円高",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "金利",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "FRB",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -41,23 +62,23 @@
     },
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 3,
-      "sources": 3
+      "count": 5,
+      "sources": 4
     },
     {
       "word": "決算",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 3
     },
     {
       "word": "銀行",
-      "size": "sm",
+      "size": "md",
       "mood": "greed",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
@@ -77,14 +98,14 @@
   ],
   "retail": [
     {
-      "word": "信越化学",
+      "word": "イビデン",
       "size": "sm",
       "mood": "greed",
       "count": 1,
       "sources": 1
     },
     {
-      "word": "ソニー",
+      "word": "信越化学",
       "size": "sm",
       "mood": "greed",
       "count": 1,
