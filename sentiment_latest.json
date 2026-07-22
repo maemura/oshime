@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-21",
+  "date": "2026-07-22",
   "mode": "claude",
   "macro": [
     {
@@ -12,37 +12,23 @@
     {
       "word": "日経平均",
       "size": "md",
-      "mood": "fear",
+      "mood": "calm",
       "count": 2,
       "sources": 1
     },
     {
       "word": "日経",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "トランプ",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "金利",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     }
   ],
   "institutional": [
     {
-      "word": "半導体",
+      "word": "決算",
       "size": "xl",
-      "mood": "fear",
+      "mood": "calm",
       "count": 5,
       "sources": 3
     },
@@ -51,14 +37,14 @@
       "size": "xl",
       "mood": "greed",
       "count": 5,
-      "sources": 4
+      "sources": 3
     },
     {
-      "word": "決算",
+      "word": "半導体",
       "size": "lg",
       "mood": "fear",
       "count": 4,
-      "sources": 3
+      "sources": 2
     },
     {
       "word": "銀行",
@@ -78,13 +64,6 @@
   "retail": [
     {
       "word": "イビデン",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "信越化学",
       "size": "sm",
       "mood": "greed",
       "count": 1,
