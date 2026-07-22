@@ -3,25 +3,18 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "ドル円",
+      "word": "日経平均",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "日経平均",
-      "size": "md",
+      "word": "ドル円",
+      "size": "lg",
       "mood": "calm",
-      "count": 2,
+      "count": 3,
       "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
     }
   ],
   "institutional": [
@@ -29,7 +22,7 @@
       "word": "決算",
       "size": "xl",
       "mood": "calm",
-      "count": 5,
+      "count": 6,
       "sources": 3
     },
     {
@@ -42,9 +35,9 @@
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "mood": "calm",
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "銀行",
