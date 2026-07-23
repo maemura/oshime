@@ -1,11 +1,55 @@
 {
   "date": "2026-07-23",
-  "collected_at": "2026-07-23 11:22",
+  "collected_at": "2026-07-23 22:28",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 28,
+  "entry_count": 27,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆損ヤバい‼】空売り激減で日経平均騙し上げか⁉AI半導体株、キオクシア高値掴み助かる？信用評価損益率-10％で投げ売り警戒。ドル円163円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=w61ZzwQ-ctA",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆損ヤバい‼】空売り激減で日経平均騙し上げか⁉AI半導体株、キオクシア高値掴み助かる？信用評価損益率-10％で投げ売り警戒。ドル円163円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=w61ZzwQ-ctA",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆損ヤバい‼】空売り激減で日経平均騙し上げか⁉AI半導体株、キオクシア高値掴み助かる？信用評価損益率-10％で投げ売り警戒。ドル円163円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=w61ZzwQ-ctA",
+      "topic": "ナスダック",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ナスダック"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株爆損ヤバい‼】空売り激減で日経平均騙し上げか⁉AI半導体株、キオクシア高値掴み助かる？信用評価損益率-10％で投げ売り警戒。ドル円163円。米国株、ナス",
+      "video_url": "https://www.youtube.com/watch?v=w61ZzwQ-ctA",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -88,50 +132,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "日本株空売り激減‼日経平均騙し上げで木端微塵か⁉️AI半導体株、キオクシア高値掴み助かる⁉️好決算で下落は最警戒‼ドル円163円、原油価格急騰。米国株どうなる。",
       "video_url": "https://www.youtube.com/watch?v=Y1T_6dk2BNY",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】日本株空売り激減ヤバい‼日経平均騙し上げで木端微塵か⁉️AI半導体株、キオクシア高値掴み助かる⁉️好決算で下落は最警戒‼ドル円163円、原油価格急騰。米",
-      "video_url": "https://www.youtube.com/watch?v=JHS4AHUa5gk",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】日本株空売り激減ヤバい‼日経平均騙し上げで木端微塵か⁉️AI半導体株、キオクシア高値掴み助かる⁉️好決算で下落は最警戒‼ドル円163円、原油価格急騰。米",
-      "video_url": "https://www.youtube.com/watch?v=JHS4AHUa5gk",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】日本株空売り激減ヤバい‼日経平均騙し上げで木端微塵か⁉️AI半導体株、キオクシア高値掴み助かる⁉️好決算で下落は最警戒‼ドル円163円、原油価格急騰。米",
-      "video_url": "https://www.youtube.com/watch?v=JHS4AHUa5gk",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】日本株空売り激減ヤバい‼日経平均騙し上げで木端微塵か⁉️AI半導体株、キオクシア高値掴み助かる⁉️好決算で下落は最警戒‼ドル円163円、原油価格急騰。米",
-      "video_url": "https://www.youtube.com/watch?v=JHS4AHUa5gk",
       "topic": "決算",
       "category": "event",
       "sentiment": "neutral",
@@ -284,24 +284,13 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
-      "video_title": "さらばＫＤＤＩ！業務提携解消で急落高配当銘柄",
-      "video_url": "https://www.youtube.com/watch?v=QhYjj5POoYA",
+      "video_title": "魅力優待爆誕！高配当も魅力。本日購入銘柄も",
+      "video_url": "https://www.youtube.com/watch?v=aW2jNjbvtdg",
       "topic": "高配当",
       "category": "sector",
-      "sentiment": "neutral",
+      "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "Kimiの登場でAIコモディティ化の議論に！？日経先物が6万6千円を回復",
-      "video_url": "https://www.youtube.com/watch?v=fYc1kBx6S8Q",
-      "topic": "日経",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経"
     },
     {
       "source": "youtube",
@@ -319,7 +308,7 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 4
+        "bear": 8
       },
       "株リアルライブ": {
         "bull": 9,
@@ -338,7 +327,7 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 0,
+        "bull": 1,
         "bear": 0
       },
       "たばたの投資ch": {
@@ -359,19 +348,19 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 3,
-        "sentiment": "neutral",
+        "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ナスダック": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -379,18 +368,18 @@
       },
       "ドル円": {
         "count": 3,
-        "sentiment": "neutral",
+        "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "決算": {
-        "count": 5,
+        "count": 4,
         "sentiment": "neutral",
         "sources": [
+          "ひげづら株ちゃんねる",
           "ばっちゃまの投資チャンネル",
           "Sho's投資情報局",
-          "ひげづら株ちゃんねる",
           "株リアルライブ"
         ]
       },
@@ -410,10 +399,9 @@
         ]
       },
       "日経": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bullish",
         "sources": [
-          "たばたの投資ch",
           "株リアルライブ"
         ]
       },
@@ -447,15 +435,15 @@
       }
     },
     "hot_words": [
-      "決算",
       "日経平均",
+      "決算",
       "高配当",
       "半導体",
       "ドル円",
-      "日経",
-      "銀行",
       "ナスダック",
+      "銀行",
       "トヨタ",
+      "日経",
       "不動産",
       "メガバンク",
       "金利"

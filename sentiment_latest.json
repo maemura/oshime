@@ -12,21 +12,21 @@
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "calm",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "日経",
+      "word": "ナスダック",
       "size": "md",
-      "mood": "greed",
+      "mood": "fear",
       "count": 2,
-      "sources": 2
+      "sources": 1
     },
     {
-      "word": "ナスダック",
+      "word": "日経",
       "size": "sm",
-      "mood": "fear",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     },
@@ -41,9 +41,9 @@
   "institutional": [
     {
       "word": "決算",
-      "size": "xl",
+      "size": "lg",
       "mood": "calm",
-      "count": 5,
+      "count": 4,
       "sources": 4
     },
     {
@@ -56,7 +56,7 @@
     {
       "word": "半導体",
       "size": "lg",
-      "mood": "calm",
+      "mood": "fear",
       "count": 3,
       "sources": 1
     },
