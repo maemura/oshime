@@ -1,6 +1,6 @@
 {
   "date": "2026-07-24",
-  "collected_at": "2026-07-24 11:15",
+  "collected_at": "2026-07-24 22:31",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
@@ -251,6 +251,17 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "現在暴落中で利回り５％超！半導体急落も",
+      "video_url": "https://www.youtube.com/watch?v=senIC7Ki9aw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "魅力優待爆誕！高配当も魅力。本日購入銘柄も",
       "video_url": "https://www.youtube.com/watch?v=aW2jNjbvtdg",
       "topic": "高配当",
@@ -324,17 +335,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 銀行"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "半導体株の調整と米国株市場のリスク要因【ゲスト】 7月24日 マリン・ストラテジーズ 香川睦さん",
-      "video_url": "https://www.youtube.com/watch?v=EcUaOKmnOWg",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
     }
   ],
   "summary": {
@@ -361,7 +361,7 @@
       },
       "優待ライダー": {
         "bull": 1,
-        "bear": 0
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -373,7 +373,7 @@
       },
       "STOCKVOICE": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       }
     },
     "by_topic": {
@@ -389,8 +389,9 @@
         "count": 5,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "優待ライダー",
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "ナスダック": {
@@ -404,8 +405,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
+          "STOCKVOICE",
+          "Sho's投資情報局"
         ]
       },
       "信越化学": {
@@ -419,16 +420,16 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー"
+          "優待ライダー",
+          "株リアルライブ"
         ]
       },
       "銀行": {
         "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "STOCKVOICE",
-          "株リアルライブ"
+          "株リアルライブ",
+          "STOCKVOICE"
         ]
       },
       "トヨタ": {
@@ -442,9 +443,9 @@
         "count": 3,
         "sentiment": "bullish",
         "sources": [
+          "株リアルライブ",
           "ひげづら株ちゃんねる",
-          "STOCKVOICE",
-          "株リアルライブ"
+          "STOCKVOICE"
         ]
       },
       "メガバンク": {
