@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-24",
+  "date": "2026-07-25",
   "mode": "claude",
   "macro": [
     {
@@ -13,27 +13,20 @@
       "word": "ドル円",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
+      "count": 3,
       "sources": 2
     },
     {
       "word": "ナスダック",
-      "size": "lg",
+      "size": "md",
       "mood": "fear",
-      "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
       "word": "円安",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
       "count": 1,
       "sources": 1
     }
@@ -43,8 +36,8 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 5,
-      "sources": 3
+      "count": 6,
+      "sources": 4
     },
     {
       "word": "高配当",
@@ -57,15 +50,15 @@
       "word": "決算",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
-      "sources": 3
+      "count": 4,
+      "sources": 4
     },
     {
       "word": "銀行",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "メガバンク",
@@ -77,14 +70,14 @@
   ],
   "retail": [
     {
-      "word": "信越化学",
-      "size": "sm",
+      "word": "トヨタ",
+      "size": "md",
       "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     },
     {
-      "word": "トヨタ",
+      "word": "信越化学",
       "size": "sm",
       "mood": "greed",
       "count": 1,
