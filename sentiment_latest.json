@@ -17,18 +17,18 @@
       "sources": 2
     },
     {
-      "word": "円安",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
-    },
-    {
       "word": "ナスダック",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
     }
   ],
   "institutional": [
@@ -36,43 +36,43 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 6,
-      "sources": 4
-    },
-    {
-      "word": "高配当",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "count": 7,
+      "sources": 5
     },
     {
       "word": "決算",
       "size": "lg",
       "mood": "greed",
-      "count": 3,
+      "count": 4,
       "sources": 3
     },
     {
+      "word": "高配当",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "銀行",
-      "size": "lg",
+      "size": "md",
       "mood": "calm",
-      "count": 3,
-      "sources": 3
+      "count": 2,
+      "sources": 2
     }
   ],
   "retail": [
     {
-      "word": "信越化学",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
+      "word": "トヨタ",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
       "sources": 1
     },
     {
-      "word": "トヨタ",
+      "word": "信越化学",
       "size": "sm",
-      "mood": "calm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
