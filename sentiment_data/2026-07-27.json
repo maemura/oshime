@@ -1,10 +1,10 @@
 {
   "date": "2026-07-27",
-  "collected_at": "2026-07-27 12:39",
+  "collected_at": "2026-07-27 22:31",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 29,
+  "entry_count": 28,
   "entries": [
     {
       "source": "youtube",
@@ -261,17 +261,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "【知らなきゃ損】好決算なのに株価が下がる理由を解説します!!",
-      "video_url": "https://www.youtube.com/watch?v=ECQyrLvreLk",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
       "channel": "つばめ投資顧問",
       "video_title": "株価25％下落 トヨタ 今が買い時か？",
       "video_url": "https://www.youtube.com/watch?v=PUrTFm3SHPQ",
@@ -377,10 +366,10 @@
         "count": 6,
         "sentiment": "bearish",
         "sources": [
-          "つばめ投資顧問",
-          "Sho's投資情報局",
           "株リアルライブ",
-          "優待ライダー"
+          "Sho's投資情報局",
+          "優待ライダー",
+          "つばめ投資顧問"
         ]
       },
       "ドル円": {
@@ -427,13 +416,12 @@
         ]
       },
       "決算": {
-        "count": 5,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "ばっちゃまの投資チャンネル",
-          "たばたの投資ch",
+          "STOCKVOICE",
           "株リアルライブ",
-          "STOCKVOICE"
+          "ばっちゃまの投資チャンネル"
         ]
       },
       "円安": {
