@@ -15,13 +15,6 @@
       "mood": "fear",
       "count": 3,
       "sources": 1
-    },
-    {
-      "word": "円安",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
@@ -29,15 +22,15 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 6,
-      "sources": 4
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
-      "sources": 2
+      "count": 2,
+      "sources": 1
     },
     {
       "word": "銀行",

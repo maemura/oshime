@@ -1,15 +1,48 @@
 {
   "date": "2026-07-28",
-  "collected_at": "2026-07-28 11:31",
+  "collected_at": "2026-07-28 22:29",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 26,
+  "entry_count": 23,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
       "video_title": "キオクシアS安で日本株に激震‼️‼️日経平均大暴落ヤバい‼️ AI半導体株崩壊でバリュー株に資金シフト加速。ドル円１６５円か。原油急落で米国株どうなる。仮想通貨",
+      "video_url": "https://www.youtube.com/watch?v=ewfTr9SMV30",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシアS安で日本株に激震‼️‼️日経平均大暴落ヤバい‼️ AI半導体株崩壊でバリュー株に資金シフト加速。ドル円１６５円か。原油急落で米国株どうなる。仮想通貨",
+      "video_url": "https://www.youtube.com/watch?v=ewfTr9SMV30",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシアS安で日本株に激震‼️‼️日経平均大暴落ヤバい‼️ AI半導体株崩壊でバリュー株に資金シフト加速。ドル円１６５円か。原油急落で米国株どうなる。仮想通貨",
+      "video_url": "https://www.youtube.com/watch?v=ewfTr9SMV30",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシアS安で日本株に激震‼️‼️日経平均大暴落ヤバい‼️ AI半導体株崩壊でバリュー株に資金シフト加速。ドル円１６５円か。原油急落で米国株どうなる。仮想通貨",
       "video_url": "https://www.youtube.com/watch?v=zenTwYdqs94",
       "topic": "日経平均",
       "category": "macro",
@@ -66,39 +99,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "【日本株稼ぎ時来たぞ‼️‼️‼】AI半導体株相場崩壊でバリュー株に資金シフト加速。キオクシアがヤバい‼日経平均→TOPIX優位。ドル円１６５円。原油急落で米国株",
       "video_url": "https://www.youtube.com/watch?v=kE3A-T-OalU",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株稼ぎ時来たぞ‼️‼️‼】AI半導体株相場崩壊でバリュー株に資金シフト加速。キオクシアがヤバい‼日経平均→TOPIX優位。ドル円１６５円。原油急落で米国株",
-      "video_url": "https://www.youtube.com/watch?v=b86h4jPynDI",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株稼ぎ時来たぞ‼️‼️‼】AI半導体株相場崩壊でバリュー株に資金シフト加速。キオクシアがヤバい‼日経平均→TOPIX優位。ドル円１６５円。原油急落で米国株",
-      "video_url": "https://www.youtube.com/watch?v=b86h4jPynDI",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株稼ぎ時来たぞ‼️‼️‼】AI半導体株相場崩壊でバリュー株に資金シフト加速。キオクシアがヤバい‼日経平均→TOPIX優位。ドル円１６５円。原油急落で米国株",
-      "video_url": "https://www.youtube.com/watch?v=b86h4jPynDI",
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "bearish",
@@ -184,28 +184,6 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "異次元円安でここから狙う厳選高配当１０銘柄",
-      "video_url": "https://www.youtube.com/watch?v=AtTsnkuRWU4",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "異次元円安でここから狙う厳選高配当１０銘柄",
-      "video_url": "https://www.youtube.com/watch?v=AtTsnkuRWU4",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
       "channel": "たばたの投資ch",
       "video_title": "任天堂急落したが、実は今が買い時！？",
       "video_url": "https://www.youtube.com/watch?v=kq7_pIIKllw",
@@ -214,17 +192,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 任天堂"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "キオクシア暴落！カテキンさん飛び入りで中国の半導体市況から、AI半導体の今後を占う",
-      "video_url": "https://www.youtube.com/watch?v=EwvGEde9Xu8",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
     },
     {
       "source": "youtube",
@@ -316,12 +283,12 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 2,
+        "bull": 0,
         "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -341,13 +308,12 @@
         ]
       },
       "半導体": {
-        "count": 6,
+        "count": 5,
         "sentiment": "bearish",
         "sources": [
-          "つばめ投資顧問",
-          "優待ライダー",
           "Sho's投資情報局",
-          "たばたの投資ch"
+          "つばめ投資顧問",
+          "優待ライダー"
         ]
       },
       "ドル円": {
@@ -359,10 +325,9 @@
         ]
       },
       "高配当": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bullish",
         "sources": [
-          "優待ライダー",
           "株リアルライブ"
         ]
       },
@@ -392,13 +357,6 @@
         "sentiment": "bullish",
         "sources": [
           "ばっちゃまの投資チャンネル"
-        ]
-      },
-      "円安": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "優待ライダー"
         ]
       },
       "任天堂": {
@@ -435,7 +393,6 @@
       "コーエーテクモ",
       "配当",
       "決算",
-      "円安",
       "任天堂"
     ]
   }
