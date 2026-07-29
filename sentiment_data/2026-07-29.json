@@ -1,11 +1,55 @@
 {
   "date": "2026-07-29",
-  "collected_at": "2026-07-29 11:37",
+  "collected_at": "2026-07-29 22:25",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 23,
+  "entry_count": 25,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア４万割れで日本株に激震‼️ AI半導体株崩壊でバリュー株に資金シフト加速。アドバンテスト決算で日経急落止まるか⁉️ドル円１６５円か。米国株どうなる。仮",
+      "video_url": "https://www.youtube.com/watch?v=UlClUe2j3U4",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア４万割れで日本株に激震‼️ AI半導体株崩壊でバリュー株に資金シフト加速。アドバンテスト決算で日経急落止まるか⁉️ドル円１６５円か。米国株どうなる。仮",
+      "video_url": "https://www.youtube.com/watch?v=UlClUe2j3U4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア４万割れで日本株に激震‼️ AI半導体株崩壊でバリュー株に資金シフト加速。アドバンテスト決算で日経急落止まるか⁉️ドル円１６５円か。米国株どうなる。仮",
+      "video_url": "https://www.youtube.com/watch?v=UlClUe2j3U4",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "キオクシア４万割れで日本株に激震‼️ AI半導体株崩壊でバリュー株に資金シフト加速。アドバンテスト決算で日経急落止まるか⁉️ドル円１６５円か。米国株どうなる。仮",
+      "video_url": "https://www.youtube.com/watch?v=UlClUe2j3U4",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -77,39 +121,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "キオクシアS安で日本株に激震‼️‼️日経平均大暴落ヤバい‼️ AI半導体株崩壊でバリュー株に資金シフト加速。ドル円１６５円か。原油急落で米国株どうなる。仮想通貨",
       "video_url": "https://www.youtube.com/watch?v=ewfTr9SMV30",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "キオクシアS安で日本株に激震‼️‼️日経平均大暴落ヤバい‼️ AI半導体株崩壊でバリュー株に資金シフト加速。ドル円１６５円か。原油急落で米国株どうなる。仮想通貨",
-      "video_url": "https://www.youtube.com/watch?v=zenTwYdqs94",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "キオクシアS安で日本株に激震‼️‼️日経平均大暴落ヤバい‼️ AI半導体株崩壊でバリュー株に資金シフト加速。ドル円１６５円か。原油急落で米国株どうなる。仮想通貨",
-      "video_url": "https://www.youtube.com/watch?v=zenTwYdqs94",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "キオクシアS安で日本株に激震‼️‼️日経平均大暴落ヤバい‼️ AI半導体株崩壊でバリュー株に資金シフト加速。ドル円１６５円か。原油急落で米国株どうなる。仮想通貨",
-      "video_url": "https://www.youtube.com/watch?v=zenTwYdqs94",
       "topic": "ドル円",
       "category": "macro",
       "sentiment": "bearish",
@@ -218,13 +229,24 @@
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "【チャイナショック】半導体関連株が大暴落している理由を解説します!!",
-      "video_url": "https://www.youtube.com/watch?v=gLNhjZgaU0o",
-      "topic": "半導体",
-      "category": "sector",
+      "video_title": "暴落中のキオクシア、決算で反転するのか??",
+      "video_url": "https://www.youtube.com/watch?v=VtFdog0i7pI",
+      "topic": "決算",
+      "category": "event",
       "sentiment": "bearish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "【決算後のリアルゲイト突撃インタビュー！】株価が10％下落している件について岩本社長に直接聞いてきました。",
+      "video_url": "https://www.youtube.com/watch?v=82X5Zi2cwjs",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -264,7 +286,7 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 10
+        "bear": 11
       },
       "株リアルライブ": {
         "bull": 5,
@@ -288,7 +310,7 @@
       },
       "たばたの投資ch": {
         "bull": 0,
-        "bear": 1
+        "bear": 2
       },
       "つばめ投資顧問": {
         "bull": 0,
@@ -301,21 +323,20 @@
     },
     "by_topic": {
       "日経": {
-        "count": 1,
+        "count": 2,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "半導体": {
-        "count": 8,
+        "count": 7,
         "sentiment": "bearish",
         "sources": [
+          "STOCKVOICE",
           "つばめ投資顧問",
-          "たばたの投資ch",
-          "優待ライダー",
           "Sho's投資情報局",
-          "STOCKVOICE"
+          "優待ライダー"
         ]
       },
       "ドル円": {
@@ -326,16 +347,17 @@
         ]
       },
       "決算": {
-        "count": 3,
-        "sentiment": "bullish",
+        "count": 6,
+        "sentiment": "bearish",
         "sources": [
+          "たばたの投資ch",
           "株リアルライブ",
           "Sho's投資情報局",
           "ばっちゃまの投資チャンネル"
         ]
       },
       "日経平均": {
-        "count": 2,
+        "count": 1,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -359,19 +381,19 @@
         "count": 2,
         "sentiment": "bearish",
         "sources": [
-          "つばめ投資顧問",
-          "優待ライダー"
+          "優待ライダー",
+          "つばめ投資顧問"
         ]
       }
     },
     "hot_words": [
       "半導体",
-      "ドル円",
       "決算",
+      "ドル円",
       "高配当",
-      "日経平均",
-      "トヨタ",
       "日経",
+      "トヨタ",
+      "日経平均",
       "ソニー"
     ]
   }
