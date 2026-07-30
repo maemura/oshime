@@ -1,20 +1,20 @@
 {
-  "date": "2026-07-29",
+  "date": "2026-07-30",
   "mode": "claude",
   "macro": [
     {
       "word": "ドル円",
       "size": "lg",
       "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "日経",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
-      "sources": 1
+      "count": 3,
+      "sources": 2
     },
     {
       "word": "日経平均",
@@ -34,10 +34,10 @@
     },
     {
       "word": "決算",
-      "size": "xl",
+      "size": "lg",
       "mood": "fear",
-      "count": 6,
-      "sources": 4
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "高配当",
@@ -49,18 +49,18 @@
   ],
   "retail": [
     {
+      "word": "ソニー",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
       "word": "トヨタ",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 2
-    },
-    {
-      "word": "ソニー",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
     }
   ]
 }
