@@ -10,14 +10,14 @@
       "sources": 2
     },
     {
-      "word": "日経",
-      "size": "lg",
+      "word": "日経平均",
+      "size": "md",
       "mood": "fear",
-      "count": 3,
-      "sources": 2
+      "count": 2,
+      "sources": 1
     },
     {
-      "word": "日経平均",
+      "word": "日経",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -29,15 +29,15 @@
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 7,
+      "count": 6,
       "sources": 4
     },
     {
       "word": "決算",
       "size": "lg",
       "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "高配当",
