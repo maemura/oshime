@@ -3,32 +3,39 @@
   "mode": "claude",
   "macro": [
     {
-      "word": "ドル円",
+      "word": "日経平均",
       "size": "lg",
       "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "日経平均",
+      "word": "ドル円",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
+      "word": "円高",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "日経",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
     {
       "word": "決算",
       "size": "xl",
-      "mood": "fear",
+      "mood": "greed",
       "count": 7,
       "sources": 3
     },
