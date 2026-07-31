@@ -1,13 +1,13 @@
 {
-  "date": "2026-07-30",
+  "date": "2026-07-31",
   "mode": "claude",
   "macro": [
     {
       "word": "ドル円",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "日経平均",
@@ -18,13 +18,20 @@
     },
     {
       "word": "日経",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "count": 2,
+      "sources": 2
     }
   ],
   "institutional": [
+    {
+      "word": "決算",
+      "size": "xl",
+      "mood": "fear",
+      "count": 7,
+      "sources": 3
+    },
     {
       "word": "半導体",
       "size": "xl",
@@ -33,34 +40,34 @@
       "sources": 4
     },
     {
-      "word": "決算",
-      "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
-    },
-    {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
       "sources": 1
     }
   ],
   "retail": [
     {
       "word": "ソニー",
-      "size": "md",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "トヨタ",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ]
 }
