@@ -1,10 +1,10 @@
 {
   "date": "2026-08-01",
-  "collected_at": "2026-08-01 10:53",
+  "collected_at": "2026-08-01 22:15",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 25,
+  "entry_count": 26,
   "entries": [
     {
       "source": "youtube",
@@ -141,6 +141,39 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "いよいよ来週決算。三菱ＵＦＪ、トヨタ、三菱重工、三菱商事、ＩＨＩ、伊藤忠、三井物産、日本製鉄、丸紅、ソフトバンク、アステラス製薬、太陽誘電、イビデン。８月１日:",
+      "video_url": "https://www.youtube.com/watch?v=fVwrb06_w7o",
+      "topic": "トヨタ",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: トヨタ"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "いよいよ来週決算。三菱ＵＦＪ、トヨタ、三菱重工、三菱商事、ＩＨＩ、伊藤忠、三井物産、日本製鉄、丸紅、ソフトバンク、アステラス製薬、太陽誘電、イビデン。８月１日:",
+      "video_url": "https://www.youtube.com/watch?v=fVwrb06_w7o",
+      "topic": "イビデン",
+      "category": "stock",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: イビデン"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "いよいよ来週決算。三菱ＵＦＪ、トヨタ、三菱重工、三菱商事、ＩＨＩ、伊藤忠、三井物産、日本製鉄、丸紅、ソフトバンク、アステラス製薬、太陽誘電、イビデン。８月１日:",
+      "video_url": "https://www.youtube.com/watch?v=fVwrb06_w7o",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "日本郵船がＮＳユナイテッドTOB。キオクシア大幅増益。ＴＤＫ増益。三井住友FG増益。ルネサス黒字。～あす上がる株　2026年８月３日（月）に上がる銘柄。最新の日",
       "video_url": "https://www.youtube.com/watch?v=tJ1K0ayI3zM",
       "topic": "高配当",
@@ -173,17 +206,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "利回り9.6%プライム銘柄登場！東京エレクトロン上方増配。オリエンタルランド増益。JT上方増配。～あす上がる株　2026年７月３１日（水）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=Nzt7wFTJ6zw",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "トレードラボ",
       "video_title": "2026年後半にNISAで仕込みたい「累進配当」株３選",
       "video_url": "https://www.youtube.com/watch?v=j9A4bOGbaak",
@@ -192,6 +214,17 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "週末暴落で月曜買いたいオススメ高配当銘柄",
+      "video_url": "https://www.youtube.com/watch?v=MjudL3L3QOA",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -214,28 +247,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "半導体暴落もバリューへ回帰！トヨタが強い",
-      "video_url": "https://www.youtube.com/watch?v=h1Z6D4B18uI",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "半導体暴落もバリューへ回帰！トヨタが強い",
-      "video_url": "https://www.youtube.com/watch?v=h1Z6D4B18uI",
-      "topic": "トヨタ",
-      "category": "stock",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: トヨタ"
     },
     {
       "source": "youtube",
@@ -289,7 +300,7 @@
         "bear": 8
       },
       "株リアルライブ": {
-        "bull": 4,
+        "bull": 6,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -306,7 +317,7 @@
       },
       "優待ライダー": {
         "bull": 1,
-        "bear": 3
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -330,12 +341,11 @@
         ]
       },
       "半導体": {
-        "count": 5,
+        "count": 4,
         "sentiment": "bearish",
         "sources": [
           "つばめ投資顧問",
-          "Sho's投資情報局",
-          "優待ライダー"
+          "Sho's投資情報局"
         ]
       },
       "円高": {
@@ -346,13 +356,14 @@
         ]
       },
       "決算": {
-        "count": 8,
+        "count": 9,
         "sentiment": "bearish",
         "sources": [
+          "優待ライダー",
           "たばたの投資ch",
           "つばめ投資顧問",
           "Sho's投資情報局",
-          "優待ライダー"
+          "株リアルライブ"
         ]
       },
       "ドル円": {
@@ -362,10 +373,25 @@
           "Sho's投資情報局"
         ]
       },
+      "トヨタ": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
+      "イビデン": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ"
+        ]
+      },
       "高配当": {
         "count": 3,
         "sentiment": "bullish",
         "sources": [
+          "優待ライダー",
           "株リアルライブ"
         ]
       },
@@ -382,13 +408,6 @@
         "sources": [
           "トレードラボ"
         ]
-      },
-      "トヨタ": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "優待ライダー"
-        ]
       }
     },
     "hot_words": [
@@ -398,9 +417,10 @@
       "高配当",
       "円高",
       "ドル円",
+      "トヨタ",
+      "イビデン",
       "ソニー",
-      "配当",
-      "トヨタ"
+      "配当"
     ]
   }
 }
