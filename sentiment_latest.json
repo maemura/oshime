@@ -11,16 +11,9 @@
     },
     {
       "word": "円高",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "ドル円",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
+      "count": 3,
       "sources": 1
     }
   ],
@@ -29,8 +22,8 @@
       "word": "決算",
       "size": "xl",
       "mood": "fear",
-      "count": 9,
-      "sources": 5
+      "count": 7,
+      "sources": 4
     },
     {
       "word": "半導体",
@@ -41,9 +34,9 @@
     },
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 2
     },
     {
@@ -56,6 +49,13 @@
   ],
   "retail": [
     {
+      "word": "任天堂",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
+    },
+    {
       "word": "トヨタ",
       "size": "sm",
       "mood": "greed",
@@ -64,13 +64,6 @@
     },
     {
       "word": "イビデン",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "ソニー",
       "size": "sm",
       "mood": "greed",
       "count": 1,

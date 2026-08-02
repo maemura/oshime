@@ -1,15 +1,59 @@
 {
   "date": "2026-08-02",
-  "collected_at": "2026-08-02 10:54",
+  "collected_at": "2026-08-02 22:14",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 26,
+  "entry_count": 23,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
       "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
+      "video_url": "https://www.youtube.com/watch?v=l7StSjL0RNg",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
+      "video_url": "https://www.youtube.com/watch?v=l7StSjL0RNg",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
+      "video_url": "https://www.youtube.com/watch?v=l7StSjL0RNg",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
+      "video_url": "https://www.youtube.com/watch?v=l7StSjL0RNg",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
       "video_url": "https://www.youtube.com/watch?v=xez9OLs6KvY",
       "topic": "日経平均",
       "category": "macro",
@@ -96,45 +140,23 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株稼ぎ時や‼️‼キオクシア決算暴落でAI半導体株、日経平均崩壊→バリュー株に資金シフト加速か。半導体株荒い動きに違和感。ドル円１６５円か。米国株、ハイテク株",
-      "video_url": "https://www.youtube.com/watch?v=JjlfRSXq0Gk",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
+      "channel": "株リアルライブ",
+      "video_title": "ＮＴＴ、ＪＸ金属、任天堂、SBG、フジクラ、レーザーテック。コンセンサス未達で急落かもの銘柄。好決算なのに急落中銘柄。今週注目の決算。８月２日:日曜版～あす上が",
+      "video_url": "https://www.youtube.com/watch?v=zhnGoxC0_aE",
+      "topic": "任天堂",
+      "category": "stock",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
+      "summary": "キーワード: 任天堂"
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株稼ぎ時や‼️‼キオクシア決算暴落でAI半導体株、日経平均崩壊→バリュー株に資金シフト加速か。半導体株荒い動きに違和感。ドル円１６５円か。米国株、ハイテク株",
-      "video_url": "https://www.youtube.com/watch?v=JjlfRSXq0Gk",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株稼ぎ時や‼️‼キオクシア決算暴落でAI半導体株、日経平均崩壊→バリュー株に資金シフト加速か。半導体株荒い動きに違和感。ドル円１６５円か。米国株、ハイテク株",
-      "video_url": "https://www.youtube.com/watch?v=JjlfRSXq0Gk",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株稼ぎ時や‼️‼キオクシア決算暴落でAI半導体株、日経平均崩壊→バリュー株に資金シフト加速か。半導体株荒い動きに違和感。ドル円１６５円か。米国株、ハイテク株",
-      "video_url": "https://www.youtube.com/watch?v=JjlfRSXq0Gk",
+      "channel": "株リアルライブ",
+      "video_title": "ＮＴＴ、ＪＸ金属、任天堂、SBG、フジクラ、レーザーテック。コンセンサス未達で急落かもの銘柄。好決算なのに急落中銘柄。今週注目の決算。８月２日:日曜版～あす上が",
+      "video_url": "https://www.youtube.com/watch?v=zhnGoxC0_aE",
       "topic": "決算",
       "category": "event",
-      "sentiment": "bearish",
+      "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
     },
@@ -184,28 +206,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "キオクシアがストップ高。ソニーが上方修正・最高益。パナソニックがストップ高。太陽誘電がストップ高。2026年７月３１日（木）～明日上がる株。最新の日本株情報。高",
-      "video_url": "https://www.youtube.com/watch?v=212aUrHsjHA",
-      "topic": "ソニー",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ソニー"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "キオクシアがストップ高。ソニーが上方修正・最高益。パナソニックがストップ高。太陽誘電がストップ高。2026年７月３１日（木）～明日上がる株。最新の日本株情報。高",
-      "video_url": "https://www.youtube.com/watch?v=212aUrHsjHA",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "トレードラボ",
       "video_title": "2026年後半にNISAで仕込みたい「累進配当」株３選",
       "video_url": "https://www.youtube.com/watch?v=j9A4bOGbaak",
@@ -234,39 +234,6 @@
       "topic": "決算",
       "category": "event",
       "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "減益決算で押し目を狙う！連続増配銘柄",
-      "video_url": "https://www.youtube.com/watch?v=T7aOlMM8yrM",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "キオクシアの決算を解説!!株価反転の兆しになるのか??",
-      "video_url": "https://www.youtube.com/watch?v=RRGHfABtg4c",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "キオクシア決算発表！今後どうなる？",
-      "video_url": "https://www.youtube.com/watch?v=dfvAaw33oc4",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
     },
@@ -316,7 +283,7 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 1,
+        "bull": 0,
         "bear": 1
       },
       "たばたの投資ch": {
@@ -349,28 +316,27 @@
         ]
       },
       "円高": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "決算": {
-        "count": 9,
+        "count": 7,
         "sentiment": "bearish",
         "sources": [
-          "たばたの投資ch",
-          "Sho's投資情報局",
-          "つばめ投資顧問",
           "優待ライダー",
-          "株リアルライブ"
+          "Sho's投資情報局",
+          "株リアルライブ",
+          "つばめ投資顧問"
         ]
       },
-      "ドル円": {
+      "任天堂": {
         "count": 1,
-        "sentiment": "bearish",
+        "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局"
+          "株リアルライブ"
         ]
       },
       "トヨタ": {
@@ -388,17 +354,10 @@
         ]
       },
       "高配当": {
-        "count": 3,
+        "count": 2,
         "sentiment": "bullish",
         "sources": [
           "優待ライダー",
-          "株リアルライブ"
-        ]
-      },
-      "ソニー": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
           "株リアルライブ"
         ]
       },
@@ -414,12 +373,11 @@
       "決算",
       "半導体",
       "日経平均",
-      "高配当",
       "円高",
-      "ドル円",
+      "高配当",
+      "任天堂",
       "トヨタ",
       "イビデン",
-      "ソニー",
       "配当"
     ]
   }
