@@ -1,44 +1,11 @@
 {
   "date": "2026-08-03",
-  "collected_at": "2026-08-03 12:39",
+  "collected_at": "2026-08-03 22:30",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 26,
-  "entry_count": 23,
+  "entry_count": 24,
   "entries": [
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株稼ぎ時や‼️AI半導体株波乱あるか。日経平均弱いぞ！！！！為替介入で円高加速、ドル円156円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急騰。仮",
-      "video_url": "https://www.youtube.com/watch?v=eRxYneB3m9g",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株稼ぎ時や‼️AI半導体株波乱あるか。日経平均弱いぞ！！！！為替介入で円高加速、ドル円156円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急騰。仮",
-      "video_url": "https://www.youtube.com/watch?v=eRxYneB3m9g",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株稼ぎ時や‼️AI半導体株波乱あるか。日経平均弱いぞ！！！！為替介入で円高加速、ドル円156円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急騰。仮",
-      "video_url": "https://www.youtube.com/watch?v=eRxYneB3m9g",
-      "topic": "円高",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 円高"
-    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -110,6 +77,50 @@
       "channel": "Sho's投資情報局",
       "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
       "video_url": "https://www.youtube.com/watch?v=l7StSjL0RNg",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
+      "video_url": "https://www.youtube.com/watch?v=xez9OLs6KvY",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
+      "video_url": "https://www.youtube.com/watch?v=xez9OLs6KvY",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
+      "video_url": "https://www.youtube.com/watch?v=xez9OLs6KvY",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株稼ぎ時や‼️キオクシア決算でAI半導体株、日経平均急落だと‼‼‼為替介入で円高加速、ドル円157円。バリュー株相場続くか⁉米国株、ハイテク株、GAFAM急",
+      "video_url": "https://www.youtube.com/watch?v=xez9OLs6KvY",
       "topic": "決算",
       "category": "event",
       "sentiment": "bearish",
@@ -264,7 +275,7 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 4
+        "bear": 8
       },
       "株リアルライブ": {
         "bull": 5,
@@ -300,8 +311,8 @@
       }
     },
     "by_topic": {
-      "日経平均": {
-        "count": 2,
+      "日経": {
+        "count": 1,
         "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
@@ -311,33 +322,33 @@
         "count": 4,
         "sentiment": "neutral",
         "sources": [
-          "Sho's投資情報局",
-          "つばめ投資顧問"
+          "つばめ投資顧問",
+          "Sho's投資情報局"
         ]
       },
       "円高": {
         "count": 4,
-        "sentiment": "neutral",
+        "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "株リアルライブ"
+          "株リアルライブ",
+          "Sho's投資情報局"
         ]
       },
-      "日経": {
-        "count": 1,
-        "sentiment": "neutral",
+      "日経平均": {
+        "count": 2,
+        "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "決算": {
-        "count": 4,
-        "sentiment": "neutral",
+        "count": 5,
+        "sentiment": "bearish",
         "sources": [
-          "つばめ投資顧問",
-          "Sho's投資情報局",
           "たばたの投資ch",
-          "株リアルライブ"
+          "株リアルライブ",
+          "つばめ投資顧問",
+          "Sho's投資情報局"
         ]
       },
       "高配当": {
@@ -385,9 +396,9 @@
       }
     },
     "hot_words": [
+      "決算",
       "半導体",
       "円高",
-      "決算",
       "高配当",
       "日経平均",
       "日経",
