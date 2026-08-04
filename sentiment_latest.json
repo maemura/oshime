@@ -18,10 +18,10 @@
     },
     {
       "word": "日経",
-      "size": "md",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
@@ -33,18 +33,18 @@
       "sources": 2
     },
     {
-      "word": "決算",
-      "size": "lg",
-      "mood": "calm",
-      "count": 3,
-      "sources": 3
-    },
-    {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
       "count": 3,
       "sources": 1
+    },
+    {
+      "word": "決算",
+      "size": "md",
+      "mood": "calm",
+      "count": 2,
+      "sources": 2
     },
     {
       "word": "配当",
