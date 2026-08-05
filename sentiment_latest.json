@@ -1,26 +1,19 @@
 {
-  "date": "2026-08-04",
+  "date": "2026-08-05",
   "mode": "claude",
   "macro": [
     {
-      "word": "円高",
+      "word": "日経平均",
       "size": "lg",
       "mood": "fear",
       "count": 3,
       "sources": 1
     },
     {
-      "word": "日経平均",
-      "size": "md",
+      "word": "円高",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "日経",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
+      "count": 3,
       "sources": 1
     }
   ],
@@ -45,18 +38,18 @@
       "mood": "calm",
       "count": 2,
       "sources": 2
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": [
     {
       "word": "イビデン",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "トヨタ",
       "size": "sm",
       "mood": "greed",
       "count": 1,
