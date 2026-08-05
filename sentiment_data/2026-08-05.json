@@ -1,6 +1,6 @@
 {
   "date": "2026-08-05",
-  "collected_at": "2026-08-05 11:33",
+  "collected_at": "2026-08-05 22:31",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 25,
@@ -10,6 +10,39 @@
       "source": "youtube",
       "channel": "Sho's投資情報局",
       "video_title": "日本株空売り激減で急騰一時的か⁉️日経平均がAI半導体株急伸で大幅高。為替介入で円高加速、ドル円157円。米国株、ハイテク株、GAFAM急騰。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=M3EEDWnnMzo",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株空売り激減で急騰一時的か⁉️日経平均がAI半導体株急伸で大幅高。為替介入で円高加速、ドル円157円。米国株、ハイテク株、GAFAM急騰。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=M3EEDWnnMzo",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株空売り激減で急騰一時的か⁉️日経平均がAI半導体株急伸で大幅高。為替介入で円高加速、ドル円157円。米国株、ハイテク株、GAFAM急騰。仮想通貨BTC弱",
+      "video_url": "https://www.youtube.com/watch?v=M3EEDWnnMzo",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "日本株空売り激減で急騰一時的か⁉️日経平均がAI半導体株急伸で大幅高。為替介入で円高加速、ドル円157円。米国株、ハイテク株、GAFAM急騰。仮想通貨BTC弱",
       "video_url": "https://www.youtube.com/watch?v=fmMPQIn2ej8",
       "topic": "日経平均",
       "category": "macro",
@@ -66,39 +99,6 @@
       "channel": "Sho's投資情報局",
       "video_title": "【注意】日本株空売り全く入ってない‼️日経平均上昇一時的か⁉️AI半導体株、キオクシア上昇。為替介入で円高加速、ドル円1567円。バリュー株下落。米国株、ハイテ",
       "video_url": "https://www.youtube.com/watch?v=gA-yxgLQclQ",
-      "topic": "円高",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 円高"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【注意】日本株空売り全く入ってない‼️日経平均上昇一時的か⁉️AI半導体株、キオクシア上昇。為替介入で円高加速、ドル円1567円。バリュー株下落。米国株、ハイテ",
-      "video_url": "https://www.youtube.com/watch?v=CdFrKMmWfAg",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【注意】日本株空売り全く入ってない‼️日経平均上昇一時的か⁉️AI半導体株、キオクシア上昇。為替介入で円高加速、ドル円1567円。バリュー株下落。米国株、ハイテ",
-      "video_url": "https://www.youtube.com/watch?v=CdFrKMmWfAg",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【注意】日本株空売り全く入ってない‼️日経平均上昇一時的か⁉️AI半導体株、キオクシア上昇。為替介入で円高加速、ドル円1567円。バリュー株下落。米国株、ハイテ",
-      "video_url": "https://www.youtube.com/watch?v=CdFrKMmWfAg",
       "topic": "円高",
       "category": "macro",
       "sentiment": "bearish",
@@ -296,8 +296,8 @@
         "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "優待ライダー",
-          "つばめ投資顧問"
+          "つばめ投資顧問",
+          "優待ライダー"
         ]
       },
       "トヨタ": {
