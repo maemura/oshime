@@ -11,16 +11,9 @@
     },
     {
       "word": "ドル円",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "円高",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
+      "count": 3,
       "sources": 1
     },
     {
@@ -36,21 +29,28 @@
       "word": "決算",
       "size": "xl",
       "mood": "fear",
-      "count": 8,
-      "sources": 4
-    },
-    {
-      "word": "半導体",
-      "size": "lg",
-      "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 7,
+      "sources": 5
     },
     {
       "word": "高配当",
       "size": "lg",
       "mood": "greed",
+      "count": 4,
+      "sources": 2
+    },
+    {
+      "word": "半導体",
+      "size": "lg",
+      "mood": "fear",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "防衛",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
       "sources": 1
     }
   ],
