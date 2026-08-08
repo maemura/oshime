@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-07",
+  "date": "2026-08-08",
   "mode": "claude",
   "macro": [
     {
@@ -11,9 +11,16 @@
     },
     {
       "word": "ドル円",
-      "size": "lg",
+      "size": "md",
       "mood": "fear",
-      "count": 3,
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "円高",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
       "sources": 1
     },
     {
@@ -29,8 +36,8 @@
       "word": "決算",
       "size": "xl",
       "mood": "fear",
-      "count": 7,
-      "sources": 5
+      "count": 5,
+      "sources": 4
     },
     {
       "word": "高配当",
