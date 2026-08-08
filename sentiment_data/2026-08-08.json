@@ -1,10 +1,10 @@
 {
   "date": "2026-08-08",
-  "collected_at": "2026-08-08 09:59",
+  "collected_at": "2026-08-08 21:51",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 26,
-  "entry_count": 22,
+  "videos_processed": 25,
+  "entry_count": 23,
   "entries": [
     {
       "source": "youtube",
@@ -119,6 +119,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "いよいよ来週決算。サンリオ、ＭＳ＆ＡＤ、東京海上、荏原製作所、楽天、住友鉱山、アシックス、三越伊勢丹、ＳＯＭＰＯ。８月８日:土曜版～あす上がる株。最新の日本株情",
+      "video_url": "https://www.youtube.com/watch?v=UZa4bLzu9Bo",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "好決算なのに急落銘柄が大量発生！株式１０分割、３分割、２分割登場。増配５１銘柄発表！ＫＤＤＩ最高益～あす上がる株　2026年８月１０日（月）に上がる銘柄。最新の",
       "video_url": "https://www.youtube.com/watch?v=oUxq6Jtjlwc",
       "topic": "高配当",
@@ -162,25 +173,25 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ソフトバンクグループ減益。レーザーテック増益増配。任天堂増益。ＪＸ金属上方修正。三菱マテリアル最高益～あす上がる株　2026年８月７日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=8aqQP4JjL4E",
-      "topic": "任天堂",
-      "category": "stock",
-      "sentiment": "bullish",
+      "channel": "トレードラボ",
+      "video_title": "2026年後半にNISAで仕込みたい「累進配当」株３選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=udDSOw9ifDA",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 任天堂"
+      "summary": "キーワード: 配当"
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ソフトバンクグループ減益。レーザーテック増益増配。任天堂増益。ＪＸ金属上方修正。三菱マテリアル最高益～あす上がる株　2026年８月７日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=8aqQP4JjL4E",
-      "topic": "高配当",
+      "channel": "優待ライダー",
+      "video_title": "優待拡充にDOE累進配当全部乗せ銘柄",
+      "video_url": "https://www.youtube.com/watch?v=_UDvl8jJ6dI",
+      "topic": "配当",
       "category": "sector",
-      "sentiment": "bullish",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 高配当"
+      "summary": "キーワード: 配当"
     },
     {
       "source": "youtube",
@@ -256,7 +267,7 @@
         "bear": 10
       },
       "株リアルライブ": {
-        "bull": 6,
+        "bull": 5,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -318,28 +329,35 @@
         ]
       },
       "決算": {
-        "count": 5,
-        "sentiment": "bearish",
+        "count": 6,
+        "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
           "優待ライダー",
           "Sho's投資情報局",
+          "株リアルライブ",
           "つばめ投資顧問"
         ]
       },
       "高配当": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "優待ライダー"
+          "優待ライダー",
+          "株リアルライブ"
+        ]
+      },
+      "配当": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "優待ライダー",
+          "トレードラボ"
         ]
       },
       "任天堂": {
-        "count": 2,
-        "sentiment": "bullish",
+        "count": 1,
+        "sentiment": "bearish",
         "sources": [
-          "株リアルライブ",
           "優待ライダー"
         ]
       },
@@ -360,12 +378,13 @@
     },
     "hot_words": [
       "決算",
-      "高配当",
       "日経平均",
       "半導体",
+      "高配当",
       "ドル円",
-      "任天堂",
+      "配当",
       "円高",
+      "任天堂",
       "防衛",
       "円安"
     ]
