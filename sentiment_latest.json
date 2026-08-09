@@ -10,14 +10,14 @@
       "sources": 1
     },
     {
-      "word": "ドル円",
+      "word": "円高",
       "size": "md",
       "mood": "fear",
       "count": 2,
       "sources": 1
     },
     {
-      "word": "円高",
+      "word": "ドル円",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -34,10 +34,10 @@
   "institutional": [
     {
       "word": "決算",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 6,
-      "sources": 4
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "半導体",
@@ -48,9 +48,9 @@
     },
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 2
     },
     {
@@ -59,15 +59,14 @@
       "mood": "calm",
       "count": 2,
       "sources": 2
-    }
-  ],
-  "retail": [
+    },
     {
-      "word": "任天堂",
+      "word": "防衛",
       "size": "sm",
-      "mood": "fear",
+      "mood": "calm",
       "count": 1,
       "sources": 1
     }
-  ]
+  ],
+  "retail": []
 }
