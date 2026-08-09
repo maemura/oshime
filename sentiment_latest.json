@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-08",
+  "date": "2026-08-09",
   "mode": "claude",
   "macro": [
     {
@@ -59,13 +59,6 @@
       "mood": "calm",
       "count": 2,
       "sources": 2
-    },
-    {
-      "word": "防衛",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": [
