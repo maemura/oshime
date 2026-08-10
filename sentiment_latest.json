@@ -33,25 +33,25 @@
       "sources": 1
     },
     {
+      "word": "高配当",
+      "size": "lg",
+      "mood": "greed",
+      "count": 3,
+      "sources": 2
+    },
+    {
       "word": "決算",
       "size": "lg",
       "mood": "greed",
       "count": 3,
-      "sources": 1
-    },
-    {
-      "word": "高配当",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
       "sources": 2
     },
     {
       "word": "配当",
-      "size": "md",
+      "size": "lg",
       "mood": "calm",
-      "count": 2,
-      "sources": 2
+      "count": 3,
+      "sources": 3
     }
   ],
   "retail": []

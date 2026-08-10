@@ -1,10 +1,10 @@
 {
   "date": "2026-08-10",
-  "collected_at": "2026-08-10 10:39",
+  "collected_at": "2026-08-10 22:03",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 25,
-  "entry_count": 17,
+  "entry_count": 19,
   "entries": [
     {
       "source": "youtube",
@@ -108,6 +108,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "サンリオこれはマズイ！利回り8.5%登場！5.1%も。エムスリーにOasisが！ スクエニ増益。～あす上がる株　2026年８月１２日（水）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=gWpi-CtuuFM",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "フジクラ好調。好決算銘柄に買いが集中！でも好決算なのに急落銘柄が大量発生。リクルートがストップ高。2026年８月１０日（月）～明日上がる株。最新の日本株情報。高",
       "video_url": "https://www.youtube.com/watch?v=fZoosI5u1os",
       "topic": "高配当",
@@ -140,14 +151,25 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "いよいよ来週決算。サンリオ、ＭＳ＆ＡＤ、東京海上、荏原製作所、楽天、住友鉱山、アシックス、三越伊勢丹、ＳＯＭＰＯ。８月８日:土曜版～あす上がる株。最新の日本株情",
-      "video_url": "https://www.youtube.com/watch?v=UZa4bLzu9Bo",
-      "topic": "決算",
-      "category": "event",
+      "channel": "トレードラボ",
+      "video_title": "2026年後半にNISAで仕込みたい「累進配当」株３選#shorts",
+      "video_url": "https://www.youtube.com/watch?v=udDSOw9ifDA",
+      "topic": "配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "人気高配当株まさかの黒字修正！優待改悪銘柄も",
+      "video_url": "https://www.youtube.com/watch?v=5BIYP3f9zKs",
+      "topic": "高配当",
+      "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 決算"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -162,14 +184,14 @@
     },
     {
       "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "優待復活でナンピン必至！オススメ高配当銘柄",
-      "video_url": "https://www.youtube.com/watch?v=u79RSVEwmg0",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
+      "channel": "つばめ投資顧問",
+      "video_title": "三菱重工 決算解説",
+      "video_url": "https://www.youtube.com/watch?v=9hiOZh2b9oU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 高配当"
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -256,26 +278,28 @@
         ]
       },
       "高配当": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "優待ライダー",
-          "株リアルライブ"
+          "株リアルライブ",
+          "優待ライダー"
         ]
       },
       "決算": {
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ"
+          "株リアルライブ",
+          "つばめ投資顧問"
         ]
       },
       "配当": {
-        "count": 2,
+        "count": 3,
         "sentiment": "neutral",
         "sources": [
-          "優待ライダー",
-          "STOCKVOICE"
+          "トレードラボ",
+          "STOCKVOICE",
+          "優待ライダー"
         ]
       },
       "ドル円": {
@@ -290,8 +314,8 @@
       "日経平均",
       "半導体",
       "円高",
-      "決算",
       "高配当",
+      "決算",
       "配当",
       "ドル円"
     ]
