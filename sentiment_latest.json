@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-09",
+  "date": "2026-08-10",
   "mode": "claude",
   "macro": [
     {
@@ -11,20 +11,13 @@
     },
     {
       "word": "円高",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
+      "count": 3,
       "sources": 1
     },
     {
       "word": "ドル円",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "円安",
       "size": "sm",
       "mood": "calm",
       "count": 1,
@@ -33,16 +26,16 @@
   ],
   "institutional": [
     {
-      "word": "決算",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
-    {
       "word": "半導体",
       "size": "lg",
       "mood": "fear",
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "決算",
+      "size": "lg",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     },
@@ -59,13 +52,6 @@
       "mood": "calm",
       "count": 2,
       "sources": 2
-    },
-    {
-      "word": "防衛",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": []
