@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-11",
+  "date": "2026-08-12",
   "mode": "claude",
   "macro": [
     {
@@ -11,9 +11,9 @@
     },
     {
       "word": "円高",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 1
     },
     {
@@ -44,13 +44,6 @@
       "size": "lg",
       "mood": "greed",
       "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "配当",
-      "size": "md",
-      "mood": "calm",
-      "count": 2,
       "sources": 2
     }
   ],
