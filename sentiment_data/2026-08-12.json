@@ -1,11 +1,44 @@
 {
   "date": "2026-08-12",
-  "collected_at": "2026-08-12 10:31",
+  "collected_at": "2026-08-12 22:07",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 25,
-  "entry_count": 16,
+  "videos_processed": 26,
+  "entry_count": 21,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【CPI発表。日本株動くぞ‼️】日経平均流れが変わって爆益チャンスか‼️AI半導体株投げ売り止まる？→出遅れ銘柄強いぞ‼️円高加速に急ブレーキ。ドル円159円。",
+      "video_url": "https://www.youtube.com/watch?v=M6jrTXgfmag",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【CPI発表。日本株動くぞ‼️】日経平均流れが変わって爆益チャンスか‼️AI半導体株投げ売り止まる？→出遅れ銘柄強いぞ‼️円高加速に急ブレーキ。ドル円159円。",
+      "video_url": "https://www.youtube.com/watch?v=M6jrTXgfmag",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【CPI発表。日本株動くぞ‼️】日経平均流れが変わって爆益チャンスか‼️AI半導体株投げ売り止まる？→出遅れ銘柄強いぞ‼️円高加速に急ブレーキ。ドル円159円。",
+      "video_url": "https://www.youtube.com/watch?v=M6jrTXgfmag",
+      "topic": "円高",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 円高"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -74,36 +107,25 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株動くぞ‼️】日経平均流れが変わって爆益チャンスか‼️AI半導体株投げ売り止まる？→出遅れ銘柄強いぞ‼️円高加速に急ブレーキ。ドル円１５７円。米国株、仮想",
-      "video_url": "https://www.youtube.com/watch?v=pQgbWzo5W_U",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株動くぞ‼️】日経平均流れが変わって爆益チャンスか‼️AI半導体株投げ売り止まる？→出遅れ銘柄強いぞ‼️円高加速に急ブレーキ。ドル円１５７円。米国株、仮想",
-      "video_url": "https://www.youtube.com/watch?v=pQgbWzo5W_U",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "東京海上増益。カバー減益。ＴＯＰＰＡＮ増益。ＤＭＧ森精機公募増資。好決算なのに急落中の銘柄。～あす上がる株　2026年８月１３日（木）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=IKyQuFUfShY",
+      "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日本株動くぞ‼️】日経平均流れが変わって爆益チャンスか‼️AI半導体株投げ売り止まる？→出遅れ銘柄強いぞ‼️円高加速に急ブレーキ。ドル円１５７円。米国株、仮想",
-      "video_url": "https://www.youtube.com/watch?v=pQgbWzo5W_U",
-      "topic": "円高",
-      "category": "macro",
+      "channel": "株リアルライブ",
+      "video_title": "東京海上増益。カバー減益。ＴＯＰＰＡＮ増益。ＤＭＧ森精機公募増資。好決算なのに急落中の銘柄。～あす上がる株　2026年８月１３日（木）に上がる銘柄。最新の日本株",
+      "video_url": "https://www.youtube.com/watch?v=IKyQuFUfShY",
+      "topic": "決算",
+      "category": "event",
       "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 円高"
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -140,14 +162,47 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "サンリオこれはマズイ！利回り8.5%登場！5.1%も。エムスリーにOasisが！ スクエニ増益。～あす上がる株　2026年８月１２日（水）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=gWpi-CtuuFM",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "〇〇セクターの大手株はガチで押し目見ておけ！決算ヤバかったぞ！",
+      "video_url": "https://www.youtube.com/watch?v=axIS9KGlacQ",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【厳選】今買っても大丈夫な高配当株はこれだけ！大川智宏さんゲスト解説【後編】",
+      "video_url": "https://www.youtube.com/watch?v=rXK2Nqs-0zA",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ばっちゃまの投資チャンネル",
+      "video_title": "【米国株 8/12】時間外で重要決算が続々発表されました。",
+      "video_url": "https://www.youtube.com/watch?v=WGO-ACt2f7c",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "決算物足りず年初来安値更新！優待拡充欲しい銘柄も",
+      "video_url": "https://www.youtube.com/watch?v=_GoZ0-flE4E",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -190,15 +245,15 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 4,
+        "bull": 5,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
-        "bull": 0,
+        "bull": 1,
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 0,
+        "bull": 1,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -237,13 +292,6 @@
           "Sho's投資情報局"
         ]
       },
-      "ドル円": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "Sho's投資情報局"
-        ]
-      },
       "円高": {
         "count": 2,
         "sentiment": "bullish",
@@ -251,29 +299,39 @@
           "Sho's投資情報局"
         ]
       },
-      "高配当": {
-        "count": 3,
-        "sentiment": "bullish",
+      "ドル円": {
+        "count": 1,
+        "sentiment": "neutral",
         "sources": [
-          "優待ライダー",
-          "株リアルライブ"
+          "Sho's投資情報局"
         ]
       },
-      "決算": {
+      "高配当": {
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "たばたの投資ch",
+          "株リアルライブ",
           "優待ライダー",
-          "株リアルライブ"
+          "トレードラボ"
+        ]
+      },
+      "決算": {
+        "count": 8,
+        "sentiment": "bullish",
+        "sources": [
+          "たばたの投資ch",
+          "ばっちゃまの投資チャンネル",
+          "ひげづら株ちゃんねる",
+          "株リアルライブ",
+          "優待ライダー"
         ]
       }
     },
     "hot_words": [
       "決算",
+      "高配当",
       "日経平均",
       "半導体",
-      "高配当",
       "円高",
       "ドル円"
     ]
