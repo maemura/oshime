@@ -22,6 +22,13 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
@@ -29,15 +36,15 @@
       "word": "決算",
       "size": "xl",
       "mood": "greed",
-      "count": 7,
-      "sources": 4
+      "count": 6,
+      "sources": 3
     },
     {
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
-      "sources": 4
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "半導体",
@@ -45,6 +52,13 @@
       "mood": "calm",
       "count": 4,
       "sources": 2
+    },
+    {
+      "word": "銀行",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "AI銘柄",
