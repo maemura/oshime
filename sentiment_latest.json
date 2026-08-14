@@ -36,21 +36,21 @@
       "word": "決算",
       "size": "xl",
       "mood": "greed",
-      "count": 7,
-      "sources": 5
+      "count": 6,
+      "sources": 4
     },
     {
       "word": "半導体",
       "size": "xl",
       "mood": "calm",
-      "count": 6,
+      "count": 5,
       "sources": 3
     },
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "xl",
       "mood": "greed",
-      "count": 4,
+      "count": 5,
       "sources": 2
     },
     {

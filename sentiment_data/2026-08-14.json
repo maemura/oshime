@@ -1,10 +1,10 @@
 {
   "date": "2026-08-14",
-  "collected_at": "2026-08-14 10:29",
+  "collected_at": "2026-08-14 21:45",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 25,
-  "entry_count": 29,
+  "entry_count": 28,
   "entries": [
     {
       "source": "youtube",
@@ -108,6 +108,50 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "利回り15.7％まだ行ける！ＭＳ＆ＡＤこれは良い決算！ＳＯＭＰＯ増益。アシックス上方増配【後編】～あす上がる株　2026年８月１４日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=HXR8f28Ub-g",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "利回り15.7％まだ行ける！ＭＳ＆ＡＤこれは良い決算！ＳＯＭＰＯ増益。アシックス上方増配【後編】～あす上がる株　2026年８月１４日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=HXR8f28Ub-g",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "利回り15.7％まだ行ける！ＭＳ＆ＡＤこれは良い決算！ＳＯＭＰＯ増益。アシックス上方増配【前編】～あす上がる株　2026年８月１４日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=G67DCNPLSps",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "利回り15.7％まだ行ける！ＭＳ＆ＡＤこれは良い決算！ＳＯＭＰＯ増益。アシックス上方増配【前編】～あす上がる株　2026年８月１４日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=G67DCNPLSps",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "まだ利回り15.7％！アサヒグループが大幅増益。サンディスクが起爆、半導体株上昇。2026年８月１４日（金）～明日上がる株。最新の日本株情報。高配当株の株価やデ",
       "video_url": "https://www.youtube.com/watch?v=-sgvK8B4QIE",
       "topic": "半導体",
@@ -126,61 +170,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "あす、チャンスあり！利回り18.8%！9.3%も。三越伊勢丹が株式分割。好決算なのに急落中の５銘柄～あす上がる株　2026年８月１４日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=9Nb9e2OG72U",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "あす、チャンスあり！利回り18.8%！9.3%も。三越伊勢丹が株式分割。好決算なのに急落中の５銘柄～あす上がる株　2026年８月１４日（金）に上がる銘柄。最新の",
-      "video_url": "https://www.youtube.com/watch?v=9Nb9e2OG72U",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "好決算なのに急落銘柄大量発生。すかいらーく、上方修正・増配。MLCC・半導体急騰。ＤＭＧ森精機急落。。2026年８月１３日（水）～明日上がる株。最新の日本株情報",
-      "video_url": "https://www.youtube.com/watch?v=p22LQFivi6c",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "好決算なのに急落銘柄大量発生。すかいらーく、上方修正・増配。MLCC・半導体急騰。ＤＭＧ森精機急落。。2026年８月１３日（水）～明日上がる株。最新の日本株情報",
-      "video_url": "https://www.youtube.com/watch?v=p22LQFivi6c",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "好決算なのに急落銘柄大量発生。すかいらーく、上方修正・増配。MLCC・半導体急騰。ＤＭＧ森精機急落。。2026年８月１３日（水）～明日上がる株。最新の日本株情報",
-      "video_url": "https://www.youtube.com/watch?v=p22LQFivi6c",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -196,6 +185,17 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
+      "video_title": "安値で放置されていた利回り5.1%高配当株が遂に上昇開始！お買い得なのは今が最後かも？",
+      "video_url": "https://www.youtube.com/watch?v=GL6eOkcQ688",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
       "video_title": "【厳選】今買っても大丈夫な高配当株はこれだけ！大川智宏さんゲスト解説【後編】",
       "video_url": "https://www.youtube.com/watch?v=rXK2Nqs-0zA",
       "topic": "高配当",
@@ -207,13 +207,24 @@
     {
       "source": "youtube",
       "channel": "ばっちゃまの投資チャンネル",
-      "video_title": "【米国株 8/14】半導体株が弱気相場脱出目前、今夜の動きによって俺も買います。",
+      "video_title": "【米国株 8/14】半導体株が弱気相場脱出目前、今夜の動きによって俺も動きます。",
       "video_url": "https://www.youtube.com/watch?v=cfUCXsE_Xv0",
       "topic": "半導体",
       "category": "sector",
-      "sentiment": "neutral",
+      "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "アサヒ逆転決算、MS&amp;ADは爆益！悩む最恐優待も",
+      "video_url": "https://www.youtube.com/watch?v=Up12NZzyxZw",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -245,17 +256,6 @@
       "topic": "決算",
       "category": "event",
       "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "決算急落で購入者が続々！私も欲しい銘柄",
-      "video_url": "https://www.youtube.com/watch?v=juoYua5Re6s",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
     },
@@ -313,17 +313,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 金利"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "日本企業の決算は好調！【ゲスト】 8月14日 いちよし証券 持田真樹さん",
-      "video_url": "https://www.youtube.com/watch?v=cA2H4HG2KBU",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
     }
   ],
   "summary": {
@@ -333,7 +322,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 7,
+        "bull": 6,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -341,16 +330,16 @@
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 1,
+        "bull": 2,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
         "bull": 0,
-        "bear": 0
+        "bear": 1
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -374,12 +363,12 @@
         ]
       },
       "半導体": {
-        "count": 6,
+        "count": 5,
         "sentiment": "neutral",
         "sources": [
-          "ばっちゃまの投資チャンネル",
           "Sho's投資情報局",
-          "株リアルライブ"
+          "株リアルライブ",
+          "ばっちゃまの投資チャンネル"
         ]
       },
       "ドル円": {
@@ -391,22 +380,21 @@
         ]
       },
       "高配当": {
-        "count": 4,
+        "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "決算": {
-        "count": 7,
+        "count": 6,
         "sentiment": "bullish",
         "sources": [
-          "STOCKVOICE",
-          "たばたの投資ch",
-          "ひげづら株ちゃんねる",
           "株リアルライブ",
-          "優待ライダー"
+          "優待ライダー",
+          "ひげづら株ちゃんねる",
+          "たばたの投資ch"
         ]
       },
       "円安": {
@@ -441,8 +429,8 @@
     "hot_words": [
       "決算",
       "半導体",
-      "ドル円",
       "高配当",
+      "ドル円",
       "日経平均",
       "AI銘柄",
       "円安",
