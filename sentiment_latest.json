@@ -40,17 +40,17 @@
       "sources": 4
     },
     {
-      "word": "半導体",
+      "word": "高配当",
       "size": "xl",
       "mood": "greed",
       "count": 5,
       "sources": 3
     },
     {
-      "word": "高配当",
-      "size": "xl",
-      "mood": "greed",
-      "count": 5,
+      "word": "半導体",
+      "size": "lg",
+      "mood": "calm",
+      "count": 4,
       "sources": 2
     },
     {
@@ -58,6 +58,13 @@
       "size": "md",
       "mood": "calm",
       "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "配当",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
       "sources": 1
     },
     {
