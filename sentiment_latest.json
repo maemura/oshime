@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-14",
+  "date": "2026-08-15",
   "mode": "claude",
   "macro": [
     {
@@ -42,7 +42,7 @@
     {
       "word": "半導体",
       "size": "xl",
-      "mood": "calm",
+      "mood": "greed",
       "count": 5,
       "sources": 3
     },
@@ -68,5 +68,20 @@
       "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "任天堂",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
+    },
+    {
+      "word": "トヨタ",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
