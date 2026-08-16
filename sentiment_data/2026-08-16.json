@@ -1,10 +1,10 @@
 {
   "date": "2026-08-16",
-  "collected_at": "2026-08-16 09:47",
+  "collected_at": "2026-08-16 21:39",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 25,
-  "entry_count": 31,
+  "videos_processed": 26,
+  "entry_count": 28,
   "entries": [
     {
       "source": "youtube",
@@ -130,6 +130,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "あす急落しそうな銘柄いっぱい。今週、コンセンサス未達で下げそうな銘柄。好決算なのに、下げてる銘柄。あす急騰しそうな９銘柄。決算スケジュール２週間分８月１６日:日",
+      "video_url": "https://www.youtube.com/watch?v=mG1JoXoEMxU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "９月の配当銘柄。超高配当が７７銘柄もあるが、とんでもない注意事項も！８月１５日:土曜版～あす上がる株。最新の日本株情報～",
       "video_url": "https://www.youtube.com/watch?v=HFkSWA8Urgc",
       "topic": "配当",
@@ -162,28 +173,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "利回り15.7％まだ行ける！ＭＳ＆ＡＤこれは良い決算！ＳＯＭＰＯ増益。アシックス上方増配【前編】～あす上がる株　2026年８月１４日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=G67DCNPLSps",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "利回り15.7％まだ行ける！ＭＳ＆ＡＤこれは良い決算！ＳＯＭＰＯ増益。アシックス上方増配【前編】～あす上がる株　2026年８月１４日（金）に上がる銘柄。最新の日",
-      "video_url": "https://www.youtube.com/watch?v=G67DCNPLSps",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "〇〇セクターの大手株はガチで押し目見ておけ！決算ヤバかったぞ！",
       "video_url": "https://www.youtube.com/watch?v=axIS9KGlacQ",
@@ -196,8 +185,8 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
-      "video_title": "安値で放置されていた利回り5.1%高配当株が遂に上昇開始！お買い得なのは今が最後かも？",
-      "video_url": "https://www.youtube.com/watch?v=GL6eOkcQ688",
+      "video_title": "【厳選】今買っても大丈夫な高配当株はこれだけ！大川智宏さんゲスト解説【後編】#shorts",
+      "video_url": "https://www.youtube.com/watch?v=uxoBgCzD_Pc",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -207,8 +196,8 @@
     {
       "source": "youtube",
       "channel": "トレードラボ",
-      "video_title": "【厳選】今買っても大丈夫な高配当株はこれだけ！大川智宏さんゲスト解説【後編】",
-      "video_url": "https://www.youtube.com/watch?v=rXK2Nqs-0zA",
+      "video_title": "安値で放置されていた利回り5.1%高配当株が遂に上昇開始！お買い得なのは今が最後かも？",
+      "video_url": "https://www.youtube.com/watch?v=GL6eOkcQ688",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -258,28 +247,6 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "止まらぬ円安もあの銘柄が弱い！銀行株が強い",
-      "video_url": "https://www.youtube.com/watch?v=2Y0-pcLjACI",
-      "topic": "円安",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 円安"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "止まらぬ円安もあの銘柄が弱い！銀行株が強い",
-      "video_url": "https://www.youtube.com/watch?v=2Y0-pcLjACI",
-      "topic": "銀行",
-      "category": "sector",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 銀行"
     },
     {
       "source": "youtube",
@@ -355,7 +322,7 @@
         "bear": 0
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -399,8 +366,8 @@
         "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "ばっちゃまの投資チャンネル",
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "ばっちゃまの投資チャンネル"
         ]
       },
       "任天堂": {
@@ -419,6 +386,16 @@
           "Sho's投資情報局"
         ]
       },
+      "決算": {
+        "count": 6,
+        "sentiment": "bullish",
+        "sources": [
+          "ひげづら株ちゃんねる",
+          "株リアルライブ",
+          "たばたの投資ch",
+          "優待ライダー"
+        ]
+      },
       "配当": {
         "count": 1,
         "sentiment": "bullish",
@@ -427,36 +404,12 @@
         ]
       },
       "高配当": {
-        "count": 5,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
           "優待ライダー",
           "トレードラボ"
-        ]
-      },
-      "決算": {
-        "count": 6,
-        "sentiment": "bullish",
-        "sources": [
-          "株リアルライブ",
-          "ひげづら株ちゃんねる",
-          "優待ライダー",
-          "たばたの投資ch"
-        ]
-      },
-      "円安": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "優待ライダー"
-        ]
-      },
-      "銀行": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "優待ライダー"
         ]
       },
       "トヨタ": {
@@ -483,14 +436,12 @@
     },
     "hot_words": [
       "決算",
-      "高配当",
       "半導体",
       "ドル円",
+      "高配当",
       "日経平均",
       "任天堂",
       "配当",
-      "円安",
-      "銀行",
       "トヨタ",
       "AI銘柄",
       "金利"
