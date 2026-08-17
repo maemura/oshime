@@ -4,10 +4,10 @@
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 2
+      "size": "xl",
+      "mood": "greed",
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "ドル円",
@@ -43,6 +43,13 @@
       "word": "決算",
       "size": "xl",
       "mood": "greed",
+      "count": 6,
+      "sources": 3
+    },
+    {
+      "word": "高配当",
+      "size": "xl",
+      "mood": "greed",
       "count": 5,
       "sources": 3
     },
@@ -52,20 +59,6 @@
       "mood": "greed",
       "count": 4,
       "sources": 2
-    },
-    {
-      "word": "高配当",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 3
-    },
-    {
-      "word": "配当",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": [
