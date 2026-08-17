@@ -1,19 +1,33 @@
 {
-  "date": "2026-08-16",
+  "date": "2026-08-17",
   "mode": "claude",
   "macro": [
     {
-      "word": "ドル円",
+      "word": "日経平均",
       "size": "lg",
-      "mood": "greed",
+      "mood": "calm",
       "count": 4,
       "sources": 2
     },
     {
-      "word": "日経平均",
+      "word": "ドル円",
       "size": "lg",
       "mood": "greed",
       "count": 3,
+      "sources": 2
+    },
+    {
+      "word": "ナスダック",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円高",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
       "sources": 1
     },
     {
@@ -29,8 +43,8 @@
       "word": "決算",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
-      "sources": 4
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "半導体",
@@ -52,28 +66,21 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
-    },
-    {
-      "word": "AI銘柄",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": [
     {
       "word": "任天堂",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 2
     },
     {
       "word": "トヨタ",
-      "size": "sm",
+      "size": "md",
       "mood": "calm",
-      "count": 1,
+      "count": 2,
       "sources": 1
     }
   ]
