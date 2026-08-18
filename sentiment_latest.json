@@ -1,20 +1,27 @@
 {
-  "date": "2026-08-17",
+  "date": "2026-08-18",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "xl",
-      "mood": "greed",
-      "count": 5,
-      "sources": 3
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ドル円",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 2
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 1
+    },
+    {
+      "word": "金利",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 1
     },
     {
       "word": "ナスダック",
@@ -31,14 +38,35 @@
       "sources": 1
     },
     {
-      "word": "金利",
+      "word": "日経",
       "size": "sm",
-      "mood": "calm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "TOPIX",
+      "size": "sm",
+      "mood": "greed",
       "count": 1,
       "sources": 1
     }
   ],
   "institutional": [
+    {
+      "word": "高配当",
+      "size": "xl",
+      "mood": "greed",
+      "count": 6,
+      "sources": 3
+    },
     {
       "word": "決算",
       "size": "xl",
@@ -47,33 +75,26 @@
       "sources": 3
     },
     {
-      "word": "高配当",
-      "size": "xl",
-      "mood": "greed",
-      "count": 5,
-      "sources": 3
-    },
-    {
       "word": "半導体",
       "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 2
+      "mood": "fear",
+      "count": 3,
+      "sources": 1
     }
   ],
   "retail": [
     {
       "word": "任天堂",
-      "size": "md",
+      "size": "sm",
       "mood": "greed",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     },
     {
       "word": "トヨタ",
-      "size": "md",
+      "size": "sm",
       "mood": "calm",
-      "count": 2,
+      "count": 1,
       "sources": 1
     }
   ]
