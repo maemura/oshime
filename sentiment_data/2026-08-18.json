@@ -1,15 +1,59 @@
 {
   "date": "2026-08-18",
-  "collected_at": "2026-08-18 09:54",
+  "collected_at": "2026-08-18 21:42",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 27,
-  "entry_count": 30,
+  "entry_count": 27,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
       "video_title": "【緊急.日本株空売り急増‼】AI半導体株暴落で日経平均１７６０円急落→バリュー株に資金シフト。ドル円１５９円。金利急騰で米国株、ハイテク株荒れるか。仮想通貨BT",
+      "video_url": "https://www.youtube.com/watch?v=qRCPlNZldXI",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急.日本株空売り急増‼】AI半導体株暴落で日経平均１７６０円急落→バリュー株に資金シフト。ドル円１５９円。金利急騰で米国株、ハイテク株荒れるか。仮想通貨BT",
+      "video_url": "https://www.youtube.com/watch?v=qRCPlNZldXI",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急.日本株空売り急増‼】AI半導体株暴落で日経平均１７６０円急落→バリュー株に資金シフト。ドル円１５９円。金利急騰で米国株、ハイテク株荒れるか。仮想通貨BT",
+      "video_url": "https://www.youtube.com/watch?v=qRCPlNZldXI",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急.日本株空売り急増‼】AI半導体株暴落で日経平均１７６０円急落→バリュー株に資金シフト。ドル円１５９円。金利急騰で米国株、ハイテク株荒れるか。仮想通貨BT",
+      "video_url": "https://www.youtube.com/watch?v=qRCPlNZldXI",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急.日本株空売り急増‼】AI半導体株暴落で日経平均１７６０円急落→バリュー株に資金シフト。ドル円１５９円。金利急騰で米国株、ハイテク株荒れるか。仮想通貨BT",
       "video_url": "https://www.youtube.com/watch?v=SGD0kqxmM-U",
       "topic": "日経平均",
       "category": "macro",
@@ -85,58 +129,25 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株動くぞ‼AI半導体株急騰再開か⁉キオクシア爆上げヤバイ‼日経平均500円高→金利上昇でバリュー株に過熱の修正。ドル円158円推移。米国株、ナスダックどうな",
-      "video_url": "https://www.youtube.com/watch?v=yThu54EEj3M",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株動くぞ‼AI半導体株急騰再開か⁉キオクシア爆上げヤバイ‼日経平均500円高→金利上昇でバリュー株に過熱の修正。ドル円158円推移。米国株、ナスダックどうな",
-      "video_url": "https://www.youtube.com/watch?v=yThu54EEj3M",
-      "topic": "半導体",
+      "channel": "株リアルライブ",
+      "video_title": "ドンキは減益。太陽誘電の大量売却。川崎汽船が高値更新。大手不動産株は安値更新。～あす上がる株　2026年８月１９日（水火）に上がる銘柄。最新の日本株情報。高配当",
+      "video_url": "https://www.youtube.com/watch?v=Tw1fV2e5cZ4",
+      "topic": "高配当",
       "category": "sector",
-      "sentiment": "neutral",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 半導体"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株動くぞ‼AI半導体株急騰再開か⁉キオクシア爆上げヤバイ‼日経平均500円高→金利上昇でバリュー株に過熱の修正。ドル円158円推移。米国株、ナスダックどうな",
-      "video_url": "https://www.youtube.com/watch?v=yThu54EEj3M",
-      "topic": "ナスダック",
-      "category": "macro",
-      "sentiment": "neutral",
+      "channel": "株リアルライブ",
+      "video_title": "ドンキは減益。太陽誘電の大量売却。川崎汽船が高値更新。大手不動産株は安値更新。～あす上がる株　2026年８月１９日（水火）に上がる銘柄。最新の日本株情報。高配当",
+      "video_url": "https://www.youtube.com/watch?v=Tw1fV2e5cZ4",
+      "topic": "不動産",
+      "category": "sector",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: ナスダック"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株動くぞ‼AI半導体株急騰再開か⁉キオクシア爆上げヤバイ‼日経平均500円高→金利上昇でバリュー株に過熱の修正。ドル円158円推移。米国株、ナスダックどうな",
-      "video_url": "https://www.youtube.com/watch?v=yThu54EEj3M",
-      "topic": "円高",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 円高"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "日本株動くぞ‼AI半導体株急騰再開か⁉キオクシア爆上げヤバイ‼日経平均500円高→金利上昇でバリュー株に過熱の修正。ドル円158円推移。米国株、ナスダックどうな",
-      "video_url": "https://www.youtube.com/watch?v=yThu54EEj3M",
-      "topic": "金利",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 金利"
+      "summary": "キーワード: 不動産"
     },
     {
       "source": "youtube",
@@ -176,28 +187,6 @@
       "channel": "株リアルライブ",
       "video_title": "利回り15.6%が放置状態！NTTが年初来高値を更新。電通総研にアクティビスト。好決算で急落銘柄～あす上がる株　2026年８月１８日（火）に上がる銘柄。最新の日",
       "video_url": "https://www.youtube.com/watch?v=5KuQ5xhwij8",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "これはチャンスかも！好決算を発表したのに急落中のプライム市場銘柄が大量発生。2026年８月１７日（月）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ",
-      "video_url": "https://www.youtube.com/watch?v=C2E1LUYw_s0",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "これはチャンスかも！好決算を発表したのに急落中のプライム市場銘柄が大量発生。2026年８月１７日（月）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ",
-      "video_url": "https://www.youtube.com/watch?v=C2E1LUYw_s0",
       "topic": "決算",
       "category": "event",
       "sentiment": "bullish",
@@ -251,33 +240,22 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "ナンピン寸前野村不動産三井不動産！本日購入銘柄も",
+      "video_url": "https://www.youtube.com/watch?v=hLuZvZIIlg4",
+      "topic": "不動産",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 不動産"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "優良決算も本日驚き急落！優待拡充銘柄も",
       "video_url": "https://www.youtube.com/watch?v=09mmamJAodk",
       "topic": "決算",
       "category": "event",
       "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "決算終焉で来週買いたい厳選高配当10銘柄",
-      "video_url": "https://www.youtube.com/watch?v=oYfCYpmibt0",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "優待ライダー",
-      "video_title": "決算終焉で来週買いたい厳選高配当10銘柄",
-      "video_url": "https://www.youtube.com/watch?v=oYfCYpmibt0",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 決算"
     },
@@ -324,24 +302,13 @@
       "sentiment": "neutral",
       "confidence": 0.4,
       "summary": "キーワード: トヨタ"
-    },
-    {
-      "source": "youtube",
-      "channel": "STOCKVOICE",
-      "video_title": "2026年の国内株式市場展望  TOPIX 主導の上昇相場【ゲスト】8月18日 いちよしアセットマネジメント 秋野充成さん",
-      "video_url": "https://www.youtube.com/watch?v=3wztglIsbi8",
-      "topic": "TOPIX",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: TOPIX"
     }
   ],
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 3,
-        "bear": 4
+        "bear": 8
       },
       "株リアルライブ": {
         "bull": 6,
@@ -360,7 +327,7 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 2,
+        "bull": 0,
         "bear": 1
       },
       "たばたの投資ch": {
@@ -372,7 +339,7 @@
         "bear": 0
       },
       "STOCKVOICE": {
-        "bull": 1,
+        "bull": 0,
         "bear": 0
       }
     },
@@ -381,8 +348,8 @@
         "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "ひげづら株ちゃんねる"
+          "ひげづら株ちゃんねる",
+          "Sho's投資情報局"
         ]
       },
       "半導体": {
@@ -393,7 +360,7 @@
         ]
       },
       "ドル円": {
-        "count": 2,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
@@ -406,35 +373,28 @@
           "Sho's投資情報局"
         ]
       },
-      "ナスダック": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "Sho's投資情報局"
-        ]
-      },
-      "円高": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "Sho's投資情報局"
-        ]
-      },
       "高配当": {
-        "count": 6,
+        "count": 5,
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
-          "トレードラボ",
+          "トレードラボ"
+        ]
+      },
+      "不動産": {
+        "count": 2,
+        "sentiment": "bullish",
+        "sources": [
+          "株リアルライブ",
           "優待ライダー"
         ]
       },
       "決算": {
-        "count": 6,
+        "count": 4,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
           "ひげづら株ちゃんねる",
+          "株リアルライブ",
           "優待ライダー"
         ]
       },
@@ -465,29 +425,20 @@
         "sources": [
           "つばめ投資顧問"
         ]
-      },
-      "TOPIX": {
-        "count": 1,
-        "sentiment": "bullish",
-        "sources": [
-          "STOCKVOICE"
-        ]
       }
     },
     "hot_words": [
       "高配当",
-      "決算",
       "日経平均",
+      "決算",
       "半導体",
       "ドル円",
       "金利",
-      "ナスダック",
-      "円高",
+      "不動産",
       "日経",
       "円安",
       "任天堂",
-      "トヨタ",
-      "TOPIX"
+      "トヨタ"
     ]
   }
 }

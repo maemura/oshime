@@ -11,9 +11,9 @@
     },
     {
       "word": "ドル円",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
+      "count": 3,
       "sources": 1
     },
     {
@@ -21,20 +21,6 @@
       "size": "md",
       "mood": "fear",
       "count": 2,
-      "sources": 1
-    },
-    {
-      "word": "ナスダック",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "円高",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
       "sources": 1
     },
     {
@@ -50,13 +36,6 @@
       "mood": "fear",
       "count": 1,
       "sources": 1
-    },
-    {
-      "word": "TOPIX",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
     }
   ],
   "institutional": [
@@ -64,14 +43,14 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
-      "sources": 3
+      "count": 5,
+      "sources": 2
     },
     {
       "word": "決算",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 6,
+      "count": 4,
       "sources": 3
     },
     {
@@ -80,6 +59,13 @@
       "mood": "fear",
       "count": 3,
       "sources": 1
+    },
+    {
+      "word": "不動産",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
+      "sources": 2
     }
   ],
   "retail": [
