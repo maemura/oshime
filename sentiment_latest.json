@@ -1,9 +1,16 @@
 {
-  "date": "2026-08-18",
+  "date": "2026-08-19",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
+      "size": "lg",
+      "mood": "fear",
+      "count": 4,
+      "sources": 2
+    },
+    {
+      "word": "金利",
       "size": "lg",
       "mood": "fear",
       "count": 4,
@@ -17,21 +24,7 @@
       "sources": 1
     },
     {
-      "word": "金利",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
       "word": "日経",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "円安",
       "size": "sm",
       "mood": "fear",
       "count": 1,
@@ -51,7 +44,7 @@
       "size": "lg",
       "mood": "greed",
       "count": 4,
-      "sources": 3
+      "sources": 4
     },
     {
       "word": "半導体",
@@ -66,16 +59,16 @@
       "mood": "greed",
       "count": 2,
       "sources": 2
+    },
+    {
+      "word": "AI関連",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
-    {
-      "word": "任天堂",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
-    },
     {
       "word": "トヨタ",
       "size": "sm",
