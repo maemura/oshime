@@ -1,13 +1,13 @@
 {
-  "date": "2026-08-19",
+  "date": "2026-08-20",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
-      "size": "lg",
+      "size": "xl",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 5,
+      "sources": 3
     },
     {
       "word": "金利",
@@ -29,8 +29,8 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 5,
-      "sources": 2
+      "count": 6,
+      "sources": 3
     },
     {
       "word": "半導体",
@@ -41,15 +41,8 @@
     },
     {
       "word": "不動産",
-      "size": "lg",
-      "mood": "greed",
-      "count": 3,
-      "sources": 2
-    },
-    {
-      "word": "決算",
       "size": "md",
-      "mood": "fear",
+      "mood": "greed",
       "count": 2,
       "sources": 2
     },
@@ -59,11 +52,18 @@
       "mood": "fear",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "決算",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
     {
-      "word": "トヨタ",
+      "word": "ソニー",
       "size": "sm",
       "mood": "calm",
       "count": 1,
