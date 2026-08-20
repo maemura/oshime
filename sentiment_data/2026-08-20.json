@@ -1,6 +1,6 @@
 {
   "date": "2026-08-20",
-  "collected_at": "2026-08-20 09:55",
+  "collected_at": "2026-08-20 21:49",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 26,
@@ -152,6 +152,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "日本製紙がリンテックの2,000万株を売却。ビットコイン関連銘柄が急騰。東京海上とダイキンが弱い～あす上がる株　2026年８月２１日（金）に上がる銘柄。最新の日",
+      "video_url": "https://www.youtube.com/watch?v=6IR9lF1wcD4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "キオクシア反発。ソフトバンクグループ反発。住友金属鉱山が急騰。さくらインターネットは急落。2026年８月２０日（木）～明日上がる株。最新の日本株情報。高配当株の",
       "video_url": "https://www.youtube.com/watch?v=HiX2rvDfRiQ",
       "topic": "高配当",
@@ -181,17 +192,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 不動産"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "弁護士コムに脚光！ソフトバンクグループが１兆円の社債発行を準備。ドンキ急落。2026年８月１９日（水）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ",
-      "video_url": "https://www.youtube.com/watch?v=C7WjWMCDkmA",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -251,8 +251,8 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
-      "video_title": "ナンピン寸前野村不動産三井不動産！本日購入銘柄も",
-      "video_url": "https://www.youtube.com/watch?v=hLuZvZIIlg4",
+      "video_title": "R8年この夏は不動産！必ず押さえる厳選優待１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=Unwd3H_xws8",
       "topic": "不動産",
       "category": "sector",
       "sentiment": "neutral",
@@ -262,13 +262,13 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
-      "video_title": "優良決算も本日驚き急落！優待拡充銘柄も",
-      "video_url": "https://www.youtube.com/watch?v=09mmamJAodk",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "bearish",
+      "video_title": "ナンピン寸前野村不動産三井不動産！本日購入銘柄も",
+      "video_url": "https://www.youtube.com/watch?v=hLuZvZIIlg4",
+      "topic": "不動産",
+      "category": "sector",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 決算"
+      "summary": "キーワード: 不動産"
     },
     {
       "source": "youtube",
@@ -317,7 +317,7 @@
       },
       "優待ライダー": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -353,8 +353,8 @@
         "count": 6,
         "sentiment": "bullish",
         "sources": [
-          "Sho's投資情報局",
           "トレードラボ",
+          "Sho's投資情報局",
           "株リアルライブ"
         ]
       },
@@ -374,8 +374,8 @@
         ]
       },
       "不動産": {
-        "count": 2,
-        "sentiment": "bullish",
+        "count": 3,
+        "sentiment": "neutral",
         "sources": [
           "株リアルライブ",
           "優待ライダー"
@@ -386,13 +386,6 @@
         "sentiment": "bearish",
         "sources": [
           "ばっちゃまの投資チャンネル"
-        ]
-      },
-      "決算": {
-        "count": 1,
-        "sentiment": "bearish",
-        "sources": [
-          "優待ライダー"
         ]
       },
       "ソニー": {
@@ -411,7 +404,6 @@
       "ドル円",
       "不動産",
       "AI関連",
-      "決算",
       "ソニー"
     ]
   }

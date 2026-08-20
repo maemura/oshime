@@ -41,20 +41,13 @@
     },
     {
       "word": "不動産",
-      "size": "md",
-      "mood": "greed",
-      "count": 2,
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
       "sources": 2
     },
     {
       "word": "AI関連",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "決算",
       "size": "sm",
       "mood": "fear",
       "count": 1,
