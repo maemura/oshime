@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-20",
+  "date": "2026-08-21",
   "mode": "claude",
   "macro": [
     {
@@ -29,7 +29,7 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
+      "count": 5,
       "sources": 3
     },
     {
@@ -41,10 +41,10 @@
     },
     {
       "word": "不動産",
-      "size": "lg",
+      "size": "md",
       "mood": "calm",
-      "count": 3,
-      "sources": 2
+      "count": 2,
+      "sources": 1
     },
     {
       "word": "AI関連",
@@ -54,13 +54,5 @@
       "sources": 1
     }
   ],
-  "retail": [
-    {
-      "word": "ソニー",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    }
-  ]
+  "retail": []
 }
