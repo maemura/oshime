@@ -1,26 +1,26 @@
 {
-  "date": "2026-08-21",
+  "date": "2026-08-22",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "xl",
-      "mood": "greed",
+      "mood": "fear",
       "count": 5,
       "sources": 3
-    },
-    {
-      "word": "金利",
-      "size": "lg",
-      "mood": "greed",
-      "count": 4,
-      "sources": 2
     },
     {
       "word": "ドル円",
       "size": "lg",
       "mood": "greed",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "金利",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
       "sources": 1
     }
   ],
@@ -29,7 +29,7 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 6,
+      "count": 7,
       "sources": 3
     },
     {
@@ -41,17 +41,10 @@
     },
     {
       "word": "決算",
-      "size": "sm",
+      "size": "lg",
       "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "AI関連",
-      "size": "sm",
-      "mood": "fear",
-      "count": 1,
-      "sources": 1
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "不動産",
@@ -61,5 +54,13 @@
       "sources": 1
     }
   ],
-  "retail": []
+  "retail": [
+    {
+      "word": "信越化学",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    }
+  ]
 }
