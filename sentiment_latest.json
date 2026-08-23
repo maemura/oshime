@@ -22,6 +22,13 @@
       "mood": "greed",
       "count": 1,
       "sources": 1
+    },
+    {
+      "word": "日経225",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
@@ -29,32 +36,39 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 7,
-      "sources": 3
+      "count": 8,
+      "sources": 4
     },
     {
       "word": "半導体",
       "size": "lg",
       "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "決算",
-      "size": "lg",
+      "size": "md",
       "mood": "calm",
-      "count": 3,
-      "sources": 3
-    },
+      "count": 2,
+      "sources": 2
+    }
+  ],
+  "retail": [
     {
-      "word": "不動産",
+      "word": "エヌビディア",
       "size": "sm",
       "mood": "calm",
       "count": 1,
       "sources": 1
-    }
-  ],
-  "retail": [
+    },
+    {
+      "word": "トヨタ",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
     {
       "word": "信越化学",
       "size": "sm",

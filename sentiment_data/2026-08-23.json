@@ -1,10 +1,10 @@
 {
   "date": "2026-08-23",
-  "collected_at": "2026-08-23 09:48",
+  "collected_at": "2026-08-23 21:40",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 27,
-  "entry_count": 24,
+  "videos_processed": 26,
+  "entry_count": 27,
   "entries": [
     {
       "source": "youtube",
@@ -152,6 +152,39 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "エヌビディア決算で日本株が急変！上がる半導体株。下がる半導体株。決算スケジュール２週間分８月２２日:日曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=77xCcK4s8Yw",
+      "topic": "エヌビディア",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: エヌビディア"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "エヌビディア決算で日本株が急変！上がる半導体株。下がる半導体株。決算スケジュール２週間分８月２２日:日曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=77xCcK4s8Yw",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "エヌビディア決算で日本株が急変！上がる半導体株。下がる半導体株。決算スケジュール２週間分８月２２日:日曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=77xCcK4s8Yw",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "大型高配当株、８銘柄。4.0%～5.1％！８月２２日:土曜版～あす上がる株。最新の日本株情報～",
       "video_url": "https://www.youtube.com/watch?v=asvkGWAmZ-8",
       "topic": "高配当",
@@ -173,17 +206,6 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "ビットコイン関連が急騰。伊藤忠とホンダが好調。川崎汽船と日本郵船が高値更新。2026年８月２１日（金）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ",
-      "video_url": "https://www.youtube.com/watch?v=U8V_ysViqYY",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ひげづら株ちゃんねる",
       "video_title": "あの20％下落していた準大手株が浮上中 / 日経平均は7万円を試す展開か？",
       "video_url": "https://www.youtube.com/watch?v=Kuo27rjjikU",
@@ -192,6 +214,17 @@
       "sentiment": "bearish",
       "confidence": 0.4,
       "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "安値で放置されていた利回り5.1%高配当株が遂に上昇開始！お買い得なのは今が最後かも？#shorts",
+      "video_url": "https://www.youtube.com/watch?v=9Z1jsA80Ihc",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
@@ -206,36 +239,36 @@
     },
     {
       "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "【利益44.8%減】三菱HCキャピタルの決算が思ったよりヤバい",
-      "video_url": "https://www.youtube.com/watch?v=43HKIY4zRSg",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
       "channel": "優待ライダー",
-      "video_title": "R8年この夏は不動産！必ず押さえる厳選優待１０銘柄",
-      "video_url": "https://www.youtube.com/watch?v=Unwd3H_xws8",
-      "topic": "不動産",
+      "video_title": "8月権利目前で安値で仕込む厳選高配当10銘柄",
+      "video_url": "https://www.youtube.com/watch?v=xlCl3L5cEN4",
+      "topic": "高配当",
       "category": "sector",
-      "sentiment": "neutral",
+      "sentiment": "bullish",
       "confidence": 0.4,
-      "summary": "キーワード: 不動産"
+      "summary": "キーワード: 高配当"
     },
     {
       "source": "youtube",
       "channel": "たばたの投資ch",
-      "video_title": "決算で勝ちたきゃ、ここを見ろ!!",
-      "video_url": "https://www.youtube.com/watch?v=nevjUOnpfR0",
-      "topic": "決算",
-      "category": "event",
+      "video_title": "「S&amp;P500」ではなく「日経225」に積立投資する理由とは？トヨタ工場勤務の21歳投資家とガチ対談しました。",
+      "video_url": "https://www.youtube.com/watch?v=UdLKPqHOpnE",
+      "topic": "日経225",
+      "category": "macro",
       "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: 決算"
+      "summary": "キーワード: 日経225"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "「S&amp;P500」ではなく「日経225」に積立投資する理由とは？トヨタ工場勤務の21歳投資家とガチ対談しました。",
+      "video_url": "https://www.youtube.com/watch?v=UdLKPqHOpnE",
+      "topic": "トヨタ",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: トヨタ"
     },
     {
       "source": "youtube",
@@ -278,7 +311,7 @@
         "bear": 8
       },
       "株リアルライブ": {
-        "bull": 3,
+        "bull": 2,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -286,7 +319,7 @@
         "bear": 1
       },
       "トレードラボ": {
-        "bull": 1,
+        "bull": 2,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -294,7 +327,7 @@
         "bear": 0
       },
       "優待ライダー": {
-        "bull": 0,
+        "bull": 1,
         "bear": 0
       },
       "たばたの投資ch": {
@@ -315,25 +348,27 @@
         "count": 5,
         "sentiment": "bearish",
         "sources": [
-          "STOCKVOICE",
           "Sho's投資情報局",
+          "STOCKVOICE",
           "ひげづら株ちゃんねる"
         ]
       },
       "半導体": {
-        "count": 3,
+        "count": 4,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局"
+          "Sho's投資情報局",
+          "株リアルライブ"
         ]
       },
       "高配当": {
-        "count": 7,
+        "count": 8,
         "sentiment": "bullish",
         "sources": [
           "Sho's投資情報局",
-          "株リアルライブ",
-          "トレードラボ"
+          "優待ライダー",
+          "トレードラボ",
+          "株リアルライブ"
         ]
       },
       "ドル円": {
@@ -350,20 +385,33 @@
           "Sho's投資情報局"
         ]
       },
-      "決算": {
-        "count": 3,
-        "sentiment": "neutral",
-        "sources": [
-          "つばめ投資顧問",
-          "たばたの投資ch",
-          "トレードラボ"
-        ]
-      },
-      "不動産": {
+      "エヌビディア": {
         "count": 1,
         "sentiment": "neutral",
         "sources": [
-          "優待ライダー"
+          "株リアルライブ"
+        ]
+      },
+      "決算": {
+        "count": 2,
+        "sentiment": "neutral",
+        "sources": [
+          "株リアルライブ",
+          "つばめ投資顧問"
+        ]
+      },
+      "日経225": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
+        ]
+      },
+      "トヨタ": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "たばたの投資ch"
         ]
       },
       "信越化学": {
@@ -381,7 +429,9 @@
       "ドル円",
       "決算",
       "金利",
-      "不動産",
+      "エヌビディア",
+      "日経225",
+      "トヨタ",
       "信越化学"
     ]
   }
