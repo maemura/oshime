@@ -1,0 +1,388 @@
+{
+  "date": "2026-08-23",
+  "collected_at": "2026-08-23 09:48",
+  "mode": "claude",
+  "channels_checked": 9,
+  "videos_processed": 27,
+  "entry_count": 24,
+  "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
+      "video_url": "https://www.youtube.com/watch?v=anNBuYoL9RE",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
+      "video_url": "https://www.youtube.com/watch?v=anNBuYoL9RE",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
+      "video_url": "https://www.youtube.com/watch?v=anNBuYoL9RE",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
+      "video_url": "https://www.youtube.com/watch?v=anNBuYoL9RE",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
+      "video_url": "https://www.youtube.com/watch?v=RWP1mJtOzBs",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
+      "video_url": "https://www.youtube.com/watch?v=RWP1mJtOzBs",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
+      "video_url": "https://www.youtube.com/watch?v=RWP1mJtOzBs",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
+      "video_url": "https://www.youtube.com/watch?v=RWP1mJtOzBs",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均急落止まらない⁉AI半導体株が弱すぎる‼】海外投資家が日本株大量買い‼出遅れ銘柄、高配当株強いぞ‼金利低下でドル円158円に円高、自動車株急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=G3a02-y4uNg",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均急落止まらない⁉AI半導体株が弱すぎる‼】海外投資家が日本株大量買い‼出遅れ銘柄、高配当株強いぞ‼金利低下でドル円158円に円高、自動車株急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=G3a02-y4uNg",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均急落止まらない⁉AI半導体株が弱すぎる‼】海外投資家が日本株大量買い‼出遅れ銘柄、高配当株強いぞ‼金利低下でドル円158円に円高、自動車株急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=G3a02-y4uNg",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均急落止まらない⁉AI半導体株が弱すぎる‼】海外投資家が日本株大量買い‼出遅れ銘柄、高配当株強いぞ‼金利低下でドル円158円に円高、自動車株急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=G3a02-y4uNg",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日経平均急落止まらない⁉AI半導体株が弱すぎる‼】海外投資家が日本株大量買い‼出遅れ銘柄、高配当株強いぞ‼金利低下でドル円158円に円高、自動車株急騰。米国株",
+      "video_url": "https://www.youtube.com/watch?v=G3a02-y4uNg",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "大型高配当株、８銘柄。4.0%～5.1％！８月２２日:土曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=asvkGWAmZ-8",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "キオクシアに朗報！マルマエが強烈中計発表。メタプラネット急騰。～あす上がる株　2026年８月２４日（月）に上がる銘柄。最新の日本株情報。高配当株の株価やデイトレ",
+      "video_url": "https://www.youtube.com/watch?v=0t9BAoSXC1M",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
+      "video_title": "ビットコイン関連が急騰。伊藤忠とホンダが好調。川崎汽船と日本郵船が高値更新。2026年８月２１日（金）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ",
+      "video_url": "https://www.youtube.com/watch?v=U8V_ysViqYY",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "ひげづら株ちゃんねる",
+      "video_title": "あの20％下落していた準大手株が浮上中 / 日経平均は7万円を試す展開か？",
+      "video_url": "https://www.youtube.com/watch?v=Kuo27rjjikU",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "最近大きく売った高配当株【３銘柄公開】#shorts",
+      "video_url": "https://www.youtube.com/watch?v=E_3KJKXLFN4",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "トレードラボ",
+      "video_title": "【利益44.8%減】三菱HCキャピタルの決算が思ったよりヤバい",
+      "video_url": "https://www.youtube.com/watch?v=43HKIY4zRSg",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
+      "video_title": "R8年この夏は不動産！必ず押さえる厳選優待１０銘柄",
+      "video_url": "https://www.youtube.com/watch?v=Unwd3H_xws8",
+      "topic": "不動産",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 不動産"
+    },
+    {
+      "source": "youtube",
+      "channel": "たばたの投資ch",
+      "video_title": "決算で勝ちたきゃ、ここを見ろ!!",
+      "video_url": "https://www.youtube.com/watch?v=nevjUOnpfR0",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "信越化学、決算後に株価急落…その理由と今後を徹底解説",
+      "video_url": "https://www.youtube.com/watch?v=lCu5y3E1FWg",
+      "topic": "信越化学",
+      "category": "stock",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 信越化学"
+    },
+    {
+      "source": "youtube",
+      "channel": "つばめ投資顧問",
+      "video_title": "信越化学、決算後に株価急落…その理由と今後を徹底解説",
+      "video_url": "https://www.youtube.com/watch?v=lCu5y3E1FWg",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
+    {
+      "source": "youtube",
+      "channel": "STOCKVOICE",
+      "video_title": "日経平均先物60000円のプットオプション建玉が1万枚超過！【本日のデリバティブ】8月21日 ブライトンリサーチ 堀川秀樹さん",
+      "video_url": "https://www.youtube.com/watch?v=UF-DySJKsuc",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    }
+  ],
+  "summary": {
+    "by_channel": {
+      "Sho's投資情報局": {
+        "bull": 5,
+        "bear": 8
+      },
+      "株リアルライブ": {
+        "bull": 3,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
+        "bear": 1
+      },
+      "トレードラボ": {
+        "bull": 1,
+        "bear": 0
+      },
+      "ばっちゃまの投資チャンネル": {
+        "bull": 0,
+        "bear": 0
+      },
+      "優待ライダー": {
+        "bull": 0,
+        "bear": 0
+      },
+      "たばたの投資ch": {
+        "bull": 0,
+        "bear": 0
+      },
+      "つばめ投資顧問": {
+        "bull": 0,
+        "bear": 2
+      },
+      "STOCKVOICE": {
+        "bull": 0,
+        "bear": 0
+      }
+    },
+    "by_topic": {
+      "日経平均": {
+        "count": 5,
+        "sentiment": "bearish",
+        "sources": [
+          "STOCKVOICE",
+          "Sho's投資情報局",
+          "ひげづら株ちゃんねる"
+        ]
+      },
+      "半導体": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "高配当": {
+        "count": 7,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局",
+          "株リアルライブ",
+          "トレードラボ"
+        ]
+      },
+      "ドル円": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "金利": {
+        "count": 1,
+        "sentiment": "bullish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "決算": {
+        "count": 3,
+        "sentiment": "neutral",
+        "sources": [
+          "つばめ投資顧問",
+          "たばたの投資ch",
+          "トレードラボ"
+        ]
+      },
+      "不動産": {
+        "count": 1,
+        "sentiment": "neutral",
+        "sources": [
+          "優待ライダー"
+        ]
+      },
+      "信越化学": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "つばめ投資顧問"
+        ]
+      }
+    },
+    "hot_words": [
+      "高配当",
+      "日経平均",
+      "半導体",
+      "ドル円",
+      "決算",
+      "金利",
+      "不動産",
+      "信越化学"
+    ]
+  }
+}
