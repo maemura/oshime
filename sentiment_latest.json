@@ -6,8 +6,8 @@
       "word": "日経平均",
       "size": "lg",
       "mood": "fear",
-      "count": 4,
-      "sources": 2
+      "count": 3,
+      "sources": 1
     },
     {
       "word": "ドル円",
@@ -22,22 +22,22 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 8,
+      "count": 9,
       "sources": 4
     },
     {
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 5,
-      "sources": 2
+      "count": 6,
+      "sources": 3
     },
     {
       "word": "決算",
       "size": "lg",
-      "mood": "calm",
-      "count": 4,
-      "sources": 3
+      "mood": "fear",
+      "count": 3,
+      "sources": 2
     }
   ],
   "retail": [
@@ -50,13 +50,6 @@
     },
     {
       "word": "エヌビディア",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
-    },
-    {
-      "word": "NVIDIA",
       "size": "sm",
       "mood": "calm",
       "count": 1,

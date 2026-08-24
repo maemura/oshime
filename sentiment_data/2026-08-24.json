@@ -1,10 +1,10 @@
 {
   "date": "2026-08-24",
-  "collected_at": "2026-08-24 10:07",
+  "collected_at": "2026-08-24 21:49",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 26,
-  "entry_count": 28,
+  "videos_processed": 25,
+  "entry_count": 27,
   "entries": [
     {
       "source": "youtube",
@@ -141,6 +141,17 @@
     {
       "source": "youtube",
       "channel": "株リアルライブ",
+      "video_title": "キオクシア急落の理由。ＩＮＧＳが初配を宣言。久々の株式５分割。金・貴金属関連株が急騰。～あす上がる株　2026年８月２５日（火）に上がる銘柄。最新の日本株情報。",
+      "video_url": "https://www.youtube.com/watch?v=z6khGD62JLw",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "bullish",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "株リアルライブ",
       "video_title": "金関連株が急騰。AI・半導体関連は苦しい状況。川崎汽船と日本郵船が上場来高値更新。ＦＩＧが急落。2026年８月２４日（月）～明日上がる株。最新の日本株情報。高配",
       "video_url": "https://www.youtube.com/watch?v=mcqxaBPtP7A",
       "topic": "半導体",
@@ -195,25 +206,14 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "大型高配当株、８銘柄。4.0%～5.1％！８月２２日:土曜版～あす上がる株。最新の日本株情報～",
-      "video_url": "https://www.youtube.com/watch?v=asvkGWAmZ-8",
+      "channel": "トレードラボ",
+      "video_title": "今から買うのは控えたい高配当株の特徴３選",
+      "video_url": "https://www.youtube.com/watch?v=rZLVqp-uGGA",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "ひげづら株ちゃんねる",
-      "video_title": "あの20％下落していた準大手株が浮上中 / 日経平均は7万円を試す展開か？",
-      "video_url": "https://www.youtube.com/watch?v=Kuo27rjjikU",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
     },
     {
       "source": "youtube",
@@ -240,6 +240,17 @@
     {
       "source": "youtube",
       "channel": "優待ライダー",
+      "video_title": "abc優待据置もまさかの下げ！半導体は急落",
+      "video_url": "https://www.youtube.com/watch?v=l8l507TUkS4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "優待ライダー",
       "video_title": "8月権利目前で安値で仕込む厳選高配当10銘柄",
       "video_url": "https://www.youtube.com/watch?v=xlCl3L5cEN4",
       "topic": "高配当",
@@ -247,28 +258,6 @@
       "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "さあNVIDIA決算ウィークへ！モデルナ3倍おじさんカテキンが入院中に生出演！今日からFOREX.com動画CM開始",
-      "video_url": "https://www.youtube.com/watch?v=OW7lTDjU_2s",
-      "topic": "NVIDIA",
-      "category": "stock",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: NVIDIA"
-    },
-    {
-      "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "さあNVIDIA決算ウィークへ！モデルナ3倍おじさんカテキンが入院中に生出演！今日からFOREX.com動画CM開始",
-      "video_url": "https://www.youtube.com/watch?v=OW7lTDjU_2s",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -327,10 +316,10 @@
       },
       "ひげづら株ちゃんねる": {
         "bull": 0,
-        "bear": 1
+        "bear": 0
       },
       "トレードラボ": {
-        "bull": 2,
+        "bull": 3,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -339,7 +328,7 @@
       },
       "優待ライダー": {
         "bull": 1,
-        "bear": 0
+        "bear": 1
       },
       "たばたの投資ch": {
         "bull": 0,
@@ -356,29 +345,29 @@
     },
     "by_topic": {
       "日経平均": {
-        "count": 4,
+        "count": 3,
         "sentiment": "bearish",
         "sources": [
-          "ひげづら株ちゃんねる",
           "Sho's投資情報局"
         ]
       },
       "半導体": {
-        "count": 5,
+        "count": 6,
         "sentiment": "bearish",
         "sources": [
+          "株リアルライブ",
           "Sho's投資情報局",
-          "株リアルライブ"
+          "優待ライダー"
         ]
       },
       "高配当": {
-        "count": 8,
+        "count": 9,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "Sho's投資情報局",
+          "優待ライダー",
           "株リアルライブ",
-          "優待ライダー"
+          "Sho's投資情報局",
+          "トレードラボ"
         ]
       },
       "ドル円": {
@@ -396,19 +385,11 @@
         ]
       },
       "決算": {
-        "count": 4,
-        "sentiment": "neutral",
+        "count": 3,
+        "sentiment": "bearish",
         "sources": [
           "つばめ投資顧問",
-          "株リアルライブ",
-          "たばたの投資ch"
-        ]
-      },
-      "NVIDIA": {
-        "count": 1,
-        "sentiment": "neutral",
-        "sources": [
-          "たばたの投資ch"
+          "株リアルライブ"
         ]
       },
       "信越化学": {
@@ -423,11 +404,10 @@
       "高配当",
       "半導体",
       "日経平均",
-      "決算",
       "ドル円",
+      "決算",
       "信越化学",
-      "エヌビディア",
-      "NVIDIA"
+      "エヌビディア"
     ]
   }
 }
