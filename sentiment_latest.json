@@ -1,19 +1,33 @@
 {
-  "date": "2026-08-24",
+  "date": "2026-08-25",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "mood": "calm",
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "ドル円",
       "size": "lg",
       "mood": "fear",
       "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "ナスダック",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円安",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
       "sources": 1
     }
   ],
@@ -22,30 +36,37 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 9,
+      "count": 10,
       "sources": 4
     },
     {
       "word": "半導体",
       "size": "xl",
       "mood": "fear",
-      "count": 6,
-      "sources": 3
+      "count": 7,
+      "sources": 4
     },
     {
       "word": "決算",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 2
+      "size": "xl",
+      "mood": "calm",
+      "count": 5,
+      "sources": 3
     }
   ],
   "retail": [
     {
       "word": "信越化学",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
+      "count": 3,
+      "sources": 1
+    },
+    {
+      "word": "NVIDIA",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
       "sources": 1
     },
     {
