@@ -12,7 +12,7 @@
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "fear",
+      "mood": "calm",
       "count": 3,
       "sources": 1
     },
@@ -42,15 +42,15 @@
     {
       "word": "半導体",
       "size": "xl",
-      "mood": "fear",
-      "count": 7,
+      "mood": "calm",
+      "count": 6,
       "sources": 4
     },
     {
       "word": "決算",
       "size": "xl",
       "mood": "calm",
-      "count": 5,
+      "count": 6,
       "sources": 3
     }
   ],
@@ -64,9 +64,9 @@
     },
     {
       "word": "NVIDIA",
-      "size": "sm",
+      "size": "md",
       "mood": "calm",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {

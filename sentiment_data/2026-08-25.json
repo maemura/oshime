@@ -1,11 +1,77 @@
 {
   "date": "2026-08-25",
-  "collected_at": "2026-08-25 09:57",
+  "collected_at": "2026-08-25 21:48",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 25,
-  "entry_count": 36,
+  "entry_count": 37,
   "entries": [
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株信用害が爆増‼】日経平均急落ここからが本番か⁉半導体株はNVIDIA決算で大波乱？バリュー株、高配当銘柄強い。ドル円159円推移。米国株も続落か。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=GA6JD-AVeKI",
+      "topic": "日経平均",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経平均"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株信用害が爆増‼】日経平均急落ここからが本番か⁉半導体株はNVIDIA決算で大波乱？バリュー株、高配当銘柄強い。ドル円159円推移。米国株も続落か。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=GA6JD-AVeKI",
+      "topic": "NVIDIA",
+      "category": "stock",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: NVIDIA"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株信用害が爆増‼】日経平均急落ここからが本番か⁉半導体株はNVIDIA決算で大波乱？バリュー株、高配当銘柄強い。ドル円159円推移。米国株も続落か。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=GA6JD-AVeKI",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株信用害が爆増‼】日経平均急落ここからが本番か⁉半導体株はNVIDIA決算で大波乱？バリュー株、高配当銘柄強い。ドル円159円推移。米国株も続落か。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=GA6JD-AVeKI",
+      "topic": "高配当",
+      "category": "sector",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 高配当"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株信用害が爆増‼】日経平均急落ここからが本番か⁉半導体株はNVIDIA決算で大波乱？バリュー株、高配当銘柄強い。ドル円159円推移。米国株も続落か。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=GA6JD-AVeKI",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【日本株信用害が爆増‼】日経平均急落ここからが本番か⁉半導体株はNVIDIA決算で大波乱？バリュー株、高配当銘柄強い。ドル円159円推移。米国株も続落か。仮想通",
+      "video_url": "https://www.youtube.com/watch?v=GA6JD-AVeKI",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
+      "confidence": 0.4,
+      "summary": "キーワード: 決算"
+    },
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
@@ -118,47 +184,14 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
-      "video_url": "https://www.youtube.com/watch?v=anNBuYoL9RE",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
-      "video_url": "https://www.youtube.com/watch?v=anNBuYoL9RE",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
-      "video_url": "https://www.youtube.com/watch?v=anNBuYoL9RE",
+      "channel": "株リアルライブ",
+      "video_title": "東京海上が大分割！ハフニウムが国内量産化。中国技術の深刻な脅威。～あす上がる株　2026年８月２６日（水）に上がる銘柄。最新の日本株情報。高配当株の株価やデイト",
+      "video_url": "https://www.youtube.com/watch?v=frb0LwZKUpE",
       "topic": "高配当",
       "category": "sector",
-      "sentiment": "bearish",
+      "sentiment": "bullish",
       "confidence": 0.4,
       "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【日経平均ここから暴落⁉半導体株年末安コースか】日本株空売り急増、海外勢買いで2018年相場意識。バリュー株、高配当銘柄しっかり。ドル円158円推移。米国株、ハ",
-      "video_url": "https://www.youtube.com/watch?v=anNBuYoL9RE",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bearish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
     },
     {
       "source": "youtube",
@@ -187,28 +220,6 @@
       "channel": "株リアルライブ",
       "video_title": "キオクシア急落の理由。ＩＮＧＳが初配を宣言。久々の株式５分割。金・貴金属関連株が急騰。～あす上がる株　2026年８月２５日（火）に上がる銘柄。最新の日本株情報。",
       "video_url": "https://www.youtube.com/watch?v=z6khGD62JLw",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "金関連株が急騰。AI・半導体関連は苦しい状況。川崎汽船と日本郵船が上場来高値更新。ＦＩＧが急落。2026年８月２４日（月）～明日上がる株。最新の日本株情報。高配",
-      "video_url": "https://www.youtube.com/watch?v=mcqxaBPtP7A",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "金関連株が急騰。AI・半導体関連は苦しい状況。川崎汽船と日本郵船が上場来高値更新。ＦＩＧが急落。2026年８月２４日（月）～明日上がる株。最新の日本株情報。高配",
-      "video_url": "https://www.youtube.com/watch?v=mcqxaBPtP7A",
       "topic": "高配当",
       "category": "sector",
       "sentiment": "bullish",
@@ -407,10 +418,10 @@
     "by_channel": {
       "Sho's投資情報局": {
         "bull": 0,
-        "bear": 8
+        "bear": 4
       },
       "株リアルライブ": {
-        "bull": 5,
+        "bull": 4,
         "bear": 0
       },
       "ひげづら株ちゃんねる": {
@@ -452,19 +463,19 @@
         ]
       },
       "NVIDIA": {
-        "count": 1,
+        "count": 2,
         "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "半導体": {
-        "count": 7,
-        "sentiment": "bearish",
+        "count": 6,
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局",
-          "STOCKVOICE",
           "株リアルライブ",
+          "STOCKVOICE",
           "優待ライダー"
         ]
       },
@@ -472,26 +483,26 @@
         "count": 10,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
           "Sho's投資情報局",
           "株リアルライブ",
+          "トレードラボ",
           "優待ライダー"
         ]
       },
       "ドル円": {
         "count": 3,
-        "sentiment": "bearish",
+        "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "決算": {
-        "count": 5,
+        "count": 6,
         "sentiment": "neutral",
         "sources": [
           "Sho's投資情報局",
-          "STOCKVOICE",
-          "つばめ投資顧問"
+          "つばめ投資顧問",
+          "STOCKVOICE"
         ]
       },
       "ナスダック": {
