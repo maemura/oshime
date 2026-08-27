@@ -1,18 +1,18 @@
 {
-  "date": "2026-08-26",
+  "date": "2026-08-27",
   "mode": "claude",
   "macro": [
     {
       "word": "日経平均",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     },
     {
       "word": "ドル円",
       "size": "lg",
-      "mood": "calm",
+      "mood": "greed",
       "count": 3,
       "sources": 1
     }
@@ -22,29 +22,22 @@
       "word": "高配当",
       "size": "xl",
       "mood": "greed",
-      "count": 10,
-      "sources": 4
+      "count": 9,
+      "sources": 3
     },
     {
       "word": "決算",
       "size": "xl",
-      "mood": "calm",
-      "count": 8,
-      "sources": 5
+      "mood": "greed",
+      "count": 9,
+      "sources": 6
     },
     {
       "word": "半導体",
-      "size": "xl",
+      "size": "lg",
       "mood": "greed",
-      "count": 5,
-      "sources": 3
-    },
-    {
-      "word": "不動産",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     }
   ],
   "retail": [
@@ -53,6 +46,13 @@
       "size": "lg",
       "mood": "greed",
       "count": 4,
+      "sources": 2
+    },
+    {
+      "word": "エヌビディア",
+      "size": "md",
+      "mood": "greed",
+      "count": 2,
       "sources": 2
     },
     {
