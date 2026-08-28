@@ -23,12 +23,12 @@
       "text": "<strong>ソフトバンクG</strong>は前日比0.0%。大きな動きはありませんが、引き続きウォッチしていきます。",
       "signal": "watch"
     },
-    "285A": {
-      "text": "<strong>KIOXIA HOLDINGS CORPORATION</strong>は前日比0.0%。大きな動きはありませんが、引き続きウォッチしていきます。",
-      "signal": "watch"
-    },
     "8316": {
       "text": "<strong>三井住友FG</strong>は前日比0.0%。大きな動きはありませんが、引き続きウォッチしていきます。",
+      "signal": "watch"
+    },
+    "285A": {
+      "text": "<strong>KIOXIA HOLDINGS CORPORATION</strong>は前日比0.0%。大きな動きはありませんが、引き続きウォッチしていきます。",
       "signal": "watch"
     }
   },
@@ -62,5 +62,5 @@
       "a": "ご心配おかけしてすみません。データは動いていますので安心してください。動かないことも、判断です。"
     }
   ],
-  "date": "2026/08/28 15:14 自動生成"
+  "date": "2026/08/29 04:07 自動生成"
 }
