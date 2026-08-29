@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-28",
+  "date": "2026-08-29",
   "mode": "claude",
   "macro": [
     {
@@ -52,14 +52,7 @@
       "word": "NVIDIA",
       "size": "lg",
       "mood": "greed",
-      "count": 4,
-      "sources": 2
-    },
-    {
-      "word": "ソニー",
-      "size": "sm",
-      "mood": "greed",
-      "count": 1,
+      "count": 3,
       "sources": 1
     }
   ]
