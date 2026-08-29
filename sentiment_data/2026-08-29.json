@@ -1,14 +1,58 @@
 {
   "date": "2026-08-29",
-  "collected_at": "2026-08-29 03:12",
+  "collected_at": "2026-08-29 14:35",
   "mode": "claude",
   "channels_checked": 9,
-  "videos_processed": 24,
-  "entry_count": 25,
+  "videos_processed": 25,
+  "entry_count": 21,
   "entries": [
     {
       "source": "youtube",
       "channel": "Sho's投資情報局",
+      "video_title": "【緊急事態、日本株投げ売り加速か‼】キオクシア大暴落ヤバい‼米金利急騰でAI半導体株暴落、日経先物下落でドル円160円に急騰‼米国株も資金シフト鮮明。仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=gxqrio7RmR4",
+      "topic": "日経",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 日経"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急事態、日本株投げ売り加速か‼】キオクシア大暴落ヤバい‼米金利急騰でAI半導体株暴落、日経先物下落でドル円160円に急騰‼米国株も資金シフト鮮明。仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=gxqrio7RmR4",
+      "topic": "半導体",
+      "category": "sector",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 半導体"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急事態、日本株投げ売り加速か‼】キオクシア大暴落ヤバい‼米金利急騰でAI半導体株暴落、日経先物下落でドル円160円に急騰‼米国株も資金シフト鮮明。仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=gxqrio7RmR4",
+      "topic": "ドル円",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: ドル円"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
+      "video_title": "【緊急事態、日本株投げ売り加速か‼】キオクシア大暴落ヤバい‼米金利急騰でAI半導体株暴落、日経先物下落でドル円160円に急騰‼米国株も資金シフト鮮明。仮想通貨B",
+      "video_url": "https://www.youtube.com/watch?v=gxqrio7RmR4",
+      "topic": "金利",
+      "category": "macro",
+      "sentiment": "bearish",
+      "confidence": 0.4,
+      "summary": "キーワード: 金利"
+    },
+    {
+      "source": "youtube",
+      "channel": "Sho's投資情報局",
       "video_title": "【緊急】海外投資家が日本株大量売却‼日経平均寄天でAI半導体株も軟調。キオクシア大暴落で高値掴み助かるか⁉ドル円、米国株もNVIDIA 決算で上昇。仮想通貨BT",
       "video_url": "https://www.youtube.com/watch?v=0OJjPpc6rJk",
       "topic": "日経平均",
@@ -118,53 +162,9 @@
     },
     {
       "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】海外投資家が日本株大量売却‼日経平均寄天でAI半導体株も軟調。キオクシア5％高で高値掴み助かるか⁉ドル円１５９円。米国株もNVIDIA 決算で上昇。仮想",
-      "video_url": "https://www.youtube.com/watch?v=mmwVOQdu6oI",
-      "topic": "日経平均",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 日経平均"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】海外投資家が日本株大量売却‼日経平均寄天でAI半導体株も軟調。キオクシア5％高で高値掴み助かるか⁉ドル円１５９円。米国株もNVIDIA 決算で上昇。仮想",
-      "video_url": "https://www.youtube.com/watch?v=mmwVOQdu6oI",
-      "topic": "NVIDIA",
-      "category": "stock",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: NVIDIA"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】海外投資家が日本株大量売却‼日経平均寄天でAI半導体株も軟調。キオクシア5％高で高値掴み助かるか⁉ドル円１５９円。米国株もNVIDIA 決算で上昇。仮想",
-      "video_url": "https://www.youtube.com/watch?v=mmwVOQdu6oI",
-      "topic": "半導体",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 半導体"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】海外投資家が日本株大量売却‼日経平均寄天でAI半導体株も軟調。キオクシア5％高で高値掴み助かるか⁉ドル円１５９円。米国株もNVIDIA 決算で上昇。仮想",
-      "video_url": "https://www.youtube.com/watch?v=mmwVOQdu6oI",
-      "topic": "ドル円",
-      "category": "macro",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: ドル円"
-    },
-    {
-      "source": "youtube",
-      "channel": "Sho's投資情報局",
-      "video_title": "【緊急】海外投資家が日本株大量売却‼日経平均寄天でAI半導体株も軟調。キオクシア5％高で高値掴み助かるか⁉ドル円１５９円。米国株もNVIDIA 決算で上昇。仮想",
-      "video_url": "https://www.youtube.com/watch?v=mmwVOQdu6oI",
+      "channel": "株リアルライブ",
+      "video_title": "好決算の厳選１４銘柄！NISAでメタプラネットが人気化。８月２９日:土曜版～あす上がる株。最新の日本株情報～",
+      "video_url": "https://www.youtube.com/watch?v=PRbXZZSAmqg",
       "topic": "決算",
       "category": "event",
       "sentiment": "bullish",
@@ -195,25 +195,14 @@
     },
     {
       "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "権利落ち急落銘柄が大量発生中。SaaS関連銘柄が急騰中。2026年８月２８日（金）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ情報～",
-      "video_url": "https://www.youtube.com/watch?v=ddfZoqYvXBk",
-      "topic": "SaaS",
-      "category": "sector",
-      "sentiment": "bullish",
+      "channel": "トレードラボ",
+      "video_title": "【利益44.8%減】三菱HCキャピタルの決算が思ったよりヤバい#shorts",
+      "video_url": "https://www.youtube.com/watch?v=8FPEbEFZ8OU",
+      "topic": "決算",
+      "category": "event",
+      "sentiment": "neutral",
       "confidence": 0.4,
-      "summary": "キーワード: SaaS"
-    },
-    {
-      "source": "youtube",
-      "channel": "株リアルライブ",
-      "video_title": "権利落ち急落銘柄が大量発生中。SaaS関連銘柄が急騰中。2026年８月２８日（金）～明日上がる株。最新の日本株情報。高配当株の株価やデイトレ情報～",
-      "video_url": "https://www.youtube.com/watch?v=ddfZoqYvXBk",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
+      "summary": "キーワード: 決算"
     },
     {
       "source": "youtube",
@@ -228,42 +217,9 @@
     },
     {
       "source": "youtube",
-      "channel": "トレードラボ",
-      "video_title": "今買うのは控えるべき高配当株３選",
-      "video_url": "https://www.youtube.com/watch?v=rZLVqp-uGGA",
-      "topic": "高配当",
-      "category": "sector",
-      "sentiment": "bullish",
-      "confidence": 0.4,
-      "summary": "キーワード: 高配当"
-    },
-    {
-      "source": "youtube",
       "channel": "ばっちゃまの投資チャンネル",
       "video_title": "【米国株 8/28】Nvidiaが圧巻決算、その裏でOpenAIら100社が緊急警告",
       "video_url": "https://www.youtube.com/watch?v=rEQKUCTL3jo",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "ばっちゃまの投資チャンネル",
-      "video_title": "【米国株 8/26】 Nvidia決算直前、これはかなり重要です",
-      "video_url": "https://www.youtube.com/watch?v=RQEdU8nK_jI",
-      "topic": "決算",
-      "category": "event",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 決算"
-    },
-    {
-      "source": "youtube",
-      "channel": "つばめ投資顧問",
-      "video_title": "サンリオ株が急落！好決算なのになぜ？投資家が恐れる“ある問題”",
-      "video_url": "https://www.youtube.com/watch?v=BgtwY04nX3A",
       "topic": "決算",
       "category": "event",
       "sentiment": "neutral",
@@ -285,15 +241,19 @@
   "summary": {
     "by_channel": {
       "Sho's投資情報局": {
-        "bull": 10,
-        "bear": 5
+        "bull": 5,
+        "bear": 9
       },
       "株リアルライブ": {
-        "bull": 4,
+        "bull": 3,
+        "bear": 0
+      },
+      "ひげづら株ちゃんねる": {
+        "bull": 0,
         "bear": 0
       },
       "トレードラボ": {
-        "bull": 2,
+        "bull": 1,
         "bear": 0
       },
       "ばっちゃまの投資チャンネル": {
@@ -318,68 +278,77 @@
       }
     },
     "by_topic": {
-      "日経平均": {
-        "count": 4,
-        "sentiment": "bullish",
-        "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE"
-        ]
-      },
-      "NVIDIA": {
-        "count": 3,
-        "sentiment": "bullish",
+      "日経": {
+        "count": 1,
+        "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "半導体": {
         "count": 3,
-        "sentiment": "bullish",
+        "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "ドル円": {
         "count": 3,
-        "sentiment": "bullish",
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "金利": {
+        "count": 1,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局"
+        ]
+      },
+      "日経平均": {
+        "count": 3,
+        "sentiment": "bearish",
+        "sources": [
+          "Sho's投資情報局",
+          "STOCKVOICE"
+        ]
+      },
+      "NVIDIA": {
+        "count": 2,
+        "sentiment": "bearish",
         "sources": [
           "Sho's投資情報局"
         ]
       },
       "決算": {
-        "count": 6,
-        "sentiment": "neutral",
-        "sources": [
-          "ばっちゃまの投資チャンネル",
-          "Sho's投資情報局",
-          "つばめ投資顧問"
-        ]
-      },
-      "高配当": {
         "count": 5,
         "sentiment": "bullish",
         "sources": [
-          "株リアルライブ",
-          "トレードラボ"
+          "Sho's投資情報局",
+          "トレードラボ",
+          "ばっちゃまの投資チャンネル",
+          "株リアルライブ"
         ]
       },
-      "SaaS": {
-        "count": 1,
+      "高配当": {
+        "count": 3,
         "sentiment": "bullish",
         "sources": [
+          "トレードラボ",
           "株リアルライブ"
         ]
       }
     },
     "hot_words": [
       "決算",
-      "高配当",
-      "日経平均",
-      "NVIDIA",
       "半導体",
       "ドル円",
-      "SaaS"
+      "日経平均",
+      "高配当",
+      "NVIDIA",
+      "日経",
+      "金利"
     ]
   }
 }
