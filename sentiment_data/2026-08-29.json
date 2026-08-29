@@ -1,6 +1,6 @@
 {
   "date": "2026-08-29",
-  "collected_at": "2026-08-29 14:35",
+  "collected_at": "2026-08-29 23:26",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 25,
@@ -326,17 +326,17 @@
         "sentiment": "bullish",
         "sources": [
           "Sho's投資情報局",
-          "トレードラボ",
           "ばっちゃまの投資チャンネル",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       },
       "高配当": {
         "count": 3,
         "sentiment": "bullish",
         "sources": [
-          "トレードラボ",
-          "株リアルライブ"
+          "株リアルライブ",
+          "トレードラボ"
         ]
       }
     },
