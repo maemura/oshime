@@ -57,10 +57,10 @@
   "retail": [
     {
       "word": "NVIDIA",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
     }
   ]
 }
