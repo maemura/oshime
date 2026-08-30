@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-29",
+  "date": "2026-08-30",
   "mode": "claude",
   "macro": [
     {
@@ -10,25 +10,25 @@
       "sources": 1
     },
     {
-      "word": "日経平均",
-      "size": "lg",
-      "mood": "fear",
-      "count": 3,
-      "sources": 2
-    },
-    {
       "word": "日経",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
+      "count": 2,
       "sources": 1
     },
     {
       "word": "金利",
-      "size": "sm",
+      "size": "md",
       "mood": "fear",
-      "count": 1,
+      "count": 2,
       "sources": 1
+    },
+    {
+      "word": "日経平均",
+      "size": "md",
+      "mood": "fear",
+      "count": 2,
+      "sources": 2
     }
   ],
   "institutional": [
@@ -48,9 +48,9 @@
     },
     {
       "word": "高配当",
-      "size": "lg",
+      "size": "md",
       "mood": "greed",
-      "count": 3,
+      "count": 2,
       "sources": 2
     }
   ],
@@ -60,7 +60,7 @@
       "size": "md",
       "mood": "fear",
       "count": 2,
-      "sources": 1
+      "sources": 2
     }
   ]
 }
