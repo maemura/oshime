@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-30",
+  "date": "2026-08-31",
   "mode": "claude",
   "macro": [
     {
@@ -10,53 +10,67 @@
       "sources": 1
     },
     {
-      "word": "日経",
-      "size": "md",
-      "mood": "fear",
-      "count": 2,
-      "sources": 1
-    },
-    {
       "word": "金利",
       "size": "md",
       "mood": "fear",
       "count": 2,
-      "sources": 1
+      "sources": 2
     },
     {
       "word": "日経平均",
-      "size": "md",
+      "size": "sm",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "日経",
+      "size": "sm",
+      "mood": "fear",
+      "count": 1,
+      "sources": 1
+    },
+    {
+      "word": "円高",
+      "size": "sm",
+      "mood": "greed",
+      "count": 1,
+      "sources": 1
     }
   ],
   "institutional": [
     {
-      "word": "決算",
-      "size": "xl",
-      "mood": "greed",
-      "count": 5,
-      "sources": 4
-    },
-    {
       "word": "半導体",
       "size": "lg",
       "mood": "fear",
-      "count": 3,
-      "sources": 1
+      "count": 4,
+      "sources": 2
     },
     {
       "word": "高配当",
-      "size": "md",
+      "size": "lg",
       "mood": "greed",
-      "count": 2,
+      "count": 4,
       "sources": 2
+    },
+    {
+      "word": "決算",
+      "size": "lg",
+      "mood": "calm",
+      "count": 3,
+      "sources": 3
+    },
+    {
+      "word": "SaaS",
+      "size": "sm",
+      "mood": "calm",
+      "count": 1,
+      "sources": 1
     }
   ],
   "retail": [
     {
-      "word": "NVIDIA",
+      "word": "ソニー",
       "size": "sm",
       "mood": "fear",
       "count": 1,
