@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-31",
+  "date": "2026-09-01",
   "mode": "claude",
   "macro": [
     {
@@ -11,10 +11,10 @@
     },
     {
       "word": "金利",
-      "size": "md",
+      "size": "lg",
       "mood": "fear",
-      "count": 2,
-      "sources": 2
+      "count": 3,
+      "sources": 3
     },
     {
       "word": "日経平均",
@@ -59,13 +59,6 @@
       "mood": "calm",
       "count": 3,
       "sources": 3
-    },
-    {
-      "word": "SaaS",
-      "size": "sm",
-      "mood": "calm",
-      "count": 1,
-      "sources": 1
     }
   ],
   "retail": [
