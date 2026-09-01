@@ -1,10 +1,10 @@
 {
   "date": "2026-09-01",
-  "collected_at": "2026-09-01 14:12",
+  "collected_at": "2026-09-01 23:25",
   "mode": "claude",
   "channels_checked": 9,
   "videos_processed": 25,
-  "entry_count": 30,
+  "entry_count": 29,
   "entries": [
     {
       "source": "youtube",
@@ -283,17 +283,6 @@
     },
     {
       "source": "youtube",
-      "channel": "たばたの投資ch",
-      "video_title": "US長期金利が5％に迫る！日本経済への影響とは！？",
-      "video_url": "https://www.youtube.com/watch?v=GCo81SwRtWw",
-      "topic": "金利",
-      "category": "macro",
-      "sentiment": "neutral",
-      "confidence": 0.4,
-      "summary": "キーワード: 金利"
-    },
-    {
-      "source": "youtube",
       "channel": "STOCKVOICE",
       "video_title": "長期金利3％突破、日経平均よりTOPIXなのか【本日のデリバティブ】9月1日 松井証券 窪田朋一郎さん",
       "video_url": "https://www.youtube.com/watch?v=EupHYfOLoQ8",
@@ -397,8 +386,8 @@
         "sentiment": "bullish",
         "sources": [
           "株リアルライブ",
-          "Sho's投資情報局",
-          "トレードラボ"
+          "トレードラボ",
+          "Sho's投資情報局"
         ]
       },
       "ドル円": {
@@ -410,13 +399,13 @@
         ]
       },
       "金利": {
-        "count": 6,
+        "count": 5,
         "sentiment": "bearish",
         "sources": [
-          "Sho's投資情報局",
-          "STOCKVOICE",
+          "トレードラボ",
           "たばたの投資ch",
-          "トレードラボ"
+          "Sho's投資情報局",
+          "STOCKVOICE"
         ]
       },
       "不動産": {
@@ -445,8 +434,8 @@
         "count": 2,
         "sentiment": "neutral",
         "sources": [
-          "ばっちゃまの投資チャンネル",
-          "トレードラボ"
+          "トレードラボ",
+          "ばっちゃまの投資チャンネル"
         ]
       },
       "ソニー": {
